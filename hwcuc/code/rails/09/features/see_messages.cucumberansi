@@ -1,0 +1,26 @@
+Feature: See Messages
+
+  Scenario: See another user's messages
+    [32mGiven there is a User[0m
+    [32mAnd the User has posted the message "[32m[1mthis is my message[0m[0m[32m"[0m
+    [31mWhen I visit the page for the User[0m
+[31m      undefined method `user_path' for [0m
+[31m      #<Cucumber::Rails::World:0x63756b65> (NoMethodError)[0m
+[31m      ./features/step_definitions/user_steps.rb:15[0m
+[31m      features/see_messages.feature:5[0m
+    [33mThen I should see "this is my message"[0m
+[33m      Undefined step: "I should see "this is my message"" (Cucumber::Undefined)[0m
+[33m      features/see_messages.feature:6[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/see_messages.feature:2[0m
+
+1 scenario ([31m1 failed[0m)
+4 steps ([31m1 failed[0m, [33m1 undefined[0m, [32m2 passed[0m)
+0m0.348s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mThen /^I should see "(.*?)"$/ do |arg1|[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m

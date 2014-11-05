@@ -1,0 +1,15 @@
+[32m.[0mruby: No such file or directory -- calc.rb (LoadError)
+[31mF[0m[36m-[0m
+
+[31m(::) failed steps (::)[0m
+
+[31mCommand failed! (RuntimeError)[0m
+[31m./features/step_definitions/calculator_steps.rb:10[0m
+[31mfeatures/adding.feature:5[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/adding.feature:3[0m[90m # Scenario: Add two numbers[0m
+
+1 scenario ([31m1 failed[0m)
+3 steps ([31m1 failed[0m, [36m1 skipped[0m, [32m1 passed[0m)
+0m0.021s

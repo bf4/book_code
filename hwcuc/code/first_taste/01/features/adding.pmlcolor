@@ -1,0 +1,28 @@
+Feature: Adding
+
+  Scenario: Add two numbers
+    <literal:shade fg='magenta'>Given the input "2+2"</literal:shade>
+    <literal:shade fg='magenta'>When the calculator is run</literal:shade>
+    <literal:shade fg='magenta'>Then the output should be "4"</literal:shade>
+
+1 scenario (<literal:shade fg='magenta'>1 undefined</literal:shade>)
+3 steps (<literal:shade fg='magenta'>3 undefined</literal:shade>)
+0m0.003s
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>You can implement step definitions for undefined steps with these snippets:</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>Given /^the input "(.*?)"$/ do |arg1|</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>When /^the calculator is run$/ do</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>Then /^the output should be "(.*?)"$/ do |arg1|</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='red'></literal:shade>
+<literal:shade fg='red'>If you want snippets in a different programming language,</literal:shade>
+<literal:shade fg='red'>just make sure a file with the appropriate file extension</literal:shade>
+<literal:shade fg='red'>exists where cucumber looks for step definitions.</literal:shade>

@@ -1,0 +1,16 @@
+diff -Nur code/databases/01/features/support/world_extensions.rb code/databases/02/features/support/world_extensions.rb
+--- code/databases/01/features/support/world_extensions.rb	2011-10-13 18:38:32.000000000 +0100
++++ code/databases/02/features/support/world_extensions.rb	2011-10-14 07:39:56.000000000 +0100
+@@ -15,9 +15,11 @@
+   end
+   #END:user-interface-class
+ 
++  #START:create-account
+   def my_account
+-    @my_account ||= Account.new
++    @my_account ||= Account.create!(:number => "test", :balance => 0)
+   end
++  #END:create-account
+ 
+   #START:cash-slot-method
+   def cash_slot

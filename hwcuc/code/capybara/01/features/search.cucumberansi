@@ -1,0 +1,33 @@
+Feature: Search
+
+  Scenario: Find messages by content
+    [31mGiven a User has posted the following messages:[0m
+      | [31mcontent           [0m[0m |[0m
+      | [31mI am making dinner[0m[0m |[0m
+      | [31mI just woke up    [0m[0m |[0m
+      | [31mI am going to work[0m[0m |[0m
+[31m      Can't mass-assign protected attributes: user [0m
+[31m      (ActiveModel::MassAssignmentSecurity::Error)[0m
+[31m      ./features/step_definitions/user_steps.rb:16[0m
+[31m      features/search.feature:3[0m
+    [36mWhen I search for "[36m[1mI am[0m[0m[36m"[0m
+    [33mThen the results should be:[0m
+      | [33mcontent           [0m[0m |[0m
+      | [33mI am making dinner[0m[0m |[0m
+      | [33mI am going to work[0m[0m |[0m
+[33m      Undefined step: "the results should be:" (Cucumber::Undefined)[0m
+[33m      features/search.feature:9[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/search.feature:2[0m
+
+1 scenario ([31m1 failed[0m)
+3 steps ([31m1 failed[0m, [36m1 skipped[0m, [33m1 undefined[0m)
+0m0.320s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mThen /^the results should be:$/ do |table|[0m
+[33m  # table is a Cucumber::Ast::Table[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m

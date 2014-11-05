@@ -1,0 +1,17 @@
+Feature: 
+
+  Scenario: Buy Two Bottles of Shampoo
+    [32mGiven the price of a bottle of shampoo is $[32m[1m1[0m[0m[32m.[32m[1m99[0m[0m[32m[0m
+    [32mWhen I scan [32m[1m2[0m[0m[32m bottles of shampoo[0m
+    [31mThen the price should be $[31m[1m0[0m[0m[31m[0m
+[31m      expected: 0[0m
+[31m           got: 1.99 (using ==) (RSpec::Expectations::ExpectationNotMetError)[0m
+[31m      ./features/step_definitions/steps.rb:8[0m
+[31m      features/bogof.feature:5[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/bogof.feature:2[0m
+
+1 scenario ([31m1 failed[0m)
+3 steps ([31m1 failed[0m, [32m2 passed[0m)
+0m0.002s

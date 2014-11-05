@@ -1,0 +1,13 @@
+Feature: Adding
+
+  Scenario: Add two numbers
+    <literal:shade fg='magenta'>Given the input "<literal:shade bg='white' fg='black'>2+2</literal:shade></literal:shade><literal:shade fg='magenta'>"</literal:shade>
+<literal:shade fg='magenta'>      TODO (Cucumber::Pending)</literal:shade>
+<literal:shade fg='magenta'>      ./features/step_definitions/calculator_steps.rb:2</literal:shade>
+<literal:shade fg='magenta'>      features/adding.feature:4</literal:shade>
+    <literal:shade fg='blue'>When the calculator is run</literal:shade>
+    <literal:shade fg='blue'>Then the output should be "<literal:shade bg='white' fg='black'>4</literal:shade></literal:shade><literal:shade fg='blue'>"</literal:shade>
+
+1 scenario (<literal:shade fg='magenta'>1 pending</literal:shade>)
+3 steps (<literal:shade fg='blue'>2 skipped</literal:shade>, <literal:shade fg='magenta'>1 pending</literal:shade>)
+0m0.002s

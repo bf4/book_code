@@ -1,0 +1,21 @@
+Feature: 
+
+  Scenario: <literal:shade fg='black'>                               # features/tic_tac_toe.feature:2</literal:shade>
+    <literal:shade fg='magenta'>Given a board like this:<literal:shade fg='black'>               # features/step_definitions/board_steps.rb:1</literal:shade></literal:shade>
+      | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'>1</literal:shade> | <literal:shade fg='magenta'>2</literal:shade> | <literal:shade fg='magenta'>3</literal:shade> |
+      | <literal:shade fg='magenta'>1</literal:shade> | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'> </literal:shade> |
+      | <literal:shade fg='magenta'>2</literal:shade> | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'> </literal:shade> |
+      | <literal:shade fg='magenta'>3</literal:shade> | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'> </literal:shade> |
+<literal:shade fg='magenta'>      TODO (Cucumber::Pending)</literal:shade>
+<literal:shade fg='magenta'>      ./features/step_definitions/board_steps.rb:3</literal:shade>
+<literal:shade fg='magenta'>      features/tic_tac_toe.feature:3</literal:shade>
+    <literal:shade fg='blue'>When player x plays in row <literal:shade bg='white' fg='black'>2</literal:shade></literal:shade><literal:shade fg='blue'>, column <literal:shade bg='white' fg='black'>1</literal:shade></literal:shade><literal:shade fg='blue'><literal:shade fg='black'> # features/step_definitions/board_steps.rb:6</literal:shade></literal:shade>
+    <literal:shade fg='blue'>Then the board should look like this:<literal:shade fg='black'>  # features/step_definitions/board_steps.rb:10</literal:shade></literal:shade>
+      | <literal:shade fg='blue'> </literal:shade> | <literal:shade fg='blue'>1</literal:shade> | <literal:shade fg='blue'>2</literal:shade> | <literal:shade fg='blue'>3</literal:shade> |
+      | <literal:shade fg='blue'>1</literal:shade> | <literal:shade fg='blue'> </literal:shade> | <literal:shade fg='blue'> </literal:shade> | <literal:shade fg='blue'> </literal:shade> |
+      | <literal:shade fg='blue'>2</literal:shade> | <literal:shade fg='blue'>x</literal:shade> | <literal:shade fg='blue'> </literal:shade> | <literal:shade fg='blue'> </literal:shade> |
+      | <literal:shade fg='blue'>3</literal:shade> | <literal:shade fg='blue'> </literal:shade> | <literal:shade fg='blue'> </literal:shade> | <literal:shade fg='blue'> </literal:shade> |
+
+1 scenario (<literal:shade fg='magenta'>1 pending</literal:shade>)
+3 steps (<literal:shade fg='blue'>2 skipped</literal:shade>, <literal:shade fg='magenta'>1 pending</literal:shade>)
+0m0.017s

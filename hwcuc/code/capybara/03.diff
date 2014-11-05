@@ -1,0 +1,32 @@
+diff -Nur code/capybara/02/app/views/search/show.html.erb code/capybara/03/app/views/search/show.html.erb
+--- code/capybara/02/app/views/search/show.html.erb	2011-05-26 07:24:19.000000000 +0100
++++ code/capybara/03/app/views/search/show.html.erb	2011-06-13 23:22:01.000000000 +0100
+@@ -4,3 +2,9 @@
+     <input type="submit" value="Search" />
+   </fieldset>
++
++  <ol class="results">
++    <li><a href="/users/2/messages/20">I am making dinner</a></li>
++    <li><a href="/users/2/messages/21">SHOULD NOT BE HERE</a></li>
++    <li><a href="/users/2/messages/22">I am going to work</a></li>
++  </ol>
+ </form>
+\ No newline at end of file
+diff -Nur code/capybara/02/features/step_definitions/search_steps.rb code/capybara/03/features/step_definitions/search_steps.rb
+--- code/capybara/02/features/step_definitions/search_steps.rb	2011-05-25 21:47:16.000000000 +0100
++++ code/capybara/03/features/step_definitions/search_steps.rb	2011-06-07 21:15:55.000000000 +0100
+@@ -3,3 +3,14 @@
+   fill_in('query', :with => query)
+   click_button('Search')
+ end
++
++#START:results
++Then /^the results should be:$/ do |expected_results|
++  results = [['content']] + page.all('ol.results li').map do |li|
++    [li.text]
++  end
++  
++  puts results.join("\n")
++  pending
++end
++#END:results

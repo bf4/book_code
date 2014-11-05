@@ -1,0 +1,11 @@
+Feature: See Messages
+
+  Scenario: See another user's messages
+    <literal:shade fg='green'>Given there is a User</literal:shade>
+    <literal:shade fg='green'>And the User has posted the message "<literal:shade bg='white' fg='black'>this is my message</literal:shade></literal:shade><literal:shade fg='green'>"</literal:shade>
+    <literal:shade fg='green'>When I visit the page for the User</literal:shade>
+    <literal:shade fg='green'>Then I should see "<literal:shade bg='white' fg='black'>this is my message</literal:shade></literal:shade><literal:shade fg='green'>"</literal:shade>
+
+1 scenario (<literal:shade fg='green'>1 passed</literal:shade>)
+4 steps (<literal:shade fg='green'>4 passed</literal:shade>)
+0m0.459s

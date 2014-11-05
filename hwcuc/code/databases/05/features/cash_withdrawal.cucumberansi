@@ -1,0 +1,17 @@
+Starting transaction_processor in ~/message_queues/01 with
+  'ruby lib/transaction_processor.rb'
+[0;0mtransaction processor ready
+[0;0mServer transaction_processor (94557) is up.
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    [32mGiven my account has been credited with [32m[1m$100[0m[0m[32m[0m
+    [32mWhen I withdraw [32m[1m$20[0m[0m[32m[0m
+    [32mThen [32m[1m$20[0m[0m[32m should be dispensed[0m
+    [32mAnd the balance of my account should be [32m[1m$80[0m[0m[32m[0m
+
+1 scenario ([32m1 passed[0m)
+4 steps ([32m4 passed[0m)
+0m2.056s
+Shutting down transaction_processor (94557)
+Server transaction_processor (94557) is shut down

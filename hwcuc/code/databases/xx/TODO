@@ -1,0 +1,8 @@
+Puzzled.
+
+It seems like we have a couple of problems:
+
+1) the distributed architecture prevents us from being able to demonstrate transactions at all.
+  - oh no wait, we could have a step that calls BalanceStore directly to set the balance, keeping it all in the same transactoin
+
+2) bigger problem, sqlite3 seems to get confused about locks

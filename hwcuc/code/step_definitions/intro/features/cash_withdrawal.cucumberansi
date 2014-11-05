@@ -1,0 +1,28 @@
+Feature: Cash withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    [33mGiven I have $100 in my account[0m
+    [33mWhen I request $20[0m
+    [33mThen $20 should be dispensed[0m
+
+1 scenario ([33m1 undefined[0m)
+3 steps ([33m3 undefined[0m)
+0m0.002s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mGiven /^I have \$(\d+) in my account$/ do |arg1|[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m
+[33m[0m
+[33mWhen /^I request \$(\d+)$/ do |arg1|[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m
+[33m[0m
+[33mThen /^\$(\d+) should be dispensed$/ do |arg1|[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m
+[31m[0m
+[31mIf you want snippets in a different programming language,[0m
+[31mjust make sure a file with the appropriate file extension[0m
+[31mexists where cucumber looks for step definitions.[0m

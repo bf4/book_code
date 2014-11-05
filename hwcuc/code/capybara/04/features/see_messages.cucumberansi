@@ -1,0 +1,11 @@
+Feature: See Messages
+
+  Scenario: See another user's messages
+    [32mGiven there is a User[0m
+    [32mAnd the User has posted the message "[32m[1mthis is my message[0m[0m[32m"[0m
+    [32mWhen I visit the page for the User[0m
+    [32mThen I should see "[32m[1mthis is my message[0m[0m[32m"[0m
+
+1 scenario ([32m1 passed[0m)
+4 steps ([32m4 passed[0m)
+0m0.459s

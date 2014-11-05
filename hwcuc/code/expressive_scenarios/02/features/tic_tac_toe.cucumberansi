@@ -1,0 +1,11 @@
+[32m.[0m
+[36m[["", "1", "2", "3"], ["1", "", "", ""], ["2", "", "", ""], ["3", "", "", ""]][0m
+[33mP[0m[36m-[0m
+
+[33m(::) pending steps (::)[0m
+
+[33mfeatures/tic_tac_toe.feature:8:in `When player x plays in row 2, column 1'[0m
+
+1 scenario ([33m1 pending[0m)
+3 steps ([36m1 skipped[0m, [33m1 pending[0m, [32m1 passed[0m)
+0m0.020s

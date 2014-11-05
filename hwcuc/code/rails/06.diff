@@ -1,0 +1,17 @@
+diff -Nur code/rails/05/features/support/factories.rb code/rails/06/features/support/factories.rb
+--- code/rails/05/features/support/factories.rb	2011-10-20 12:43:54.000000000 +0100
++++ code/rails/06/features/support/factories.rb	2011-10-20 12:43:54.000000000 +0100
+@@ -4,4 +4,11 @@
+   factory :user do |f|
+     f.username 'testuser'
+   end
+-end
+\ No newline at end of file
++
++  #START:message
++  factory :message do |f|
++    f.association :user
++    f.content 'Test message content'
++  end
++  #END:message
++end

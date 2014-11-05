@@ -1,0 +1,10 @@
+Feature: Adding
+
+  Scenario: Add two numbers<literal:shade fg='black'>       # features/adding.feature:3</literal:shade>
+    <literal:shade fg='green'>Given the input "<literal:shade bg='white' fg='black'>2+2</literal:shade></literal:shade><literal:shade fg='green'>"<literal:shade fg='black'>         # features/step_definitions/calculator_steps.rb:1</literal:shade></literal:shade>
+    <literal:shade fg='green'>When the calculator is run<literal:shade fg='black'>    # features/step_definitions/calculator_steps.rb:11</literal:shade></literal:shade>
+    <literal:shade fg='green'>Then the output should be "<literal:shade bg='white' fg='black'>4</literal:shade></literal:shade><literal:shade fg='green'>"<literal:shade fg='black'> # features/step_definitions/calculator_steps.rb:19</literal:shade></literal:shade>
+
+1 scenario (<literal:shade fg='green'>1 passed</literal:shade>)
+3 steps (<literal:shade fg='green'>3 passed</literal:shade>)
+0m0.445s

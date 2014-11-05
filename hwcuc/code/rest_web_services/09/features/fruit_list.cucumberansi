@@ -1,0 +1,21 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    [32mGiven the system knows about the following fruit:[0m
+      | [32mname      [0m[0m |[0m [32mcolor [0m[0m |[0m
+      | [32mbanana    [0m[0m |[0m [32myellow[0m[0m |[0m
+      | [32mstrawberry[0m[0m |[0m [32mred   [0m[0m |[0m
+    [32mWhen the client requests GET [32m[1m/fruits[0m[0m[32m[0m
+    [32mThen the response should be JSON:[0m
+[32m      """[0m
+[32m      [[0m
+[32m        {"name": "banana", "color": "yellow"},[0m
+[32m        {"name": "strawberry", "color": "red"}[0m
+[32m      ][0m
+[32m      """[0m
+
+1 scenario ([32m1 passed[0m)
+3 steps ([32m3 passed[0m)
+0m0.027s

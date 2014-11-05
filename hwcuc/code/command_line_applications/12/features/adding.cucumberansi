@@ -1,0 +1,16 @@
+Feature: Adding
+
+  Scenario: Add two numbers[90m       # features/adding.feature:3[0m
+    [32mGiven the input "[32m[1m2+2[0m[0m[32m"[90m         # features/step_definitions/calculator_steps.rb:1[0m[0m
+    [32mWhen the calculator is run[90m    # features/step_definitions/calculator_steps.rb:4[0m[0m
+    [32mThen the output should be "[32m[1m4[0m[0m[32m"[90m # features/step_definitions/calculator_steps.rb:13[0m[0m
+
+  #START:focus
+  Scenario: Add two numbers interactively[90m    # features/adding.feature:9[0m
+    [32mWhen the calculator is run with no input[90m # features/step_definitions/calculator_steps.rb:7[0m[0m
+    [32mAnd I enter the calculation "[32m[1m2+2[0m[0m[32m"[90m        # features/step_definitions/calculator_steps.rb:10[0m[0m
+    [32mThen the output should be "[32m[1m4[0m[0m[32m"[90m            # features/step_definitions/calculator_steps.rb:13[0m[0m
+
+2 scenarios ([32m2 passed[0m)
+6 steps ([32m6 passed[0m)
+0m0.637s

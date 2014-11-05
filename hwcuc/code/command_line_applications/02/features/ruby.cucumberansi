@@ -1,0 +1,12 @@
+Feature: ruby -e
+
+  Scenario: print something
+    [32mWhen I run `[32m[1mruby -e "puts 'hello'"[0m[0m[32m`[0m
+    [32mThen it should [32m[1mpass[0m[0m[32m with:[0m
+[32m      """[0m
+[32m      hello[0m
+[32m      """[0m
+
+1 scenario ([32m1 passed[0m)
+2 steps ([32m2 passed[0m)
+0m0.327s

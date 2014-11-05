@@ -1,0 +1,14 @@
+diff -Nur code/rails/04/features/step_definitions/user_steps.rb code/rails/05/features/step_definitions/user_steps.rb
+--- code/rails/04/features/step_definitions/user_steps.rb	2010-12-04 20:33:37.000000000 +0000
++++ code/rails/05/features/step_definitions/user_steps.rb	2010-12-04 20:33:37.000000000 +0000
+@@ -1,3 +1,10 @@
+ Given /^there is a User$/ do
+   FactoryGirl.create(:user)
+ end
++
++#START:step-definition
++Given /^the User has posted the message "([^"]*)"$/ do |message_text|
++  User.count.should == 1
++  FactoryGirl.create(:message, :content => message_text, :user => User.first)
++end
++#END:step-definition

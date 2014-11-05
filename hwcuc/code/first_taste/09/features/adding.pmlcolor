@@ -1,0 +1,22 @@
+Feature: Adding
+
+  Scenario Outline: Add two numbers
+    <literal:shade fg='blue'>Given the input "<input>"</literal:shade>
+    <literal:shade fg='blue'>When the calculator is run</literal:shade>
+    <literal:shade fg='blue'>Then the output should be "<output>"</literal:shade>
+
+    Examples: 
+      | <literal:shade bg='white' fg='black'>input</literal:shade><literal:shade fg='blue'></literal:shade> | <literal:shade bg='white' fg='black'>output</literal:shade><literal:shade fg='blue'></literal:shade> |
+      | <literal:shade fg='green'>2+2  </literal:shade> | <literal:shade fg='green'>4     </literal:shade> |
+      | <literal:shade fg='green'>98+1 </literal:shade> | <literal:shade fg='red'>99    </literal:shade> |
+<literal:shade fg='red'>      expected: "99"</literal:shade>
+<literal:shade fg='red'>           got: "4" (using ==) (RSpec::Expectations::ExpectationNotMetError)</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/calculator_steps.rb:15</literal:shade>
+<literal:shade fg='red'>      features/adding.feature:6</literal:shade>
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/adding.feature:3</literal:shade>
+
+2 scenarios (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='green'>1 passed</literal:shade>)
+6 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='green'>5 passed</literal:shade>)
+0m0.765s

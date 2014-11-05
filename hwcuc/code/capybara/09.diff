@@ -1,0 +1,200 @@
+diff -Nur 08/app/assets/javascripts/search.js 09/app/assets/javascripts/search.js
+--- 08/app/assets/javascripts/search.js	1970-01-01 01:00:00.000000000 +0100
++++ 09/app/assets/javascripts/search.js	2011-07-08 19:53:55.000000000 +0100
+@@ -0,0 +1,49 @@
++function Search(form) {
++  this.form = form;
++}
++
++Search.prototype.queue = function (query) {
++  if (this.timer) {
++    clearTimeout(this.timer);
++  }
++  var self = this;
++  this.timer = setTimeout(function () {
++    self.search(query);
++  }, 150);
++};
++
++Search.prototype.search = function (query) {
++  var self = this;
++  jQuery.ajax({
++    url: this.form.action,
++    type: this.form.method,
++    data: {'query': query},
++    success: function(results) {self.render(results)},
++    contentType: 'application/json',
++    dataType: 'json'
++  });
++}
++
++Search.prototype.render = function (results) {
++  var html = "";
++  for (var i = 0, l = results.length; i < l; ++i) {
++    var url = '/users/' + results[i].user_id + '/messages/' + results[i].id;
++    html += '<li><a href="' + url + '">' + results[i].content + '</a></li>';
++  }
++  jQuery(this.form).find('ol.results').html(html);
++}
++
++jQuery.fn.search = function () {
++  this.each(function () {
++    var search = new Search(this);
++    var input = jQuery(this).find("input[type=text]");
++
++    input.bind('keyup', function () {
++      search.queue(this.value);
++    });
++  });
++};
++
++jQuery(function() {
++  jQuery('#search').search();
++});
+diff -Nur 08/app/assets/stylesheets/search.css 09/app/assets/stylesheets/search.css
+--- 08/app/assets/stylesheets/search.css	1970-01-01 01:00:00.000000000 +0100
++++ 09/app/assets/stylesheets/search.css	2011-07-08 19:53:55.000000000 +0100
+@@ -0,0 +1,119 @@
++body {
++    font-size: 100%;
++    font-family: Sans, arial, sans-serif;
++}
++
++form {
++    padding: 100px;
++}
++
++fieldset {
++    border: none;
++    outline: none;
++    margin: 0;
++    padding: 0;
++    position: relative;
++}
++
++input.text {
++    border-color: #ccc #999 #999 #ccc;
++    border-style: solid;
++    border-width: 1px;
++    color: #000000;
++    font: 18px arial, sans-serif bold;
++    height: 25px;
++    margin: 0;
++    padding: 5px 6px 0;
++    vertical-align: top;
++    width:496px;
++    -moz-box-sizing:content-box;
++}
++
++input.text:focus {
++    outline: none;
++}
++
++.results {
++    background: #fff;
++    border: 1px solid #cccccc;
++    border-color: #a2bff0 #558be3 #558be3 #a2bff0;
++    font-size: 18px;
++    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
++    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
++    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
++    position: absolute;
++    top: 138px;
++    width: 508px;
++    margin: 0;
++    padding: 0;
++}
++
++.results li {
++    border-bottom: 1px dotted #eee;
++    font-size: .9em;
++    list-style: none;
++    padding: 6px;
++}
++
++.button {
++    background: #ddd;
++
++    background: -webkit-gradient(
++        linear,
++        left top,
++        left bottom,
++        from(#fff),
++        to(#ddd)
++    );
++
++    background: -moz-linear-gradient(
++        top center,
++        #fff,
++        #ddd
++    );
++
++    border: 1px solid #aaa;
++    border-radius: 12px;
++    -moz-border-radius: 24px;
++    -webkit-border-radius: 24px;
++    box-shadow: 2px 2px 2px #ccc;
++    -webkit-box-shadow: 2px 2px 2px #ccc;
++    -moz-box-shadow: 2px 2px 2px #ccc;
++    display: inline-block;
++    margin: 0 0 2em;
++}
++
++.button:hover {
++    background: -webkit-gradient(
++        linear,
++        left top,
++        left bottom,
++        from(#cdcdcd),
++        to(#ececec)
++    );
++
++    background: -moz-linear-gradient(
++        top center,
++        #cdcdcd,
++        #ececec
++    );
++
++    border-color: #999;
++}
++
++.button input {
++    background: none;
++    border: none;
++    color: #333;
++    cursor: pointer;
++    display: block;
++    font-size: 18px;
++    font-weight: normal;
++    outline: none;
++    padding: 2px 24px;
++    text-decoration: none;
++}
++
++.button input:hover {
++    color: #111;
++}
+\ No newline at end of file
+diff -Nur 08/app/controllers/search_controller.rb 09/app/controllers/search_controller.rb
+--- 08/app/controllers/search_controller.rb	2011-11-10 20:29:53.000000000 +0000
++++ 09/app/controllers/search_controller.rb	2011-11-10 20:32:09.000000000 +0000
+@@ -1,5 +1,8 @@
+ class SearchController < ApplicationController
++  respond_to :html, :json
++
+   def show
+     @messages = Message.like(params[:query])
++    respond_with(@messages)
+   end
+ end
+diff -Nur 08/app/views/search/show.html.erb 09/app/views/search/show.html.erb
+--- 08/app/views/search/show.html.erb	2011-06-30 20:12:00.000000000 +0100
++++ 09/app/views/search/show.html.erb	2011-07-08 19:53:55.000000000 +0100
+@@ -1,6 +1,6 @@
+ <form id="search" method="get" action="/search">
+   <fieldset>
+-    <input type="text" id="query" name="query" />
++    <input type="text" id="query" name="query" autocomplete="off" />
+     <input type="submit" value="Search" />
+   </fieldset>
+ </form>

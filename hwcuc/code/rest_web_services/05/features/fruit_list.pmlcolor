@@ -1,0 +1,40 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    <literal:shade fg='green'>Given the system knows about the following fruit:</literal:shade>
+      | <literal:shade fg='green'>name      </literal:shade> | <literal:shade fg='green'>color </literal:shade> |
+      | <literal:shade fg='green'>banana    </literal:shade> | <literal:shade fg='green'>yellow</literal:shade> |
+      | <literal:shade fg='green'>strawberry</literal:shade> | <literal:shade fg='green'>red   </literal:shade> |
+    <literal:shade fg='green'>When the client requests GET <literal:shade bg='white' fg='black'>/fruits</literal:shade></literal:shade><literal:shade fg='green'></literal:shade>
+    <literal:shade fg='red'>Then the response should be JSON:</literal:shade>
+<literal:shade fg='red'>      """</literal:shade>
+<literal:shade fg='red'>      [</literal:shade>
+<literal:shade fg='red'>        {"name": "banana", "color": "yellow"},</literal:shade>
+<literal:shade fg='red'>        {"name": "strawberry", "color": "red"}</literal:shade>
+<literal:shade fg='red'>      ]</literal:shade>
+<literal:shade fg='red'>      """</literal:shade>
+<literal:shade fg='red'>      expected: "[\n  {\"name\": \"banana\", \"color\": \"yellow\"},\n  </literal:shade>
+<literal:shade fg='red'>      {\"name\": \"strawberry\", \"color\": \"red\"}\n]"</literal:shade>
+<literal:shade fg='red'>           got: </literal:shade>
+<literal:shade fg='red'>      "[{\"name\":\"banana\",\"color\":\"yellow\"}, </literal:shade>
+<literal:shade fg='red'>        {\"name\":\"strawberry\",\"color\":\"red\"}]" </literal:shade>
+<literal:shade fg='red'>      (using ==)</literal:shade>
+<literal:shade fg='red'>      Diff:</literal:shade>
+<literal:shade fg='red'>      @@ -1,5 +1,2 @@</literal:shade>
+<literal:shade fg='red'>      -[</literal:shade>
+<literal:shade fg='red'>      -  {"name": "banana", "color": "yellow"},</literal:shade>
+<literal:shade fg='red'>      -  {"name": "strawberry", "color": "red"}</literal:shade>
+<literal:shade fg='red'>      -]</literal:shade>
+<literal:shade fg='red'>      +[{"name":"banana","color":"yellow"},{"name":"strawberry","color":"red"}]</literal:shade>
+<literal:shade fg='red'>       (RSpec::Expectations::ExpectationNotMetError)</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/rest_steps.rb:6</literal:shade>
+<literal:shade fg='red'>      features/fruit_list.feature:11</literal:shade>
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/fruit_list.feature:5</literal:shade>
+
+1 scenario (<literal:shade fg='red'>1 failed</literal:shade>)
+3 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='green'>2 passed</literal:shade>)
+0m0.018s

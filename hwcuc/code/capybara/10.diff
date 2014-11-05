@@ -1,0 +1,12 @@
+diff -Nur 09/features/step_definitions/search_steps.rb 10/features/step_definitions/search_steps.rb
+--- 09/features/step_definitions/search_steps.rb	2011-08-03 21:11:48.000000000 +0100
++++ 10/features/step_definitions/search_steps.rb	2011-08-03 21:13:24.000000000 +0100
+@@ -13,6 +13,8 @@
+ 
+ #START:results
+ Then /^the results should be:$/ do |expected_results|
++  # Wait until a matching element is found on the page
++  find('ol.results li')
+   results = [['content']] + page.all('ol.results li').map do |li|
+     [li.first('a').text]
+   end

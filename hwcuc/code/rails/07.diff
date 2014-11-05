@@ -1,0 +1,123 @@
+Binary files code/rails/06/db/development.sqlite3 and code/rails/07/db/development.sqlite3 differ
+diff -Nur code/rails/06/db/migrate/20110729185950_create_messages.rb code/rails/07/db/migrate/20110729185950_create_messages.rb
+--- code/rails/06/db/migrate/20110729185950_create_messages.rb	1970-01-01 01:00:00.000000000 +0100
++++ code/rails/07/db/migrate/20110729185950_create_messages.rb	2011-07-29 19:59:50.000000000 +0100
+@@ -0,0 +1,10 @@
++class CreateMessages < ActiveRecord::Migration
++  def change
++    create_table :messages do |t|
++      t.integer :user_id
++      t.string :content
++
++      t.timestamps
++    end
++  end
++end
+diff -Nur code/rails/06/db/schema.rb code/rails/07/db/schema.rb
+--- code/rails/06/db/schema.rb	2011-07-29 20:09:06.000000000 +0100
++++ code/rails/07/db/schema.rb	2011-07-29 20:09:20.000000000 +0100
+@@ -10,7 +10,14 @@
+ #
+ # It's strongly recommended to check this file into your version control system.
+ 
+-ActiveRecord::Schema.define(:version => 20110729185938) do
++ActiveRecord::Schema.define(:version => 20110729185950) do
++
++  create_table "messages", :force => true do |t|
++    t.integer  "user_id"
++    t.string   "content"
++    t.datetime "created_at"
++    t.datetime "updated_at"
++  end
+ 
+   create_table "users", :force => true do |t|
+     t.string   "username"
+Binary files code/rails/06/db/test.sqlite3 and code/rails/07/db/test.sqlite3 differ
+diff -Nur code/rails/06/features/see_messages.ansi code/rails/07/features/see_messages.ansi
+--- code/rails/06/features/see_messages.ansi	2011-07-29 20:09:14.000000000 +0100
++++ code/rails/07/features/see_messages.ansi	2011-07-29 20:09:28.000000000 +0100
+@@ -3,7 +3,7 @@
+   Scenario: See another user's messages
+     [32mGiven there is a User[0m
+     [31mAnd the User has posted the message "[31m[1mthis is my message[0m[0m[31m"[0m
+-[31m      Could not find table 'messages' (ActiveRecord::StatementInvalid)[0m
++[31m      undefined method `user=' for #<Message:0x63756b65> (NoMethodError)[0m
+ [31m      ./features/step_definitions/user_steps.rb:8[0m
+ [31m      features/see_messages.feature:4[0m
+     [33mWhen I visit the page for the User[0m
+diff -Nur code/rails/06/features/see_messages.html code/rails/07/features/see_messages.html
+--- code/rails/06/features/see_messages.html	2011-07-29 20:09:14.000000000 +0100
++++ code/rails/07/features/see_messages.html	2011-07-29 20:09:28.000000000 +0100
+@@ -463,7 +463,7 @@
+     $('#'+element_id).css('color', '#000000');
+   }
+   
+-</script></head><body><!-- Step count 4--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><h2><span class="val">Feature: See Messages</span></h2><p class="narrative"></p><div class='scenario'><span class="scenario_file">features/see_messages.feature:2</span><h3 id="scenario_1"><span class="keyword">Scenario:</span> <span class="val">See another user's messages</span></h3><ol><li id='features_see_messages_feature_3' class='step passed'><div class="step_name"><span class="keyword">Given </span><span class="step val">there is a User</span></div><div class="step_file"><span>features/step_definitions/user_steps.rb:1</span></div></li> <script type="text/javascript">moveProgressBar('25.0');</script><script>makeRed('cucumber-header');makeRed('scenario_1');</script><li id='features_see_messages_feature_4' class='step failed'><div class="step_name"><span class="keyword">And </span><span class="step val">the User has posted the message &quot;<span class="param">this is my message</span>&quot;</span></div><div class="step_file"><span>features/step_definitions/user_steps.rb:6</span></div><div class="message"><pre>Could not find table 'messages'</pre></div><div class="backtrace"><pre>./features/step_definitions/user_steps.rb:8
++</script></head><body><!-- Step count 4--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><h2><span class="val">Feature: See Messages</span></h2><p class="narrative"></p><div class='scenario'><span class="scenario_file">features/see_messages.feature:2</span><h3 id="scenario_1"><span class="keyword">Scenario:</span> <span class="val">See another user's messages</span></h3><ol><li id='features_see_messages_feature_3' class='step passed'><div class="step_name"><span class="keyword">Given </span><span class="step val">there is a User</span></div><div class="step_file"><span>features/step_definitions/user_steps.rb:1</span></div></li> <script type="text/javascript">moveProgressBar('25.0');</script><script>makeRed('cucumber-header');makeRed('scenario_1');</script><li id='features_see_messages_feature_4' class='step failed'><div class="step_name"><span class="keyword">And </span><span class="step val">the User has posted the message &quot;<span class="param">this is my message</span>&quot;</span></div><div class="step_file"><span>features/step_definitions/user_steps.rb:6</span></div><div class="message"><pre>undefined method `user=' for #&lt;Message:0x63756b65&gt;</pre></div><div class="backtrace"><pre>./features/step_definitions/user_steps.rb:8
+ features/see_messages.feature:4</pre></div><pre class="ruby"><code><span class="linenum">6</span>Given /^the User has posted the message "([^"]*)"$/ do |message_text|
+ <span class="linenum">7</span>  User.count.should == 1
+ <span class="offending"><span class="linenum">8</span>  Factory(:message, :content => message_text, :user => User.first)</span>
+diff -Nur code/rails/06/features/see_messages.out code/rails/07/features/see_messages.out
+--- code/rails/06/features/see_messages.out	2011-07-29 20:09:15.000000000 +0100
++++ code/rails/07/features/see_messages.out	2011-07-29 20:09:28.000000000 +0100
+@@ -3,7 +3,7 @@
+   Scenario: See another user's messages
+     <literal:shade fg='green'>Given there is a User</literal:shade>
+     <literal:shade fg='red'>And the User has posted the message "<literal:shade bg='white' fg='black'>this is my message</literal:shade></literal:shade><literal:shade fg='red'>"</literal:shade>
+-<literal:shade fg='red'>      Could not find table 'messages' (ActiveRecord::StatementInvalid)</literal:shade>
++<literal:shade fg='red'>      undefined method `user=' for #<Message:0x63756b65> (NoMethodError)</literal:shade>
+ <literal:shade fg='red'>      ./features/step_definitions/user_steps.rb:8</literal:shade>
+ <literal:shade fg='red'>      features/see_messages.feature:4</literal:shade>
+     <literal:shade fg='magenta'>When I visit the page for the User</literal:shade>
+diff -Nur code/rails/06/log/development.log code/rails/07/log/development.log
+--- code/rails/06/log/development.log	2011-07-29 20:09:06.000000000 +0100
++++ code/rails/07/log/development.log	2011-07-29 20:09:20.000000000 +0100
+@@ -1,19 +1,25 @@
+   [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+-  [1m[35m (40.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+-  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+-  [1m[35m (3.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
++  [1m[35m (40.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
++  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
++  [1m[35m (3.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+ Migrating to CreateUsers (20110729185938)
+-  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "created_at" datetime, "updated_at" datetime) 
++  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "created_at" datetime, "updated_at" datetime) 
+   [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110729185938')[0m
+-  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+-  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+-  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+-  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
++Migrating to CreateMessages (20110729185950)
++  [1m[35m (0.3ms)[0m  CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "content" varchar(255), "created_at" datetime, "updated_at" datetime) 
++  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110729185950')[0m
+   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+-  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+-  [1m[35m (3.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
++  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
++  [1m[35m (0.0ms)[0m  PRAGMA index_list("messages")
++  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
++  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
++  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
++  [1m[35m (2.8ms)[0m  CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "content" varchar(255), "created_at" datetime, "updated_at" datetime) 
++  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
++  [1m[35m (3.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+-  [1m[35m (3.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
++  [1m[35m (3.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+-  [1m[35m (3.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110729185938')
++  [1m[35m (4.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110729185950')
++  [1m[36m (3.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110729185938')[0m
+diff -Nur code/rails/06/log/test.log code/rails/07/log/test.log
+--- code/rails/06/log/test.log	2011-07-29 20:09:14.000000000 +0100
++++ code/rails/07/log/test.log	2011-07-29 20:09:28.000000000 +0100
+@@ -1,5 +1,5 @@
+-  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+-  [1m[35mSQL (15.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Fri, 29 Jul 2011 19:09:14 UTC +00:00], ["updated_at", Fri, 29 Jul 2011 19:09:14 UTC +00:00], ["username", "testuser"]]
++  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
++  [1m[35mSQL (16.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Fri, 29 Jul 2011 19:09:28 UTC +00:00], ["updated_at", Fri, 29 Jul 2011 19:09:28 UTC +00:00], ["username", "testuser"]]
+   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+   [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m

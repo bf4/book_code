@@ -1,0 +1,46 @@
+diff -Nur code/capybara/04/app/controllers/search_controller.rb code/capybara/05/app/controllers/search_controller.rb
+--- code/capybara/04/app/controllers/search_controller.rb	2011-11-10 19:42:32.000000000 +0000
++++ code/capybara/05/app/controllers/search_controller.rb	2011-11-10 20:23:11.000000000 +0000
+@@ -1,4 +1,5 @@
+ class SearchController < ApplicationController
+   def show
++    @messages = Message.like(params[:query])
+   end
+ end
+diff -Nur code/capybara/04/app/views/search/show.html.erb code/capybara/05/app/views/search/show.html.erb
+--- code/capybara/04/app/views/search/show.html.erb	2011-06-13 23:22:01.000000000 +0100
++++ code/capybara/05/app/views/search/show.html.erb	2011-05-26 07:24:20.000000000 +0100
+@@ -4,7 +4,7 @@
+
+   <ol class="results">
+-    <li><a href="/users/2/messages/20">I am making dinner</a></li>
+-    <li><a href="/users/2/messages/21">SHOULD NOT BE HERE</a></li>
+-    <li><a href="/users/2/messages/22">I am going to work</a></li>
++    <% @messages.each do |message| %>
++      <li><%= link_to(message.content, [message.user, message]) %></li>
++    <% end %>
+   </ol>
+ </form>
+\ No newline at end of file
+diff -Nur code/capybara/04/config/routes.rb code/capybara/05/config/routes.rb
+--- code/capybara/04/config/routes.rb	2011-05-26 07:24:19.000000000 +0100
++++ code/capybara/05/config/routes.rb	2011-05-26 07:24:20.000000000 +0100
+@@ -1,4 +1,6 @@
+ Squeaker::Application.routes.draw do
+-  resources :users
++  resources :users do
++    resources :messages
++  end
+   resource :search, :only => :show, :controller => :search
+ end
+diff -Nur code/capybara/04/app/models/message.rb code/capybara/05/app/models/message.rb 
+--- code/capybara/04/app/models/message.rb	2011-11-10 19:42:32.000000000 +0000
++++ code/capybara/05/app/models/message.rb	2011-11-10 20:22:06.000000000 +0000
+@@ -1,3 +1,7 @@
+ class Message < ActiveRecord::Base
+   belongs_to :user
++
++  def self.like(content)
++    content.nil? ? [] : where(['content LIKE ?', "%#{content}%"])
++  end
+ end

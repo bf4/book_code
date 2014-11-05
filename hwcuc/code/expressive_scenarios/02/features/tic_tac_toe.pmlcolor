@@ -1,0 +1,11 @@
+<literal:shade fg='green'>.</literal:shade>
+<literal:shade fg='blue'>[["", "1", "2", "3"], ["1", "", "", ""], ["2", "", "", ""], ["3", "", "", ""]]</literal:shade>
+<literal:shade fg='magenta'>P</literal:shade><literal:shade fg='blue'>-</literal:shade>
+
+<literal:shade fg='magenta'>(::) pending steps (::)</literal:shade>
+
+<literal:shade fg='magenta'>features/tic_tac_toe.feature:8:in `When player x plays in row 2, column 1'</literal:shade>
+
+1 scenario (<literal:shade fg='magenta'>1 pending</literal:shade>)
+3 steps (<literal:shade fg='blue'>1 skipped</literal:shade>, <literal:shade fg='magenta'>1 pending</literal:shade>, <literal:shade fg='green'>1 passed</literal:shade>)
+0m0.020s

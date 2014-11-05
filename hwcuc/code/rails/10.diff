@@ -1,0 +1,14 @@
+diff -Nur code/rails/09/app/controllers/users_controller.rb code/rails/10/app/controllers/users_controller.rb
+--- code/rails/09/app/controllers/users_controller.rb	1970-01-01 01:00:00.000000000 +0100
++++ code/rails/10/app/controllers/users_controller.rb	2011-05-25 15:37:17.000000000 +0100
+@@ -0,0 +1,4 @@
++class UsersController < ApplicationController
++  def show
++  end
++end
+diff -Nur code/rails/09/app/views/users/show.html.erb code/rails/10/app/views/users/show.html.erb
+--- code/rails/09/app/views/users/show.html.erb	1970-01-01 01:00:00.000000000 +0100
++++ code/rails/10/app/views/users/show.html.erb	2011-05-25 15:37:17.000000000 +0100
+@@ -0,0 +1 @@
++Hello
+\ No newline at end of file

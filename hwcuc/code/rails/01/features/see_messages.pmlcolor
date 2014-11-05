@@ -1,0 +1,38 @@
+Feature: See Messages
+
+  Scenario: See another user's messages
+    <literal:shade fg='magenta'>Given there is a User</literal:shade>
+<literal:shade fg='magenta'>      Undefined step: "there is a User" (Cucumber::Undefined)</literal:shade>
+<literal:shade fg='magenta'>      features/see_messages.feature:3</literal:shade>
+    <literal:shade fg='magenta'>And the User has posted the message "this is my message"</literal:shade>
+<literal:shade fg='magenta'>      Undefined step: "the User has posted the message "this is my message"" </literal:shade>
+<literal:shade fg='magenta'>      (Cucumber::Undefined)</literal:shade>
+<literal:shade fg='magenta'>      features/see_messages.feature:4</literal:shade>
+    <literal:shade fg='magenta'>When I visit the page for the User</literal:shade>
+<literal:shade fg='magenta'>      Undefined step: "I visit the page for the User" (Cucumber::Undefined)</literal:shade>
+<literal:shade fg='magenta'>      features/see_messages.feature:5</literal:shade>
+    <literal:shade fg='magenta'>Then I should see "this is my message"</literal:shade>
+<literal:shade fg='magenta'>      Undefined step: "I should see "this is my message"" (Cucumber::Undefined)</literal:shade>
+<literal:shade fg='magenta'>      features/see_messages.feature:6</literal:shade>
+
+1 scenario (<literal:shade fg='magenta'>1 undefined</literal:shade>)
+4 steps (<literal:shade fg='magenta'>4 undefined</literal:shade>)
+0m0.350s
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>You can implement step definitions for undefined steps with these snippets:</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>Given /^there is a User$/ do</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>Given /^the User has posted the message "(.*?)"$/ do |arg1|</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>When /^I visit the page for the User$/ do</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>Then /^I should see "(.*?)"$/ do |arg1|</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>

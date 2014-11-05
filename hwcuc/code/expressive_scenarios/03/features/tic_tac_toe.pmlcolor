@@ -1,0 +1,25 @@
+Feature: 
+
+  Scenario: 
+    <literal:shade fg='green'>Given a board like this:</literal:shade>
+      | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'>1</literal:shade> | <literal:shade fg='green'>2</literal:shade> | <literal:shade fg='green'>3</literal:shade> |
+      | <literal:shade fg='green'>1</literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> |
+      | <literal:shade fg='green'>2</literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> |
+      | <literal:shade fg='green'>3</literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> |
+    <literal:shade fg='green'>When player x plays in row <literal:shade bg='white' fg='black'>2</literal:shade></literal:shade><literal:shade fg='green'>, column <literal:shade bg='white' fg='black'>1</literal:shade></literal:shade><literal:shade fg='green'></literal:shade>
+    <literal:shade fg='red'>Then the board should look like this:</literal:shade>
+      | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'>1</literal:shade> | <literal:shade fg='green'>2</literal:shade> | <literal:shade fg='green'>3</literal:shade> |
+      | <literal:shade fg='green'>1</literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> |
+      | <literal:shade fg='magenta'>2</literal:shade> | <literal:shade fg='magenta'>x</literal:shade> | <literal:shade fg='magenta'> </literal:shade> | <literal:shade fg='magenta'> </literal:shade> |
+      | <literal:shade fg='black'>2</literal:shade> | <literal:shade fg='black'> </literal:shade> | <literal:shade fg='black'> </literal:shade> | <literal:shade fg='black'> </literal:shade> |
+      | <literal:shade fg='green'>3</literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> | <literal:shade fg='green'> </literal:shade> |
+<literal:shade fg='red'>      Tables were not identical (Cucumber::Ast::Table::Different)</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/board_steps.rb:7</literal:shade>
+<literal:shade fg='red'>      features/tic_tac_toe.feature:9</literal:shade>
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/tic_tac_toe.feature:2</literal:shade>
+
+1 scenario (<literal:shade fg='red'>1 failed</literal:shade>)
+3 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='green'>2 passed</literal:shade>)
+0m0.020s

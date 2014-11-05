@@ -1,0 +1,16 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    [31mGiven I have deposited $[31m[1m100[0m[0m[31m in my account[0m
+[31m      uninitialized constant Account (NameError)[0m
+[31m      ./features/step_definitions/steps.rb:2[0m
+[31m      features/cash_withdrawal.feature:3[0m
+    [36mWhen I request $[36m[1m20[0m[0m[36m[0m
+    [36mThen $[36m[1m20[0m[0m[36m should be dispensed[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/cash_withdrawal.feature:2[0m
+
+1 scenario ([31m1 failed[0m)
+3 steps ([31m1 failed[0m, [36m2 skipped[0m)
+0m0.005s

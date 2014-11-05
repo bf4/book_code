@@ -1,0 +1,42 @@
+Starting transaction_processor in ~/message_queues/01 with
+  'ruby lib/transaction_processor.rb'
+transaction processor ready
+Server transaction_processor (94557) is up.
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    <literal:shade fg='green'>Given my account has been credited with <literal:shade bg='white' fg='black'>$100</literal:shade></literal:shade><literal:shade fg='green'></literal:shade>
+    <literal:shade fg='green'>When I withdraw <literal:shade bg='white' fg='black'>$20</literal:shade></literal:shade><literal:shade fg='green'></literal:shade>
+    <literal:shade fg='green'>Then <literal:shade bg='white' fg='black'>$20</literal:shade></literal:shade><literal:shade fg='green'> should be dispensed</literal:shade>
+~/.rvm/gems/ruby-1.9.3-p194@hwcuc/gems/activerecord-3.2.7/
+lib/active_record/relation/finder_methods.rb:267:in `find_by_attributes': 
+Couldn't find Account with number = test (ActiveRecord::RecordNotFound)
+	from ~/.rvm/gems/ruby-1.9.3-p194@hwcuc/gems/activerecord-3.2.7/
+lib/active_record/dynamic_matchers.rb:45:in `method_missing'
+	from lib/transaction_processor.rb:12:in `block (2 levels) in <main>'
+	from ~/databases/04/lib/transaction_queue.rb:21:in `read'
+	from lib/transaction_processor.rb:8:in `block in <main>'
+	from lib/transaction_processor.rb:7:in `loop'
+	from lib/transaction_processor.rb:7:in `<main>'
+    <literal:shade fg='red'>And the balance of my account should be <literal:shade bg='white' fg='black'>$80</literal:shade></literal:shade><literal:shade fg='red'></literal:shade>
+<literal:shade fg='red'>      </literal:shade>
+<literal:shade fg='red'>      expected: 80</literal:shade>
+<literal:shade fg='red'>           got: 0</literal:shade>
+<literal:shade fg='red'>      </literal:shade>
+<literal:shade fg='red'>      (compared using ==)</literal:shade>
+<literal:shade fg='red'>       (RSpec::Expectations::ExpectationNotMetError)</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/account_steps.rb:7</literal:shade>
+<literal:shade fg='red'>      ./features/support/async_support.rb:8</literal:shade>
+<literal:shade fg='red'>      ./features/support/async_support.rb:6</literal:shade>
+<literal:shade fg='red'>      ./features/support/async_support.rb:6</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/account_steps.rb:7</literal:shade>
+<literal:shade fg='red'>      features/cash_withdrawal.feature:6</literal:shade>
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/cash_withdrawal.feature:2</literal:shade>
+
+1 scenario (<literal:shade fg='red'>1 failed</literal:shade>)
+4 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='green'>3 passed</literal:shade>)
+0m2.317s
+Shutting down transaction_processor (94557)
+Server transaction_processor (94557) is shut down

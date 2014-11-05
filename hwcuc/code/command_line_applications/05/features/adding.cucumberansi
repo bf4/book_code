@@ -1,0 +1,20 @@
+Feature: Adding
+
+  Scenario: Add two numbers
+    [32mGiven the input "[32m[1m2+2[0m[0m[32m"[0m
+    [32mWhen the calculator is run[0m
+    [31mThen the output should be "[31m[1m4[0m[0m[31m"[0m
+[31m      Exit status was 1 but expected it to be 0. Output:[0m
+[31m      [0m
+[31m      /usr/bin/ruby: No such file or [0m
+[31m      directory -- calculator.rb (LoadError)[0m
+[31m      [0m
+[31m       (RSpec::Expectations::ExpectationNotMetError)[0m
+[31m      features/adding.feature:6[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/adding.feature:3[0m
+
+1 scenario ([31m1 failed[0m)
+3 steps ([31m1 failed[0m, [32m2 passed[0m)
+0m0.191s

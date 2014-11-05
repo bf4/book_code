@@ -1,0 +1,7 @@
+diff -Nur code/rails/07/app/models/message.rb code/rails/08/app/models/message.rb
+--- code/rails/07/app/models/message.rb	2010-12-04 20:33:38.000000000 +0000
++++ code/rails/08/app/models/message.rb	2011-05-25 15:37:17.000000000 +0100
+@@ -1,2 +1,3 @@
+ class Message < ActiveRecord::Base
++  belongs_to :user
+ end

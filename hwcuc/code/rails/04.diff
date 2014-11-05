@@ -1,0 +1,166 @@
+diff -Nur code/rails/03/app/models/user.rb code/rails/04/app/models/user.rb
+--- code/rails/03/app/models/user.rb	1970-01-01 01:00:00.000000000 +0100
++++ code/rails/04/app/models/user.rb	2011-07-29 19:59:38.000000000 +0100
+@@ -0,0 +1,2 @@
++class User < ActiveRecord::Base
++end
+Binary files code/rails/03/db/development.sqlite3 and code/rails/04/db/development.sqlite3 differ
+diff -Nur code/rails/03/db/migrate/20110729185938_create_users.rb code/rails/04/db/migrate/20110729185938_create_users.rb
+--- code/rails/03/db/migrate/20110729185938_create_users.rb	1970-01-01 01:00:00.000000000 +0100
++++ code/rails/04/db/migrate/20110729185938_create_users.rb	2011-07-29 19:59:38.000000000 +0100
+@@ -0,0 +1,9 @@
++class CreateUsers < ActiveRecord::Migration
++  def change
++    create_table :users do |t|
++      t.string :username
++
++      t.timestamps
++    end
++  end
++end
+diff -Nur code/rails/03/db/schema.rb code/rails/04/db/schema.rb
+--- code/rails/03/db/schema.rb	2011-07-29 20:08:27.000000000 +0100
++++ code/rails/04/db/schema.rb	2011-07-29 20:08:40.000000000 +0100
+@@ -10,6 +10,12 @@
+ #
+ # It's strongly recommended to check this file into your version control system.
+ 
+-ActiveRecord::Schema.define(:version => 0) do
++ActiveRecord::Schema.define(:version => 20110729185938) do
++
++  create_table "users", :force => true do |t|
++    t.string   "username"
++    t.datetime "created_at"
++    t.datetime "updated_at"
++  end
+ 
+ end
+Binary files code/rails/03/db/test.sqlite3 and code/rails/04/db/test.sqlite3 differ
+diff -Nur code/rails/03/features/see_messages.ansi code/rails/04/features/see_messages.ansi
+--- code/rails/03/features/see_messages.ansi	2011-07-29 20:08:35.000000000 +0100
++++ code/rails/04/features/see_messages.ansi	2011-07-29 20:08:48.000000000 +0100
+@@ -1,10 +1,7 @@
+ Feature: See Messages
+ 
+   Scenario: See another user's messages
+-    [31mGiven there is a User[0m
+-[31m      uninitialized constant User (NameError)[0m
+-[31m      ./features/step_definitions/user_steps.rb:2[0m
+-[31m      features/see_messages.feature:3[0m
++    [32mGiven there is a User[0m
+     [33mAnd the User has posted the message "this is my message"[0m
+ [33m      Undefined step: "the User has posted the message "this is my message"" [0m
+ [33m      (Cucumber::Undefined)[0m
+@@ -14,11 +11,8 @@
+ [33m      features/see_messages.feature:5[0m
+     [36mThen I should see "[36m[1mthis is my message[0m[0m[36m"[0m
+ 
+-[31mFailing Scenarios:[0m
+-[31mcucumber features/see_messages.feature:2[0m
+-
+-1 scenario ([31m1 failed[0m)
+-4 steps ([31m1 failed[0m, [36m1 skipped[0m, [33m2 undefined[0m)
++1 scenario ([33m1 undefined[0m)
++4 steps ([36m1 skipped[0m, [33m2 undefined[0m, [32m1 passed[0m)
+ 0m0.003s
+ [33m[0m
+ [33mYou can implement step definitions for undefined steps with these snippets:[0m
+diff -Nur code/rails/03/features/see_messages.html code/rails/04/features/see_messages.html
+--- code/rails/03/features/see_messages.html	2011-07-29 20:08:35.000000000 +0100
++++ code/rails/04/features/see_messages.html	2011-07-29 20:08:48.000000000 +0100
+@@ -463,21 +463,17 @@
+     $('#'+element_id).css('color', '#000000');
+   }
+   
+-</script></head><body><!-- Step count 4--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><h2><span class="val">Feature: See Messages</span></h2><p class="narrative"></p><div class='scenario'><span class="scenario_file">features/see_messages.feature:2</span><h3 id="scenario_1"><span class="keyword">Scenario:</span> <span class="val">See another user's messages</span></h3><ol><script>makeRed('cucumber-header');makeRed('scenario_1');</script><li id='features_see_messages_feature_3' class='step failed'><div class="step_name"><span class="keyword">Given </span><span class="step val">there is a User</span></div><div class="step_file"><span>features/step_definitions/user_steps.rb:1</span></div><div class="message"><pre>uninitialized constant User</pre></div><div class="backtrace"><pre>./features/step_definitions/user_steps.rb:2
+-features/see_messages.feature:3</pre></div><pre class="ruby"><code><span class="linenum">0</span>Given /^there is a User$/ do
+-<span class="linenum">1</span>  Factory(:user)
+-<span class="offending"><span class="linenum">2</span>end</span>
+-<span class="linenum">3</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre></li> <script type="text/javascript">moveProgressBar('25.0');</script><script></script><li id='features_see_messages_feature_4' class='step undefined'><div class="step_name"><span class="keyword">And </span><span class="step val">the User has posted the message &quot;this is my message&quot;</span></div><div class="step_file"><span>features/see_messages.feature:4</span></div><div class="message"><pre>Undefined step: "the User has posted the message "this is my message""</pre></div><div class="backtrace"><pre>features/see_messages.feature:4</pre></div><pre class="ruby"><code><span class="linenum">2</span>  Scenario: See another user's messages
++</script></head><body><!-- Step count 4--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><h2><span class="val">Feature: See Messages</span></h2><p class="narrative"></p><div class='scenario'><span class="scenario_file">features/see_messages.feature:2</span><h3 id="scenario_1"><span class="keyword">Scenario:</span> <span class="val">See another user's messages</span></h3><ol><li id='features_see_messages_feature_3' class='step passed'><div class="step_name"><span class="keyword">Given </span><span class="step val">there is a User</span></div><div class="step_file"><span>features/step_definitions/user_steps.rb:1</span></div></li> <script type="text/javascript">moveProgressBar('25.0');</script><script>makeYellow('cucumber-header');makeYellow('scenario_1');</script><li id='features_see_messages_feature_4' class='step undefined'><div class="step_name"><span class="keyword">And </span><span class="step val">the User has posted the message &quot;this is my message&quot;</span></div><div class="step_file"><span>features/see_messages.feature:4</span></div><div class="message"><pre>Undefined step: "the User has posted the message "this is my message""</pre></div><div class="backtrace"><pre>features/see_messages.feature:4</pre></div><pre class="ruby"><code><span class="linenum">2</span>  Scenario: See another user's messages
+ <span class="linenum">3</span>    Given there is a User
+ <span class="offending"><span class="linenum">4</span>    And the User has posted the message "this is my message"</span>
+ <span class="linenum">5</span>    When I visit the page for the User
+ <span class="linenum">6</span>    Then I should see "this is my message"
+ <span class="linenum">7</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre><pre>Given /^the User has posted the message "([^"]*)"$/ do |arg1|
+   pending # express the regexp above with the code you wish you had
+-end</pre></li> <script type="text/javascript">moveProgressBar('50.0');</script><script></script><li id='features_see_messages_feature_5' class='step undefined'><div class="step_name"><span class="keyword">When </span><span class="step val">I visit the page for the User</span></div><div class="step_file"><span>features/see_messages.feature:5</span></div><div class="message"><pre>Undefined step: "I visit the page for the User"</pre></div><div class="backtrace"><pre>features/see_messages.feature:5</pre></div><pre class="ruby"><code><span class="linenum">3</span>    Given there is a User
++end</pre></li> <script type="text/javascript">moveProgressBar('50.0');</script><script>makeYellow('cucumber-header');makeYellow('scenario_1');</script><li id='features_see_messages_feature_5' class='step undefined'><div class="step_name"><span class="keyword">When </span><span class="step val">I visit the page for the User</span></div><div class="step_file"><span>features/see_messages.feature:5</span></div><div class="message"><pre>Undefined step: "I visit the page for the User"</pre></div><div class="backtrace"><pre>features/see_messages.feature:5</pre></div><pre class="ruby"><code><span class="linenum">3</span>    Given there is a User
+ <span class="linenum">4</span>    And the User has posted the message "this is my message"
+ <span class="offending"><span class="linenum">5</span>    When I visit the page for the User</span>
+ <span class="linenum">6</span>    Then I should see "this is my message"
+ <span class="linenum">7</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre><pre>When /^I visit the page for the User$/ do
+   pending # express the regexp above with the code you wish you had
+-end</pre></li> <script type="text/javascript">moveProgressBar('75.0');</script><li id='features_see_messages_feature_6' class='step skipped'><div class="step_name"><span class="keyword">Then </span><span class="step val">I should see &quot;<span class="param">this is my message</span>&quot;</span></div><div class="step_file"><span>features/step_definitions/web_steps.rb:105</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script></ol></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0m0.003s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "1 scenario (1 failed)<br />4 steps (1 failed, 1 skipped, 2 undefined)";</script></div></body></html>
+\ No newline at end of file
++end</pre></li> <script type="text/javascript">moveProgressBar('75.0');</script><li id='features_see_messages_feature_6' class='step skipped'><div class="step_name"><span class="keyword">Then </span><span class="step val">I should see &quot;<span class="param">this is my message</span>&quot;</span></div><div class="step_file"><span>features/step_definitions/web_steps.rb:105</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script></ol></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0m0.003s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "1 scenario (1 undefined)<br />4 steps (1 skipped, 2 undefined, 1 passed)";</script></div></body></html>
+\ No newline at end of file
+diff -Nur code/rails/03/features/see_messages.out code/rails/04/features/see_messages.out
+--- code/rails/03/features/see_messages.out	2011-07-29 20:08:35.000000000 +0100
++++ code/rails/04/features/see_messages.out	2011-07-29 20:08:48.000000000 +0100
+@@ -1,10 +1,7 @@
+ Feature: See Messages
+ 
+   Scenario: See another user's messages
+-    <literal:shade fg='red'>Given there is a User</literal:shade>
+-<literal:shade fg='red'>      uninitialized constant User (NameError)</literal:shade>
+-<literal:shade fg='red'>      ./features/step_definitions/user_steps.rb:2</literal:shade>
+-<literal:shade fg='red'>      features/see_messages.feature:3</literal:shade>
++    <literal:shade fg='green'>Given there is a User</literal:shade>
+     <literal:shade fg='magenta'>And the User has posted the message "this is my message"</literal:shade>
+ <literal:shade fg='magenta'>      Undefined step: "the User has posted the message "this is my message"" </literal:shade>
+ <literal:shade fg='magenta'>      (Cucumber::Undefined)</literal:shade>
+@@ -14,11 +11,8 @@
+ <literal:shade fg='magenta'>      features/see_messages.feature:5</literal:shade>
+     <literal:shade fg='blue'>Then I should see "<literal:shade bg='white' fg='black'>this is my message</literal:shade></literal:shade><literal:shade fg='blue'>"</literal:shade>
+ 
+-<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+-<literal:shade fg='red'>cucumber features/see_messages.feature:2</literal:shade>
+-
+-1 scenario (<literal:shade fg='red'>1 failed</literal:shade>)
+-4 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='blue'>1 skipped</literal:shade>, <literal:shade fg='magenta'>2 undefined</literal:shade>)
++1 scenario (<literal:shade fg='magenta'>1 undefined</literal:shade>)
++4 steps (<literal:shade fg='blue'>1 skipped</literal:shade>, <literal:shade fg='magenta'>2 undefined</literal:shade>, <literal:shade fg='green'>1 passed</literal:shade>)
+ 0m0.003s
+ <literal:shade fg='magenta'></literal:shade>
+ <literal:shade fg='magenta'>You can implement step definitions for undefined steps with these snippets:</literal:shade>
+diff -Nur code/rails/03/log/development.log code/rails/04/log/development.log
+--- code/rails/03/log/development.log	2011-07-29 20:08:27.000000000 +0100
++++ code/rails/04/log/development.log	2011-07-29 20:08:40.000000000 +0100
+@@ -1,13 +1,19 @@
+   [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+-  [1m[35m (2.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
++  [1m[35m (40.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
++  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
++  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
++  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
++Migrating to CreateUsers (20110729185938)
++  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "created_at" datetime, "updated_at" datetime) 
++  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110729185938')[0m
++  [1m[35m (0.2ms)[0m  select sqlite_version(*)
++  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
++  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
++  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
++  [1m[35m (0.2ms)[0m  select sqlite_version(*)
++  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
++  [1m[35m (2.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+   [1m[35m (3.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+-  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+-  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+-  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+-  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+-  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+-  [1m[35m (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+-  [1m[36m (4.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+-  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+-  [1m[36m (2.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
++  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
++  [1m[35m (4.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110729185938')
+diff -Nur code/rails/03/log/test.log code/rails/04/log/test.log
+--- code/rails/03/log/test.log	2011-07-29 20:08:30.000000000 +0100
++++ code/rails/04/log/test.log	2011-07-29 20:08:48.000000000 +0100
+@@ -0,0 +1,3 @@
++  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
++  [1m[35mSQL (17.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Fri, 29 Jul 2011 19:08:48 UTC +00:00], ["updated_at", Fri, 29 Jul 2011 19:08:48 UTC +00:00], ["username", "testuser"]]
++  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m

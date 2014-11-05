@@ -1,0 +1,43 @@
+Feature: Search
+
+  Scenario: Find messages by content
+    <literal:shade fg='red'>Given a User has posted the following messages:</literal:shade>
+      | <literal:shade fg='red'>content           </literal:shade> |
+      | <literal:shade fg='red'>I am making dinner</literal:shade> |
+      | <literal:shade fg='red'>I just woke up    </literal:shade> |
+      | <literal:shade fg='red'>I am going to work</literal:shade> |
+<literal:shade fg='red'>      Can't mass-assign protected attributes: user </literal:shade>
+<literal:shade fg='red'>      (ActiveModel::MassAssignmentSecurity::Error)</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/user_steps.rb:16</literal:shade>
+<literal:shade fg='red'>      features/search.feature:3</literal:shade>
+    <literal:shade fg='blue'>When I search for "<literal:shade bg='white' fg='black'>I am</literal:shade></literal:shade><literal:shade fg='blue'>"</literal:shade>
+    <literal:shade fg='blue'>Then the results should be:</literal:shade>
+      | <literal:shade fg='blue'>content           </literal:shade> |
+      | <literal:shade fg='blue'>I am making dinner</literal:shade> |
+      | <literal:shade fg='blue'>I am going to work</literal:shade> |
+
+  # START:auto-search
+  <literal:shade fg='blue'>@javascript</literal:shade>
+  Scenario: Find messages by content using auto-search
+    <literal:shade fg='red'>Given a User has posted the following messages:</literal:shade>
+      | <literal:shade fg='red'>content           </literal:shade> |
+      | <literal:shade fg='red'>I am making dinner</literal:shade> |
+      | <literal:shade fg='red'>I just woke up    </literal:shade> |
+      | <literal:shade fg='red'>I am going to work</literal:shade> |
+<literal:shade fg='red'>      Can't mass-assign protected attributes: user </literal:shade>
+<literal:shade fg='red'>      (ActiveModel::MassAssignmentSecurity::Error)</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/user_steps.rb:16</literal:shade>
+<literal:shade fg='red'>      features/search.feature:17</literal:shade>
+    <literal:shade fg='blue'>When I enter "<literal:shade bg='white' fg='black'>I am</literal:shade></literal:shade><literal:shade fg='blue'>" in the search field</literal:shade>
+    <literal:shade fg='blue'>Then the results should be:</literal:shade>
+      | <literal:shade fg='blue'>content           </literal:shade> |
+      | <literal:shade fg='blue'>I am making dinner</literal:shade> |
+      | <literal:shade fg='blue'>I am going to work</literal:shade> |
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/search.feature:2</literal:shade>
+<literal:shade fg='red'>cucumber features/search.feature:16</literal:shade>
+
+2 scenarios (<literal:shade fg='red'>2 failed</literal:shade>)
+6 steps (<literal:shade fg='red'>2 failed</literal:shade>, <literal:shade fg='blue'>4 skipped</literal:shade>)
+0m6.519s

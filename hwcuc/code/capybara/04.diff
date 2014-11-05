@@ -1,0 +1,12 @@
+diff -Nur code/capybara/03/features/step_definitions/search_steps.rb code/capybara/04/features/step_definitions/search_steps.rb
+--- code/capybara/03/features/step_definitions/search_steps.rb	2011-06-07 21:15:55.000000000 +0100
++++ code/capybara/04/features/step_definitions/search_steps.rb	2011-05-26 07:24:20.000000000 +0100
+@@ -10,7 +10,6 @@
+     [li.first('a').text]
+   end
+   
+-  puts results.join("\n")
+-  pending
++  expected_results.diff!(results)
+ end
+ #END:results

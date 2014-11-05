@@ -1,0 +1,13 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    [32mGiven I have deposited [32m[1m$100[0m[0m[32m in my account[0m
+    [32mWhen I withdraw [32m[1m$20[0m[0m[32m[0m
+    [33mThen $[33m[1m20[0m[0m[33m should be dispensed[0m
+[33m      TODO (Cucumber::Pending)[0m
+[33m      ./features/step_definitions/steps.rb:45[0m
+[33m      features/cash_withdrawal.feature:5[0m
+
+1 scenario ([33m1 pending[0m)
+3 steps ([33m1 pending[0m, [32m2 passed[0m)
+0m0.003s

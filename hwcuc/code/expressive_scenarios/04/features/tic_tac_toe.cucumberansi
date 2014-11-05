@@ -1,0 +1,18 @@
+Feature: 
+
+  Scenario: [90m                               # features/tic_tac_toe.feature:2[0m
+    [32mGiven a board like this:[90m               # features/step_definitions/board_steps.rb:1[0m[0m
+      | [32m [0m[0m |[0m [32m1[0m[0m |[0m [32m2[0m[0m |[0m [32m3[0m[0m |[0m
+      | [32m1[0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m
+      | [32m2[0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m
+      | [32m3[0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m
+    [32mWhen player x plays in row [32m[1m2[0m[0m[32m, column [32m[1m1[0m[0m[32m[90m # features/step_definitions/board_steps.rb:6[0m[0m
+    [32mThen the board should look like this:[90m  # features/step_definitions/board_steps.rb:12[0m[0m
+      | [32m [0m[0m |[0m [32m1[0m[0m |[0m [32m2[0m[0m |[0m [32m3[0m[0m |[0m
+      | [32m1[0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m
+      | [32m2[0m[0m |[0m [32mx[0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m
+      | [32m3[0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m [32m [0m[0m |[0m
+
+1 scenario ([32m1 passed[0m)
+3 steps ([32m3 passed[0m)
+0m0.023s

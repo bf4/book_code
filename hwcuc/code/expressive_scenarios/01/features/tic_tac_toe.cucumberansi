@@ -1,0 +1,21 @@
+Feature: 
+
+  Scenario: [90m                               # features/tic_tac_toe.feature:2[0m
+    [33mGiven a board like this:[90m               # features/step_definitions/board_steps.rb:1[0m[0m
+      | [33m [0m[0m |[0m [33m1[0m[0m |[0m [33m2[0m[0m |[0m [33m3[0m[0m |[0m
+      | [33m1[0m[0m |[0m [33m [0m[0m |[0m [33m [0m[0m |[0m [33m [0m[0m |[0m
+      | [33m2[0m[0m |[0m [33m [0m[0m |[0m [33m [0m[0m |[0m [33m [0m[0m |[0m
+      | [33m3[0m[0m |[0m [33m [0m[0m |[0m [33m [0m[0m |[0m [33m [0m[0m |[0m
+[33m      TODO (Cucumber::Pending)[0m
+[33m      ./features/step_definitions/board_steps.rb:3[0m
+[33m      features/tic_tac_toe.feature:3[0m
+    [36mWhen player x plays in row [36m[1m2[0m[0m[36m, column [36m[1m1[0m[0m[36m[90m # features/step_definitions/board_steps.rb:6[0m[0m
+    [36mThen the board should look like this:[90m  # features/step_definitions/board_steps.rb:10[0m[0m
+      | [36m [0m[0m |[0m [36m1[0m[0m |[0m [36m2[0m[0m |[0m [36m3[0m[0m |[0m
+      | [36m1[0m[0m |[0m [36m [0m[0m |[0m [36m [0m[0m |[0m [36m [0m[0m |[0m
+      | [36m2[0m[0m |[0m [36mx[0m[0m |[0m [36m [0m[0m |[0m [36m [0m[0m |[0m
+      | [36m3[0m[0m |[0m [36m [0m[0m |[0m [36m [0m[0m |[0m [36m [0m[0m |[0m
+
+1 scenario ([33m1 pending[0m)
+3 steps ([36m2 skipped[0m, [33m1 pending[0m)
+0m0.017s

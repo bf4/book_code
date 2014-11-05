@@ -1,0 +1,55 @@
+diff -Nur code/rails/11/features/search.feature code/capybara/00/features/search.feature
+--- code/rails/11/features/search.feature	1970-01-01 01:00:00.000000000 +0100
++++ code/capybara/00/features/search.feature	2011-05-25 16:06:31.000000000 +0100
+@@ -0,0 +1,12 @@
++Feature: Search
++  Scenario: Find messages by content
++    Given a User has posted the following messages:
++      | content            |
++      | I am making dinner |
++      | I just woke up     |
++      | I am going to work |
++    When I search for "I am"
++    Then the results should be:
++      | content            |
++      | I am making dinner |
++      | I am going to work |
+diff -Nur code/rails/11/features/step_definitions/search_steps.rb code/capybara/00/features/step_definitions/search_steps.rb
+--- code/rails/11/features/step_definitions/search_steps.rb	1970-01-01 01:00:00.000000000 +0100
++++ code/capybara/00/features/step_definitions/search_steps.rb	2011-05-25 17:44:00.000000000 +0100
+@@ -0,0 +1,5 @@
++When /^I search for "([^"]*)"$/ do |query|
++  visit('/search')
++  fill_in('query', :with => query)
++  click_button('Search')
++end
+diff -Nur code/rails/11/features/step_definitions/user_steps.rb code/capybara/00/features/step_definitions/user_steps.rb
+--- code/rails/11/features/step_definitions/user_steps.rb	2011-05-25 15:37:17.000000000 +0100
++++ code/capybara/00/features/step_definitions/user_steps.rb	2011-05-25 17:30:56.000000000 +0100
+@@ -2,15 +2,22 @@
+   FactoryGirl.create(:user)
+ end
+ 
+-#START:step-definition
+ Given /^the User has posted the message "([^"]*)"$/ do |message_text|
+   User.count.should == 1
+   FactoryGirl.create(:message, :content => message_text, :user => User.first)
+ end
+-#END:step-definition
+ 
+-#START:visit-user
++#START:user-messages
++Given /^a User has posted the following messages:$/ do |messages|
++  user = FactoryGirl.create(:user)
++  messages_attributes = messages.hashes.map do |message_attrs| 
++    message_attrs.merge({:user => user})
++  end
++  Message.create!(messages_attributes)
++end
++#END:user-messages
++
+ When /^I visit the page for the User$/ do
+   User.count.should == 1
+   visit(user_path(User.first))
+ end
+-#END:visit-user

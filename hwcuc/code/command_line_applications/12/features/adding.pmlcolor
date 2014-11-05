@@ -1,0 +1,16 @@
+Feature: Adding
+
+  Scenario: Add two numbers<literal:shade fg='black'>       # features/adding.feature:3</literal:shade>
+    <literal:shade fg='green'>Given the input "<literal:shade bg='white' fg='black'>2+2</literal:shade></literal:shade><literal:shade fg='green'>"<literal:shade fg='black'>         # features/step_definitions/calculator_steps.rb:1</literal:shade></literal:shade>
+    <literal:shade fg='green'>When the calculator is run<literal:shade fg='black'>    # features/step_definitions/calculator_steps.rb:4</literal:shade></literal:shade>
+    <literal:shade fg='green'>Then the output should be "<literal:shade bg='white' fg='black'>4</literal:shade></literal:shade><literal:shade fg='green'>"<literal:shade fg='black'> # features/step_definitions/calculator_steps.rb:13</literal:shade></literal:shade>
+
+  #START:focus
+  Scenario: Add two numbers interactively<literal:shade fg='black'>    # features/adding.feature:9</literal:shade>
+    <literal:shade fg='green'>When the calculator is run with no input<literal:shade fg='black'> # features/step_definitions/calculator_steps.rb:7</literal:shade></literal:shade>
+    <literal:shade fg='green'>And I enter the calculation "<literal:shade bg='white' fg='black'>2+2</literal:shade></literal:shade><literal:shade fg='green'>"<literal:shade fg='black'>        # features/step_definitions/calculator_steps.rb:10</literal:shade></literal:shade>
+    <literal:shade fg='green'>Then the output should be "<literal:shade bg='white' fg='black'>4</literal:shade></literal:shade><literal:shade fg='green'>"<literal:shade fg='black'>            # features/step_definitions/calculator_steps.rb:13</literal:shade></literal:shade>
+
+2 scenarios (<literal:shade fg='green'>2 passed</literal:shade>)
+6 steps (<literal:shade fg='green'>6 passed</literal:shade>)
+0m0.637s

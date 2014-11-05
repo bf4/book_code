@@ -1,0 +1,29 @@
+Feature: Adding
+
+  Scenario: Add two numbers
+    [32mGiven the input "[32m[1m2+2[0m[0m[32m"[0m
+    [32mWhen the calculator is run[0m
+    [32mThen the output should be "[32m[1m4[0m[0m[32m"[0m
+
+  #START:focus
+  Scenario: Add two numbers interactively
+    [32mWhen the calculator is run with no input[0m
+    [32mAnd I enter the calculation "[32m[1m2+2[0m[0m[32m"[0m
+    [31mThen the output should be "[31m[1m4[0m[0m[31m"[0m
+[31m      Exit status was 1 but expected it to be 0. Output:[0m
+[31m      [0m
+[31m      ~/command_line_applications/10/bin/calculator:2:in [0m
+[31m      `read': can't convert nil into String (TypeError)[0m
+[31m      	from [0m
+[31m      ~/command_line_applications/10/bin/calculator:2:in [0m
+[31m      `<main>'[0m
+[31m      [0m
+[31m       (RSpec::Expectations::ExpectationNotMetError)[0m
+[31m      features/adding.feature:12[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/adding.feature:9[0m
+
+2 scenarios ([31m1 failed[0m, [32m1 passed[0m)
+6 steps ([31m1 failed[0m, [32m5 passed[0m)
+0m0.844s

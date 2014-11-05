@@ -1,0 +1,63 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    <literal:shade fg='green'>Given the system knows about the following fruit:</literal:shade>
+      | <literal:shade fg='green'>name      </literal:shade> | <literal:shade fg='green'>color </literal:shade> |
+      | <literal:shade fg='green'>banana    </literal:shade> | <literal:shade fg='green'>yellow</literal:shade> |
+      | <literal:shade fg='green'>strawberry</literal:shade> | <literal:shade fg='green'>red   </literal:shade> |
+    <literal:shade fg='green'>When the client requests GET <literal:shade bg='white' fg='black'>/fruits</literal:shade></literal:shade><literal:shade fg='green'></literal:shade>
+    <literal:shade fg='red'>Then the response should be JSON:</literal:shade>
+<literal:shade fg='red'>      """</literal:shade>
+<literal:shade fg='red'>      [</literal:shade>
+<literal:shade fg='red'>        {"name": "banana", "color": "yellow"},</literal:shade>
+<literal:shade fg='red'>        {"name": "strawberry", "color": "red"}</literal:shade>
+<literal:shade fg='red'>      ]</literal:shade>
+<literal:shade fg='red'>      """</literal:shade>
+<literal:shade fg='red'>      expected: "[\n  {\"name\": \"banana\", \"color\": \"yellow\"},\n  </literal:shade>
+<literal:shade fg='red'>      {\"name\": \"strawberry\", \"color\": \"red\"}\n]"</literal:shade>
+<literal:shade fg='red'>           got: "<!DOCTYPE html>\n<html>\n<head>\n  <style type=\"text/css\">\n  </literal:shade>
+<literal:shade fg='red'>      body { text-align:center;font-family:helvetica,arial;font-size:22px;\n    </literal:shade>
+<literal:shade fg='red'>      color:#888;margin:20px}\n  #c {margin:0 </literal:shade>
+<literal:shade fg='red'>      auto;width:500px;text-align:left}\n  </style>\n</head>\n<body>\n  </literal:shade>
+<literal:shade fg='red'>      <h2>Sinatra doesn&rsquo;t know this ditty.</h2>\n  <img </literal:shade>
+<literal:shade fg='red'>      src='http://example.org/__sinatra__/404.png'>\n  <div id=\"c\">\n    Try </literal:shade>
+<literal:shade fg='red'>      this:\n    <pre>get '/fruits' do\n  \"Hello World\"\nend</pre>\n  </literal:shade>
+<literal:shade fg='red'>      </div>\n</body>\n</html>\n" (using ==)</literal:shade>
+<literal:shade fg='red'>      Diff:</literal:shade>
+<literal:shade fg='red'>      @@ -1,5 +1,21 @@</literal:shade>
+<literal:shade fg='red'>      -[</literal:shade>
+<literal:shade fg='red'>      -  {"name": "banana", "color": "yellow"},</literal:shade>
+<literal:shade fg='red'>      -  {"name": "strawberry", "color": "red"}</literal:shade>
+<literal:shade fg='red'>      -]</literal:shade>
+<literal:shade fg='red'>      +<!DOCTYPE html></literal:shade>
+<literal:shade fg='red'>      +<html></literal:shade>
+<literal:shade fg='red'>      +<head></literal:shade>
+<literal:shade fg='red'>      +  <style type="text/css"></literal:shade>
+<literal:shade fg='red'>      +  body { text-align:center;font-family:helvetica,arial;font-size:22px;</literal:shade>
+<literal:shade fg='red'>      +    color:#888;margin:20px}</literal:shade>
+<literal:shade fg='red'>      +  #c {margin:0 auto;width:500px;text-align:left}</literal:shade>
+<literal:shade fg='red'>      +  </style></literal:shade>
+<literal:shade fg='red'>      +</head></literal:shade>
+<literal:shade fg='red'>      +<body></literal:shade>
+<literal:shade fg='red'>      +  <h2>Sinatra doesn&rsquo;t know this ditty.</h2></literal:shade>
+<literal:shade fg='red'>      +  <img src='http://example.org/__sinatra__/404.png'></literal:shade>
+<literal:shade fg='red'>      +  <div id="c"></literal:shade>
+<literal:shade fg='red'>      +    Try this:</literal:shade>
+<literal:shade fg='red'>      +    <pre>get '/fruits' do</literal:shade>
+<literal:shade fg='red'>      +  "Hello World"</literal:shade>
+<literal:shade fg='red'>      +end</pre></literal:shade>
+<literal:shade fg='red'>      +  </div></literal:shade>
+<literal:shade fg='red'>      +</body></literal:shade>
+<literal:shade fg='red'>      +</html></literal:shade>
+<literal:shade fg='red'>       (RSpec::Expectations::ExpectationNotMetError)</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/rest_steps.rb:6</literal:shade>
+<literal:shade fg='red'>      features/fruit_list.feature:11</literal:shade>
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/fruit_list.feature:5</literal:shade>
+
+1 scenario (<literal:shade fg='red'>1 failed</literal:shade>)
+3 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='green'>2 passed</literal:shade>)
+0m0.017s

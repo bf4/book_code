@@ -1,0 +1,19 @@
+Feature: Adding
+
+  Scenario: Add two numbers[90m       # features/adding.feature:3[0m
+    [32mGiven the input "[32m[1m2+2[0m[0m[32m"[90m         # features/step_definitions/calculator_steps.rb:1[0m[0m
+    [32mWhen the calculator is run[90m    # features/step_definitions/calculator_steps.rb:19[0m[0m
+    [32mThen the output should be "[32m[1m4[0m[0m[32m"[90m # features/step_definitions/calculator_steps.rb:25[0m[0m
+
+  #START:focus
+  Scenario: Add two numbers interactively[90m    # features/adding.feature:9[0m
+    [33mWhen the calculator is run with no input[90m # features/step_definitions/calculator_steps.rb:11[0m[0m
+[33m      TODO (Cucumber::Pending)[0m
+[33m      ./features/step_definitions/calculator_steps.rb:12[0m
+[33m      features/adding.feature:10[0m
+    [36mAnd I enter the calculation "[36m[1m2+2[0m[0m[36m"[90m        # features/step_definitions/calculator_steps.rb:14[0m[0m
+    [36mThen the output should be "[36m[1m4[0m[0m[36m"[90m            # features/step_definitions/calculator_steps.rb:25[0m[0m
+
+2 scenarios ([33m1 pending[0m, [32m1 passed[0m)
+6 steps ([36m2 skipped[0m, [33m1 pending[0m, [32m3 passed[0m)
+0m0.443s

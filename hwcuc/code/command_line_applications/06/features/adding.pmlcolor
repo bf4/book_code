@@ -1,0 +1,25 @@
+<literal:shade fg='blue'>@announce</literal:shade>
+Feature: Adding
+
+  Scenario: Add two numbers<literal:shade fg='black'>       # features/adding.feature:4</literal:shade>
+    <literal:shade fg='green'>Given the input "<literal:shade bg='white' fg='black'>2+2</literal:shade></literal:shade><literal:shade fg='green'>"<literal:shade fg='black'>         # features/step_definitions/calculator_steps.rb:2</literal:shade></literal:shade>
+    <literal:shade fg='green'>When the calculator is run<literal:shade fg='black'>    # features/step_definitions/calculator_steps.rb:13</literal:shade></literal:shade>
+      <literal:shade fg='blue'>$ cd ~/command_line_applications/06/tmp/aruba</literal:shade>
+      <literal:shade fg='blue'>$ /usr/bin/ruby calculator.rb input.txt</literal:shade>
+      
+      <literal:shade fg='blue'>/usr/bin/ruby: No such file or directory -- calculator.rb (LoadError)</literal:shade>
+    <literal:shade fg='red'>Then the output should be "<literal:shade bg='white' fg='black'>4</literal:shade></literal:shade><literal:shade fg='red'>"<literal:shade fg='black'> # features/step_definitions/calculator_steps.rb:19</literal:shade></literal:shade>
+<literal:shade fg='red'>      Exit status was 1 but expected it to be 0. Output:</literal:shade>
+<literal:shade fg='red'>      </literal:shade>
+<literal:shade fg='red'>      /usr/bin/ruby: No such file or </literal:shade>
+<literal:shade fg='red'>      directory -- calculator.rb (LoadError)</literal:shade>
+<literal:shade fg='red'>      </literal:shade>
+<literal:shade fg='red'>       (RSpec::Expectations::ExpectationNotMetError)</literal:shade>
+<literal:shade fg='red'>      features/adding.feature:7</literal:shade>
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/adding.feature:4</literal:shade><literal:shade fg='black'> # Scenario: Add two numbers</literal:shade>
+
+1 scenario (<literal:shade fg='red'>1 failed</literal:shade>)
+3 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='green'>2 passed</literal:shade>)
+0m0.138s

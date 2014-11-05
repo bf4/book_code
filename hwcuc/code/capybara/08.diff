@@ -1,0 +1,17 @@
+diff -Nur code/capybara/07/features/step_definitions/search_steps.rb code/capybara/08/features/step_definitions/search_steps.rb
+--- code/capybara/07/features/step_definitions/search_steps.rb	2011-06-13 23:22:02.000000000 +0100
++++ code/capybara/08/features/step_definitions/search_steps.rb	2011-06-13 23:22:02.000000000 +0100
+@@ -4,6 +4,13 @@
+   click_button('Search')
+ end
+ 
++#START:enter
++When /^I enter "([^"]*)" in the search field$/ do |query|
++  visit('/search')
++  fill_in('query', :with => query)
++end
++#END:enter
++
+ #START:results
+ Then /^the results should be:$/ do |expected_results|
+   results = [['content']] + page.all('ol#results li').map do |li|

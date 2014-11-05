@@ -1,0 +1,17 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    [32mGiven I have deposited [32m[1m$100[0m[0m[32m in my account[0m
+    [31mWhen I withdraw [31m[1m$20[0m[0m[31m[0m
+[31m      Unable to find field "Amount" (Capybara::ElementNotFound)[0m
+[31m      ./features/support/world_extensions.rb:10[0m
+[31m      ./features/step_definitions/atm_steps.rb:2[0m
+[31m      features/cash_withdrawal.feature:4[0m
+    [36mThen [36m[1m$20[0m[0m[36m should be dispensed[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/cash_withdrawal.feature:2[0m
+
+1 scenario ([31m1 failed[0m)
+3 steps ([31m1 failed[0m, [36m1 skipped[0m, [32m1 passed[0m)
+0m0.319s

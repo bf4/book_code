@@ -1,0 +1,11 @@
+diff -Nur code/databases/02/features/step_definitions/account_steps.rb code/databases/03/features/step_definitions/account_steps.rb
+--- code/databases/02/features/step_definitions/account_steps.rb	2011-10-14 07:55:15.000000000 +0100
++++ code/databases/03/features/step_definitions/account_steps.rb	2011-10-14 08:34:57.000000000 +0100
+@@ -4,6 +4,6 @@
+ 
+ #START:balance-check
+ Then /^the balance of my account should be (#{CAPTURE_CASH_AMOUNT})$/ do |amount|
+-  eventually { my_account.balance.should eq(amount) }
++  eventually { my_account.reload.balance.should eq(amount) }
+ end
+ #END:balance-check

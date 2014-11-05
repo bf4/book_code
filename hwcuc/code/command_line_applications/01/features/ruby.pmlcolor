@@ -1,0 +1,26 @@
+Feature: ruby -e
+
+  Scenario: print something
+    <literal:shade fg='magenta'>When I run `ruby -e "puts 'hello'"`</literal:shade>
+    <literal:shade fg='magenta'>Then it should pass with:</literal:shade>
+<literal:shade fg='magenta'>      """</literal:shade>
+<literal:shade fg='magenta'>      hello</literal:shade>
+<literal:shade fg='magenta'>      """</literal:shade>
+
+1 scenario (<literal:shade fg='magenta'>1 undefined</literal:shade>)
+2 steps (<literal:shade fg='magenta'>2 undefined</literal:shade>)
+0m0.001s
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>You can implement step definitions for undefined steps with these snippets:</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>When /^I run `ruby \-e "(.*?)"`$/ do |arg1|</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='magenta'></literal:shade>
+<literal:shade fg='magenta'>Then /^it should pass with:$/ do |string|</literal:shade>
+<literal:shade fg='magenta'>  pending # express the regexp above with the code you wish you had</literal:shade>
+<literal:shade fg='magenta'>end</literal:shade>
+<literal:shade fg='red'></literal:shade>
+<literal:shade fg='red'>If you want snippets in a different programming language,</literal:shade>
+<literal:shade fg='red'>just make sure a file with the appropriate file extension</literal:shade>
+<literal:shade fg='red'>exists where cucumber looks for step definitions.</literal:shade>

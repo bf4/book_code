@@ -1,0 +1,22 @@
+Feature: Adding
+
+  Scenario Outline: Add two numbers
+    [36mGiven the input "<input>"[0m
+    [36mWhen the calculator is run[0m
+    [36mThen the output should be "<output>"[0m
+
+    Examples: 
+      | [36m[1minput[0m[0m[36m[0m |[0m [36m[1moutput[0m[0m[36m[0m |[0m
+      | [32m2+2  [0m[0m |[0m [32m4     [0m[0m |[0m
+      | [32m98+1 [0m[0m |[0m [31m99    [0m[0m |[0m
+[31m      expected: "99"[0m
+[31m           got: "4" (using ==) (RSpec::Expectations::ExpectationNotMetError)[0m
+[31m      ./features/step_definitions/calculator_steps.rb:15[0m
+[31m      features/adding.feature:6[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/adding.feature:3[0m
+
+2 scenarios ([31m1 failed[0m, [32m1 passed[0m)
+6 steps ([31m1 failed[0m, [32m5 passed[0m)
+0m0.765s

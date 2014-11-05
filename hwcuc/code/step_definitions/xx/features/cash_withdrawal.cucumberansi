@@ -1,0 +1,10 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit[90m # features/cash_withdrawal.feature:2[0m
+    [32mGiven I have deposited [32m[1m$100[0m[0m[32m in my account[90m               # features/step_definitions/steps.rb:5[0m[0m
+    [32mWhen I withdraw [32m[1m$20[0m[0m[32m[90m                                     # features/step_definitions/steps.rb:10[0m[0m
+    [32mThen [32m[1m$20[0m[0m[32m should be dispensed[90m                            # features/step_definitions/steps.rb:14[0m[0m
+
+1 scenario ([32m1 passed[0m)
+3 steps ([32m3 passed[0m)
+0m0.200s

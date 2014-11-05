@@ -1,0 +1,17 @@
+--- code/databases/04/features/support/database.rb	2011-10-17 23:20:46.000000000 +0100
++++ code/databases/05/features/support/database.rb	2011-10-17 23:21:43.000000000 +0100
+@@ -1,11 +1,7 @@
+ require 'database_cleaner'
+ 
+-DatabaseCleaner.strategy = :transaction
++DatabaseCleaner.strategy = :truncation
+ 
+ Before do
+-  DatabaseCleaner.start
+-end
+-
+-After do
+   DatabaseCleaner.clean
+-end
+\ No newline at end of file
++end

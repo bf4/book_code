@@ -1,0 +1,16 @@
+Feature: Adding
+
+  Scenario: Add two numbers
+    [32mGiven the input "[32m[1m2+2[0m[0m[32m"[0m
+    [32mWhen the calculator is run[0m
+    [32mThen the output should be "[32m[1m4[0m[0m[32m"[0m
+
+  #START:focus
+  Scenario: Add two numbers interactively
+    [32mWhen the calculator is run with no input[0m
+    [32mAnd I enter the calculation "[32m[1m2+2[0m[0m[32m"[0m
+    [32mThen the output should be "[32m[1m4[0m[0m[32m"[0m
+
+2 scenarios ([32m2 passed[0m)
+6 steps ([32m6 passed[0m)
+0m0.647s

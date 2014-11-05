@@ -1,0 +1,11 @@
+diff -Nur code/capybara/06/features/search.feature code/capybara/07/features/search.feature
+--- code/capybara/06/features/search.feature	2011-06-13 18:08:12.000000000 +0100
++++ code/capybara/07/features/search.feature	2011-06-02 08:22:55.000000000 +0100
+@@ -12,6 +12,7 @@
+       | I am going to work |
+ 
+ # START:auto-search
++  @javascript
+   Scenario: Find messages by content using auto-search
+     Given a User has posted the following messages:
+       | content            |

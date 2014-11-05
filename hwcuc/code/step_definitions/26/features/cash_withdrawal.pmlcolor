@@ -1,0 +1,20 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    <literal:shade fg='green'>Given I have deposited <literal:shade bg='white' fg='black'>$100</literal:shade></literal:shade><literal:shade fg='green'> in my account</literal:shade>
+    <literal:shade fg='red'>When I withdraw <literal:shade bg='white' fg='black'>$20</literal:shade></literal:shade><literal:shade fg='red'></literal:shade>
+<literal:shade fg='red'>      undefined method `debit' for nil:NilClass (NoMethodError)</literal:shade>
+<literal:shade fg='red'>      ./lib/nice_bank.rb:20</literal:shade>
+<literal:shade fg='red'>      ./lib/nice_bank.rb:60</literal:shade>
+<literal:shade fg='red'>      ./features/support/world_extensions.rb:11</literal:shade>
+<literal:shade fg='red'>      ./features/step_definitions/atm_steps.rb:2</literal:shade>
+<literal:shade fg='red'>      features/cash_withdrawal.feature:4</literal:shade>
+    <literal:shade fg='blue'>Then <literal:shade bg='white' fg='black'>$20</literal:shade></literal:shade><literal:shade fg='blue'> should be dispensed</literal:shade>
+    <literal:shade fg='blue'>And the balance of my account should be <literal:shade bg='white' fg='black'>$80</literal:shade></literal:shade><literal:shade fg='blue'></literal:shade>
+
+<literal:shade fg='red'>Failing Scenarios:</literal:shade>
+<literal:shade fg='red'>cucumber features/cash_withdrawal.feature:2</literal:shade>
+
+1 scenario (<literal:shade fg='red'>1 failed</literal:shade>)
+4 steps (<literal:shade fg='red'>1 failed</literal:shade>, <literal:shade fg='blue'>2 skipped</literal:shade>, <literal:shade fg='green'>1 passed</literal:shade>)
+0m0.322s

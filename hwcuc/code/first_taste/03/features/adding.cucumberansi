@@ -1,0 +1,13 @@
+Feature: Adding
+
+  Scenario: Add two numbers
+    [32mGiven the input "[32m[1m2+2[0m[0m[32m"[0m
+    [33mWhen the calculator is run[0m
+[33m      TODO (Cucumber::Pending)[0m
+[33m      ./features/step_definitions/calculator_steps.rb:9[0m
+[33m      features/adding.feature:5[0m
+    [36mThen the output should be "[36m[1m4[0m[0m[36m"[0m
+
+1 scenario ([33m1 pending[0m)
+3 steps ([36m1 skipped[0m, [33m1 pending[0m, [32m1 passed[0m)
+0m0.002s

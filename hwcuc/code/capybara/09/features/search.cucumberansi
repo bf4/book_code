@@ -1,0 +1,43 @@
+Feature: Search
+
+  Scenario: Find messages by content
+    [31mGiven a User has posted the following messages:[0m
+      | [31mcontent           [0m[0m |[0m
+      | [31mI am making dinner[0m[0m |[0m
+      | [31mI just woke up    [0m[0m |[0m
+      | [31mI am going to work[0m[0m |[0m
+[31m      Can't mass-assign protected attributes: user [0m
+[31m      (ActiveModel::MassAssignmentSecurity::Error)[0m
+[31m      ./features/step_definitions/user_steps.rb:16[0m
+[31m      features/search.feature:3[0m
+    [36mWhen I search for "[36m[1mI am[0m[0m[36m"[0m
+    [36mThen the results should be:[0m
+      | [36mcontent           [0m[0m |[0m
+      | [36mI am making dinner[0m[0m |[0m
+      | [36mI am going to work[0m[0m |[0m
+
+  # START:auto-search
+  [36m@javascript[0m
+  Scenario: Find messages by content using auto-search
+    [31mGiven a User has posted the following messages:[0m
+      | [31mcontent           [0m[0m |[0m
+      | [31mI am making dinner[0m[0m |[0m
+      | [31mI just woke up    [0m[0m |[0m
+      | [31mI am going to work[0m[0m |[0m
+[31m      Can't mass-assign protected attributes: user [0m
+[31m      (ActiveModel::MassAssignmentSecurity::Error)[0m
+[31m      ./features/step_definitions/user_steps.rb:16[0m
+[31m      features/search.feature:17[0m
+    [36mWhen I enter "[36m[1mI am[0m[0m[36m" in the search field[0m
+    [36mThen the results should be:[0m
+      | [36mcontent           [0m[0m |[0m
+      | [36mI am making dinner[0m[0m |[0m
+      | [36mI am going to work[0m[0m |[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/search.feature:2[0m
+[31mcucumber features/search.feature:16[0m
+
+2 scenarios ([31m2 failed[0m)
+6 steps ([31m2 failed[0m, [36m4 skipped[0m)
+0m0.323s

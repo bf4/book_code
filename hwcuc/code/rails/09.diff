@@ -1,0 +1,14 @@
+diff -Nur code/rails/08/features/step_definitions/user_steps.rb code/rails/09/features/step_definitions/user_steps.rb
+--- code/rails/08/features/step_definitions/user_steps.rb	2011-05-25 15:37:17.000000000 +0100
++++ code/rails/09/features/step_definitions/user_steps.rb	2011-05-25 15:37:17.000000000 +0100
+@@ -8,3 +8,9 @@
+   FactoryGirl.create(:message, :content => message_text, :user => User.first)
+ end
+ #END:step-definition
++
++#START:visit-user
++When /^I visit the page for the User$/ do
++  User.count.should == 1
++  visit(user_path(User.first))
++end
++#END:visit-user

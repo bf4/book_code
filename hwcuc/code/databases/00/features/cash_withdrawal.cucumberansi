@@ -1,0 +1,42 @@
+==  CreateAccounts: migrating =================================================
+-- create_table(:accounts)
+   -> 0.0008s
+==  CreateAccounts: migrated (0.0009s) ========================================
+
+Starting transaction_processor in ~/message_queues/01 with
+  'ruby lib/transaction_processor.rb'
+[0;0mtransaction processor ready
+[0;0mServer transaction_processor (94557) is up.
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    [32mGiven my account has been credited with [32m[1m$100[0m[0m[32m[0m
+    [32mWhen I withdraw [32m[1m$20[0m[0m[32m[0m
+    [32mThen [32m[1m$20[0m[0m[32m should be dispensed[0m
+[0;0mlib/transaction_processor.rb:13:in `block (2 levels) in <main>': undefined local variable or method `balance_store' for main:Object (NameError)
+[0;0m[0;0m	from ~/databases/00/lib/transaction_queue.rb:21:in `read'
+[0;0m[0;0m	from lib/transaction_processor.rb:10:in `block in <main>'
+[0;0m[0;0m	from lib/transaction_processor.rb:9:in `loop'
+[0;0m[0;0m	from lib/transaction_processor.rb:9:in `<main>'
+[0;0m    [31mAnd the balance of my account should be [31m[1m$80[0m[0m[31m[0m
+[31m      [0m
+[31m      expected: 80[0m
+[31m           got: nil[0m
+[31m      [0m
+[31m      (compared using ==)[0m
+[31m       (RSpec::Expectations::ExpectationNotMetError)[0m
+[31m      ./features/step_definitions/account_steps.rb:7[0m
+[31m      ./features/support/async_support.rb:8[0m
+[31m      ./features/support/async_support.rb:6[0m
+[31m      ./features/support/async_support.rb:6[0m
+[31m      ./features/step_definitions/account_steps.rb:7[0m
+[31m      features/cash_withdrawal.feature:6[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/cash_withdrawal.feature:2[0m
+
+1 scenario ([31m1 failed[0m)
+4 steps ([31m1 failed[0m, [32m3 passed[0m)
+0m2.264s
+Shutting down transaction_processor (94557)
+Server transaction_processor (94557) is shut down

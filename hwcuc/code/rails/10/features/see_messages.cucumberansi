@@ -1,0 +1,19 @@
+Feature: See Messages
+
+  Scenario: See another user's messages
+    [32mGiven there is a User[0m
+    [32mAnd the User has posted the message "[32m[1mthis is my message[0m[0m[32m"[0m
+    [32mWhen I visit the page for the User[0m
+    [33mThen I should see "this is my message"[0m
+[33m      Undefined step: "I should see "this is my message"" (Cucumber::Undefined)[0m
+[33m      features/see_messages.feature:6[0m
+
+1 scenario ([33m1 undefined[0m)
+4 steps ([33m1 undefined[0m, [32m3 passed[0m)
+0m0.423s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mThen /^I should see "(.*?)"$/ do |arg1|[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m

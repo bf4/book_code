@@ -1,0 +1,15 @@
+Feature: Adding
+
+  Scenario Outline: Add two numbers
+    [36mGiven the input "<input>"[0m
+    [36mWhen the calculator is run[0m
+    [36mThen the output should be "<output>"[0m
+
+    Examples: 
+      | [36m[1minput[0m[0m[36m[0m |[0m [36m[1moutput[0m[0m[36m[0m |[0m
+      | [32m2+2  [0m[0m |[0m [32m4     [0m[0m |[0m
+      | [32m98+1 [0m[0m |[0m [32m99    [0m[0m |[0m
+
+2 scenarios ([32m2 passed[0m)
+6 steps ([32m6 passed[0m)
+0m0.766s

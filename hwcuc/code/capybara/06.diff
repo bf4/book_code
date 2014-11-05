@@ -1,0 +1,21 @@
+diff -Nur code/capybara/05/features/search.feature code/capybara/06/features/search.feature
+--- code/capybara/05/features/search.feature	2011-05-26 07:24:20.000000000 +0100
++++ code/capybara/06/features/search.feature	2011-06-13 18:08:12.000000000 +0100
+@@ -10,3 +10,17 @@
+       | content            |
+       | I am making dinner |
+       | I am going to work |
++
++# START:auto-search
++  Scenario: Find messages by content using auto-search
++    Given a User has posted the following messages:
++      | content            |
++      | I am making dinner |
++      | I just woke up     |
++      | I am going to work |
++    When I enter "I am" in the search field
++    Then the results should be:
++      | content            |
++      | I am making dinner |
++      | I am going to work |
++# END:auto-search

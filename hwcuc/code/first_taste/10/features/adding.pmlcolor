@@ -1,0 +1,15 @@
+Feature: Adding
+
+  Scenario Outline: Add two numbers
+    <literal:shade fg='blue'>Given the input "<input>"</literal:shade>
+    <literal:shade fg='blue'>When the calculator is run</literal:shade>
+    <literal:shade fg='blue'>Then the output should be "<output>"</literal:shade>
+
+    Examples: 
+      | <literal:shade bg='white' fg='black'>input</literal:shade><literal:shade fg='blue'></literal:shade> | <literal:shade bg='white' fg='black'>output</literal:shade><literal:shade fg='blue'></literal:shade> |
+      | <literal:shade fg='green'>2+2  </literal:shade> | <literal:shade fg='green'>4     </literal:shade> |
+      | <literal:shade fg='green'>98+1 </literal:shade> | <literal:shade fg='green'>99    </literal:shade> |
+
+2 scenarios (<literal:shade fg='green'>2 passed</literal:shade>)
+6 steps (<literal:shade fg='green'>6 passed</literal:shade>)
+0m0.766s

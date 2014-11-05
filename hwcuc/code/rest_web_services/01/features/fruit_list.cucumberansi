@@ -1,0 +1,27 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    [31mGiven the system knows about the following fruit:[0m
+      | [31mname      [0m[0m |[0m [31mcolor [0m[0m |[0m
+      | [31mbanana    [0m[0m |[0m [31myellow[0m[0m |[0m
+      | [31mstrawberry[0m[0m |[0m [31mred   [0m[0m |[0m
+[31m      uninitialized constant FruitApp (NameError)[0m
+[31m      ./features/step_definitions/fruit_steps.rb:2[0m
+[31m      features/fruit_list.feature:6[0m
+    [36mWhen the client requests GET /fruits[0m
+    [36mThen the response should be JSON:[0m
+[36m      """[0m
+[36m      [[0m
+[36m        {"name": "banana", "color": "yellow"},[0m
+[36m        {"name": "strawberry", "color": "red"}[0m
+[36m      ][0m
+[36m      """[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/fruit_list.feature:5[0m
+
+1 scenario ([31m1 failed[0m)
+3 steps ([31m1 failed[0m, [36m2 skipped[0m)
+0m0.004s

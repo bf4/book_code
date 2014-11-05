@@ -1,0 +1,27 @@
+diff -Nur code/databases/00/lib/transaction_processor.rb code/databases/01/lib/transaction_processor.rb
+--- code/databases/00/lib/transaction_processor.rb	2011-10-13 18:36:17.000000000 +0100
++++ code/databases/01/lib/transaction_processor.rb	2011-10-14 07:31:08.000000000 +0100
+@@ -1,16 +1,18 @@
+-#START:require
+ require_relative 'transaction_queue'
+ require_relative 'account'
+ 
+ transaction_queue = TransactionQueue.new
+ 
+ puts "transaction processor ready"
+-#END:require
+ loop do
+   transaction_queue.read do |message|
+     sleep 1
+-    transaction_amount = message.to_i
+-    new_balance = balance_store.balance + transaction_amount
+-    balance_store.balance = new_balance
++#START_HIGHLIGHT
++    transaction_amount, number = message.split(/,/)
++    account = Account.find_by_number!(number.strip)
++    new_balance = account.balance + transaction_amount.to_i
++    account.balance = new_balance
++    account.save
++#END_HIGHLIGHT
+   end
+ end

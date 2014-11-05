@@ -1,0 +1,21 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    <literal:shade fg='green'>Given the system knows about the following fruit:</literal:shade>
+      | <literal:shade fg='green'>name      </literal:shade> | <literal:shade fg='green'>color </literal:shade> |
+      | <literal:shade fg='green'>banana    </literal:shade> | <literal:shade fg='green'>yellow</literal:shade> |
+      | <literal:shade fg='green'>strawberry</literal:shade> | <literal:shade fg='green'>red   </literal:shade> |
+    <literal:shade fg='green'>When the client requests GET <literal:shade bg='white' fg='black'>/fruits</literal:shade></literal:shade><literal:shade fg='green'></literal:shade>
+    <literal:shade fg='green'>Then the response should be JSON:</literal:shade>
+<literal:shade fg='green'>      """</literal:shade>
+<literal:shade fg='green'>      [</literal:shade>
+<literal:shade fg='green'>        {"name": "banana", "color": "yellow"},</literal:shade>
+<literal:shade fg='green'>        {"name": "strawberry", "color": "red"}</literal:shade>
+<literal:shade fg='green'>      ]</literal:shade>
+<literal:shade fg='green'>      """</literal:shade>
+
+1 scenario (<literal:shade fg='green'>1 passed</literal:shade>)
+3 steps (<literal:shade fg='green'>3 passed</literal:shade>)
+0m0.019s
