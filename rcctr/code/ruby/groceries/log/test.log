@@ -1,0 +1,2478 @@
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 28ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 14ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 6ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 9ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 4ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-02-28 21:59:35 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 133ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (8.6ms)
+Rendered grocery_lists/_form.html.erb (3.4ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 95ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 16ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 10ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 5ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-02-28 21:59:50 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.3ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 166ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+Rendered grocery_lists/_form.html.erb (15.7ms)
+Rendered grocery_lists/_form.html.erb (2.2ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 44ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 3ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:22:29 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.5ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 79ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+Rendered grocery_lists/_form.html.erb (25.2ms)
+Rendered grocery_lists/_form.html.erb (1.7ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 4ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:22:34 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 93ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (3.9ms)
+Rendered grocery_lists/_form.html.erb (2.7ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 39ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:22:43 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.3ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 43ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+Rendered grocery_lists/_form.html.erb (4.5ms)
+Rendered grocery_lists/_form.html.erb (1.9ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 3ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:22:47 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 77ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.1ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 40ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:23:00 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 41ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (3.8ms)
+Rendered grocery_lists/_form.html.erb (1.7ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 42ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:23:05 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 75ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (3.8ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 43ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:32:54 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (3.9ms)
+Rendered grocery_lists/_form.html.erb (1.7ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 6ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 4ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 6ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 72ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:33:24 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 47ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (9.2ms)
+Rendered grocery_lists/_form.html.erb (2.1ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 48ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-02 22:33:40 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 41ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.3ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 4ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 36ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:10:16 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 61ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (32.9ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 36ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:10:23 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.8ms)
+Rendered grocery_lists/_form.html.erb (2.4ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 8ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 36ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:10:25 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (5.1ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 9ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 35ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:10:28 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.8ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:12:14 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (5.1ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 34ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:21:58 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 35ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.0ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:52:13 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 41ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.9ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:52:14 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.8ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:57:15 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (6.0ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:57:20 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.7ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 34ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:57:27 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.7ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 36ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:57:43 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.8ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 36ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:57:48 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 40ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (37.9ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 38ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:58:11 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (44.6ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 43ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 6ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:59:37 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (37.6ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 44ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 35ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 21:59:45 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 46ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (46.8ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 36ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:00:59 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.6ms)
+Rendered grocery_lists/_form.html.erb (1.7ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 36ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:01:09 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 40ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.6ms)
+Rendered grocery_lists/_form.html.erb (2.2ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 36ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:02:05 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.5ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 8ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 4ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:02:11 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 41ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.5ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 35ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:03:00 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.6ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 33ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:03:43 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (5.2ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 34ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:03:53 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.5ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 8ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 34ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:04:09 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.4ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 7ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:04:11 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 40ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.6ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 8ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:04:17 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.5ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 38ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:04:21 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.6ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 38ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:05:20 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 38ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.5ms)
+Rendered grocery_lists/_form.html.erb (1.5ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 38ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 2ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-03 22:06:24 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.2ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 71ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered grocery_lists/_form.html.erb (4.4ms)
+Rendered grocery_lists/_form.html.erb (1.6ms)
+  Processing by GroceryListsController#index as HTML
+Rendered grocery_lists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#new as HTML
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Redirected to http://test.host/grocery_lists/1005
+Completed 302 Found in 5ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Redirected to http://test.host/grocery_lists/1006
+Completed 302 Found in 2ms
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#create as HTML
+  Parameters: {"grocery_list"=>{}}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"grocery_list"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1010
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists/1011
+Completed 302 Found in 3ms
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 39ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 1ms
+  Processing by GroceryListsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/grocery_lists
+Completed 302 Found in 3ms
+
+
+Started GET "/grocery_lists" for 127.0.0.1 at 2011-03-08 22:11:20 -0600
+  Processing by GroceryListsController#index as HTML
+  [1m[36mGroceryList Load (0.3ms)[0m  [1mSELECT "grocery_lists".* FROM "grocery_lists"[0m
+Completed 200 OK in 81ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+Rendered grocery_lists/_form.html.erb (25.1ms)
+Rendered grocery_lists/_form.html.erb (1.7ms)
