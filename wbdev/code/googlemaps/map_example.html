@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Freshman Landing Page</title>
+    <style>
+      #map_canvas {
+        width: 600px;
+        height: 400px;
+      }
+    </style>
+	
+    <script type="text/javascript"
+      src="http://maps.google.com/maps/api/js?sensor=false">
+    </script> 
+    <script type="text/javascript"> 
+      window.onload = loadMap;
+      function loadMap() {
+        var latLong = new google.maps.LatLng(44.798609, -91.504912);
+
+        var mapOptions = {
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          center: latLong
+        };
+
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+              mapOptions);
+        mogiesLatLong = new google.maps.LatLng(44.802293, -91.509376);
+        var marker = new google.maps.Marker({
+          position: mogiesLatLong,
+          map: map,
+          title: "Mogies Pub"
+        });
+        var mogiesDescription = "<h4>Mogies Pub</h4>" +
+          "<p>Excellent local restaurant with top of the line burgers and sandwiches.</p>";
+        var infoPopup = new google.maps.InfoWindow({
+          content: mogiesDescription
+        });
+        google.maps.event.addListener(marker, "click", function() {
+          infoPopup.open(map,marker);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map_canvas"></div>
+  </body>
+</html>

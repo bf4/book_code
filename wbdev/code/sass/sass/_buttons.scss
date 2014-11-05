@@ -1,0 +1,43 @@
+/*START:base*/
+.button {
+  font-weight: bold;
+  /* START_HIGHLIGHTING */
+  background-color: $button_background_color;
+  /* END_HIGHLIGHTING */
+  text-transform: uppercase;
+  font-family: verdana;
+  /* START_HIGHLIGHTING */
+  border: 1px solid $button_border_color;
+  /* END_HIGHLIGHTING */
+  font-size: 1.2em;
+  line-height: 1.25em;
+  padding: 6px 20px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  /*END:base*/
+  /*START:rounded*/
+  @include rounded(12px);
+  /*END:rounded*/
+  /*START:gradients1*/
+  @include gradient(#FFF089, #A69520 );
+  /*END:gradients1*/
+  
+  /*START:gradients2*/
+  &:active, &:focus {
+    @include gradient(#A69520, #FFF089 );
+    color: #000;
+  }
+  
+  /*END:gradients2*/
+  /*START:shadow */
+  @include shadow(1px, 3px, 5px, #555);
+  /*END:shadow */
+  /*START:base*/
+}
+
+input.button {
+  line-height: 1.22em;
+}
+
+/*END:base*/

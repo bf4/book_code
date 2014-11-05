@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+    </script>
+
+    <script type="text/javascript">
+      $(function() {
+        $('#new-product-form').submit(function() {
+          var newProductForm = $(this);
+      
+          $.ajax({
+            method: "post",
+            url: newProductForm.attr("action") + ".json",
+            data: newProductForm.serialize(),
+            success: renderNewProduct
+          });
+          
+          return false;
+        });
+      
+        function renderNewProduct() {
+          var productsList = $('#products-list');
+        
+          var newProductForm = $('#new-product-form');
+        
+          var product = {};
+          product.name = newProductForm.find('input[name*=name]').val();
+          product.price = newProductForm.find('input[name*=price]').val();
+          product.description = 
+            newProductForm.find('textarea[name*=description]').val();
+        
+          var newProduct = $('<li></li>');
+          newProduct.append('<span class="product-name">' +
+            product.name + '</span>');
+          newProduct.append('<em class="product-price">' +
+            product.price + '</em>');
+          newProduct.append('<div class="product-description">' +
+            product.description + '</div>');
+        
+          productsList.append(newProduct);
+        
+          productsList.find('input[type=text], textarea').each(function(input) {
+            input.attr('value', '');
+          });
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+    <form id="new_product_form" action="" method="post">
+        <label>First name</label>
+        <input type="text" name="fname" value="Mickey" />
+        <label>Last name</label>
+        <input type="text" name="lname" value="Mouse" />
+        <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

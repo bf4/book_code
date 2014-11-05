@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html>
+  <head>
+    <title>Product Management</title>    
+  </head>
+  <body role="application">
+    <h1>Products</h1>
+ 
+    <div aria-live="polite" id="notice">
+    </div>
+ 
+    <div aria-live="polite" id="form">
+    </div>
+ 
+    <p><a href="#new">New Product</a></p>
+
+    <ul aria-live="polite" id="list">
+    </ul>
+    
+    <script type="text/html" id="product_template">
+      <li>
+        <h3>
+          {{name}} - {{price}}
+          <button class="delete">Delete</button>
+        </h3>
+        <p>{{description}}</p>
+      </li>
+    </script>
+    
+    <script type="text/html" id="product_form_template">
+      <form>
+        <div class="row">
+          <label>Name<br>
+            <input id="product_name" type="text" name="name" 
+                  value="{{name}}">
+          </label>
+        </div>
+        <div class="row">
+          <label>Description<br>
+            <textarea id="product_description" 
+                      name="description">{{description}}</textarea>
+          </label>
+        </div>
+        <div class="row">
+          <label>Price<br>
+            <input id="product_price" type="text" name="price" 
+                   value="{{price}}">
+          </label>
+        </div>
+        <button>Save</button>    
+      </form>
+      <p><a id="cancel" href="#">Cancel</a></p>
+    </script>
+    
+    <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+    </script>
+    <script type="text/javascript" 
+            src="javascripts/lib/json2.js"></script>
+    <script type="text/javascript" 
+            src="javascripts/lib/underscore-min.js"></script>
+    <script type="text/javascript" 
+            src="javascripts/lib/backbone-min.js"></script>
+    <script type="text/javascript" 
+            src="javascripts/lib/mustache.js"></script>
+    <script type="text/javascript" 
+            src="javascripts/app.js"></script>
+    
+    
+  </body>
+</html>

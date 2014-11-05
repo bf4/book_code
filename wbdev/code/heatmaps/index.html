@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html>
+
+  <head>
+    
+    <style>
+    a.button {
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #ffffff;
+      padding: 10px 20px;
+      background: -moz-linear-gradient(
+      	top,
+      	#0afc8f 0%,
+      	#094214);
+      background: -webkit-gradient(
+      	linear, left top, left bottom, 
+      	from(#0afc8f),
+      	to(#094214));
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border: 1px solid #949494;
+      -moz-box-shadow:
+      	0px 1px 3px rgba(000,000,000,0.5),
+      	inset 0px 0px 2px rgba(10,9,10,1);
+      -webkit-box-shadow:
+      	0px 1px 3px rgba(000,000,000,0.5),
+      	inset 0px 0px 2px rgba(10,9,10,1);
+      text-shadow:
+      	0px -1px 0px rgba(000,000,000,0.2),
+      	0px 1px 0px rgba(20,20,20,1);
+    }
+    </style>
+  </head>
+
+
+  <body>
+    <p>&nbsp;</p>
+    <a class="button" href="#">Sign Up!</a>
+    <a class="button" href="#">Learn More!</a>
+    
+    
+    <script type="text/javascript" 
+      src="http://192.168.1.100/clickheat/js/clickheat.js"></script>
+    <script type="text/javascript">
+      clickHeatSite = 'AwesomeCo';
+      clickHeatGroup = 'buttons';
+      clickHeatServer = 'http://192.168.1.100/clickheat/click.php';
+      initClickHeat();
+    </script>
+    
+  </body>
+</html>

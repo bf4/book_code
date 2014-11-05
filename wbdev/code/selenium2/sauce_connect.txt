@@ -1,0 +1,68 @@
+# START:tunnel
+ For OSX and Linux
+./sauce_connect -u MY_USERNAME -k MY_API_KEY -s qedserver.local -d 
+qedserver.local -d '*.qedserver.local' -p 8080 -t 8080 
+# END:tunnel
+
+# START:tunnel_win
+ For Windows
+sauce_connect.exe -u webdev_recipes -k MY_API_KEY -s qedserver.local -d 
+qedserver.local -d '*.qedserver.local' -p 8080 -t 8080
+# END:tunnel_win
+
+
+* Debug messages will be sent to sauce_connect.log
+.---------------------------------------------------.
+|  Have questions or need help with Sauce Connect?  |
+|  Contact us: http://saucelabs.com/forums          |
+-----------------------------------------------------
+2011-05-09 16:59:04,028 - / Starting \
+2011-05-09 16:59:04,029 - Please wait for "You may start your tests" 
+to start your tests.
+2011-05-09 16:59:04,029 - sauce_connect release 25
+2011-05-09 16:59:05,702 - Forwarding: ['qedserver.local', '*.qedserver.local']:['8080'] -> qedserver.local:['8080']
+2011-05-09 16:59:05,703 - Succesfully connected to qedserver.local:8080 in 0ms
+2011-05-09 16:59:09,104 - Tunnel host is provisioned (d5648e1419e311937a716c968861c3e5)
+2011-05-09 16:59:10,948 - Tunnel host is deploying ..
+2011-05-09 16:59:15,555 - Tunnel host is booting ..
+2011-05-09 16:59:38,287 - Tunnel host is running at maki7121.miso.saucelabs.com
+2011-05-09 16:59:38,287 - Starting SSH process ..
+2011-05-09 16:59:46,234 - Succesfully connected to qedserver.local:8080 in 0ms
+2011-05-09 16:59:46,298 - Succesfully connected to maki7121.miso.saucelabs.com:22 in 62ms
+# START:confirmation
+2011-05-09 16:59:46,298 - SSH is running. You may start your tests.
+# END:confirmation
+
+# START:failing
+Using the sauce_f profile...
+Feature: Testing the test server home page to make sure we have the 
+manage products link and the See a quick tutorial link
+
+  Scenario: Verify the manage products link is on the home page 
+  # features/qedserver_home_page.feature:3
+    Given I am on the QED Server home page                      
+  # features/qedserver_home_page.feature:4
+    Then I should see the "manage products" link                
+  # features/qedserver_home_page.feature:5
+
+  Scenario: Verify the See a quick tutorial link is on the home page 
+  # features/qedserver_home_page.feature:7
+    Given I am on the QED Server home page                      
+  # features/qedserver_home_page.feature:8
+    Then I should see the "See a quick tutorial" link             
+  # features/qedserver_home_page.feature:9
+
+2 scenarios (2 undefined)
+4 steps (4 undefined)
+0m26.580s
+
+You can implement step definitions for undefined steps with these snippets:
+
+Given /^I am on the QED Server home page$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see the "([^"]*)" link$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+# END:failing

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html lang="en">
+  <head>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+    </script>
+    <script src="javascripts/mustache.js"></script>
+    <script src="javascripts/app.js"></script>
+  </head>
+  <body>
+  <script id="product_template" type="text/html">
+    <div class="product">
+      {{#products}}
+      <h3>{{name}}</h3>
+      <p>{{description}}</p>
+      {{/products}}
+    </div>
+  </script>
+  </body>
+</html>

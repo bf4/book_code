@@ -1,0 +1,21 @@
+# START:build
+task :build do
+  require 'guard'
+  Guard.setup
+  Guard::Dsl.evaluate_guardfile
+  Guard::guards.each{|guard| guard.run_all}
+end
+# END:build
+
+# START:deploy
+desc "Deploy the web site to the dev server"
+task :deploy => :build do
+  require 'net/scp'
+  server = "192.168.1.100"
+  login = "webdev"
+  
+  Net::SCP.start(server, login, {:password => "webdev"} ) do |scp|
+    scp.upload! "public", "/var/www", :recursive => true
+  end
+end
+# END:deploy

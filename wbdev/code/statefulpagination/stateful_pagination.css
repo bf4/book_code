@@ -1,0 +1,12 @@
+.product {
+  margin: 40px auto;
+}
+
+.product a {
+  /* Make the text big enough that the products run off the page */
+  font-size: 300%;
+}
+
+#current_page {
+  display: none;
+}

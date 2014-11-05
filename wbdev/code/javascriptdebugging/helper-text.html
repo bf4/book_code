@@ -1,0 +1,29 @@
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html>
+  <head>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+    <script type='text/javascript' 
+      src='http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js'></script>
+    <script type='text/javascript' 
+      src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='helper-text-broken.js'></script>
+  	<script>
+  		$(document).ready(function() {
+  			options = {
+  				helper_class:"help_dialog"
+  			}
+  			display_helpers(options);
+  		});
+  	</script>
+  </head>
+  <body>
+    <p>Since we want our information to be part of the flow of the page, while still working in older browsers, we'll use JavaScript to replace HTML links to our supplemental content and display that content in dialog boxes on our page. Doing this will allow the content to remain accessible to browsers without JavaScript, while giving a more styled and smooth flowing experience to users with modern browsers and JavaScript enabled. <a href="test-content.html" id="help_link_1" class="help_link" data-style="dialog" data-modal='true'>Learn more about it.</a></p>
+  </body>
+</html>

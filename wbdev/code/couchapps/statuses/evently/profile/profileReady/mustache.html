@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<p>Most applications will customize this template (<tt>ddoc.evently.profile.profileReady.mustache</tt>) for user input.</p>
+
+<div class="avatar">
+  {{#gravatar_url}}<img src="{{gravatar_url}}"/>{{/gravatar_url}}
+  <div class="name">
+    {{name}}
+  </div>
+</div>
+
+<form>
+  <label>New message from {{nickname}}: <input type="text" name="message" size=60 value=""></label>
+</form>
+
+<div style="clear:left;"></div>

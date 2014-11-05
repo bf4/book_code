@@ -1,0 +1,102 @@
+/*START:variables*/
+/*END:variables*/
+/* START:mixins */
+/*START:rounded */
+/*END:rounded */
+/*START:gradients */
+/*END:gradients */
+/*START:shadow */
+/*END:rounded */
+/* END:mixins */
+/* START:buttons */
+/*START:base*/
+.button {
+  font-weight: bold;
+  /* START_HIGHLIGHTING */
+  background-color: #A69520;
+  /* END_HIGHLIGHTING */
+  text-transform: uppercase;
+  font-family: verdana;
+  /* START_HIGHLIGHTING */
+  border: 1px solid #282727;
+  /* END_HIGHLIGHTING */
+  font-size: 1.2em;
+  line-height: 1.25em;
+  padding: 6px 20px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  /*END:base*/
+  /*START:rounded*/
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  /*END:rounded*/
+  /*START:gradients1*/
+  background: -webkit-gradient(linear, 0 0, 100%, 100%, from(#FFF089), to(#A69520));
+  background: -moz-linear-gradient(#FFF089, #A69520);
+  background: -o-linear-gradient(#FFF089, #A69520);
+  background: linear-gradient(top center, #FFF089, #A69520);
+  /*END:gradients1*/
+  /*START:gradients2*/
+  /*END:gradients2*/
+  /*START:shadow */
+  box-shadow: 1px 3px 5px #555555;
+  -moz-box-shadow: 1px 3px 5px #555555;
+  -webkit-box-shadow: 1px 3px 5px #555555;
+  -o-box-shadow: 1px 3px 5px #555555;
+  -khtml-box-shadow: 1px 3px 5px #555555;
+  /*END:shadow */
+  /*START:base*/ }
+  .button:active, .button:focus {
+    background: -webkit-gradient(linear, 0 0, 100%, 100%, from(#A69520), to(#FFF089));
+    background: -moz-linear-gradient(#A69520, #FFF089);
+    background: -o-linear-gradient(#A69520, #FFF089);
+    background: linear-gradient(top center, #A69520, #FFF089);
+    color: #000; }
+
+input.button {
+  line-height: 1.22em; }
+
+/*END:base*/
+/* END:buttons */
+/* START:bubble */
+blockquote {
+  width: 225px;
+  padding: 15px 30px;
+  margin: 0;
+  position: relative;
+  background: #faa;
+  /* START_HIGHLIGHTING */
+  background: -webkit-gradient(linear, 0 0, 20%, 100%, from(#c40606), to(#ffaaaa));
+  background: -moz-linear-gradient(#c40606, #ffaaaa);
+  background: -o-linear-gradient(#c40606, #ffaaaa);
+  background: linear-gradient(top center, #c40606, #ffaaaa);
+  /* <label id="code.gradient" /> */
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  /* END_HIGHLIGHTING */ }
+  blockquote p {
+    font-size: 1.8em;
+    margin: 5px;
+    z-index: 10;
+    position: relative; }
+  blockquote + cite {
+    /* <label id="code.nested.selector" /> */
+    font-size: 1.1em;
+    display: block;
+    margin: 1em 0 0 4em; }
+  blockquote:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    left: 40px;
+    border-width: 0 15px 50px 0px;
+    border-style: solid;
+    border-color: transparent #faa;
+    display: block;
+    width: 0; }
+
+/* END:bubble */

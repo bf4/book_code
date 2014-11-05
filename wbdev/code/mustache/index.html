@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="mustache.js"></script>
+
+    <script type="text/template" id="products-template">
+      {{#products}}
+        <li>
+          <span class="product-name">{{ name }}</span>
+          <em class="product-price">{{ price }}</em>
+          <div class="product-description">{{ description }}</div>
+          <ul class="product-notes">
+            {{#notes}}
+              <li>{{ text }}</li>
+            {{/notes}}
+          </ul>
+        </li>
+      {{/products}}
+    </script>
+
+    <script type="text/javascript">
+      $(function() {
+        $.getJSON('/products.json', function(products) {
+          var data = {products: products};
+          var rendered = Mustache.to_html($('#products-template').html(), data);
+          $('body').append(rendered);
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+  </body>
+</html>

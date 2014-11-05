@@ -1,0 +1,13 @@
+# START_HIGHLIGHTING
+guard 'sass', :input => 'sass', :output => 'tmp'
+guard 'coffeescript', :input => 'coffeescripts', :output => 'tmp'
+# END_HIGHLIGHTING
+
+guard 'jammit' do
+  # START_HIGHLIGHTING
+  watch(/^tmp\/(.*)\.css/)
+  watch(/^tmp\/(.*)\.js/)
+  # END_HIGHLIGHTING
+  watch(/^stylesheets\/(.*)\.css/)
+  watch(/^javascripts\/(.*)\.js/)
+end

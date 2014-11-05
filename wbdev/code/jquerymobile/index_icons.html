@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Incredible Products from AwesomeCo</title>
+
+    <link rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css">
+    <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
+    </script>
+    <script type="text/javascript"
+      src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js">
+    </script>
+    <script type="text/javascript">
+    $(function() {
+      var productsPage = $("#products");
+      var productsList = $("#products-list");
+    
+      productsPage.bind("pagebeforeshow", function() {
+        $.mobile.showPageLoadingMsg();
+      
+        $.getJSON("/products.json", function(products) {
+          productsList.html("");
+        
+          $.each(products, function(i, product) {
+            productsList.append("<li><a href='#product' data-product-id='" +
+              product.id + "'>" + product.name + "</a></li>");
+          });
+          
+        
+          productsList.listview("refresh");
+          $.mobile.hidePageLoadingMsg();
+        });
+      });
+  
+      var productPage = $("#product");
+    
+      $("#products a").live("tap", function() {
+        var productID = $(this).attr("data-product-id");      
+        $.mobile.showPageLoadingMsg();      
+        $.getJSON("/products/" + productID + ".json", function(product) {
+          $("#product-header h1").text(product.name);
+          $("#product-content p.description").text(product.description);
+          $("#product-content span.price strong").text("$" + product.price);
+        });      
+        $.mobile.hidePageLoadingMsg();      
+        $.mobile.changePage($("#product"));
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        <h1>AwesomeCo</h1>
+      </div>
+      <div data-role="content">
+        <p>Welcome to AwesomeCo, your number one source
+          for all things awesome.</p>
+          <div data-role="controlgroup">
+            <a href="#products" data-role="button"
+              data-icon="arrow-r">View All Products</a>
+            <a href="#search" data-role="button"
+              data-icon="search">Search</a>
+          </div>
+      </div>
+      <div data-role="footer">
+        <h4>&copy; 2012 AwesomeCo</h4>
+      </div>
+    </div>
+  
+    <div data-role="page" id="products">
+      <div data-role="header">
+        <a data-role="back">Back</a>
+        <h1>Products</h1>
+      </div>
+    
+      <div data-role="content">
+        <ul id="products-list" data-role="listview"></ul>
+      </div>
+    
+      <div data-role="footer">
+        <h4>&copy; 2012 AwesomeCo</h4>
+      </div>
+    </div>
+  
+    <div data-role="page" id="product">
+      <div data-role="header" id="product-header">
+        <a data-role="back" href="#products" data-direction="reverse">Back</a>
+        <h1>Product</h1>
+      </div>
+    
+      <div data-role="content" id="product-content">
+        <p class="description"></p>
+        <span class="price"><strong></strong></span>
+      </div>
+    
+      <div data-role="footer">
+        <h4>&copy; 2012 AwesomeCo</h4>
+      </div>
+    </div>
+  </body>
+</html>

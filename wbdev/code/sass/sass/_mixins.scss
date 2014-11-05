@@ -1,0 +1,27 @@
+/*START:rounded */
+@mixin rounded($radius){
+          border-radius: $radius;
+     -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+/*END:rounded */
+
+/*START:gradients */
+@mixin gradient($color1, $color2, $alpha1: 100%, $alpha2: 100%){
+  background: 
+    -webkit-gradient(linear, 0 0, 
+                     $alpha1, $alpha2, 
+                     from($color1), to($color2));
+  background: -moz-linear-gradient($color1, $color2);
+  background: -o-linear-gradient($color1, $color2);
+  background: linear-gradient(top center, $color1, $color2);
+}
+/*END:gradients */
+
+/*START:shadow */
+@mixin shadow($x, $y, $offset, $color){
+  @each $prefix in "", -moz-, -webkit-, -o-, -khtml- {
+    #{$prefix}box-shadow: $x $y $offset $color;
+  }
+}
+/*END:rounded */

@@ -1,0 +1,74 @@
+/* START:basic_style */
+.clear {
+  clear: both;
+  /* END:basic_style */
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  /* START:basic_style */
+}  
+.popup_window {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #000;
+  /* END:basic_style */
+  box-shadow: 1px 1px 2px #555;
+  -webkit-box-shadow: 1px 1px 2px #555;
+  /* START:basic_style */
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: #EEE;
+  /* END:basic_style */
+  -moz-transition:    box-shadow 0.5s ease;
+  -webkit-transition: box-shadow 0.5s ease;
+  -o-transition:      box-shadow 0.5s ease;
+  transition:         box-shadow 0.5s ease;
+  /* START:basic_style */
+}
+/* END:basic_style */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.popup_window.dragging {
+  box-shadow: 4px 4px 4px #555;
+  -webkit-box-shadow: 4px 4px 4px #555;
+}
+/* START:basic_style */
+.popup_window .header {
+  /* END:basic_style */
+  background: green;
+  /* START:basic_style */
+  width: 100%;
+  display: block;
+}
+/* END:basic_style */
+
+.draggable .handle {
+  cursor: move;
+}
+
+.popup_window .header .header_text {
+  margin: 5px;
+  display: inline;
+}
+
+/* START:basic_style */
+.popup_window .header .close {
+  float: right;
+  padding: 2px 5px;
+  border: 1px solid #999;
+  background: red;
+  color: #FFF;
+  cursor: pointer;
+  margin: 0;
+}
+.popup_window .header:after {
+  clear: both;
+}
+/* END:basic_style */

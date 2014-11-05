@@ -1,0 +1,61 @@
+/* START:layout */
+body {
+  background: #CCC;
+  margin: 0;
+}
+/* START:headerWithOverflow */
+header {
+/* END:headerWithOverflow */
+  background: #436999;
+  margin: 0 auto;
+  width: 800px;
+  height: 150px;
+  display: block;
+  position: relative;
+/* END:layout */
+/* START:headerWithOverflow */
+  overflow: hidden;
+/* START:layout */
+}
+/* END:headerWithOverflow */
+header img.logo {
+  float: left;
+  padding: 10px;
+  height: 130px;
+}
+/* END:layout */
+
+/* START:sheen */
+/* START:sheenWithTransitions*/
+header .sheen {
+/* END:sheenWithTransitions */
+  height: 200px;
+  width: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  float: left;
+  -moz-transform:     rotate(20deg);
+  -webkit-transform:  rotate(20deg);
+  -o-transform:       rotate(20deg);
+  position: absolute;
+  left: -100px;
+  top: -25px;
+  -moz-box-shadow:    0 0 20px #FFF;
+  -webkit-box-shadow: 0 0 20px #FFF;
+  box-shadow:         0 0 20px #FFF;
+  /* END:sheen*/
+  
+  /* START:sheenWithTransitions*/
+  -moz-transition:    all 2s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+  -o-transition:      all 2s ease-in-out;
+  transition:         all 2s ease-in-out;
+/* START:sheen */
+}
+/* END:sheen */
+/* END:sheenWithTransitions */
+
+/* START:loaded */
+header.loaded .sheen {
+  left: 900px;
+}
+/* END:loaded */

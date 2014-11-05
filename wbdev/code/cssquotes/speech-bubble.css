@@ -1,0 +1,41 @@
+blockquote {
+  width: 225px;
+  padding: 15px 30px;
+  margin: 0;
+  position: relative;
+  background: #faa;
+  background: -webkit-gradient(linear, 0 0, 20% 100%, 
+    from(#C40606), to(#faa));
+  background: -moz-linear-gradient(#C40606, #faa);
+  background: -o-linear-gradient(#C40606, #faa);
+  background: linear-gradient(#C40606, #faa);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+blockquote p {
+  font-size: 1.8em;
+  margin: 5px;
+  z-index: 10;
+  position: relative;
+}
+
+blockquote + cite {
+  font-size: 1.1em;
+  display: block;
+  margin: 1em 0 0 4em;
+}
+
+blockquote:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -50px;
+  left: 40px;
+  border-width: 0 15px 50px 0px;
+  border-style: solid;
+  border-color: transparent #faa;
+  display: block; 
+  width: 0;
+}

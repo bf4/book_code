@@ -1,0 +1,64 @@
+<!doctype html>
+/[if lt IE 7 ] <html class="ie ie6" lang="en">
+/[if IE 7 ] <html class="ie ie7" lang="en">
+/[if IE 8 ] <html class="ie ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    /
+      Basic Page Needs
+      \==================================================
+    %meta{:charset => "utf-8"}/
+    %title 123 Fake Street, Anytown USA 12345 | SpotFindr
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    /
+      Mobile Specific Metas
+      \==================================================
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    /
+      CSS
+      \==================================================
+    %link{:href => "stylesheets/base.css", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/skeleton.css", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/layout.css", :rel => "stylesheet"}/
+    /
+      Favicons
+      \==================================================
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "images/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
+  %body
+    /
+      Primary Page Layout
+      \==================================================
+    / START:haml
+    .container
+      %header.sixteen.columns
+        %h1 SpotFindr
+        %h3 123 Fake Street, Anytown USA 12345
+      %section.eight.columns
+        %h2.price $109,900
+        %p
+          Simple single-family home on the north side, within walking...
+      %section.eight.columns ...
+      / END:haml
+      
+        %img.scale-with-grid{:alt => "Exterior of house", :src => "http://placehold.it/460x280&text=Exterior"}/
+        %img{:alt => "Livingroom", :src => "http://placehold.it/150x100&text=Livingroom"}/
+        %img{:alt => "Kitchen", :src => "http://placehold.it/150x100&text=Kitchen"}
+        %img{:alt => "Bedroom", :src => "http://placehold.it/150x100&text=Bedroom"}
+
+    /
+      JS
+      \==================================================
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"}
+    :javascript
+      window.jQuery || document.write("<script src='javascripts/jquery-1.5.1.min.js'>\x3C/script>")    %script{:src => "javascripts/app.js"}
+    /
+      End Document
+      \==================================================

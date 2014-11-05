@@ -1,0 +1,19 @@
+blockquote {
+  width: 225px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+blockquote p {
+  font-size: 2.4em;
+  margin: 5px;
+}
+
+blockquote + cite {
+  font-size: 1.2em;
+  color: #AAA;
+  text-align: right;
+  display: block;
+  width: 225px;
+  padding: 0 50px;
+}

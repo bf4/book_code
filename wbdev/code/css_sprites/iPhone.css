@@ -1,0 +1,31 @@
+body{
+  font-weight: bold;
+}
+
+ul.collapsible {
+  width:430px;
+  margin-left:-10px;
+}
+
+ul li{
+  padding-top:10px;
+}
+
+/* adjust + and - so they don't crowd the words*/  
+ul.collapsible li:before {
+  width: 20px;
+}
+/*START: iphone*/
+ul.collapsible li.expanded:before {
+  content: '';
+  width:30px;
+  height:20px;
+  background:url(images/expand_collapse_sprite.png) 0 -5px;
+}
+ul.collapsible li.collapsed:before {
+  content: '';
+  width:30px;
+  height:25px;
+  background:url(images/expand_collapse_sprite.png) 0 -30px;
+}
+/*END: iphone*/

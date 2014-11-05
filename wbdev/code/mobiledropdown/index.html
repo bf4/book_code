@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dropdown navigation</title>
+    <link rel="stylesheet" href="mobiledropdown.css">
+    <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="mobiledropdown.js"></script>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1, maximum-scale=1">
+  </head>
+  <body>
+    <header>
+      <h1>Products</h1>
+      <navbar class="dropdown">
+        <ul>
+          <li>
+            <a href="categories/1">Electronics</a>
+            <ul>
+              <li><a href="categories/4">Music Players</a></li>
+              <li><a href="categories/5">Tablets</a></li>
+              <li><a href="categories/6">Computers</a></li>
+              <li><a href="categories/7">Cameras &amp; Camcorders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="categories/2">Appliances</a>
+            <ul>
+              <li><a href="categories/8">Washers</a></li>
+              <li><a href="categories/9">Dryers</a></li>
+              <li><a href="categories/10">Dish Washers</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="categories/3">Entertainment</a>
+            <ul>
+              <li><a href="categories/11">DVDs</a></li>
+              <li><a href="categories/12">Music</a></li>
+            </ul>
+          </li>
+        </ul>
+      </navbar>
+    </header>
+    <div class="clear">
+      <p>This is where the content for our site goes.</p>
+    </div>
+  </body>
+</html>

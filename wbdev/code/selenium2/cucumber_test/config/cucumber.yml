@@ -1,0 +1,29 @@
+# START:defaults
+<% defaults = "HOST_TO_TEST=http://qedserver.local
+              APP_PORT=8080 
+              HUB=sauce" %> 
+# END:defaults
+
+# START:core_list              
+# START:ie7
+sauce_ie7_03: BROWSER=iehta VERSION='7.' <%= defaults %>
+# END:ie7
+sauce_ie8_03: BROWSER=iehta VERSION='8.' <%= defaults %>
+# START:ie9
+sauce_ie9_08: BROWSER=ietha VERSION='9.' OS='Windows 2008'<%= defaults %>
+# END:ie9
+sauce_f_03: BROWSER=firefox VERSION='3.' <%= defaults %> 
+sauce_s_03: BROWSER=safariproxy  VERSION='5.'   <%= defaults %>  
+sauce_c_03: BROWSER=googlechrome VERSION=' '    <%= defaults %> 
+# END:core_list
+
+#START:local
+local: HOST_TO_TEST=http://qedserver.local ROOT=/ HUB=localhost -r features/step_definitions -r features/support --format pretty features 
+#END:local
+
+<%
+std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} --strict --tags ~@wip"
+%>
+default: <%= std_opts %> features
+wip: --tags @wip:3 --wip features
+

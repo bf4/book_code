@@ -1,0 +1,24 @@
+ul.collapsible li {
+  list-style: none;
+  cursor: default;
+}
+
+
+ul.collapsible li.expanded, ul.collapsible li.collapsed {
+  cursor: pointer;
+}
+
+ul.collapsible li:before {
+  display: block;
+  float: left;
+  width: 10px;
+  text-align: center;
+}
+/*START: browser*/
+ul.collapsible li.expanded:before {
+  content: '-';
+}
+ul.collapsible li.collapsed:before {
+  content: '+';
+}
+/*END: browser*/

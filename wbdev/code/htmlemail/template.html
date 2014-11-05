@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+         "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Invoice</title>
+</head>
+<body>
+  <style>
+    table#inv_addresses h3,
+    table#inv_footer h4{
+      margin: 0;
+    }
+    
+    table{
+      margin-bottom: 20px;
+    }
+    
+    table#inv_footer{
+      margin-bottom: 0;
+    }
+    
+    body{
+      background-color: #eeeeee;
+    }
+    
+    table#inv_container{
+      background-color: #ffffff;
+      border: 1px solid #000000;
+    }
+  </style>
+  <center>
+    <p>
+      Unable to view this invoice? 
+      <a href="#">View it in your browser instead</a>.
+    </p>
+    <table id="inv_container" 
+      width="95%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center" valign="top">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td align="center" bgcolor="#5d8eb6" valign="top">
+            <h1><font color="white">AwesomeCo</font></h1>
+            </td>
+          </tr>
+        </table>
+        
+        <table border="0" cellpadding="0" cellspacing="0" width="98%">
+          <tr>
+            <td align="left"  width="70%"><h2>Invoice for Order #533102 </h2></td>
+            <td align="right" width="30%"><h3>December 30th, 2011</h3></td>
+          </tr>
+        </table>
+        <table id="inv_addresses" border="0" 
+               cellpadding="2" cellspacing="0" width="98%">
+          <tr>
+            <td align="left" valign="top" width="50%">
+              <h3>From</h3>
+              AwesomeCo Inc. <br>
+              123 Fake Street <br>
+              Chicago, IL 55555 
+            </td>
+            <td align="left" valign="top" width="50%">
+              <h3>To</h3>
+              GNB <br>
+              456 Industry Way <br>
+              New York, NY 55555 
+            </td>
+          </tr>
+        </table>
+        <table border="0" cellpadding="2" cellspacing="0" width="98%">
+          <caption>Order Summary</caption>
+          <tr>
+            <th bgcolor="#cccccc" align="left" valign="top">SKU</th>
+            <th bgcolor="#cccccc" align="left" valign="top">Item</th>
+            <th bgcolor="#cccccc" valign="top">Price</th>
+            <th bgcolor="#cccccc" valign="top" width="10%">QTY</th>
+            <th bgcolor="#cccccc" valign="top" width="10%">Total</th>
+          </tr>
+          <tr>
+            <td valign="top">10042</td>
+            <td valign="top">15-inch MacBook Pro</td>
+            <td align="right" valign="top">$1799.00</td>
+            <td align="center" valign="top">1</td>
+            <td align="right" valign="top">$1799.00</td>
+          </tr>
+          <tr>
+            <td valign="top">20005</td>
+            <td valign="top">Mini-Display Port to VGA Adapter</td>
+            <td align="right" valign="top">$19.99</td>
+            <td align="center" valign="top">1</td>
+            <td align="right" valign="top">$19.99</td>
+          </tr>
+        </table>
+        <hr>
+        <table border="0" cellpadding="2" cellspacing="0" width="98%">
+          <tr>
+            <td align="right" valign="top">Subtotal: </td>
+            <td align="right" valign="top" width="10%">$1818.99</td>
+          </tr>
+		  
+          <tr>
+            <td align="right" valign="top">Total Due: </td>
+            <td align="right" valign="top"><b>$1818.99</b> </td>
+          </tr>
+        </table>
+       <table border="0" cellpadding="0" cellspacing="0" width="98%">
+         <tr><td align="left">
+           <h2>Notes</h2>
+           <p>Thank you for your business!</p>
+         </td></tr>
+       </table>
+        <table id="inv_footer" border="0" 
+               cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td align="center" valign="top">
+            <h4>Copyright &copy; 2012 AwesomeCo</h4>		
+            <h4>
+               You are receiving this email because you purchased
+               products from us. 
+            </h4>
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>

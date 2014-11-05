@@ -1,0 +1,84 @@
+{
+  "customers": [
+    {
+      "name": "Adrienne Sargent",
+      "age": 20
+    },
+    {
+      "name": "Stella Albin",
+      "age": 55
+    },
+    {
+      "name": "Clarence Edington",
+      "age": 31
+    },
+    {
+      "name": "Antonio Mccune",
+      "age": 44
+    },
+    {
+      "name": "Edna Josey",
+      "age": 39
+    },
+    {
+      "name": "Dolores Krauss",
+      "age": 28
+    },
+    {
+      "name": "Anne Vanegas",
+      "age": 26
+    },
+    {
+      "name": "Jerry Ayala",
+      "age": 34
+    },
+    {
+      "name": "Keith Shuman",
+      "age": 35
+    },
+    {
+      "name": "Joshua Fontes",
+      "age": 46
+    },
+    {
+      "name": "Fred Antonelli",
+      "age": 27
+    },
+    {
+      "name": "Adam Krauss",
+      "age": 28
+    },
+    {
+      "name": "Misty Dumas",
+      "age": 56
+    },
+    {
+      "name": "Holly Hammett",
+      "age": 39
+    },
+    {
+      "name": "Marcia Batiste",
+      "age": 42
+    },
+    {
+      "name": "Thelma Rochelle",
+      "age": 24
+    },
+    {
+      "name": "Anita Tarter",
+      "age": 21
+    },
+    {
+      "name": "Charlotte Bickford",
+      "age": 27
+    },
+    {
+      "name": "Timothy Navarra",
+      "age": 33
+    },
+    {
+      "name": "Norman Tanaka",
+      "age": 36
+    } 
+  ]
+}

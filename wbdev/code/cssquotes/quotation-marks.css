@@ -1,0 +1,45 @@
+blockquote {
+  width: 225px;
+  padding: 5px;
+}
+
+blockquote p {
+  font-size: 2.4em;
+  margin: 5px;
+  z-index: 10;
+  position: relative;
+}
+
+blockquote + cite {
+  font-size: 1.2em;
+  color: #AAA;
+  text-align: right;
+  display: block;
+  width: 225px;
+  padding: 0 50px;
+}
+
+blockquote:before { 
+  content: open-quote;
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+  left: 10px;
+  font-size: 12em;
+  color: #FAA;
+  font-family: serif;
+}
+
+blockquote:after { 
+  content: close-quote;
+  position: absolute;
+  z-index: 1;
+  bottom: 80px;
+  left: 225px;
+  font-size: 12em;
+  color: #FAA;
+  font-family: serif;
+}
+blockquote + cite:before {
+  content: "-- ";
+}

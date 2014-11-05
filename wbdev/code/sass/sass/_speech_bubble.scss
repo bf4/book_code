@@ -1,0 +1,32 @@
+blockquote {
+  width: 225px;
+  padding: 15px 30px;
+  margin: 0;
+  position: relative;
+  background: #faa;
+  @include gradient(#c40606, #ffaaaa, 20%, 100%); /* <label id="code.sb.gradient" /> */
+  @include rounded(20px); /* <label id="code.sb.rounded" /> */
+  p {
+    font-size: 1.8em;
+    margin: 5px;
+    z-index: 10;
+    position: relative; 
+  }
+  + cite { /* <label id="code.nested.selector" /> */
+    font-size: 1.1em;
+    display: block;
+    margin: 1em 0 0 4em; 
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    left: 40px;
+    border-width: 0 15px 50px 0px;
+    border-style: solid;
+    border-color: transparent #faa;
+    display: block;
+    width: 0;
+  }
+}

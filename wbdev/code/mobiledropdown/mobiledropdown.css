@@ -1,0 +1,46 @@
+navbar.dropdown {
+  position: relative;
+}
+
+navbar.dropdown ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+navbar.dropdown ul li {
+  float: left;
+  position: relative;
+}
+
+navbar.dropdown ul li a {
+  padding: 4px 10px;
+  display: block;
+  background: #666;
+  color: #FFF;
+}
+
+navbar.dropdown ul li ul {
+  display: none;
+}
+
+navbar.dropdown ul li:hover ul, navbar.dropdown ul li.hover ul {
+  display: block;
+  position: absolute;
+}
+
+navbar.dropdown ul li ul li a {
+  display: block;
+  background: #444;
+  color: #FFF;
+  width: 150px;
+}
+
+navbar.dropdown ul li:hover ul li a:hover {
+  background: #888;
+  color: #FFF;
+  width: 150px;
+}
+
+.clear {
+  clear: both;
+}

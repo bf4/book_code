@@ -1,0 +1,16 @@
+/*START:variables*/
+$button_background_color: #A69520;
+$button_border_color: #282727;
+/*END:variables*/
+
+/* START:mixins */
+@import "mixins";
+/* END:mixins */
+
+/* START:buttons */
+@import "buttons.scss";
+/* END:buttons */
+
+/* START:bubble */
+@import "speech_bubble.scss";
+/* END:bubble */

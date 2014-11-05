@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html>
+  <head>
+    <title>Status Updates</title>
+    <link rel="stylesheet" href="style/main.css" type="text/css">
+  </head>
+  <body>
+    <h1>AwesomeCo Status updates</h1>
+
+    <div id="statuses">
+      <p>Waiting...</p>
+    </div>
+
+    <script src="vendor/couchapp/loader.js"></script>
+
+    <script type="text/html" id="template">
+      {{#rows}}
+      <div class="status">
+        <h2>{{ value.title }}</h2>
+        <p>{{ value.description }}</p>
+      </div>
+      {{/rows}}
+    </script>
+  
+    <script type="text/javascript" charset="utf-8">
+       $db = $.couch.db("statuses");
+       var loadStatusMessages = function(){       
+         $db.view("statuses/messages",{
+           success: function( data ) {              
+             var template = Mustache.to_html(
+               $("#template").html(), data
+             );
+             $("#statuses").html(template);
+           }
+         });
+       }
+     
+       $(function(){
+         loadStatusMessages();
+       });
+    </script>
+  </body>
+</html>

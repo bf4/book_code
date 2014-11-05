@@ -1,0 +1,21 @@
+/*START: body*/
+body{
+  font-weight: bold;
+}
+/*END: body*/
+/*START: collapsible*/
+ul.collapsible {
+  width:430px;
+  margin-left:-10px;
+}
+/*END: collapsible*/
+/*START: li*/
+ul li{
+  padding-top:10px;
+}
+/*END: li*/
+/*START: li-before*/
+ul.collapsible li:before {
+  width: 20px;
+}
+/*END: li-before*/

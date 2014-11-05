@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript"
+    src="/jquery.js">
+  </script>
+  <script type="text/javascript" src="/highcharts.js"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    var chartOptions = {};
+    
+    chartOptions.chart = {
+      renderTo: "pie-chart"
+    };
+    chartOptions.title = {text: "A sample pie chart"};
+    chartOptions.series = [{
+      type: "pie",
+      name: "Sample chart",
+      data: [
+        ["Section 1", 30],
+        ["Section 2", 50],
+        ["Section 3", 20]
+      ]
+    }];
+	
+    var pieChartOptions = {
+      dataLabels: {
+        style: {
+          fontSize: 20
+        },
+        connectorWidth: 3,
+        formatter: function() {
+          var label = this.point.name + " : " + this.percentage + "%";
+          return label;
+        }
+      }
+    };
+    
+    chartOptions.plotOptions = {
+      pie: pieChartOptions
+    };
+	
+    var chart = new Highcharts.Chart(chartOptions);
+  });
+  </script>
+
+</head>
+<body>
+  <div id="pie-chart"></div>
+</body>
+
+</html>

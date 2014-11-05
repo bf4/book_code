@@ -1,0 +1,4 @@
+guard 'jammit' do
+  watch(/^stylesheets\/(.*)\.css/)
+  watch(/^javascripts\/(.*)\.js/)
+end

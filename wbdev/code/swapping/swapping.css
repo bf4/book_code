@@ -1,0 +1,45 @@
+li.tab { 
+  color: #333;
+  cursor: pointer; 
+  float: left; 
+  list-style: none outside none; 
+  margin: 0; 
+  padding: 0; 
+  text-align: center; 
+  text-transform: uppercase; 
+  width: 80px; 
+  font-size: 120%; 
+  line-height: 1.5; 
+  background-color: #DDD; 
+}
+
+li.tab.selected { 
+  background-color: #AAA; 
+}
+
+ul.tabs { 
+  font-size: 12px; 
+  line-height: 1; 
+  list-style: none outside none; 
+  margin: 0; 
+  padding: 0; 
+  position: absolute; 
+  right: 20; 
+  top: 0; 
+}
+
+div.example { 
+  font-family: "Helvetica", "san-serif"; 
+  font-size: 16px; 
+
+}
+div.examples { 
+  border: 5px solid #DDD; 
+  font-size: 14px; 
+  margin-bottom: 20px; 
+  padding: 10px; 
+  padding-top: 30px; 
+  position: relative; 
+  background-color: #000; 
+  color: #DDD; 
+}

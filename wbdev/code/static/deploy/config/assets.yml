@@ -1,0 +1,8 @@
+stylesheets:
+  app:
+    - stylesheets/style.css
+    
+javascripts:
+  app:
+    - javascripts/jquery-1.7.min.js
+    - javascripts/form.js

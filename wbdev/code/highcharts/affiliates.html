@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Affiliate Customer Data</title>
+  <script type="text/javascript"
+    src="/jquery.js">
+  </script>
+  <script type="text/javascript" src="/highcharts.js"></script>
+  <script type="text/javascript">
+  
+  $(function() {
+    var options = {
+      chart: {
+        renderTo: "customer-data"
+      },
+      title: {
+        text: "Customer Data"
+      },
+      credits: {
+        enabled: false
+      }
+    };
+   
+    $.getJSON('/sample_data/customer_data.json', function(data) {
+      
+      var ages = [];
+      
+      $.each(data.customers, function(i, customer) {
+        if (typeof ages[customer.age] === "undefined") {
+          ages[customer.age] = 1;
+        } else {
+          ages[customer.age] += 1;
+        }
+      });
+      
+      var age_data = [];
+      
+      $.each(ages, function(i, e) {
+        if (typeof e !== "undefined") {
+          age_data.push([i, e]);
+        }
+      });
+      options.series = [{
+        type: "column",
+        name: "Customer Ages",
+        data: age_data
+      }];
+      
+      var chart = new Highcharts.Chart(options);
+    });
+   
+    
+
+  });
+  </script>
+</head>
+
+<body>
+  <div id="customer-data"></div>
+</body>
+
+</html>

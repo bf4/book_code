@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev for more book information.
+-->
+<html>
+  <head>
+    <title>Simple controller</title>
+  </head>
+  <body>
+    
+    <a href="#">Home</a> | 
+    <a href="#help">Help</a>
+    <div id="app">
+      
+    </div>
+    <script src="/lib/jquery.min.js"></script>
+    <script src="/lib/underscore-min.js"></script>
+    <script src="/lib/backbone-min.js"></script>
+    
+    <script>
+    SimpleController = Backbone.Controller.extend({        
+        routes: {
+            "":             "index",
+            "help":         "help"
+        },
+        
+        index: function(){
+          $("#app").html("This is the Index");
+        },
+        
+        help: function(){
+          $("#app").html("This is the help page");
+        }
+      });
+      
+      new SimpleController();
+      Backbone.history.start();
+       
+    </script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,71 @@
+# START:configure_git
+git config --global user.name "Firstname Lastname" 
+git config --global user.email "your_email@youremail.com"
+# END:configure_git
+
+# START:initialize
+  git init
+  Initialized empty Git repository in /Users/cjohnson/Sites/git_site/.git/
+# END:initialize
+
+# START:first_add_command
+  git add .
+  git status
+# END:first_add_command
+
+# START:first_add
+  # On branch master
+  #
+  # Initial commit
+  #
+  # Changes to be committed:
+  #   (use "git rm --cached <file>..." to unstage)
+  #
+  #       new file:   index.html
+  #       new file:   javascripts/application.js
+  #       new file:   styles/site.css
+  #
+# END:first_add
+
+# START:first_commit_command
+  git commit -a -m"initial commit of files"
+# END:first_commit_command
+
+# START:first_commit
+  [master (root-commit) 94c75a2] Initial Commit
+  1 files changed, 17 insertions(+), 0 deletions(-)
+  create mode 100644 index.html
+  create mode 100644 javascripts/application.js
+  create mode 100644 styles/site.css
+
+  # On branch master
+  nothing to commit (working directory clean)
+# END:first_commit
+
+# START:create_branch_layout_a
+  ruby-1.8.7-p302 Bubbles:git_site cjohnson$ git checkout -b layout_a
+  Switched to a new branch 'layout_a'
+# END:create_branch_layout_a
+
+# START:git_status_of_editing_layout_a
+  # On branch layout_a
+  # Changed but not updated:
+  #   (use "git add <file>..." to update what will be committed)
+  #   (use "git checkout -- <file>..." to discard changes in working directory)
+  #
+  #       modified:   index.html
+  #
+  no changes added to commit (use "git add" and/or "git commit -a")
+# END:git_status_of_editing_layout_a
+
+# START:git_commit_layout_a
+  git commit -a -m"changed heading to be Layout A"
+# END:git_commit_layout_a
+# START:result_git_commit_layout_a
+  [layout_a 4945221] changed heading to be Layout A
+  1 files changed, 1 insertions(+), 1 deletions(-)
+# END:result_git_commit_layout_a
+
+#START:checkout_master
+  git checkout master
+#END:checkout_master
