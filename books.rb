@@ -126,6 +126,20 @@ def extract_code(prag_ref)
 end
 # def tar_exists?
 # check for already downloaded books
+ROOT = Dir.pwd
+TAR_FILES = Dir[File.join(ROOT, "**", "*.tgz")]
+def check_for_duplicates(prag_ref)
+  case TAR_FILES.count {|file| File.basename(file) == tar_file(prag_ref) }
+  when 1
+    # do nothing. expected
+  when (2..Float::INFINITY)
+    expected_file = File.join(ROOT, prag_ref, tar_file(prag_ref))
+    matches = TAR_FILES.select {|file| File.basename(file) == File.basename(expected_file) }
+    puts "#{prag_ref}: #{matches - [expected_file]}"
+  else
+    puts "That's odd, none found #{prag_ref}"
+  end
+end
 puts
 books.each do |prag_ref, details|
   in_dir(prag_ref) do
@@ -135,9 +149,11 @@ books.each do |prag_ref, details|
         next unless download_code(prag_ref)
       end
       next unless extract_code(prag_ref)
+      `git add code && git commit -m "Adding code #{prag_ref}: #{details[:name]}"`.strip
       # handle artifacts
       # handle different releases
     end
-    `git add code && git commit -m "Adding code #{prag_ref}: #{details[:name]}"`.strip
+    check_for_duplicates(prag_ref)
   end
 end
+puts
