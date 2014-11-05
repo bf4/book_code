@@ -1,0 +1,9 @@
+project_name: devproject
+project_root: ~/devproject
+tabs:
+  - editor:
+      layout: main-horizontal
+      panes:
+        - vim
+        - #empty, will just run plain bash
+  - console: # empty
