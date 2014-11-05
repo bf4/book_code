@@ -1,0 +1,16 @@
+{
+  "name": "checkbooks3",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Mini-project for CoffeeScript: Accelerated JavaScript Development",
+  "main": "checkbooks3.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trevor Burnham <trevorburnham@gmail.com> (http://trevorburnham.com/)",
+  "dependencies": {
+    "jsonfile": "~1.1.1",
+    "numeral": "~1.5.3",
+    "inquirer": "~0.5.1"
+  }
+}

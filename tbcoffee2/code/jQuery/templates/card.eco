@@ -1,0 +1,4 @@
+<textarea name='card-description' placeholder='Description'
+  rows='3'><%= @description %></textarea>
+<label class='due-date-label'><span>Due by:</span><input type='date'
+  name='due-date' value='<%= @dueDate %>'></label>

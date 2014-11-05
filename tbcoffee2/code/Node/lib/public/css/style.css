@@ -1,0 +1,122 @@
+/* Use border-box sizing for all elements */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Make <body> occupy the full height of the window */
+
+html, body {
+  height: 100%;
+}
+
+/* The current board should cover the whole page */
+
+.board {
+  height: 100%;
+  padding: 16px;
+
+  background: #ccc;
+}
+
+/* The name of the board should go across the top of the page */
+
+input[name=board-name] {
+  font-size: 24px;
+
+  width: 100%;
+  height: 34px;
+}
+
+/* The column container should use all remaining board space */
+
+.column-container {
+  position: absolute;
+  top: 62px; /* board padding-top + board-name + margin */
+  bottom: 16px;
+}
+
+/* Each column should be fixed-width and use all available height */
+
+.column {
+  position: relative;
+
+  display: inline-block;
+
+  width: 300px;
+  height: 100%;
+  margin-right: 8px;
+  padding: 8px;
+
+  background: #999;
+}
+
+/* The "Add column" button should appear where the new column would go */
+
+button[name=add-column] {
+  display: inline-block;
+
+  height: 23px;
+
+  vertical-align: top;
+}
+
+/* The name of the column should go across the top of the column */
+
+input[name=column-name] {
+  font-size: 18px;
+
+  width: 100%;
+}
+
+/* The card container should use all remaining column space */
+
+.card-container {
+  position: absolute;
+  top: 40px; /* column padding-top + column-name + margin */
+
+  width: 100%;
+}
+
+/* Each card should use the card-container's width and stack vertically */
+
+.card {
+  margin-right: 16px; /* padding-left + padding-right */
+  margin-bottom: 8px;
+  padding: 8px;
+
+  background: #ccc;
+}
+
+/* Clearfix to ensure that we provide enough height for floated content */
+
+.card::after {
+  display: table;
+  clear: both;
+
+  content: '';
+}
+
+/* Card descriptions should be full-width (height is determined by rows) */
+
+textarea[name=card-description] {
+  width: 100%;
+}
+
+/* Each card's due date should be flush right */
+
+.due-date-label {
+  float: right;
+}
+
+/* There should be some space between the due date and its description */
+
+input[name=due-date] {
+  margin-left: 8px;
+}
+
+/* The "Add card" button should have fixed height */
+
+button[name=add-card] {
+  height: 23px;
+}

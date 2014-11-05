@@ -1,0 +1,4 @@
+{"id":1,"_id":"QbRWHf7o4tM7qbMI"}
+{"id":3,"_id":"wfz7OTXtgKl1xfrN","description":"Card1","due-date":"2003-01-02"}
+{"id":2,"_id":"zwFuC9Xl2725P8qg"}
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}

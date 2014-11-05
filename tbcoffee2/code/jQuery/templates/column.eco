@@ -1,0 +1,7 @@
+<input name='column-name' value='<%= @name %>'>
+<div class='card-container'>
+  <% for card in @cards : %>
+    <div class='card' data-card-id='<%= card.id %>'></div>
+  <% end %>
+  <button name='add-card'>Add Card</button>
+</div>

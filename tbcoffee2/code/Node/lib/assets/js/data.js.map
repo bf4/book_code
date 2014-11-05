@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "data.js",
+  "sourceRoot": "../../../assets/coffee/",
+  "sources": [
+    "data.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;;IAAA,YAAY,CAAC,SAAU,IAAI,CAAC,SAAL,CAAe;MACpC;AAAA,QACE,EAAA,EAAI,CADN;AAAA,QAEE,IAAA,EAAM,WAFR;OADoC;KAAf;GAAvB;;;IAMA,YAAY,CAAC,UAAW,IAAI,CAAC,SAAL,CAAe,EAAf;GANxB;;;IAOA,YAAY,CAAC,QAAS,IAAI,CAAC,SAAL,CAAe,EAAf;GAPtB;AAAA"
+}

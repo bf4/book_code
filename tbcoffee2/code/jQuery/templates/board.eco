@@ -1,0 +1,7 @@
+<input name='board-name' value='<%= @name %>'>
+<div class='column-container'>
+  <% for column in @columns : %>
+    <div class='column' data-column-id='<%= column.id %>'></div>
+  <% end %>
+  <button name='add-column'>Add Column</button>
+</div>
