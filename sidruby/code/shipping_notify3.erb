@@ -1,0 +1,22 @@
+Dear <%= customer %>
+
+This note is just to let you know that we've shipped
+some items that you ordered.
+
+-----------------------------------------
+Qty Item
+      Shipping Status
+-----------------------------------------<%
+    items.each do |qty, item, shipped|
+%>
+<%= qty %> <%= item %>
+       - <%= shipping_status(shipped) %><%
+    end       
+%>
+-----------------------------------------
+
+You can print the receipt and check the status of this
+order (and any of your other orders) online by visiting
+your account at http://www.druby.org/<%= account %>
+
+http://www.druby.org

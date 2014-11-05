@@ -1,0 +1,17 @@
+<%=form('extend', context) %>
+Extend: 
+<select name='min'>
+<% 
+ extend = @session.extend / 60
+ ary = [0, 1, 5]
+ ary.each do |m|
+ if m == extend
+%><option selected><%= m%></option><%
+ else
+%><option><%= m%></option><%
+ end
+ end
+%>
+</select> min.
+<input type="submit" />
+</form>

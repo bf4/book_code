@@ -1,0 +1,35 @@
+<%
+ if @login.guest?
+%>
+ Hello, guest's Div. 
+ (if you have account, <%=a('logout', {}, context)%>click here.</a>)
+<%
+ elsif @login.login?
+%>
+ Hello, <%=h @login.name%>.
+ (if you're not <%=h @login.name%>, <%=a('logout', {}, context)%>click here.</a>)
+<%
+ else
+%>
+<%= form('login', context) %>
+<table border="0" width="100%" 
+ cellpadding="5" cellspacing="0" bgcolor="#eeeedd">
+<tr>
+<th align="right">user</th>
+<td><input size="16" type="text" name="user" value="<%=h @hint %>"/></td>
+</tr>
+<tr>
+<th align="right">password</th>
+<td><input type="password" name="pass" size="16"/></td>
+</tr>
+<tr align="center">
+<td colspan="2"><input type="submit" value="Login" /></td>
+</tr>
+<tr align="center">
+<td colspan="2"><%=a('guest', {}, context)%>login guest account.</a></td>
+</tr>
+</table>
+</form>
+<%
+ end
+%>

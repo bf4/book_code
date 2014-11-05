@@ -1,0 +1,88 @@
+<%
+highlight = 'bgcolor="#ddddaa"'
+
+if user
+ bg = BGAttr.new
+ found = {}
+ estimate = 0.0
+ actual = 0.0
+%>
+<h2><%=h user %></h2>
+<table 
+ border="0" cellpadding="0" cellspacing="0" 
+ width="100%" <%=highlight%>>
+<tr>
+<td valign="top" bgcolor="white">
+<table 
+ border="0" cellpadding="0" cellspacing="0" 
+ width="100%">
+<%
+ each do |date, event|
+ estimate += event.estimate if event.estimate
+ actual += event.actual if event.actual
+ if date == @curr
+ found = event
+ bg.succ
+ bgattr = highlight
+ else
+ bgattr = bg
+ end
+%>
+<tr <%=bgattr%>>
+ <td>
+ [<%=a('delete', {'date'=>date.to_s}, context)%>X</a>]
+ <%=h date.to_s %>
+ </td>
+ <td><%=h event.text %></td>
+ <td align="right"><%=h event.estimate %></td>
+ <td align="right"><%=h event.actual %></td>
+ <td align="center">[<%=a('detail', {'date'=>date.to_s}, context)%>>></a>]</td>
+</tr>
+<%
+ end
+%>
+<tr <%=bg%>>
+ <td colspan="2">total:</td>
+ <td align="right"><%=h estimate %></td>
+ <td align="right"><%=h actual %></td>
+ <td></td>
+</tr>
+</table>
+</td>
+<td valign='top'>
+<%=form('update', context)%>
+<input type="hidden" name="key" value="<%=h @curr.to_s %>" />
+<table 
+ border="0" cellpadding="0" cellspacing="0" 
+ width="100%" <%=highlight%>>
+<tr><th colspan="2">edit</th></tr>
+<tr>
+ <th>text</th>
+ <td>
+ <input size="24" type="text" name="text" value="<%=h found.text %>" />
+ </td>
+</tr>
+<tr>
+ <th>estimate</th>
+ <td>
+ <input size="24" type="text" name="estimate" value="<%=h found.estimate %>" />
+ </td>
+</tr>
+<tr>
+ <th>actual</th>
+ <td>
+ <input size="24" type="text" name="actual" value="<%=h found.actual %>" />
+ </td>
+</tr>
+<tr>
+ <td align="center" colspan="2">
+ <input type="submit" value="Update" />
+ </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<%
+ end
+%>

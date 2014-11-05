@@ -1,0 +1,20 @@
+<html>
+<head>
+ <title>login_base.erb</title>
+</head>
+<body>
+<% @contents.each do |div| %>
+<h1><%=h div.class %></h1>
+<%= div.to_div(context) %>
+<hr />
+<% end %>
+
+<h1>Inspect</h1>
+<ul>
+ <li>@session.login.login? = <%=@session.login.login?.inspect%></li>
+ <li>@session.login.user = <%=@session.login.user.inspect%></li>
+ <li>@session.login.name = <%=@session.login.name.inspect%></li>
+ <li>@session.login.guest? = <%=@session.login.guest?.inspect%></li>
+</ul>
+</body>
+</html>

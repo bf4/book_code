@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>First App</title>
+</head>
+<body>
+<h1>First App</h1>
+<% @contents.each do |div| %>
+<%= div.to_div(context) %>
+<% end %>
+</body>
+</html>
