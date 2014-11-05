@@ -1,0 +1,20 @@
+Default: &defaults
+  database: hello.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: hello_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: hello_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: hello_production.sqlite3
+  poolsize: 100
+  <<: *defaults

@@ -1,0 +1,16 @@
+<!--
+ ! Excerpted from "Seven Web Frameworks in Seven Weeks",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/7web for more book information.
+-->
+<ul>
+  <li class="bookmark" ng-repeat="bookmark in bookmarks">
+    <button ng-click="editBookmark(bookmark)">Edit</button>
+    <button ng-click="deleteBookmark(bookmark)">Delete</button>
+    <a href="{{bookmark.url}}">{{bookmark.title}}</a>
+  ( <a href="{{bookmark.url}}">{{bookmark.url}}</a> )
+  </li>
+</ul>

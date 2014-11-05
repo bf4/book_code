@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bookmarking App</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <ul class="nav">
+          {{#examples}}
+            <li {{#active}}class="active"{{/active}}>
+              <a href="/example/{{example}}">{{label}}</a>
+            </li>
+          {{/examples}}
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+    <h1>Bookmarking App</h1>
+    <hr>
+          <div class="row">
+            <div class="span7">
+    <div id="bookmark_form_container"></div>
+    <div id="filter_container"></div>
+    <div id="bookmark_list_container"></div>
+              <!-- ... -->
+            </div>
+            <div class="span5">
+              <div id="tag_list_container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  
+  <script src="/lib/jquery/jquery-1.10.2.js"></script>
+  <script src="/lib/canjs.com-1.1.8/can.jquery.js"></script>
+  <script src="/lib/canjs.com-1.1.8/can.construct.super.js"></script>
+  <script src="/lib/canjs.com-1.1.8/can.observe.validations.js"></script>
+  <script src="/lib/canjs.com-1.1.8/can.observe.list.js"></script>
+  <script src="/lib/canjs.com-1.1.8/can.view.modifiers.js"></script>
+  <script src="/lib/canjs.com-1.1.8/can.mustache.js"></script>
+  {{!
+  <script src="/app/base/app.js"></script>
+  <script>new App_base();</script>
+  }}
+  {{#examples}}
+    <script src="/app/{{example}}/app.js"></script>
+  {{/examples}}
+  <script>new App_{{example}}();</script>
+</html>

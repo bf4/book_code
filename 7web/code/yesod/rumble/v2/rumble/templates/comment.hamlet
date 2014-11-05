@@ -1,0 +1,5 @@
+<article .comment>
+  <header>
+    <span .author>comment by #{userIdent author}
+    <span .time>on #{show (commentCreated comment)}
+  #{commentBody comment}

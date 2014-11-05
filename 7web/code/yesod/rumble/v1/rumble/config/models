@@ -1,0 +1,20 @@
+User # (1)
+    ident Text # (2)
+    password Text Maybe # (3)
+    UniqueUser ident # (4)
+    deriving Typeable Show # (5)
+
+Post
+    title String
+    url String
+    author UserId
+    score Int default=0 # (6)
+    created UTCTime default=now
+    deriving Typeable Show
+
+Comment
+    post PostId # (7)
+    author UserId
+    created UTCTime default=now
+    body Text
+    deriving Typeable Show

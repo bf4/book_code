@@ -1,0 +1,18 @@
+%%-*- mode: erlang -*-
+{application, petite,
+ [
+  {description, "petite"},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets,
+                  crypto,
+                  mochiweb,
+                  webmachine
+                 ]},
+  {mod, {petite_app, []}},
+  {env, []}
+ ]}.

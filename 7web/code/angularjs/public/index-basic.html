@@ -1,0 +1,26 @@
+<!--
+ ! Excerpted from "Seven Web Frameworks in Seven Weeks",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/7web for more book information.
+-->
+<!doctype html>
+<html lang="en" ng-app="BasicApp"> <!-- (1) -->
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS Basic</title>
+  </head>
+  <body ng-controller="BasicController"> <!-- (2) -->
+    <div>
+      What is your name?
+      <input type="text" ng-model="greeter.name"> <!-- (3) -->
+    </div>
+    <div>
+      {{greeter.greeting()}} <!-- (4) -->
+    </div>
+  </body>
+  <script src="lib/angularjs/1.0.8/angular.js"></script> <!-- (5) -->
+  <script src="index-basic.js"></script>
+</html>

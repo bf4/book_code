@@ -1,0 +1,18 @@
+Bookmark:
+<form action="/bookmarks" method="post">
+  <label>
+    URL:
+    <input type="text" name="url" value="{{url}}">
+  </label>
+  <label>
+    Title:
+    <input type="text" name="title" value="{{title}}">
+  </label>
+  <label>
+    Tags: (separated by commas)
+    <input type="text" name="tagsAsString" value="{{tagsAsString}}">
+  </label>
+  <div class="text-error"></div>
+  <button class="save btn btn-primary" {{data "bookmark"}}>Save</button>
+  <button class="clear btn">Clear</button>
+</form>

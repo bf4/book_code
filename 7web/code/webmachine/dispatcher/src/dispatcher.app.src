@@ -1,0 +1,18 @@
+%%-*- mode: erlang -*-
+{application, dispatcher,
+ [
+  {description, "dispatcher"},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets,
+                  crypto,
+                  mochiweb,
+                  webmachine
+                 ]},
+  {mod, { dispatcher_app, []}},
+  {env, []}
+ ]}.

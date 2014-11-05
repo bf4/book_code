@@ -1,0 +1,16 @@
+<a href="/bookmark/new">Add New Bookmark</a>
+<h2>List of Bookmarks (ERB)</h2>
+<ul>
+  <% @bookmarks.each do |bookmark| %> <!-- (1) -->
+    <li>
+       <a href="/bookmarks/<%= bookmark.id %>">Edit</a> <!-- (2) -->
+       <form action="/bookmarks/<%= bookmark.id %>" method="post"> <!-- (3) -->
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete">
+       </form>
+       |
+       <a href="<%= bookmark.url %>"><%=h bookmark.title %></a> <!-- (4) -->
+     ( <a href="<%= bookmark.url %>"><%= bookmark.url %></a> )
+    </li>
+  <% end %>
+</ul>

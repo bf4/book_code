@@ -1,0 +1,6 @@
+$maybe (Entity _ u) <- user
+  <p>Logged in as #{userIdent u}
+  <p>
+    <a href=@{AuthR LogoutR}>Logout
+$nothing
+  ^{authLinkWidget}

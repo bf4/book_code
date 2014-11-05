@@ -1,0 +1,5 @@
+<h2>Edit Bookmark</h2>
+<form action="/bookmarks/<%= @bookmark.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <%= erb :bookmark_form_inputs %>
+</form>

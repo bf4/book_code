@@ -1,0 +1,6 @@
+<h2>Edit Bookmark</h2>
+<form action="/bookmarks/{{bookmark.id}}" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="format" value="html">
+  {{> bookmark_form_inputs}}
+</form>

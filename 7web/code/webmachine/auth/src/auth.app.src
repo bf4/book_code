@@ -1,0 +1,18 @@
+%%-*- mode: erlang -*-
+{application, auth,
+ [
+  {description, "auth"},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets,
+                  crypto,
+                  mochiweb,
+                  webmachine
+                 ]},
+  {mod, { auth_app, []}},
+  {env, []}
+ ]}.

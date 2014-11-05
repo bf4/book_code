@@ -1,0 +1,21 @@
+{{! START:DataView }}
+{{! START:View }}
+<ul>
+  {{#bookmarks}}
+    {{! END:DataView }}
+    {{! END:View }}
+    {{! START:View
+    <li>
+        END:View }}
+    {{! START:DataView }}
+    <li {{data "bookmark"}}>
+    {{! START:View }}
+      <button class="edit">Edit</button>
+      <button class="delete">Delete</button>
+       <a href="{{url}}">{{title}}</a>
+     ( <a href="{{url}}">{{url}}</a> )
+    </li>
+  {{/bookmarks}}
+</ul>
+{{! END:View }}
+{{! END:DataView }}

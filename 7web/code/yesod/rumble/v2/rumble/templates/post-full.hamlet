@@ -1,0 +1,18 @@
+<article>
+  <header>
+    <h1>
+      <span .score>#{postScore post}
+      <a href=@{PostR postId}>#{postTitle post}
+      <small>#{postUrl post}
+    <p>added by #{userIdent author}
+    <p>#{length comments} comments
+
+$maybe _ <- authId
+  <hr>
+  <form method="post" enctype="#{enctype}" action="@{CommentsR postId}">
+    ^{commentFormWidget}
+    <input type="submit" value="Post Comment">
+<hr>
+
+$forall (comment, author) <- commentsWithAuthors 
+  ^{generateCommentWidget comment author}

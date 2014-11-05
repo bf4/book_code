@@ -1,0 +1,25 @@
+<!--
+ ! Excerpted from "Seven Web Frameworks in Seven Weeks",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/7web for more book information.
+-->
+Bookmark:
+<form ng-submit="saveBookmark(formBookmark.bookmark)">
+
+  <label>
+    URL:
+    <input type="text" ng-model="formBookmark.bookmark.url" name="url">
+  </label>
+  
+  <label>
+    Title:
+    <input type="text" ng-model="formBookmark.bookmark.title" name="title">
+  </label>
+  
+  <input type="submit" class="btn btn-primary" value="Save">
+  <input type="button" class="btn" ng-click="clearForm()" value="Clear">
+  
+</form>

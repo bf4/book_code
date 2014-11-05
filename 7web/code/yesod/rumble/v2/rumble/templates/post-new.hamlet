@@ -1,0 +1,5 @@
+<h1>New Post
+
+<form method="post" enctype="#{enctype}">
+  ^{postFormWidget}
+  <input type="submit" value="Post">

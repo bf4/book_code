@@ -1,0 +1,11 @@
+#!/bin/bash
+for B in blockparameters crud erb filter hello mustache slim tagging validation
+do
+  echo "================================================================"
+  echo $B
+  echo "================================================================"
+  cd $B
+  rspec -c app_test.rb
+  cd -
+  echo "--"
+done

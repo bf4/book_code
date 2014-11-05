@@ -1,0 +1,14 @@
+Bookmark:
+<form action="/bookmarks" method="post">
+  <label>
+    URL:
+    <input type="text" name="url" value="{{url}}"> <!-- (1) -->
+  </label>
+  <label>
+    Title:
+    <input type="text" name="title" value="{{title}}">
+  </label>
+  <div class="text-error"></div>
+  <button class="save btn btn-primary" {{data "bookmark"}}>Save</button> <!-- (2) -->
+  <button class="clear btn">Clear</button>
+</form>

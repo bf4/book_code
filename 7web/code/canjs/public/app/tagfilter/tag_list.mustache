@@ -1,0 +1,10 @@
+Tags:
+<ul>
+  <!-- Use the dot notation to get the tags attribute -->
+  {{#bookmarks.tags}}
+    <li>
+      <a class="tag" href="#" {{data "tag"}}
+      >{{label}} ({{bookmarkCount}})</a>
+    </li>
+  {{/bookmarks.tags}}
+</ul>

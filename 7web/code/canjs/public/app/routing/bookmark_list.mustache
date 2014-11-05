@@ -1,0 +1,14 @@
+<ul>
+  {{#bookmarks}}
+    <li {{data "bookmark"}}>
+      <button class="edit">Edit</button>
+      <button class="delete">Delete</button>
+       <a href="{{url}}">{{title}}</a>
+     ( <a href="{{url}}">{{url}}</a> ) |
+     {{#tagList}}
+       <a href="#!filter/{{this}}">{{this}}</a> |
+     {{/tagList}}
+    </li>
+  {{/bookmarks}}
+</ul>
+

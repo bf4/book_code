@@ -1,0 +1,10 @@
+.comment {
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment header {
+  color: #aaa;
+  text-align: right;
+}

@@ -1,0 +1,2 @@
+<p .greet>
+  Well met, #{name}!

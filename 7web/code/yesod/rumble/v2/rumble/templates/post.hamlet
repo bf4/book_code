@@ -1,0 +1,9 @@
+<article>
+  <header>
+    <h1>
+      <span .score>#{postScore post}
+      <a href=@{PostR postId}>#{postTitle post}
+      <small>#{postUrl post}
+    <p>added by #{userIdent author}
+    <p>#{length comments} comments
+

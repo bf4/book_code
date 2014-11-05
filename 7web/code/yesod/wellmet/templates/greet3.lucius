@@ -1,0 +1,4 @@
+.greet {
+  font-weight: bold;
+  color: #{color};
+}

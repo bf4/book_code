@@ -1,0 +1,23 @@
+$doctype 5
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>#{pageTitle pc}
+
+    ^{pageHead pc}
+
+  <body>
+    <div .navbar .navbar-inverse>
+      <div .navbar-inner>
+        <div .container>
+          <a .brand href=@{HomeR}>Rumble
+          <ul .nav>
+            <li>
+              <a href=@{PostNewR}>submit
+          <ul .nav .pull-right>
+            <li>
+              ^{pageBody authLinkContent}
+
+    <div .container>
+      ^{pageBody pc}

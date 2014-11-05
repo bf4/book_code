@@ -1,0 +1,14 @@
+<h1>Users
+
+$if null users
+  <p>There are no users.
+$else
+  <ul>
+    $forall Entity _ user <- users
+      <li>#{userIdent user}
+
+<hr>
+
+<form method="post" enctype="#{enctype}">
+  ^{userFormWidget}
+  <input type="submit" value="Add User">

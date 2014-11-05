@@ -1,0 +1,5 @@
+$if null posts
+  <p>Nothing here yet.
+$else
+  $forall post <- posts
+    ^{generatePostWidget post}

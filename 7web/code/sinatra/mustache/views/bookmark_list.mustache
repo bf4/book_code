@@ -1,0 +1,16 @@
+<a href="/bookmark/new">Add New Bookmark</a>
+<h2>List of Bookmarks (Mustache)</h2>
+<ul>
+  {{#bookmarks}}
+    <li>
+       <a href="/bookmarks/{{id}}">Edit</a>
+       <form action="/bookmarks/{{id}}" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete">
+       </form>
+       |
+       <a href="{{url}}">{{title}}</a>
+     ( <a href="{{url}}">{{url}}</a> )
+    </li>
+  {{/bookmarks}}
+</ul>
