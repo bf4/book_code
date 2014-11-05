@@ -1,0 +1,5 @@
+$ jruby -S rake -T
+(in code/rake/sandwich)
+rake bread     # I guess sliced bread really is the greatest thing
+rake cheese    # Only the finest Emmentaler for our sandwich!
+rake sandwich  # Make a tasty lunch

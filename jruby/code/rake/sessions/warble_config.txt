@@ -1,0 +1,2 @@
+$ jruby -S warble config
+cp JRUBY_HOME/lib/ruby/gems/1.8/gems/warbler-1.1.0/warble.rb config/warble.rb

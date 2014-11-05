@@ -1,0 +1,2 @@
+$ jruby -S rake db:create:all
+(in code/introduction_to_rails/rouge)

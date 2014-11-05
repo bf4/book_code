@@ -1,0 +1,12 @@
+<h1>Welcome to Rouge</h1>
+<table>
+  <tr>
+    <th align="left">Name</th>
+  </tr>
+
+  <% @restaurants.each do |restaurant| %>
+    <tr>
+      <td><%=link_to restaurant.name, :action => :show, :id => restaurant %></td>
+    </tr>
+  <% end %>
+</table>

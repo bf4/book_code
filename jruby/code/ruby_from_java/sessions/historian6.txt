@@ -1,0 +1,8 @@
+$ ./bin/historian6 PASTA NOODLES
+ruby_from_java/historian/lib/git/lib.rb:700:in `command':
+git diff "-p" "PASTA" "NOODLES"  2>&1:fatal: ambiguous argument 'PASTA':
+... 28 lines of errors, including things like:
+	at org.jruby.embed.internal.EmbedRubyObjectAdapterImpl.call(...)
+	at org.jruby.embed.internal.EmbedRubyObjectAdapterImpl.callMethod(...)
+	at org.jruby.embed.ScriptingContainer.callMethod(...)
+	at book.embed.Historian6.main(Historian6.java:16)

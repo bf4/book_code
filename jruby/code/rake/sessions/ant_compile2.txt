@@ -1,0 +1,2 @@
+$ jruby -S rake ant:compile
+(in code/rake/baseball)

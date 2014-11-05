@@ -1,0 +1,5 @@
+$ javap waveform
+...
+    public static org.jruby.runtime.builtin.IRubyObject
+    method__2$RUBY$rms(waveform, org.jruby.runtime.ThreadContext,
+    org.jruby.runtime.builtin.IRubyObject, org.jruby.runtime.Block);

@@ -1,0 +1,3 @@
+$ jruby -S warble
+rm -f rouge.war
+Creating rouge.war

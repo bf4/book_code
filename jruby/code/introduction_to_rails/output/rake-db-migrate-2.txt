@@ -1,0 +1,26 @@
+$ jruby -S rake db:migrate
+(in code/introduction_to_rails/rouge)
+==  CreateAdministrators: migrating ===========================================
+-- create_table(:administrators)
+   -> 0.0060s
+   -> 0 rows
+==  CreateAdministrators: migrated (0.0080s) ==================================
+
+==  CreateReviewers: migrating ================================================
+-- create_table(:reviewers)
+   -> 0.0050s
+   -> 1 rows
+==  CreateReviewers: migrated (0.0060s) =======================================
+
+==  CreateReviews: migrating ==================================================
+-- create_table(:reviews)
+   -> 0.0060s
+   -> 1 rows
+==  CreateReviews: migrated (0.0060s) =========================================
+
+==  CreateComments: migrating =================================================
+-- create_table(:comments)
+   -> 0.0060s
+   -> 1 rows
+==  CreateComments: migrated (0.0070s) ========================================
+

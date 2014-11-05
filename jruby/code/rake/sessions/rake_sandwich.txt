@@ -1,0 +1,5 @@
+$ jruby -S rake sandwich
+(in code/rake/sandwich)
+Slicing the bread
+Grating the cheese
+Grilling the sandwich

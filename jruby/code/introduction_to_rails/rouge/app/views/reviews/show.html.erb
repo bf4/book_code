@@ -1,0 +1,17 @@
+<!-- START:title -->
+<h1>Review for <%= @review.restaurant.name %></h1>
+<!-- END:title -->
+
+<p>
+  <b>Title:</b>
+  <%= @review.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @review.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>

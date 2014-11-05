@@ -1,0 +1,2 @@
+$ jruby -S warble pluginize
+mkdir -p vendor/plugins/warbler/tasks

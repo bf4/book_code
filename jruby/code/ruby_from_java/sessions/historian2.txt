@@ -1,0 +1,10 @@
+$ ./bin/historian2
+diff --git a/lib/archive8.rb b/lib/archive8.rb
+new file mode 100644
+index 0000000..1d5967f
+--- /dev/null
++++ b/lib/archive8.rb
+@@ -0,0 +1,12 @@
++require 'git'
++
+...

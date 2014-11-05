@@ -1,0 +1,24 @@
+<h1>Listing reviewers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Password</th>
+  </tr>
+
+<% @reviewers.each do |reviewer| %>
+  <tr>
+    <td><%= reviewer.name %></td>
+    <td><%= reviewer.username %></td>
+    <td><%= reviewer.password.gsub(/./, '*') %></td>
+    <td><%= link_to 'Show', reviewer %></td>
+    <td><%= link_to 'Edit', edit_reviewer_path(reviewer) %></td>
+    <td><%= link_to 'Destroy', reviewer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reviewer', new_reviewer_path %>

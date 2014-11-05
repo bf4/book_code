@@ -1,0 +1,46 @@
+require 'rake/clean'
+
+CLEAN.include 'tmp', 'Launcher.class', 'vendor'
+CLOBBER.include 'scrape.jar'
+
+# START:install
+directory 'vendor'
+
+desc 'Install Ruby gems into vendor/'
+task :install_gems => 'vendor' do
+  sh 'jruby -S gem install -i vendor hpricot'
+end
+# END:install
+
+# START:launcher
+desc 'Build Java launcher that will start the Ruby program'
+task :build_launcher do
+  sh 'javac -cp jruby-complete.jar Launcher.java'
+end
+# END:launcher
+
+# START:small_jar
+desc 'Combine app and launcher into one jar'
+task :small_jar => [:install_gems, :build_launcher] do
+  sh 'jar -cfm scrape.jar small.manifest Launcher.class scrape.rb -C vendor .'
+end
+# END:small_jar
+
+# START:extract
+directory 'tmp'
+
+desc 'Extract jruby-complete so we can combine it with the app'
+task :extract_jruby => 'tmp' do
+  Dir.chdir('tmp') do
+    sh 'jar -xf ../jruby-complete.jar'
+  end
+end
+# END:extract
+
+# START:big_jar
+desc 'Combine app, launcher, and JRuby into one jar'
+task :big_jar => [:install_gems, :build_launcher, :extract_jruby] do
+  sh 'jar -cfm scrape.jar big.manifest Launcher.class scrape.rb \
+      -C vendor . -C tmp .'
+end
+# END:big_jar

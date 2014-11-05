@@ -1,0 +1,7 @@
+# START:default
+task      :default  => [:jar, :javadoc]
+# END:default
+
+# START:parallel
+multitask :parallel => [:jar, :javadoc]
+# END:parallel

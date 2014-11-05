@@ -1,0 +1,13 @@
+$ jruby -S rake --trace
+(in code/rake/sandwich)
+** Invoke default (first_time)
+** Invoke sandwich (first_time)
+** Invoke bread (first_time)
+** Execute bread
+Slicing the bread
+** Invoke cheese (first_time)
+** Execute cheese
+Grating the cheese
+** Execute sandwich
+Grilling the sandwich
+** Execute default

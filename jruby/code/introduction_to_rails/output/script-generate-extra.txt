@@ -1,0 +1,26 @@
+$ jruby script/rails g scaffold Review \
+                                title:string content:text \
+                                --migration false --skip
+      invoke  active_record
+   identical    app/models/review.rb
+      invoke    test_unit
+   identical      test/unit/review_test.rb
+        skip      test/fixtures/reviews.yml
+       route  resources :reviews
+      invoke  scaffold_controller
+      create    app/controllers/reviews_controller.rb
+      invoke    erb
+      create      app/views/reviews
+      create      app/views/reviews/index.html.erb
+      create      app/views/reviews/edit.html.erb
+      create      app/views/reviews/show.html.erb
+      create      app/views/reviews/new.html.erb
+      create      app/views/reviews/_form.html.erb
+      invoke    test_unit
+      create      test/functional/reviews_controller_test.rb
+      invoke    helper
+      create      app/helpers/reviews_helper.rb
+      invoke      test_unit
+      create        test/unit/helpers/reviews_helper_test.rb
+      invoke  stylesheets
+   identical    public/stylesheets/scaffold.css

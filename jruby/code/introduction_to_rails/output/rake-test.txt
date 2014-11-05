@@ -1,0 +1,8 @@
+$ jruby -S rake
+(in code/introduction_to_rails/rouge)
+Loaded suite .../gems/rake-0.8.7/lib/rake/rake_test_loader
+Started
+.
+Finished in 0.044 seconds.
+
+1 tests, 1 assertions, 0 failures, 0 errors

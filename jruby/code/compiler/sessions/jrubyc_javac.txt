@@ -1,0 +1,3 @@
+$ jrubyc --javac waveform.rb
+Generating Java class Waveform to Waveform.java
+javac -d . -cp jruby.jar:. Waveform.java

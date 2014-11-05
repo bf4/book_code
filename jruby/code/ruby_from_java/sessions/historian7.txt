@@ -1,0 +1,12 @@
+$ ./bin/historian7 PASTA NOODLES
+ruby_from_java/historian/lib/git/lib.rb:700:in `command':
+git diff "-p" "PASTA" "NOODLES"  2>&1:fatal: ambiguous argument 'PASTA':
+unknown revision or path not in the working tree. (Git::GitExecuteError)
+Use '--' to separate paths from revisions
+	from ruby_from_java/historian/lib/git/lib.rb:249:in `diff_full'
+	from ruby_from_java/historian/lib/git/diff.rb:100:in `cache_full'
+	from ruby_from_java/historian/lib/git/diff.rb:106:in `process_full'
+	from ruby_from_java/historian/lib/git/diff.rb:64:in `each'
+	from ruby_from_java/historian/lib/archive7.rb:10:in `history'
+	from <script>:1
+Couldn't generate diff; please see the log file.

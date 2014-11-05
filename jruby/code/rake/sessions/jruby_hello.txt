@@ -1,0 +1,4 @@
+$ jruby build.rb
+
+hello:
+Hello Ant!

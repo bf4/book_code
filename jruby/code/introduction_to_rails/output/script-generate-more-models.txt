@@ -1,0 +1,11 @@
+$ jruby script/rails g model Administrator \
+                             username:string password:string
+$ jruby script/rails g model Reviewer \
+                             name:string description:string \
+                             username:string password:string
+$ jruby script/rails g model Review \
+                             restaurant_id:integer reviewer_id:integer \
+                             title:string content:text
+$ jruby script/rails g model Comment \
+                             said_by:string content:text \
+                             commentable_id:integer commentable_type:string

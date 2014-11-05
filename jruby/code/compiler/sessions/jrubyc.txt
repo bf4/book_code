@@ -1,0 +1,2 @@
+$ jrubyc waveform.rb
+Compiling waveform.rb to class waveform

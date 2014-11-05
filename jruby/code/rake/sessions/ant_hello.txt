@@ -1,0 +1,8 @@
+$ ant
+Buildfile: build.xml
+
+hello:
+     [echo] Hello Ant!
+
+BUILD SUCCESSFUL
+Total time: 0 seconds

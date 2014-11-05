@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Using JRuby",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jruby for more book information.
+-->
+
+<project basedir="." default="compile" name="junit_test">
+  <path id="build.classpath">
+    <pathelement path="lib/jruby-complete.jar"/>
+    <pathelement path="lib/junit-4.8.1.jar"/>
+  </path>
+
+  <path id="run.classpath">
+    <pathelement path="lib/jruby-complete.jar"/>
+    <pathelement path="lib/junit-4.8.1.jar"/>
+    <pathelement path="."/>
+  </path>
+
+  <target name="compile"
+          description="Compile the source files for the project.">
+    <javac destdir="." debug="true" source="1.5" target="1.5">
+      <classpath refid="build.classpath"/>
+      <src path="."/>
+    </javac>
+  </target>
+
+  <target name="test" depends="compile"
+          description="Compile the source files for the project.">
+    <junit haltonfailure="false" fork="yes">
+      <classpath refid="run.classpath"/>
+      <formatter type="plain" usefile="false"/>
+      <test name="TestUnitSuite"/>
+    </junit>
+  </target>
+</project>

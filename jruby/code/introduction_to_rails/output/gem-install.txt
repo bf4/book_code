@@ -1,0 +1,26 @@
+$ jruby -S gem install bundler rails
+Successfully installed bundler-1.0.2
+Successfully installed activesupport-3.0.1
+Successfully installed builder-2.1.2
+Successfully installed i18n-0.4.1
+Successfully installed activemodel-3.0.1
+Successfully installed rack-1.2.1
+Successfully installed rack-test-0.5.6
+Successfully installed rack-mount-0.6.13
+Successfully installed tzinfo-0.3.23
+Successfully installed abstract-1.0.0
+Successfully installed erubis-2.6.6
+Successfully installed actionpack-3.0.1
+Successfully installed arel-1.0.1
+Successfully installed activerecord-3.0.1
+Successfully installed activeresource-3.0.1
+Successfully installed mime-types-1.16
+Successfully installed polyglot-0.3.1
+Successfully installed treetop-1.4.8
+Successfully installed mail-2.2.7
+Successfully installed actionmailer-3.0.1
+Successfully installed rake-0.8.7
+Successfully installed thor-0.14.3
+Successfully installed railties-3.0.1
+Successfully installed rails-3.0.1
+24 gems installed

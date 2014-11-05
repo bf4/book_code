@@ -1,0 +1,20 @@
+# START:main
+desc 'Make a tasty lunch'
+task :sandwich => [:bread, :cheese] do
+  puts 'Grilling the sandwich'
+end
+
+desc 'I guess sliced bread really is the greatest thing'
+task :bread do
+  puts 'Slicing the bread'
+end
+
+desc 'Only the finest Emmentaler for our sandwich!'
+task :cheese do
+  puts 'Grating the cheese'
+end
+# END:main
+
+# START:default
+task :default => :sandwich
+# END:default

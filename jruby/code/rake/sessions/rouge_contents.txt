@@ -1,0 +1,16 @@
+$ jar tf introduction_to_rails/rouge/rouge.war
+# ...truncated listing...
+WEB-INF/
+WEB-INF/app/
+WEB-INF/config/
+WEB-INF/gems/
+WEB-INF/lib/
+WEB-INF/lib/jruby-core-1.5.0.jar
+WEB-INF/lib/jruby-rack-1.0.1.jar
+WEB-INF/lib/jruby-stdlib-1.5.0.jar
+WEB-INF/log/
+WEB-INF/tmp/
+WEB-INF/vendor/
+images/
+javascripts/
+stylesheets/

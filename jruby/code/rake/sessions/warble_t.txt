@@ -1,0 +1,9 @@
+$ jruby -S warble -T
+warble config      # Generate a configuration file to customize your war
+warble executable  # Feature: make an executable archive
+warble gemjar      # Feature: package gem repository inside a jar
+warble pluginize   # Install Warbler tasks in your Rails application
+warble version     # Display version of Warbler
+warble war         # Create the project .war file
+warble war:clean   # Remove the .war file
+warble war:debug   # Dump diagnostic information

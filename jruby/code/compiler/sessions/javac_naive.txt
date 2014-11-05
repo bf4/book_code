@@ -1,0 +1,12 @@
+$ javac -cp jruby.jar:. WaveformNaiveTest.java
+WaveformNaiveTest.java:4: cannot find symbol
+symbol  : constructor waveform(double[])
+location: class waveform
+        waveform w = new waveform(triangleWave);
+                     ^
+WaveformNaiveTest.java:5: cannot find symbol
+symbol  : method rms()
+location: class waveform
+        System.out.println(w.rms());
+                            ^
+2 errors

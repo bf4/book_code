@@ -1,0 +1,22 @@
+<h1>Listing administrators</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+  </tr>
+
+<% @administrators.each do |administrator| %>
+  <tr>
+    <td><%= administrator.username %></td>
+    <td><%= administrator.password.gsub(/./, '*') %></td>
+    <td><%= link_to 'Show', administrator %></td>
+    <td><%= link_to 'Edit', edit_administrator_path(administrator) %></td>
+    <td><%= link_to 'Destroy', administrator, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Administrator', new_administrator_path %>

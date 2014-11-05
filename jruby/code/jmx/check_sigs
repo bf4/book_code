@@ -1,0 +1,6 @@
+#!/usr/bin/env jruby
+Dir['home/*'].each do |d|
+  if `grep Initrode #{d}/.signature`.empty?
+    puts "The .signature in #{d} isn't good for the company!"
+  end
+end

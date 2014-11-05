@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%= @reviewer.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @reviewer.description %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @reviewer.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @reviewer.password.gsub(/./, '*') %>
+</p>
+
+
+<%= link_to 'Edit', edit_reviewer_path(@reviewer) %> |
+<%= link_to 'Back', reviewers_path %>

@@ -1,0 +1,30 @@
+<h1><%= @restaurant.name %></h1>
+
+<p><b>Address:</b> <%= @restaurant.address %></p>
+<p><b>Phone:</b> <%= @restaurant.phone %></p>
+
+<p><%= @restaurant.description %></p>
+
+<h2>Reviews</h2>
+<table>
+<tr>
+  <th>Title</th>
+  <th>Author</th>
+</tr>
+<% @restaurant.reviews.each do |review| %>
+  <tr>
+    <td><%= link_to review.title, :action => 'review', :id => review %></td>
+    <td><%= review.reviewer.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<h2>Comments</h2>
+<% @restaurant.comments.each do |comment| %>
+  <p><b>By:</b> <%= comment.said_by %><br/>
+  <%= comment.content %></p>
+<% end %>
+
+<h2>Add comment</h2>
+
+<%= render :partial => 'shared/comment', :locals => {:target => 'restaurant'} %>

@@ -1,0 +1,8 @@
+$ jruby -S rake db:migrate
+(in code/introduction_to_rails/rouge)
+==  CreateRestaurants: migrating ==============================================
+-- create_table(:restaurants)
+   -> 0.0290s
+   -> 0 rows
+==  CreateRestaurants: migrated (0.0290s) =====================================
+

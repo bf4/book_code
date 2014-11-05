@@ -1,0 +1,16 @@
+<h1><%= @review.title %></h1>
+
+<p><b>About:</b> <%= @review.restaurant.name %></p>
+<p><b>By:</b> <%= @review.reviewer.name %></p>
+
+<p><%= @review.content %></p>
+
+<h2>Comments</h2>
+<% @review.comments.each do |comment| %>
+  <p><b>By:</b> <%= comment.said_by %><br/>
+  <%= comment.content %></p>
+<% end %>
+
+<h2>Add comment</h2>
+
+<%= render :partial => 'shared/comment', :locals => {:target => 'review'} %>

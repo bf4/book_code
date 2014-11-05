@@ -1,0 +1,14 @@
+$ jruby -S rails generate cucumber:install
+      create  config/cucumber.yml
+      create  script/cucumber
+       chmod  script/cucumber
+      create  features/step_definitions
+      create  features/step_definitions/web_steps.rb
+      create  features/support
+      create  features/support/paths.rb
+      create  features/support/env.rb
+       exist  lib/tasks
+      create  lib/tasks/cucumber.rake
+        gsub  config/database.yml
+        gsub  config/database.yml
+       force  config/database.yml

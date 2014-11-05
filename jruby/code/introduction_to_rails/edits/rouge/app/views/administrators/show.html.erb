@@ -1,0 +1,13 @@
+<p>
+  <b>Username:</b>
+  <%= @administrator.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @administrator.password.gsub(/./, '*') %>
+</p>
+
+
+<%= link_to 'Edit', edit_administrator_path(@administrator) %> |
+<%= link_to 'Back', administrators_path %>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Using JRuby",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jruby for more book information.
+-->
+
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jtestr</groupId>
+  <artifactId>jtestr-maven-example</artifactId>
+  <packaging>jar</packaging>
+  <version>0.1</version>
+  <name>JtestR Maven Example</name>
+
+  <build>
+    <directory>target</directory>
+    <outputDirectory>target/classes</outputDirectory>
+    <sourceDirectory>src</sourceDirectory>
+
+    <plugins>
+      <plugin>
+        <groupId>org.jtestr</groupId>
+        <artifactId>jtestr</artifactId>
+        <version>0.6</version>
+        <configuration>
+          <port>20333</port>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
