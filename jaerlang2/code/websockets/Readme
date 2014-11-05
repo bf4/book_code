@@ -1,0 +1,39 @@
+Installation instructions
+
+1) Install rebar
+   
+   rebar is available from
+
+    https://github.com/basho/rebar
+
+   To install read the instructions in the file README.md
+   at the above site. The pre-built binary version should suffice
+
+2) Fetch the dependencies
+
+   Give the command:
+
+   $ rebar get-deps
+   
+   In this directory:
+
+   You should see something like this:
+   $ rebar get-deps
+   ==> websockets (get-deps)
+   Pulling cowboy from {git,"git://github.com/extend/cowboy.git","master"}
+   Initialized empty Git repository in 
+    /home/joe/projects/book/jaerlang2/Book/code/websockets/deps/cowboy/.git/
+   ==> cowboy (get-deps)
+   Pulling ranch from {git,"git://github.com/extend/ranch.git",
+                           "cd099983b1b807b87fa050d1e4ff0a13aba25b49"}
+   Initialized empty Git repository in 
+     /home/joe/projects/book/jaerlang2/Book/code/websockets/deps/ranch/.git/
+   ==> ranch (get-deps)
+ 
+3) Compile
+
+   $ rebar compile
+
+4) Make and run the erlang code
+
+   $ make

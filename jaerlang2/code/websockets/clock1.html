@@ -1,0 +1,21 @@
+<!--
+ ! Excerpted from "Programming Erlang, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jaerlang2 for more book information.
+-->
+<script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./websock.js"></script>
+<link rel="stylesheet" href="./clock1.css" type="text/css">
+<body>
+  <div id="clock"></div>
+  <button id="start" class="live_button">start</button>
+  <button id="stop"  class="live_button">stop</button>
+</body>
+<script>
+$(document).ready(function(){ 
+   connect("localhost", 2233, "clock1");
+   });
+</script>

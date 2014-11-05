@@ -1,0 +1,22 @@
+body {margin-left:100px;
+      border-radius:10px;
+      padding:1em;
+      padding-right:2em;
+      width:250px;
+      height:105px;
+      border: 2px solid black;
+      box-shadow:black 0.2em 0.2em 0.2em;
+     }
+
+#clock
+{
+    font-size:3em;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    background-color:#efefef;
+    padding:10px;
+    width:5em;
+    box-shadow:black 0.1em 0.1em 0.1em;
+    border-radius: 10px;
+    margin-bottom:10px;
+}

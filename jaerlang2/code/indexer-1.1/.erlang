@@ -1,0 +1,6 @@
+%% In this directory all .erlang does not set up any paths
+%% this is so when I run Erlang in this directory I can be
+%% sure that the only code that is loaded comes
+%% from this directory and the standard libraries
+
+io:format("Using local paths !~n").

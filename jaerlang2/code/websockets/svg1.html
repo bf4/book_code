@@ -1,0 +1,41 @@
+<!--
+ ! Excerpted from "Programming Erlang, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jaerlang2 for more book information.
+-->
+<script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./websock.js"></script>
+<link rel="stylesheet" href="./svg1.css" type="text/css">
+<body>
+  <div id="svg"></div>
+  <button id="start" class="live_button">draw rectangle</button>
+</body>
+
+<script>
+$(document).ready(function(){ 
+   connect("localhost", 2233, "svg1");
+   });
+
+var canvas;
+var svg_ns='http://www.w3.org/2000/svg';
+
+function add_canvas(o){
+    canvas = document.createElementNS(svg_ns, 'svg');
+    canvas.setAttribute("width",  o.width);
+    canvas.setAttribute("height", o.height );
+    canvas.setAttribute("style",  "background-color:#eeffbb");
+    $('#'+o.tag).append(canvas);
+}
+
+function add_svg_thing(o){
+    var obj = document.createElementNS(svg_ns, o.type);
+    for(key in o){
+	var val = o[key];
+	obj.setAttributeNS(null, key, val);
+    };
+    canvas.appendChild(obj);
+}
+</script>

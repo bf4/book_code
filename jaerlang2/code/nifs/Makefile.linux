@@ -1,0 +1,25 @@
+%.beam: %.erl
+	erlc  -W $< 
+
+%.so: %.c
+	gcc -fPIC -shared -o $*.so $< -I /usr/local/lib/erlang/usr/include
+
+all: test1_nif.so nif_test1.so   nif_test2.so   nif_test3.so   nif_test4.so\
+     nif_test1.beam nif_test2.beam nif_test3.beam nif_test4.beam
+
+
+nif_test1.so: nif_test1.c
+	gcc -fPIC -shared -o nif_test1.so nif_test1.c -I /usr/local/lib/erlang/usr/include
+
+nif_test2.so: nif_test2.c
+	gcc -fPIC -shared -o nif_test2.so nif_test2.c -I /usr/local/lib/erlang/usr/include
+
+nif_test3.so: nif_test3.c
+	gcc -Wall -fPIC -shared -o nif_test3.so nif_test3.c -I /usr/local/lib/erlang/usr/include
+
+
+nif_test4.so: nif_test4.c
+	gcc -Wall -fPIC -shared -o nif_test4.so nif_test4.c -I /usr/local/lib/erlang/usr/include 
+
+clean:
+	rm -rf *.o *.beam *.so

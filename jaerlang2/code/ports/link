@@ -1,0 +1,3 @@
+gcc -Wall -I /usr/local/lib/erlang/usr/include -o example1_drv.so -fpic -shared example1.c example1_lid.c
+
+# example1_lid:start().

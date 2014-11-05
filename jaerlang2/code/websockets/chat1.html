@@ -1,0 +1,40 @@
+<!--
+ ! Excerpted from "Programming Erlang, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jaerlang2 for more book information.
+-->
+<script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./websock.js"></script>
+<link rel="stylesheet" href="./chat1.css" type="text/css">
+
+<body>
+  <h2>Chat</h2>
+  <input id="nick_input"/>
+  <button id="join">Join</button>
+  <br/>
+  <table>
+    <tr>
+      <td><div id="scroll"></div></td>
+      <td><div id="users"></div></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+	<input id="tell" class="live_input"/>
+      </td>
+    </tr>
+  </table>
+</body>
+
+<script>
+$(document).ready(function(){ 
+  $("#join").click(function(){
+      var val = $("#nick_input").val();
+      send_json({'join':val});
+      $("#nick_input").val("");
+      });
+   connect("localhost", 2233, "chat1");
+});
+</script>

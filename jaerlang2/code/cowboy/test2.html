@@ -1,0 +1,34 @@
+<!--
+ ! Excerpted from "Programming Erlang, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jaerlang2 for more book information.
+-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<h1>Test2</h1>
+<button id="button1">click</button>
+<div id="result"></div>
+<script>
+$(document).ready(go);
+var data = {int:1234,
+	    string:"abcd",
+	    array:[1,2,3,'abc'],
+	    map:{one:'abc', two:1, three:"abc"}};
+function go(){
+    $("#button1").click(test);
+}
+function test(){
+    $.ajax({url:"cgi?mod=echo&func=me",
+	    type:'POST',
+	    data:JSON.stringify(data),
+	    success:function(str){
+		var ret = JSON.parse(str);
+		$("#result").html("<pre>"+
+				  JSON.stringify(ret, undefined, 4) + 
+				  "</pre>");
+	    }});
+}
+</script>
+	   

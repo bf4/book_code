@@ -1,0 +1,148 @@
+how do 1)
+
+Print debug in C
+
+Pass a global paramer from foo to bar
+the global data is pre/process and GC'd if
+the process dies the GD is deallocated
+
+
+
+
+
+
+
+http://steve.vinoski.net/slides/vinoski-london-erlang-ug-2011.pdf
+Functions that appear as regular Erlang 
+functions but are implemented in C/C++
+
+Typically used for
+accessing libraries or platform features 
+not available through Erlang
+performance
+
+Any exported functions provided by the 
+loaded NIF library replace those in the 
+Erlang module
+Any exported functions not provided by 
+the NIF lib are expected to be provided by 
+the Erlang module
+Allows mix-and-match of Erlang funs and 
+native funs
+
+-------------------------------------------------------------------
+
+Declare all the function you need
+
+static ErlNifFunc funcs[] = {
+    {"sha224", 1, sha224},
+    {"sha224_init", 0, sha224_init},
+    {"sha224_update", 2, sha224_update},
+    {"sha224_ﬁnal", 1, sha224_ﬁnal}
+
+
+------------------------------------------------
+
+acall this macro
+
+ERL_NIF_INIT(
+  erlsha2,!! ! ! ! /* module name */
+  funcs,!! ! ! ! ! /* function descriptors */
+  niﬂoad,!! ! ! ! /* load function */                <------- see below
+  NULL,! ! ! ! ! /* reload function */
+  NULL, /* upgrade function */
+  NULL)! ! ! ! ! /* unload function */
+--------------------------------------------------
+
+Resource Objects
+These are NIF-speciﬁc native objects that 
+can be passed back and from to/from 
+Erlang
+They appear to Erlang as empty binaries
+Handy for storing state while making the 
+caller responsible for it
+Not all NIFs will use resource objects
+
+-------------------------------------------------------------------
+
+typedef struct {
+    uint64_t bitlen;
+    unsigned char bytes[2*PADDED_SIZE_5XX_BYTES];
+    ErlNifBinary digest;
+    size_t count;
+    size_t size;
+} Context;
+
+-----------------------------------------------------------------
+The resource destructor is like this
+
+static void
+context_dtor(ErlNifEnv* env, void* obj)
+{
+    Context* ctx = (Context*)obj;
+    if (ctx != NULL && ctx->digest.size > 0) {
+        enif_release_binary(&ctx->digest);
+    }
+}
+
+-------------------------------------------------------------------
+Creating the resource
+
+static int
+niﬂoad(ErlNifEnv* env, void** priv_data, ERL_NIF_TERM load_info)
+{
+    *priv_data = enif_open_resource_type(
+                             env, NULL,"erlsha2_context",
+                             context_dtor, ERL_NIF_RT_CREATE, NULL);
+    return 0;
+}
+
+-----------------------------------------------------------------
+Resource managment
+
+Allocate resource objects via 
+enif_alloc_resource
+Convert to Erlang term via enif_make_resource
+Release resource via enif_release_resource
+Add ref to resource via enif_keep_resource
+Each Alloc/Keep must have corresponding 
+Release
+Monday, March 28, 2011 16sha*_i
+
+-------------------------------------------------------------------------
+Initialisation
+
+static ERL_NIF_TERM
+hd224_init(ErlNifEnv* env, int argc,
+                  const ERL_NIF_TERM argv[])
+{
+    ERL_NIF_TERM result;
+    ErlNifResourceType* ctx_type = (ErlNifResourceType*)
+          enif_priv_data(env);
+    Context* ctx = (Context*)enif_alloc_resource(
+                                               ctx_type, sizeof(Context));
+    context_init(ctx, H224, sizeof H224,
+                         PADDED_SIZE_2XX);
+    result = enif_make_resource(env, ctx);
+    enif_release_resource(ctx);
+    return result;
+}
+
+------------------ arguments
+Args are passed via argc/argv model
+Each arg is a const ERL_NIF_TERM
+Convert to native type via enif_get_* 
+functions or enif_inspect_* functions
+Test types via enif_is_* function
+
+static ERL_NIF_TERM
+XXX_ﬁnal(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
+{
+    ContextUnion ctxu;
+    ErlNifResourceType* ctx_type =
+          (ErlNifResourceType*)enif_priv_data(env);
+    if (!enif_get_resource(env, argv[0], ctx_type, &ctxu.v))
+        return enif_make_badarg(env);
+    return context_ﬁni(env, ctxu.c, DIGEST_SIZE_XXX,
+                                     shaXXX_chunk);
+}
