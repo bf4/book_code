@@ -1,0 +1,57 @@
+body{padding: 40px;}
+
+#conference{
+  background-color: #000; 
+  background-image: url('../images/awesomeconf.jpg');
+  background-position: center;
+  height: 240px;
+  width: 960px;
+}
+#badge{
+  border: 2px solid blue;
+  display: block;
+  text-align: center;
+  width: 200px;
+}
+#info{
+  display: block;
+  height: 160px;
+  margin: 20px;
+  padding: 20px;
+  width: 660px;
+}
+#badge, #info{
+  background-color: #fff; 
+  float: left;
+}
+#badge h2{
+  color: red; 
+  margin: 0;
+  font-size: 40px;
+}
+#badge h3{
+  background-color: blue;
+  color: #fff;
+  margin: 0;
+}
+
+#badge{
+  background-image: -webkit-linear-gradient(top, #fff, #eee);
+  background-image:    -moz-linear-gradient(top, #fff, #eee);
+  background-image:         linear-gradient(to bottom, #fff, #eee);
+  
+    box-shadow: 5px 5px 5px 0px #333;
+  
+    -webkit-transform: rotate(-7.5deg); 
+       -moz-transform: rotate(-7.5deg);  
+        -ms-transform: rotate(-7.5deg);
+         -o-transform: rotate(-7.5deg);  
+            transform: rotate(-7.5deg);
+
+}
+
+#info{
+  background-color: rgba(255,255,255,0.95); 
+  border-radius: 12px;
+}
+

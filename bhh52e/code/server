@@ -1,0 +1,9 @@
+console.log("HTML5 and CSS3 web servers");
+console.log("Not for production use. Seriously. Just don't.");
+console.log("---------------------");
+require("./lib/sse.js");
+require("./lib/server.js");
+require("./lib/chat.js");
+
+require("./lib/policy.js");
+console.log("Press CTRL-C to stop.");

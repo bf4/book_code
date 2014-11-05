@@ -1,0 +1,12 @@
+form ol{
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+}
+
+form li{
+  margin: 0;
+  padding: 0; 
+}
+
+form li label{ display:block; }

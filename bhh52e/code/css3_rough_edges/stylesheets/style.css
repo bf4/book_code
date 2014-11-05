@@ -1,0 +1,38 @@
+.login{
+  width: 250px;
+}
+
+.login fieldset{
+  background-color: #ddd;
+  border: none;
+}
+.login legend{ 
+  background-color: #ddd;
+  padding: 0 64px 0 2px;
+}
+
+.login ol{list-style: none;
+  margin: 2px;
+  padding:0; 
+}
+.login li{
+  margin: 0 0 9px 0;
+  padding: 0;
+}
+
+.login input{
+  background-color: #fff;
+  border: 1px solid #bbb;
+  display:block;
+  width: 200px;
+}
+.login input[type="submit"]{
+ background-color: #bbb;
+ padding: 0;
+ width: 202px;
+}
+ 
+.login input, .login fieldset, .login legend{
+  border-radius: 5px;
+}
+

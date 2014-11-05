@@ -1,0 +1,33 @@
+meter{
+  width: 280px;
+}
+
+.meter{
+  border: 1px solid #000;
+  display: block;
+  position: relative;
+  width: 280px;
+}
+
+.fill{
+  background-color: #693;
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.37, rgb(14,242,30)),
+      color-stop(0.69, rgb(41,255,57))
+  );
+  
+  background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(14,242,30) 37%,
+      rgb(41,255,57) 69%
+  );
+}
+.label{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}

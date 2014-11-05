@@ -1,0 +1,40 @@
+ol{
+  padding :0;
+  margin: 0;
+  list-style: none;
+}
+ 
+ol li{
+  padding: 0;
+  clear: both;
+  margin: 0 0 10px 0;
+}
+
+label{
+  width: 150px;
+  float: left;
+}
+
+input{
+  border: 1px solid #333;
+}
+
+input:focus{
+  background-color: #ffe;
+}
+
+.simpleColorContainer, .simpleColorDisplay{
+  float: left;
+}
+
+input[required]:invalid, input[pattern]:invalid{
+  border-color: #A5340B;
+}
+
+input[required]:valid, input[pattern]:valid{
+  border-color: #0B9900;
+}
+
+.required, .invalid{
+  border-color: #A5340B;
+}

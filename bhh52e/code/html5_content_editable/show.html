@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Show User</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body id="forms">
+    <h1>User information</h1>
+    <section id="edit_profile_link">
+      <p><a href="edit.html">Edit Your Profile</a></p>
+    </section>
+    <div id="status"></div>
+    <ul data-url="/users/1">
+      <li>
+        <b>Name</b>
+        <span id="name" contenteditable>Hugh Mann</span>
+      </li>
+      <li>
+        <b>City</b>
+        <span id="city" contenteditable>Anytown</span>
+      </li>
+      <li>
+        <b>State</b>
+        <span id="state" contenteditable>OH</span>
+      </li>
+      <li>
+        <b>Postal Code</b>
+        <span id="postal_code" contenteditable>92110</span>
+        </li>
+      <li>
+        <b>Email</b>
+        <span id="email" contenteditable>boss@awesomecompany.com</span>
+      </li>
+    </ul>
+    <script
+       src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script src="javascripts/edit.js"></script>
+
+  </body>
+</html>
+

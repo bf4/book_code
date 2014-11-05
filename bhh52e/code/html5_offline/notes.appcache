@@ -1,0 +1,7 @@
+CACHE MANIFEST
+# v = 1.0.0
+stylesheets/style.css
+javascripts/notes.js
+javascripts/IndexedDBShim.min.js
+javascripts/jquery-1.9.1.min.js
+

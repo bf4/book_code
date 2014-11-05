@@ -1,0 +1,4 @@
+AddType text/cache-manifest .appcache
+
+ExpiresActive On
+ExpiresDefault "access"

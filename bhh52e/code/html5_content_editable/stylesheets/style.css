@@ -1,0 +1,44 @@
+ul{list-style:none;}
+
+li > b, li > span{ 
+  display: block;
+  float: left;
+  width: 100px;
+}
+
+li > span{
+  width:500px;
+  margin-left: 20px;
+}
+
+li > span[contenteditable]:hover{ 
+  background-color: #ffc;
+}
+
+li > span[contenteditable]:focus{ 
+  background-color: #ffa;
+  border: 1px shaded #000;
+}
+
+li{clear:left;} 
+
+
+
+
+ol{
+  padding :0;
+  margin: 0;
+  list-style: none;
+}
+
+ol > li{
+  padding: 0;
+  clear: both;
+  margin: 0 0 10px 0;
+}
+
+label{
+  width: 150px;
+  float: left;
+}
+/* EN:edit_styles */

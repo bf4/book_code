@@ -1,0 +1,31 @@
+# Sample code for "HTML5 and CSS3 - Second Edition"
+
+This is the example source code for the book. It includes a Node.JS based
+web server which you can use to run the code in your web browser.
+
+You're encouraged to use the folder template/ as your starting point for your
+own projects.
+
+Configuring and Running the server
+----------
+The simple web server needs Node.JS and NPM installed in order to run. You'll
+need to use Node.JS 0.10.0 or higher in order for things to work properly. 
+
+Once Node is installed, configure the server from the Terminal like this: 
+
+$ npm install
+
+This will read through the `package.json` file and install the dependencies
+for the server.
+
+Once things are installed, run the server like this:
+
+$ node server
+
+
+License
+--------
+
+The web server is under the MIT license.
+
+

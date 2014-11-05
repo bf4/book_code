@@ -1,0 +1,19 @@
+.container{
+  display: -webkit-flex;
+  display:         flex;
+}
+
+#main{
+  width: 80%;
+  -webkit-order: 2;
+          order: 2;
+}
+
+#sidebar{
+  -webkit-flex: 1;
+          flex: 1;
+          
+  -webkit-order: 1;
+          order: 1;
+}
+

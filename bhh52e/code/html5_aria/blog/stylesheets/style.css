@@ -1,0 +1,70 @@
+
+body{
+  width:960px;
+  margin:15px auto;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+p{
+  margin:0 0 20px 0;
+}
+
+p, li{
+  line-height:20px;
+}
+
+header#page_header{
+  width:100%;
+}
+
+#page_header > nav > ul, #page_footer > nav > ul{
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+#page_header > nav > ul > li, #page_footer > nav > ul > li{
+  padding:0;
+  margin: 0 20px 0 0;
+  display:inline;
+}
+
+#posts{
+  float: left;
+  width: 74%;
+}
+
+#posts aside{
+  float: right;
+  width: 35%;
+  margin-left: 5%;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+#sidebar{
+  float: left;
+  width: 25%;
+}
+
+#page_footer{
+  clear: both;
+  width: 100%; 
+  display: block; 
+  text-align: center;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  body{
+    width:480px;
+  }
+  
+  nav, section, header, footer{
+    margin: 0 10px 0 10px;
+  }
+  
+  #sidebar, #posts{
+    float: none;
+    width: 100%;
+  }
+}

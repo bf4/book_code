@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/modernizr.js"></script>   
+  </head>
+  <body>
+    <form id="create_account" action="/signup" method="post">
+      <fieldset id="signup">
+        <legend>Create New Account</legend>
+        <ol>
+          <li>
+            <label for="first_name">First Name</label>
+			
+            <input id="first_name" type="text" 
+              autofocus="true"
+              required
+              name="first_name" placeholder="'John'">
+          </li>
+          <li>
+            <label for="last_name">Last Name</label>
+			
+            <input id="last_name" type="text" 
+              required
+              name="last_name" placeholder="'Smith'">
+          </li>
+          <li>
+            <label for="email">Email</label>
+			
+            <input id="email" type="email" 
+              required
+              name="email" placeholder="user@example.com">
+          </li>
+          <li>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" value=""
+              autocomplete="off" placeholder="8-10 characters"
+              pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[\W]).*$"
+              title="Password must be 8 or more characters with at 
+                    least one number, an uppercase letter, and one special character"
+            />
+          </li>
+          <li>
+            <label for="password_confirmation">Password Confirmation</label>
+            <input id="password_confirmation" type="password" 
+              name="password_confirmation" value=""
+              autocomplete="off" placeholder="Type your password again"   
+              pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[\W]).*$"
+              title="Password confirmation must be 8 or more characters with at 
+                     least one number, an uppercase letter, and one special character"
+            />
+          </li>
+          <li><input type="submit" value="Sign Up"></li>
+        </ol>
+      </fieldset>  
+    </form>
+    <script 
+      src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'>
+    </script>
+    <script src="javascripts/fallbacks.js"></script>
+    
+  </body>
+</html>

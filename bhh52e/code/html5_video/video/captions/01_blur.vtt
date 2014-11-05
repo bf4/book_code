@@ -1,0 +1,27 @@
+WEBVTT
+
+00:00.000 --> 00:08.906
+We'll drag the existing layer to the New button on the 
+bottom of the layers panel to create a new copy.
+
+00:08.906 --> 00:14.167
+Now we'll go to the Filter menu and choose Gaussian Blur.
+
+00:14.167 --> 00:22.907
+We'll change the blur amount just enough so we lose a 
+little detail of the image.
+
+00:22.907 --> 00:33.670
+Now we'll double-click on the layer to edit the layer.
+
+00:33.670 --> 00:41.928
+And we'll change the blending mode to overlay. This allows 
+the original layer underneath to show through.
+
+00:41.928 --> 00:48.812
+We can then adjust the amount of the effect by changing 
+the opacity.
+
+00:48.812 --> 00:57.507
+And now we have a slightly enhanced image.
+

@@ -1,0 +1,35 @@
+body{
+  width: 960px;
+  margin: 15px auto;
+}
+
+p{
+  margin: 0 0 20px 0;
+}
+
+p, li{
+  line-height: 20px;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+#header{
+  width: 100%;
+}
+
+#header > nav > ul, #footer > nav > ul{
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+#header > nav > ul > li, #footer > nav > ul > li{
+  padding:0;
+  margin: 0 20px 0 0;
+  display:inline;
+}
+
+#footer{
+  clear: both;
+  width: 100%; 
+  display: block; 
+  text-align: center;
+}

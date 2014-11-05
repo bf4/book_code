@@ -1,0 +1,44 @@
+.box{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  color: white;
+}
+
+.linear{
+  transition-property: left;
+  transition-timing-function: linear;
+  transition-duration: 1s;
+}
+.linear:hover{left: 200px;}
+
+.ease_in{
+  transition-property: left;
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
+}
+.ease_in:hover{left: 200px;}
+
+.ease_out{
+  transition-property: left;
+  transition-timing-function: ease-out;
+  transition-duration: 1s;
+}
+.ease_out:hover{left: 200px;}
+
+.ease_in_out{
+  transition-property: left;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+.ease_in_out:hover{left: 200px;}
+
+.bounce{
+  transition-property: left;
+  transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  transition-duration: 1s;
+}
+.bounce:hover{
+ left: 200px; 
+}

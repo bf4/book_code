@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Information</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/modernizr.js"></script>   
+  </head>
+  <body id="forms">
+    
+    <form method="post" action="/projects/1">
+      
+      <fieldset id="personal_information">
+        <legend>Project Information</legend>
+        <ol>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" autofocus id="name">
+          </li>
+          
+          <li>
+            <label for="priority">Priority</label>
+            <input type="range" min="0" max="10" 
+                   name="priority" value="0" id="priority">
+          </li>
+          
+          <li>
+            <label for="estimated_hours">Estimated Hours</label>
+            <input type="number" name="estimated_hours"
+                   min="0" max="1000"
+                   id="estimated_hours">
+          </li>
+          
+          <li>
+            <label for="start_date">Start date</label>
+            <input type="date" name="start_date" id="start_date"
+                   value="2013-12-01">
+          </li>
+
+          <li>
+            <label for="email">Email contact</label>
+            <input type="email" name="email" id="email">
+          </li>
+          
+          <li>
+            <label for="url">Staging URL</label>
+            <input type="url" name="url" id="url">
+          </li>
+          
+          <li>
+            <label for="project_color">Project color</label>
+            <input type="color" name="project_color" id="project_color">
+          </li>
+          <li>
+            <input type="submit" value="Submit">
+          </li>
+        </ol>
+        
+      </fieldset>
+
+    </form>
+    
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    
+    <script src="javascripts/fallbacks.js"></script>
+  </body>
+</html>

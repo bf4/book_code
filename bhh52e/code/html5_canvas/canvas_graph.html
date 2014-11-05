@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Graph</title>
+    <!--[if lte IE 8]>
+    <script src="javascripts/excanvas.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <h2>Browser support</h2>
+    <canvas id="browsers" width="700" height="250"></canvas>
+    
+    <div id="graph_data">
+      <h1>Browser share for this site</h1>
+      <ul>
+        <li>
+          <p data-name="Safari" data-percent="10">
+            Safari - 10%
+          </p>
+        </li>
+        <li>
+          <p data-name="Internet Explorer" data-percent="30">
+            Internet Explorer - 30%
+          </p>
+        </li>
+        <li>
+          <p data-name="Firefox" data-percent="15">
+            Firefox - 15%
+          </p>
+        </li>       
+        <li>
+          <p data-name="Google Chrome" data-percent="45">
+            Google Chrome - 45%
+          </p>
+        </li>        
+      </ul>
+    </div>
+    
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script src="javascripts/RGraph.common.js" ></script>
+    <script src="javascripts/RGraph.bar.js" ></script>
+    <script src="javascripts/graph.js" ></script>
+
+  </body>
+</html>
+    

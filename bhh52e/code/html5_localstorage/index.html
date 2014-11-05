@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Preferences</title>   
+    <link rel="stylesheet" href="stylesheets/style.css"> 
+    <script src="javascripts/modernizr.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <p><strong>Preferences</strong></p>
+      <form id="preferences" action="save_prefs" 
+            method="post" accept-charset="utf-8">
+        <fieldset id="colors" class="">
+          <legend>Colors</legend>
+          <ol>
+            <li>
+              <label for="background_color">Background color</label>
+              <input class="color" type="color" name="background_color"
+                     value="" id="background_color">
+            </li>
+            <li>
+              <label for="text_color">Text color</label>
+              <input class="color" type="color" name="text_color" 
+                     value="" id="text_color">
+            </li>
+            <li>
+              <label for="text_size">Text size</label>
+              <select name="text_size" id="text_size">
+                <option value="16">16px</option>
+                <option value="20">20px</option>
+                <option value="24">24px</option>
+                <option value="32">32px</option>
+              </select>
+          </ol>
+        </fieldset>
+      
+        <input type="submit" value="Save changes">
+      </form>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script src="javascripts/storage.js"></script>
+    <script src="javascripts/fallbacks.js"></script>
+  </body>
+</html>
+
+

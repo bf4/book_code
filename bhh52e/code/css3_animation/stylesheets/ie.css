@@ -1,0 +1,12 @@
+.login {margin-top: 20px;}
+.login fieldset legend{
+  margin-top: -10px;
+  margin-left: 10px;
+}
+.login fieldset{
+  padding-left: 10px;
+}
+
+.login fieldset, .login input, .login legend{
+  behavior: url(stylesheets/PIE.htc);
+}

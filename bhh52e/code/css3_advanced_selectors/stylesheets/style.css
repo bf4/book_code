@@ -1,0 +1,44 @@
+table{
+  border-collapse: collapse; 
+  width: 600px; 
+} 
+
+th, td{ border: none; }
+
+th{
+  background-color: #000; 
+  color: #fff;
+}
+
+tr:nth-of-type(even){
+  background-color: #F3F3F3;
+}
+tr:nth-of-type(odd) {
+  background-color:#ddd;
+}
+
+td:nth-child(n+2), th:nth-child(n+2){
+  text-align: right;
+}
+
+tr:last-child{
+  font-weight: bolder;
+}
+
+td:last-child{
+  font-weight: bolder;
+}
+
+/* bold the total */
+tr:last-child td:last-child{
+  font-size:24px;
+}
+
+tr:nth-last-child(2){
+  color: green;
+}
+
+tr:nth-last-child(-n+3) td{
+  text-align: right;
+}
+

@@ -1,0 +1,25 @@
+ol{
+  list-style: none;
+  margin: 0;
+  padding :0;
+}
+
+ol li{
+  clear: both;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+label{
+  float: left;
+  width: 150px;
+}
+
+input{ border: 1px solid #333; }
+
+input:focus{ background-color: #ffe; }
+
+
+.simpleColorContainer, .simpleColorDisplay{
+  float: left;
+}

@@ -1,0 +1,20 @@
+table{
+  border-collapse: collapse; 
+  width: 600px; 
+} 
+
+th{
+  background-color: #333; 
+  color: #fff;
+}
+
+tr:nth-of-type(even){ background-color: #F3F3F3; }
+
+tr:nth-of-type(odd) { background-color:#ddd; }
+
+td{ text-align: center; }
+
+th, td{ border: 1px solid #333; }
+
+
+

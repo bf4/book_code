@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html manifest="notes.appcache">
+  <head>
+    <meta charset="utf-8">
+    <title>AwesomeNotes</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/IndexedDBShim.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <section id="sidebar">
+        <input type="button" id="new_button" value="New note">
+        <input type="button" id="delete_all_button" value="Delete all">
+        <ul aria-live="polite" id="notes">
+        </ul>
+      </section> 
+      <section id="main" aria-live="polite">
+        <form>
+          <ol>
+            <li>
+              <label for="title">Title</label>
+              <input type="text" id="title">
+            </li>
+            <li>
+              <label for="note">Note</label>
+              <textarea id="note"></textarea>
+            </li>
+            <li>
+              <input type="submit" id="save_button" value="Save">
+              <input type="submit" id="delete_button" value="Delete">
+            </li>
+          </ol>
+        </form>
+      </section>
+    </div>
+    <script src="javascripts/jquery-1.9.1.min.js"></script> 
+    <script src="javascripts/notes.js"></script>
+  </body>
+</html>

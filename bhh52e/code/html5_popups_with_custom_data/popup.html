@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Human Resources | AwesomeCo</title>
+  </head>
+  <body>
+    <h1>Human Resources info</h1>   
+      <ul>
+        <li>
+          <a href="help/holiday_pay.html" 
+             data-width="600" 
+             data-height="400"
+             title="Holiday Pay"
+             class="popup">Holiday pay</a>
+        </li>
+      </ul>
+      
+      <script 
+        src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'>
+      </script>
+      <script>
+       $("a.popup").click(function(event){
+         event.preventDefault();
+         var link = this;
+         var href = link.getAttribute("href");
+         var height = link.getAttribute("data-height");
+         var width = link.getAttribute("data-width");
+         
+         window.open (href,"popup",
+           "height=" + height +",width=" + width + "");          
+       });
+      </script>
+  </body>

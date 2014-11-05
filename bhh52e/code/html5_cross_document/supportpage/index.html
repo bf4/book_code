@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3 Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh52e for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Support</title>
+    
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    
+    <div id="form">
+      <form id="supportform">
+        <fieldset>
+          <ol>
+            <li>
+              <label for="to">To</label>
+              <input type="email" name="to" id="to">
+            </li>
+            <li>
+              <label for="from">From</label>
+              <input type="text" name="from" id="from">
+            </li>
+            <li>
+              <label for="message">Message</label>
+              <textarea name="message" id="message"></textarea>
+            </li>
+          </ol>
+          <input type="submit" value="Send!">
+        </fieldset>
+      </form>
+    </div>
+   <div id="contacts">
+     <iframe src="http://localhost:4000/index.html"></iframe>
+   </div>
+    
+    <script 
+       src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script src="javascripts/application.js"></script>
+    
+    
+  </body>
+</html>

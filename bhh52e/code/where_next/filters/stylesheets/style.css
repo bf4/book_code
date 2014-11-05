@@ -1,0 +1,9 @@
+img.photo{
+  -webkit-filter: grayscale(1);
+  -webkit-transition: -webkit-filter 0.5s linear;
+}
+
+img.photo:hover{
+  -webkit-filter: none;
+}
+

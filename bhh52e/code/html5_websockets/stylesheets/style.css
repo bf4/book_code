@@ -1,0 +1,16 @@
+#chat_wrapper{
+  background-color: #ddd;
+  height: 440px;
+  padding: 10px;
+  width: 320px;
+}
+
+#chat_wrapper h2{ margin: 0; }
+
+#chat{
+  background-color: #fff;
+  height: 300px; 
+  overflow: auto; 
+  padding: 10px;
+  width: 300px; 
+}

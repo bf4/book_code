@@ -1,0 +1,11 @@
+{
+  "name": "html5_samples",
+  "version": "0.0.2",
+  "dependencies": {
+    "mime": "*",
+    "express": "*",
+    "policyfile": "*",
+    "websocket": "*"
+  },
+  "main": "./server"
+}
