@@ -1,0 +1,15 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 39, icon */
+.icon-sprite, .movie_icon {
+  background: url('../../../../images/compass/icon-s2c4d3.png') 
+                no-repeat;
+}
+
+/* line 8, ../sass/screen.scss */
+.movie_icon {
+  height: 20px;
+  background-position: 0 -22px;
+}

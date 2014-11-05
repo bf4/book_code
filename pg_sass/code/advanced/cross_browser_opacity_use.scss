@@ -1,0 +1,4 @@
+@import "cross_browser_opacity.scss";
+
+.h1 {
+  @include opacity(60); }

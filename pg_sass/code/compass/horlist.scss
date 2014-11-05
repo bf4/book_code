@@ -1,0 +1,4 @@
+@import "compass/typography/lists/horizontal-list";
+
+ul.horiz {
+  @include horizontal-list; }

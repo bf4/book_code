@@ -1,0 +1,5 @@
+@import "compass/typography/text/ellipsis";
+.dotdotdot {
+  @include ellipsis;
+  width: 500px; }
+

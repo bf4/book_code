@@ -1,0 +1,17 @@
+.car.volvo_make {
+  color: "green";
+  width: 100px; }
+  .car.volvo_make .image {
+    background: url("images/volvo/green.png"); }
+
+.car.corvette_make {
+  color: "red";
+  width: 100px; }
+  .car.corvette_make .image {
+    background: url("images/corvette/red.png"); }
+
+.car.bmw_make {
+  color: "black";
+  width: 100px; }
+  .car.bmw_make .image {
+    background: url("images/bmw/black.png"); }

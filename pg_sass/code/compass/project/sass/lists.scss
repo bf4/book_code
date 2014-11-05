@@ -1,0 +1,4 @@
+@import "compass/typography/lists/bullets";
+
+.flowerbullet {
+  @include pretty-bullets("star.png"); }

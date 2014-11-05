@@ -1,0 +1,5 @@
+@mixin blue_text($size) {
+  color: #336699;
+  font-family: helvetica, arial, sans-serif;
+  font-size: $size;
+  font-variant: small-caps; }

@@ -1,0 +1,7 @@
+@mixin rounded_borders($color, $width: 5px, $rounding: 5px) {
+  -moz-border-radius: $rounding $rounding;
+  -webkit-border-radius: $rounding $rounding; 
+  -khtml-border-radius: $rounding $rounding;
+  -o-border-radius: $rounding $rounding;
+  border-radius: $rounding $rounding;
+  border: $width $color solid; }

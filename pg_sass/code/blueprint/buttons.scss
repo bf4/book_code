@@ -1,0 +1,10 @@
+@import "compass/utilities/general/float";
+@import "blueprint/buttons";
+
+a.button {
+  @include anchor-button; }
+  
+a.button.positive {
+  @include anchor-button(left);
+  @include button-colors(#305d00, #b0dd80, #478c00);
+  @include button-hover-colors(#305d00, #d8eec0, #84a560);}

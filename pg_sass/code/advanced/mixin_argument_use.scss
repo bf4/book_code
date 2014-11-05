@@ -1,0 +1,3 @@
+@import "mixin_argument.scss";
+.product_title {
+  @include blue_text (15px); }

@@ -1,0 +1,37 @@
+.stretch_box {
+  border: 2px solid black;
+  width: 240px;
+  height: 240px;
+  position: relative;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto; }
+  .stretch_box {
+    *display: inline; }
+
+.blueButton, .stretched_fully, .stretched_with_gap, .stretched_horizontally {
+  background: #336699;
+  font-weight: bold;
+  color: white;
+  padding: 5px; }
+
+.stretched_fully {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.stretched_with_gap {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px; }
+
+.stretched_horizontally {
+  position: absolute;
+  left: 0;
+  right: 0; }

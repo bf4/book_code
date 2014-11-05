@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Pragmatic Guide to Sass",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/pg_sass for more book information.
+-->
+!!!
+%html{'xmlns' => "http://www.w3.org/1999/xhtml", 
+'xml:lang' => "en"}
+ %head
+   <meta http-equiv="Content-Type" content="text/html; 
+charset=UTF-8" />
+   %title= @title || “Awesome Site”
+ %body
+   #wrapper
+     #header
+       %h1 Awesome Site
+     #content= yield
+     #footer
+       %small Copyright Hampton Catlin

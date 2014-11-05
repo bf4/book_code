@@ -1,0 +1,11 @@
+@import "compass/css3/columns";
+
+#two_columns {
+  @include column-count(2);
+  width: 300px; }
+
+ 
+#columns_borders {
+  @include column-count (3);
+  @include column-rule(2px, dashed, #336699);
+  width: 300px; }

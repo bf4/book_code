@@ -1,0 +1,7 @@
+.flowerbullet {
+  margin-left: 0; }
+  .flowerbullet li {
+    padding-left: 14px;
+    background: url('../../../../images/compass/
+         star.png?1320353498') no-repeat -5.5px -2.5px;
+    list-style-type: none; }

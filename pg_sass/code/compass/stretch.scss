@@ -1,0 +1,29 @@
+@import "compass/layout/stretching";
+@import "compass/utilities";
+@import "compass/css3";
+
+.stretch_box {
+  border: 2px solid black;
+  width: 240px;
+  height: 240px;
+  position: relative;
+  @include inline-block; }
+
+.blue_button {
+  background: #336699;
+  font-weight: bold;
+  color: white;
+  padding: 5px; }
+
+
+.stretched_fully {
+  @extend .blue_button;
+  @include stretch; }
+
+.stretched_with_gap {
+  @extend .blue_button;
+  @include stretch(12px, 12px, 12px, 12px); }
+
+.stretched_horizontally {
+  @extend .blue_button;
+  @include stretch-x; }

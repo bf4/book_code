@@ -1,0 +1,8 @@
+/* Hey look at this multiline comment
+ * that we want to show up in our CSS
+ * output. */
+#page {
+  color: black; }
+
+#sidebar {
+  color: #336699; }

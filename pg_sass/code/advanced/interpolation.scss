@@ -1,0 +1,15 @@
+
+@mixin car_make($car_make, $car_color) {
+  // Set the $car_make with "_make" at the end as a class
+  .car.#{$car_make}_make {
+    color: $car_color;
+    width: 100px;
+    .image {
+      background: url("images/#{$car_make}/#{$car_color}.png"); 
+    } 
+  } 
+}
+
+@include car_make("volvo",    "green");
+@include car_make("corvette", "red"  );
+@include car_make("bmw",      "black");

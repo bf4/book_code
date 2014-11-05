@@ -1,0 +1,21 @@
+ul.horiz {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1; }
+  ul.horiz li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0px;
+    white-space: nowrap;
+    display: inline;
+    float: left;
+    padding-left: 4px;
+    padding-right: 4px; }
+    ul.horiz li:first-child, ul.horiz li.first {
+      padding-left: 0; }
+    ul.horiz li:last-child {
+      padding-right: 0; }
+    ul.horiz li.last {
+      padding-right: 0; }

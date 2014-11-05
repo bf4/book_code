@@ -1,0 +1,10 @@
+.infobox {
+  color: blue; }
+  .user .infobox {
+    color: gray; }
+.message {
+  color: gray; }
+  .message.new {
+    color: red; }
+.user .infobox .message {
+  content: "Selector is '.user .infobox .message'"; }

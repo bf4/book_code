@@ -1,0 +1,13 @@
+/* Hey look at this multiline comment
+ * that we want to show up in our CSS
+ * output. */
+
+#page {
+  color: black; }
+
+// These comments are single lines
+// and we do not want them to appear
+// in our CSS
+
+#sidebar {
+  color: #336699; }

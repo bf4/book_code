@@ -1,0 +1,6 @@
+#page {
+  width: 500px; }
+  #page #sidebar {
+    width: 100px; }
+  #page #content {
+    width: 400px; }

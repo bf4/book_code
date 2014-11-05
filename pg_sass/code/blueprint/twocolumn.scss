@@ -1,0 +1,14 @@
+$blueprint_grid_columns: 6;
+$blueprint_grid_width: 65px;
+ 
+@import "blueprint";
+ 
+.two-col {
+  @include container;
+  background-color: #9ab3cc;
+  #header, #footer {
+    @include column(6); }
+  #links {
+    @include column(2); }
+  #main_text {
+    @include column(4, true); } }

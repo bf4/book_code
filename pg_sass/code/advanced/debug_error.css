@@ -1,0 +1,68 @@
+/*
+Syntax error: File to import not found or unreadable: notfound.
+              Load paths:
+                /Users/hcatlin/dev/hcsass/Book/code/advanced
+                /Users/hcatlin/dev/hcsass/Book/code/advanced
+        on line 1 of ./debug_error.scss
+
+1: @import "notfound"
+
+Backtrace:
+./debug_error.scss:1
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/import_node.rb:64:in `rescue in import'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/import_node.rb:42:in `import'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/import_node.rb:25:in `imported_file'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:148:in `rescue in visit_import'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:153:in `visit_import'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/tree/root_node.rb:20:in `render'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/engine.rb:291:in `_render'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/engine.rb:238:in `render'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:319:in `update_style sheet'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_style sheets'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:175:in `each'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:175:in `block in update_style sheets'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:173:in `each'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:173:in `update_style sheets'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:257:in `block (4 levels) in watch'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `call'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `run_callback'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/path.rb:55:in `callback_action'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/path.rb:31:in `create'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/state/directory.rb:26:in `block in created'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/state/directory.rb:25:in `each'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/state/directory.rb:25:in `created'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/state/directory.rb:17:in `refresh'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `each'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `block in run'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:15:in `loop'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:15:in `run'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm/monitor.rb:26:in `run'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/fssm-0.2.7/lib/fssm.rb:20:in `monitor'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin/compiler.rb:245:in `watch'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/plugin.rb:111:in `method_missing'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/exec.rb:408:in `watch_or_update'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/exec.rb:294:in `process_result'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/exec.rb:41:in `parse'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/lib/sass/exec.rb:21:in `parse!'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.5/bin/sass:8:in `<top (required)>'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/bin/sass:19:in `load'
+/Users/hcatlin/.rvm/gems/ruby-1.9.2-p180/bin/sass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: notfound.\A               Load paths:\A                 /Users/hcatlin/dev/hcsass/Book/code/advanced\A                 /Users/hcatlin/dev/hcsass/Book/code/advanced\A         on line 1 of ./debug_error.scss\A \A 1: @import \"notfound\""; }

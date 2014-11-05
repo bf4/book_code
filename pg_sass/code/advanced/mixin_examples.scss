@@ -1,0 +1,105 @@
+$default-border-radius: 5px;
+
+/* !Green Gradient */
+@mixin greenGrad() {
+  background: #6bc128; /* Old browsers */
+  background: -moz-linear-gradient(top, #6bc128 0%, #5fa624 50%, #4d9611 51%, #397907 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6bc128), color-stop(50%,#5fa624), color-stop(51%,#4d9611), color-stop(99%,#397907)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #6bc128 0%,#5fa624 50%,#4d9611 51%,#397907 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #6bc128 0%,#5fa624 50%,#4d9611 51%,#397907 99%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #6bc128 0%,#5fa624 50%,#4d9611 51%,#397907 99%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6BC128', endColorstr='#397907',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #6bc128 0%,#5fa624 50%,#4d9611 51%,#397907 99%); /* W3C */
+}
+/* !Green Button */
+@mixin greenBtn($padding, $border, $txtShadow) {
+  background: #5fbb00; /* Old browsers */
+  background: -moz-linear-gradient(top, #5fbb00 0%, #95c748 51%, #5eae18 51%, #61b21b 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5fbb00), color-stop(51%,#95c748), color-stop(51%,#5eae18), color-stop(100%,#61b21b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #5fbb00 0%,#95c748 51%,#5eae18 51%,#61b21b 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #5fbb00 0%,#95c748 51%,#5eae18 51%,#61b21b 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #5fbb00 0%,#95c748 51%,#5eae18 51%,#61b21b 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5FBB00', endColorstr='#61B21B',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #5fbb00 0%,#95c748 51%,#5eae18 51%,#61b21b 100%); /* W3C */
+  padding: $padding;
+  border: $border;
+  @include text-shadow($txtShadow);
+  font-weight: bold;
+  color: white;
+}
+/* !Greyed Out Button */
+@mixin greyBtn($padding, $border, $txtShadow){
+  background: #aaa; /* Old browsers */
+  background: -moz-linear-gradient(top, #aaa 0%, #a9a9a9 50%, #888 50%, #666 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aaa), color-stop(50%,#a9a9a9), color-stop(50%,#888), color-stop(100%,#666)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #aaa 0%,#a9a9a9 50%,#888 50%,#666 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #aaa 0%,#a9a9a9 50%,#888 50%,#666 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #aaa 0%,#a9a9a9 50%,#888 50%,#666 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AAA', endColorstr='#666',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #aaa 0%,#a9a9a9 50%,#888 50%,#666 100%); /* W3C */
+  padding: $padding;
+  border: $border;
+  @include text-shadow($txtShadow);
+  font-weight: bold;
+  color: white;
+}
+/* !Border Radius with corners individualy selected */
+@mixin border-radiussSpecify($topLeft, $topRight, $bottomRight, $bottomLeft) {
+  @include border-top-left-radius($topLeft);
+  @include border-top-right-radius($topRight);
+  @include border-bottom-right-radius($bottomRight);
+  @include border-bottom-left-radius($bottomRight);
+}
+/* !Gray Bar */
+@mixin gray_bar() {
+  background: #eaeaea; /* Old browsers */
+  background: -moz-linear-gradient(top, #eaeaea 0%, #dbdbdb 50%, #cccccc 50%, #b5b5b5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(50%,#dbdbdb), color-stop(50%,#cccccc), color-stop(100%,#b5b5b5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eaeaea 0%,#dbdbdb 50%,#cccccc 50%,#b5b5b5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eaeaea 0%,#dbdbdb 50%,#cccccc 50%,#b5b5b5 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #eaeaea 0%,#dbdbdb 50%,#cccccc 50%,#b5b5b5 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#b5b5b5',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #eaeaea 0%,#dbdbdb 50%,#cccccc 50%,#b5b5b5 100%); /* W3C */
+  padding: 5px 10px;
+}
+/*-- !Horizontal Fade Bar --*/
+@mixin fade_bar($left,$right) {
+  background: $left; /* Old browsers */
+  background: -moz-linear-gradient(left, $left 60%, $right 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%,$left), color-stop(100%,$right)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, $left 60%,$right 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, $left 60%,$right 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(left, $left 60%,$right 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left', endColorstr='$right',GradientType=1 ); /* IE6-9 */
+  background: linear-gradient(left, $left 60%,$right 100%); /* W3C */
+  padding: 5px 10px;
+}
+
+/*-- !accordian Btn enable --*/
+@mixin accordian_btn() {
+  padding: 10px 10px 10px 35px;
+  border-top: 1px solid #eee;
+  background: url(../../images/accordian.png) no-repeat 10px 5px;
+  color: #2E9324;
+  font-weight: bold;
+  -webkit-background-size: 18px 57px;
+}
+@mixin accordian_btn_enable() {
+  -webkit-box-shadow: inset 0 5px 5px #ccc;
+  border-top: 1px solid #fff;
+  margin-top: 5px;
+  background: url(../../images/accordian.png) no-repeat 10px -26px;
+  background-color: #F8F9F8;
+}
+/*-- !accordian content disable --*/
+@mixin accordian_content() {
+  background-color: #F8F9F8;
+  -webkit-box-shadow: inset 0 -5px 5px #ccc;
+}
+/*-- Breadcrumb Green Gradient --*/
+@mixin green_rnd_btn_gradient() {
+  background: #9dd53a; /* Old browsers */
+  background: -moz-linear-gradient(top, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9dd53a), color-stop(50%,#a1d54f), color-stop(51%,#80c217), color-stop(100%,#7cbc0a)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10+,Safari5.1+ */
+}

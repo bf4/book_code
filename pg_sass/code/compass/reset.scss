@@ -1,0 +1,5 @@
+@import "compass/reset/utilities";
+
+body {
+  .sidebar {
+    @include nested-reset; } }

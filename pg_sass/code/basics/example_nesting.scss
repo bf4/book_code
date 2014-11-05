@@ -1,0 +1,10 @@
+.infobox {
+  width: 200px;
+  .message {
+    border: 1px solid red;
+    .title {
+      color: red; } }
+  .user {
+    border: 2px solid black;
+    .title {
+      color: black; } } }

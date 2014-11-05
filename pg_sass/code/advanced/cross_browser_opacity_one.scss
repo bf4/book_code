@@ -1,0 +1,3 @@
+@mixin opacity($opacity) {
+  filter: alpha(opacity=#{$opacity*100}); // IE 5-9+
+  opacity: $opacity; }

@@ -1,0 +1,8 @@
+.infobox > .message {
+  border: 1px solid red; }
+  .infobox > .message > .title {
+    color: red; }
+.infobox > .user {
+  border: 1px solid black; }
+  .infobox > .user > .title {
+    color: black; }

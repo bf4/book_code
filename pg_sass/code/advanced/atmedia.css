@@ -1,0 +1,6 @@
+.main {
+  color: #336699;
+  font-size: 15px; }
+  @media print {
+    .main {
+      font-size: 10px; } }

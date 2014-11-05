@@ -1,0 +1,26 @@
+@charset "utf-8";
+body p + p {
+  text-indent: 2em;
+  margin-top: -1.5em; }
+  form body p + p {
+    text-indent: 0; }
+body p.incr,
+body .incr p {
+  font-size: 0.833em;
+  line-height: 1.44em;
+  margin-bottom: 1.5em; }
+body .caps {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  font-size: 1.2em;
+  line-height: 1%;
+  font-weight: bold;
+  padding: 0 2px; }
+body .dquo {
+  margin-left: -0.5em; }
+body .alt {
+  color: #666666;
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino"...
+  font-style: italic;
+  font-weight: normal; }

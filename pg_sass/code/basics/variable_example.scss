@@ -1,0 +1,13 @@
+$primary_color: #369;
+$secondary_color: #eee;
+$page_width: 300px;
+
+body {
+  // Set the background to be #369
+  background: $primary_color;
+  #wrapper {
+    width: $page_width;
+    background: white;
+    border: $secondary_color;
+    h1 {
+      color: $primary_color; } } }

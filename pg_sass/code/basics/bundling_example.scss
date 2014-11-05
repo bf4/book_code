@@ -1,0 +1,10 @@
+@import "colors";
+@import "widths";
+
+#page {
+  color: $main_color;
+  width: $main_width; }
+
+#sidebar {
+  color: darken($main_color, 10%);
+  width: $main_width*0.2; }

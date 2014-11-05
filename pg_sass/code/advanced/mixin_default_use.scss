@@ -1,0 +1,6 @@
+@import "mixin_default.scss";
+.product_title {
+  @include blue_text; }
+  
+.product_title {
+  @include blue_text (100px); }

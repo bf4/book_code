@@ -1,0 +1,14 @@
+@mixin country_color($country) {
+  @if $country == france {
+    color: blue; }
+  @else if $country == spain {
+    color: yellow; }
+  @else if $country == italy {
+    color: green; }
+  @else {
+    color: red; } }
+
+.england {
+  @include country_color(england); }
+.france {
+  @include country_color(france); }
