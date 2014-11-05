@@ -1,0 +1,10 @@
+Vagrant::Config.run do |config|
+  (1..3).each do |i|
+    config.vm.define "app#{i}".to_sym do |c|
+      c.vm.customize ["modifyvm", :id, "--name", "app#{i}", "--memory", "256"]
+      c.vm.box = "lucid64"
+      c.vm.host_name = "app#{i}"
+      c.vm.forward_port 22, 2322+i
+    end
+  end
+end

@@ -1,0 +1,14 @@
+check process passenger_standalone
+  with pidfile /home/vagrant/app193/tmp/pids/passenger.3000.pid
+  start program = "/bin/su - vagrant -c \
+    '/home/vagrant/.rvm/bin/app193_passenger start \
+    --daemonize --pid-file \
+    /home/vagrant/app193/tmp/pids/passenger.3000.pid'"  with timeout 5 seconds
+  stop program = "/bin/su - vagrant -c \
+    '/home/vagrant/.rvm/bin/app193_passenger stop \
+    --pid-file \
+    /home/vagrant/app193/tmp/pids/passenger.3000.pid'" with timeout 5 seconds
+  if cpu > 60% for 2 cycles then alert
+  if cpu > 80% for 5 cycles then restart
+  if totalmem > 400.0 MB for 5 cycles then restart
+

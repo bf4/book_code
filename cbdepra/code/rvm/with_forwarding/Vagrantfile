@@ -1,0 +1,6 @@
+Vagrant::Config.run do |config|
+  config.vm.box = "lucid64"
+  config.vm.forward_port 3000, 4000
+  config.vm.forward_port 3001, 4001
+end
+

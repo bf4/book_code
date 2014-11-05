@@ -1,0 +1,17 @@
+# START:check_recent_accounts
+define service {
+  use generic-service
+  service_description Recent Accounts
+  host_name app
+  check_command check_nrpe_1arg!check_recent_accounts
+}
+# END:check_recent_accounts
+# START:check_passenger 
+define service {
+  use generic-service
+  host_name app
+  service_description Passenger
+  check_command check_nrpe_1arg!check_passenger
+}
+# END:check_passenger 
+

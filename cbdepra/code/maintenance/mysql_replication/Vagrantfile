@@ -1,0 +1,20 @@
+Vagrant::Config.run do |config|
+  config.vm.define :mysql_master do |m|
+    m.vm.box = "lucid32"
+    m.vm.host_name = 'mysql_master'
+    m.vm.forward_port 3306, 3406
+    m.vm.network :hostonly, "33.33.13.37"
+  end
+  config.vm.define :mysql_slave do |s|
+    s.vm.box = "lucid32"
+    s.vm.host_name = 'mysql_slave'
+    s.vm.forward_port 3306, 3407
+    s.vm.network :hostonly, "33.33.13.38"
+  end
+  config.vm.define :app do |a|
+    a.vm.box = "lucid32"
+    a.vm.host_name = 'app'
+    a.vm.forward_port 80, 4568
+    a.vm.network :hostonly, "33.33.13.39"
+  end
+end

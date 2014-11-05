@@ -1,0 +1,59 @@
+#!/usr/local/bin/ruby
+
+require 'rubygems'
+gem 'passenger'
+require 'phusion_passenger'
+require 'phusion_passenger/platform_info'
+require 'phusion_passenger/admin_tools/memory_stats'
+require 'optparse'
+
+include PhusionPassenger
+
+def pluralize(str, count)
+  if count > 1 
+    "#{str}s"
+  else
+    str
+  end
+end
+
+def singularize(str, count)
+  if count > 1
+    str
+  else
+    "#{str}s"
+  end
+end
+
+# START:parse_args
+options = {:warning_threshold => 80, :critical_threshold => 100}
+OptionParser.new do |opts|
+  opts.banner = "Usage: check_passenger [options]"
+  opts.on("-w N", "--warning", "Warning threshold in MB") do |w|
+    options[:warning_threshold] = w.to_i
+  end
+  opts.on("-c N", "--critical", "Critical threshold in MB") do |c|
+    options[:critical_threshold] = c.to_i
+  end
+end.parse!
+# END:parse_args
+
+procs = AdminTools::MemoryStats.new.passenger_processes
+
+# START:find_high 
+msg, exit_code = if procs.find { |p| p.rss > options[:critical_threshold]*1000 }
+  count = procs.count {|p|p.rss > options[:critical_threshold]*1000 }
+  ["CRITICAL - #{count} #{pluralize('instance', count)} \
+    #{singularize('exceed', count)} #{options[:critical_threshold]} MB", 2]
+elsif procs.find {|p| p.rss > options[:warning_threshold]*1000 }
+  count = procs.count {|p|p.rss > options[:warning_threshold]*1000 }
+  ["WARNING - #{count} #{pluralize('instance', count)} \
+    #{singularize('exceed', count)} #{options[:warning_threshold]} MB", 1]
+else
+  ["OK - No processes exceed #{options[:warning_threshold]} MB", 0]
+end
+# END:find_high 
+
+puts "PASSENGER #{msg}"
+exit exit_code
+

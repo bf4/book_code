@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /var/massiveapp/current/
+RAILS_ENV=production /usr/bin/rake --silent nagios:accounts
+exit $?
+

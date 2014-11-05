@@ -1,0 +1,4 @@
+Vagrant::Config.run do |config|
+  config.vm.box = "lucid64_with_ruby193"
+  config.vm.forward_port 80, 4567
+end

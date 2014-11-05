@@ -1,0 +1,12 @@
+#!/usr/local/bin/ruby
+
+require 'rubygems'
+gem 'passenger'
+require 'phusion_passenger'
+require 'phusion_passenger/platform_info'
+require 'phusion_passenger/admin_tools/memory_stats'
+require 'optparse'
+
+include PhusionPassenger
+
+puts AdminTools::MemoryStats.new.passenger_processes.inspect

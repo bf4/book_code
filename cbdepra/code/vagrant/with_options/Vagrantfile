@@ -1,0 +1,19 @@
+        Vagrant::Config.run do |config|
+# START:name_and_memory
+          config.vm.customize ["modifyvm", :id, "--name", "app", "--memory", "512"]
+# END:name_and_memory
+          config.vm.box = "lucid64_with_ruby193"
+# START:hostname
+          config.vm.host_name = "app"
+# END:hostname
+# START:forward
+          config.vm.forward_port 22, 2222, :auto => true
+          config.vm.forward_port 80, 4567 
+# END:forward
+# START:network
+          config.vm.network :hostonly, "33.33.13.37"
+# END:network
+# START:share_folder
+          config.vm.share_folder "hosttmp", "/hosttmp", "/tmp"
+# END:share_folder
+        end

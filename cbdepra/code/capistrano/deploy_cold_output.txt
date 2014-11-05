@@ -1,0 +1,217 @@
+# START:export
+  * executing `deploy:cold'
+  * executing `deploy:update'
+ ** transaction: start
+  * executing `deploy:update_code'
+    executing locally: 
+    "git ls-remote 
+    git://github.com/deployingrails/massiveapp.git HEAD"
+    command finished in 388ms
+  * getting (via export) revision 
+    1d45e7a7609386da0b56cbd9299eb6e1ea73edee 
+    to /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531
+    executing locally: 
+    git clone -q git://github.com/deployingrails/massiveapp.git 
+    /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531 
+    && cd /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531 
+    && git checkout -q -b deploy 1d45e7a7609386da0b56cbd9299eb6e1ea73edee 
+    && rm -Rf /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531/.git
+    command finished in 187ms
+# END:export
+# START:package_and_upload
+    compressing /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531 
+    to /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531.tar.gz
+    executing locally: tar czf 20120322202531.tar.gz 20120322202531
+    command finished in 10ms
+    servers: ["localhost"]
+ ** sftp upload 
+    /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531.tar.gz 
+    -> /tmp/20120322202531.tar.gz
+    [localhost] sftp upload 
+    /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531.tar.gz 
+    -> /tmp/20120322202531.tar.gz
+    [localhost] sftp upload 
+    /var/folders/dE/dEW2lQWVGMeQ5tBgIlc5l++++TU/-Tmp-/20120322202531.tar.gz 
+    -> /tmp/20120322202531.tar.gz done
+  * sftp upload complete
+# END:package_and_upload
+# START:uncompress
+  * executing "cd /var/massiveapp/releases && 
+    tar xzf /tmp/20120322202531.tar.gz && rm /tmp/20120322202531.tar.gz"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'cd /var/massiveapp/releases 
+    && tar xzf /tmp/20120322202531.tar.gz 
+    && rm /tmp/20120322202531.tar.gz'
+    command finished in 14ms
+# END:uncompress
+# START:assets_symlink
+  * executing `deploy:finalize_update'
+    triggering before callbacks for `deploy:finalize_update'
+  * executing `deploy:assets:symlink'
+  * executing "rm -rf /var/massiveapp/releases/20120322202531/public/assets &&\\\n
+    mkdir -p /var/massiveapp/releases/20120322202531/public &&\\\n        
+    mkdir -p /var/massiveapp/shared/assets &&\\\n        
+    ln -s /var/massiveapp/shared/assets 
+    /var/massiveapp/releases/20120322202531/public/assets"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 
+    'rm -rf /var/massiveapp/releases/20120322202531/public/assets &&\
+    [localhost] mkdir -p /var/massiveapp/releases/20120322202531/public &&\
+    [localhost] mkdir -p /var/massiveapp/shared/assets &&\
+    [localhost] ln -s /var/massiveapp/shared/assets 
+    /var/massiveapp/releases/20120322202531/public/assets'
+    command finished in 9ms
+# END:assets_symlink
+# START:links
+  * executing "chmod -R g+w /var/massiveapp/releases/20120322202531"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'chmod -R g+w /var/massiveapp/releases/20120322202531'
+    command finished in 5ms
+  * executing "rm -rf /var/massiveapp/releases/20120322202531/log 
+    /var/massiveapp/releases/20120322202531/public/system 
+    /var/massiveapp/releases/20120322202531/tmp/pids 
+    &&\\\n      mkdir -p /var/massiveapp/releases/20120322202531/public 
+    &&\\\n      mkdir -p /var/massiveapp/releases/20120322202531/tmp"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 
+    'rm -rf /var/massiveapp/releases/20120322202531/log 
+    /var/massiveapp/releases/20120322202531/public/system 
+    /var/massiveapp/releases/20120322202531/tmp/pids &&\
+    [localhost] mkdir -p /var/massiveapp/releases/20120322202531/public &&\
+    [localhost] mkdir -p /var/massiveapp/releases/20120322202531/tmp'
+    command finished in 7ms
+  * executing "ln -s /var/massiveapp/shared/system 
+    /var/massiveapp/releases/20120322202531/public/system"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'ln -s /var/massiveapp/shared/system 
+    /var/massiveapp/releases/20120322202531/public/system'
+    command finished in 5ms
+  * executing "ln -s /var/massiveapp/shared/log 
+    /var/massiveapp/releases/20120322202531/log"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'ln -s /var/massiveapp/shared/log 
+    /var/massiveapp/releases/20120322202531/log'
+    command finished in 5ms
+  * executing "ln -s /var/massiveapp/shared/pids 
+    /var/massiveapp/releases/20120322202531/tmp/pids"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'ln -s /var/massiveapp/shared/pids 
+    /var/massiveapp/releases/20120322202531/tmp/pids'
+    command finished in 5ms
+# END:links
+# START:bundle
+    triggering after callbacks for `deploy:finalize_update'
+  * executing `bundle:install'
+  * executing "ls -x /var/massiveapp/releases"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'ls -x /var/massiveapp/releases'
+    command finished in 5ms
+  * executing "cd /var/massiveapp/releases/20120322202531 
+    && bundle install 
+    --gemfile /var/massiveapp/releases/20120322202531/Gemfile 
+    --path /var/massiveapp/shared/bundle 
+    --deployment --quiet --without development test"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'cd /var/massiveapp/releases/20120322202531 
+    && bundle install 
+    --gemfile /var/massiveapp/releases/20120322202531/Gemfile 
+    --path /var/massiveapp/shared/bundle 
+    --deployment --quiet --without development test'
+    command finished in 259ms
+# END:bundle
+# START:assets_precompile
+    triggering after callbacks for `deploy:update_code'
+  * executing `deploy:assets:precompile'
+    triggering before callbacks for `deploy:assets:precompile'
+  * executing `deploy:copy_in_database_yml'
+  * executing "cp /var/massiveapp/shared/config/database.yml 
+    /var/massiveapp/releases/20120514044142/config/"
+    servers: ["localhost"]
+    [localhost] executing command
+    command finished in 5ms
+  * executing "cd /var/massiveapp/releases/20120322202531 
+    && bundle exec rake RAILS_ENV=production RAILS_GROUPS=assets assets:precompile"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 
+    'cd /var/massiveapp/releases/20120322202531 
+    && bundle exec rake RAILS_ENV=production RAILS_GROUPS=assets assets:precompile'
+    command finished in 11332ms
+# END:assets_precompile
+# START:symlink
+  * executing `deploy:create_symlink'
+  * executing `deploy:symlink'
+[Deprecation Warning] This API has changed, please 
+  hook `deploy:create_symlink` instead of `deploy:symlink`.
+  * executing "rm -f /var/massiveapp/current 
+    && ln -s /var/massiveapp/releases/20120322202531 /var/massiveapp/current"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'rm -f /var/massiveapp/current 
+    && ln -s /var/massiveapp/releases/20120322202531 /var/massiveapp/current'
+    command finished in 9ms
+# END:symlink
+# START:database_yml
+    triggering after callbacks for `deploy:create_symlink'
+  * executing `deploy:copy_in_database_yml'
+  * executing "cp /var/massiveapp/shared/config/database.yml 
+    /var/massiveapp/current/config/"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 
+    'cp /var/massiveapp/shared/config/database.yml 
+    /var/massiveapp/current/config/'
+    command finished in 5ms
+# END:database_yml
+ ** transaction: commit
+# START:migrations
+  * executing `deploy:migrate'
+  * executing "cd /var/massiveapp/releases/20120322202531 && 
+    bundle exec rake RAILS_ENV=production  db:migrate"
+    servers: ["localhost"]
+    [localhost] executing command
+    [localhost] sh -c 'cd /var/massiveapp/releases/20120322202531 
+    && bundle exec rake RAILS_ENV=production  db:migrate'
+ ** [out :: localhost] ==  CreateUsers: migrating ==========
+ ** [out :: localhost] -- create_table(:users)
+ ** [out :: localhost] -> 0.0022s
+ ** [out :: localhost] ==  CreateUsers: migrated (0.0023s) =
+ ** [out :: localhost] 
+ ** [out :: localhost] ==  CreateBookmarks: migrating ======
+ ** [out :: localhost] -- create_table(:bookmarks)
+ ** [out :: localhost] -> 0.0035s
+ ** [out :: localhost] -- add_index(:bookmarks, :user_id)
+ ** [out :: localhost] -> 0.0040s
+ ** [out :: localhost] ==  CreateBookmarks: migrated (0.0075s) =
+ ** [out :: localhost] 
+ ** [out :: localhost] ==  CreateShares: migrating ==========
+ ** [out :: localhost] -- create_table(:shares)
+ ** [out :: localhost] -> 0.0023s
+ ** [out :: localhost] -- add_index(:shares, :bookmark_id)
+ ** [out :: localhost] -> 0.0038s
+ ** [out :: localhost] -- add_index(:shares, :shared_by_id)
+ ** [out :: localhost] -> 0.0034s
+ ** [out :: localhost] -- add_index(:shares, :shared_with_id)
+ ** [out :: localhost] -> 0.0034s
+ ** [out :: localhost] ==  CreateShares: migrated (0.0130s) =
+ ** [out :: localhost] 
+ ** [out :: localhost] ==  RenameUsersToAccounts: migrating =
+ ** [out :: localhost] -- rename_table(:users, :accounts)
+ ** [out :: localhost] -> 0.0011s
+ ** [out :: localhost] ==  RenameUsersToAccounts: migrated (0.0011s) =
+ ** [out :: localhost] 
+    command finished in 1581ms
+# END:migrations
+# START:deploy_start
+  * executing `deploy:start'
+# END:deploy_start
+

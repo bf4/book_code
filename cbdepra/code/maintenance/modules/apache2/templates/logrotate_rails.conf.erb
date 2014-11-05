@@ -1,0 +1,10 @@
+<%= current_path %>/log/production.log {
+  missingok
+  rotate 10
+  compress
+  delaycompress
+  postrotate
+    touch <%= current_path %>/tmp/restart.txt
+  endscript
+}
+
