@@ -1,0 +1,22 @@
+<div>
+  <table id="statusTable">
+    <thead>
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th></th>
+          <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% for s in @statuses %>
+        <tr>
+          <td>@<%= s[:creator] %></td>
+          <td><%= s[:created_at].strftime("%I:%M %p %d/%m/%Y") %></td>
+          <td><%= link_to "Retweet", retweet_path(s), :method => :post %></td>
+          <td><%= s[:status_text] %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,28 @@
+# START:jruby_max_runtimes
+jruby_max_runtimes: 1   
+# END:jruby_max_runtimes
+# START:diagnostics
+# START:scheduler
+# START:resque
+extensions:
+  diagnostics:
+  # END:diagnostics
+  scheduler:
+  # END:scheduler
+  resque:
+    queues: critical, normal, low
+    count:  1
+    path: 'lib/workers'
+    redis_host: 'localhost:6379'
+    work_dir: 'work/resque'
+  # END:resque
+  # START:sandbox
+  sandbox:
+    username: admin
+    password: Passw0rd
+    work_dir: 'work/sandbox'
+  # END:sandbox
+# START:ajp
+ajp:
+  port: 8099
+# END:ajp

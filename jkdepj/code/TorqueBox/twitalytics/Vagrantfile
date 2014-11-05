@@ -1,0 +1,28 @@
+Vagrant::Config.run do |config|
+  # START:box
+  config.vm.box = "torquebox"
+  # END:box
+
+  # START:forward_80
+  config.vm.forward_port 80, 8000
+  # END:forward_80
+  # START:forward_8080
+  config.vm.forward_port 8080, 8888
+  # END:forward_8080
+
+  # START:memory
+  config.vm.customize ["modifyvm", :id, "--memory", 1024]
+  # END:memory
+
+  # START:provision_puppet_manifests
+  # START:provision_puppet_modules
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "puppet/manifests"
+    # END:provision_puppet_manifests
+    puppet.module_path = "puppet/modules"
+    # START:provision_puppet_manifests
+    puppet.manifest_file = "site.pp"    
+  end
+  # END:provision_puppet_manifests
+  # END:provision_puppet_modules
+end

@@ -1,0 +1,44 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.3'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
+end
+
+gem 'jquery-rails', '2.0.1'
+gem 'json', '1.6.6'
+
+# START:therubyrhino  
+platform :jruby do
+  gem 'therubyrhino', '1.73.1'
+  # END:therubyrhino
+  # START:get_back
+  gem 'get_back', '0.1.0'
+  # END:get_back
+  # START:jruby_openssl
+  gem 'jruby-openssl', '0.8.6'
+  # END:jruby_openssl
+  # START:therubyrhino  
+end
+# END:therubyrhino
+
+group :test do
+  gem 'rspec-rails', '2.8.1'
+end
+
+# START:db_driver
+gem 'activerecord-jdbc-adapter', '1.2.2', :require => false
+
+group :production do
+  gem 'jdbc-postgres', '9.1.901'
+end
+
+group :development, :test do
+  gem 'jdbc-sqlite3', '3.7.2'
+end
+# END:db_driver

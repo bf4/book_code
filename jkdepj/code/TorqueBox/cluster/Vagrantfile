@@ -1,0 +1,18 @@
+Vagrant::Config.run do |config|
+  # START:forward_80
+  config.vm.forward_port 80, 8000
+  # END:forward_80
+  # START:forward_8080
+  config.vm.forward_port 8080, 8888
+  # END:forward_8080
+
+  # START:memory
+  config.vm.customize ["modifyvm", :id, "--memory", 1024]
+  # END:memory
+
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "puppet/manifests"
+    puppet.module_path = "puppet/modules"
+    puppet.manifest_file = "site.pp"
+  end
+end

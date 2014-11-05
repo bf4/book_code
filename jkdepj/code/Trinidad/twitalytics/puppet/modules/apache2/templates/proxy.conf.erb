@@ -1,0 +1,12 @@
+<IfModule mod_proxy.c>
+    ProxyRequests Off
+    <Proxy *>
+        AddDefaultCharset off
+        Order deny,allow
+        # START:deny_all
+        #Deny from all
+        # END:deny_all
+        #Allow from .example.com
+    </Proxy>
+    ProxyVia On
+</IfModule>

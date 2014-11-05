@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitalytics</title>
+  <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/ui-lightness/jquery-ui.css" %>  
+  <%= javascript_include_tag "jquery", "rails" %>
+  <%= csrf_meta_tags %>
+  <style type="text/css">    
+    html {
+      margin: 5px 10px 10px 25px;
+    }
+
+    body {
+      background-color: #3B4458;
+      font-family: helvetica;
+    }
+
+    h1 {
+       color: #fff;
+    }
+
+    p {
+      font-style: italic;
+      color: #fff;
+    }
+
+    a, a:visited {
+      color: #92BADB;      
+    }
+
+    a:hover {
+      color: #fff;
+      background-color: #3B4458;
+    }
+
+    ul {
+      list-style-type: square;
+      color: #92BADB;
+    }
+
+    th {
+      font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+      color: #6D929B;
+      border-right: 1px solid #C1DAD7;
+      border-bottom: 1px solid #C1DAD7;
+      border-top: 1px solid #C1DAD7;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 6px 6px 6px 12px;
+      background: #CAE8EA;
+    }
+
+    td {
+      font-size: 10pt;
+      border-right: 1px solid #C1DAD7;
+      border-bottom: 1px solid #C1DAD7;
+      background: #fff;
+      padding: 6px 6px 6px 12px;
+      color: #6D929B;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<h1>Twitalytics</h1>
+<% flash.each do |key, msg| %>
+    <div class="flash <%= key %>"><%= msg %></div>
+<% end %>
+<div id="tabs">
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Company", company_path %></li>
+    <li><%= link_to "Customers", customers_path %></li>
+    <li><a href="#">Analysis</a></li>
+  </ul>
+  <div id="content">
+    <%= yield %>
+  </div>
+</div>
+
+
+</body>
+</html>

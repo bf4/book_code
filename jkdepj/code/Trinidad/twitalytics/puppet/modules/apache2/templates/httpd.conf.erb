@@ -1,0 +1,4 @@
+<VirtualHost *:80 >
+    ProxyPass / ajp://<%= hostname %>:<%= port %>/
+    ProxyPassReverse / ajp://<%= hostname %>:<%= port %>/
+</VirtualHost>

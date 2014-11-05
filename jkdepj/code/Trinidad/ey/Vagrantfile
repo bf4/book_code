@@ -1,0 +1,16 @@
+Vagrant::Config.run do |config|
+  # START:box
+  config.vm.box = "trinidad"
+  # END:box
+
+  config.vm.forward_port 80, 8000
+  # START:port
+  config.vm.forward_port 3000, 8888
+  # END:port
+
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "puppet/manifests"
+    puppet.module_path = "puppet/modules"
+    puppet.manifest_file = "site.pp"
+  end
+end

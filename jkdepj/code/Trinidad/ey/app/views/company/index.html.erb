@@ -1,0 +1,25 @@
+<div>
+  <%= form_tag(company_status_path, :method => :post) do %>
+      <%= text_field_tag :status_text, "", :placeholder => "What is @#{@username} up to?", :size => 80 %>
+      <%= submit_tag "Post" %>
+  <% end %>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+    <% for s in @statuses %>
+        <tr>
+          <td><%= s[:created_at].strftime("%I:%M %p %d/%m/%Y") %></td>
+          <td><%= s[:status_text] %></td>
+        </tr>
+    <% end %>
+    <% if @statuses.empty? %>
+        <tr>
+          <td colspan="2">No updates</td>
+        </tr>
+    <% end %>
+  </table>
+</div>
