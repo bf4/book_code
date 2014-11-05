@@ -1,0 +1,5 @@
+  Scenario: start game
+    Given I am not yet playing
+    When I start a new game
+    Then I should see "Welcome to Codebreaker!"
+      expected [] to include "Welcome to Codebreaker!"

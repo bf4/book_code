@@ -1,0 +1,10 @@
+Run filtered using {:focus=>true}
+
+group 1
+  example 1
+  example 2
+
+group 2
+
+Finished in 0.00092 seconds
+2 examples, 0 failures

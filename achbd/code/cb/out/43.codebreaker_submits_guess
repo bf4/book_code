@@ -1,0 +1,17 @@
+Scenarios: matches with duplicates
+  | code | guess | mark |
+  | 1234 | 1155  | +    |
+  expected ["Welcome to Codebreaker!", "Enter guess:", "+-"] to include "+" 
+  | 1234 | 5115  | -    |
+  expected ["Welcome to Codebreaker!", "Enter guess:", "--"] to include "-"
+  | 1134 | 1155  | ++   |
+  | 1134 | 5115  | +-   |
+  | 1134 | 5511  | --   |
+  | 1134 | 1115  | ++   |
+  expected ["Welcome to Codebreaker!", "Enter guess:", "++-"] to include "++"
+  | 1134 | 5111  | +-   |
+  expected ["Welcome to Codebreaker!", "Enter guess:", "+--"] to include "+-"
+
+21 scenarios (4 failed, 17 passed)
+63 steps (4 failed, 59 passed)
+0m0.039s

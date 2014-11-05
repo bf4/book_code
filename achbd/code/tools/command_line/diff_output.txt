@@ -1,0 +1,20 @@
+F
+
+1)
+'Bill should print the bill' FAILED
+expected: "From: MegaCorp\nTo: Bob Doe\nRef: 9887386\nNote: Please pay imminently\n",
+     got: "From: MegaCorp\nTo: Bob\nRef: 9887386\nNote: We want our money!\n" (using ==)
+Diff:
+
+@@ -1,5 +1,5 @@
+ From: MegaCorp
+-To: Bob Doe
++To: Bob
+ Ref: 9887386
+-Note: Please pay imminently
++Note: We want our money!
+/Users/david/projects/ruby/rspec-book/Book/code/tools/command_line/diff_spec.rb:19:
+
+Finished in 0.006835 seconds
+
+1 example, 1 failure

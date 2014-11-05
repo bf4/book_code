@@ -1,0 +1,22 @@
+dir = File.expand_path(File.dirname(__FILE__))
+$:.unshift(dir + '/../../rspec/lib')
+require 'spec/rake/spectask'
+
+Spec::Rake::SpecTask.new('plain') do |t|
+  t.spec_files = [dir + '/diff_spec.rb']
+  t.spec_opts = ["--format", "progress:#{dir}/plain_output.txt"]
+end
+
+Spec::Rake::SpecTask.new('diff') do |t|
+  t.spec_files = [dir + '/diff_spec.rb']
+  t.spec_opts = ["--format", "progress:#{dir}/diff_output.txt", "--diff"]
+end
+
+Spec::Rake::SpecTask.new('simple') do |t|
+  t.spec_files = [dir + '/simple_math_spec.rb']
+  t.spec_opts = ["--format", "progress:#{dir}/simple_math_spec.txt", "--diff"]
+end
+
+task :help do
+  `spec --help > help_output.txt`
+end

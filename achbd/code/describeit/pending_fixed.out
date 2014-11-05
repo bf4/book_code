@@ -1,0 +1,9 @@
+F
+
+Failures:
+  1) an empty array should be empty FIXED
+     Expected pending 'bug report 18976' to fail. No Error was raised.
+     # ./pending_fixed.rb:4
+
+Finished in 0.00088 seconds
+1 example, 1 failure

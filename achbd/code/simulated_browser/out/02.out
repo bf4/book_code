@@ -1,0 +1,41 @@
+(in /Users/dchelimsky/projects/ruby/rspec-book/ACHBD.git/Book/code/simulated_browser/02)
+Using the default profile...
+Feature: Create movie
+  So that customers can browse movies by genre
+  As a site administrator
+  I want to create a movie in a specific genre
+
+  Scenario: Create movie in genre                        # features/create_movie.feature:7
+    Given a genre named Comedy                           # features/step_definitions/genre_steps.rb:1
+    When I create a movie Caddyshack in the Comedy genre # features/create_movie.feature:9
+    Then Caddyshack should be in the Comedy genre        # features/create_movie.feature:10
+
+Feature: Showtime Descriptions
+  So that I can find movies that fit my schedule
+  As a movie goer
+  I want to see accurate and concise showtimes
+
+  Scenario: Show minutes for times not ending with 00                   # features/showtime_descriptions.feature:7
+    Given a movie                                                       # features/step_definitions/showtime_steps.rb:1
+    When I set the showtime to "2007-10-10" at "2:15pm"                 # features/step_definitions/showtime_steps.rb:5
+    Then the showtime description should be "October 10, 2007 (2:15pm)" # features/step_definitions/showtime_steps.rb:10
+
+  Scenario: Hide minutes for times ending with 00                    # features/showtime_descriptions.feature:12
+    Given a movie                                                    # features/step_definitions/showtime_steps.rb:1
+    When I set the showtime to "2007-10-10" at "2:00pm"              # features/step_definitions/showtime_steps.rb:5
+    Then the showtime description should be "October 10, 2007 (2pm)" # features/step_definitions/showtime_steps.rb:10
+
+3 scenarios (1 undefined, 2 passed)
+9 steps (2 undefined, 7 passed)
+0m0.321s
+
+You can implement step definitions for undefined steps with these snippets:
+
+When /^I create a movie Caddyshack in the Comedy genre$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^Caddyshack should be in the Comedy genre$/ do
+  pending # express the regexp above with the code you wish you had
+end
+

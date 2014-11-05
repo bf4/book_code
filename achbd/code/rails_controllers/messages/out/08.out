@@ -1,0 +1,6 @@
+Failure/Error: Message.should_receive(:new).with("text" => "a quick brown fox")
+(<Message(id: integer, created_at: datetime, updated_at: datetime) (class)>).
+                                          new({"text"=>"a quick brown fox"})
+    expected: 1 time
+    received: 0 times
+

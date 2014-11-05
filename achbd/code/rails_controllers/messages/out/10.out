@@ -1,0 +1,4 @@
+Failure/Error: message.should_receive(:save)
+(Mock "Message_1001").save(any args)
+    expected: 1 time
+    received: 0 times

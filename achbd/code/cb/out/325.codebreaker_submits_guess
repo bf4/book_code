@@ -1,0 +1,80 @@
+Feature: code-breaker submits guess
+
+  The code-breaker submits a guess of four numbers.  The game marks the guess
+  with + and - signs.
+
+  For each number in the guess that matches the number and position of a number
+  in the secret code, the mark includes one + sign. For each number in the guess
+  that matches the number but not the position of a number in the secret code,
+  the mark includes one - sign.
+
+  Scenario Outline: submit guess
+    Given the secret code is "<code>"
+    When I guess "<guess>"
+    Then the mark should be "<mark>"
+
+    Scenarios: no matches
+      | code | guess | mark |
+      | 1234 | 5555  |      |
+
+    Scenarios: 1 number correct
+      | code | guess | mark |
+      | 1234 | 1555  | +    |
+      | 1234 | 2555  | -    |
+
+    Scenarios: 2 numbers correct
+      | code | guess | mark |
+      | 1234 | 5254  | ++   |
+      expected ["Welcome to Codebreaker!", "Enter guess:", ""] to include "++" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 5154  | +-   |
+      expected ["Welcome to Codebreaker!", "Enter guess:", ""] to include "+-" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 2545  | --   |
+      expected ["Welcome to Codebreaker!", "Enter guess:", "-"] to include "--" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+
+    Scenarios: 3 numbers correct
+      | code | guess | mark |
+      | 1234 | 5234  | +++  |
+      expected ["Welcome to Codebreaker!", "Enter guess:", ""] to include "+++" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 5134  | ++-  |
+      expected ["Welcome to Codebreaker!", "Enter guess:", ""] to include "++-" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 5124  | +--  |
+      expected ["Welcome to Codebreaker!", "Enter guess:", ""] to include "+--" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 5123  | ---  |
+      expected ["Welcome to Codebreaker!", "Enter guess:", ""] to include "---" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+
+    Scenarios: all numbers correct
+      | code | guess | mark |
+      | 1234 | 1234  | ++++ |
+      expected ["Welcome to Codebreaker!", "Enter guess:", "+"] to include "++++" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 1243  | ++-- |
+      expected ["Welcome to Codebreaker!", "Enter guess:", "+"] to include "++--" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 1423  | +--- |
+      expected ["Welcome to Codebreaker!", "Enter guess:", "+"] to include "+---" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+      | 1234 | 4321  | ---- |
+      expected ["Welcome to Codebreaker!", "Enter guess:", "-"] to include "----" (Spec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/codebreaker_steps.rb:37:in `/^the mark should be "([^"]*)"$/'
+      features/codebreaker_submits_guess.feature:14:in `Then the mark should be "<mark>"'
+
+14 scenarios (11 failed, 3 passed)
+42 steps (11 failed, 31 passed)
+0m0.030s

@@ -1,0 +1,13 @@
+<%= form_for @movie do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :release_year %>
+  <%= f.select :release_year, (1900..2009).to_a.map(&:to_s) %>
+  <% @genres.each do |genre| %>
+    <label>
+      <%=h genre.name %>
+      <%= check_box_tag "genres[]", genre.id %>
+    </label>
+  <% end %>
+  <%= f.submit "Save" %>
+<% end %>

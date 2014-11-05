@@ -1,0 +1,19 @@
+#---
+# Excerpted from "The RSpec Book",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/achbd for more book information.
+#---
+class AddTitleAndReleaseYearToMovies < ActiveRecord::Migration
+  def self.up
+    add_column :movies, :title, :string
+    add_column :movies, :release_year, :integer
+  end
+
+  def self.down
+    remove_column :movies, :release_year
+    remove_column :movies, :title
+  end
+end

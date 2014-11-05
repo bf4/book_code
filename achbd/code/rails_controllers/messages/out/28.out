@@ -1,0 +1,17 @@
+ApplicationController
+  handling AccessDenied exceptions
+    redirects to the /401.html (access denied) page
+
+MessagesController
+  POST create
+    creates a new message
+    when the message saves successfully
+      sets a flash[:notice] message
+      redirects to the Messages index
+    when the message fails to save
+      assigns @message
+      renders the new template
+
+Finished in 0.0514 seconds
+6 examples, 0 failures
+

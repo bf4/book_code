@@ -1,0 +1,6 @@
+Scenario: Create movie in genre                        
+  Given a genre named Comedy                           
+  When I create a movie Caddyshack in the Comedy genre
+    undefined local variable or method `movies_path' for 
+      #<Cucumber::Rails::World:0x81ac9a64> (NameError)
+      ./features/step_definitions/movie_steps.rb:2:in 

@@ -1,0 +1,4 @@
+  Scenarios: no matches
+    | code | guess | mark |
+    | 1234 | 5555  |      |
+    undefined method `guess' for #<Codebreaker::Game:0x10219f728> (NoMethodError)

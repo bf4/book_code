@@ -1,0 +1,83 @@
+task :default => :output
+
+BOOK_ROOT = File.expand_path('../../../', __FILE__)
+CHAPTERS = (0..6).collect {|n| "Codebreaker.#{n}.pml"}
+
+def all_code_files
+  @all_code_files ||= begin
+    lines = []
+    CHAPTERS.map do |chapter|
+      File.open(BOOK_ROOT + "/#{chapter}") do |f|
+        f.each do |line|
+          if line =~ /\"code\/cb\/([^"]*)\"/
+            lines << $1
+          end
+        end
+      end
+    end
+    lines
+  end
+end
+
+def versions_for(regexp)
+  all_code_files.inject([]) do |list, name|
+    name =~ regexp ? list << $1 : list
+  end
+end
+
+def all_features
+  versions_for(/^out\/(\d+)\.features\b/)
+end
+
+def codebreaker_starts_game
+  versions_for(/^out\/(\d+)\.codebreaker_starts_game\b/)
+end
+
+def codebreaker_submits_guess
+  versions_for(/^out\/(\d+)\.codebreaker_submits_guess\b/)
+end
+
+def specs
+  versions_for(/^out\/(\d+)\.spec\b/)
+end
+
+def put_out(v, cmd)
+  if [nil, v].include?(ENV['ONLY'])
+    p cmd
+    `#{cmd}` unless ENV['DRY'] 
+  end
+end
+
+task :obsolete do
+  needed = all_code_files.map {|f| f =~ /(\d+)/; $1.to_i}.uniq
+  existing = `ls -al`.map {|l| l.split.last.to_i }.reject {|n| n == 0}[1..-1]
+  obsolete = existing - needed
+  p existing
+  p obsolete
+end
+
+task :output do
+  # all_features.each do |v|
+    # put_out v, "cd #{v} && cucumber -s > ../out/#{v}.features"
+  # end
+
+  # codebreaker_starts_game.each do |v|
+    # put_out v, "cd #{v} && cucumber features/codebreaker_starts_game.feature -s > ../out/#{v}.codebreaker_starts_game"
+  # end
+
+  # codebreaker_submits_guess.each do |v|
+    # put_out v, "cd #{v} && cucumber features/codebreaker_submits_guess.feature -s > ../out/#{v}.codebreaker_submits_guess"
+  # end
+
+  # specs.map do |v|
+    # put_out v, "cd #{v} && rspec spec --format documentation > ../out/#{v}.spec 2>&1"
+  # end
+
+  # outfile = 'out/15.codebreaker'
+  # File.open(outfile, 'w') do |f|
+    # f.puts('$ bin/codebreaker')
+  # end
+  # `15/bin/codebreaker >> #{outfile}`
+end
+
+

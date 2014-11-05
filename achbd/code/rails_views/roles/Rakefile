@@ -1,0 +1,7 @@
+task :default do
+  (1..4).each do |n|
+    Dir.chdir("0#{n}") do
+      `bundle exec rspec spec/helpers --no-color > ../out/0#{n}.out`
+    end
+  end
+end

@@ -1,0 +1,18 @@
+# language:en
+Feature: Traveler books room
+  In order to reduce staff
+  As a hotel owner
+  I want travelers to book rooms on the web
+
+  Scenario: Successful booking                    # features/book_room.feature:7
+    Given a hotel with "5" rooms and "0" bookings # features/book_room.feature:8
+1 scenario (1 undefined)
+1 step (1 undefined)
+0m0.001s
+
+You can implement step definitions for undefined steps with these snippets:
+
+Given /^a hotel with "([^"]*)" rooms and "([^"]*)" bookings$/ do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
+

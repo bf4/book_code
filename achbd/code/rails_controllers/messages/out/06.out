@@ -1,0 +1,68 @@
+(in /Users/dchelimsky/projects/ruby/rspec-book/ACHBD.git/Book/code/rails_controllers/messages-new/06)
+
+MessagesController
+  POST create
+    creates a new message (PENDING: drive out redirect)
+    saves the message (PENDING: Not Yet Implemented)
+    redirects to the Messages index (FAILED - 1)
+
+Finished in 0.01398 seconds
+3 examples, 1 failure, 2 pending
+
+Pending:
+  MessagesController POST create creates a new message
+    # drive out redirect
+    # ./spec/controllers/messages_controller_spec.rb:5
+  MessagesController POST create saves the message
+    # Not Yet Implemented
+    # ./spec/controllers/messages_controller_spec.rb:13
+
+1) MessagesController POST create redirects to the Messages index
+    Failure/Error: post :create
+    Missing template messages/create with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :builder, :rxml, :erb]} in view paths "#<RSpec::Rails::ViewRendering::PathSetDelegatorResolver:0x1036ec2c0>"
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_view/paths.rb:14:in `find'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_view/lookup_context.rb:79:in `find_template'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_view/base.rb:186:in `__send__'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_view/base.rb:186:in `find_template'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_view/render/rendering.rb:45:in `_determine_template'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_view/render/rendering.rb:23:in `render'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:114:in `_render_template'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:92:in `render'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rendering.rb:17:in `render'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:39:in `render'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:39:in `render'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:77:in `cleanup_view_runtime'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activerecord-3.0.0.rc/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:38:in `render'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/base.rb:145:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rendering.rb:11:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/callbacks.rb:18:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:433:in `_run__1235077561__process_action__1623385099__callbacks'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:408:in `send'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:88:in `send'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:88:in `run_callbacks'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:48:in `__send__'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:48:in `instrument'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rescue.rb:8:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/base.rb:114:in `process'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:40:in `process'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/testing.rb:12:in `process_with_new_base_test'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/test_case.rb:392:in `process'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/test_case.rb:335:in `post'
+    # ./spec/controllers/messages_controller_spec.rb:17
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:212:in `inject'
+    # ./spec/controllers/messages_controller_spec.rb:3
+

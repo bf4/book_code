@@ -1,0 +1,11 @@
+# language:en
+Feature: Book room
+  In order to attract more people
+  Travelers should be able to book on the web
+
+  Scenario: Successful booking                    # features/book_room.feature:6
+    Given a hotel with "5" rooms and "0" bookings # features/step_definitions/hotel_steps.rb:1
+
+1 scenario (1 passed)
+1 step (1 passed)
+0m0.002s

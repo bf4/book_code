@@ -1,0 +1,17 @@
+task :default do
+  # Dir.chdir("01") do
+    # `rake cucumber > ../out/01.out`
+  # end
+  # Dir.chdir("02") do
+    # `rake cucumber > ../out/02.out`
+  # end
+  # Dir.chdir("04") do
+    # `rake cucumber > ../out/04.out`
+  # end
+  # Dir.chdir("05") do
+    # `rake cucumber > ../out/05.out`
+  # end
+  Dir.chdir("06") do
+    `rake cucumber > ../out/06.out`
+  end
+end

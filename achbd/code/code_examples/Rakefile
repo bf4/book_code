@@ -1,0 +1,7 @@
+require 'rake'
+
+task :default do
+  `rspec stack_spec.rb -fd > stack_spec.out`
+  `rspec shouldless_stack_spec.rb -fd > shouldless_stack_spec.out`
+  `rspec pizza.rb -fd > pizza.out`
+end

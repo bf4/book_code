@@ -1,0 +1,10 @@
+Stack
+  #peek
+    returns the top element
+    does not remove the top element
+  #pop
+    returns the top element
+    removes the top element
+
+Finished in 0.00157 seconds
+4 examples, 0 failures

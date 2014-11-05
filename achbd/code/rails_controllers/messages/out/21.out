@@ -1,0 +1,2 @@
+Failure/Error: response.should render_template("new")
+expecting <"new"> but rendering with <"">

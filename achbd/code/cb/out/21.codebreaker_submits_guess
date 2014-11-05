@@ -1,0 +1,10 @@
+14 scenarios (14 undefined)
+42 steps (14 undefined, 28 passed)
+0m0.024s
+
+You can implement step definitions for undefined steps with these snippets:
+
+Then /^the mark should be "([^"]*)"$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+

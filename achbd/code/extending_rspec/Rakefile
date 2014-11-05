@@ -1,0 +1,5 @@
+task :default do
+  # `rspec focused_example.rb -fd > focused_example.out`
+  # `rspec focused_group.rb -fd > focused_group.out`
+  `rspec exclusion_filter.rb -fd > exclusion_filter.out`
+end

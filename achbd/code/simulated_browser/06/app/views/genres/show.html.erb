@@ -1,0 +1,8 @@
+<%=h @genre.name %>
+
+<%= @genre.movies.count %> movie
+
+<% @genre.movies.each do |movie| %>
+  <%= link_to movie.title, movie %>
+<% end %>
+

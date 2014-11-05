@@ -1,0 +1,12 @@
+Newspaper
+  should be black
+  should be white
+  should be read all over (PENDING: Not Yet Implemented)
+
+Pending:
+  Newspaper should be read all over
+    # Not Yet Implemented
+    # ./newspaper_spec.rb:17
+
+Finished in 0.00191 seconds
+3 examples, 0 failures, 1 pending

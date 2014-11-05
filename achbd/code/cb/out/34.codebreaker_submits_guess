@@ -1,0 +1,5 @@
+expected ["Welcome to Codebreaker!", "Enter guess:", "-+"] to include "+-" 
+
+expected ["Welcome to Codebreaker!", "Enter guess:", "-++"] to include "++-"
+
+expected ["Welcome to Codebreaker!", "Enter guess:", "--+"] to include "+--" 

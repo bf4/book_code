@@ -1,0 +1,26 @@
+Feature: code-breaker starts game
+
+  As a code-breaker
+  I want to start a game
+  So that I can break the code
+
+  Scenario: start game
+    Given I am not yet playing
+    When I start a new game
+    Then I should see "Welcome to Codebreaker!"
+    And I should see "Enter guess:"
+
+1 scenario (1 undefined)
+4 steps (3 undefined, 1 passed)
+0m0.002s
+
+You can implement step definitions for undefined steps with these snippets:
+
+When /^I start a new game$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see "([^"]*)"$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+

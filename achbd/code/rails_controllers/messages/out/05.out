@@ -1,0 +1,5 @@
+Failure/Error: post :create, :message => { "text" => "a quick brown fox" }
+Missing template messages/create with {
+    :locale=>[:en, :en], 
+    :handlers=>[:rhtml, :erb, :rxml, :builder, :rjs], 
+    :formats=>[:html]} in view paths "#<RSpec::Rails::ViewRendering::PathSetDelegatorResolver:0x1036f9588>"

@@ -1,0 +1,14 @@
+You can implement step definitions for undefined steps with these snippets:
+
+Given /^a genre named Comedy$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+When /^I create a movie Caddyshack in the Comedy genre$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^Caddyshack should be in the Comedy genre$/ do
+  pending # express the regexp above with the code you wish you had
+end
+

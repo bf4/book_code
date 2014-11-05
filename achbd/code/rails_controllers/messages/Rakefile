@@ -1,0 +1,8 @@
+task :default do
+  # %w[01 02 03 04 05 06 08 10 11 12 16 19 22 25 26 27 28]
+  %w[28].each do |dir|
+    Dir.chdir(dir) do
+      `rake spec:controllers > ../out/#{dir}.out`
+    end
+  end
+end

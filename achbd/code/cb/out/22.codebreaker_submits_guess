@@ -1,0 +1,5 @@
+    Scenarios: no matches
+      | code | guess | mark |
+      | 1234 | 5555  |      |
+      expected ["Welcome to Codebreaker!", "Enter guess:"] to include ""
+                  (Spec::Expectations::ExpectationNotMetError)

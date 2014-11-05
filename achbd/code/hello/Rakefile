@@ -1,0 +1,9 @@
+task :run do
+  %w[3 4 5].each do |version|
+    Dir.chdir(version) do
+      `cucumber features/greeter_says_hello.feature >> ../out/#{version}.feature`
+    end
+  end
+end
+
+task :default => :run

@@ -1,0 +1,6 @@
+@wip
+Scenario: Show minutes for times not ending with 00
+  Given a movie
+    uninitialized constant Movie (NameError)
+    ./features/step_definitions/showtime_steps.rb:2:in `/^a movie$/'
+    features/showtime_descriptions.feature:9:in `Given a movie'

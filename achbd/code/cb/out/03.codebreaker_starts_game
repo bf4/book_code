@@ -1,0 +1,15 @@
+  Scenario: start game
+    Given I am not yet playing
+    When I start a new game
+      uninitialized constant Codebreaker (NameError)
+      ./features/step_definitions/codebreaker_steps.rb:5:in `/^I start a new game$/'
+      features/codebreaker_starts_game.feature:9:in `When I start a new game'
+    Then I should see "Welcome to Codebreaker!"
+    And I should see "Enter guess:"
+
+Failing Scenarios:
+cucumber features/codebreaker_starts_game.feature:7 # Scenario: start game
+
+1 scenario (1 failed)
+4 steps (1 failed, 2 undefined, 1 passed)
+0m0.003s

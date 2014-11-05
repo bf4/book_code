@@ -1,0 +1,4 @@
+  Scenario: start game
+    Given I am not yet playing
+    When I start a new game
+      wrong number of arguments (1 for 0) (ArgumentError)

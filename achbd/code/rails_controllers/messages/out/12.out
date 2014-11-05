@@ -1,0 +1,41 @@
+(in /Users/dchelimsky/projects/ruby/rspec-book/ACHBD.git/Book/code/rails_controllers/messages-new/12)
+
+MessagesController
+  POST create
+    creates a new message (FAILED - 1)
+    saves the message
+    redirects to the Messages index
+
+Finished in 0.03397 seconds
+3 examples, 1 failure
+
+1) MessagesController POST create creates a new message
+    Failure/Error: post :create, :message => { "text" => "a quick brown fox" }
+    Mock "Message_1001" received unexpected message :save with (no args)
+    # ./app/controllers/messages_controller.rb:6:in `create'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/base.rb:145:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rendering.rb:11:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/callbacks.rb:18:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:433:in `_run__1235077561__process_action__1623385099__callbacks'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:408:in `send'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:88:in `send'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:88:in `run_callbacks'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:48:in `__send__'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:48:in `instrument'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rescue.rb:8:in `process_action'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/base.rb:114:in `process'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:40:in `process'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/metal/testing.rb:12:in `process_with_new_base_test'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/test_case.rb:392:in `process'
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/actionpack-3.0.0.rc/lib/action_controller/test_case.rb:335:in `post'
+    # ./spec/controllers/messages_controller_spec.rb:9
+    # /Users/dchelimsky/.rvm/gems/ruby-1.8.7-p299@rspec-book/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:212:in `inject'
+    # ./spec/controllers/messages_controller_spec.rb:3
+

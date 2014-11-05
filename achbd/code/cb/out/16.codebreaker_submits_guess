@@ -1,0 +1,5 @@
+Scenarios: no matches
+  | code | guess | mark |
+  | 1234 | 5555  |      |
+  wrong number of arguments (1 for 0) (ArgumentError)
+  ./features/step_definitions/codebreaker_steps.rb:20:in `start'
