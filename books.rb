@@ -74,6 +74,18 @@ books = {
 #   'bkviml' => { name: "The VimL Primer: Edit Like a Pro with Vim Plugins and Scripts" },
 #   'cmelixir' => { name: "Metaprogramming Elixir" },
 # }
+# these aren't pragprog
+# {
+#   'dpir' => { name: "Design Patterns in Ruby", source_code: "http://designpatternsinruby.com/extras/dpir_code.zip" },
+# }
+# these have no source code
+# {
+#   'ktmack2' => { name: "Mac Kung Fu (2nd edition): Over 400 Tips, Tricks, Hints, and Hacks for Apple OS X" },
+#   'd-kegrap' => { name: "Growing Rails Applications in Practice" },
+#   'd-dbback' => { name: "Building Backbone Plugins" },
+#   'agcr' => { name: "Confident Ruby" },
+#   'ltp2' => { name: "Learn to Program (2nd edition)" },
+# }
 require 'fileutils'
 def in_dir(dirname, &block)
   FileUtils.mkdir_p(dirname)
