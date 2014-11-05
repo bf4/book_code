@@ -1,0 +1,48 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<h3>Add A Lunch Restaurant</h3>
+
+<%= error_messages_for 'venue' %>
+
+<% form_tag :action => 'create' do %>
+
+<div class="highlighted-form">
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><%= text_field('venue', 'name') %></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><%= text_field('venue', 'address_one') %></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><%= text_field('venue', 'address_two') %></td>
+		</tr>
+		<tr>
+			<td>City:</td>
+			<td><%= text_field('venue', 'city') %></td>
+		</tr>
+		<tr>
+			<td>State and Zip:</td>
+			<td>
+				<%= text_field('venue', 'state', :size => 3) %>
+				<%= text_field('venue', 'zip_code', :size => 6) %>
+			</td>
+		</tr>		
+	</table>
+</div>
+
+<div>
+	<%= submit_tag 'Create' %>
+</div>
+
+<% end %>
+

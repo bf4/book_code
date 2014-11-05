@@ -1,0 +1,20 @@
+# LDAP Connectivity.  Tailor this file to meet your own needs.
+development:
+  port: 10636
+  auth:
+    method: simple
+    username: uid=admin,ou=system
+    password: RailsRulez
+  host: localhost
+  encryption: simple_tls
+  basedn: dc=railssecurity,dc=org
+  
+test:
+  port: 10636
+  auth:
+    method: simple
+    username: uid=admin,ou=system
+    password: RailsRulez
+  host: localhost
+  encryption: simple_tls
+  basedn: dc=railssecurity,dc=test 

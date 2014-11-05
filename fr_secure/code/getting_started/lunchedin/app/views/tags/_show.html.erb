@@ -1,0 +1,3 @@
+<% for tag in tags %>
+	<%= link_to tag.name, {:action => :tag, :id => tag.id} %>
+<% end %>

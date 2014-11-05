@@ -1,0 +1,8 @@
+Dear <%= @event.hosted_by.first_name %> <%= @event.hosted_by.last_name %>,
+
+Thanks for using LunchedIn to organize your event!
+
+Please respond to this email and tell us about <%= @event.venue.name %>.
+
+This message is about:
+[<%= @event.venue.name %>=<%= @event.venue.id %>]

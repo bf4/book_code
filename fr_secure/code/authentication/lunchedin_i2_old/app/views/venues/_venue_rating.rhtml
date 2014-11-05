@@ -1,0 +1,23 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<div id="venue-rating">
+	<% unless @venue.has_user_rated?(session[:user_id]) %>
+	<%= link_to_remote "I love it", 
+		{:update => 'venue-rating',
+	 	:url => { :action => 'rate', :id => @venue.id, :score => 1 }},
+	 	{:style => 'color:green'} %>
+	|
+	<%= link_to_remote "I hate it", 
+		{:update => 'venue-rating',
+	 	:url => { :action => 'rate', :id => @venue.id, :score => 0 }},
+	 	{:style => 'color:red'} %>			
+	<% else %>
+		<%= approval_rating(@venue) %>
+	<% end %>
+</div>

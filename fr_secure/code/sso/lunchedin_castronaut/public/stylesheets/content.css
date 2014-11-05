@@ -1,0 +1,80 @@
+
+body { font-family: "Lucida Grande", "Arial"; }
+table { border: none; }
+h1, h2, h3, h4 { }
+img { border: none; }
+
+dl { margin: 0; padding: 0; }
+dt { float: left; }
+dd { text-align: right; }
+
+a:link, a:visited, a:hover, a:active { color: #000000; }
+a:hover { text-decoration: none; }
+
+h1 {
+  border-top: 1px solid #cccccc; 
+  border-bottom: 1px solid #cccccc;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 16px;
+}
+
+.highlighted-form {
+	padding: 16px;
+	border: 1px solid #f6e69f; 
+	background: #fbf6db;
+	width: 500px;	
+}
+
+.highlighted-tags { padding: 10px; border: 1px solid #D2EEF5; background: #DBF1F7; }
+.tags { width: 225px; float: right;	 }
+.tags a { margin: 6px 4px 6px 6px }
+
+.tags form { text-align: right; padding: 10px; }
+.errorExplanation {}
+.errorExplanation h2 { padding-left: 0px;	font-size: 14px; color: #C4021B; }
+.errorExplanation p, .errorExplanation li { color: #999999; }
+form table td div.fieldWithErrors { display: inline; }
+.notice { padding: 14px; text-align: center; color: red; }
+
+div.step { float: right; color: orange; }
+
+.venue-update { margin-top: 14px; text-align:right; font-size: 12px; }
+td.label { text-align: right; padding-right: 8px; font-weight: bold; }
+form table td { white-space: nowrap; }
+
+.comment {
+	border: 1px solid #cccccc;
+	padding: 10px 10px 5px 10px;
+	width: 512px;
+	margin-bottom: 12px;
+}
+
+.comment h4 { margin: 0;}
+.comment p { color: #333333; }
+.comment-meta { font-size: 12px; text-align: right; }
+.comment-form { margin-top: 24px; }
+.comment-form input, .comment-form textarea { margin-top: 8px; }
+.comment-delete-link { float: right; }
+.venue-item { border: 1px solid #cccccc; margin-top: 10px; padding: 10px; }
+.venue-item h3 { margin-top: 0; }
+.venue-address { text-align: right; }
+
+#venue-rating { float: right; font-size: 12px; font-style: italic; }
+#venue-rating a { margin-left: 6px; margin-right: 6px; }
+#recent-comments { float: right; }
+#recent-comments .comment { width: 400px; }
+
+.welcome-links, .welcome-tags { padding: 16px; width: 300px; }
+.welcome-links { border: 1px solid #f6e69f; background: #fbf6db; }
+.welcome-tags { margin-top: 16px; border: 1px solid #809fff; background: #bfcfff;  }
+.welcome-tags a { margin: 6px 4px 6px 6px }
+
+.event { background-color: #f2f2f2; padding: 10px 10px 10px 10px; margin-bottom: 14px; }
+.event h4 { margin: 0 0 8px 0; }
+.event dt, .event dd { font-size: 12px; }
+.event .label { font-weight: bold; margin-right: 6px; }
+.event p { font-size: 12px; color: #666666; }
+
+#attendees { margin-bottom: 12px; }
+#attendees div { background-color: #f2f2f2; padding: 8px; margin: 8px 0 8px 0; }

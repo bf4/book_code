@@ -1,0 +1,42 @@
+<!-- START:notice -->
+<% if flash[:notice] %>
+<div class="notice">
+	<%= h(flash[:notice]) %>
+</div>
+<% end %>
+<!-- END:notice -->
+
+<!-- START:openid -->
+<!-- Standard Login -->
+<div style="margin-top:14px">
+<% form_tag :controller => 'session', :action => "check_login" do %>
+  <label for="user_user_name">Username</label>
+    <%= text_field 'user', 'username' %>
+  <br/>
+  <label for="user_password">Password</label>
+    <%= password_field 'user', 'password' %>
+  <br/>  
+    <%= submit_tag 'Login' %>
+<% end %>
+</div>
+
+<!-- Added for OpenID -->
+<div>
+  Or you can login with your OpenID
+</div>
+
+<div style="margin-top:14px">
+<% form_tag :controller => 'session', :action => "begin_openid" do %>
+  <label for="user_user_name">OpenID </label>
+    <!-- We'll use the standard 'openid_identifier' name so that User 
+         agents that are OpenID aware can deal with it accordingly -->
+    <%= text_field_tag 'openid_identifier', "", :size => 30 %>
+  <br/>
+    <%= submit_tag 'Login' %>
+<% end %>
+</div>
+<!-- END:openid -->
+
+<div>
+	<%= link_to "Register", new_user_path %>
+</div>

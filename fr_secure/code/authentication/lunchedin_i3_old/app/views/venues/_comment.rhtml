@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<div class="comment" id="comment_<%= comment.id %>">
+	<% if @user && @user.role.name == 'admin' %>
+		<div class="comment-delete-link">
+			<%= link_to_remote 'mark as spam', :url => {
+				:controller => 'comments', :action => 'remove', :id => comment.id }  %>
+		</div>
+	<% end %>
+	<h4><%= h(comment.subject || "Comment") %></h4>
+	<p><%= h(comment.body) %></p>
+	<div class="comment-meta">
+		<i><%= h(comment.user ? comment.user.user_name : "anonymous") %></i>
+		wrote <%= h(time_ago_in_words(comment.created_on)) %> ago
+	</div>	
+</div>

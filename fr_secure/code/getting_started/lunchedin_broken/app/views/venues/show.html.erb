@@ -1,0 +1,49 @@
+	
+	<h3><%= @venue.name %></h3>
+	<%= render 'tags/cloud' %>
+
+	<div class="highlighted-form">
+		<!-- START:has_user_rated -->
+    <div id="venue-rating">
+   	  <% unless @venue.has_user_rated?(session[:user_id]) %>
+   	    <%= render :partial => 'ratings/new' %>
+   	  <% else %>
+   	    <%= render :partial => 'ratings/show' %>
+   	  <% end %>
+    </div>
+		<!-- END:has_user_rated -->
+		<table>
+			<tr>
+				<td class="label">Address:</td>
+				<td><%= @venue.address_one %></td>
+			</tr>
+			<tr>
+				<td class="label">&nbsp;</td>
+				<td><%= @venue.address_two %></td>
+			</tr>
+			<tr>
+				<td class="label">Zip Code:</td>
+				<td><%= @venue.zip_code %></td>
+			</tr>			
+			<tr>
+				<td class="label">Phone:</td>
+				<td><%= @venue.phone_number %></td>
+			</tr>
+			<tr>
+				<td class="label">Fax:</td>
+				<td><%= @venue.fax_number %></td>
+			</tr>
+		</table>
+		<div class="venue-update">
+			<%= link_to('schedule lunch here', new_event_path(:venue_id => @venue)) %>
+		</div>
+	</div>
+	
+	<h4>What is everyone saying?</h4>
+	
+	<div id="comments">
+		<%= render :partial => 'comments/comment', :collection => @venue.comments %>		
+	</div>
+	
+	<%= render :partial => 'comments/new', :locals => { :commentable => @venue }%>
+	

@@ -1,0 +1,6 @@
+<div id="venue-<%= venue.id %>" class="venue-item">
+	<h3><%= link_to(venue.name, :action => 'show', :id => venue.id) %></h3>
+	<div class="venue-address">
+		<%= venue.address_one %> <%= venue.city %>, <%= venue.state %> <%= venue.zip_code %>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<% @page_title = test_suite_name @suite_path -%>
+<script type="text/javascript">
+<!--
+function openSuite(selector) {
+	var suite = selector.options[selector.selectedIndex].value;
+	if(suite == "header") return;
+	if(top.location.href != location.href) //inside a frame
+		top.location =  "<%= url_for :action => :support_file %>/TestRunner.html?test=tests" + suite
+	else
+		window.location = "<%= url_for :action => :test_file, :testname => '' %>" + suite
+}
+//-->
+</script>
+<select onchange="openSuite(this)">
+	<option value="header">Suites:</option>
+<% for name, path in test_suites @suite_path -%>
+	<option value="<%= path %>"><%= name%></option>
+<% end -%>
+</select>
+
+<table>
+	<tr><th><%=  @page_title %></th></tr>
+<% for name, path in test_cases @suite_path -%>
+	<tr><td><%= link_to_test_case name, path %></td></tr>
+<% end -%>
+</table>

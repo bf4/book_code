@@ -1,0 +1,22 @@
+#!RESULT OK
+#!CONNECTION ldap://localhost:10636
+#!DATE 2008-08-01T13:22:56.608
+dn: uid=wally,dc=railssecurity,dc=org
+changetype: add
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: wally
+sn: webcoder
+cn: wally
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10636
+#!DATE 2008-08-01T13:24:31.966
+dn: uid=wally,dc=railssecurity,dc=org
+changetype: modify
+add: userPassword
+userPassword:: e1NTSEF9RjNDNG9hdGIxME84eEg1djFtRFRDaDcvVmtPR1F5N2dEODFSNlE9PQ=
+ =
+-

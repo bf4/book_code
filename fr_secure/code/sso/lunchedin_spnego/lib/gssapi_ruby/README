@@ -1,0 +1,10 @@
+Build Instructions:
+
+
+OS X:
+
+  > ruby extconf.rb
+  > make
+  > sudo make install
+  
+  

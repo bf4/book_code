@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Lunched In:  because Lunch is the most important meeting</title>
+	<%= stylesheet_link_tag 'layout', 'content' %>
+	<%= javascript_include_tag :defaults %>	
+</head>
+<body>
+	
+<div id="content">	
+	<div id="session-bar">		
+	<% if session[:user_id] %>
+		<%= link_to 'sign out', '/logout' %>
+	<% else %>
+		<%= link_to 'login', '/login' %>
+	<% end %>
+	</div>	
+	<div id="header">
+		<%= link_to(image_tag("logo.png"), root_path) %>
+	</div>
+	
+	<% unless @hide_tabs %>
+  <div id="toolbar">
+		<ul id="tablist">
+			<li><%= link_to 'Have Lunch', venues_path %></li>
+			<% if session[:user_id] %>
+			  <li><%= link_to 'My Profile', user_path(session[:user_id]) %></li>
+			<% else %>
+			  <li><%= link_to 'Create A Profile', new_user_path %></li>
+			<% end %>
+		</ul>
+		<div class="lower_toolbar">&nbsp;</div>
+		<div class="lower_toolbar_gradient">
+			&nbsp;
+		</div>
+	</div>
+	<% end %>
+
+	<div id="body">
+<%= yield :layout -%>
+	</div>
+	<div id="footer">
+		<ul>
+			<li>&copy; 2008</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

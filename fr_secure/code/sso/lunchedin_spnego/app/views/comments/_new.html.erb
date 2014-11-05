@@ -1,0 +1,11 @@
+<div class="comment-form" id="comment-form">
+<% form_remote_for :comment, Comment.new, 
+		:url => { :controller => 'comments', :venue_id => commentable.id, :action => 'create' }, 
+		:method => :post do |f| %>
+	<div>Subject:</div>
+	<%= f.text_field :subject %>
+	<div>Comment:</div>
+	<%= f.text_area :body, :cols => 72, :rows => 10 %>
+	<div><%= submit_tag "Create" %></div>
+<% end %>
+</div>

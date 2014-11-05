@@ -1,0 +1,41 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<h3>Have Lunch with Lunched In</h3>
+
+<% if flash[:notice] %>
+<span style="color:red;padding-bottom:12px;"><%= flash[:notice] -%></span>
+<% end %>
+
+<div id="recent-comments">
+	<%= render :partial => 'comment', :collection => @comments %>
+</div>
+
+<div class="welcome-links">
+	<%= link_to('Find somewhere to eat', :controller => 'venues', :action => 'search') %>
+	<br/><br/>
+	<%= link_to('Know somewhere great to eat?', :controller => 'venues', :action => 'new') %>	
+</div>
+
+<div class="welcome-tags">
+	<% for tag in @tags %>
+		<%= link_to(tag.name, :controller => 'venues', :action => 'tag', :id => tag.name) %>
+	<% end %>
+</div>
+<!-- 
+<div id="CrossSiteScriptingDiv">
+  <% 
+  x = <<-FOO
+  <script>alert('The actual exploits will be covered in the Cross Site Scripting Chapter, this particular example just shows the ability to call the javascript')</script>
+  FOO
+   %>
+   <!-- <%= x %> -->
+   <%= h x %>
+</div>
+
+<!-- 

@@ -1,0 +1,11 @@
+<% remote_form_for :attendee, Attendee.new, 
+	  :url => {:controller => 'attendees', :action => 'create', :event_id => params[:id]}, 
+	  :method => :post do |f| %>
+		
+	<label style="font-weight:bold">Name:</label>
+	<%= f.text_field :name, :size => 15 %>
+	<label style="font-weight:bold">Email:</label>	
+	<%= f.text_field :email %>	
+	
+	<%= submit_tag 'save' %>
+<% end %>

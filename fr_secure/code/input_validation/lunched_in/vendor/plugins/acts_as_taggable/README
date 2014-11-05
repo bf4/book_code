@@ -1,0 +1,13 @@
+Acts As Taggable
+=================
+
+Proof-of-concept plugin intending to demonstrate ActiveRecord's 
+polymorphic associations. It's not intended for production use and no
+enhancement tickets are being accepted.
+
+To add tagging to your own application, either build your own models
+based on this pattern, or check out one of the various community 
+supported plugins:
+
+http://agilewebdevelopment.com/plugins/search?search=acts_as_taggable
+

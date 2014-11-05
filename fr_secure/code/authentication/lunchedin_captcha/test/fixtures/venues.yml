@@ -1,0 +1,40 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  name: Mi Cocina 
+  address_one: 7001 Parkwood
+  address_two:
+  city: Plano
+  state: TX
+  zip_code: 75024
+  phone_number: 4694501111
+  fax_number:
+  price: 2
+  ratings_count: 10
+  created_at: 2007-11-27 14:18:26
+  updated_at: 2007-11-27 14:18:26
+  
+two:
+  id: 2
+  name: Potbelly
+  address_one: 7002 Parkwood
+  address_two:
+  city: Plano
+  state: TX
+  zip_code: 75024
+  phone_number: 4694501111
+  fax_number:
+  price: 2
+  created_at: 2007-11-27 14:18:26
+  updated_at: 2007-11-27 14:18:26
+
+bobs:
+  id: 3
+  name: "Bob's Steak & Chop House"
+  address_one: The Shops At Legacy
+  address_two: "5760 Legacy Drive, Ste. B-1"
+  zip_code: 75024
+  city: Plano
+  state: TX
+  created_at: 2007-11-27 14:18:26
+  updated_at: 2007-11-27 14:18:26

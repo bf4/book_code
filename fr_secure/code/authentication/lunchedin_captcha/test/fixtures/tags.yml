@@ -1,0 +1,48 @@
+fajitas:
+  id: 1
+  name: fajitas
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+tacos:
+  id: 2
+  name: tacos
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+margaritas:
+  id: 3
+  name: margaritas
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+flan:
+  id: 4
+  name: flan
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+martinis:
+  id: 5
+  name: martinis
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+steak:
+  id: 6
+  name: steak
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+filet:
+  id: 7
+  name: filets
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+lobster:
+  id: 8
+  name: lobster
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  

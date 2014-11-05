@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  event_id: 1
+  name: Ben Poweski
+  email: bpoweski@gmail.com
+  status: attending
+  created_at: 2007-11-27 14:33:48
+  updated_at: 2007-11-27 14:33:48
+two:
+  id: 2
+  event_id: 1
+  name: David Raphael
+  email: draphael@gmail.com
+  status: attending  
+  created_at: 2007-11-27 14:33:48
+  updated_at: 2007-11-27 14:33:48

@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  name: Post Rubcon Beerfest
+  notes: We\'ll be at the table with the Duvel pitchers
+  status: planning
+  user_id: 3
+  venue_id: 1
+  occurs_on: 2008-6-1
+  created_at: 2007-11-27 14:18:43
+  updated_at: 2007-11-27 14:18:43
+  
+two:
+  id: 2
+  name: Wine at Dave's House
+  notes: We\'ll be cracking open some nice cabs and eating cheese that smells like feet
+  status: organized
+  user_id: 2
+  venue_id: 2
+  occurs_on: 2008-6-2
+  created_at: 2007-11-27 14:18:43
+  updated_at: 2007-11-27 14:18:43

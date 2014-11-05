@@ -1,0 +1,52 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+	
+	<h3><%= @venue.name %></h3>
+	<%= render 'shared/tags' %>
+
+	<div class="highlighted-form">
+		<%= render :partial => 'venue_rating' %>
+		<table>
+			<tr>
+				<td class="label">Address:</td>
+				<td><%= @venue.address_one %></td>
+			</tr>
+			<tr>
+				<td class="label">&nbsp;</td>
+				<td><%= @venue.address_two %></td>
+			</tr>
+			<tr>
+				<td class="label">Zip Code:</td>
+				<td><%= @venue.zip_code %></td>
+			</tr>			
+			<tr>
+				<td class="label">Phone:</td>
+				<td><%= @venue.phone_number %></td>
+			</tr>
+			<tr>
+				<td class="label">Fax:</td>
+				<td><%= @venue.fax_number %></td>
+			</tr>
+		</table>
+		<div class="venue-update">
+			<%= link_to('schedule lunch here', 
+				:controller => 'event', 
+				:action => 'schedule', 
+				:id => @venue.id) %>
+		</div>
+	</div>
+	
+	<h4>What is everyone saying?</h4>
+	
+	<div id="comments">
+		<%= render :partial => 'comment', :collection => @venue.comments %>		
+	</div>
+	
+	<%= render :partial => 'shared/add_comment', :locals => { :commentable => @venue }%>
+	

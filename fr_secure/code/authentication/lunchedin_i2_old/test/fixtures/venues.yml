@@ -1,0 +1,23 @@
+one:
+  id: 1
+  name: Mi Cocina 
+  address_one: 7001 Parkwood
+  address_two:
+  city: Plano
+  state: TX
+  zip_code: 75024
+  phone_number: 4694501111
+  fax_number:
+  price: 2
+  
+two:
+  id: 2
+  name: Potbelly
+  address_one: 7002 Parkwood
+  address_two:
+  city: Plano
+  state: TX
+  zip_code: 75024
+  phone_number: 4694501111
+  fax_number:
+  price: 2

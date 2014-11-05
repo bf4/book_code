@@ -1,0 +1,18 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<div class="tags">
+	<div id="tag-cloud" class="highlighted-tags">
+		<% unless @venue.tags.empty? %>
+			<%= render :partial => 'shared/tag_cloud', :locals => { :tags => @venue.tags } %>
+		<% else %>
+			<i style="text-align:center">Be the first to tag it!</i>
+		<% end %>
+	</div>
+	<%= render :partial => 'shared/add_tag', :locals => { :id => @venue.id } %>
+</div>

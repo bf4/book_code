@@ -1,0 +1,15 @@
+<!-- START:notice -->
+<% if flash[:notice] %>
+<div class="notice">
+	<%= h(flash[:notice]) %>
+</div>
+<% end %>
+<!-- END:notice -->
+
+<div style="margin-top:14px">
+<% form_tag :controller => 'session', :action => "check_login" do %>
+  <br/>  
+    <%= submit_tag 'Login with Integrated Kerberos Login' %>
+<% end %>
+</div>
+

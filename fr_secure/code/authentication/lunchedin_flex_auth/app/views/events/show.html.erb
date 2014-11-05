@@ -1,0 +1,37 @@
+<h2>Your Event</h2>
+
+<div class="highlighted-form">
+	<table>
+	  <tr>
+	    <td style="font-weight:bold">When</td>
+	    <td><%= @event.occurs_on %></td>
+	  </tr>
+	  <tr>
+	    <td style="font-weight:bold">Status</td>
+	    <td id="event_status"><%= @event.status %></td>
+	  </tr>	  
+		<tr>
+			<td style="font-weight:bold;padding-right:20px">Hosted By</td>
+			<td><%= @event.hosted_by.first_name %> <%= @event.hosted_by.last_name %></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<p style="color:black;font-style:italic"><%= @event.notes %></p>
+			</td>
+		</tr>
+	</table>
+	<% unless @event.status == 'organized' %>
+	<div id="finished_link" style="float:right">
+		<%= link_to_remote("i'm finished", :url => {:action => 'finished', :id => @event}) %>
+	</div>
+	<br/>
+	<% end %>
+</div>
+
+<div id="attendee_form" class="highlighted-form" style="margin-top:12px">
+  <%= render :partial => 'attendees/new', :locals => {:event => @event} %>
+</div>
+
+<div id="attendees">
+  <%= render :partial => 'attendees/attendee', :collection => @event.attendees %>
+</div>

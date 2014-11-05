@@ -1,0 +1,58 @@
+# START:root
+dn: dc=railssecurity, dc=com
+dc: railssecurity
+objectClass: organization
+objectClass: dcObject
+o: railssecurity.com
+# END:root
+
+# START:ou
+dn: ou=people, dc=railssecurity, dc=com
+ou: people
+objectClass: organizationalUnit
+# END:ou
+
+# START:user
+dn: cn=wally,ou=people, dc=railssecurity, dc=com
+mail: wally@yahoo.com
+userPassword:: cGFzc3dvcmQ=
+uid: wally
+ou: people
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: World
+cn: Wally World
+cn: wally
+# END:user
+
+# START:user
+dn: cn=bob,ou=people, dc=railssecurity, dc=com
+mail: bob@bobsworld.com
+userPassword:: aGVsbG8=
+uid: bob
+ou: people
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: World
+cn: Bob World
+cn: bob
+# END:user
+
+# START:user
+dn: cn=dave,ou=people, dc=railssecurity, dc=com
+mail: dave@davesworld.com
+userPassword:: aGVsbG8=
+uid: dave
+ou: people
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: World
+cn: Dave World
+cn: Dave
+# END:user

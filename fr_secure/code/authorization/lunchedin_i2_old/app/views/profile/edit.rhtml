@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<h1>Have lunch with us</h1>
+
+<h2>Edit Profile</h2>
+
+<%= error_messages_for 'user' %>
+
+<% form_tag :action => 'save_my_profile' do %>
+<%= render :partial => 'form' %>
+
+<div style="padding: 10px;">
+  <%= submit_tag 'Save' %>
+</div>
+<% end %>
+

@@ -1,0 +1,6 @@
+<% form_remote_tag(	
+    :url => {:controller => 'tags', :action => 'create', :venue_id => venue.id}, 
+    :method => :post ) do %>
+	<%= text_field_tag :tag, '', :id => 'new_tag', :size => 10 %>
+	<%= submit_tag "tag it" %>
+<% end %>

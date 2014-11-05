@@ -1,0 +1,24 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<!-- This is obviously designed for functionality - not beauty. -->
+<% for controller in @controllers %>
+<table style="width: 100%; font-size: 10px">
+  <th style="background-color: #FFCF5C"><%= controller %></th>
+  <% for method in controller.access_list.keys %>
+  <tr style="background-color: #FFFB93">
+    <td>#<%= method %></td>
+  </tr>
+    <% if !controller.access_list[method.to_sym].nil? %>
+      <% for role in controller.access_list[method.to_sym] %>
+         <tr><td style="padding-left: 15px;">:<%= role %> </td></tr>
+      <% end %>
+    <% end %>
+  <% end %>
+</table>
+<% end %>

@@ -1,0 +1,40 @@
+<h3>Add A Lunch Restaurant</h3>
+
+<%= error_messages_for 'venue' %>
+
+<% form_for :venue, @venue, :url => venues_path, :method => :post do |f| %>
+<div class="highlighted-form">
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><%= f.text_field :name %></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><%= f.text_field :address_one %></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><%= f.text_field :address_two %></td>
+		</tr>
+		<tr>
+			<td>City:</td>
+			<td><%= f.text_field :city %></td>
+		</tr>
+		<tr>
+			<td>State and Zip:</td>
+			<td>
+				<%= f.text_field :state, :size => 3 %>
+				<%= f.text_field :zip_code, :size => 6 %>
+			</td>
+		</tr>		
+	</table>
+  <div style="text-align: right">
+	 <%= submit_tag 'Create' %>
+  </div>	
+</div>
+
+
+
+<% end %>
+

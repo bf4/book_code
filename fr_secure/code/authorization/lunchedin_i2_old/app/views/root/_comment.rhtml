@@ -1,0 +1,18 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<div class="comment" id="comment-<%= comment.id %>">
+	<h4><%= comment.subject || "Comment" %></h4>
+	<p><%= comment.body %></p>
+	<div class="comment-meta">
+		<i><%= comment.user ? comment.user.user_name : "anonymous" %></i> wrote about
+			<%= link_to(comment.commentable.name, 
+				:controller => 'venues', :action => 'show', :id => comment.commentable.id) %>, 
+			<%= time_ago_in_words(comment.created_on) %> ago
+	</div>	
+</div>

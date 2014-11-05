@@ -1,0 +1,23 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+...
+<div id="venue-rating">
+<a href="#" onclick="new Ajax.Updater('venue-rating', 
+  '/ratings/rate?score=1&amp;venue_id=1', 
+  {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + 
+  encodeURIComponent('43986a596e750503311132c669057d3e089f')}); return false;" 
+  style="color:green">I love it</a>
+|
+<a href="#" onclick="new Ajax.Updater('venue-rating', 
+  '/ratings/rate?score=0&amp;venue_id=1', 
+  {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' +
+  encodeURIComponent('43986a596e750503311132c669057d3e089f')}); return false;" 
+  style="color:red">I hate it</a>
+</div>
+...

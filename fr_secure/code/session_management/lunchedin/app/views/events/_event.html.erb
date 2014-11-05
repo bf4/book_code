@@ -1,0 +1,15 @@
+<div class="event">
+  <dl>
+    <dt>
+      <span class="label">Name:</span>
+      <span><%= link_to(event.name || '<i>no name</i>', event_path(event)) %></span>
+    </dt>
+    <dd>
+      <span class="label">Occurred on:</span>
+      <span style="margin-right: 20px;">
+        <%= event.occurs_on.strftime('%m/%d/%y') %>
+      </span>
+      <span><%= event.status %></span>
+    </dd>
+  </dl>
+</div>

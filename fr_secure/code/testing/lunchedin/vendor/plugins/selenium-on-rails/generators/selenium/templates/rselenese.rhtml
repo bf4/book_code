@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+# It's often a good idea to start the test with 'setup'.
+# See /selenium/setup for more info.
+
+setup
+open '/'
+assert_title 'Home'
+
+# More information about the commands is available at:
+#   http://release.openqa.org/selenium-core/nightly/reference.html
+# See also the RDoc for SeleniumOnRails::TestBuilder.
+#
+# Point the browser to <%= testcase_link %> to see
+# how this test is rendered, or to <%= suite_link %> to
+# run the suite.

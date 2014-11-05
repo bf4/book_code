@@ -1,0 +1,48 @@
+fajitas:
+  id: 1
+  venue_id: 1
+  tag_id: 1
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+tacos:
+  id: 2
+  venue_id: 1
+  tag_id: 2
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+margaritas:
+  id: 3
+  venue_id: 1
+  tag_id: 3
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+flan:
+  id: 4
+  venue_id: 1
+  tag_id: 4
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+martinis:
+  id: 5
+  venue_id: 3
+  tag_id: 5
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+  
+steak:
+  id: 6
+  venue_id: 3
+  tag_id: 6
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57
+
+steak:
+  id: 7
+  venue_id: 3
+  tag_id: 7
+  created_at: 2007-11-27 14:40:57
+  updated_at: 2007-11-27 14:40:57

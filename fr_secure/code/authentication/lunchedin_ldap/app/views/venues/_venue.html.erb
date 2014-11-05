@@ -1,0 +1,7 @@
+<div id="venue-<%= venue.id %>" class="venue-item">
+	<h3><%= link_to(venue.name, venue_path(venue)) %></h3>
+	<div class="venue-address">
+		<%= h(venue.address_one) %> <%= h(venue.city) %>, 
+		<%= h(venue.state) %> <%= h(venue.zip_code) %>
+	</div>
+</div>

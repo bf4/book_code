@@ -1,0 +1,9 @@
+<%= link_to_remote "I love it", 
+  {:update => 'venue-rating',
+	:url => { :controller => 'ratings', :action => 'rate', :id => @venue, :score => 1 }},
+	{:style => 'color:green'} %>
+|
+<%= link_to_remote "I hate it", 
+	{:update => 'venue-rating',
+ 	:url => { :controller => 'ratings', :action => 'rate', :id => @venue, :score => 0 }},
+ 	{:style => 'color:red'} %>

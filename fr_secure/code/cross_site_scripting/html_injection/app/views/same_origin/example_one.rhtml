@@ -1,0 +1,27 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<h1>Example One</h1>
+
+<script type="text/javascript">
+	function loadRemote(host) {
+		var object; 
+		var req = new XMLHttpRequest(); 
+		req.open("GET", host, true); 
+		req.onreadystatechange = function () { 
+		  if (req.readyState == 4) { 
+			alert(req.responseText);
+		    req = null; 
+		  }	
+		}; 
+		req.send(null);
+	}
+</script>
+
+<input type="button" value="localhost:3001" onclick="loadRemote('http://localhost:3001/test.html');"/>
+<input type="button" value="localhost:3000" onclick="loadRemote('http://localhost:3000/test.html');"/>

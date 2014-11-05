@@ -1,0 +1,47 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<h3>Welcome</h3>
+
+<div class="highlighted-form">
+	<table>
+		<tr>
+			<td class="label">Name:</td>
+			<td><%= @user.first_name %> <%= @user.last_name %></td>
+		</tr>
+		<tr>
+			<td class="label">Email:</td>
+			<td><%= @user.email %></td>
+		</tr>
+		<tr>
+			<td class="label">User Name:</td>
+			<td><%= @user.user_name %></td>
+		</tr>
+		<tr>
+			<td class="label">Zip Code:</td>
+			<td><%= @user.zip_code %></td>
+		</tr>		
+	</table>
+</div>
+
+<h3>Comments</h3>
+<% if @user.comments.empty? %>
+	<i>no contacts here</i>
+<% else %>
+	<%= render :partial => 'contact', :collection => @user.contacts %>
+<% end %>
+
+<h3>Past Lunches</h3>
+
+<div id="events">
+<% if @user.events.empty? %>
+	<i>no lunches yet!</i>
+<% else %>
+	<%= render :partial => 'event/event', :collection => @user.events %>
+<% end %>
+</event>

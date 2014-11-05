@@ -1,0 +1,27 @@
+fajitas:
+  venue_id: 1
+  tag_id: 1
+  
+tacos:
+  venue_id: 1
+  tag_id: 2
+    
+margaritas:
+  venue_id: 1
+  tag_id: 3
+  
+flan:
+  venue_id: 1
+  tag_id: 4
+  
+martinis:
+  venue_id: 3
+  tag_id: 5
+  
+steak:
+  venue_id: 3
+  tag_id: 6
+
+steak:
+  venue_id: 3
+  tag_id: 7

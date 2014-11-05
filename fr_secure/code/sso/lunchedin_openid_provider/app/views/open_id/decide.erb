@@ -1,0 +1,16 @@
+<% form_for :decision, :url => 
+    { :controller => :open_id, :action => :decision }, 
+    :method => :post do |f|%>
+    <table>
+      <!-- <tr><td>The following site:</td></tr> -->
+      <tr><td>Do you want to allow the following site</td></tr>
+      <tr><td><%= @openid_request.trust_root %></td></tr>
+      
+      <tr><td>to use the identity?</td></tr>
+      <tr><td><%= h(@openid_request.identity) %></td></tr>
+      <tr><td><%= h(@url_for_user) %></td></tr>      
+
+    </table>
+  <%= f.submit "Yes", :name => "yes", :value => "yes" %>
+  <%= f.submit "No",  :name => "no", :value => "no"  %>
+<% end %>

@@ -1,0 +1,58 @@
+<h1>Have lunch with us</h1>
+
+<h2>Create A Profile</h2>
+
+<%= error_messages_for 'user' %>
+
+<% form_tag :action => 'create' do %>
+
+<div class="highlighted-form">
+  <table class="form">
+    <!-- START_HIGHLIGHT -->
+    <tr>
+      <td class="label">Account Type:</td>
+      <td>
+        <%= radio_button('user', 'type','LDAPUser') %> LDAP 
+        <%= radio_button('user', 'type', 'DbUser') %> Database
+      </td>
+    </tr>
+    <!-- END_HIGHLIGHT -->
+    <tr>
+      <td class="label">User Name:</td>
+      <td><%= text_field('user', 'username', :size => 14) %></td>
+    </tr>
+    <tr>
+      <td class="label">Password:</td>
+      <td><%= password_field('user', 'password', :size => 14) %></td>
+    </tr>
+    <!-- START_HIGHLIGHT -->
+    <% if @user.is_a? DbUser %>
+    <!-- END_HIGHLIGHT -->
+    <tr>
+      <td class="label">Confirm Password:</td>
+      <td><%= password_field('user', 'password_confirmation', :size => 14) %></td>
+    </tr>
+    <tr>
+      <td class="label">First Name:</td>
+      <td><%= text_field('user', 'first_name', :size => 16) %></td>
+    </tr>
+    <tr>
+      <td class="label">Last Name:</td>
+      <td><%= text_field('user', 'last_name', :size => 16) %></td>
+    </tr>
+    <tr>
+      <td class="label">Email:</td>
+      <td><%= text_field('user', 'email') %></td>
+    </tr>
+    <tr>
+      <td class="label">Zip Code:</td>
+      <td><%= text_field('user', 'zip_code', :size => 6) %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+<div style="padding: 10px;">
+  <%= submit_tag 'Create' %>
+</div>
+<% end %>
+

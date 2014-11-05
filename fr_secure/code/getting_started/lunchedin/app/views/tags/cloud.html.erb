@@ -1,0 +1,11 @@
+<div class="tags">
+	<div id="tags_show" class="highlighted-tags">
+		<% unless @venue.tags.empty? %>
+			<%= render :partial => 'tags/show', 
+				:locals => { :tags => @venue.tags } %>
+		<% else %>
+			<i style="text-align:center">Be the first to tag it!</i>
+		<% end %>
+	</div>
+	<%= render :partial => 'tags/new', :locals => { :venue => @venue } %>
+</div>

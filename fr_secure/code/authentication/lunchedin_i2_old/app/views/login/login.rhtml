@@ -1,0 +1,24 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<%= render :partial => 'shared/notice' %>
+<div style="margin-top:14px">
+<% form_tag :action => "check_login" do %>
+  <label for="user_user_name">Username</label>
+    <%= text_field 'user', 'user_name' %>
+  <br/>
+  <label for="user_password">Password</label>
+    <%= password_field 'user', 'password' %>
+  <br/>  
+    <%= submit_tag 'Login' %>
+<% end %>
+</div>
+
+<div>
+	<%= link_to "Register", {:controller => 'profile', :action => 'new'} %>
+</div>

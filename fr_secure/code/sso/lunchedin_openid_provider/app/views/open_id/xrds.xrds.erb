@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xrds:XRDS
+    xmlns:xrds="xri://$xrds"
+    xmlns="xri://$xrd*($v*2.0)">
+  <XRD>
+    <Service priority="0">
+      <% @types.each do |uri| %>
+      <Type><%= uri %></Type>
+      <% end %>
+      <URI><%= url_for(:controller => 'open_id', :only_path => false) %></URI>
+    </Service>
+  </XRD>
+</xrds:XRDS>

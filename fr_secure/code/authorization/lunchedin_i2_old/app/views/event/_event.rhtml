@@ -1,0 +1,16 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<div id="event_<%= event.id %>" class="event">
+	<h4><%= link_to(event.venue.name, :controller => 'event', :action => 'show', :id => event.id) %></h4>
+	<%= simple_format(event.notes) %>
+	<dl>
+		<dt><%= event.occurs_on %></dt>
+		<dd><%= link_to_remote 'remove', :url => { :controller => 'event', :action => 'remove', :id => event.id } %></dd>
+	</dl>
+</div>

@@ -1,0 +1,17 @@
+setup :clear_tables => [:comments], :fixtures => :all
+wait_for_page_to_load(1000)
+open '/login'
+wait_for_page_to_load(1000)
+type 'user_username', 'bob'
+type 'user_password', 'hello'
+click 'commit'
+wait_for_page_to_load(1000)
+
+open '/venues/show/3'
+type 'comment_subject', 'XSS'
+type 'comment_body', 
+  '<SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>'
+click 'document.forms[1].commit'
+pause '1000'
+verify_failure_on_next 'There were no alerts'
+verify_not_alert 'XSS'

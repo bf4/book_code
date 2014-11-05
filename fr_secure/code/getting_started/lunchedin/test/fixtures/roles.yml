@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+admin:
+  id: 1
+  name: admin
+  created_at: 2007-11-27 14:19:48
+  updated_at: 2007-11-27 14:19:48
+  
+user:
+  id: 2
+  name: user
+  created_at: 2007-11-27 14:19:48
+  updated_at: 2007-11-27 14:19:48

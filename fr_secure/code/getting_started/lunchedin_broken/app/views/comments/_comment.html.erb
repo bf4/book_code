@@ -1,0 +1,15 @@
+<div class="comment" id="comment_<%= comment.id %>">
+  <% if @user && @user.role.name == 'admin' %>
+    <div class="comment-delete-link">
+    <%= link_to_remote 'mark as spam', 
+      :url => {:controller => 'comments', :action => 'destroy', :id => comment}, 
+      :method => :delete  %>
+  </div>
+  <% end %>
+  <h4><%= comment.subject || "Comment" %></h4>
+  <p><%= comment.body %></p>
+  <div class="comment-meta">
+    <i><%= comment.user ? comment.user.username : "anonymous" %></i> wrote 
+    <%= time_ago_in_words(comment.created_at)  if comment.created_at %> ago
+  </div>	
+</div>

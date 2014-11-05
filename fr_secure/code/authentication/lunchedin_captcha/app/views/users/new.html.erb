@@ -1,0 +1,56 @@
+<h1>Have lunch with us</h1>
+
+<h2>Create A Profile</h2>
+
+<%= error_messages_for 'user' %>
+
+<% form_tag :action => 'create' do %>
+
+<div class="highlighted-form">
+  <table class="form">
+    <tr>
+      <td class="label">First Name:</td>
+      <td><%= text_field('user', 'first_name', :size => 16) %></td>
+    </tr>
+    <tr>
+      <td class="label">Last Name:</td>
+      <td><%= text_field('user', 'last_name', :size => 16) %></td>
+    </tr>
+    <tr>
+      <td class="label">Email:</td>
+      <td><%= text_field('user', 'email') %></td>
+    </tr>
+    <tr>
+      <td class="label">User Name:</td>
+      <td><%= text_field('user', 'username', :size => 14) %></td>
+    </tr>
+    <tr>
+      <td class="label">Password:</td>
+      <td><%= password_field('user', 'password', :size => 14) %></td>
+    </tr>
+    <tr>
+      <td class="label">Confirm Password:</td>
+      <td><%= password_field('user', 'password_confirmation', :size => 14) %></td>
+    </tr>		
+<!-- START:show_simple_captcha -->
+    <tr>
+      <td class="label">Zip Code:</td>
+      <td><%= text_field('user', 'zip_code', :size => 6) %></td>
+    </tr>
+    <!-- START_HIGHLIGHT -->
+    <tr>
+      <td class="label">Are you human?</td>
+      <td><%= show_simple_captcha(:object => "user",
+                                  :distortion => 'high', 
+                                  :image_style => 'random') %>
+      </td>
+    </tr>
+    <!-- END_HIGHLIGHT -->
+  </table>
+</div>
+<div style="padding: 10px;">
+<%= submit_tag 'Create' %>
+</div>
+<% end %>
+<!-- END:show_simple_captcha -->
+

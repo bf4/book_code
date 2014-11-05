@@ -1,0 +1,5 @@
+environments:
+  - development
+  
+browsers:
+  firefox: '/Applications/Firefox.app/Contents/MacOS/firefox-bin'

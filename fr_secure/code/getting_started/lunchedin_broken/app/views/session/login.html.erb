@@ -1,0 +1,21 @@
+<% if flash[:notice] %>
+<div class="notice">
+	<%= flash[:notice] %>
+</div>
+<% end %>
+
+<div style="margin-top:14px">
+<% form_tag :action => "check_login" do %>
+  <label for="user_user_name">Username</label>
+    <%= text_field 'user', 'username' %>
+  <br/>
+  <label for="user_password">Password</label>
+    <%= password_field 'user', 'password' %>
+  <br/>  
+    <%= submit_tag 'Login' %>
+<% end %>
+</div>
+
+<div>
+	<%= link_to "Register", new_user_path %>
+</div>

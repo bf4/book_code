@@ -1,0 +1,15 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<table>
+  <tr><th colspan="3"><%= @page_title %></th></tr>
+<% for page in ['/fi', '/fo', '/fum'] -%>
+  <tr><td>open</td><td><%= page %></td><td>&nbsp;</td></tr>
+<% end -%>
+  <%= render :partial => 'partial', :locals => {:source => 'RHTML'} %>
+</table>

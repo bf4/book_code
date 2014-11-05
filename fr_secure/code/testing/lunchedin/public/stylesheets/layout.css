@@ -1,0 +1,60 @@
+#footer { clear: both; border-top: 1px solid #cccccc; margin-top: 18px; }
+#footer li { display: inline; margin-left: 10px; }
+#footer ul { text-align: right; margin: 4px 0 4px 4px;}
+
+div#content {
+  margin-top: 10px;
+  margin-right:auto;
+  margin-left:auto;
+  width: 775px;
+  background-color: #FFF;
+  color: #000;
+}
+
+div#session-bar { float: right; }
+div#toolbar { margin-top: 8px; }
+
+#tablist {
+  padding: 3px 0;
+  margin-left: 108px;
+  margin-bottom: 0;
+  font: bold 12px Verdana;
+}
+
+#tablist li { list-style: none; display: inline; margin: 0; }
+#tablist li a {
+  text-decoration: none;
+  padding: 3px 0.5em;
+  margin-right: 3px;
+  border: 1px solid #778;
+  border-bottom: none;
+  background: white;
+  width: 74px;  
+}
+
+#tablist li a:link, #tablist li a:visited {
+  color: white;
+  font-size: 12px;
+  background-image: url(../images/tab_middle.png);
+}
+
+#tablist li a:hover{
+/*  color: black;
+  background: lightyellow;
+  border-color: navy;*/
+}
+
+#tablist li a.current{
+/*  background-image: url(../images/toolbar_tab.png);  */
+}
+
+div.lower_toolbar {
+  height: 24px;
+  background-image: url(../images/lower_toolbar.png);
+}
+
+div.lower_toolbar_gradient {
+  height: 41px;
+  background-image: url(../images/lower_toolbar_gradient.png);  
+}
+

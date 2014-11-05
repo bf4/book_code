@@ -1,0 +1,50 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<xss>
+  <attack>
+    <name>BGSOUND</name>
+    <code>&lt;BGSOUND SRC=&quot;javascript:alert(&apos;XSS&apos;);&quot;&gt;</code>
+    <desc>BGSOUND</desc>
+    <label>HTML Element Attacks</label>
+    <browser>Browser support: 
+      [&lt;span class=&quot;ns&quot;&gt;IE6.0&lt;/span&gt;|&lt;span 
+        class=&quot;ns&quot;&gt;NS8.1-IE&lt;/span&gt;] 
+      [&lt;span class=&quot;ns&quot;&gt;NS8.1-G&lt;/span&gt;|&lt;span 
+        class=&quot;ns&quot;&gt;FF1.5&lt;/span&gt;] 
+      [&lt;span class=&quot;s&quot;&gt;O8.54&lt;/span&gt;]
+    </browser>
+  </attack>
+  <attack>
+    <name>IFRAME</name>
+    <code>&lt;IFRAME SRC=&quot;javascript:alert(&apos;XSS&apos;);&quot;&gt;&lt;/IFRAME&gt;</code>
+    <desc>Iframe (If iframes are allowed there are a lot of other XSS problems as well).</desc>
+    <label>HTML Element Attacks</label>
+    <browser>Browser support: 
+      [&lt;span class=&quot;s&quot;&gt;IE6.0&lt;/span&gt;|&lt;span 
+        class=&quot;s&quot;&gt;NS8.1-IE&lt;/span&gt;] 
+      [&lt;span class=&quot;s&quot;&gt;NS8.1-G&lt;/span&gt;|&lt;span 
+        class=&quot;s&quot;&gt;FF1.5&lt;/span&gt;] 
+      [&lt;span class=&quot;s&quot;&gt;O8.54&lt;/span&gt;]
+    </browser>
+  </attack>
+  <attack>
+    <name>STYLE w/background</name>
+    <code>&lt;STYLE type=&quot;text/css&quot;&gt;
+      BODY{background:url(&quot;javascript:alert(&apos;XSS&apos;)&quot;)}&lt;/STYLE&gt;</code>
+    <desc>STYLE tag using background.</desc>
+    <label>HTML Element Attacks</label>
+    <browser>Browser support: 
+      [&lt;span class=&quot;s&quot;&gt;IE6.0&lt;/span&gt;|&lt;span 
+        class=&quot;s&quot;&gt;NS8.1-IE&lt;/span&gt;] 
+      [&lt;span class=&quot;ns&quot;&gt;NS8.1-G&lt;/span&gt;|&lt;span 
+        class=&quot;ns&quot;&gt;FF1.5&lt;/span&gt;] 
+      [&lt;span class=&quot;ns&quot;&gt;O8.54&lt;/span&gt;]
+    </browser>
+  </attack>  
+</xss>

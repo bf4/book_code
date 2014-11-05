@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  commentable_id: 1
+  commentable_type: Venue
+  subject: Not so great...
+  body: How on earth did they get past the health inspector?
+  created_at: 2007-11-27 14:18:53
+  updated_at: 2007-11-27 14:18:53
+
+two:
+  id: 2
+  commentable_id: 1
+  commentable_type: Venue
+  subject: This place rocks!
+  body: if only my mom would have made food this great...  
+  created_at: 2007-11-27 14:18:53
+  updated_at: 2007-11-27 14:18:53

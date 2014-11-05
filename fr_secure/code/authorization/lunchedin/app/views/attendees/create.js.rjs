@@ -1,0 +1,5 @@
+page.insert_html :bottom, 'attendees', 
+  :partial => 'attendee', 
+  :locals => { :attendee => @attendee }  
+page['attendee_name'].clear
+page['attendee_email'].clear

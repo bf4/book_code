@@ -1,0 +1,21 @@
+<h3>Have Lunch with Lunched In</h3>
+
+<% if flash[:notice] %>
+<span style="color:red;padding-bottom:12px;"><%= flash[:notice] -%></span>
+<% end %>
+
+<div id="recent-comments">
+	<%= render :partial => 'comments/comment', :collection => @comments %>
+</div>
+
+<div class="welcome-links">
+	<%= link_to('Find somewhere to eat', venues_path) %>
+	<br/><br/>
+	<%= link_to('Know somewhere great to eat?', new_venue_path) %>	
+</div>
+
+<div class="welcome-tags">
+	<% for tag in @tags do %>
+		<%= link_to(tag.name, :controller => 'venues', :action => 'tag', :id => tag) %>
+	<% end %>
+</div>

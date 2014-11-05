@@ -1,0 +1,36 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<form action="/users" method="post">
+  <div style="margin:0;padding:0">
+    <input name="authenticity_token" 
+           type="hidden" value="3b9f8f1e0915d96ba3d9e804bf46703d53261173"/>
+  </div>
+  <div class="highlighted-form">
+    <table class="form">
+      <tr>
+        <td class="label">First Name:</td>
+        <td>
+          <input id="user_first_name" name="user[first_name]" 
+                 size="16" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Last Name:</td>
+        <td>
+          <input id="user_last_name" name="user[last_name]" 
+                 size="16" type="text"/>
+        </td>
+      </tr>
+      ...
+    </table>
+  </div>
+  <div style="padding: 10px;">
+    <input name="commit" type="submit" value="Create"/>
+  </div>
+</form>

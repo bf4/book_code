@@ -1,0 +1,27 @@
+<h3>So You Want To Have Lunch?</h3>
+
+<%= error_messages_for 'event' %>
+
+<% form_for :event, @event, 
+	  :url => {:controller => 'events', :action => 'create', :venue_id => params[:venue_id]}, 
+		:method => :post do |f| %>
+<div class="highlighted-form">
+	<table>
+	  <tr>
+	    <td>When:</td>
+	    <td><%= f.date_select :occurs_on, :start_year => DateTime.now.year %></td>
+	  </tr>
+		<tr>
+			<td>Notes:</td>
+			<td><%= f.text_field :name %></td>
+		</tr>	  
+		<tr>
+			<td>Notes:</td>
+			<td><%= f.text_area :notes %></td>
+		</tr>
+	</table>
+  <div style="text-align: right">
+	 <%= submit_tag 'Create' %>
+  </div>	
+</div>
+<% end %>

@@ -1,0 +1,41 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+
+<div class="highlighted-form">
+  <table class="form">
+    <tr>
+      <td class="label">First Name:</td>
+      <td><%= text_field('user', 'first_name', :size => 16) %></td>
+    </tr>
+    <tr>
+      <td class="label">Last Name:</td>
+      <td><%= text_field('user', 'last_name', :size => 16) %></td>
+    </tr>
+    <tr>
+      <td class="label">Email:</td>
+      <td><%= text_field('user', 'email') %></td>
+    </tr>
+    <tr>
+      <td class="label">User Name:</td>
+      <td><%= text_field('user', 'user_name', :size => 14) %></td>
+    </tr>
+    <tr>
+      <td class="label">Password:</td>
+      <td><%= password_field('user', 'password', :size => 14) %></td>
+    </tr>
+    <tr>
+      <td class="label">Confirm Password:</td>
+      <td><%= password_field('user', 'password_confirmation', :size => 14) %></td>
+    </tr>		
+    <tr>
+      <td class="label">Zip Code:</td>
+      <td><%= text_field('user', 'zip_code', :size => 6) %></td>
+    </tr>		
+  </table>
+</div>

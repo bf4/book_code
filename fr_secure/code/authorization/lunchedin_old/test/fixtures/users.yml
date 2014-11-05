@@ -1,0 +1,22 @@
+bob:
+  id: 1
+  user_name: bob
+  password: <%= Digest::SHA1.hexdigest("salt1234567890hello") %>
+  first_name: Bob
+  last_name: Smith
+  email: bob@gmail.com
+  role_id: 2
+  zip_code: 75024
+  salt: salt1234567890
+  
+dave:
+  id: 2
+  user_name: dave
+  password: <%= Digest::SHA1.hexdigest("salt1234567890hello") %>
+  first_name: Dave
+  last_name: Raphael
+  email: dave@gmail.com
+  role_id: 1
+  zip_code: 75024  
+  salt: salt1234567890
+  

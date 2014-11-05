@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  commentable_id: 1
+  commentable_type: Venue
+  created_on: <%= DateTime.now %>
+two:
+  id: 2
+  commentable_id: 1
+  commentable_type: Venue  
+  created_on: <%= DateTime.now %>  

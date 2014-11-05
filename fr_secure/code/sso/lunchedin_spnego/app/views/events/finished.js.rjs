@@ -1,0 +1,2 @@
+page.replace_html 'event_status', @event.status
+page['finished_link'].hide

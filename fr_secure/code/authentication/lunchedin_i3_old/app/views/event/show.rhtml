@@ -1,0 +1,41 @@
+<!--
+ ! Excerpted from "Security on Rails",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/fr_secure for more book information.
+-->
+<div class="step"><%= @event.status %></div>
+
+<h3>Your Event</h3>
+
+<table>
+	<tr>
+		<td class="label">Where:</td>
+		<td>
+			<%= @event.venue.name %>,
+			<span style="color:#666666">
+				<%= @event.venue.address_one %>, 
+				<%= @event.venue.city %> <%= @event.venue.state %>,	
+				<%= @event.venue.zip_code %>
+			</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="label">When:</td>
+		<td><%= @event.occurs_on %></td>
+	</tr>
+	<tr>
+		<td class="label">Instructions:</td>
+		<td><%= @event.notes %></td>
+	</tr>			
+</table>
+
+<h4>Attendees</h4>
+<div id="attendees">		
+<% for attendee in @event.attendees %>
+	<%= render :partial => 'attendee', :locals => { :attendee => attendee }%>
+<% end %>
+</div>
+

@@ -1,0 +1,15 @@
+ActionMailer Optional TLS
+=========================
+
+This plugin allows ActionMailer to work with SMTP servers that require TLS.  It is heavily monkeypatched into ActionMailer and Net/SMTP, but such is life. Just set the following, and proceed as usual:
+
+ActionMailer::Base.smtp_settings[:tls] = true
+
+I haven't quite figured out the best way to test this plugin, but if you execute the following command, you should receive a gmail from yourself, and a fair amount of debug information will be output.  I hope it suffices; if not, suggest an improvement!
+
+rake EMAIL=my_gmail_account@gmail.com PASSWORD=secret
+
+CHANGELOG
+
+--- May 29, 2007 ---
+- Updated to use new Rails 1.2 semantics [Dave Thomas]

@@ -1,0 +1,52 @@
+# START:add_type
+bob:
+  id: 1
+  type: DbUser
+  username: bob
+  password_hash: <%= OpenSSL::Digest::SHA1.new("hello").hexdigest %>
+  first_name: Bob
+  last_name: Smith
+  email: bob@gmail.com
+  role_id: 1
+  zip_code: 75024
+  created_at: 2007-11-27 14:18:26
+  updated_at: 2007-11-27 14:18:26
+# END:add_type
+dave:
+  id: 2
+  type: DbUser
+  username: dave
+  password_hash: <%= OpenSSL::Digest::SHA1.new("hello").hexdigest %>
+  first_name: Dave
+  last_name: Raphael
+  email: dave@gmail.com
+  role_id: 1
+  zip_code: 75024  
+  created_at: 2007-11-27 14:18:26
+  updated_at: 2007-11-27 14:18:26  
+# START:add_type_ldap
+wally:
+  id: 3
+  type: LDAPUser
+  first_name: Wally
+  last_name: Webcoder
+  username: wally
+  password_hash: <%= OpenSSL::Digest::SHA1.new("newpass1").hexdigest %>
+  email: wally@yahoo.com
+  role_id: 2  
+  zip_code: 75024
+  created_at: 2007-11-27 14:18:26
+  updated_at: 2007-11-27 14:18:26
+# END:add_type_ldap
+admin:
+  id: 4
+  type: DbUser
+  first_name: The
+  last_name: Admin
+  username: admin
+  password_hash: <%= OpenSSL::Digest::SHA1.new("admin1").hexdigest %>
+  email: bpoweski@yahoo.com
+  role_id: 1
+  zip_code: 75024
+  created_at: 2007-11-27 14:18:26
+  updated_at: 2007-11-27 14:18:26

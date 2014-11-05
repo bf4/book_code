@@ -1,0 +1,6 @@
+<%= render(:partial => 'venue', :collection => @venues) unless @venues.blank? %>
+<div style="margin-top:14px; padding-left: 10px;	">
+	<dl>
+		<dd><%= link_to('Add Somewhere to Eat', :action => 'new') %></dd>
+	</dl>
+</div>

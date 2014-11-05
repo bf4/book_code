@@ -1,0 +1,10 @@
+<div class="attendee" id="attendee_<%= attendee.id %>">
+	<dl>
+		<dt>
+			<span><%= attendee.name %></span>
+			<span style="color: #cccccc; margin: 0 8px 0 8px;">|</span>
+			<span style="color: #999999"><%= attendee.email %></span>
+		</dt>
+		<dd><%= link_to_remote "uninvite", :url => { :controller => 'attendees', :action => 'destroy', :id => attendee.id}, :method => :delete %></dd>
+	</dl>
+</div>
