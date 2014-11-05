@@ -1,0 +1,2 @@
+#!/bin/sh
+exec curl http://localhost:8080/job/Cone%20of%20Silence/build?token=BackToBrooklyn

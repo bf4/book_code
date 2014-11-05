@@ -1,0 +1,5 @@
+basic.rb(main):001:0> table.rows
+=> [["rust", "Camaro"], ["blue", "Gremlin"]]
+basic.rb(main):002:0> table.hashes
+=> [{"color"=>"rust", "model"=>"Camaro"}, {"color"=>"blue", "model"=>"Gremlin"}]
+basic.rb(main):003:0> 

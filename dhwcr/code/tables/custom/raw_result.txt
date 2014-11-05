@@ -1,0 +1,3 @@
+raw.rb(main):001:0> table.raw
+=> [["color", "model"], ["rust", "Camaro"], ["blue", "Gremlin"]]
+raw.rb(main):002:0> 

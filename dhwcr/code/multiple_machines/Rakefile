@@ -1,0 +1,9 @@
+require 'cucumber/rake/task'
+
+Cucumber::Rake::Task.new :group1 do |t|
+  t.cucumber_opts = '-t @group1 *.feature'
+end
+
+Cucumber::Rake::Task.new :group2 do |t|
+  t.cucumber_opts = '-t @group2 *.feature'
+end

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Cucumber Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dhwcr for more book information.
+-->
+<html>
+  <head>
+    <title>Balloon</title>
+    <script
+       type="text/javascript"
+       src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+      pop = function() {
+        $('#status').text('Popped!');
+      };
+      popLater = function(ms) {
+        setTimeout(pop, ms);
+      };
+      $(document).ready(function() {
+        $('#go').click(function(e) {
+          popLater(5000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="status">Ready</p>
+    <input id="go" type="button" value="Go"></input>
+  </body>
+</html>
