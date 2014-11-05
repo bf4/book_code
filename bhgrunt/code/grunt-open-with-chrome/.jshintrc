@@ -1,0 +1,13 @@
+{
+  "node": true,    // For NodeJS
+  "undef": true,   // Require all non-global variables to be declared
+  "curly": true,   // Require curly braces for blocks and scope
+  "eqeqeq": true,  // Require "===" instead of "==" for equality
+  "immed": true,   // Must wrap immediate invoked functions in parens
+  "latedef": true, // Must define functions and variables before use
+  "newcap": true,  // Constructor functions must be capitalized
+  "noarg": true,   // Don't allow 'arguments.caller' and 'arguments.callee'
+  "sub": true,     // Allow '[]' even if dot notation could be used
+  "boss": true,    // Allow assignments where comparisons might be expected
+  "eqnull": true   // Allow use of '== null'
+}

@@ -1,0 +1,8 @@
+{
+  "name": "deploying",
+  "version": "0.0.0",
+  "description": "",
+  "devDependencies": {
+    "grunt": "~0.4.4"
+  }
+}

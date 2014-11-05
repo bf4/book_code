@@ -1,0 +1,15 @@
+
+@mixin row{
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+@mixin col{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}

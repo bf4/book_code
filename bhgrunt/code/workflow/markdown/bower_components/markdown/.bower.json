@@ -1,0 +1,15 @@
+{
+  "name": "markdown",
+  "homepage": "https://github.com/evilstreak/markdown-js",
+  "version": "0.6.0-beta1",
+  "_release": "0.6.0-beta1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.6.0-beta1",
+    "commit": "08999912a3e2012d0cb16dabfc650d7e731d5f27"
+  },
+  "_source": "git://github.com/evilstreak/markdown-js.git",
+  "_target": "0.6.0-beta1",
+  "_originalSource": "markdown",
+  "_direct": true
+}

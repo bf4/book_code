@@ -1,0 +1,1 @@
+@MarkdownEditor = angular.module("markdownEditor", [])

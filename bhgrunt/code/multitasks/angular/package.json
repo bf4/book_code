@@ -1,0 +1,8 @@
+{
+  "name": "AngularCustom",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "grunt": "~0.4.4"
+  }
+}

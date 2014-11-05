@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Automate with Grunt",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhgrunt for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="assets/app.css">
+  </head>
+  <body ng-app="markdownEditor">
+    <header class="masthead">
+      <h1>MarkDownMark Editor</h1>
+    </header>
+      
+    <div class="content" ng-controller="MainCtrl">
+      <section class="editor">
+        <textarea class="input" 
+                  ng-model="input" 
+                  ng-change="updatePreview()">
+        </textarea>
+      </section>
+
+      <section id="output" class="preview" ng-bind-html="output"></section>
+
+    </div>
+
+    <footer>
+      <small>Copyright &copy; 2014 AwesomeCo</small>
+    </footer>
+
+    <script src="assets/app.js"></script>
+
+  </body>
+</html>
