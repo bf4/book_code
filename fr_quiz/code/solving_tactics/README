@@ -1,0 +1,68 @@
+# Submitted by:  Bob Sidebotham  <bob.sidebotham@gmail.com>
+
+This is my solution to the "Solving Tactics" Ruby Quiz #18.
+
+I previously solved this puzzled over 30 years ago on a Control Data
+Corporation mainframe computer (A CDC Cyber 6400). The program was
+hand-optimized assembler code, written as a self-assigned term
+project. My best recollection is that it took a few seconds to run;
+probably on the order of 10 seconds. Interestingly, my Ruby version
+takes a similar amount of time on my fairly ancient 600MHz processor.
+
+The basic idea is simple: a Tactics board contains just 16 cells,
+which can be empty or filled. This readily admits to a representation
+as a 16-bit number. Games can be played by using bit operations to
+determine and play individual moves. The key observation is that there
+are just 2**16 possible board positions. Each of these is either a
+winning or losing position.
+
+This solution implements a playing engine that can play from any given
+board position. The algorithm is to see whether, from that position, a
+win is ensured, or not. This is done by trying all the possible moves
+from that position until a win is found. If a win is found, then the
+starting position is marked as a losing position (because the next
+play could win). Otherwise, if no win's are possible for the opponent
+from this position, then the starting position is marked as a win. A
+play is trivially determined to be a win or loss if has been marked as
+such from a previous play. If that result has not been cached, then
+the play engine is invoked recursively. Eventually, the algorithm will
+terminate, because the cache is seeded with the information that an
+entirely filled grid represents a loss. To determine whether the first
+or second player is bound to win, simply invoke the play engine with
+an empty board.
+
+This takes a lot more effort to say in words, than to program in
+code. The actual code described above is just this:
+
+  # Play from the current position. If *any* move guarantees a win,
+  # then mark this position as a WIN and return it. Otherwise this
+  # position loses.
+  def play
+    @possible_moves.each do |move|
+      new_board = @board | move
+      if ( @@position[new_board] ||
+           Tactics.new(new_board, @possible_moves).play ) == LOSS then
+        return @@position[@board] = WIN 
+      end
+    end
+    @@position[@board] = LOSS
+  end
+
+The required result is determined by this separately provided program:
+
+require 'tactics'
+puts %(#{Tactics.new.play == Tactics::WIN ? "First" : "Second"} player wins.)
+
+The Quiz writeup suggests that a good solution should demonstrate
+convincingly that the answer given likely to be correct. I've chosen
+to use unit tests for this purpose. The unit tests take advantage of
+the play engine's ability to play from any board position to play a
+variety of end games. In each case a proof is provided (in the
+comments) of which player should win or lose, and the unit test
+asserts that the play engine agrees with the proof's assertion. This
+is a form of black-box testing that doesn't directly test (for
+example) that the program even knows how to play every possible
+move. But, indirectly, it provides strong evidence that this is likely
+to be the case.
+
+Bob.Sidebotham@gmail.com

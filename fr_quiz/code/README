@@ -1,0 +1,55 @@
+Source code for the programs you include should go in this directory
+(and subdirectories of this directory). You include this code into
+your document using
+
+  <code file="code/path.rb" />
+
+The intent is to make all of this code runnable (and hence
+testable). However, sometimes this means putting more stuff int
+hesource files than you'd like to include int he book. To deal with
+this, you tell the <code> processor only to include certain chunks of
+your source in the book. You identify these chunks using comments
+containing "START:name" and "END:name". When you do
+
+ <code file="code/path.rb" path="name" />
+
+then only the code bracketed by these comments will be included.
+
+Say you were writing a Ruby program to parse lines out of
+/etc/passwd. You might code the program as:
+
+  passwd.rb:
+
+     #START:openclose
+     f = File.open("/etc/passwd")
+     # ...
+     #END:openclose
+
+     #START:parse
+     while line = f.gets
+       puts line if line =~ dave
+     end
+     #END:parse
+
+     #START:openclose
+     f.close 
+     #END:openclose
+
+In your book, you could then write.
+
+  Before processing the file, we have to open it. After finishing,
+  it's polite to close it.
+
+  <code file="code/passwd.rb" part="openclose" />
+
+  But what to be do with the open file? In this case, we'll read
+  through it and print any lines containing
+  <stringinfile>dave</stringinfile>.
+
+  <code file="code/passwd.rb" part="parse" />
+
+Notice how you can have multiple START/ENDs with the same name.
+
+
+You might want to subdivide this directory into subdirectories per
+project or chapter or whatever.
