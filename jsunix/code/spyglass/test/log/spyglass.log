@@ -1,0 +1,6 @@
+[5844] [Spyglass::Server] Listening on port 0.0.0.0:5656
+[5844] [Spyglass::Lookout] Received incoming connection
+[5847] [Spyglass::Master] Loaded the app
+[5847] [Spyglass::Master] Spawned 2 workers. Babysitting now...
+] Received QUIT
+[5841] [Spyglass::Master] Spawned 2 workers. Babysitting now...
