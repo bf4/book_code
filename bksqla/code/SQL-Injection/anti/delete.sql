@@ -1,0 +1,1 @@
+SELECT * FROM Bugs WHERE bug_id = 1234; DELETE FROM Bugs

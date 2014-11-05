@@ -1,0 +1,1 @@
+SELECT * FROM Bugs WHERE assigned_to IS DISTINCT FROM ?;

@@ -1,0 +1,1 @@
+INSERT INTO BugStatus (status) VALUES ('DUPLICATE');

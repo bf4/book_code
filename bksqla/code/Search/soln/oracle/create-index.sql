@@ -1,0 +1,3 @@
+CREATE INDEX BugsText ON Bugs(summary) INDEXTYPE IS CTXSYS.CONTEXT;
+
+SELECT * FROM Bugs WHERE CONTAINS(summary, 'crash') > 0;
