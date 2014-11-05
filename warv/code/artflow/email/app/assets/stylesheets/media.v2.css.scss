@@ -1,0 +1,14 @@
+@media screen and (max-width: 800px) {
+  /* START_HIGHLIGHT */
+  /* Kills columns */
+  section#content,
+  section#sidebar {float: none; width: $total-width; margin-bottom: 5px;}
+  section#page {min-width: 310px;}
+  /* END_HIGHLIGHT */
+}
+
+@media screen and (max-width: 640px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}

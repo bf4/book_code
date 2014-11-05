@@ -1,0 +1,35 @@
+<%# START:builderoption %>
+<%= form_for @creation, builder: ApplicationFormBuilder,
+                        html: {multipart: true} do |f| %>
+<%# END:builderoption %>
+  <%= f.error_messages %>
+  <fieldset id='creation-print' class='inline'>
+    <legend>Print Details</legend>
+    <ol>
+      <%= f.field_item :color_space do %>
+        <%= f.label :color_space %>
+        <%= f.select :color_space, %w(CMYK RGB Other) %>
+      <% end %>>
+      <%= f.field_item :bleed, 'Bleed size' do %>
+        <%= f.text_field :bleed, size: 5, placeholder: "Inches" %>
+      <% end %>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <ol>
+      <%= f.field_item :name do %>
+        <%= f.text_field :name %>
+      <% end %>
+      <%= f.field_item :description do %>
+        <%= f.text_area :description, cols: 80, rows: 4 %>
+      <% end %>
+      <%= f.field_item :file do %>
+        <%= f.label :file %>
+        <%= f.file_field :file %>
+      <% end %>
+    </ol>
+  </fieldset>
+  <%= f.submit %>
+<%# START:builderoption %>
+<% end %>
+<%# END:builderoption %>

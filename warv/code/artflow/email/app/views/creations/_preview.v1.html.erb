@@ -1,0 +1,5 @@
+<% if creation.thumbnail? && current_user.can_view?(creation) %>
+  <% if session[:view] == 'expanded' %>
+    <%= image_tag creation.file.url(:thumbnail), class: 'thumbnail' %>
+  <% end %>
+<% end %>

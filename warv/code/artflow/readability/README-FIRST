@@ -1,0 +1,13 @@
+Code for the "Improving Readability" chapter
+============================================
+
+See the setup instructions in `../README.md`
+
+URLs
+----
+
+ * http://localhost:3000
+ * http://localhost:3000/campaigns/1
+ * http://localhost:3000/clients
+ * http://localhost:3000/creations
+ * http://localhost:3000/creations/1

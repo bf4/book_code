@@ -1,0 +1,8 @@
+<%# START_HIGHLIGHT %>
+<%= semantic_form_for [@creation, Comment.new], remote: true do |f| %>
+<%# END_HIGHLIGHT %>
+  <%= f.inputs :body, label: false %>
+  <%= f.buttons do %>
+    <%= f.commit_button 'Add Comment' %>
+  <% end %>
+<% end %>

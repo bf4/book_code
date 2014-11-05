@@ -1,0 +1,39 @@
+/* START:mixin */
+@mixin icon($x-offset: 160px, $y-offset: -160px) {
+  background-image: url("iconsprite.png");
+  background-position: $x-offset $y-offset;
+  background-repeat: no-repeat;
+  height: 0;
+  width: 40px;
+  padding: 40px 0 0 0;
+  overflow: hidden;
+
+  /* half transparent */
+  -khtml-opacity:.50;
+  -moz-opacity:.50;
+  -ms-filter:”alpha(opacity=50)”;
+  filter:alpha(opacity=50);
+  opacity:.50;
+
+  /* more opaque on hover */
+  &:hover {
+    -khtml-opacity:.80;
+    -moz-opacity:.80;
+    -ms-filter:”alpha(opacity=80)”;
+    filter:alpha(opacity=80);
+    opacity:.80;
+  }
+}
+/* END:mixin */
+
+/* START:icon */
+.approve-icon  {
+  @include icon(80px, -40px);
+}
+.person-icon {
+  @include icon(0, 0);
+}
+.star-icon {
+  @include icon(0, -40px);
+}
+/* END:icon */

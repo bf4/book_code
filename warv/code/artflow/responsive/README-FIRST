@@ -1,0 +1,13 @@
+Code for the "Handling Mobile Views" chapter 
+============================================
+
+See the setup instructions in `../README.md`
+
+URLs
+----
+
+Open the following in a mobile browser (or, e.g., the iOS Simulator on
+OSX). You'll probably need to replace `localhost` with your IP:
+
+ * http://localhost:3000
+ * http://localhost:3000/creations/1

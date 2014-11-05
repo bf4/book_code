@@ -1,0 +1,27 @@
+header#page_header {
+  background-color: #534f4b;
+  color: #fff;
+  height: 68px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 10px 20px;
+
+  a,
+  a:link,
+  a:hover,
+  a:active,
+  a:visited {
+    color:#fef8e7;
+    text-decoration: none;
+  }
+
+  nav#utility {
+    float: right;
+    font-size: 0.8em;
+  }
+
+  #logo {
+    position: absolute;
+    top: 15px;
+  }
+}

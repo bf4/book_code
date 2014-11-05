@@ -1,0 +1,9 @@
+<% currently_at 'Clients' %>
+
+<%# START:content %>
+<ul>
+  <% @clients.each do |client| %>
+    <li><%= link_to client.name, client %></li>
+  <% end %>
+</ul>
+<%# END:content %>

@@ -1,0 +1,15 @@
+  <header id="page_header" role="banner">
+    <nav id="utility">
+      <p>
+        You are logged in as <strong>Sam Spade</strong>
+        <%= link_to "[Your Account]", "#" %> |
+        <%= link_to "[Logout]", "#" %>
+      </p>
+    </nav>
+    <%= link_to(
+          image_tag("logo.png",
+                    alt: "Artflow",
+                    id: "logo"),
+          root_url,
+          title: "Dashboard") %>
+  </header>

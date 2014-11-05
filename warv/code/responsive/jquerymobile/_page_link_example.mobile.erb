@@ -1,0 +1,21 @@
+<article data-role='page' id='first-page'>
+  <header data-role='header'>
+    <h1>First Page</h1>
+  </header>
+  <section data-role='content'>
+    <%# START_HIGHLIGHT %>
+    <p><%= link_to 'Show second page', '#second-page' %></p>
+    <%# END_HIGHLIGHT %>
+  </section>
+</article>
+
+<%# START_HIGHLIGHT %>
+<article data-role='page' id='second-page'>
+<%# END_HIGHLIGHT %>
+  <header data-role='header'>
+    <h1>Second Page</h1>
+  </header>
+  <section data-role='content'>
+    <p>Welcome to Page #2!</p>
+  </section>
+</article>

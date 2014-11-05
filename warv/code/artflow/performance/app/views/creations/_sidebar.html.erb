@@ -1,0 +1,12 @@
+<% content_for :sidebar do %>
+  <%# START_HIGHLIGHT %>
+  <% cache action: 'recent_app_activity' do %>
+  <%# END_HIGHLIGHT %>
+    <section id="recent_activity">
+      <header>
+        <h1 class="ir" id="recent">Recent Activity</h1>
+      </header>
+      <%= render 'activity_items/recent' %>
+    </section>
+  <% end %>
+<% end %>

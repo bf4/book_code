@@ -1,0 +1,21 @@
+<%# START_HIGHLIGHT %>
+<article data-role='page' data-theme='c'>
+<%# END_HIGHLIGHT %>
+  <header data-role='header'>
+    <h1><%= @creation.name %></h1>
+  </header>
+  <div data-role='content'>
+    <p><%= image_tag @creation.file.url %></p>
+  </div>
+  <%# START_HIGHLIGHT %>
+  <footer data-role='footer'>
+    <div data-role='navbar'>
+      <ul>
+        <li><%= link_to_preview(true) %></li>
+        <li><%= link_to_comments %></li>
+        <li><%= link_to_modify %></li>
+      </ul>
+    </div>
+  </footer>
+  <%# END_HIGHLIGHT %>
+</article>

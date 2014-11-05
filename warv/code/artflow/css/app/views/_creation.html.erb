@@ -1,0 +1,9 @@
+<%# START:ifelse %>
+<% if @creation.default_image? %>
+  <%# START:basic %>
+  <%= image_tag(@creation.default_image) %>
+  <%# END:basic %>
+<% else %>
+  <%= image_tag("missing_creation.png")%>
+<% end %>
+<%# END:ifelse %>

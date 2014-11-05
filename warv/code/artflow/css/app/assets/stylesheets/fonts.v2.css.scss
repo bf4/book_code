@@ -1,0 +1,20 @@
+/* START:fontmaker */
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('MuseoSans.eot');
+  src: url('MuseoSans.eot?iefix') format('eot'),
+       url('MuseoSans.woff') format('woff'),
+       url('MuseoSans.otf') format('opentype'),
+       url('MuseoSans.svg') format('svg');
+}
+/* END:fontmaker */
+
+/* START:attribution */
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.nl */
+/* END:attribution */
+
+/* START:newstyle */
+body {
+  font-family: 'Museo Sans', Verdana, Helvetica, Arial, sans-serif;
+}
+/* END:newstyle */

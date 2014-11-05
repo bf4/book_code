@@ -1,0 +1,30 @@
+/* START:doublefontfixed */
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.nl */
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('MuseoSans.eot');
+  src: local('☺'),
+         url('MuseoSans.woff') format('woff'),
+         url('MuseoSans.otf') format('opentype'),
+         url('MuseoSans.svg') format('svg');
+}
+@font-face {
+  font-family: 'Museo Sans Italic';
+  src: url('MuseoSansItalic.eot');
+  src: local('☺'),
+         url('MuseoSansItalic.woff') format('woff'),
+         url('MuseoSansItalic.otf') format('opentype'),
+         url('MuseoSansItalic.svg') format('svg');
+}
+/* END:doublefontfixed */
+
+/* START:doublefonthtmlfixed */
+body {
+  font-family: 'Museo Sans', Verdana, Helvetica, Arial, sans-serif;
+}
+
+em {
+  font-family: 'Museo Sans Italic', Verdana, Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+/* END:doublefonthtmlfixed */

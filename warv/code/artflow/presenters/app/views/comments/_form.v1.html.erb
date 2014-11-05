@@ -1,0 +1,5 @@
+<%= form_for @comment do |f| %>
+  <%# START:content %>
+  <%= text_area_tag 'comment[body]', @comment.body %>
+  <%# END:content %>
+<% end %>

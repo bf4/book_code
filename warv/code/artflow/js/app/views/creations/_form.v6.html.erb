@@ -1,0 +1,12 @@
+<fieldset id='creation-print' class='inline'>
+  <ol>
+    <li>
+      <%= f.label :color_space %>
+      <%= f.select :color_space, %w(CMYK RGB Other) %>
+    </li>
+    <li>
+      <%= f.label :bleed, "Bleed size (in.)" %>
+      <%= f.text_field :bleed, size: 5 %>
+    </li>
+  </ol>
+</fieldset>

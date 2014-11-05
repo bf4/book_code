@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Artflow</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <%# START:highlight %>
+  <%= image_tag("tagline.png",
+                alt: "Creative File Management Made Easy",
+                id: "tagline") %>
+  <div class="container">
+    <section id="content">
+      <%= yield %>
+    </section>
+    <section id="sidebar">
+      <%# START_HIGHLIGHT %>
+      <%= yield :sidebar %>
+      <%# END_HIGHLIGHT %>
+      <section id="recent_activity">
+        <header><h1 class="ir" id="recent">Recent Activity</h1></header>
+        <%= render partial: 'activity_items/recent' %>
+      </section>
+    </section>
+  </div>
+  <%# END:highlight %>
+  <%= render 'layouts/footer' %>
+</body>
+</html>

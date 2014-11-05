@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Artflow</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <%= render 'layouts/header' %>
+  <%= image_tag("tagline.png",
+                alt: "Creative File Management Made Easy",
+                id: "tagline") %>
+  <div class="container">
+
+    <%= yield %>
+  </div>
+  <%= render 'layouts/footer' %>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Artflow</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header id="page_header" role="banner">
+    <nav id="utility">
+      <p>
+        You are logged in as <strong>Sam Spade</strong>
+        <%= link_to "[Your Account]", "#" %> |
+        <%= link_to "[Logout]", "#" %>
+      </p>
+    </nav>
+    <%= link_to(
+          image_tag("logo.png",
+                    alt: "Artflow",
+                    id: "logo"),
+          root_url,
+          title: "Dashboard") %>
+  </header>
+  <%= image_tag("tagline.png",
+                alt: "Creative File Management Made Easy",
+                id: "tagline") %>
+  <div class="container">
+
+    <%= yield %>
+  </div>
+  <footer id="page_footer">
+    <ul>
+      <li><%= link_to "Contact", "" %></li>
+      <li><%= link_to "Help", "" %></li>
+      <li><%= link_to "File a Bug", "" %></li>
+    </ul>
+    <p>&copy; 2012 AwesomeCo. All Rights Reserved. All Wrongs Reversed.</p>
+  </footer>
+</body>
+</html>

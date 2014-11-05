@@ -1,0 +1,26 @@
+  <header id="page_header" role="banner">
+    <nav id="utility">
+      <p>
+        You are logged in as <strong>Sam Spade</strong>
+        <%= link_to "[Your Account]", "#" %> |
+        <%= link_to "[Logout]", "#" %>
+      </p>
+    </nav>
+    <%= link_to(
+          image_tag("logo.png",
+                    alt: "Artflow",
+                    id: "logo"),
+          root_url,
+          title: "Dashboard") %>
+    <%# START_HIGHLIGHT %>
+    <nav id="main_nav" role="navigation">
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Creations', creations_path %></li>
+        <li><%= link_to 'Campaigns', campaigns_path %></li>
+        <li><%= link_to 'Projects', projects_path %></li>
+        <li><%= link_to 'Designers', designers_path %></li>
+      </ul>
+    </nav>
+    <%# END_HIGHLIGHT %>
+  </header>

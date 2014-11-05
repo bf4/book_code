@@ -1,0 +1,120 @@
+@import "semanticgs";
+
+header#page_header {
+  /* START_HIGHLIGHT */
+  background: #bc471d url('/assets/brandtag.png') bottom right no-repeat;
+  /* END_HIGHLIGHT */
+  color: #fff;
+  font-size: 0.9em;
+  height: 68px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 10px 20px;
+
+  a,
+  a:link,
+  a:hover,
+  a:active,
+  a:visited {
+    color:#fef8e7;
+    text-decoration: none;
+  }
+
+  nav#utility {
+    float: right;
+    font-size: 0.8em;
+  }
+
+  #logo {
+    position: absolute;
+    top: 15px;
+  }
+
+}
+
+#tagline {
+  margin-left: 20px;
+}
+
+div.container {
+  overflow: hidden;
+  padding: 0 20px;
+
+}
+
+/* START:footer */
+footer#page_footer {
+  background-color: #807c77;
+  border-bottom: 10px solid #4c2719;
+  color: #fff;
+  font-size: 0.7em;
+  height: 100px;
+  padding: 10px 20px;
+
+  ul {
+    margin-left: -10px;
+    padding: 0;
+
+    li {
+      border-right: 1px solid #fef8e7;
+      display: inline;
+      margin: 0;
+      &:last-child {
+        border-right: none;
+      }
+
+      a {
+        padding: 5px 10px;
+        &:link,
+        &:hover,
+        &:visited,
+        &.active {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+/* END:footer */
+
+div#wrapper {
+  width: $total-width;
+  margin: 0 auto;
+}
+
+section#content {
+  @include column(10);
+  float: left;
+}
+section#sidebar {
+  @include column(2);
+  float: right;
+  margin-bottom: 20px;
+  margin-right: -20px;
+}
+
+/* # START:horizontal-css */
+div#ipad_sidebar {
+  display: none; /* Needed to hide for regular app users */
+  background-color: #999;
+  border: 2px solid #444;
+  border-left: none;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-box-shadow: 0px 0px 10px #333 inset;
+  -webkit-box-shadow: 0px 0px 10px #333 inset;
+  box-shadow: 0px 0px 10px #333 inset;
+  color: #fff;
+  float: left;
+  padding: 10px;
+  @include column(3); /* approx 200px */
+}
+/* # END:horizontal-css */
+
+/* for image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+

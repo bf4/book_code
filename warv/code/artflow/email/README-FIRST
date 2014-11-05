@@ -1,0 +1,11 @@
+Code for the "Working with Email" chapter
+=========================================
+
+See the setup instructions in `../README.md`
+
+URLs
+----
+
+Complete the form at the following URL to see the letter opener
+result:
+ * http://localhost:3000/creations/new

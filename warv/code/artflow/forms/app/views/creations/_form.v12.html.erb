@@ -1,0 +1,40 @@
+<%# START:formfor %>
+<%= form_for @creation, html: {multipart: true} do |f| %>
+<%# END:formfor %>
+  <%# START:errors %>
+  <%= f.error_messages %>
+  <%# END:errors %>
+  <fieldset id='creation-print' class='inline'>
+    <legend>Print Details</legend>
+    <ol>
+      <li>
+        <%= f.label :color_space %>
+        <%= f.select :color_space, %w(CMYK RGB Other) %>
+      </li>
+      <li>
+        <%= f.label :bleed, "Bleed size" %>
+        <%= f.text_field :bleed, size: 5, placeholder: "Inches" %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <ol>
+      <%# START:fielditem %>
+      <%= f.field_item :name do %>
+        <%= f.text_field :name %>
+      <% end %>
+      <%# END:fielditem %>
+      <li>
+        <%= f.label :description %>
+        <%= f.text_area :description, cols: 80, rows: 4 %>
+      </li>
+      <li>
+        <%= f.label :file %>
+        <%= f.file_field :file %>
+      </li>
+    </ol>
+  </fieldset>
+  <%= f.submit %>
+<%# START:formfor %>
+<% end %>
+<%# END:formfor %>

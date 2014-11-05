@@ -1,0 +1,12 @@
+<%= semantic_form_for @creation, html: {multipart: true} do |f| %>
+  <%= f.inputs 'Print Details', id: 'creation-print', class: 'inline' do %>
+    <%= f.input :color_space, collection: %w(CMYK RGB Other) %>
+    <%= f.input :bleed, size: 5, placeholder: 'Inches' %>
+  <% end %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :description, input_html: {cols: 80, rows: 4} %>
+    <%= f.input :file %>
+  <% end %>
+  <%= f.buttons %>
+<% end %>

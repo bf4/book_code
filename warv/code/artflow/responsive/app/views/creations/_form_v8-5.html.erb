@@ -1,0 +1,39 @@
+<%= form_for @creation, html: {multipart: true} do |f| %>
+  <%# START_HIGHLIGHT %>
+  <fieldset id='creation-print' class='inline'>
+    <legend>Print Details</legend>
+    <ol>
+      <li>
+        <%= f.label :color_space %>
+        <%= f.select :color_space, %w(CMYK RGB Other),
+                     tabindex: '4'  %>
+      </li>
+      <li>
+        <%= f.label :bleed, "Bleed size" %>
+        <%= f.text_field :bleed, size: 5,
+                                 placeholder: "Inches",
+                                 tabindex: 5  %>
+      </li>
+    </ol>
+  </fieldset>
+  <%# END_HIGHLIGHT %>
+  <fieldset>
+    <ol>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name, tabindex: '1' %>
+      </li>
+      <li>
+        <%= f.label :description %>
+        <%= f.text_area :description, cols: 80,
+                                      rows: 4,
+                                      tabindex: 2  %>
+      </li>
+      <li>
+        <%= f.label :file %>
+        <%= f.file_field :file, tabindex: 3  %>
+      </li>
+    </ol>
+  </fieldset>
+  <%= f.submit %>
+<% end %>

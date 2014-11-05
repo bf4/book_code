@@ -1,0 +1,19 @@
+<%# START_HIGHLIGHT %>
+<article data-role='page'>
+  <header data-role='header'>
+<%# END_HIGHLIGHT %>
+    <h1><%= @project.name %></h1>
+  </header>
+<%# START_HIGHLIGHT %>
+  <section data-role='content'>
+    <ul data-role='listview'>
+<%# END_HIGHLIGHT %>
+      <% @creations.each do |creation| %>
+        <li>
+          <%= image_tag creation.file.url(:thumb) %>
+          <%= link_to creation.name, [@project, creation] %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+</article>

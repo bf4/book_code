@@ -1,0 +1,32 @@
+<article data-role='page' data-theme='c'>
+
+  <header data-role='header'>
+    <h1><%= @creation.name %></h1>
+  </header>
+  <div data-role='content'>
+    <% if @comments.any? %>
+      <ul>
+        <%= render @comments %>
+      </ul>
+    <% end %>
+    <%# START_HIGHLIGHT %>
+    <%= form_for [@project, @creation, Comment.new],
+          :html => {'data-transition' => 'pop'} do |f| %>
+    <%# END_HIGHLIGHT %>
+      <%= f.label :body, 'Comment' %>
+      <%= f.text_area :body, :cols => nil %>
+      <%= f.submit 'Add' %>
+    <% end %>
+  </div>
+  <footer data-role='footer'>
+    <div data-role='navbar'>
+      <ul>
+        <li><%= link_to_preview %></li>
+        <%# START_HIGHLIGHT %>
+        <li><%= link_to_comments(true) %></li>
+        <%# END_HIGHLIGHT %>
+        <li><%= link_to_modify %></li>
+      </ul>
+    </div>
+  </footer>
+</article>

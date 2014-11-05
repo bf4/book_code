@@ -1,0 +1,15 @@
+<%# START_HIGHLIGHT %>
+<% content_for :main_navigation do %>
+<%# END_HIGHLIGHT %>
+<nav id="main_nav" role="navigation">
+  <ul>
+    <li><%= link_to 'Home',      root_path %></li>
+    <li><%= link_to 'Creations', creations_path %></li> 
+    <li><%= link_to 'Campaigns', campaigns_path %></li>
+    <li><%= link_to 'Projects',  projects_path %></li>
+    <li><%= link_to 'Designers', designers_path %></li>
+  </ul>
+</nav>
+<%# START_HIGHLIGHT %>
+<% end %>
+<%# END_HIGHLIGHT %>

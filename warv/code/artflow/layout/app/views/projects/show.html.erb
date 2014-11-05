@@ -1,0 +1,15 @@
+<% content_for :sidebar do %>
+  <section id='assigned_designers'>
+    <header><h1>Assigned Designers</h1></header>
+    <ul>
+      <%= render @project.designers %>
+    </ul>
+  </section>
+<% end %>
+
+<article>
+  <header>
+    <h1><%= @project.name %></h1>
+  </header>
+  <!-- Project information -->
+</article>

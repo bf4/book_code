@@ -1,0 +1,15 @@
+development:
+  collecting: false
+  adapter: redis
+  host: localhost
+  port: 6379
+
+# START:production
+production:
+  collecting: true
+  adapter: redis
+  database: vanity
+# END:production
+
+test:
+  collecting: false

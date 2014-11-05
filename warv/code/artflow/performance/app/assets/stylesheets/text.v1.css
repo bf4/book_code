@@ -1,0 +1,32 @@
+/* START:legend */
+/*
+ * Fonts
+ * -----
+ * Verdana, Arial, Helvetica, sans-serif (Heading)
+ * Georgia, Times New, serif (Accent)
+ * Times New, Times, serif (Body)
+ *
+ * Colors
+ * -------
+ * #333    Near Black
+ * #d4f2ff Light Blue
+ * #436ca7 Dark Blue
+ * #ffc    Highlight
+ * #50B450 Dark Green
+ *
+*/
+/* END:legend */
+
+/* START:headings */
+body {
+  font-family: 'Times New Roman', 'Times', serif;
+}
+h1, h2 {
+  color: #333333;
+  font-family: 'Verdana', 'Arial', 'Helvetica', sans-serif;
+}
+h3 {
+  color: #50B450;
+  font: italic bold 20px 'Georgia', 'Times New Roman', serif;
+}
+/* END:headings */

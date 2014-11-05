@@ -1,0 +1,12 @@
+<% content_for :functional_nav do %>
+  <li><%= link_to 'Edit this creation', @creation %></li>
+<% end %>
+
+<%= render partial: 'preview', locals: {creation: @creation} %> 
+
+<%# START:client %>
+<dl>
+  <dt>Client</dt>
+  <dd><%= creation_client_name %></dd>
+</dl>
+<%# END:client %>

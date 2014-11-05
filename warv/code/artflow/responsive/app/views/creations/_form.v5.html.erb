@@ -1,0 +1,19 @@
+<%= form_for @creation, html: {multipart: true} do |f| %>
+  <fieldset>
+    <ol>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </li>
+      <li>
+        <%= f.label :description %>
+        <%= f.text_area :description, cols: 40, rows: 4 %>
+      </li>
+      <li>
+        <%= f.label :file %>
+        <%= f.file_field :file %>
+      </li>
+    </ol>
+  </fieldset>
+  <%= f.submit %>
+<% end %>

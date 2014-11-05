@@ -1,0 +1,38 @@
+@media screen and (max-width: 800px) {
+  /* Kills columns */
+  section#content { float: none; width: $total-width; margin-bottom: 5px; }
+  section#page { min-width: 310px; }
+  section#sidebar {display: none;}
+}
+
+@media screen and (max-width: 640px) {
+  /* Kicks the size down on smaller windows,
+   * e.g .iPhone, to fit the nav
+   */
+  body { font-size: 70%; }
+  header#page_header {
+    background-image: url('../images/brandtag_sm.png');
+    height: 30px;
+  }
+  header #appbar img#logo {width: 127px;}
+  header img#logo {
+    top: 10px;
+    width: 140px;
+  }
+  section#page {margin: 5px; }
+  a, a:link {font-weight: bold;}
+}
+
+@media only screen and (device-width: 768px) and (orientation: landscape) {
+ /* START_HIGHLIGHT */
+  div#ipad_sidebar {
+    display: visible;
+  }
+ /* END_HIGHLIGHT */
+}
+
+@media only screen and (device-width: 768px) and (orientation: landscape) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}

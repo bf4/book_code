@@ -1,0 +1,10 @@
+<%# START_HIGHLIGHT %>
+<%= switching_creation_tag_for creation do %>
+<%# END_HIGHLIGHT %>
+  <% if creation.default_image? %>
+    <%= image_tag(creation.default_image) %>
+  <% else %>
+    <%= image_tag("missing_creation.png")%>
+  <% end %>
+  <%= controls_for_creation(creation) %>
+<% end %>

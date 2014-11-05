@@ -1,0 +1,32 @@
+<h2>ArtFlow Notification</h2>
+
+<p>Hi there, <%= @creation.client.name %>!</p>
+
+<p>
+  <%= @creation.designer.name %> has posted a new creation at
+  <%=l @creation.created_at %>
+  in your campaign, <i><%= @campaign.name %></i>.
+</p>
+
+<h3>Here's more information about it</h3>
+
+<dl>
+  <dt>Name</dt>
+  <dd><%= @creation.name %></dd>
+  <dt>Project</dt>
+  <dd><%= @creation.project.name %></dd>
+</dl>
+
+
+<% if @creation.approvable? %>
+<p>
+  This creation is 
+  <%= link_to "awaiting approval",
+          edit_creation_url(@creation) %>.
+</p>
+<% end %>
+
+<p class="footnote">
+  Thank you for using ArtFlow.
+  <%= link_to "www.artflowme.com", "http://www.artflowme.com" %>
+</p>

@@ -1,0 +1,35 @@
+ul#interested {
+  list-style: none;
+  li {
+    a {         
+      text-decoration: none;
+      /* START_HIGHLIGHT */
+      &:hover {
+      /* END_HIGHLIGHT */
+        text-decoration: underline;
+      }
+    }
+    /* START_HIGHLIGHT */
+    &.staff {
+    /* END_HIGHLIGHT */
+      a {
+        font-style: bold;
+      }
+      /* START_HIGHLIGHT */
+      &.designer {
+      /* END_HIGHLIGHT */
+        a, a:visited {
+          color: #000;
+        }
+      }
+    }
+    /* START_HIGHLIGHT */
+    &.client {
+    /* END_HIGHLIGHT */
+      a, a:visited {
+        color: #000;
+        font-italic: italic;
+      }
+    }
+  }
+}

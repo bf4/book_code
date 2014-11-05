@@ -1,0 +1,18 @@
+Code for the "Optimizing Performance" chapter
+=============================================
+
+See the setup instructions in `../README.md`
+
+Additional Setup
+----------------
+
+Make sure you are running Redis on port 6379 (as described in the
+chapter and set in `config/vanity.yml`).
+
+URLs
+----
+
+ * http://localhost:3000/designers/sign_in
+ * http://localhost:3000/subscriptions/new
+ * http://localhost:3000/creations
+ * http://localhost:3000/vanity

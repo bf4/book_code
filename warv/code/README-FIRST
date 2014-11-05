@@ -1,0 +1,50 @@
+Code for "The Rails View"
+=========================
+
+The code is broken into two major categories:
+
+Rails applications
+------------------
+
+These are located in the `artflow/` directory, organized by chapter.
+
+See `artflow/README-FIRST` for pointers to specific chapters and basic
+setup information.
+
+Miscellaneous examples
+---------------------
+
+The other directories here contain miscellaneous examples that don't fit
+into the Rails applications under `artflow/`.  They are also broken up
+by chapter:
+
+ * `css`:        "Adding Cascading Style Sheets"
+ * `email`:      "Working with Email"
+ * `forms`:      "Building Maintainable Forms"
+ * `js`:         "Adding JavaScript"
+ * `layout`      "Creating an Application Layout"
+ * `responsive`: "Handling Mobile Views"
+
+
+Important URLs
+--------------
+
+### Errata
+
+Find an error in the book text or code download?
+
+Please submit errata (this lets us more easily track and fix
+problems):
+
+    http://pragprog.com/titles/warv/errata 
+
+### Forums
+
+Have questions or comments about the book? Have trouble installing
+dependencies or getting started with the code?
+
+Please add to the discussion on our forums:
+
+    http://forums.pragprog.com/forums/183
+
+

@@ -1,0 +1,3 @@
+<% if show_preview?(creation) %>
+  <%= image_tag creation.file.url(:thumbnail), class: 'thumbnail' %>
+<% end %>

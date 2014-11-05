@@ -1,0 +1,40 @@
+<% content_for :functional_nav do %>
+  <li><%= link_to 'Edit this creation', @creation %></li>
+<% end %>
+
+<%# START:client %>
+<dl>
+  <dt>Client</dt>
+  <dd><%= creation_client_name %></dd>
+</dl>
+<%# END:client %>
+
+<%# START:approval %>
+<% if @creation.approvable?
+  <p>
+    <%= icon_to("Approve Creation",
+                :approve, approve_creation_path(@creation)) %>
+  </p>
+<% end %>
+<% END:approval %>
+
+
+<% if @creation.comments.any? %>
+  <%# START:link %>
+  <p>
+    <%= link_to 'View All Comments', '#comments',
+                onclick: "var comments = $('#comments li');
+                          if ($(this).text() == 'View All Comments') {
+                            comments.show();
+                            $(this).text('Collapse Comments');
+                          } else {
+                            comments.slice(3).hide();
+                            $(this).text('View All Comments')
+                          }
+                          return false;" %>
+  </p>
+  <% END:link %>
+  <ul id='comments'>
+    <%= render @creation.comments %>
+  </ul>
+<% end %>

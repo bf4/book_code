@@ -1,0 +1,11 @@
+<h2>Creations</h2>
+
+<%= currently_at 'Creations' %>
+
+<%# START:content %>
+<ul id='creations'>
+  <% @creations.each do |creation| %>
+    <%= render creation %>
+  <% end %>
+</ul>
+<% END:content %>

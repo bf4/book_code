@@ -1,0 +1,15 @@
+/*
+ *= require_self
+ *= require normalize
+ *= require layout
+ *= require sidebar
+ *= require navigation
+ *= require notifications
+ *= require blueprint/typography
+ *= require text
+ *= require formtastic
+ *= require forms
+ START_HIGHLIGHT
+ *= require media
+ END_HIGHLIGHT
+ */

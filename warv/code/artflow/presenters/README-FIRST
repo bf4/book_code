@@ -1,0 +1,12 @@
+Code for the "Using Presenters" chapter
+=======================================
+
+See the setup instructions in `../README.md`
+
+URLs
+----
+
+ * http://localhost:3000/designers
+ * http://localhost:3000/designers/1
+ * http://localhost:3000/projects/1
+ * http://localhost:3000/clients/1

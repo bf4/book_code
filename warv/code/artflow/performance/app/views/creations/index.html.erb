@@ -1,0 +1,13 @@
+<h2>Creations</h2>
+
+<%= currently_at 'Creations' %>
+
+<%= render 'sidebar' %>
+
+<%# START:content %>
+<% cache action: 'index', action_suffix: 'all_creations' do %>
+  <ul id='creations'>
+    <%= render @creations %>
+  </ul>
+<% end %>
+<%# END:content %>

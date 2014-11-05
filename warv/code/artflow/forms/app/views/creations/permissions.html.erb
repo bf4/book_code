@@ -1,0 +1,6 @@
+<nav id="breadcrumbs" itemtype="http://schema.org/WebPage" itemprop="breadcrumb"><ul>
+  <li><%= link_to 'Creations', creations_path %></li>
+  <li><%= link_to truncate(@creation.name), @creation %></li>
+  <li><%= link_to 'Edit', edit_creations_path(@creation) %></li>
+  <li>Permissions</li>
+</ul></nav>

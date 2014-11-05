@@ -1,0 +1,16 @@
+<h2>Creations</h2>
+
+<%= currently_at 'Creations' %>
+
+<%# START:before %>
+<ul>
+  <% @creations.each do |creation| %>
+    <li>
+      <%= creation.name %>
+      (<%= creation.stage %>,
+       r<%= "%04d" % creation.revision %>,
+       <%= creation.format.upcase %>)
+    </li>
+  <% end %>
+</ul>
+<%# END:before %>

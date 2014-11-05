@@ -1,0 +1,22 @@
+ul#interested {
+  list-style: none;
+}
+
+ul#interested a {
+  text-decoration: none;
+}
+ul#interested a:hover {
+  text-decoration: underline;
+}
+
+ul#interested li.staff a,
+ul#interested li.staff a:visited {
+  font-style: bold;
+}
+ul#interested li.staff.designer a {
+  color: #000;
+}
+ul#interested li.client a {
+  color: #000;
+  font-style: italic;
+}

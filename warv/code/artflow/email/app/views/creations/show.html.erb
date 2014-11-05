@@ -1,0 +1,10 @@
+<% content_for :functional_nav do %>
+  <li><%= link_to 'Edit this creation', @creation %></li>
+<% end %>
+
+<%# START:client %>
+<dl>
+  <dt>Client</dt>
+  <dd><%= creation_client_name %></dd>
+</dl>
+<%# END:client %>

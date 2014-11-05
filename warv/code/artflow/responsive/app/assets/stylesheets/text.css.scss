@@ -1,0 +1,15 @@
+/* START:import */
+@import "brand";
+/* END:import */
+
+body {
+  font-family: $body-font;
+}
+h1, h2 {
+  color: $near-black;
+  font-family: $heading-font;
+}
+h3 {
+  color: $dark-blue;
+  font: italic bold 20px $accent-font;
+}

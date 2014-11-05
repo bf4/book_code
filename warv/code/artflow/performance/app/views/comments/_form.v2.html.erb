@@ -1,0 +1,6 @@
+<%= semantic_form_for [@creation, Comment.new] do |f| %>
+  <%= f.inputs :body, label: false %>
+  <%= f.buttons do %>
+    <%= f.commit_button 'Add Comment' %>
+  <% end %>
+<% end %>

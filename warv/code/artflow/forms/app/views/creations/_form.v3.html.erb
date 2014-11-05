@@ -1,0 +1,15 @@
+<%# START_HIGHLIGHT %>
+<%= form_for @creation, html: {multipart: true} do |f| %>
+<%# END_HIGHLIGHT %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_area :description, cols: 40, rows: 4 %>
+
+<%# START_HIGHLIGHT %>
+  <%= f.label :file %>
+  <%= f.file_field :file %>
+<%# END_HIGHLIGHT %>
+
+  <%= f.submit %>
+<% end %>

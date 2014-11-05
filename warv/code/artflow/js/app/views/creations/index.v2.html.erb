@@ -1,0 +1,11 @@
+<h2>Creations</h2>
+
+<%= currently_at 'Creations' %>
+
+<%# START:after %>
+<ul>
+  <% @creations.each do |creation| %>
+    <li><%= creation_reference(creation) %></li>
+  <% end %>
+</ul>
+<%# END:after %>

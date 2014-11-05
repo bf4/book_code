@@ -1,0 +1,141 @@
+Rails applications for chapters
+===============================
+
+Each directory contains a Rails application for a specific chapter:
+
+ * `css`:         "Adding Cascading Style Sheets"
+ * `email`:       "Working with Email"
+ * `forms`:       "Building Maintainable Forms"
+ * `js`:          "Adding JavaScript"
+ * `layout`       "Creating an Application Layout"
+ * `performance`: "Optimizing Performance"
+ * `presenters`:  "Using Presenters"
+ * `readability`: "Improving Readability"
+ * `responsive`:  "Handling Mobile Views"
+
+Background
+----------
+
+Each application is designed to illustrate the concepts
+described in the associated chapter. Some things to note:
+
+ * Authentication, authorization, and model scoping are largely
+   stubbed out (or left intentionally missing) so we can focus on the
+   view.
+ * You may notice files named with a versioning convention, e.g.,
+   `file.v1.html.erb`, `file.v2.html.erb`, etc. These files are used in the
+   the book to incrementally describe the associated runnable file
+   (e.g., `file.html.erb`).
+ * While we've made an effort to have the application behave
+   consistently across chapters, because the book focuses on the view
+   layer (and each chapter is somewhat of a vignette on a specific
+   subject) all the changes between chapters may not covered by the
+   text.
+ * Click around enough, and you're bound to find broken links. While we have
+   stubs in place for the larger uncovered features of the
+   application, some things are still missing.
+ * If you run into problems with the code, please let is know through
+   on of the methods listed in the main README-FIRST file for the code download.
+  
+
+Application Setup
+-----------------
+
+### A Note on Ruby
+
+Each application includes an `.rvmrc` file for use with [RVM][1],
+configuring the environment to use Ruby 1.9.3 and a gemset,
+`therailsview`. You can [install Ruby 1.9.3 with RVM][2] if you don't
+already have it, and the gemset will be created if it doesn't exist.
+
+You don't need to use RVM or a gemset if you prefer. Just keep in mind
+the code was built using Ruby 1.9.3; it will probably run on other
+1.9.X versions, but is not compatible out-of-the-box, for instance,
+with Ruby 1.8.X.
+
+For more information see the Preface in the book text.
+
+### Installing dependencies
+
+To get a chapter application running, first change to that directory
+by doing the following (where 'CHAPTER' is the directory for the
+chapter, e.g. `layout`):
+
+    cd artflow/CHAPTER
+
+(If you are using RVM, it may prompt you to confirm that you trust the
+`.rvmrc` at this point.)
+
+If you haven't installed it yet, you need [Bundler][3]:
+
+    gem install bundler
+
+Install the dependencies for the application:
+
+    bundle install
+
+### Installation Problems
+
+Please report any issues you have installing [on the forum][5].  It's
+possible someone has already pointed out a solution.
+
+Here are some known issues:
+
+#### Nokogiri 
+
+If you run into a problem installing Nokogiri, first see the [Nokogiri
+installation instructions][4].
+
+Problems have been reported with OSX Lion and Xcode 4. libxml2,
+libxslt, and libiconv may need to be installed separately with
+Homebrew, MacPorts, or manually.
+
+--
+
+Once you have the dependencies installed, set up the database.
+
+### Setting up the database
+
+To get the (SQLite3) database set-up and ready to go, we've provided a
+single Rake task, `setup`. Do the following:
+
+    rake setup
+
+(If you'd like to use something other than Rails' default of SQLite3,
+you'll need to edit the `config/database.yml`, modify the `Gemfile`,
+and install those dependencies, as appropriate.)
+
+Next, start the server and view the site:
+
+### Starting the server
+
+Start the server with the `rails` executable:
+
+    rails server
+
+Now point your favorite browser (we recommend Chrome or Firefox) at:
+
+    http://localhost:3000
+
+IMPORTANT: Check the README-FIRST file in the specific chapter
+(`artflow/CHAPTER/README-FIRST') for specifics on the URLs to view.
+
+
+ [1]: http://beginrescueend.com/
+ [2]: http://beginrescueend.com/rubies/installing/
+ [3]: http://gembundler.com/
+ [4]: http://nokogiri.org/tutorials/installing_nokogiri.html
+ [5]: http://forums.pragprog.com/forums/183
+
+
+    
+
+
+
+
+
+
+
+
+
+

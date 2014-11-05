@@ -1,0 +1,21 @@
+/* START_HIGHLIGHT */
+@import "semanticgs";
+/* END_HIGHLIGHT */
+
+div#wrapper {
+  /* START_HIGHLIGHT */
+  width: $total-width;
+  /* END_HIGHLIGHT */
+  margin: 0 auto;
+}
+
+section#content {
+  /* START_HIGHLIGHT */
+  @include column(10);
+  /* END_HIGHLIGHT */
+}
+section#sidebar {
+  /* START_HIGHLIGHT */
+  @include column(2);
+  /* END_HIGHLIGHT */
+}

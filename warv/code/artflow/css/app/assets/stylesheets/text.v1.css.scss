@@ -1,0 +1,28 @@
+/* START:variables */
+$heading-font: 'Verdana', 'Arial', 'Helvetica', sans-serif;
+$accent-font: 'Georgia', 'Times New Roman', serif;
+$body-font: 'Times New Roman', 'Times', serif;
+
+$near-black: #333;
+$light-blue: #d4f2ff;
+$dark-blue: #436ca7;
+$highlight: #ffc;
+/* END:variables */
+
+/* START:darken */
+$dark-blue: darken($light-blue, 25%);
+/* END:darken */
+
+/* START:headings */
+body {
+  font-family: $body-font;
+}
+h1, h2 {
+  color: $near-black;
+  font-family: $heading-font;
+}
+h3 {
+  color: $dark-green
+  font: italic bold 20px $accent-font;
+}
+/* END:headings */

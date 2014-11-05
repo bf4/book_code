@@ -1,0 +1,30 @@
+/* START:withoutamp */
+ul#interested {
+  list-style: none;
+  li {
+    a {         
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  li.staff a {
+    font-style: bold;
+  }
+  li.staff.designer {
+    a, a:visited {
+      color: #000;
+    }
+  }
+  li.client {
+    a, a:visited {
+      color: #000;
+      font-style: italic;
+    }
+  }
+}
+/* END:withoutamp */
+
+/* START:withamp */
+/* END:withamp */

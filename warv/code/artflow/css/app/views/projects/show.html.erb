@@ -1,0 +1,18 @@
+<article>
+  <header>
+    <h1><%= @project.name %></h1>
+  </header>
+  <% content_for :sidebar do %>
+    <section id='assigned_designers'>
+      <header><h1>Assigned Designers</h1></header>
+      <%# START:list %>
+      <ul>
+        <% @project.designers.each do |designer| %>
+        <li><%= designer_status_for(designer) %></li>
+        <% end %>
+      </ul>
+      <%# END:list %>
+    </section>
+  <% end %>
+  <!-- Project information -->
+</article>

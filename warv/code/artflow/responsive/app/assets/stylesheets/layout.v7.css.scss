@@ -1,0 +1,15 @@
+div#wrapper {
+  /* START_HIGHLIGHT */
+  width: 95%;
+  /* END_HIGHLIGHT */
+  margin: 0 auto;
+}
+
+section#content {
+  float: left;
+  width: 83.333333333333%;
+}
+section#sidebar {
+  float: right;
+  width: 15.625%;
+}

@@ -1,0 +1,30 @@
+<% designer_status_for do |status| %>
+  <section class='designer-status'>
+    <title>Status</title>
+    <dl>
+      <dt>Active Projects</dt>
+      <dd><%= status.active_projects_count %></dd>
+      <dt>Pending Approval</dt>
+      <dd><%= status.pending_approvals_count %></dd>
+      <dt>Approved</dt>
+      <dd><%= status.approved_count %></dd>
+    </dl>
+    <h3>Active Project Hours</h3>
+    <table>
+      <tr>
+        <th>Project</th>
+        <th>Hours</th>
+      </tr>
+      <% status.hours_per_project.each do |project, hours| %>
+        <tr>
+          <td><%= link_to project.name, project %></td>
+          <td><%= hours %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <th>Total</th>
+        <td><%= status.active_hours %></td>
+      </tr>
+    </table>
+  </section>
+<% end %>

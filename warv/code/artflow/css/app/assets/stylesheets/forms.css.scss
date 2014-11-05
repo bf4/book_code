@@ -1,0 +1,48 @@
+/* START:fieldset */
+fieldset label {
+  display: block;
+}
+/* END:fieldset */
+
+/* START:creationprint */
+fieldset#creation-print {
+   font-size: 0.9em;
+}
+fieldset.inline label {
+   display: inline;
+   width: 240px;
+}
+/* END:creationprint */
+
+/* START:labelinline */
+fieldset.inline label,
+/* START_HIGHLIGHT */
+fieldset li.inline label {
+/* END_HIGHLIGHT */
+  display: inline;
+  width: 240px;
+}
+/* END:labelinline */
+
+/* START:printfloat */
+fieldset#creation-print {
+   float: right;
+}
+/* END:printfloat */
+
+/* START:requiredfield */
+fieldset li.required label {
+   font-weight: bold;
+}
+/* END:requiredfield */
+
+/* START:fieldwitherrors */
+fieldset div.field_with_errors {
+  label { 
+    color: #f00; /* red */
+  }
+  input { 
+    background: #ffc; /* light yellow */
+  }
+}
+/* END:fieldwitherrors */

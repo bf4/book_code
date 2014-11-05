@@ -1,0 +1,7 @@
+<li>
+  <%= raw textilize(comment.body) %>
+  <p class='meta'>
+    <%= link_to comment.user.name, comment.user %>,
+    <%=l comment.created_at %>
+  </p>
+</li>

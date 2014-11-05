@@ -1,0 +1,36 @@
+<% currently_at 'Creations' %>
+
+<% content_for :functional_nav do %>
+  <li><%= link_to 'Edit this creation', @creation %></li>
+<% end %>
+
+<%= render partial: 'preview', locals: {creation: @creation} %> 
+
+<dl>
+  <dt>Client</dt>
+  <dd><%= @creation.client.name %></dd>
+</dl>
+
+<% if @creation.approvable? %>
+  <p>
+    <%= icon_to("Approve Creation",
+                :approve, approve_creation_path(@creation)) %>
+  </p>
+<% end %>
+
+  <p>
+    <%= link_to "Remove Creation", @creation, method: 'delete',
+                confirm: "Are you sure you want to remove this creation?" %>
+  </p>
+
+<% if @creation.comments.any? %>
+  <p><%= link_to 'Expand', '#', id: 'comment_expander' %></p>
+<% end %>
+
+<ul id='comments'>
+  <%= render @creation.comments %>
+</ul>
+
+<h3>Add Comment</h3>
+<%= render 'comments/form' %>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ArtFlow: Mobile Edition!</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <%# START:content %>
+    <%= stylesheet_link_tag 'jquery.mobile-1.0/jquery.mobile-1.0' %>
+    <%= javascript_include_tag 'http://code.jquery.com/jquery-1.6.4.min.js',
+                               'jquery.mobile-1.0/jquery.mobile-1.0.min' %>
+    <%# END:content %>
+  </head>
+  <body>
+    <%= yield %>
+    <%# START_HIGHLIGHT %>
+    <%= render partial: 'layouts/footer' %>
+    <%# END_HIGHLIGHT %>
+  </body>
+</html>

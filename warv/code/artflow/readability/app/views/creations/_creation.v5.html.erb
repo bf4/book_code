@@ -1,0 +1,14 @@
+<%# START_HIGHLIGHT %>
+<%= content_tag_for :li, creation, 'class'   => creation.file_type,
+                                   'data-id' => creation.id do %>
+<%# END_HIGHLIGHT %>
+  <% if @creation.default_image? %>
+    <%= image_tag(@creation.default_image) %>
+  <% else %>
+    <%= image_tag("missing_creation.png")%>
+  <% end %>
+  
+  <%= controls_for_creation(creation) %>
+<%# START_HIGHLIGHT %>
+<% end %>
+<%# END_HIGHLIGHT %>

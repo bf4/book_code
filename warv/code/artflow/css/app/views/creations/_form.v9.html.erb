@@ -1,0 +1,34 @@
+<%= form_for @creation, html: {multipart: true} do |f| %>
+  <fieldset id='creation-print' class='inline'>
+    <legend>Print Details</legend>
+    <ol>
+      <li>
+        <%= f.label :color_space %>
+        <%= f.select :color_space, %w(CMYK RGB Other) %>
+      </li>
+      <li>
+        <%= f.label :bleed, "Bleed size" %>
+        <%= f.text_field :bleed, size: 5, placeholder: "Inches" %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <ol>
+      <li>
+        <%= f.label :name %>
+        <%# START:autofocus %>
+        <%= f.text_field :name, autofocus: true %>
+        <%# END:autofocus %>
+      </li>
+      <li>
+        <%= f.label :description %>
+        <%= f.text_area :description, cols: 80, rows: 4 %>
+      </li>
+      <li>
+        <%= f.label :file %>
+        <%= f.file_field :file %>
+      </li>
+    </ol>
+  </fieldset>
+  <%= f.submit %>
+<% end %>

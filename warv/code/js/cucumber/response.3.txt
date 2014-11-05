@@ -1,0 +1,5 @@
+% rake cucumber
+...
+1 scenario (1 passed)
+3 steps (3 passed)
+0m0.005s

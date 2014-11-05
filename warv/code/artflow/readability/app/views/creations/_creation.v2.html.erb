@@ -1,0 +1,22 @@
+<li class='creation'>
+  <% if @creation.default_image? %>
+    <%= image_tag(@creation.default_image) %>
+  <% else %>
+    <%= image_tag("missing_creation.png")%>
+  <% end %>
+  <%# START:conditional %>
+  <% if current_user.manages?(creation) %>
+    <ul class='controls'>
+      <% if current_user.admin? %>
+        <!-- stuff for admins -->
+      <% elsif current_user.editor? %>
+        <!-- stuff for editors -->
+      <% elsif current_user.authored?(creation) %>
+        <!-- stuff for the author -->
+      <% elsif current_user.shares?(creation)%>
+        <!-- stuff for everyone else -->
+      <% end %>
+    </ul>
+  <% end %>
+  <%# END:conditional %>
+</li>

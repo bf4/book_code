@@ -1,0 +1,16 @@
+<h2>Creations</h2>
+
+<%= currently_at 'Creations' %>
+
+<%# START:content %>
+<ul id='creations'>
+  <% @creations.each do |creation| %>
+    <li class='creation'>
+      <p>
+        <%= creation_reference(creation) %>
+        <span class='client'><%= creation_client_name(creation) %></span>
+      </p>
+    </li>
+  <% end %>
+</ul>
+<% END:content %>

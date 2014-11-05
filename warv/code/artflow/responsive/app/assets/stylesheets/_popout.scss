@@ -1,0 +1,5 @@
+@mixin popout($inside: #ccc, $surrounding: #ddd) {
+  background-color: $inside;
+  border-top: lighten($inside, 80%) 1px solid;
+  border-bottom: darken($surrounding, 20%) 1px solid;
+}

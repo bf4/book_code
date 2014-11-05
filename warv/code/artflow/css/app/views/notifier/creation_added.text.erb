@@ -1,0 +1,22 @@
+==============================================================================
+| ArtFlow Notification                                                       |
+==============================================================================
+
+Hi there <%= @creation.client.name %>!
+
+<%= @creation.designer.name %> has posted a new creation at
+<%=l @creation.created_at %> in your campaign, <%= @campaign.name %>.
+
+Here's more information about it:
+
+Name: <%= @creation.name %>
+Project: <%= @creation.project.name %>
+
+<% if @creation.approvable? %>
+This creation is <%= link_to "awaiting approval",
+                              edit_creation_url(@creation) %>.
+<% end %>
+
+==============================================================================
+| Thank you for using ArtFlow, http://www.artflowme.com                      |
+==============================================================================

@@ -1,0 +1,5 @@
+<% if ab_test(:3_vs_5_plans) %>
+  <%= render '3plans' %>
+<% else %>
+  <%= render '5plans' %>
+<% end %>
