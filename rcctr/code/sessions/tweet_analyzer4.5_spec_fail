@@ -1,0 +1,16 @@
+..F
+
+Failures:
+
+  1) TweetAnalyzer can find word frequency for a number of tweets
+     Failure/Error: histogram = @analyzer.word_frequency(3)
+     ArgumentError:
+       wrong number of arguments (1 for 0)
+     # ./code/ruby/twits/lib/revisions/tweet_analyzer4.3.rb:6:in 
+`word_frequency'
+     # 
+./code/ruby/twits/spec/revisions/tweet_analyzer4.5_spec_fail.rb:28:in 
+`block (2 levels) in <top (required)>'
+
+Finished in 0.00243 seconds
+3 examples, 1 failure

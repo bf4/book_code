@@ -1,0 +1,13 @@
+F
+
+Failures:
+
+  1) Twits fails
+     Failure/Error: specing for real"
+     RuntimeError:
+       Hey buddy, you should rename this file and start specing for real
+     # ./code/ruby/twits/spec/revisions/twits2.1_spec_fail.rb:6:in 
+`block (2 levels) in <top (required)>'
+
+Finished in 0.00031 seconds
+1 example, 1 failure

@@ -1,0 +1,15 @@
+F
+
+Failures:
+
+  1) TweetAnalyzer finds the frequency of words in a user's tweets
+     Failure/Error: histogram = analyzer.word_frequency()
+     NoMethodError:
+       undefined method `word_frequency' for 
+#<TweetAnalyzer:0x0000010113bc60>
+     # 
+./code/ruby/twits/spec/revisions/tweet_analyzer4.1_spec_fail.rb:8:in 
+`block (2 levels) in <top (required)>'
+
+Finished in 0.00095 seconds
+1 example, 1 failure

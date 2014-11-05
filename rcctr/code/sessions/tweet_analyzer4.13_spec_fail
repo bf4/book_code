@@ -1,0 +1,39 @@
+FFF.
+
+Failures:
+
+  1) TweetAnalyzer finds the frequency of words in a user's tweets
+     Failure/Error: histogram = @analyzer.word_frequency(3)
+     Mongo::ConnectionFailure:
+       Failed to connect to a master node at localhost:27017
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:22:in `new'
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:22:in `cached_tweets'
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:11:in `word_frequency'
+     # 
+./code/ruby/twits/spec/revisions/tweet_analyzer4.13_spec_fail.rb:15:in
+ `block (2 levels) in <top (required)>'
+
+  2) TweetAnalyzer asks the users for recent tweets
+     Failure/Error: histogram = @analyzer.word_frequency()
+     Mongo::ConnectionFailure:
+       Failed to connect to a master node at localhost:27017
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:22:in `new'
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:22:in `cached_tweets'
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:11:in `word_frequency'
+     # 
+./code/ruby/twits/spec/revisions/tweet_analyzer4.13_spec_fail.rb:21:in
+ `block (2 levels) in <top (required)>'
+
+  3) TweetAnalyzer can find word frequency for a number of tweets
+     Failure/Error: histogram = @analyzer.word_frequency(3)
+     Mongo::ConnectionFailure:
+       Failed to connect to a master node at localhost:27017
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:22:in `new'
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:22:in `cached_tweets'
+     # ./code/ruby/twits/lib/tweet_analyzer.rb:11:in `word_frequency'
+     # 
+./code/ruby/twits/spec/revisions/tweet_analyzer4.13_spec_fail.rb:27:in
+ `block (2 levels) in <top (required)>'
+
+Finished in 0.01098 seconds
+4 examples, 3 failures

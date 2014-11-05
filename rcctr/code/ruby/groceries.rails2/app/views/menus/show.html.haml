@@ -1,0 +1,14 @@
+- content_for :title do
+  %h3
+    =h "Menu: #{@menu.name}"
+    %span.edit-link= link_to '[edit]', edit_menu_path(@menu)
+
+- content_for :mini_menu do
+  = link_to "All Menus", menus_path
+  = link_to "Find Recipes", recipes_url
+
+%h4 Recipes
+= render :partial => 'shared/recipe_list', :locals => {:menu => @menu}
+%br
+%h4 Grocery List
+%textarea#grocery-list=h @menu.grocery_list.join("\n")

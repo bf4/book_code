@@ -1,0 +1,108 @@
+/*
+Syntax error: Invalid CSS after "$base_color": expected expression (e.g. 1px, bold), was ";"
+        on line 10 of /Users/brady/workspace/groceries/public/stylesheets/sass/application.sass
+
+5: //END:ERROR
+6: */
+7: 
+8: /*START:HIERARCHY*/
+9: h1 div a {
+10:   color: $base_color;
+11: }
+12: /*END:HIERARCHY*/
+
+Backtrace:
+/Users/brady/workspace/groceries/public/stylesheets/sass/application.sass:10
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/scss/parser.rb:838:in `expected'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/script/lexer.rb:193:in `expected!'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/script/parser.rb:392:in `assert_done'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/script/parser.rb:50:in `parse'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/script/parser.rb:120:in `parse'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/script.rb:32:in `parse'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:672:in `parse_script'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:470:in `parse_property'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:459:in `parse_property_or_rule'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:440:in `parse_line'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:328:in `build_tree'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:347:in `block in append_children'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:346:in `each'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:346:in `append_children'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:337:in `block in build_tree'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:330:in `each'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:330:in `build_tree'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:347:in `block in append_children'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:346:in `each'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:346:in `append_children'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:216:in `_to_tree'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:179:in `block in to_tree'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/haml/util.rb:294:in `silence_haml_warnings'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/engine.rb:179:in `to_tree'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/files.rb:44:in `tree_for'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin.rb:223:in `update_stylesheet'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin.rb:88:in `block (2 levels) in update_stylesheets'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `each'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `block in update_stylesheets'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `each'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `update_stylesheets'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin.rb:50:in `check_for_updates'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/haml-3.0.25/lib/sass/plugin/rack.rb:40:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-test-0.5.7/lib/rack/mock_session.rb:30:in `request'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-test-0.5.7/lib/rack/test.rb:209:in `process_request'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rack-test-0.5.7/lib/rack/test.rb:105:in `request'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/testing/integration.rb:292:in `process'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/testing/integration.rb:32:in `get'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/actionpack-3.0.4/lib/action_dispatch/testing/integration.rb:325:in `block (2 levels) in <module:Runner>'
+/Users/brady/workspace/groceries/spec/requests/grocery_lists_spec.rb:7:in `block (3 levels) in <top (required)>'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:49:in `instance_eval'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:49:in `block (2 levels) in run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:106:in `with_around_hooks'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:46:in `block in run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:99:in `block in with_pending_capture'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:98:in `catch'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:98:in `with_pending_capture'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:45:in `run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:262:in `block in run_examples'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:258:in `map'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:258:in `run_examples'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:232:in `run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:233:in `block in run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:233:in `map'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:233:in `run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:27:in `block (2 levels) in run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:27:in `map'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:27:in `block in run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/reporter.rb:12:in `report'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:24:in `run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/runner.rb:55:in `run_in_process'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/runner.rb:46:in `run'
+/Users/brady/.rvm/gems/ruby-1.9.2-preview3@book/gems/rspec-core-2.5.1/lib/rspec/core/runner.rb:10:in `block in autorun'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"$base_color\": expected expression (e.g. 1px, bold), was \";\"\A         on line 10 of /Users/brady/workspace/groceries/public/stylesheets/sass/application.sass\A \A 5: //END:ERROR\A 6: */\A 7: \A 8: /*START:HIERARCHY*/\A 9: h1 div a {\A 10:   color: $base_color;\A 11: }\A 12: /*END:HIERARCHY*/"; }

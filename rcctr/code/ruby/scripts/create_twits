@@ -1,0 +1,24 @@
+#!/bin/bash
+#START:JEWELER
+gem install jeweler --version=1.5.2
+jeweler --rspec twits
+#END:JEWELER
+
+#START:RAKE
+cd twits
+bundle install
+rake
+#END:RAKE
+
+#START:ZENTEST
+gem install ZenTest --version=4.4.2
+#END:ZENTEST
+
+#START:AUTOTEST-GROWL
+gem install autotest-growl --version=0.2.9
+#END:AUTOTEST-GROWL
+
+#START:AUTOTEST
+autotest
+#END:AUTOTEST
+

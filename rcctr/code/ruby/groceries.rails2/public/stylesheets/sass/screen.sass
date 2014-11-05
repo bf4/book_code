@@ -1,0 +1,83 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "compass/reset";
+@import "compass/utilities";
+
+// Our global application settings (colors and such)
+@import "application";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// Combine the partials into a single screen stylesheet.
+@import "partials/page";
+
+// We're using Formtastic, so I don't think we need this.
+// @import "partials/form";
+
+@import "partials/two_col";
+@import "partials/formtastic_base";
+
+@include blueprint-scaffolding();
+
+#session-info span{
+  float:right;
+  margin-left: 5px
+}
+
+#content div#mini-menu {
+  display: none;
+}
+
+.menu-bar {
+  list-style-type: none;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $subtle_color;
+  border-top: 1px solid;
+  background: $background_color;
+  li{
+    display: inline;
+  }
+}
+
+
+#header {
+  margin-bottom: 5px;
+}
+
+.formtastic {
+  @include stack-form();
+}
+
+.flash-notice {
+  color: $accent_color
+}
+
+#recipe-tags {
+  border-top: 1px solid $subtle_color;
+  border-bottom: 1px solid $subtle_color;
+  p { margin-bottom: 5px;}
+  ul {
+    margin-bottom: 5px;
+    list-style-type: none;
+    li{
+      display: inline;
+    }
+  }
+}
+
+body.two-col { 
+  textarea {
+    width: 100%
+  }
+  fieldset {
+    border: none
+  }
+}
+
+input#recipe_tags {
+  width: 75%
+}

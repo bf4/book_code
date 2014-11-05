@@ -1,0 +1,28 @@
+F
+
+Failures:
+
+  1) Twitter User with a username provides the last five tweets from 
+twitter
+     Failure/Error: @user.last_five_tweets.should == tweets
+       expected: ["The only software alliance that matters is the one 
+you forge\n          with your coworkers", "The only universal hedge 
+is firepower \n          #zombieoranyotherapocolypse", "Thursday is 
+Friday's Friday", "Never let the facts get in the way of a good 
+argument", "Henceforth always refer to scrum in the past tense"]
+            got: [1, 2, 3, 4, 5] (using ==)
+       Diff:
+       @@ -1,6 +1,2 @@
+       -["The only software alliance that matters is the one you 
+forge\n          with your coworkers",
+       - "The only universal hedge is firepower \n          
+#zombieoranyotherapocolypse",
+       - "Thursday is Friday's Friday",
+       - "Never let the facts get in the way of a good argument",
+       - "Henceforth always refer to scrum in the past tense"]
+       +[1, 2, 3, 4, 5]
+     # ./code/ruby/twits/spec/revisions/user2.6_spec_fail.rb:23:in 
+`block (3 levels) in <top (required)>'
+
+Finished in 0.00157 seconds
+1 example, 1 failure

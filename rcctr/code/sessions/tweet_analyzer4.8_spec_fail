@@ -1,0 +1,18 @@
+...F
+
+Failures:
+
+  1) TweetAnalyzer caches tweets in Twitter to prevent multiple requests
+     Failure/Error: coll = 
+Mongo::Connection.new.db("twitterCache").collection("bill")
+     Mongo::ConnectionFailure:
+       Failed to connect to a master node at localhost:27017
+     # 
+./code/ruby/twits/spec/revisions/tweet_analyzer4.8_spec_fail.rb:39:in 
+`new'
+     # 
+./code/ruby/twits/spec/revisions/tweet_analyzer4.8_spec_fail.rb:39:in 
+`block (2 levels) in <top (required)>'
+
+Finished in 0.01307 seconds
+4 examples, 1 failure

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+#START:SOUP
+soup:
+  name: Soup
+  servings: 1
+  cook_time_minutes: 20
+#END:SOUP
+
+#START:SALAD
+salad:
+  name: Salad
+  servings: 4
+  cook_time_minutes: 5
+#START:END

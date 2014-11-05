@@ -1,0 +1,8 @@
+WARNING on line 3 of 
+code/ruby/groceries/public/stylesheets/sass/application.sass:
+This selector doesn't have any properties and will not be rendered.
+Syntax error: Invalid CSS after "background-color": expected 
+selector, was "; black"
+        on line 3 of 
+code/ruby/groceries/public/stylesheets/sass/application.sass
+  Use --trace for backtrace.

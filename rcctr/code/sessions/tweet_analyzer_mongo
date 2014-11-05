@@ -1,0 +1,7 @@
+Failures:
+
+  1) TweetAnalyzer caches tweets in Twitter to prevent multiple requests
+     Failure/Error: coll.count().should == 20
+       expected: 20
+            got: 0 (using ==)
+     # ./spec/tweet_analyzer_spec.rb:40:in `block (2 levels) in <top (required)>'

@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#START:RAILS-NEW
+rails new groceries --skip-test-unit
+cd groceries
+#END:RAILS-NEW
+
+# Update Gemfile to include RSpec
+echo "
+#START:SPORK
+#START:RSPEC
+group :development, :test do
+  gem 'rspec-rails', '2.5.0'
+  #END:RSPEC
+  gem 'spork', '0.8.4'
+  #START:RSPEC
+end
+#END:RSPEC
+#END:SPORK
+" >> Gemfile
+
+#START:RSPEC-INSTALL
+bundle
+rails generate rspec:install
+#END:RSPEC-INSTALL
+
+#START:MODEL
+rails generate model GroceryItem list_id:integer name:string quantity:string \
+	bought:boolean
+rails generate scaffold GroceryList name:string 
+rake db:migrate
+#END:MODEL
+
+#START:SERVER
+./script/rails server
+open http://localhost:3000/grocery_lists/new
+#END:SERVER
+
+#START:RAKE
+rake
+#END:RAKE
+#START:TIME-RAKE
+time rake
+#END:TIME-RAKE
+
+#START:SPORK-BOOTSTRAP
+spork --bootstrap
+#END:SPORK-BOOTSTRAP
+
+#START:SPORK
+spork
+#END:SPORK
+
+#START:SPORK-TESTS
+time env rspec --drb spec
+#END:SPORK-TESTS

@@ -1,0 +1,13 @@
+F
+
+Failures:
+
+  1) Twitter User with a username provides the last five tweets from twitter
+     Failure/Error: @user.last_five_tweets.should have(5).tweets
+     NoMethodError: undefined method `last_five_tweets' for 
+#<User:0x000001010f8028 @twitter_username="logosity">
+     # ./code/ruby/twits/spec/revisions/user2.4_spec_fail.rb:13:in 
+`block (3 levels) in <top (required)>'
+
+Finished in 0.00057 seconds
+1 example, 1 failure

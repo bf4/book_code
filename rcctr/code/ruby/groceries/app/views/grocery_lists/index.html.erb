@@ -1,0 +1,23 @@
+<h1>Listing grocery_lists</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @grocery_lists.each do |grocery_list| %>
+  <tr>
+    <td><%= grocery_list.name %></td>
+    <td><%= link_to 'Show', grocery_list %></td>
+    <td><%= link_to 'Edit', edit_grocery_list_path(grocery_list) %></td>
+    <td><%= link_to 'Destroy', grocery_list, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Grocery list', new_grocery_list_path %>

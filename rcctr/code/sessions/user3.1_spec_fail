@@ -1,0 +1,14 @@
+F
+
+Failures:
+
+  1) Twitter User should treat missing addresses like missing zip code
+     Failure/Error: user.zip_code.should be nil
+       expected not: == nil
+                got:    nil
+     # ./code/ruby/twits/lib/revisions/user3.1.rb:8:in `zip_code'
+     # ./code/ruby/twits/spec/revisions/user3.1_spec_fail.rb:8:in 
+`block (2 levels) in <top (required)>'
+
+Finished in 0.00105 seconds
+1 example, 1 failure

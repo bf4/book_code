@@ -1,0 +1,10 @@
+CREATE TABLE "grocery_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT 
+NOT NULL, "list_id" integer, "name" varchar(255), "quantity" 
+varchar(255), "bought" boolean, "created_at" datetime, "updated_at" 
+datetime);
+CREATE TABLE "grocery_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT 
+NOT NULL, "name" varchar(255), "author" varchar(255), "created_at" 
+datetime, "updated_at" datetime);
+CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL);
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" 
+("version");
