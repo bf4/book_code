@@ -1,0 +1,5 @@
+_build/dev/lib/sequence/ebin/Elixir.Sequence.beam	Elixir.Sequence	lib/sequence.ex	Elixir.Application	Elixir.Kernel	Elixir.Module	Elixir.Sequence.Supervisor	Elixir
+_build/dev/lib/sequence/ebin/Elixir.Sequence.SubSupervisor.beam	Elixir.Sequence.SubSupervisor	lib/sequence/subsupervisor.ex	Elixir.Kernel	Elixir.Module	Elixir.Sequence.Server	Elixir.Supervisor	Elixir.Supervisor.Spec	Elixir
+_build/dev/lib/sequence/ebin/Elixir.Sequence.Stash.beam	Elixir.Sequence.Stash	lib/sequence/stash.ex	Elixir.GenServer	Elixir.Kernel	Elixir.Module	Elixir
+_build/dev/lib/sequence/ebin/Elixir.Sequence.Server.beam	Elixir.Sequence.Server	lib/sequence/server.ex	Elixir.GenServer	Elixir.Kernel	Elixir.Module	Elixir.Sequence.Stash	erlang	Elixir
+_build/dev/lib/sequence/ebin/Elixir.Sequence.Supervisor.beam	Elixir.Sequence.Supervisor	lib/sequence/supervisor.ex	Elixir.Kernel	Elixir.Module	Elixir.Sequence.Stash	Elixir.Sequence.SubSupervisor	Elixir.Supervisor	Elixir.Supervisor.Spec	Elixir
