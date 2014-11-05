@@ -1,0 +1,10 @@
+
+Git source code for Canary Library and Mod server:
+    https://github.com/CanaryModTeam/CanaryLib.git
+    https://github.com/CanaryModTeam/CanaryMod.git
+    
+API docs:
+    http://docs.visualillusionsent.net/CanaryLib/1.0.0/index.html
+    
+API Reference:
+    http://canarymod.net/books/api-reference

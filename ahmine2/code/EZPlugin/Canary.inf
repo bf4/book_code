@@ -1,0 +1,4 @@
+main-class = com.pragprog.ahmine.ez.EZPlugin
+author = Andy Hunt, Learn to Program with Minecraft Plugins
+version = 1.0
+
