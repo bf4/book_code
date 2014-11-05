@@ -20,13 +20,11 @@ books = {
   'bhh52e' => { name: "HTML5 and CSS3 (2nd edition): Level Up with Today's Web Technologies" },
   'bhgrunt' => { name: "Automate with Grunt: The Build Tool for JavaScript" },
   'bhtmux' => { name: "tmux: Productive Mouse-Free Development" },
-  'bkviml' => { name: "The VimL Primer: Edit Like a Pro with Vim Plugins and Scripts" },
   'bksqla' => { name: "SQL Antipatterns: Avoiding the Pitfalls of Database Programming" },
   'bmsft' => { name: "Everyday Scripting with Ruby: for Teams, Testers, and You" },
   'btlang' => { name: "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages" },
   'cbdepra' => { name: "Deploying Rails: Automate, Deploy, Scale, Maintain, and Sleep at Night" },
   'cjclojure' => { name: "Mastering Clojure Macros: Write Cleaner, Faster, Smarter Code" },
-  'cmelixir' => { name: "Metaprogramming Elixir" },
   # 'dccar' => {},
   'dccar2' => { name: "Build Awesome Command-Line Applications in Ruby 2: Control Your Computer, Simplify Your Life" },
   'dnvim' => { name: "Practical Vim: Edit Text at the Speed of Thought" },
@@ -71,6 +69,11 @@ books = {
   'warv' => { name: "The Rails View: Create a Beautiful and Maintainable User Experience" },
   'wbdev' => { name: "Web Development Recipes" },
 }
+# source code page 404's (no code yet)
+# {
+#   'bkviml' => { name: "The VimL Primer: Edit Like a Pro with Vim Plugins and Scripts" },
+#   'cmelixir' => { name: "Metaprogramming Elixir" },
+# }
 require 'fileutils'
 def in_dir(dirname, &block)
   FileUtils.mkdir_p(dirname)
