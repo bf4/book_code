@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Working with Unix Processes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jsunix for more book information.
+-->
+
+<html>
+<head>
+  <title>master.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="configurator.html">
+                configurator.rb
+              </a>
+            
+              
+              <a class="source" href="logging.html">
+                logging.rb
+              </a>
+            
+              
+              <a class="source" href="lookout.html">
+                lookout.rb
+              </a>
+            
+              
+              <a class="source" href="master.html">
+                master.rb
+              </a>
+            
+              
+              <a class="source" href="server.html">
+                server.rb
+              </a>
+            
+              
+              <a class="source" href="worker.html">
+                worker.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>master.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Spyglass</span></span>
+  <span class="class"><span class="keyword">class</span> <span class="title">Master</span></span>
+    <span class="keyword">include</span> <span class="constant">Logging</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(connection, socket)</span></span>
+      <span class="variable">@connection</span>, <span class="variable">@socket</span> = connection, socket
+      <span class="variable">@worker_pids</span> = []</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>The Master shares this pipe with each of its worker processes. It
+passes the writable end down to each spawned worker while it listens
+on the readable end. Each worker will write to the pipe each time
+it accepts a new connection. If The Master doesn&#39;t get anything on
+the pipe before <code>Config.timeout</code> elapses then it kills its workers
+and exits. </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="variable">@readable_pipe</span>, <span class="variable">@writable_pipe</span> = <span class="constant">IO</span>.pipe
+    <span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>This method starts the Master. It enters an infinite loop where it creates
+processes to handle web requests and ensures that they stay active. It takes
+a connection as an argument from the Lookout instance. A Master will only 
+be started when a connection is received by the Lookout.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="function"><span class="keyword">def</span> <span class="title">start</span></span>
+      trap_signals
+
+      load_app
+      out <span class="string">"Loaded the app"</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>The first worker we spawn has to handle the connection that was already
+passed to us.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      spawn_worker(<span class="variable">@connection</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>The Master can now close its handle on the client socket since the
+forked worker also got a handle on the same socket. Since this one
+is now closed it&#39;s up to the Worker process to close its handle when
+it&#39;s done. At that point the client connection will perceive that
+it&#39;s been closed on their end.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="variable">@connection</span>.close</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>We spawn the rest of the workers.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      (<span class="constant">Config</span>.workers - <span class="number">1</span>).times { spawn_worker }
+      out <span class="string">"Spawned <span class="subst">#{<span class="constant">Config</span>.workers}</span> workers. Babysitting now..."</span>
+
+      loop <span class="keyword">do</span>
+        <span class="keyword">if</span> timed_out?(<span class="constant">IO</span>.select([<span class="variable">@readable_pipe</span>], <span class="keyword">nil</span>, <span class="keyword">nil</span>, <span class="constant">Config</span>.timeout))
+          out <span class="string">"Timed out after <span class="subst">#{<span class="constant">Config</span>.timeout}</span> s. Exiting."</span>
+          
+          kill_workers(<span class="symbol">:QUIT</span>)          
+          exit 
+        <span class="keyword">else</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Clear the data on the pipe so it doesn&#39;t appear to be readable
+next time around the loop.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>          <span class="variable">@readable_pipe</span>.read_nonblock <span class="number">1</span>
+        <span class="keyword">end</span>
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">timed_out?</span><span class="params">(select_result)</span></span>
+      !select_result
+    <span class="keyword">end</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">spawn_worker</span><span class="params">(connection = <span class="keyword">nil</span>)</span></span>
+      <span class="variable">@worker_pids</span> &lt;&lt; fork { <span class="constant">Worker</span>.new(<span class="variable">@socket</span>, <span class="variable">@app</span>, <span class="variable">@writable_pipe</span>, connection).start }
+    <span class="keyword">end</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">trap_signals</span></span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>The QUIT signal triggers a graceful shutdown. The master shuts down
+immediately and lets each worker finish the request they are currently
+processing.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      trap(<span class="symbol">:QUIT</span>) <span class="keyword">do</span>
+        verbose <span class="string">"Received QUIT"</span>
+
+        kill_workers(<span class="symbol">:QUIT</span>)
+        exit
+      <span class="keyword">end</span>
+
+      trap(<span class="symbol">:CHLD</span>) <span class="keyword">do</span>
+        dead_worker = <span class="constant">Process</span>.wait
+        <span class="variable">@worker_pids</span>.delete(dead_worker)
+
+        <span class="variable">@worker_pids</span>.each <span class="keyword">do</span> |wpid|
+          <span class="keyword">begin</span> 
+            dead_worker = <span class="constant">Process</span>.waitpid(wpid, <span class="constant">Process::WNOHANG</span>)
+            <span class="variable">@worker_pids</span>.delete(dead_worker)
+          <span class="keyword">rescue</span> <span class="constant">Errno::ECHILD</span>
+          <span class="keyword">end</span>
+        <span class="keyword">end</span>
+
+        spawn_worker
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    
+    <span class="function"><span class="keyword">def</span> <span class="title">kill_workers</span><span class="params">(sig)</span></span>
+      <span class="variable">@worker_pids</span>.each <span class="keyword">do</span> |wpid|
+        <span class="constant">Process</span>.kill(sig, wpid)
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">load_app</span></span>
+      <span class="variable">@app</span>, options = <span class="constant">Rack::Builder</span>.parse_file(<span class="constant">Config</span>.config_ru_path)
+    <span class="keyword">end</span>
+  <span class="keyword">end</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

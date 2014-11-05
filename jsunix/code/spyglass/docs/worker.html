@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Working with Unix Processes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jsunix for more book information.
+-->
+
+<html>
+<head>
+  <title>worker.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="configurator.html">
+                configurator.rb
+              </a>
+            
+              
+              <a class="source" href="logging.html">
+                logging.rb
+              </a>
+            
+              
+              <a class="source" href="lookout.html">
+                lookout.rb
+              </a>
+            
+              
+              <a class="source" href="master.html">
+                master.rb
+              </a>
+            
+              
+              <a class="source" href="server.html">
+                server.rb
+              </a>
+            
+              
+              <a class="source" href="worker.html">
+                worker.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>worker.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">require</span> <span class="string">'time'</span>
+<span class="keyword">require</span> <span class="string">'rack/utils'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h1">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <h1>Worker</h1>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Spyglass</span></span>
+  <span class="class"><span class="keyword">class</span> <span class="title">Worker</span></span>
+    <span class="keyword">include</span> <span class="constant">Logging</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(socket, app, writable_pipe, connection = <span class="keyword">nil</span>)</span></span>
+      <span class="variable">@socket</span>, <span class="variable">@app</span>, <span class="variable">@writable_pipe</span> = socket, app, writable_pipe
+      <span class="variable">@parser</span> = <span class="constant">Spyglass::HttpParser</span>.new
+
+      handle_connection(connection) <span class="keyword">if</span> connection
+    <span class="keyword">end</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">start</span></span>
+      trap_signals
+
+      loop <span class="keyword">do</span>
+        handle_connection <span class="variable">@socket</span>.accept
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">handle_connection</span><span class="params">(conn)</span></span>
+      verbose <span class="string">"Received connection"</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>This notifies our Master that we have received a connection, expiring
+it&#39;s <code>IO.select</code> and preventing it from timing out.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="variable">@writable_pipe</span>.write_nonblock(<span class="string">'.'</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>This clears any state that the http parser has lying around
+from the last connection that was handled.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="variable">@parser</span>.reset</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>The Rack spec requires that &#39;rack.input&#39; be encoded as ASCII-8BIT.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      empty_body = <span class="string">''</span>
+      empty_body.encode!(<span class="constant">Encoding::ASCII_8BIT</span>) <span class="keyword">if</span> empty_body.respond_to?(<span class="symbol">:encode!</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>The Rack spec requires that the env contain certain keys before being
+passed to the app. These are the keys that aren&#39;t provided by each
+incoming request, server-specific stuff.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      env = { 
+        <span class="string">'rack.input'</span> =&gt; <span class="constant">StringIO</span>.new(empty_body),
+        <span class="string">'rack.multithread'</span> =&gt; <span class="keyword">false</span>,
+        <span class="string">'rack.multiprocess'</span> =&gt; <span class="keyword">true</span>,
+        <span class="string">'rack.run_once'</span> =&gt; <span class="keyword">false</span>,
+        <span class="string">'rack.errors'</span> =&gt; <span class="constant">STDERR</span>,
+        <span class="string">'rack.version'</span> =&gt; [<span class="number">1</span>, <span class="number">0</span>]
+      }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>This reads data in from the client connection. We&#39;ll read up to 
+10000 bytes at the moment.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      data = conn.readpartial(<span class="number">10000</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Here we pass the data and the env into the http parser. It parses
+the raw http request data and updates the env with all of the data
+it can withdraw.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="variable">@parser</span>.execute(env, data, <span class="number">0</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Call the Rack app, goes all the way down the rabbit hole and back again.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      status, headers, body = <span class="variable">@app</span>.call(env)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>These are the default headers we always include in a response. We
+only speak HTTP 1.1 and we always close the client connection. At 
+the monment keepalive is not supported.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      head = <span class="string">"HTTP/1.1 <span class="subst">#{status}</span>\r\n"</span> \
+      <span class="string">"Date: <span class="subst">#{<span class="constant">Time</span>.now.httpdate}</span>\r\n"</span> \
+      <span class="string">"Status: <span class="subst">#{<span class="constant">Rack::Utils::HTTP_STATUS_CODES</span>[status]}</span>\r\n"</span> \
+      <span class="string">"Connection: close\r\n"</span>
+
+      headers.each <span class="keyword">do</span> |k,v|
+        head &lt;&lt; <span class="string">"<span class="subst">#{k}</span>: <span class="subst">#{v}</span>\r\n"</span>
+      <span class="keyword">end</span>
+      conn.write <span class="string">"<span class="subst">#{head}</span>\r\n"</span>
+
+      body.each { |chunk| conn.write chunk }
+      body.close <span class="keyword">if</span> body.respond_to?(<span class="symbol">:close</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Since keepalive is not supported we can close the client connection
+immediately after writing the body.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      conn.close
+
+      verbose <span class="string">"Closed connection"</span>
+    <span class="keyword">end</span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">trap_signals</span></span>
+      trap(<span class="symbol">:QUIT</span>) <span class="keyword">do</span>
+        out <span class="string">"Received QUIT"</span>
+        exit
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+  <span class="keyword">end</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

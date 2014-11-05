@@ -1,0 +1,83 @@
+#!/usr/bin/env ruby
+
+THIS_FILE = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
+$LOAD_PATH << File.dirname(THIS_FILE) + '/../lib'
+require 'rubygems'
+require 'spyglass'
+require 'optparse'
+
+opts = OptionParser.new do |opts|
+  opts.banner = "Usage: spyglass [options]"
+
+  opts.separator ""
+  opts.separator "Ruby options:"
+
+  lineno = 1
+  opts.on("-e", "--eval LINE", "evaluate a LINE of code") { |line|
+    eval line, TOPLEVEL_BINDING, "-e", lineno
+    lineno += 1
+  }
+
+  opts.on("-d", "--debug", "set debugging flags (set $DEBUG to true)") {
+    $DEBUG = true
+  }
+
+  opts.on("-w", "--warn", "turn warnings on for your script") {
+    $-w = true
+  }
+
+  opts.on("-I", "--include PATH",
+          "specify $LOAD_PATH (may be used more than once)") { |path|
+    $LOAD_PATH.unshift(path.split(":"))
+  }
+
+  opts.on("-r", "--require LIBRARY",
+          "require the library, before executing your script") { |library|
+    require library
+  }
+
+  opts.separator ""
+  opts.separator "Spyglass options:"
+  
+  opts.on("-p", "--port PORT", "use PORT (default: 4222)") { |port| 
+    Spyglass::Config.port port
+  }
+  
+  opts.on("-o", "--host HOST", "list on HOST (default: 0.0.0.0)") { |host| 
+    Spyglass::Config.host host
+  }
+
+  opts.on("-c", "--configru FILE", "Load the rackup file at FILE (default: config.ru in current directory)") { |path| 
+    Spyglass::Config.config_ru_path path
+  }
+
+  opts.on("-w", "--workers COUNT", "Prefork COUNT workers when handling requests (default: 2)") { |count| 
+    Spyglass::Config.workers count.to_i
+  }
+  
+  opts.on("-t", "--timeout SEC", "Time out the master process after SEC seconds (default: 30)") { |sec|
+    Spyglass::Config.timeout sec.to_i
+  }
+  
+  opts.on("-v", "--verbose", "Enable verbose output") { |verbose|
+    Spyglass::Config.verbose true
+  }
+
+  opts.on("--vverbose", "Enable very verbose output") { |vverbose|
+    Spyglass::Config.vverbose true
+  }
+
+  opts.on_tail("-h", "--help", "Show this message") do
+    puts opts
+    abort
+  end
+
+  # Another typical switch to print the version.
+  opts.on_tail("--version", "Show version") do
+    puts Spyglass::Version
+    exit
+  end
+end
+
+opts.parse!(ARGV)
+Spyglass::Server.instance.start
