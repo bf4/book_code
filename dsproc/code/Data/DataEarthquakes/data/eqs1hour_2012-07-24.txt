@@ -1,0 +1,6 @@
+Src,Eqid,Version,Datetime,Lat,Lon,Magnitude,Depth,NST,Region
+nc,71821391,1,"Wednesday, July 25, 2012 02:27:05 UTC",36.7642,-121.4807,1.8,5.80,34,"Central California"
+ak,10518855,1,"Wednesday, July 25, 2012 02:21:48 UTC",63.0574,-151.6194,1.1,12.70, 8,"Central Alaska"
+ak,10518850,1,"Wednesday, July 25, 2012 02:04:24 UTC",59.3098,-152.3673,2.3,16.00, 8,"Southern Alaska"
+hv,60373736,1,"Wednesday, July 25, 2012 01:55:24 UTC",19.2335,-155.4122,1.9,34.40,22,"Island of Hawaii, Hawaii"
+nn,00384035,9,"Wednesday, July 25, 2012 01:32:40 UTC",38.5857,-118.4583,1.2,6.70, 6,"Nevada"

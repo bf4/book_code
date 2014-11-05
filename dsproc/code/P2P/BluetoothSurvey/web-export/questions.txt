@@ -1,0 +1,5 @@
+What's the color of the ocean?	purple	blue	pink
+What's the sum of two plus two?	4	sq(2)	sqrt(16)
+The first president of the USA?	John Adams	George Washington	John Doe
+Which duo created Processing?	Batman/Robin	Fry/Reas	Jobs/Gates
+Which boson die CERN find?	Curiosity	God	Higgs
