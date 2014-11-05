@@ -1,0 +1,57 @@
+source 'http://rubygems.org'
+
+gem 'rails', '4.1.6'
+
+gem 'sqlite3'
+
+gem 'sass-rails', '~> 4.0.3'
+
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'devise'
+
+gem 'jbuilder', '~> 2.0'
+
+gem 'twitter'
+
+group :development, :test do
+  gem "mocha", require: false
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'launchy'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'jasmine-rails'
+  gem 'awesome_print'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+  gem 'pry-rescue'
+  gem 'minitest-line'
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'poltergeist'
+  gem 'rspec-rails', '~> 3.1'
+end
+
+group :test do
+  gem "minitest-rails-capybara"
+  gem 'm'
+  gem 'minitest-reporters'
+  gem 'vcr'
+  gem 'webmock'
+end
+
+gem 'bcrypt-ruby', '~> 3.0.0'
+
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0', require: false
+end
+
+gem 'spring',        group: :development
+gem 'spring-commands-rspec',        group: :development

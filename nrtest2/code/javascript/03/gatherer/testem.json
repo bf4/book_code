@@ -1,0 +1,13 @@
+{
+  "framework": "jasmine",
+  "src_files": [
+    "app/assets/javascripts/*.js",
+    "spec/javascripts/scripts/*.js"
+  ],
+  "serve_files": [
+    "public/assets/*.js",
+    "spec/javascripts/*.js"
+  ],
+  "before_tests": "rake assets:precompile RAILS_ENV=development",
+  "after_tests": "rm -rf public/assets/"
+}

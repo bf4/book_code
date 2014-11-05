@@ -1,0 +1,17 @@
+<h1>All Projects</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Project Name</td>
+      <td>Total Project Size</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr class="project-row" id="<%= dom_id(project) %>">
+        <td class="name"><%= project.name %></td>
+        <td class="total-size"><%= project.total_size %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
