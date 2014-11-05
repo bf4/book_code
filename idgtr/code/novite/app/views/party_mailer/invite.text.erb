@@ -1,0 +1,17 @@
+Invitation to <%=h @party.name %>
+
+You're invited to <%=h @party.name %> on <%=h @party.begins_at.strftime '%A, %B %d, %Y' %>, from <%=h @party.begins_at.strftime '%I:%M %p' %> to <%=h @party.ends_at.strftime '%I:%M %p' %>!
+
+You can RSVP by visiting <%= @url %>, or clicking one of the RSVP links below.
+
+Details
+
+Why:
+<%=h @party.description %>
+
+Where:
+<%=h @party.location %>
+
+RSVP:
+Yes - <%= @url %>?accept=<%= CGI::escape @address %>
+No - <%= @url %>?decline=<%= CGI::escape @address %>

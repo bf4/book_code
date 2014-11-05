@@ -1,0 +1,93 @@
+<!--
+ ! Excerpted from "Scripted GUI Testing with Ruby",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/idgtr for more book information.
+-->
+<html>
+
+<head>
+  <title>Calculator Test</title>
+  <style type="text/css">
+    table {
+        background: silver;
+        margin: 2px;
+        padding: 0px;
+        border: solid grey;
+        border-width: 1px 0px 0px 1px;
+    }
+
+    td {
+        border: solid grey;
+        border-width: 0px 1px 1px 0px;
+        padding: 1px 3px 1px 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+<table border="1">
+  <tbody>
+    <tr><td colspan="3">fit.ActionFixture</td></tr>
+    <tr><td>start</td><td colspan="2">CalculatorActions</td></tr>
+    <tr><td>enter</td><td>number</td><td>2</td></tr>
+    <tr><td>press</td><td colspan="2">plus</td></tr>
+    <tr><td>enter</td><td>number</td><td>3</td></tr>
+    <tr><td>press</td><td colspan="2">equals</td></tr>
+    <tr><td>check</td><td>total_seconds</td><td>5</td></tr>
+  </tbody>
+</table>  
+
+<hr>
+
+<table border="1">
+  <tbody>
+    <tr><td colspan="8">CalculateTime</td></tr>
+    <tr>
+      <td><em>days</em></td>
+      <td><em>hours</em></td>
+      <td><em>mins</em></td>
+      <td><em>secs</em></td>
+
+      <td><em>days()</em></td>
+      <td><em>hours()</em></td>
+      <td><em>mins()</em></td>
+      <td><em>secs()</em></td>
+    </tr>
+    
+    <tr>
+      <td>1</td><td>47</td><td>59</td><td>59</td>
+      <td>2</td><td>23</td><td>59</td><td>59</td>
+    </tr>
+    <tr>
+      <td>1</td><td>47</td><td>59</td><td>60</td>
+      <td>3</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>1</td><td>47</td><td>59</td><td>61</td>
+      <td>3</td><td>0</td><td>0</td><td>1</td>
+    </tr>
+    <tr>
+      <td>0</td><td>0</td><td>0</td><td>86399</td>
+      <td>0</td><td>23</td><td>59</td><td>59</td>
+    </tr>
+    <tr>
+      <td>0</td><td>0</td><td>0</td><td>86400</td>
+      <td>1</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>0</td><td>0</td><td>0</td><td>86401</td>
+      <td>1</td><td>0</td><td>0</td><td>1</td>
+    </tr>
+    <tr>
+      <td>0</td><td>0</td><td>0</td><td>9223372036854775807</td>
+      <td>106751991167300</td><td>15</td><td>30</td><td>7</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

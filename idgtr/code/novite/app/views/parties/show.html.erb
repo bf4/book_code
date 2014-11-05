@@ -1,0 +1,45 @@
+<p id="party_notice"><%= notice %></p>
+
+<h1>Invitation to <%=h @party.name %></h1>
+
+<p>
+  You're invited to <span id="party_name"><%=h @party.name %></span>
+  on <span id="party_begins_on"><%=h @party.begins_at.strftime '%A, %B %d, %Y' %></span>,
+  from <span id="party_begins_at"><%=h @party.begins_at.strftime '%I:%M %p' %></span>
+  to <span id="party_ends_at"><%=h @party.ends_at.strftime '%I:%M %p' %></span>!
+</p>
+
+<p>
+  There are many parties, but only this one lives at:
+  <br /><%= link_to party_url(@party), {}, :id => 'party_link' %>
+</p>
+
+<h2>Details</h2>
+
+<p>
+  <b>Why:</b>
+  <span id="party_description"/><%=h @party.description %></span>
+</p>
+
+<p>
+  <b>Where:</b>
+  <span id="party_location"><%=h @party.location %></span>
+</p>
+
+<p>
+  <b>Who:</b>
+  <%= form_for :guest, :url => guests_url do |f| %>
+    <%= f.hidden_field :party_permalink, :value => @party.permalink %>
+    <%= f.text_field :name %>
+    <%= f.check_box :attending, :checked => true %>
+    attending
+    <%= submit_tag 'RSVP', :id => 'rsvp' %>
+  <% end %>
+
+  <ul id="guests">
+    <% @party.guests.each do |rsvp| %>
+      <li><span class="rsvp_name"><%=h rsvp.name %></span>
+          is <span class="rsvp_attending"><%= rsvp.attending ? 'attending' : 'not attending' %></span></li>
+    <% end %>
+  </ul>
+</p>

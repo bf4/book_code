@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  location: MyText
+  begins_at: 2011-12-19 00:43:10
+  ends_at: 2011-12-19 00:43:10
+  permalink: MyString
+
+two:
+  name: MyString
+  description: MyText
+  location: MyText
+  begins_at: 2011-12-19 00:43:10
+  ends_at: 2011-12-19 00:43:10
+  permalink: MyString

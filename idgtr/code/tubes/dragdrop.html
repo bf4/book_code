@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Scripted GUI Testing with Ruby",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/idgtr for more book information.
+-->
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Drag and Drop</title>
+  <script src="prototype.js" type="text/javascript"></script>
+  <script src="scriptaculous.js?load=effects,dragdrop" type="text/javascript"></script>
+  <style type="text/css">
+    body {
+      font-family: "Frutiger", "Univers", "Helvetica Neue", arial, helvetica, sans-serif;
+    }
+
+    ul {
+      list-style-image: none;
+      list-style-type: none;
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+  
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    span.drag {
+      background-color: black;
+      color: white;
+      cursor: move;
+      padding: 1px;
+      font-size: small;
+    }
+  </style>
+</head>
+<body>
+  <h3>Jokes to use in the book</h3>
+   <p>
+     <a href="#" id="reorder" onclick="setTimeout('$$(\'.drag\').invoke(\'toggle\');', 1000);">Reorder</a>
+   </p>
+   <ul class="sortabledemo" id="jokelist">
+     <li id="bar">
+       <span class="drag" style="display: none;">DRAG</span>
+       <span class="joke">The one about the guy who walks into a bar</span>
+     </li>
+     <li id="doctor">
+       <span class="drag" style="display: none;">DRAG</span>
+			 <span class="joke">The one about the doctor, lawyer, and programmer</span>
+     </li>
+     <li id="heaven">
+       <span class="drag" style="display: none;">DRAG</span>
+			 <span class="joke">The one about the people lined up to get into Heaven</span>
+     </li>
+     <li id="dangerous">
+       <span class="drag" style="display: none;">DRAG</span>
+       <span class="joke">The one that's so funny I have to hire a separate typist for each word</span>
+     </li>
+     <li id="offensive">
+       <span class="drag" style="display: none;">DRAG</span>
+       <span class="joke">The really offensive one that's going to get me in a lot of trouble</span>
+     </li>
+  </ul>
+
+  <script type="text/javascript">
+    // <![CDATA[
+    Sortable.create("jokelist",
+      {dropOnEmpty: true,
+       handle: 'drag',
+       containment: ["jokelist"],
+       constraint: false});
+    // ]]>
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<h1>New party</h1>
+
+<% if @party.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@party.errors.count, "error") %> prohibited this foo from being saved:</h2>
+    <ul>
+      <% @party.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for(@party) do |f| %>
+  <p>
+    <h3>What:</h3>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <h3>Why:</h3>
+    <%= f.text_area :description, :rows => 5 %>
+  </p>
+
+  <p>
+    <h3>Where:</h3>
+    <%= f.text_area :location, :rows => 5 %>
+  </p>
+
+  <p>
+    <h3>When:</h3>
+    <h3>From</b><br />
+    <%= f.datetime_select :begins_at %>
+  </p>
+
+  <p>
+    <b>to</b><br />
+    <%= f.datetime_select :ends_at %>
+  </p>
+
+  <p>
+    <h3>Who:</h3>
+    <textarea name="recipients" id="party_recipients" rows="5" cols="40"></textarea>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', parties_path %>
