@@ -1,0 +1,11 @@
+/*START:header_image*/
+  #header img{
+    display:block;
+  }
+/*END:header_image*/
+
+/*START:main*/
+  #main_text{display:inline;}		
+/*END:main*/
+
+

@@ -1,0 +1,7 @@
+# START:add_php_type
+AddType application/x-httpd-php .html .htm
+# END:add_php_type
+# START:add_handlers
+php_value auto_prepend_file /home/yourfoodbox/yourfoodbox.com/global_prepend.php
+php_value auto_append_file /home/yourfoodbox/yourfoodbox.com/global_append.php
+# END:add_handlers

@@ -1,0 +1,56 @@
+/*START:coverup_sidebar_headings */
+#search_header,
+#browse_recipes_header,
+#popular_ingredients_header{
+   margin:0; padding:0;
+   position:relative;
+   width:180px; height:36px;
+   overflow:hidden;
+}
+
+#search_header span,
+#browse_recipes_header span, 
+#popular_ingredients_header span  {
+  display:block;
+  position:absolute; left:0; top:0; z-index:1;
+  width:180px; height:36px;
+  margin:0; padding:0;
+}
+
+#search_header span{
+  background:url("../images/search_recipes.gif") top left no-repeat;
+}
+
+#browse_recipes_header span{
+  background:url("../images/browse_recipes.gif") top left no-repeat;
+}
+
+#popular_ingredients_header span{
+  background:url("../images/popular_ingredients.gif") top left no-repeat;
+}
+/*END:coverup_sidebar_headings */
+
+
+/*START:coverup_main_headings */
+#get_cooking, #latest_recipes_header{
+  margin:0; padding:0;
+  position:relative;
+  width:198px; height:54px;
+  overflow:hidden;
+}
+
+#get_cooking span, #latest_recipes_header span  {
+  display:block;
+  position:absolute; left:0; top:0; z-index:1;
+  width:198px; height:54px;
+  margin:0; padding:0;
+}
+
+#get_cooking span{
+  background:url("../images/get_cookin.gif") top left no-repeat;
+}
+
+#latest_recipes_header span{
+  background:url("../images/latest_recipes.gif") top left no-repeat;
+}
+/*END:coverup_main_headings */

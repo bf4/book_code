@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Web Design for Developers",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhgwad for more book information.
+-->
+
+<html lang="en">
+  <head>
+    
+    <!--[if IE 8]>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >  
+    <![endif]-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Foodbox</title>
+      <link rel="stylesheet" href="stylesheets/layout.css" type="text/css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="stylesheets/print.css" type="text/css" media="print" charset="utf-8">
+
+    <!--[if IE 6]>
+      <link rel="stylesheet" href="stylesheets/ie6.css"
+            type="text/css" media="screen">
+    <![endif]-->
+            
+    <!--[if IE 6]>
+    
+    <style>
+       #header img{behavior: url(stylesheets/iepngfix.htc)}
+    </style>
+    <![endif]-->
+    
+
+  </head>
+    
+  <body>
+    <div id="page"> <!-- start of the page wrapper -->
+      
+      <div id="header"> <!-- start of header -->
+        <img src="images/banner.png" alt="Foodbox">
+        
+        <ul id="skiplinks" class="noprint">
+          <li><a href="#main_text" accesskey="0">Skip to Content</a>
+        </ul>
+        
+      </div> <!-- end of header -->
+      
+
+      <div id="middle"> <!-- container for the sidebar and main region -->
+        <div id="sidebar"> <!-- the sidebar -->
+          
+          <div id="search">
+            <h2 id="search_header">Search Recipes<span></span></h2>
+            <form id="search_form" method="get" action="/recipes/">
+              <div>
+                
+                <label for="search_keywords" accesskey="s">Keywords</label>
+                <input type="text" id="search_keywords" name="keywords">
+                
+              
+                <input type="image" alt="Search" src="images/search.png">
+              </div>
+            </form>
+          </div>
+
+          <div id="browse_recipes">
+            <h2 id="browse_recipes_header">Browse Recipes<span></span></h2>
+            <a class="level_1" href="#">desserts</a>
+            <a class="level_4" href="#">appetizers</a>
+            <a class="level_5" href="#">indian</a>
+            <a class="level_2" href="#">beef</a>
+            <a class="level_5" href="#">entrees</a>
+            <a class="level_4" href="#">mexican</a>   
+            <a class="level_3" href="#">seafood</a>   
+            <a class="level_4" href="#">drinks</a>   
+            <a class="level_2" href="#">pasta</a>   
+            <a class="level_1" href="#">italian</a>   
+            <a class="level_2" href="#">chicken</a>   
+            <a class="level_4" href="#">pork</a>   
+          </div> <!-- end browse_recipes -->
+
+          <div id="popular_ingredients">
+            <h2 id="popular_ingredients_header">Popular Ingredients<span></span></h2>
+            <a class="level_2" href="#">oregano</a>
+            <a class="level_4" href="#">garlic</a>
+            <a class="level_3" href="#">black beans</a>
+            <a class="level_3" href="#">apples</a>
+            <a class="level_3" href="#">bananas</a>
+            <a class="level_5" href="#">cheese</a>
+            <a class="level_3" href="#">lettuce</a>  
+            <a class="level_1" href="#">chicken</a>       
+          </div> <!-- end popular_ingredients -->
+
+        </div> <!-- end of the sidebar -->
+        
+        <div id="main"> <!-- start of main content -->
+          
+          <div id="main_image">
+            <img src="images/pasta.jpg" alt="Pasta and marinara sauce">
+          </div>
+          
+          <div id="main_text">
+
+            <h1 id="get_cooking">Get Cookin...<span></span></h1>
+            
+            <p>Foodbox is the best way to collect and share recipes with the rest of the world.
+               You can build your own recipe book from thousands of great recipes from renowned chefs or users 
+               just like you.  You can also share your own secret recipes with a few of your
+                friends or make them available to the rest of the world!</p>
+
+            <p>Create an account today and get cookin!</p>
+          </div><!-- end main_text -->
+
+          <div id="signup_login">
+            <a href="/signup/"><img src="images/btn_signup.png" alt="Sign up"></a>
+            <a href="/login/"><img src="images/btn_login.png" alt="Log in"></a>
+
+          </div><!-- end signup_login -->
+
+          <div id="latest_recipes">
+            
+            <h2 id="latest_recipes_header">Latest Recipes<span></span></h2>
+            
+            <div id="latest_recipe_1" class="latest_recipe">
+              <h3><a href="#">Stuffed Chicken Breast</a></h3>
+              <p>A lightly breaded breast of chicken stuffed with mushrooms and Swiss cheese. Easy to make even for beginners.</p>
+            </div>
+
+            <div id="latest_recipe_2" class="latest_recipe">
+              <h3><a href="#">Chocolate Pancakes</a></h3>
+              <p>This complete-from-scratch classic pancakes recipe is sure to please even the pickiest eater, especially chocolate lovers.</p>
+            </div>
+
+          </div>
+
+        </div> <!-- end of main content -->
+      </div> <!-- end of middle container -->
+      <div id="footer"> <!-- start of the footer -->
+      
+        <p id="copyright">Copyright &copy; 2010 Foodbox, LLC, all rights reserved.</p>
+        <p id="privacy_and_terms">
+          <a href="terms.html">Terms of Service</a> |
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div> <!-- end of the footer -->
+
+    </div> <!-- end of the page wrapper -->
+    
+    <script type="text/javascript"
+       charset="utf-8"
+       src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" charset="utf-8" 
+      src="javascripts/crossfade.js">
+    </script>
+    
+      
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Design for Developers",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhgwad for more book information.
+-->
+
+<html lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Foodbox</title>
+  </head>
+    
+  <body>
+    <section id="page">
+      
+      <header id="header">
+        <img src="images/banner.png" alt="Foodbox">
+      </header>
+      <section id="middle"> 
+        <aside id="sidebar"> 
+          
+          <section id="search">
+            <h2 id="search_header">Search Recipes</h2>
+            <form id="search_form" method="get" action="/recipes/">
+              <div>
+                <input type="text" id="search_keywords" name="keywords">
+                <input type="image" alt="Search" src="images/search.png">
+              </div>
+            </form>
+          </section>
+          
+          <section id="browse_recipes">
+            <h2 id="browse_recipes_header">Browse Recipes</h2>
+            <a class="level_1" href="#">desserts</a>
+            <a class="level_4" href="#">appetizers</a>
+            <a class="level_5" href="#">indian</a>
+            <a class="level_2" href="#">beef</a>
+            <a class="level_5" href="#">entrees</a>
+            <a class="level_4" href="#">mexican</a>   
+            <a class="level_3" href="#">seafood</a>   
+            <a class="level_4" href="#">drinks</a>   
+            <a class="level_2" href="#">pasta</a>   
+            <a class="level_1" href="#">italian</a>   
+            <a class="level_2" href="#">chicken</a>   
+            <a class="level_4" href="#">pork</a>   
+          </section>
+          
+          <section id="popular_ingredients">
+            <h2 id="popular_ingredients_header">Popular Ingredients</h2>
+            <a class="level_2" href="#">oregano</a>
+            <a class="level_4" href="#">garlic</a>
+            <a class="level_3" href="#">black beans</a>
+            <a class="level_3" href="#">apples</a>
+            <a class="level_3" href="#">bananas</a>
+            <a class="level_5" href="#">cheese</a>
+            <a class="level_3" href="#">lettuce</a>  
+            <a class="level_1" href="#">chicken</a>       
+          </section>
+        </aside>
+        
+        <section id="main">        
+          <img id="main_image" src="images/pasta.jpg" 
+               alt="Pasta and marinara sauce">
+  
+          <article id="main_text">
+            <h1 id="get_cooking">Get Cookin...</h1>
+            <p>Foodbox is the best way to collect and share recipes 
+	           with the rest of the world. You can build your own 
+	           recipe book from thousands of great recipes from 
+	           renowned chefs or users just like you.  You can also 
+	           share your own secret recipes with a few of your friends 
+	           or make them available to the rest of the world!</p>
+
+            <p>Create an account today and get cookin!</p>
+          </article>
+
+          <section id="signup_login">
+            <a href="/signup/">
+	            <img src="images/btn_signup.png" alt="Sign up">
+	          </a>
+            <a href="/login/">
+	            <img src="images/btn_login.png" alt="Log in">
+	          </a>
+          </section>
+          
+          <section id="latest_recipes">      
+            <h2 id="latest_recipes_header">Latest Recipes</h2>
+            <article id="latest_recipe_1" class="latest_recipe">
+              <h3><a href="#">Stuffed Chicken Breast</a></h3>
+              <p>A lightly breaded breast of chicken stuffed with mushrooms
+	             and Swiss cheese. Easy to make even for beginners.</p>
+            </article>
+            <article id="latest_recipe_2" class="latest_recipe">
+              <h3><a href="#">Chocolate Pancakes</a></h3>
+              <p>This complete-from-scratch classic pancakes recipe is sure 
+	          to please even the pickiest eater, especially chocolate 
+	          lovers.</p>
+            </article>
+          </section>
+        </section>
+      </section>
+
+      <footer id="footer"> 
+        <p id="copyright">Copyright &copy; 2010 Foodbox, 
+	                      LLC, all rights reserved.</p>
+        <p id="privacy_and_terms">
+          <a href="terms.html">Terms of Service</a> |
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </footer>
+    </section>
+
+  </body>
+</html>

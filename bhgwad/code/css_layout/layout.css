@@ -1,0 +1,130 @@
+
+/* START:zero_everything */
+body, p, h1, h2, h3, h4, h5, h6, ul, li, form{
+  margin:0;
+  padding:0;
+  line-height:18px;
+}
+
+p, h2, h3, h4, h5, h6{
+  margin-bottom:18px;
+}
+
+
+/* END:zero_everything */ 
+
+/*START:center_content*/
+#page{
+  display:block;
+  width:900px;
+  margin: 0px auto;
+}
+/*END:center_content*/
+
+/*START:header */
+#header{
+  height:108px;
+  width:100%;
+}
+/*END:header*/
+
+/*START:adjust_header_image */
+
+  #header img{
+  	margin-top:18px;
+  	margin-left:18px;
+  }
+
+/*END:adjust_header_image */
+
+/*START:middle*/
+#middle{
+	width:100%;
+	float:left;
+}
+/*END:middle*/
+
+/*START:sidebar*/
+
+		#middle #sidebar{
+		  width:306px;
+		  float:left;
+
+		}
+/*END:sidebar*/
+/*START:main*/
+		#middle #main{
+		  width:594px;
+		  float:left;
+
+		}
+/*END:main*/
+
+/*START:footer_complete */
+/*START:footer */
+#footer{
+	 width:100%;
+	 height:36px;
+/*END:footer */
+	 clear:both;
+/*START:footer */
+}
+/*END:footer */
+/*END:footer_complete */
+
+
+/*START:sidebar_formatting */
+#browse_recipes, #popular_ingredients, #search{
+  margin-left: 18px;
+  margin-right:18px;
+  margin-top: 18px;
+  
+}
+/*END:sidebar_formatting */
+
+/*START:main_text */
+#main_text{
+  float:left;
+  width:288px;
+  margin-left:18px;
+  
+}
+/*END:main_text */
+
+/*START:signup_login */
+#signup_login{
+  margin-top:36px;
+  float:left;
+  width:288px;
+  text-align:center;
+}
+
+/*END:signup_login */
+
+/*START:signup_login_links */
+#signup_login a{
+  width:100%;
+  display:block;
+  margin-bottom:18px;
+  float:left;
+}
+/*END:signup_login_links */
+
+
+/*START:latest_recipies */
+#latest_recipes{
+   clear:both;
+   margin-left:18px;
+   margin-right:18px;
+   margin-top:18px;
+}
+
+  #latest_recipes h3{
+    margin-left:18px;
+  }
+
+  #latest_recipes p{
+    margin-left:36px;
+  }
+
+/*END:latest_recipies */

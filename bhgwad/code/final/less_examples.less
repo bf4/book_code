@@ -1,0 +1,30 @@
+/*START:nesting*/
+#latest_recipes{
+   clear:both;
+   margin: 18px 18px 0 18px;
+   
+   h3{
+    margin-left:18px;
+   }
+
+  p{
+    margin-left:36px;
+  }
+}
+/*END:nesting*/
+
+/*START:variables*/
+@text_color: #fff;
+@width: 900px;
+@font_size: 12px;
+@line_height: @font_size * 1.5;
+@margin: @line_height;
+@sidebar: @width / 3;
+@main: @width - @sidebar - @margin;
+
+body {color: @text_color; }
+#page { width: @width; margin: 0 auto; }
+#middle { width: @width; }
+#main { width: @main; }
+#sidebar { width: @sidebar; }
+/*END:variables*/

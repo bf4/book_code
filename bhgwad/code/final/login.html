@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Web Design for Developers",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhgwad for more book information.
+-->
+
+<html lang="en">
+  <head>
+    
+    <!--[if IE 8]>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >  
+    <![endif]-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Foodbox</title>
+      <link rel="stylesheet" href="stylesheets/layout.css" type="text/css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="stylesheets/print.css" type="text/css" media="print" charset="utf-8">
+
+    <!--[if IE 6]>
+      <link rel="stylesheet" href="stylesheets/ie6.css"
+            type="text/css" media="screen">
+    <![endif]-->
+            
+    <!--[if IE 6]>
+    
+    <style>
+       #header img{behavior: url(stylesheets/iepngfix.htc)}
+    </style>
+    <![endif]-->
+    
+
+  </head>
+  <body class="level2">
+    <div id="page"> <!-- start of the page wrapper -->
+      
+      <div id="header"> <!-- start of header -->
+        <img src="images/banner_small.png" alt="Foodbox">
+        
+        <ul id="skiplinks" class="noprint">
+          <li><a href="#main_text" accesskey="0">Skip to Content</a>
+        </ul>
+        
+      </div> <!-- end of header -->
+      
+      
+
+      <div id="middle"> 
+        
+        
+        <div id="leftcol">    
+        
+          <h2>Log in</h2>
+
+          <form id="login" method="post" action="/user_sessions">   
+          <table>
+            <tr>
+              <th><label for="username">Username</label></th>
+              <td>
+                <input type="text" name="username"
+                       id="username" class="text">
+              </td>
+            </tr>
+            <tr>
+              <th><label for="password">Password</label></th>
+              <td>
+                <input type="password" name="password"
+                       id="password" class="password">
+              </td>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <td>
+                <input type="checkbox" name="remember" id="remember" class="checkbox">
+                <label for="remember">Remember me</label></td>
+              </th>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <td><input type="submit" value="Log in"></td>
+            </tr>
+           </table>
+          </form>
+          
+        </div>
+        <div id="rightcol">
+          
+          
+          <h2>Already have an account?</h2>
+            <a href="/signup/">
+              <img src="images/btn_signup.png" alt="Sign up">
+            </a>
+        
+        </div>
+        
+          
+      </div> <!-- end of middle container -->
+      
+      
+      <div id="footer"> <!-- start of the footer -->
+      
+        <p id="copyright">Copyright &copy; 2010 Foodbox, LLC, all rights reserved.</p>
+        <p id="privacy_and_terms">
+          <a href="terms.html">Terms of Service</a> |
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div> <!-- end of the footer -->
+
+    </div> <!-- end of the page wrapper -->
+
+  </body>
+</html>

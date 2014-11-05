@@ -1,0 +1,17 @@
+#foodbox_header{
+   margin:0;
+   padding:0;
+   position:relative;
+   width:486px;
+   height:90px;
+   overflow:hidden;
+   display:block;
+}
+
+#foodbox_header span {
+  position:absolute; left:0; top:0; z-index:1;
+  width:486px; 
+  height:90px;
+  margin:0; padding:0;
+  background:url("../images/banner.png") top left no-repeat;
+}

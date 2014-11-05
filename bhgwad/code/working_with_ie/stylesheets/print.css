@@ -1,0 +1,33 @@
+/*START:hiding*/
+#sidebar, #main_image, #signup_login, 
+#privacy_and_terms, .noprint{
+  display:none;
+}
+/*END:hiding*/
+
+/*START:spacing*/
+body, p, h1,h2,h3,h4,h5{margin:0; padding:0;}
+p, h1,h2,h3,h4{line-height:18pt;}
+p{font-size:12pt; margin-bottom:18pt;}
+h1{font-size:18pt;}
+h2{font-size:16pt;}
+h3{font-size:14pt;}
+
+/*END:spacing*/
+
+/*START:font_family*/
+body{
+  font-family: Baskerville, Times New Roman, Times, serif
+ }
+/*END:font_family*/
+
+/*START:separator*/
+#header{border-bottom:1px solid #000;}
+/*END:separator*/
+
+/*START:fix_links*/
+#main a:link:after, #main a:visited:after {
+  content: " (" attr(href) ") ";
+  font-size: 90%;
+}
+/*END:fix_links*/

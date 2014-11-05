@@ -1,0 +1,108 @@
+
+/*START:coverup_sidebar_headings */
+#search_header, #browse_recipes_header, #popular_ingredients_header{
+   margin:0; padding:0;
+   position:relative;
+   width:180px; height:36px;
+   overflow:hidden;
+}
+
+#search_header span, #browse_recipes_header span, #popular_ingredients_header span  {
+   display:block;
+   position:absolute; left:0; top:0; z-index:1;
+   width:180px; height:36px;
+   margin:0; padding:0;
+}
+
+#search_header span{background:url("../images/search_recipes.gif") top left no-repeat;}
+#browse_recipes_header span{background:url("../images/browse_recipes.gif") top left no-repeat;}
+#popular_ingredients_header span{background:url("../images/popular_ingredients.gif") top left no-repeat;}
+
+/*END:coverup_sidebar_headings */
+
+
+/*START:coverup_main_headings */
+#get_cooking, #latest_recipes_header{
+   margin:0; padding:0;
+   position:relative;
+   width:198px; height:54px;
+   overflow:hidden;
+}
+
+#get_cooking span, #latest_recipes_header span  {
+   display:block;
+   position:absolute; left:0; top:0; z-index:1;
+   width:198px; height:54px;
+   margin:0; padding:0;
+}
+
+#get_cooking span{
+	background:url("../images/get_cookin.gif") top left no-repeat;
+}
+#latest_recipes_header span{
+	background:url("../images/latest_recipes.gif") top left no-repeat;
+}
+
+/*END:coverup_main_headings */
+
+
+/*START:setting_fonts */
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+}
+
+/*END:setting_fonts */
+
+/*START:setting_colors */
+
+#header, #footer{background-color:#FFE500}
+#middle{background-color: #ffdd7f}
+#main{background-color:#fff8e4}
+
+a{color:#4d3900; text-decoration:none;}
+a:visited{color:#806f40;}
+a:hover{color:#807940; text-decoration:underline;}
+/*END:setting_colors */
+
+/*START:tag_cloud */
+
+.level_1, .level_2, .level_3, .level_4, .level_5{
+	margin-bottom:18px;
+	margin-left:18px;
+	line-height:36px;}
+
+.level_1{font-weight:bolder; font-size:20px;}
+.level_2{font-weight:bold; font-size:18px;}
+.level_3{font-size:16px;}
+.level_4{font-size:14px;}
+.level_5{font-size:12px;}
+/*END:tag_cloud */
+
+/*START:search_form */
+
+#search_form #search_keywords{
+	width:200px;
+	float:left;
+	border:1px solid #000; 
+	height:16px;
+	padding:0;}
+/*END:search_form */
+
+
+
+/*START:footer */
+#footer{text-align:center;}
+#footer p{margin:0;}
+/*END:footer */
+
+
+/*START:body_background */
+body{
+	background: #fff url('../images/background.gif') repeat-x;
+}
+/*END:body_background */
+
+/*START:remove_borders */
+  img{border:none;}
+/*END:remove_borders */

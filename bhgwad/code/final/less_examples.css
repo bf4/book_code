@@ -1,0 +1,8 @@
+body { color: #ffffff; }
+#page {
+  width: 900px;
+  margin: 0 auto;
+}
+#middle { width: 900px; }
+#main { width: 582px; }
+#sidebar { width: 300px; }
