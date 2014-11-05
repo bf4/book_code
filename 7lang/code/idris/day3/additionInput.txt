@@ -1,0 +1,14 @@
+:m
+:p plusCommutes_0_b
+intros
+rewrite (plusZeroRightNeutral b)
+trivial
+qed
+
+:m
+:p plusCommutes_Sa_b
+intros
+rewrite (plusSuccRightSucc b a)
+rewrite hypothesis
+trivial
+qed

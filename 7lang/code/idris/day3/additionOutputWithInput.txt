@@ -1,0 +1,98 @@
+     ____    __     _                                          
+    /  _/___/ /____(_)____                                     
+    / // __  / ___/ / ___/     Version 0.9.10
+  _/ // /_/ / /  / (__  )      http://www.idris-lang.org/      
+ /___/\__,_/_/  /_/____/       Type :? for help                
+
+Type checking ./additionProofIncomplete.idr
+*additionProofIncomplete> :m
+Global metavariables:
+	[plusCommutes_Sa_b,plusCommutes_0_b]
+*additionProofIncomplete> :p plusCommutes_0_b
+----------                 Goal:                  ----------
+{ hole 0 }:
+ (b : Nat) -> b = plus b Z
+-plusCommutes_0_b> intros
+----------              Other goals:              ----------
+{ hole 0 }
+----------              Assumptions:              ----------
+ b : Nat
+----------                 Goal:                  ----------
+{ hole 1 }:
+ b = plus b Z
+-plusCommutes_0_b> rewrite (plusZeroRightNeutral b)
+----------              Other goals:              ----------
+{ hole 1 }
+{ hole 0 }
+----------              Assumptions:              ----------
+ b : Nat
+----------                 Goal:                  ----------
+{ hole 2 }:
+ plus b Z = plus b Z
+-plusCommutes_0_b> trivial
+plusCommutes_0_b: No more goals.
+-plusCommutes_0_b> qed
+Proof completed!
+plusCommutes_0_b = proof
+  intros
+  rewrite (plusZeroRightNeutral b)
+  trivial
+
+
+*additionProofIncomplete> :m
+Global metavariables:
+	[plusCommutes_Sa_b]
+*additionProofIncomplete> :p plusCommutes_Sa_b
+----------                 Goal:                  ----------
+{ hole 0 }:
+ (a : Nat) ->
+ (b : Nat) ->
+ (plus a b = plus b a) -> S (plus a b) = plus b (S a)
+-plusCommutes_Sa_b> intros
+----------              Other goals:              ----------
+{ hole 2 }
+{ hole 1 }
+{ hole 0 }
+----------              Assumptions:              ----------
+ a : Nat
+ b : Nat
+ hypothesis : plus a b = plus b a
+----------                 Goal:                  ----------
+{ hole 3 }:
+ S (plus a b) = plus b (S a)
+-plusCommutes_Sa_b> rewrite (plusSuccRightSucc b a)
+----------              Other goals:              ----------
+{ hole 3 }
+{ hole 2 }
+{ hole 1 }
+{ hole 0 }
+----------              Assumptions:              ----------
+ a : Nat
+ b : Nat
+ hypothesis : plus a b = plus b a
+----------                 Goal:                  ----------
+{ hole 4 }:
+ S (plus a b) = S (plus b a)
+-plusCommutes_Sa_b> rewrite hypothesis
+----------              Other goals:              ----------
+{ hole 4 }
+{ hole 3 }
+{ hole 2 }
+{ hole 1 }
+{ hole 0 }
+----------              Assumptions:              ----------
+ a : Nat
+ b : Nat
+ hypothesis : plus a b = plus b a
+----------                 Goal:                  ----------
+{ hole 5 }:
+ S (plus a b) = S (plus a b)
+-plusCommutes_Sa_b> trivial
+plusCommutes_Sa_b: No more goals.
+-plusCommutes_Sa_b> qed
+Proof completed!
+plusCommutes_Sa_b = proof
+  intros
+  rewrite (plusSuccRightSucc b a)
+  rewrite hypothesis
+  trivial

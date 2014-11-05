@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Seven More Languages in Seven Weeks",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/7lang for more book information.
+-->
+<meta charset="utf-8">
+<title>Reverse</title>
+<h1>Reverse</h1>
+<script>
+  function reverse(s, t) {
+    if (s.length < 1) { return t; }
+    var first = s.substr(0, 1);
+    var rest  = s.substr(1, s.length - 1);
+    return reverse(rest, first + t);
+  }
+
+  var large = new Array(5001).join("hello ");
+  document.body.appendChild(document.createTextNode(reverse(large, "")));
+</script>
+<noscript>Haha, srsly?</noscript>
