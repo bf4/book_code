@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Build Awesome Command-Line Applications in Ruby 2",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dccar2 for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Projects/RubyBook/Book/code/be_easy_to_maintain/todo/features/support/Servlet.java.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v10">
+<meta name="syntax" content="java">
+<meta name="settings" content="use_css,pre_wrap,expand_tabs">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #839496; background-color: #002b36; }
+body { font-family: monospace; color: #839496; background-color: #002b36; }
+.Statement { color: #719e07; }
+.Constant { color: #2aa198; }
+.Type { color: #b58900; }
+.PreProc { color: #cb4b16; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="PreProc">package</span> com.example.web.app.wtf.is.going.on;
+
+<span class="PreProc">import</span> java.io.IOException;
+<span class="PreProc">import</span> javax.servlet.ServletException;
+<span class="PreProc">import</span> javax.servlet.GenericServlet;
+<span class="PreProc">import</span> javax.servlet.http.HttpServletRequest;
+<span class="PreProc">import</span> javax.servlet.http.HttpServletResponse;
+
+<span class="Type">public</span> <span class="Type">class</span> MyServlet <span class="Type">extends</span> GenericServlet
+{
+    <span class="Type">public</span> <span class="Type">void</span> service(HttpServletRequest request, HttpServletResponse response)
+        <span class="Type">throws</span> IOException, ServletException
+    {
+        response.getWriter().println(<span class="Constant">&quot;&lt;h1&gt;Hi!&lt;/h1&gt;&quot;</span>);
+        <span class="Statement">if</span> (getUser().getName().getFirst() != <span class="Constant">null</span>)
+        {
+            response.getWriter().println(<span class="Constant">&quot;Hi, &quot;</span> + getUser().getName().getFirst());
+        }
+        <span class="Statement">else</span>
+        {
+            response.getWriter().println(<span class="Constant">&quot;Greetings Mr. &quot;</span> + getUser().getName().getLast());
+        }
+    }
+}
+
+
+</pre>
+</body>
+</html>

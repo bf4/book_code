@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Build Awesome Command-Line Applications in Ruby 2",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dccar2 for more book information.
+-->
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>db_backup.rb(1) - backup one or more MySQL databases</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#FILES">FILES</a>
+    <a href="#OPTIONS">OPTIONS</a>
+    <a href="#EXAMPLES">EXAMPLES</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>db_backup.rb(1)</li>
+    <li class='tc'></li>
+    <li class='tr'>db_backup.rb(1)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>db_backup.rb</code> - <span class="man-whatis">backup one or more MySQL databases</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>db_backup.rb</code> <var>database_name</var><br />
+<code>db_backup.rb</code> <code>-u username</code> <code>-p password</code> <var>database_name</var><br />
+<code>db_backup.rb</code> <code>-i</code>|<code>--iteration</code> <var>database_name</var></p>
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p><strong>db_backup.rb</strong> is a simple command-line tool for backing up a
+MySQL database.  It does so safely and quietly, using a sensible
+name for the backup files, so it's perfect
+for use with cron as a daily backup.</p>
+
+<p>It also has knowledge of our development process, so you can indicate that
+a backup is the canonical reference for an interation with the <code>--iteration</code>
+flag.  This will allow you to easily keep one backup per iteration, easily
+identifying it, and differentiate it from daily backups.</p>
+
+<p>By default, <code>db_backup.rb</code> will use your database credentials
+in <code>~/.my.cnf</code>, however, you can override either the username
+or password (or both) via the <code>-u</code> and <code>-p</code> flags, respectively.</p>
+
+<p>Finally, <code>db_backup.rb</code> will add a sanity check on your username, to
+make sure it fits with our corporate standard format of <code>first.last</code>.</p>
+
+<h2 id="FILES">FILES</h2>
+
+<p>Since this command ultimately calls <code>mysqldump</code>, if you omit
+the username or password options, <code>~/.my.cnf</code> will be used
+for credentials.  When running from cron, this is most
+likely <em>not</em> what you want to happen.</p>
+
+<h2 id="OPTIONS">OPTIONS</h2>
+
+<dl>
+<dt><code>-i</code>, <code>--iteration</code></dt><dd>Indicate that this backup is an "iteration" backup, and use
+a different naming scheme to allow for easy retention
+of daily backups <em>and</em> per-iteration backups</dd>
+<dt class="flush"><code>-u USER</code></dt><dd>Database username, in first.last format if the one in
+<code>~/my.cnf</code> is not correct</dd>
+<dt><code>-p PASSWORD</code></dt><dd>Database password if the one in <code>~/my.cnf</code> is not correct</dd>
+</dl>
+
+
+<h2 id="EXAMPLES">EXAMPLES</h2>
+
+<p>Backup the database "big_client"</p>
+
+<pre><code>$ db_backup.rb big_client
+</code></pre>
+
+<p>Backup the database "small_client", for which different credentials are required:</p>
+
+<pre><code>$ db_backup.rb -u dave -p d4v3 small_client
+</code></pre>
+
+<p>Make an iteration backup of the "big_client" database:</p>
+
+<pre><code>$ db_backup.rb -i big_client
+</code></pre>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'></li>
+    <li class='tc'>June 2011</li>
+    <li class='tr'>db_backup.rb(1)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

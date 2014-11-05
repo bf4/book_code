@@ -1,0 +1,61 @@
+db_backup.rb(1) -- backup one or more MySQL databases
+=============================================
+
+## SYNOPSIS
+
+`db_backup.rb` <database_name><br>
+`db_backup.rb` `-u username` `-p password` <database_name><br>
+`db_backup.rb` `-i`|`--iteration` <database_name>
+
+## DESCRIPTION
+
+**db_backup.rb** is a simple command-line tool for backing up a
+MySQL database.  It does so safely and quietly, using a sensible
+name for the backup files, so it's perfect 
+for use with cron as a daily backup.
+
+It also has knowledge of our development process, so you can indicate that
+a backup is the canonical reference for an interation with the `--iteration`
+flag.  This will allow you to easily keep one backup per iteration, easily
+identifying it, and differentiate it from daily backups.
+
+By default, `db_backup.rb` will use your database credentials
+in `~/.my.cnf`, however, you can override either the username
+or password (or both) via the `-u` and `-p` flags, respectively.
+
+Finally, `db_backup.rb` will add a sanity check on your username, to
+make sure it fits with our corporate standard format of `first.last`.
+
+## FILES
+
+Since this command ultimately calls `mysqldump`, if you omit
+the username or password options, `~/.my.cnf` will be used
+for credentials.  When running from cron, this is most
+likely *not* what you want to happen.
+
+## OPTIONS
+
+  * `-i`, `--iteration`:
+    Indicate that this backup is an "iteration" backup, and use
+    a different naming scheme to allow for easy retention
+    of daily backups *and* per-iteration backups
+  * `-u USER`:
+    Database username, in first.last format if the one in
+    `~/my.cnf` is not correct
+  * `-p PASSWORD`:
+    Database password if the one in `~/my.cnf` is not correct
+
+## EXAMPLES
+
+Backup the database "big_client"
+
+    $ db_backup.rb big_client
+
+Backup the database "small_client", for which different credentials are required:
+
+    $ db_backup.rb -u dave -p d4v3 small_client
+
+Make an iteration backup of the "big_client" database:
+
+    $ db_backup.rb -i big_client
+

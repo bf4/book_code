@@ -1,0 +1,94 @@
+#!/usr/bin/env ruby
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
+
+require 'main'
+require 'todo/version'
+require 'todo/task'
+require 'todo'
+
+Main {
+  option('force-tty') { }
+
+  option('filename') {
+    description "Path to the todo file"
+    argument :required
+    default File.join(ENV['HOME'],'.todo.txt')
+  }
+
+  mode 'list' do
+
+    # declare options and logic for the list mode/command
+
+    description 'List tasks'
+    output_formats = {
+      'csv'    => Todo::Format::CSV,
+      'pretty' => Todo::Format::Pretty,
+    }
+    option('format') {
+      description 'Format of the output (pretty for TTY, csv otherwise)'
+      argument :required
+    }
+    run {
+      format = params['format'].value
+      if format.nil?
+        if STDOUT.tty? 
+          format = 'pretty'
+        else
+          format = 'csv'
+        end
+      end
+
+      formatter = output_formats[format]
+      File.open(params['filename'].value) do |tasklist|
+        index = 1
+        tasks = Todo::TaskBuilder.from_file(tasklist)
+        tasks.each do |task|
+          formatter.format(index,task)
+          index += 1
+        end
+      end
+    }
+  end
+
+  mode 'new' do
+    description 'Create a new task in the task list'
+    option('priority') {
+      argument :required
+      description 'set the priority of the new task, 1 being the highest'
+    }
+    option ('first') {
+      description 'put the task first in the list'
+    }
+    argument('task_names') {
+      description 'name of the task to add'
+      arity -1
+    }
+    run {
+      task_names = params[:task_names].values
+      if task_names.nil? || task_names.empty?
+        puts "Reading new tasks from stdin..."
+        task_names = STDIN.readlines.map { |a| a.chomp }
+      end
+      Todo::Task.new_task(params[:filename].value,task_names)
+    }
+  end
+
+  mode 'done' do
+    description 'Complete a task'
+
+    argument('index') {
+      description 'index to delete'
+      cast :int
+    }
+
+    run {
+      tasks = []
+      File.open(params['filename'].value) do |tasklist|
+        tasks = Todo::TaskBuilder.from_file(tasklist)
+      end
+      tasks[params['index'].value - 1].complete
+      Todo::Task.write(params['filename'].value,tasks)
+    }
+  end
+
+}

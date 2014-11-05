@@ -1,0 +1,85 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DB_BACKUP\.RB" "1" "June 2011" "" ""
+.
+.SH "NAME"
+\fBdb_backup\.rb\fR \- backup one or more MySQL databases
+.
+.SH "SYNOPSIS"
+\fBdb_backup\.rb\fR \fIdatabase_name\fR
+.
+.br
+\fBdb_backup\.rb\fR \fB\-u username\fR \fB\-p password\fR \fIdatabase_name\fR
+.
+.br
+\fBdb_backup\.rb\fR \fB\-i\fR|\fB\-\-iteration\fR \fIdatabase_name\fR
+.
+.SH "DESCRIPTION"
+\fBdb_backup\.rb\fR is a simple command\-line tool for backing up a MySQL database\. It does so safely and quietly, using a sensible name for the backup files, so it\'s perfect for use with cron as a daily backup\.
+.
+.P
+It also has knowledge of our development process, so you can indicate that a backup is the canonical reference for an interation with the \fB\-\-iteration\fR flag\. This will allow you to easily keep one backup per iteration, easily identifying it, and differentiate it from daily backups\.
+.
+.P
+By default, \fBdb_backup\.rb\fR will use your database credentials in \fB~/\.my\.cnf\fR, however, you can override either the username or password (or both) via the \fB\-u\fR and \fB\-p\fR flags, respectively\.
+.
+.P
+Finally, \fBdb_backup\.rb\fR will add a sanity check on your username, to make sure it fits with our corporate standard format of \fBfirst\.last\fR\.
+.
+.SH "FILES"
+Since this command ultimately calls \fBmysqldump\fR, if you omit the username or password options, \fB~/\.my\.cnf\fR will be used for credentials\. When running from cron, this is most likely \fInot\fR what you want to happen\.
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-i\fR, \fB\-\-iteration\fR
+Indicate that this backup is an "iteration" backup, and use a different naming scheme to allow for easy retention of daily backups \fIand\fR per\-iteration backups
+.
+.TP
+\fB\-u USER\fR
+Database username, in first\.last format if the one in \fB~/my\.cnf\fR is not correct
+.
+.TP
+\fB\-p PASSWORD\fR
+Database password if the one in \fB~/my\.cnf\fR is not correct
+.
+.SH "EXAMPLES"
+Backup the database "big_client"
+.
+.IP "" 4
+.
+.nf
+
+$ db_backup\.rb big_client
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Backup the database "small_client", for which different credentials are required:
+.
+.IP "" 4
+.
+.nf
+
+$ db_backup\.rb \-u dave \-p d4v3 small_client
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Make an iteration backup of the "big_client" database:
+.
+.IP "" 4
+.
+.nf
+
+$ db_backup\.rb \-i big_client
+.
+.fi
+.
+.IP "" 0
+

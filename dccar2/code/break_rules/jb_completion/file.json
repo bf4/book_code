@@ -1,0 +1,28 @@
+{
+  "result": [
+  {
+    "name": "Dave",
+    "age": 38,
+    "state": {
+      "name": "Washington, DC",
+      "code": "DC"
+    }
+  },
+  {
+    "name": "Clay",
+    "age": 37,
+    "state": {
+      "name": "Maryland",
+      "code": "MD"
+    }
+  },
+  {
+    "name": "Adam",
+    "age": 26,
+    "state": {
+      "name": "California",
+      "code": "CA"
+    }
+  }
+  ]
+}

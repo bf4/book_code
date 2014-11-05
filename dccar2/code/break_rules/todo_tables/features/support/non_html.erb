@@ -1,0 +1,7 @@
+Awesome People:
+--------------
+
+<%= @people.each do |name,info| %>
+With regard to wrestling:
+    <%= info[:name] %> <%= rasslin_to_string(info[:likes_rasslin]) %>
+<% end %>

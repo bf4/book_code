@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
+#!/usr/bin/env ruby
+
+require 'gli'
+include GLI::App
+
+switch  :s
+flag   [:f,:filename]
+
+command :new do |c|
+  c.switch :s
+  c.flag   :f
+  c.action do |global_options,options,args|
+    # Your command logic here
+     
+    # If you have any errors, just raise them
+    # raise "that command made no sense"
+  end
+end
+
+command :list do |c|
+  c.action do |global_options,options,args|
+  end
+end
+command :done do |c|
+  c.action do |global_options,options,args|
+  end
+end
+
+exit run(ARGV)

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Build Awesome Command-Line Applications in Ruby 2",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dccar2 for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Projects/RubyBook/Book/code/be_easy_to_maintain/todo/features/support/erb.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v10">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="use_css,pre_wrap,expand_tabs">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #839496; background-color: #002b36; }
+body { font-family: monospace; color: #839496; background-color: #002b36; }
+.Type { color: #b58900; }
+.rubyDefine { color: #93a1a1; background-color: #002b36; font-weight: bold; }
+.Identifier { color: #268bd2; }
+.Constant { color: #2aa198; }
+.Special { color: #dc322f; }
+.PreProc { color: #cb4b16; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="Constant">erb</span><span class="Special">'</span>
+
+<span class="Identifier">@people</span> = {
+  <span class="Constant">dave</span>: {
+    <span class="Constant">name</span>: <span class="Special">'</span><span class="Constant">Dave</span><span class="Special">'</span>,
+    <span class="Constant">likes_rasslin</span>: <span class="Constant">:without_shame</span>,
+  },
+  <span class="Constant">amy</span>: {
+    <span class="Constant">name</span>: <span class="Special">'</span><span class="Constant">Amy</span><span class="Special">'</span>,
+    <span class="Constant">likes_rasslin</span>: <span class="Constant">:secretely</span>,
+  }
+  <span class="Constant">rudy</span>: {
+    <span class="Constant">name</span>: <span class="Special">'</span><span class="Constant">Rudy</span><span class="Special">'</span>,
+    <span class="Constant">likes_rasslin</span>: <span class="Constant">:is_cat</span>
+  }
+}
+
+<span class="rubyDefine">def</span> <span class="Identifier">rasslin_to_string</span>(rasslin)
+  { <span class="Constant">without_shame</span>: <span class="Special">&quot;</span><span class="Constant">loves it shamelessly</span><span class="Special">&quot;</span>,
+    <span class="Constant">secretely</span>:     <span class="Special">&quot;</span><span class="Constant">won't admit it, but does</span><span class="Special">&quot;</span>,
+    <span class="Constant">is_cat</span>:        <span class="Special">&quot;</span><span class="Constant">is a cat.  So, yes.</span><span class="Special">&quot;</span>
+  }[rasslin]
+<span class="rubyDefine">end</span>
+erb_template = <span class="Type">ERB</span>.new(<span class="Type">File</span>.read(<span class="Special">'</span><span class="Constant">template.erb</span><span class="Special">'</span>))
+puts erb_template.result(get_binding)
+</pre>
+</body>
+</html>

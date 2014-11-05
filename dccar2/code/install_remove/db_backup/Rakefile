@@ -1,0 +1,20 @@
+require 'bundler'
+require 'cucumber'
+require 'cucumber/rake/task'
+require 'rake/clean'
+require 'rdoc/task'
+
+RDoc::Task.new do |rdoc|
+  rdoc.main = "README.rdoc"
+  rdoc.rdoc_files.include("README.rdoc","lib/**/*.rb","bin/**/*")
+  rdoc.title = 'db_backup - Backup MySQL Databases'
+end
+
+Bundler::GemHelper.install_tasks
+
+CUKE_RESULTS = 'results.html'
+CLEAN << CUKE_RESULTS
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "features --format html -o #{CUKE_RESULTS} --format progress -x"
+  t.fork = false
+end

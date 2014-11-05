@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Build Awesome Command-Line Applications in Ruby 2",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dccar2 for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Projects/RubyBook/Book/code/be_easy_to_maintain/todo/features/support/foo.jsp.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v10">
+<meta name="syntax" content="jsp">
+<meta name="settings" content="use_css,pre_wrap,expand_tabs">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #839496; background-color: #002b36; }
+body { font-family: monospace; color: #839496; background-color: #002b36; }
+.htmlEndTag { color: #586e75; }
+.htmlTagName { color: #268bd2; font-weight: bold; }
+.Constant { color: #2aa198; }
+.htmlArg { color: #657b83; }
+.htmlTagN { color: #93a1a1; font-weight: bold; }
+.htmlTag { color: #586e75; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="htmlTag">&lt;</span><span class="htmlTagN">jsp</span><span class="htmlTag">:useBean </span><span class="htmlArg">id</span><span class="htmlTag">=</span><span class="Constant">&quot;user&quot;</span><span class="htmlTag"> </span><span class="htmlArg">class</span><span class="htmlTag">=</span><span class="Constant">&quot;com.exmample.models.REALLY.User&quot;</span><span class="htmlTag"> /&gt;</span>
+<span class="htmlTag">&lt;</span><span class="htmlTagName">h1</span><span class="htmlTag">&gt;</span>Hi!<span class="htmlEndTag">&lt;/</span><span class="htmlTagName">h1</span><span class="htmlEndTag">&gt;</span>
+<span class="htmlTag">&lt;</span><span class="htmlTagN">sql</span><span class="htmlTag">:query var=</span><span class="Constant">&quot;salutation&quot;</span><span class="htmlTag"> &gt;</span>
+  select salutation from user_salutations where user_id = ?
+  <span class="htmlTag">&lt;</span><span class="htmlTagN">sql</span><span class="htmlTag">:param </span><span class="htmlArg">value</span><span class="htmlTag">=</span><span class="Constant">&quot;${user.id}&quot;</span><span class="htmlTag"> /&gt;</span>
+<span class="htmlEndTag">&lt;/</span><span class="htmlTagN">sql</span><span class="htmlEndTag">:query&gt;</span>
+Hi, ${salutation}!
+</pre>
+</body>
+</html>

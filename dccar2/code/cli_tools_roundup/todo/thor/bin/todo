@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
+
+require 'todo/version'
+require 'todo/task'
+require 'todo'
+require 'thor'
+
+class TodoApp < Thor
+
+  # declare global options and commands...
+
+  class_option :f, aliases: ['--filename'],
+                   default: File.join(ENV['HOME'],'.todo.txt'),
+                      desc: 'Location of the todo.txt file',
+                    banner: 'FILE'
+ 
+  method_option :first, default: false,
+                           desc: 'Put the new task at the top of the list',
+                           type: :boolean
+
+  method_option :p, aliases: ['--priority'],
+                       desc: 'Set the priority of the option',
+                     banner: 'priority'
+					 
+  desc 'new task_names...', 'New todo'
+  
+  def new(*task_names)
+    if task_names.empty?
+      puts 'Reading new tasks from stdin...'
+      task_names = STDIN.readlines.map { |a| a.chomp }
+    end
+    Todo::Task.new_task(options['f'],task_names)
+  end
+
+  @@output_formats = {
+    'csv' => Todo::Format::CSV,
+    'pretty' => Todo::Format::Pretty,
+  }
+  method_option :format, default: 'pretty',
+                            desc: 'Format of the output',
+                          banner: @@output_formats.keys.join('|')
+  desc 'list', 'List tasks'
+  def list
+    if options['format'].nil?
+      if STDOUT.tty? 
+        options['format'] = 'pretty'
+      else
+        options['format'] = 'csv'
+      end
+    end
+
+    formatter = @@output_formats[options[:format]]
+    File.open(options['f']) do |tasklist|
+      index = 1
+      tasks = Todo::TaskBuilder.from_file(tasklist)
+      tasks.each do |task|
+        formatter.format(index,task)
+        index += 1
+      end
+    end
+  end
+
+  desc "done id", "Complete a task"
+  def done(id)
+    tasks = []
+    File.open(options['f']) do |tasklist|
+      tasks = Todo::TaskBuilder.from_file(tasklist)
+    end
+    tasks[id.to_i - 1].complete
+    Todo::Task.write(options['f'],tasks)
+  end
+end
+
+TodoApp.start

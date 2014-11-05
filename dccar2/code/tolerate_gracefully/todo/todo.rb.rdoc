@@ -1,0 +1,68 @@
+= <tt>todo.rb</tt>
+
+    todo.rb [global options] command_name [command-specific options] [--] arguments...
+
+* Use the command +help+ to get a summary of commands
+* Use the command <tt>help command_name</tt> to get a help for +command_name+
+* Use <tt>--</tt> to stop command line argument processing; useful if your arguments have dashes in them
+
+== Global Options
+These options are available for any command and are specified before the name of the command
+
+[<tt>-f, --filename=todo_file</tt>] Path to the todo file <i>( default: <tt>~/.todo.txt</tt>)</i>
+[<tt>--force-tty</tt>] 
+== Commands
+[<tt>done</tt>] Complete a task
+[<tt>help</tt>] Shows list of commands or help for one command
+[<tt>initconfig</tt>] Initialize the config file using current global options
+[<tt>list</tt>] List tasks
+[<tt>new</tt>] Create a new task in the task list
+
+=== <tt>done </tt>
+
+Complete a task
+
+=== <tt>help [command]</tt>
+
+Shows list of commands or help for one command
+
+Gets help for the application or its commands.  Can also list the commands in a way helpful to creating a bash-style completion function
+
+==== Options
+These options are specified *after* the command.
+
+[<tt>-c, --completion</tt>] List all commands one line at a time, for use with shell completion ([command] argument is partial command to match)
+=== <tt>initconfig </tt>
+
+Initialize the config file using current global options
+
+Initializes a configuration file where you can set default options for command line flags, both globally and on a per-command basis.  These defaults override the built-in defaults and allow you to omit commonly-used command line flags when invoking this program
+
+==== Options
+These options are specified *after* the command.
+
+[<tt>--force</tt>] force overwrite of existing config file
+=== <tt>list </tt>
+
+List tasks
+
+==== Options
+These options are specified *after* the command.
+
+[<tt>--format=csv|pretty</tt>] Format of the output (pretty for TTY, csv otherwise)
+=== <tt>new [task_name...]</tt>
+
+Create a new task in the task list
+
+
+A task has a name and a priority. By default, new
+tasks have the lowest possible priority, though
+this can be overridden.  If task_name is omitted,
+read tasks from the standard input.
+
+
+==== Options
+These options are specified *after* the command.
+
+[<tt>-f</tt>] put the new task first in the list
+[<tt>-p priority</tt>] set the priority of the new task, 1 being the highest

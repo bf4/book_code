@@ -1,0 +1,138 @@
+#!/usr/bin/env ruby
+# This line can be removed
+#$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
+
+require 'gli'
+require 'todo/version'
+require 'todo/task'
+require 'todo'
+
+include GLI::App
+
+version Todo::VERSION
+config_file File.join(ENV['HOME'],'.todo.rc.yaml')
+
+switch "force-tty"
+
+desc "Path to the todo file"
+arg_name "todo_file"
+default_value File.join(ENV['HOME'],'.todo.txt')
+flag [:f,:filename]
+
+desc 'Create a new task in the task list'
+long_desc %(
+A task has a name and a priority. By default, new
+tasks have the lowest possible priority, though
+this can be overridden.  If task_name is omitted,
+read tasks from the standard input.
+)
+arg_name '[task_name...]'
+command :new do |c|
+
+  c.desc 'set the priority of the new task, 1 being the highest'
+  c.arg_name 'priority'
+  c.flag :p
+
+  c.desc 'put the new task first in the list'
+  c.switch :f
+
+  c.action do |global_options,options,task_names|
+    if task_names.empty?
+      puts "Reading new tasks from stdin..."
+      task_names = STDIN.readlines.map { |a| a.chomp }
+    end
+    Todo::Task.new_task(global_options[:filename],task_names)
+  end
+end
+
+desc 'List tasks'
+command :list2 do |c|
+
+  c.desc 'Format of the output (pretty for TTY, csv otherwise)'
+  c.arg_name 'csv|pretty'
+  c.flag :format
+
+  c.action do |global_options,options,args|
+    if global_options[:'force-tty']
+      def STDOUT.tty?
+        true
+      end
+    end
+    if options[:format].nil?
+      if STDOUT.tty? 
+        options[:format] = 'pretty'
+      else
+        options[:format] = 'csv'
+      end
+    end
+
+    # ...
+    
+    File.open(global_options[:filename]) do |file|
+      index = 1
+      file.readlines.each do |todo|
+        name,created,completed = todo.chomp.split(/,/)
+        if options[:format] == 'pretty'
+          # Use the pretty-print format
+          printf("%2d - %s\n",index,name)
+          printf("     %-10s %s\n","Created:",created)
+          printf("     %-10s %s\n","Completed:",completed) if completed
+        elsif options[:format] == 'csv'
+          # Use the machine-readable CSV format
+          complete_flag = completed ? "C" : "U"
+          printf("%d,%s,%s,%s,%s\n",index,name,complete_flag,created,completed)
+        end
+        index += 1
+      end
+    end
+  end
+end
+
+desc 'List tasks'
+command :list do |c|
+  output_formats = {
+    'csv' => Todo::Format::CSV.new,
+    'pretty' => Todo::Format::Pretty.new,
+  }
+  c.desc 'Format of the output (pretty for TTY, csv otherwise)'
+  c.arg_name output_formats.keys.join('|')
+  c.flag :format
+  c.action do |global_options,options,args|
+    if options[:format].nil?
+      if STDOUT.tty? 
+        options[:format] = 'pretty'
+      else
+        options[:format] = 'csv'
+      end
+    end
+
+    # ...
+    
+    formatter = output_formats[options[:format]]
+    File.open(global_options[:filename]) do |tasklist|
+      index = 1
+      Todo::Task.from_file(tasklist).each do |task|
+
+        # ... formatting code
+        
+        formatter.format(index,task)
+        index += 1
+      end
+    end
+  end
+end
+
+desc 'Complete a task'
+command :done do |c|
+  c.action do |global_options,options,args|
+    tasks = []
+    File.open(global_options[:filename]) do |tasklist|
+      raise "Must provide the index of the task to complete" if args.empty?
+      tasks = Todo::Task.from_file(tasklist)
+    end
+    tasks[args[0].to_i - 1].complete
+    Todo::Task.write(global_options[:filename],tasks)
+  end
+end
+
+exit run(ARGV)
