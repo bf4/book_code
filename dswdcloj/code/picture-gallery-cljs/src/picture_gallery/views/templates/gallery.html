@@ -1,0 +1,39 @@
+<!--
+ ! Excerpted from "Web Development with Clojure",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dswdcloj for more book information.
+-->
+{% extends "picture_gallery/views/templates/base.html" %}
+
+{% block content %}
+<div class="gallery">
+   <div id="error"></div>     
+   <div>        
+   {% for pic in pictures %}
+      <div class="thumbnail">
+         <a class={{pic.name}} href="/img/{{pic.userid}}/{{pic.name}}">
+            <img src="{{context}}/img/{{pic.userid}}/{{thumb-prefix}}{{pic.name}}"/>
+            {% ifequal user page-owner %}
+            <input id="{{pic.name}}" 
+                   name="{{pic.name}}"
+                   type="checkbox" 
+                   value="true" />
+            {% endifequal %}
+            </a>
+       </div>
+   {% endfor %}
+   {% if user %}
+      <input id="delete" type="submit" value="delete images" />
+   {% endif %}
+   </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    gallery.init();
+</script>
+{% endblock %}

@@ -1,0 +1,40 @@
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    width:150px;
+    float:left;
+}
+
+.error {
+    color: red;
+}
+.thumbnail {
+    float:left;
+    padding: 5px;
+    margin: 8px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#ccc;
+    box-shadow:         4px 4px 6px -1px #222;        
+    -moz-box-shadow:    4px 4px 6px -1px #222;
+    -webkit-box-shadow: 4px 4px 6px -1px #222;    
+}
+
+.menuitem {
+    float: left;
+    margin-right: 10px;
+}
+
+.content {
+    clear: both; 
+    padding: 20px;
+}

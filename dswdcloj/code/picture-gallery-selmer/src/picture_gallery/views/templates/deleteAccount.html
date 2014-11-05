@@ -1,0 +1,19 @@
+<!--
+ ! Excerpted from "Web Development with Clojure",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dswdcloj for more book information.
+-->
+{% extends "picture_gallery/views/templates/base.html" %} 
+{% block content %}
+<div class="gallery">    
+    <form action="{{context}}/confirm-delete" method="POST">
+        <input type="submit" value="delete account" />
+    </form>
+    <form action="{{context}}/" method="GET">
+        <input type="submit" value="cancel" />
+    </form>
+</div>
+{% endblock %}

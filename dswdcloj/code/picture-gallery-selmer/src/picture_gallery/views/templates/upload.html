@@ -1,0 +1,31 @@
+<!--
+ ! Excerpted from "Web Development with Clojure",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dswdcloj for more book information.
+-->
+{% extends "picture_gallery/views/templates/base.html" %}
+
+{% block content %}
+<div class="gallery">
+        <h2>Upload an image</h2>
+        {% if error %} 
+        <p class="error">{{error}}</p> 
+        {% endif %}
+        
+        {% if image %} 
+        <img src={{image}} width="300" height="300"/> 
+        {% endif %}
+        
+        <form action="{{context}}/upload" 
+              enctype="multipart/form-data" 
+              method="POST">
+            <input id="file" 
+                   name="file" 
+                   type="file" />
+            <input type="submit" value="upload" />
+        </form>
+</div>        
+{% endblock %}

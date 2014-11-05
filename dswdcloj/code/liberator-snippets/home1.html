@@ -1,0 +1,48 @@
+<!--
+ ! Excerpted from "Web Development with Clojure",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dswdcloj for more book information.
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>Liberator Example</title>
+    
+    <script type="text/javascript" 
+            src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js">
+    </script>
+        
+    <script type="text/javascript">
+        function renderUsers(users) {
+          $('#user-list').empty();
+          for(user in users) 
+            $('#user-list').append($('<li/>', {html: users[user]}));                
+        }
+        
+        function getUsers() {
+          $.get("/users", renderUsers);                        
+        }
+        
+        function handleError(xhr) { 
+          $('#error').text(xhr.statusText + ": " + xhr.responseText);
+        }
+        
+        function addUser() {            
+          var jqxhr = $.post("/add-user", {user: $('#name').val()}, renderUsers)
+                       .fail(handleError);
+        }
+        
+        $(function() {getUsers();});
+    </script>
+  </head>
+  <body>
+    <h1>Current Users</h1>
+    <p id="error"></p>
+    <ul id="user-list"></ul>        
+    <input type="text" id="name" placeholder="user name"/>                    
+    <button onclick="addUser()">Add User</button>
+  </body>
+</html> 

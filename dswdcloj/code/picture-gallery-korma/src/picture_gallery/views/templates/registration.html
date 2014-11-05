@@ -1,0 +1,39 @@
+<!--
+ ! Excerpted from "Web Development with Clojure",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dswdcloj for more book information.
+-->
+{% extends "picture_gallery/views/templates/base.html" %}
+{% block menu %}
+{% endblock %} 
+{% block content %}
+<div class="content">       
+    <form action="{{context}}/register" method="POST">
+        
+        <label for="user-id">user id</label>        
+        <input id="id" 
+               name="id"
+               tabindex="1" 
+               type="text"
+               value="{{id}}" /><br />        
+        <div class="error">{{id-error}}</div>
+                               
+        <label for="pass">password</label>        
+        <input id="pass" 
+               name="pass"
+               tabindex="2"
+               type="password" /><br />
+        <div class="error">{{pass-error}}</div>
+                      
+        <label for="pass1">retype password</label>        
+        <input id="pass1"
+               name="pass1"
+               tabindex="3"
+               type="password" /><br />
+        <input tabindex="4" type="submit" value="create account" />
+    </form>    
+</div>
+{% endblock %}
