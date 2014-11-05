@@ -1,0 +1,12 @@
+While edition 4 of Agile Web Development for Rails was intended to cover
+Rails 3.* generically, Rails itself made a large number of user facing changes
+between Rails 3.0 and Rails 3.1.  This directory contains the complete source
+code for code samples that work with multiple versions of Rails.
+
+The rails30 directory contain samples designed to work with Rails 3.0.5.
+
+The rails31 directory contain samples designed to work with Rails 3.1.0.
+
+The rails32 directory contain samples designed to work with Rails 3.2.3.
+
+The rails40 directory contain samples designed to work with Rails 4.0.0.

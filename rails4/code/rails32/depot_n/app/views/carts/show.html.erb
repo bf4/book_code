@@ -1,0 +1,21 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Your Cart</h2>
+<table>
+<!-- START_HIGHLIGHT -->
+<!-- START_HIGHLIGHT -->
+  <%= render(@cart.line_items) %>
+<!-- END_HIGHLIGHT -->
+<!-- END_HIGHLIGHT -->
+
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+
+</table>
+
+<%= button_to 'Empty cart', @cart, method: :delete,
+    data: { confirm: 'Are you sure?' } %>

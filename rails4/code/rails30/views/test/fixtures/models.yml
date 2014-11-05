@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  input: MyString
+  address: MyText
+  color: MyString
+  ketchup: false
+  mustard: false
+  mayonnaise: false
+  start: 2011-02-11
+  alarm: 2011-02-11 13:42:04
+
+two:
+  input: MyString
+  address: MyText
+  color: MyString
+  ketchup: false
+  mustard: false
+  mayonnaise: false
+  start: 2011-02-11
+  alarm: 2011-02-11 13:42:04

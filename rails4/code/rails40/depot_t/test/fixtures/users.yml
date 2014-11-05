@@ -1,0 +1,14 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+#START_HIGHLIGHT
+  name: dave
+#END_HIGHLIGHT
+  password_digest: <%= BCrypt::Password.create('secret') %>
+
+two:
+#START_HIGHLIGHT
+  name: susannah
+#END_HIGHLIGHT
+  password_digest: <%= BCrypt::Password.create('secret') %>

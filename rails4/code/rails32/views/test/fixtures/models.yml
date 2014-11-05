@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  input: MyString
+  address: MyText
+  color: MyString
+  ketchup: false
+  mustard: false
+  mayonnaise: false
+  start: 2011-08-31
+  alarm: 2011-08-31 13:42:04
+
+two:
+  input: MyString
+  address: MyText
+  color: MyString
+  ketchup: false
+  mustard: false
+  mayonnaise: false
+  start: 2011-08-31
+  alarm: 2011-08-31 13:42:04

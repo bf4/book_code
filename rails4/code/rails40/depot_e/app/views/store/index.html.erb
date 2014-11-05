@@ -1,0 +1,30 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Pragmatic Catalog</h1>
+
+<!-- START_HIGHLIGHT -->
+<% cache ['store', Product.latest] do %>
+<!-- END_HIGHLIGHT -->
+  <% @products.each do |product| %>
+<!-- START_HIGHLIGHT -->
+    <% cache ['entry', product] do %>
+<!-- END_HIGHLIGHT -->
+      <div class="entry">
+        <%= image_tag(product.image_url) %>
+        <h3><%= product.title %></h3>
+        <%= sanitize(product.description) %>
+        <div class="price_line">
+    <!-- START:currency -->
+          <span class="price"><%= number_to_currency(product.price) %></span>
+    <!-- END:currency -->
+        </div>
+      </div>
+<!-- START_HIGHLIGHT -->
+    <% end %>
+<!-- END_HIGHLIGHT -->
+  <% end %>
+<!-- START_HIGHLIGHT -->
+<% end %>
+<!-- END_HIGHLIGHT -->

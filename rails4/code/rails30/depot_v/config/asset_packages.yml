@@ -1,0 +1,11 @@
+--- 
+javascripts: 
+- base: 
+  - jquery
+  - jquery-ui
+  - application
+  - rails
+stylesheets: 
+- base: 
+  - scaffold
+  - depot

@@ -1,0 +1,20 @@
+<!-- START_HIGHLIGHT -->
+<h2><%= t('.title') %></h2>
+<!-- END_HIGHLIGHT -->
+<table>
+  <%= render(cart.line_items) %>
+
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+  </tr>
+
+</table>
+
+<!-- START_HIGHLIGHT -->
+<%= button_to t('.checkout'), new_order_path, method: :get %>
+<!-- END_HIGHLIGHT -->
+<!-- START_HIGHLIGHT -->
+<%= button_to t('.empty'), cart, method: :delete,
+# END_HIGHLIGHT
+    data: { confirm: 'Are you sure?' } %>

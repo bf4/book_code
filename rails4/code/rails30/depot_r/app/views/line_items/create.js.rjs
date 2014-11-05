@@ -1,0 +1,9 @@
+#START_HIGHLIGHT
+page.select("#notice").each { |notice| notice.hide }
+#END_HIGHLIGHT
+
+page.replace_html('cart', render(@cart))
+page[:cart].visual_effect :blind_down if @cart.total_items == 1
+page[:current_item].visual_effect :highlight,
+                                  :startcolor => "#88ff88",
+                                  :endcolor => "#114411"

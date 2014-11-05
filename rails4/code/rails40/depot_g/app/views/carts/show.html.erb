@@ -1,0 +1,12 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Your Pragmatic Cart</h2>
+<ul>    
+  <% @cart.line_items.each do |item| %>
+<!-- START_HIGHLIGHT -->
+    <li><%= item.quantity %> &times; <%= item.product.title %></li>
+<!-- END_HIGHLIGHT -->
+  <% end %>
+</ul>
