@@ -1,0 +1,19 @@
+The majority of these examples are written in Java and compiled with Maven:
+
+    http://maven.apache.org/download.cgi
+
+To build and run the Hadoop examples (WordCount, WordCountXML and WikiContributorsBatch), change into the directory of the project and:
+
+    mvn package
+    hadoop jar target/<projectname>-1.0-jar-with-dependencies.jar input output
+
+To see how to run on a Hadoop cluster, see the Lambda Architecture chapter.
+
+To build and run the Storm example (WikiContributorsSpeed), change into the directory of the project and:
+
+    mvn compile
+    mvn exec:java
+
+There are a couple of utility projects written in Clojure (ExtractWikiContributors, ExtractWikiText). To compile and run these, change into the directory of the project and:
+
+    lein run
