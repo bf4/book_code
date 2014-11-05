@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: SyndicateYourSite_development
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql
+  database: SyndicateYourSite_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql
+  database: SyndicateYourSite_production
+  username: root
+  password: 
+  socket: /tmp/mysql.sock

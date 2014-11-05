@@ -1,0 +1,36 @@
+#contacts-list {
+	list-style: none;
+	width: 40%;
+}
+.contact-details {
+	background: #FFFFCC;
+	border: solid 1px #CCCCCC;
+	padding: 1px;
+	margin: 4px;
+}
+
+.contact-details .name {
+	background: black;
+	color: white;
+}
+
+
+a { 
+	color: #00EE00; 
+	text-decoration: underline; 
+	font-weight: bold;
+} 
+
+
+a:active {
+	color: #336699;
+} 
+
+a:hover {
+	color: black;
+	background: #00EE00;
+	border-bottom: 1px dotted #336699;
+}
+.contact-details .address_line1 {
+//	border-top: solid 1px;
+}

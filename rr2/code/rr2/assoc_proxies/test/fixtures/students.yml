@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  graduating_year: 1
+  has_many: 
+
+two:
+  name: MyString
+  graduating_year: 1
+  has_many: 

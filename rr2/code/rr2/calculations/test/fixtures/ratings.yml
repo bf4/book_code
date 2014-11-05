@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  post: 
+  value: 1
+  person: 
+
+two:
+  post: 
+  value: 1
+  person: 

@@ -1,0 +1,20 @@
+require 'logger'
+require 'active_record'
+ActiveRecord::Base.establish_connection(
+  :adapter  => "mysql2",
+  :host     => "localhost",
+  :username => "root",
+  :password => "",
+  :database => "web_orders"
+)
+
+class Order < ActiveRecord::Base
+end
+ActiveRecord::Base.logger = Logger.new(STDOUT)
+
+Order.all.each do |o|
+  puts "Processing order number #{o.id}"
+  p `./sendorder -c #{o.customer_id} \
+     -p #{o.product_id} \
+     -q #{o.quantity}`
+end

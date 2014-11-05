@@ -1,0 +1,51 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+first:
+  id: 1
+  title: Mac and Cheese
+  instructions:
+  author_id: <%= rand(3) + 1 %>
+  created_at:  <%= created = Time.now - rand(1.week) %>
+  updated_at:  <%= created + rand(2.days) %>
+another:
+  id: 2
+  title: Beenie Weenies
+  instructions:
+  author_id: <%= rand(3) + 1 %>
+  created_at:  <%= created = Time.now - rand(1.week) %>
+  updated_at:  <%= created + rand(2.days) %>
+aanother:
+  id: 3
+  title: Grilled Cheese Sandwich
+  instructions:
+  author_id: <%= rand(3) + 1 %>
+  created_at:  <%= created = Time.now - rand(1.week) %>
+  updated_at:  <%= created + rand(2.days) %>
+lkjslkjdf:
+  id: 4
+  title: Microwaved Hotdog Delight
+  instructions:
+  author_id: <%= rand(3) + 1 %>
+  created_at:  <%= created = (Time.now - rand(1.week)).to_s[:db] %>
+  updated_at:  <%= created + rand(2.days) %>
+blah:
+  id: 5
+  title: Tea Braised Pizza Crust
+  instructions:
+  author_id: <%= rand(3) + 1 %>
+  created_at:  <%= created = Time.now - rand(1.week) %>
+  updated_at:  <%= created + rand(2.days) %>
+oijslfkjlkjoij:
+  id: 6
+  title: Canned Fish and Chips
+  instructions: 1. Open can. 2. Empty contents into bowel. 3. Serve.
+  author_id: <%= rand(3) + 1 %>
+  created_at:  <%= created = Time.now - rand(1.week) %>
+  updated_at:  <%= created + rand(2.days) %>
+lkjsdflkjsdflkjoij:
+  id: 7
+  title: Queso de Cabeza
+  instructions:
+  author_id: <%= rand(3) + 1 %>
+  created_at:  <%= created = Time.now - rand(1.week) %>
+  updated_at:  <%= created + rand(2.days) %>
+                

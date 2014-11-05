@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<html>
+<body>
+<h1>Topics</h1>
+
+<%= link_to "New topic", :action => "new_topic" %>
+
+<ul>
+<% for topic in @topics %>
+  <li><%= link_to "#{topic.title} (#{topic.replies.length} replies)", :action => "topic", :path_params => { "id" => topic.id } %></li>
+<% end %>
+</ul>
+
+</body>
+</html>

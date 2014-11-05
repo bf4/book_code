@@ -1,0 +1,67 @@
+#START:manual_section
+first_post:
+  title: First post!
+  body: I got the first post!  I rule!
+  created_at: 2011-01-29 20:03:56
+  updated_at: 2011-01-29 21:00:00
+  user: kelly
+reply_to_first_post:
+  title: Very insightful
+  body: It's people like you that make participation in
+        this message board worthwhile.  Thank you.
+  parent: first_post
+  created_at: 2011-01-30 08:03:56
+  updated_at: 2011-01-30 08:03:56
+  user: barney
+third_level_nested_child_post:
+  title: This post is buried deep in the comments
+  body: The content isn't really important.  We just want to test 
+        the application's threading logic.
+  created_at: 2011-01-30 08:03:56
+  updated_at: 2011-01-30 08:03:56
+  parent: reply_to_first_post
+  user: kelly
+#END:manual_section
+#START:generate_a_bunch_of_posts
+<% 1.upto(50) do |number| %>
+child_post_<%= number %>:
+  title: This is auto-generated reply number <%= number %>
+  body: We're on number <%= number %>
+  created_at: 2011-01-30 08:03:56
+  updated_at: 2011-01-30 08:03:56
+  <%# Randomly choose a parent from a post we've already generated -%>
+  parent: child_post_<%= rand(number - 1) + 1 %> 
+  user: <%= %w(kelly barney).shuffle.first %>
+<% end %>
+#END:generate_a_bunch_of_posts
+#START:do_stuff_with_dates
+<% 
+   def today
+     Time.now.to_s(:db)
+   end
+   def next_week
+     1.week.from_now.to_s(:db)
+   end
+   def last_week
+     1.week.ago.to_s(:db)
+   end
+%>
+post_from_last_week:
+  title: Pizza
+  body: Last night I had pizza.  I really liked that story from AWDWR. :)
+  created_at: <%= last_week %>
+  updated_at: <%= last_week %>
+  user: kelly
+post_created_in_future_should_not_display:
+  title: Prognostication
+  body: I predict that this post will show up next week.
+  created_at: <%= next_week %>
+  updated_at: <%= next_week %>
+  user: kelly
+updated_post_displays_based_on_updated_time:
+  title: This should show up as posted today.
+  body: blah blah blah
+  created_at: <%= last_week %>
+  updated_at: <%= today %>
+  user: barney
+#END:do_stuff_with_dates

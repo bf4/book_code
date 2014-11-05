@@ -1,0 +1,11 @@
+desc "Load musicians and the instruments they play into the database."
+task :load_musicians => 'musicians.csv' do |t| 
+  before_count = Musician.count
+  File.read(t.prerequisites.first).each do |line|
+    given_name, surname, instrument = line.split(/,/)
+    Musician.create(:given_name => given_name, 
+                    :surname => surname, 
+                    :instrument => instrument)
+  end
+  puts "Loaded #{Musician.count - before_count} musicians."
+end

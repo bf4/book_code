@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Recipes on Rails</title>
+    <link>http://myserver:2003/recipes/list</link>
+    <pubDate>Fri, 03 Mar 2006 04:53:50 GMT</pubDate>
+    <description>
+        Recipes created for and by guys who shouldn't be cooking.
+    </description>
+    <item>
+      <title>Canned Fish and Chips</title>
+      <link>http://myserver:2003/recipes/show/6</link>
+      <description>
+          1. Open can. 2. Empty contents into bowl. 3. Serve.
+      </description>
+      <pubDate>Fri, 03 Mar 2006 04:58:42 GMT</pubDate>
+      <guid>http://:2003/recipes/show/6</guid>
+      <author>David</author>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<h1>Listing status_updates</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @status_updates.each do |status_update| %>
+  <tr>
+    <td><%= status_update.title %></td>
+    <td><%= status_update.body %></td>
+    <td><%= link_to 'Show', status_update %></td>
+    <td><%= link_to 'Edit', edit_status_update_path(status_update) %></td>
+    <td><%= link_to 'Destroy', status_update, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Status update', new_status_update_path %>

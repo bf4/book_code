@@ -1,0 +1,1 @@
+page << "window.location = '#{signin_url}';"

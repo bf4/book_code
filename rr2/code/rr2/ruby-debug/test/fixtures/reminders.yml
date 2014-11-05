@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  body: MyText
+  starts_at: 2011-11-27 09:54:22
+  ends_at: 2011-11-27 09:54:22
+
+two:
+  title: MyString
+  body: MyText
+  starts_at: 2011-11-27 09:54:22
+  ends_at: 2011-11-27 09:54:22

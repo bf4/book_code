@@ -1,0 +1,240 @@
+welcome_in_arabic:
+  id: 1
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Welcome, %s"
+  pluralization_index: 1
+  text: "%s اهلا يا "
+products_in_arabic:
+  id: 2
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Products"
+  pluralization_index: 1
+  text: "المادات"
+search_in_arabic:
+  id: 3
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Search"
+  pluralization_index: 1
+  text: "بحث"
+logout_in_arabic: #change
+  id: 4
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Log Out"
+  pluralization_index: 1
+  text: "اترك"
+your_order_in_arabic: #change
+  id: 5
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Your Order"
+  pluralization_index: 1
+  text: "طلبك"
+rice_name_in_arabic:
+  id: 6
+  table_name: products
+  item_id: 1
+  facet: name
+  language_id: 340
+  text: الرز
+  type: ModelTranslation
+rice_description_in_arabic:
+  id: 7
+  table_name: products
+  item_id: 1
+  facet: description
+  language_id: 340
+  text: رز من شمال الهند
+  type: ModelTranslation
+add_in_arabic:
+  id: 8
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Add to Order"
+  pluralization_index: 1
+  text: "اضف إلى الطلب"
+login_in_arabic: #change
+  id: 9
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Log In"
+  pluralization_index: 1
+  text: "ادخل"
+password_in_arabic:
+  id: ١٠
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Password"
+  pluralization_index: 1
+  text: "الكلمة المرور"
+email_address_in_arabic: #change
+  id: 11
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "E-Mail Address"
+  pluralization_index: 1
+  text: "عنوانك البريد الالكتروني"
+or_in_arabic:
+  id: 12
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "or"
+  pluralization_index: 1
+  text: "او"
+cancel_in_arabic: #change
+  id: 13
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Cancel"
+  pluralization_index: 1
+  text: "الغاء"
+quantity_in_arabic:
+  id: 14
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Quantity"
+  pluralization_index: 1
+  text: "الكمية"
+price_in_arabic:
+  id: 15
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Price"
+  pluralization_index: 1
+  text: "الثمن"  
+product_in_arabic:
+  id: 16
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Product"
+  pluralization_index: 1
+  text: "المادة"
+total_in_arabic:
+  id: 17
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Total"
+  pluralization_index: 1
+  text: "المجموع"
+are_you_sure_in_arabic:
+  id: 18
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Are you sure?"
+  pluralization_index: 1
+  text: "هل انت متآكد؟"
+remove_in_arabic: #change
+  id: 19
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Remove"
+  pluralization_index: 1
+  text: "انقس"
+checkout_in_arabic: #change
+  id: 20
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Check Out"
+  pluralization_index: 1
+  text: "اشتر"  
+0_in_arabic:
+  id: 21
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "0"
+  pluralization_index: 1
+  text: "٠"
+1_in_arabic:
+  id: 22
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "1"
+  pluralization_index: 1
+  text: "١"
+2_in_arabic:
+  id: 23
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "2"
+  pluralization_index: 1
+  text: "٢"
+3_in_arabic:
+  id: 24
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "3"
+  pluralization_index: 1
+  text: "٣"
+4_in_arabic:
+  id: 25
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "4"
+  pluralization_index: 1
+  text: "٤"
+5_in_arabic:
+  id: 26
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "5"
+  pluralization_index: 1
+  text: "٥"
+6_in_arabic:
+  id: 27
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "6"
+  pluralization_index: 1
+  text: "٦"
+7_in_arabic:
+  id: 28
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "7"
+  pluralization_index: 1
+  text: "٧"
+8_in_arabic:
+  id: 29
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "8"
+  pluralization_index: 1
+  text: "٨"
+9_in_arabic:
+  id: 30
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "9"
+  pluralization_index: 1
+  text: "٩"
+10_in_arabic:
+  id: 31
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "10"
+  pluralization_index: 1
+  text: "١٠"  
+product_added_to_order_in_arabic:
+  id: 32
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Product added to order"
+  pluralization_index: 1
+  text: "ضف المادة إلى الطلب"
+product_removed_from_order_in_arabic:
+  id: 33
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Product removed from order"
+  pluralization_index: 1
+  text: "نقس المادة من الطلب"  
+added_new_product_to_order_in_arabic:
+  id: 34
+  type: ViewTranslation
+  language_id: 340
+  tr_key: "Added new product to order"
+  pluralization_index: 1
+  text: "ضف مادة جديد إلى الطلب"  

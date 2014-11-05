@@ -1,0 +1,8 @@
+<html>
+<body>
+<%#START:pluralization_code%>
+Hi <%= @user.name %>.  
+You have <%= pluralize @recipes.size, "unread recipe" %>  in your inbox.
+<%#END:pluralization_code%>
+</body>
+</html>

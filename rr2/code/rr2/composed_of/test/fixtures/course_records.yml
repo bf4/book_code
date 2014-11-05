@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  course_id: 1
+  student_id: 1
+  letter_grade: MyString
+
+two:
+  course_id: 1
+  student_id: 1
+  letter_grade: MyString

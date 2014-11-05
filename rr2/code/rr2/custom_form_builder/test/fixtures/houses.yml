@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  street_address: MyString
+  postal_code: MyString
+  neighborhood: MyString
+  price: 9.99
+  notes: MyText
+
+two:
+  street_address: MyString
+  postal_code: MyString
+  neighborhood: MyString
+  price: 9.99
+  notes: MyText

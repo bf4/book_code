@@ -1,0 +1,41 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<h1>Address Book</h1>
+
+<% if @people.empty? %>
+  <p>No people in the address book yet</p>
+<% else %>
+  <table>
+    <tr><th>Name</th><th>Email Address</th><th>Phone Number</th></tr>
+  <% for person in @people %>
+    <tr><td><%= person.name %></td><td><%= person.email_address %></td><td><%= person.phone_number %></td></tr>
+  <% end %>
+  </table>
+<% end %>
+
+<form action="create_person">
+  <p>
+    Name:<br />
+    <input type="text" name="person[name]">
+  </p>
+
+  <p>
+    Email address:<br />
+    <input type="text" name="person[email_address]">
+  </p>
+
+  <p>
+    Phone number:<br />
+    <input type="text" name="person[phone_number]">
+  </p>
+
+  <p>
+    <input type="submit" value="Create Person">
+  </p>
+</form>

@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+first:
+  id: 1
+  name: Chad
+another:
+  id: 2     
+  name: David
+third:
+  id: 3     
+  name: Rich

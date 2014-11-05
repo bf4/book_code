@@ -1,0 +1,16 @@
+--- 
+clubs_people_001: 
+  club_id: "1"
+  person_id: "1"
+clubs_people_002: 
+  club_id: "2"
+  person_id: "1"
+clubs_people_003: 
+  club_id: "1"
+  person_id: "2"
+clubs_people_004: 
+  club_id: "2"
+  person_id: "2"
+clubs_people_005: 
+  club_id: "2"
+  person_id: "3"

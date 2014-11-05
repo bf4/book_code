@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<div id='menu'>
+  <ul>
+    <%= menu_tab('Products'.t, :controller => 'products'){ |c,a| c == 'products' } %>
+    <%= menu_tab('Your Order'.t, :controller => 'order'){ |c,a| c == 'order' }%>
+    <% if logged_in? %>
+      <%= menu_tab('Log Out'.t, :controller => 'accounts', :action => 'logout'){ |c,a| c == 'accounts' }%>  
+    <% else %>
+      <%= menu_tab('Log In'.t, :controller => 'accounts', :action => 'login'){ |c,a| c == 'accounts' }%>
+    <% end %>
+  </ul>
+  <% if logged_in? %>
+  <div id='welcome'><%= "Welcome, %s".t(nil,current_user.email) %></div>
+  <% end %>
+</div>

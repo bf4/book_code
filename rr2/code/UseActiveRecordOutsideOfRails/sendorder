@@ -1,0 +1,2 @@
+#!/bin/sh
+echo Processing product: $2, customer: $4, quantity: $6

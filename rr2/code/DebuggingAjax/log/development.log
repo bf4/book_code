@@ -1,0 +1,757 @@
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:28:33) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01690 (59 reqs/sec) | Rendering: 0.01280 (75%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:28:36) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.00689 (145 reqs/sec) | Rendering: 0.00400 (58%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:29:11) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01483 (67 reqs/sec) | Rendering: 0.01173 (79%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:29:13) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+
+
+ActionController::UnknownAction (No action responded to broken):
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    .//vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:379:in `process_without_filters'
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    .//vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    .//vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    .//vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    .//vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    .//vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    .//vendor/rails/railties/lib/commands/server.rb:30
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:29:29) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+
+
+ActionView::TemplateError (Broken) on line #1 of app/views/ajax/broken.rjs:
+1: raise "Broken"
+
+    #{RAILS_ROOT}/app/views/ajax/broken.rjs:1:in `__bind_1143433769_799096'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/core_ext/object/extending.rb:44:in `instance_exec'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:377:in `initialize'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:669:in `update_page'
+    #{RAILS_ROOT}/app/views/ajax/broken.rjs:0:in `_run_rjs_ajax_broken'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:697:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:619:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:912:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:379:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:30
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:31:19) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01570 (63 reqs/sec) | Rendering: 0.01285 (81%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:31:21) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+Completed in 0.02387 (41 reqs/sec) | Rendering: 0.01992 (83%) | 200 OK [http://localhost/ajax/broken]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:31:28) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+Completed in 0.01596 (62 reqs/sec) | Rendering: 0.01318 (82%) | 200 OK [http://localhost/ajax/broken]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:32:52) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01119 (89 reqs/sec) | Rendering: 0.00857 (76%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:32:54) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+Completed in 0.01723 (58 reqs/sec) | Rendering: 0.01395 (81%) | 200 OK [http://localhost/ajax/broken]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:33:47) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01141 (87 reqs/sec) | Rendering: 0.00867 (76%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:33:49) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.02469 (40 reqs/sec) | Rendering: 0.02149 (87%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:34:00) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.02779 (35 reqs/sec) | Rendering: 0.02486 (89%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:34:18) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01705 (58 reqs/sec) | Rendering: 0.01401 (82%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:34:32) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01707 (58 reqs/sec) | Rendering: 0.01373 (80%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:34:46) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.00766 (130 reqs/sec) | Rendering: 0.00500 (65%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:34:48) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01640 (60 reqs/sec) | Rendering: 0.01365 (83%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:34:52) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01567 (63 reqs/sec) | Rendering: 0.01316 (83%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:34:53) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01894 (52 reqs/sec) | Rendering: 0.01613 (85%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:35:05) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01366 (73 reqs/sec) | Rendering: 0.01091 (79%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:35:12) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01792 (55 reqs/sec) | Rendering: 0.01471 (82%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:35:13) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.02036 (49 reqs/sec) | Rendering: 0.01744 (85%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:35:14) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+Completed in 0.02037 (49 reqs/sec) | Rendering: 0.01479 (72%) | 200 OK [http://localhost/ajax/broken]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:36:33) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.21120 (4 reqs/sec) | Rendering: 0.20813 (98%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:36:35) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01872 (53 reqs/sec) | Rendering: 0.01482 (79%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:36:54) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01655 (60 reqs/sec) | Rendering: 0.00945 (57%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:36:56) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01833 (54 reqs/sec) | Rendering: 0.01580 (86%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:37:03) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01289 (77 reqs/sec) | Rendering: 0.01034 (80%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:37:06) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01995 (50 reqs/sec) | Rendering: 0.01464 (73%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:37:15) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.00745 (134 reqs/sec) | Rendering: 0.00485 (65%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:37:18) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01550 (64 reqs/sec) | Rendering: 0.01287 (82%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:37:20) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.00904 (110 reqs/sec) | Rendering: 0.00587 (64%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:37:23) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01794 (55 reqs/sec) | Rendering: 0.01522 (84%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:37:33) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01168 (85 reqs/sec) | Rendering: 0.00861 (73%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:37:36) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01757 (56 reqs/sec) | Rendering: 0.01443 (82%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:37:37) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01343 (83%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:37:38) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01899 (52 reqs/sec) | Rendering: 0.01611 (84%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:38:23) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01282 (78 reqs/sec) | Rendering: 0.01010 (78%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:38:26) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01661 (60 reqs/sec) | Rendering: 0.01308 (78%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:38:27) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01556 (64 reqs/sec) | Rendering: 0.01305 (83%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:38:28) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01563 (63 reqs/sec) | Rendering: 0.01309 (83%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:38:35) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01557 (64 reqs/sec) | Rendering: 0.01248 (80%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:38:37) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01642 (60 reqs/sec) | Rendering: 0.01332 (81%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:38:39) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01661 (60 reqs/sec) | Rendering: 0.01300 (78%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:38:49) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01099 (91 reqs/sec) | Rendering: 0.00852 (77%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:38:52) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01693 (59 reqs/sec) | Rendering: 0.01442 (85%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:39:01) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01244 (80 reqs/sec) | Rendering: 0.00864 (69%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:39:04) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01675 (59 reqs/sec) | Rendering: 0.01282 (76%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:39:09) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01828 (54 reqs/sec) | Rendering: 0.01545 (84%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:39:10) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01721 (58 reqs/sec) | Rendering: 0.01429 (83%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:39:23) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01131 (88 reqs/sec) | Rendering: 0.00850 (75%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:39:26) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01918 (52 reqs/sec) | Rendering: 0.01617 (84%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:39:29) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01784 (56 reqs/sec) | Rendering: 0.01531 (85%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:39:30) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01923 (52 reqs/sec) | Rendering: 0.01629 (84%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:39:33) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.01659 (60 reqs/sec) | Rendering: 0.01368 (82%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:39:34) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+Completed in 0.01675 (59 reqs/sec) | Rendering: 0.01424 (85%) | 200 OK [http://localhost/ajax/broken]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:39:39) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+Completed in 0.02201 (45 reqs/sec) | Rendering: 0.01622 (73%) | 200 OK [http://localhost/ajax/broken]
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:42:34) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+ERROR: compiling _run_rhtml_ajax_index RAISED compile error
+script/../config/../app/views/ajax/index.rhtml:5: parse error, unexpected ']', expecting kTHEN or ':' or '\n' or ';'
+_erbout.concat "   ";  if ActionView::Base.debug_rjs] ; _erbout.concat "\n"
+                                                     ^
+script/../config/../app/views/ajax/index.rhtml:25: parse error, unexpected kEND, expecting $
+Function body: def _run_rhtml_ajax_index(local_assigns)
+_erbout = ''; _erbout.concat "<html>\n"
+_erbout.concat "  <head>\n"
+_erbout.concat "    "; _erbout.concat(( javascript_include_tag :defaults ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "   ";  if ActionView::Base.debug_rjs] ; _erbout.concat "\n"
+_erbout.concat "    <script language=\"JavaScript\">\n"
+_erbout.concat "      Ajax.Responders.register({\n"
+_erbout.concat "        onComplete: function(request, transport) {\n"
+_erbout.concat "          new Insertion.Bottom('debug',\n"
+_erbout.concat "            '<div style=\"border: 1px solid\">' + transport.responseText.escapeHTML() + '</div>')\n"
+_erbout.concat "        }\n"
+_erbout.concat "     });\n"
+_erbout.concat "    </script>\n"
+_erbout.concat "    ";  end ; _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "  </head>\n"
+_erbout.concat "  <body>\n"
+_erbout.concat "    <div id=\"debug\"></div>\n"
+_erbout.concat "    <div id=\"time\"></div>\n"
+_erbout.concat "    "; _erbout.concat(( link_to_remote "Broken", :url=>{:action => 'broken'} ).to_s); _erbout.concat "\n"
+_erbout.concat "    "; _erbout.concat(( link_to_remote "Works", :url=>{:action => 'works'} ).to_s); _erbout.concat "\n"
+_erbout.concat "  </body>\n"
+_erbout.concat "</html>\n"
+_erbout
+end
+Backtrace: script/../config/../app/views/ajax/index.rhtml:25:in `compile_template'
+./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:300:in `compile_and_render_template'
+./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:697:in `render_file'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:619:in `render_with_no_layout'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:912:in `perform_action_without_filters'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:379:in `process_without_filters'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+./script/../config/../vendor/rails/railties/lib/commands/server.rb:30
+script/server:3
+
+
+ActionView::TemplateError (compile error
+script/../config/../app/views/ajax/index.rhtml:5: parse error, unexpected ']', expecting kTHEN or ':' or '\n' or ';'
+_erbout.concat "   ";  if ActionView::Base.debug_rjs] ; _erbout.concat "\n"
+                                                     ^
+script/../config/../app/views/ajax/index.rhtml:25: parse error, unexpected kEND, expecting $) on line #5 of app/views/ajax/index.rhtml:
+2:   <head>
+3:     <%= javascript_include_tag :defaults %>
+4: <%#START:responder%>
+5:    <% if ActionView::Base.debug_rjs] %>
+6:     <script language="JavaScript">
+7:       Ajax.Responders.register({
+8:         onComplete: function(request, transport) {
+
+    #{RAILS_ROOT}/app/views/ajax/index.rhtml:25:in `compile_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:300:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:697:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:619:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:912:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:379:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:30
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:42:44) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+ERROR: compiling _run_rhtml_ajax_index RAISED compile error
+script/../config/../app/views/ajax/index.rhtml:5: parse error, unexpected ']', expecting kTHEN or ':' or '\n' or ';'
+_erbout.concat "   ";  if ActionView::Base.debug_rjs] ; _erbout.concat "\n"
+                                                     ^
+script/../config/../app/views/ajax/index.rhtml:25: parse error, unexpected kEND, expecting $
+Function body: def _run_rhtml_ajax_index(local_assigns)
+_erbout = ''; _erbout.concat "<html>\n"
+_erbout.concat "  <head>\n"
+_erbout.concat "    "; _erbout.concat(( javascript_include_tag :defaults ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "   ";  if ActionView::Base.debug_rjs] ; _erbout.concat "\n"
+_erbout.concat "    <script language=\"JavaScript\">\n"
+_erbout.concat "      Ajax.Responders.register({\n"
+_erbout.concat "        onComplete: function(request, transport) {\n"
+_erbout.concat "          new Insertion.Bottom('debug',\n"
+_erbout.concat "            '<div style=\"border: 1px solid\">' + transport.responseText.escapeHTML() + '</div>')\n"
+_erbout.concat "        }\n"
+_erbout.concat "     });\n"
+_erbout.concat "    </script>\n"
+_erbout.concat "    ";  end ; _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "  </head>\n"
+_erbout.concat "  <body>\n"
+_erbout.concat "    <div id=\"debug\"></div>\n"
+_erbout.concat "    <div id=\"time\"></div>\n"
+_erbout.concat "    "; _erbout.concat(( link_to_remote "Broken", :url=>{:action => 'broken'} ).to_s); _erbout.concat "\n"
+_erbout.concat "    "; _erbout.concat(( link_to_remote "Works", :url=>{:action => 'works'} ).to_s); _erbout.concat "\n"
+_erbout.concat "  </body>\n"
+_erbout.concat "</html>\n"
+_erbout
+end
+Backtrace: script/../config/../app/views/ajax/index.rhtml:25:in `compile_template'
+./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:300:in `compile_and_render_template'
+./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:697:in `render_file'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:619:in `render_with_no_layout'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:912:in `perform_action_without_filters'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:379:in `process_without_filters'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+./script/../config/../vendor/rails/railties/lib/commands/server.rb:30
+script/server:3
+
+
+ActionView::TemplateError (compile error
+script/../config/../app/views/ajax/index.rhtml:5: parse error, unexpected ']', expecting kTHEN or ':' or '\n' or ';'
+_erbout.concat "   ";  if ActionView::Base.debug_rjs] ; _erbout.concat "\n"
+                                                     ^
+script/../config/../app/views/ajax/index.rhtml:25: parse error, unexpected kEND, expecting $) on line #5 of app/views/ajax/index.rhtml:
+2:   <head>
+3:     <%= javascript_include_tag :defaults %>
+4: <%#START:responder %>
+5:    <% if ActionView::Base.debug_rjs] %>
+6:     <script language="JavaScript">
+7:       Ajax.Responders.register({
+8:         onComplete: function(request, transport) {
+
+    #{RAILS_ROOT}/app/views/ajax/index.rhtml:25:in `compile_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:300:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:697:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:619:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:912:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:379:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:30
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing AjaxController#index (for 127.0.0.1 at 2006-03-26 21:42:57) [GET]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"index", "controller"=>"ajax"}
+Rendering ajax/index
+Completed in 0.01220 (81 reqs/sec) | Rendering: 0.00937 (76%) | 200 OK [http://localhost/ajax]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:43:00) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.02839 (35 reqs/sec) | Rendering: 0.02247 (79%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#works (for 127.0.0.1 at 2006-03-26 21:43:01) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"works", "controller"=>"ajax"}
+Rendering ajax/works
+Completed in 0.02608 (38 reqs/sec) | Rendering: 0.02299 (88%) | 200 OK [http://localhost/ajax/works]
+
+
+Processing AjaxController#broken (for 127.0.0.1 at 2006-03-26 21:43:02) [POST]
+  Session ID: 997e0d7cb88a2546c4c2e36bdaa1783e
+  Parameters: {"action"=>"broken", "controller"=>"ajax"}
+Rendering ajax/broken
+Completed in 0.02431 (41 reqs/sec) | Rendering: 0.02100 (86%) | 200 OK [http://localhost/ajax/broken]

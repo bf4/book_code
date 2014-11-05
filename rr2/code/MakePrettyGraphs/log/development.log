@@ -1,0 +1,1411 @@
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 15:16:48) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {}
+
+
+MissingSourceFile (no such file to load -- gruff.rb):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:129:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:129:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:56:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:30:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:74:in `require_dependency'
+    /app/controllers/graph_controller.rb:14
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:129:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:56:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:30:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:74:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:87:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:120:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:237:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:237:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:477:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 15:17:08) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+NoMethodError (undefined method `length' for 0:Fixnum):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:212:in `data'
+    /app/controllers/graph_controller.rb:21:in `stats'
+    /app/controllers/graph_controller.rb:20:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 15:17:30) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+Gruff::ColorlistExhaustedException (There are no more colors left to use.):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:574:in `increment_color'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:210:in `data'
+    /app/controllers/graph_controller.rb:21:in `stats'
+    /app/controllers/graph_controller.rb:20:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 15:18:57) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 15:20:32) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 16:05:16) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 16:06:17) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 16:07:01) [GET]
+  Session ID: f21bae39fbb9758806c5017507c7675c
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 18:40:30) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 18:47:26) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 18:47:29) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 18:59:45) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+NameError (undefined local variable or method `f' for #<GraphController:0x23793c8>):
+    /app/controllers/graph_controller.rb:19:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:00:06) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (Can't measure text. Are the fonts installed? Is the FreeType library installed?):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `get_type_metrics'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:374:in `draw_legend'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:280:in `setup_drawing'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:258:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:9:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:24:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:00:28) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.87315 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:00:37) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.76052 (1 reqs/sec) | Rendering: 0.00020 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:01:44) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.76590 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:01:54) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.88669 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:02:49) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.86451 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:03:01) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+Gruff::ColorlistExhaustedException (There are no more colors left to use.):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:574:in `increment_color'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:210:in `data'
+    /app/controllers/graph_controller.rb:22:in `stats'
+    /app/controllers/graph_controller.rb:21:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:03:06) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.64171 (1 reqs/sec) | Rendering: 0.00020 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:03:51) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+NoMethodError (undefined method `theme=' for #<Gruff::Pie:0x22b38bc>):
+    /app/controllers/graph_controller.rb:21:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:05:05) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+NoMethodError (undefined method `theme_signals' for #<Gruff::Pie:0x22498cc>):
+    /app/controllers/graph_controller.rb:21:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:05:21) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.83143 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:05:39) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.66975 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:05:47) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+RuntimeError (["#FDD84E", "#6886B4", "#72AE6E", "#D1695E", "#8A6EAF", "#EFAA43", "white"]):
+    /app/controllers/graph_controller.rb:22:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:12:23) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+Magick::ImageMagickError (Non-conforming drawing primitive definition `fill': ):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:46:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:46:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:28:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:12:34) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+Magick::ImageMagickError (Non-conforming drawing primitive definition `fill': ):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:46:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/pie.rb:46:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:28:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:12:54) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.70299 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:13:04) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.85467 (1 reqs/sec) | Rendering: 0.00016 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:14:42) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.64642 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:14:55) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.63853 (1 reqs/sec) | Rendering: 0.00042 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:14:59) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.66674 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:15:04) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.83185 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:15:19) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.62747 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:15:21) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.59190 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:16:08) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.76658 (1 reqs/sec) | Rendering: 0.00019 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:16:17) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.59453 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:16:41) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.74580 (1 reqs/sec) | Rendering: 0.00019 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:17:04) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.78763 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:31:48) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.25309 (3 reqs/sec) | Rendering: 0.00019 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:31:54) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.44892 (2 reqs/sec) | Rendering: 0.00044 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:32:00) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.26990 (3 reqs/sec) | Rendering: 0.00022 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:32:26) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.08851 (11 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:32:31) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.08110 (12 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:32:37) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.26826 (3 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:32:45) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.27386 (3 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:32:53) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.33996 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:33:07) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.36653 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:33:14) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.38577 (2 reqs/sec) | Rendering: 0.00018 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:33:47) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.43837 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:50:31) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.59366 (1 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:54:44) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.45857 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:59:20) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+Magick::ImageMagickError (Non-conforming drawing primitive definition `circle': ):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/line.rb:83:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/line.rb:83:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:34:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 19:59:35) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.50102 (1 reqs/sec) | Rendering: 0.00024 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:00:34) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.31950 (3 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:00:46) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+Magick::ImageMagickError (Non-conforming drawing primitive definition `polyline': ):
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/area.rb:54:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/area.rb:54:in `draw'
+    /usr/local/lib/ruby/gems/1.8/gems/gruff-0.1.1/lib/gruff/base.rb:246:in `to_blob'
+    /app/controllers/graph_controller.rb:34:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:00:51) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.34804 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:00:56) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.39593 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:02:17) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+NameError (uninitialized constant Photo):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:112:in `const_missing'
+    /app/controllers/graph_controller.rb:23:in `stats'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:02:28) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.48353 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:02:53) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.29036 (3 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:02:56) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.28530 (3 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:03:05) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.32121 (3 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing GraphController#stats (for 127.0.0.1 at 2006-04-02 20:03:12) [GET]
+  Session ID: 03d5c27048706d2c250e3ddaf5a9fdb9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+Sending data code_stats.png
+Completed in 0.40107 (2 reqs/sec) | Rendering: 0.00017 (0%) | 200 OK [http://localhost/graph/stats]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2007-09-23 11:22:08) [GET]
+  Session ID: b7c51ae5beab4ff553b15ec7afe6f8a9
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/graphs/index" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2007-09-23 11:22:10) [GET]
+  Session ID: b7c51ae5beab4ff553b15ec7afe6f8a9
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/graphs/stats" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2007-09-23 11:22:14) [GET]
+  Session ID: b7c51ae5beab4ff553b15ec7afe6f8a9
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/graphs/stat" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ApplicationController#stats (for 127.0.0.1 at 2007-09-23 11:22:17) [GET]
+  Session ID: b7c51ae5beab4ff553b15ec7afe6f8a9
+  Parameters: {"action"=>"stats", "controller"=>"graph"}
+
+
+MissingSourceFile (no such file to load -- gruff):
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /app/controllers/graph_controller.rb:3
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:464:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/inflector.rb:250:in `constantize'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1284:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)

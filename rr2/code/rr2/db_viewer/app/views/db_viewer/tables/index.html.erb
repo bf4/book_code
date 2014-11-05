@@ -1,0 +1,6 @@
+<h1>Database Tables</h1>
+<ul>
+  <% @tables.each do |table| %>
+    <li><%= link_to table, table_path(table) %></li>
+  <% end %>
+</ul>

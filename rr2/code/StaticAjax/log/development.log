@@ -1,0 +1,726 @@
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:16:26) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering products/index
+Completed in 0.03947 (25 reqs/sec) | Rendering: 0.03671 (93%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:22:21) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.01611 (62 reqs/sec) | Rendering: 0.01411 (87%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:22:23) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00497 (201 reqs/sec) | Rendering: 0.00304 (61%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:23:26) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00769 (130 reqs/sec) | Rendering: 0.00533 (69%) | 200 OK [http://localhost/products]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:23:29) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/public/foo"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:24:56) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00749 (133 reqs/sec) | Rendering: 0.00538 (71%) | 200 OK [http://localhost/products]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:24:58) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/product/details/1.html"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:25:12) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.02034 (49 reqs/sec) | Rendering: 0.01812 (89%) | 200 OK [http://localhost/products]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:25:15) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/catalog/details/1.html"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:26:03) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.01050 (95 reqs/sec) | Rendering: 0.00361 (34%) | 200 OK [http://localhost/products]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:26:07) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/catalog/details/1.html"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:27:27) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00751 (133 reqs/sec) | Rendering: 0.00536 (71%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#details (for 127.0.0.1 at 2006-04-02 10:27:31) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"details", "id"=>"1", "controller"=>"products"}
+
+
+ActionController::UnknownAction (No action responded to details):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:29:25) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.03298 (30 reqs/sec) | Rendering: 0.03070 (93%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:29:27) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.04690 (21 reqs/sec) | Rendering: 0.04290 (91%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:29:38) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00789 (126 reqs/sec) | Rendering: 0.00555 (70%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:29:40) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.00494 (202 reqs/sec) | Rendering: 0.00272 (55%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:30:27) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+ERROR: compiling _run_rhtml_products_index RAISED compile error
+script/../config/../app/views/products/index.rhtml:7: parse error, unexpected tASSOC, expecting ')'
+                :url => '/products/1' ).to_s); _erbout.concat " (Chad Fowler)\n"
+                       ^
+Function body: def _run_rhtml_products_index(local_assigns)
+_erbout = ''; _erbout.concat "<ul>\n"
+_erbout.concat "  <li>\n"
+_erbout.concat "    <div id=\"product-1\" class=\"product-overview\">\n"
+_erbout.concat "        <span class=\"title\">\n"
+_erbout.concat "          "; _erbout.concat(( link_to_remote "My Job Went to India: 52 Ways to Save Your Job", 
+               :update => 'product-1-detail'
+                :url => '/products/1' ).to_s); _erbout.concat " (Chad Fowler)\n"
+_erbout.concat "        </span>\n"
+_erbout.concat "    </div>\n"
+_erbout.concat "    <div id='product-1-detail' style=\"display:none;\"></div>\n"
+_erbout.concat "  </li>\n"
+_erbout.concat "  <li>\n"
+_erbout.concat "    <div id=\"product-2\" class=\"product-overview\">\n"
+_erbout.concat "        <span class=\"title\">"; _erbout.concat(( link_to_remote "Learn to Program", :update => 'product-2-detail'  ).to_s); _erbout.concat " (Chris Pine)</span>\n"
+_erbout.concat "    </div>\n"
+_erbout.concat "    <div id='product-2-detail' style=\"display:none;\"></div>\n"
+_erbout.concat "  </li>  \n"
+_erbout.concat "</ul>"; _erbout
+end
+Backtrace: script/../config/../app/views/products/index.rhtml:19:in `compile_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:300:in `compile_and_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:285:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:244:in `render_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:697:in `render_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:619:in `render_with_no_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:911:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+script/../config/../app/views/products/index.rhtml:7: parse error, unexpected tASSOC, expecting ')'
+                :url => '/products/1' ).to_s); _erbout.concat " (Chad Fowler)\n"
+                       ^) on line #7 of app/views/products/index.rhtml:
+4:         <span class="title">
+5:           <%= link_to_remote "My Job Went to India: 52 Ways to Save Your Job", 
+6:                :update => 'product-1-detail'
+7:                 :url => '/products/1' %> (Chad Fowler)
+8:         </span>
+9:     </div>
+10:     <div id='product-1-detail' style="display:none;"></div>
+
+    #{RAILS_ROOT}/app/views/products/index.rhtml:19:in `compile_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:300:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:285:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:244:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:697:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:619:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:911:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:30:35) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00767 (130 reqs/sec) | Rendering: 0.00567 (73%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:30:40) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.00426 (234 reqs/sec) | Rendering: 0.00230 (53%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:30:48) [GET]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00612 (163 reqs/sec) | Rendering: 0.00371 (60%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:30:50) [POST]
+  Session ID: 2ddaa97b0447b206536885490ba2cb3f
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.00552 (181 reqs/sec) | Rendering: 0.00334 (60%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:31:05) [GET]
+  Session ID: 40d1a8f29d66c0df875a4efa0424f3f3
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00528 (189 reqs/sec) | Rendering: 0.00328 (62%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:31:21) [POST]
+  Session ID: 40d1a8f29d66c0df875a4efa0424f3f3
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.00464 (215 reqs/sec) | Rendering: 0.00259 (55%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:31:29) [POST]
+  Session ID: 40d1a8f29d66c0df875a4efa0424f3f3
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.00407 (245 reqs/sec) | Rendering: 0.00217 (53%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:32:46) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00546 (183 reqs/sec) | Rendering: 0.00297 (54%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:32:49) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.00444 (225 reqs/sec) | Rendering: 0.00230 (51%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:33:02) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/1
+Completed in 0.00441 (226 reqs/sec) | Rendering: 0.00222 (50%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:35:42) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering products/1
+Completed in 0.00300 (332 reqs/sec) | Rendering: 0.00099 (32%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:35:50) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.01369 (73 reqs/sec) | Rendering: 0.00572 (41%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:35:53) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering products/1
+Completed in 0.00303 (330 reqs/sec) | Rendering: 0.00097 (32%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:37:12) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00803 (124 reqs/sec) | Rendering: 0.00582 (72%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:37:38) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00501 (199 reqs/sec) | Rendering: 0.00296 (59%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2006-04-02 10:37:40) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"1", "controller"=>"products"}
+Rendering products/1
+Completed in 0.00302 (330 reqs/sec) | Rendering: 0.00096 (31%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:38:58) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00749 (133 reqs/sec) | Rendering: 0.00558 (74%) | 200 OK [http://localhost/products]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:38:59) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/catalog/details/1"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:39:08) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00900 (111 reqs/sec) | Rendering: 0.00703 (78%) | 200 OK [http://localhost/products]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:39:10) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/catalog/details/1.html"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:39:42) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00725 (137 reqs/sec) | Rendering: 0.00508 (70%) | 200 OK [http://localhost/products]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:39:48) [POST]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/catalog/details/1.html"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:39:58) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/details/1.html"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-02 10:42:38) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/details/1.html"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:42:46) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00844 (118 reqs/sec) | Rendering: 0.00626 (74%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:51:54) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00857 (116 reqs/sec) | Rendering: 0.00638 (74%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:52:11) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00770 (129 reqs/sec) | Rendering: 0.00576 (74%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2006-04-02 10:52:49) [GET]
+  Session ID: ba36481d1ee3b53d2bbd765f01026ad4
+  Parameters: {"action"=>"index", "controller"=>"products"}
+Rendering  within layouts/application
+Rendering products/index
+Completed in 0.00693 (144 reqs/sec) | Rendering: 0.00488 (70%) | 200 OK [http://localhost/products]

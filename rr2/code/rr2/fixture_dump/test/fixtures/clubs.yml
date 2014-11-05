@@ -1,0 +1,11 @@
+--- 
+clubs_001: 
+  id: 1
+  name: Hindi Study Group
+  created_at: 2010-12-19 18:07:42.264139
+  updated_at: 2010-12-19 18:07:42.264139
+clubs_002: 
+  id: 2
+  name: Snowboarding Newbies
+  created_at: 2010-12-19 18:07:42.268721
+  updated_at: 2010-12-19 18:07:42.268721

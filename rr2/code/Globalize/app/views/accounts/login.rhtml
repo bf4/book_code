@@ -1,0 +1,25 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<div id='login'>
+  <%= form_tag login_url, :id=>'login-form' %>
+
+    <label for='email'><%= "E-Mail Address".t %></label><br/>
+    <%= text_field_tag 'email', nil, :size => 12 %><br/>
+
+    <label for='password'><%= "Password".t %></label><br/>
+    <%= password_field_tag 'password', nil, :size =>12 %><br/>
+  
+    <% if rtl? %>
+      <%= "or".t %> <%= link_to("Cancel".t,:controller=>'articles')%>  <%= submit_tag("Log In".t) %> 
+    <% else %>
+      <%= submit_tag("Log In".t) %> <%= "or".t %> <%= link_to("Cancel".t,:controller=>'articles')%>
+    <% end%>
+
+  <%= end_form_tag %>
+</div>

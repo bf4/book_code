@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  recipe_id: 1
+  name: MyString
+  amount: MyString
+
+two:
+  recipe_id: 1
+  name: MyString
+  amount: MyString

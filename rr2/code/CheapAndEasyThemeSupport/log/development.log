@@ -1,0 +1,488 @@
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:28:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+Rendering browse/index
+Completed in 0.00986 (101 reqs/sec) | Rendering: 0.00684 (69%) | 200 OK [http://localhost/browse]
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:28:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+Rendering  within layouts/application
+Rendering browse/index
+
+
+ActionView::TemplateError (undefined local variable or method `user' for #<#<Class:0x27144f8>:0x2714070>) on line #3 of app/views/layouts/application.rhtml:
+1: <html>
+2:   <head>
+3:    <%= stylesheet_link_tag(user.style || "default") %>
+4:   </head>
+5:   <body>
+6:       <%= yield %>
+
+    #{RAILS_ROOT}/app/views/layouts/application.rhtml:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:226:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:856:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:30:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+Rendering  within layouts/application
+Rendering browse/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occured while evaluating nil.style) on line #3 of app/views/layouts/application.rhtml:
+1: <html>
+2:   <head>
+3:    <%= stylesheet_link_tag(session[:user].style || "default") %>
+4:   </head>
+5:   <body>
+6:       <%= yield %>
+
+    #{RAILS_ROOT}/app/views/layouts/application.rhtml:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:226:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:856:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:30:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mMysql::Error: Table 'cheapandeasythemesupport_development.users' doesn't exist: SELECT * FROM users LIMIT 1[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'cheapandeasythemesupport_development.users' doesn't exist: SELECT * FROM users  LIMIT 1):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/connection_adapters/abstract_adapter.rb:88:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/connection_adapters/mysql_adapter.rb:180:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/connection_adapters/mysql_adapter.rb:322:in `select'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/connection_adapters/mysql_adapter.rb:171:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:431:in `find_by_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:395:in `find'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:393:in `find'
+    .//app/controllers/browse_controller.rb:3:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mSQL (0.004837)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.002372)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000651)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddUsersTable (1)
+  [4;36;1mSQL (0.036809)[0m   [0;1mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `password` varchar(255), `style` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001550)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mUser Load (0.029032)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+  [4;35;1mUser Columns (0.005287)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.000336)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000820)[0m   [0mINSERT INTO users (`name`, `password`, `style`) VALUES('Chad', NULL, 'bad_mid_90s')[0m
+  [4;36;1mSQL (0.003994)[0m   [0;1mCOMMIT[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:31:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;36;1mUser Load (0.000790)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+  [4;35;1mUser Columns (0.004475)[0m   [0mSHOW FIELDS FROM users[0m
+Completed in 0.07766 (12 reqs/sec) | Rendering: 0.02159 (27%) | DB: 0.00527 (6%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.004082)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:31:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.004408)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01172 (85 reqs/sec) | Rendering: 0.00292 (24%) | DB: 0.00849 (72%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.003627)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:33:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.003655)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01352 (73 reqs/sec) | Rendering: 0.00525 (38%) | DB: 0.00728 (53%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.006090)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:33:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.003932)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01369 (73 reqs/sec) | Rendering: 0.00534 (39%) | DB: 0.01002 (73%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.004223)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:33:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.006642)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01348 (74 reqs/sec) | Rendering: 0.00282 (20%) | DB: 0.01087 (80%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.004062)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:33:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.003056)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01418 (70 reqs/sec) | Rendering: 0.00297 (20%) | DB: 0.00712 (50%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.004601)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:34:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.003544)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01042 (95 reqs/sec) | Rendering: 0.00279 (26%) | DB: 0.00815 (78%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.004112)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:34:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.009948)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.02078 (48 reqs/sec) | Rendering: 0.00307 (14%) | DB: 0.01406 (67%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.003898)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:34:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.003079)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01133 (88 reqs/sec) | Rendering: 0.00312 (27%) | DB: 0.00698 (61%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.003589)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:35:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.003190)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01047 (95 reqs/sec) | Rendering: 0.00280 (26%) | DB: 0.00678 (64%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.003664)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2006-03-12 18:35:35) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/stylesheets/bad_mid_90s.css"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.003744)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:35:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;36;1mUser Load (0.011123)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01979 (50 reqs/sec) | Rendering: 0.00291 (14%) | DB: 0.01853 (93%) | 200 OK [http://localhost/browse]
+  [4;35;1mUser Columns (0.004154)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2006-03-12 18:35:42) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/stylesheets/bad_mid_90s.css"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.003998)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:35:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.007492)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01521 (65 reqs/sec) | Rendering: 0.00278 (18%) | DB: 0.01564 (102%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.006115)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2006-03-12 18:35:49) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/stylesheets/bad_mid_90s.css"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.004230)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:35:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;36;1mUser Load (0.003502)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01047 (95 reqs/sec) | Rendering: 0.00295 (28%) | DB: 0.01385 (132%) | 200 OK [http://localhost/browse]
+  [4;35;1mUser Columns (0.003873)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2006-03-12 18:35:55) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/stylesheets/bad_mid_90s.css"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Load (0.000796)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+  [4;35;1mUser Load (0.000761)[0m   [0mSELECT * FROM users LIMIT 1[0m
+  [4;36;1mUser Load (0.000738)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+  [4;35;1mUser Columns (0.004090)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.016008)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.001041)[0m   [0mUPDATE users SET `style` = 'hideous', `password` = NULL, `name` = 'Chad' WHERE id = 1[0m
+  [4;36;1mSQL (0.005260)[0m   [0;1mCOMMIT[0m
+  [4;36;1mUser Columns (0.005263)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:36:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.004919)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.02681 (37 reqs/sec) | Rendering: 0.01756 (65%) | DB: 0.01018 (37%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Load (0.000786)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+  [4;35;1mUser Columns (0.004106)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.002618)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000846)[0m   [0mUPDATE users SET `style` = 'default', `password` = NULL, `name` = 'Chad' WHERE id = 1[0m
+  [4;36;1mSQL (0.008693)[0m   [0;1mCOMMIT[0m
+  [4;36;1mUser Columns (0.004787)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing BrowseController#index (for 127.0.0.1 at 2006-03-12 18:37:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"browse"}
+  [4;35;1mUser Load (0.003177)[0m   [0mSELECT * FROM users LIMIT 1[0m
+Rendering  within layouts/application
+Rendering browse/index
+Completed in 0.01161 (86 reqs/sec) | Rendering: 0.00412 (35%) | DB: 0.00796 (68%) | 200 OK [http://localhost/browse]
+  [4;36;1mUser Columns (0.003727)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.009232)[0m   [0mSELECT * FROM users WHERE (users.`name` = 'Chad' ) LIMIT 1[0m
+  [4;36;1mUser Load (0.001045)[0m   [0;1mSELECT * FROM users WHERE (users.`name` = 'Chad' ) LIMIT 1[0m
+  [4;35;1mSQL (0.000293)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000957)[0m   [0;1mUPDATE users SET `style` = 'hideous', `password` = NULL, `name` = 'Chad' WHERE id = 1[0m
+  [4;35;1mSQL (0.004787)[0m   [0mCOMMIT[0m

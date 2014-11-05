@@ -1,0 +1,7 @@
+<p>
+  <b>Name:</b> <%= in_place_editor_field :contact, :name %> <br />
+  <b>Country:</b> <%= in_place_select_editor_field(:contact, :country, {}, :select_options => country_options_for_select) %>
+</p>
+<br />
+
+<%= link_to 'Back', :action => 'list' %>

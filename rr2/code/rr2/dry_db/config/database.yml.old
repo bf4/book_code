@@ -1,0 +1,17 @@
+defaults: &defaults
+  adapter: mysql
+  username: root
+  password: secret
+  socket: /tmp/mysql.sock
+	
+development:
+  database: DRYUpYourDatabaseConfig_development
+  <<: *defaults
+
+test:
+  database: DRYUpYourDatabaseConfig_test
+  <<: *defaults
+
+production:
+  database: DRYUpYourDatabaseConfig_production
+  <<: *defaults

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @wombat.name %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @wombat.bio %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @wombat.age %>
+</p>
+
+
+<%= link_to 'Edit', edit_wombat_path(@wombat) %> |
+<%= link_to 'Back', wombats_path %>

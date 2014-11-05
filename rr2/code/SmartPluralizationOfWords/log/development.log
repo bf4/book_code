@@ -1,0 +1,220 @@
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:48:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+
+
+ActionController::UnknownAction (No action responded to index):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:48:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occured while evaluating nil.name) on line #3 of app/views/recipes/index.rhtml:
+1: <html>
+2: <body>
+3: Hi <%= @user.name %>.  There are <%= @recipes.size %> <%= pluralize @recipes.size, "recipe" %> that match your filters.
+4: </body>
+5: </html>
+
+    #{RAILS_ROOT}/app/views/recipes/index.rhtml:3
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:228:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:856:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at 2006-03-26 13:49:17) [GET]
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/recipes_controller.rb:3: dynamic constant assignment
+    User = Struct.new(:name)
+          ^):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:39:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:22:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:134:in `load_file!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:97:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:72:in `const_missing'
+    routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:458:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:49:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00514 (194 reqs/sec) | Rendering: 0.00166 (32%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:49:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00509 (196 reqs/sec) | Rendering: 0.00180 (35%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:49:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00503 (198 reqs/sec) | Rendering: 0.00199 (39%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:49:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00664 (150 reqs/sec) | Rendering: 0.00321 (48%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:49:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00678 (147 reqs/sec) | Rendering: 0.00355 (52%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:49:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00590 (169 reqs/sec) | Rendering: 0.00224 (37%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:49:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00511 (195 reqs/sec) | Rendering: 0.00165 (32%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:50:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00437 (228 reqs/sec) | Rendering: 0.00140 (32%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:50:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00648 (154 reqs/sec) | Rendering: 0.00342 (52%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:50:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00483 (206 reqs/sec) | Rendering: 0.00140 (29%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:50:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00814 (122 reqs/sec) | Rendering: 0.00434 (53%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:50:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00559 (178 reqs/sec) | Rendering: 0.00143 (25%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 13:50:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.00502 (199 reqs/sec) | Rendering: 0.00179 (35%) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2006-03-26 14:30:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+Rendering recipes/index
+Completed in 0.01417 (70 reqs/sec) | Rendering: 0.00500 (35%) | 200 OK [http://localhost/recipes]

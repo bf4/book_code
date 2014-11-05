@@ -1,0 +1,15 @@
+#search {
+  text-align: left;
+}
+#search input {
+  text-align: right;
+}
+.product {
+  text-align: right;
+}
+#order th {
+  text-align: right;
+}
+#dialog > div {
+  text-align: right;
+}

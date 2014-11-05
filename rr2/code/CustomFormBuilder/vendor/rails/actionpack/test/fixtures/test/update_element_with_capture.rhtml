@@ -1,0 +1,17 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<% replacement_function = update_element_function("products", :action => :update) do %>
+  <p>Product 1</p>
+  <p>Product 2</p>
+<% end %>
+<%= javascript_tag(replacement_function) %>
+
+<% update_element_function("status", :action => :update, :binding => binding) do %>
+  <b>You bought something!</b>
+<% end %>

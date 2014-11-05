@@ -1,0 +1,97 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+basmati_rice:
+  id: 1
+  name: Basmati Rice
+  description: Aromatic rice from northern India
+  package: 5lb bag
+  price: 5.0
+bulgar_wheat:
+  id: 2
+  name: Fine Bulgur Wheat
+  description: Fine ground bulgar wheat, suitable for use in tabouleh
+  package: 2lb bag
+  price: 3.0
+pita:
+  id: 3
+  name: Pita Bread
+  description: Freshly baked white pita bread
+  package: Package of 10
+  price: 1.5
+chora_dal:
+  id: 4
+  name: Chora Dal
+  description: Cracked black eye beans
+  package: 2lb bag
+  price: 2.5
+chana_dal:
+  id: 5
+  name: Chana Dal
+  description: Hulled, split chickpeas often used in Indian cooking
+  package: 2lb bag
+  price: 2.0
+fenugreek:
+  id: 6
+  name: Fenugreek
+  description: An herb
+  package: 16oz container
+  price: 3.5
+garam_masala:
+  id: 7
+  name: Garam Masala
+  description: A mix of Indian spices
+  package: 12oz container
+  price: 5.5
+cilantro:
+  id: 8
+  name: Cilantro
+  description: A parsley-like herb with a tangy taste often used fresh in Asian and Mexican cooking.
+  package: 1 bunch
+  price: 0.5
+lime:
+  id: 9
+  name: Kaffir Limes
+  description: A small, round, gnarled variety of lime indigenous to Southeast Asia.
+  package: Bag of 12
+  price: 6.0
+lemongrass:
+  id: 10
+  name: Lemongrass
+  description: A perennial herb used in Asian (particularly Thai, Lao, Khmer and Vietnamese) and Caribbean cooking.
+  package: Bundle of 5 stalks
+  price: 12.0
+coriander:
+  id: 11
+  name: Coriander
+  description: A spice with a mild, distinctive taste similar to a blend of lemon and sage.
+  package: 12oz container
+  price: 4.5
+cumin:
+  id: 12
+  name: Cumin
+  description: A spice with a distinctive aroma, popular in Mexican, North African, and Indian cuisine
+  package: 12oz container
+  price: 4.5
+tumeric:
+  id: 13
+  name: Tumeric
+  description: A spice commonly used in curries and other South Asian cooking
+  package: 18oz container 
+  price: 12.0
+sumac: 
+  id: 14
+  name: Ground Sumac
+  description: A spice used in Arabic cooking
+  package: 12oz container
+  price: 13.5
+black_pepper:
+  id: 15
+  name: Black Pepper
+  description: Whole Tellicherry black pepper from India
+  package: 1/2lb bag
+  price: 1.0
+chapati:
+  id: 16
+  name: Chapatis
+  description: Frozen, ready-made Indian Chapatis.  Just heat and eat.
+  package: Box of 10
+  price: 3.5

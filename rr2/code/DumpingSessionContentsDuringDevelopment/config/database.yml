@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: DumpingSessionContentsDuringDevelopment_development
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql
+  database: DumpingSessionContentsDuringDevelopment_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql
+  database: DumpingSessionContentsDuringDevelopment_production
+  username: root
+  password: 
+  socket: /tmp/mysql.sock

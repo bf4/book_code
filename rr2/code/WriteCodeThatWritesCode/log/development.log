@@ -1,0 +1,1389 @@
+  [4;36;1mSQL (0.058032)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.015583)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.021426)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateContacts (1)
+  [4;36;1mSQL (0.317600)[0m   [0;1mCREATE TABLE contacts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000993)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000562)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.001641)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000843)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000697)[0m   [0mSHOW KEYS FROM contacts[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2006-04-13 18:06:07) [GET]
+  Session ID: d72e462104fe4efff3c4c1616812d5f8
+  Parameters: {"action"=>"index", "controller"=>"contacts"}
+
+
+ActionController::UnknownAction (No action responded to index):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-13 18:06:21) [GET]
+  Session ID: d72e462104fe4efff3c4c1616812d5f8
+  Parameters: {"action"=>"search", "controller"=>"contacts"}
+
+
+NameError (undefined local variable or method `current_user' for #<ContactsController:0x2290a9c>):
+    /app/controllers/contacts_controller.rb:3:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mSQL (0.002977)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000995)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000362)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateContacts (1)
+  [4;36;1mSQL (0.002178)[0m   [0;1mCREATE TABLE contacts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000296)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000299)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000474)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000452)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000424)[0m   [0mSHOW KEYS FROM contacts[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-13 18:07:52) [GET]
+  Session ID: d72e462104fe4efff3c4c1616812d5f8
+  Parameters: {}
+
+
+SyntaxError (/Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/../config/../app/controllers/contacts_controller.rb:3: dynamic constant assignment
+    User = Struct.new(:account_id, :username)
+          ^):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:140:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:140:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:56:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:30:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:85:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:98:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:131:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:237:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:237:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:477:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:04:13) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+
+
+NoMethodError (undefined method `assert_valid_keys' for ["account_id = ?", 1234]:Array):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:840:in `with_scope'
+    /app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:06:27) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000000)[0m   [0;1mMysql::Error: Unknown column 'account_id' in 'where clause': SELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'account_id' in 'where clause': SELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') ):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/abstract_adapter.rb:120:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:185:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:337:in `select'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:176:in `select_all'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:390:in `find_by_sql'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:924:in `find_every'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:381:in `find'
+    /app/controllers/contacts_controller.rb:10:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    /app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000302)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000292)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddAccountIdToContacts (2)
+  [4;36;1mSQL (0.051927)[0m   [0;1mALTER TABLE contacts ADD account_id int(11)[0m
+  [4;35;1mSQL (0.016127)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000409)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000464)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000439)[0m   [0mSHOW KEYS FROM contacts[0m
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:09) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000000)[0m   [0mMysql::Error: Unknown column 'name' in 'where clause': SELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'name' in 'where clause': SELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') ):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/abstract_adapter.rb:120:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:185:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:337:in `select'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:176:in `select_all'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:390:in `find_by_sql'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:924:in `find_every'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:381:in `find'
+    /app/controllers/contacts_controller.rb:10:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    /app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000299)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddNameToContact (3)
+  [4;35;1mSQL (0.014031)[0m   [0mALTER TABLE contacts ADD name varchar(255)[0m
+  [4;36;1mSQL (0.000373)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000401)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000505)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000487)[0m   [0;1mSHOW KEYS FROM contacts[0m
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:43) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000459)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x250c7f8>:0x250c7d0>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:44) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000390)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x23506e4>:0x23506bc>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:45) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000407)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x2222d6c>:0x2222d44>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:45) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000433)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x2449398>:0x2449370>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:46) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000378)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x22ba400>:0x22ba3d8>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:47) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000404)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x2545774>:0x254574c>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:47) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000407)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x2377eec>:0x2377ec4>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:07:48) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000365)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering /shared/search_results (localsresults)
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x2243d3c>:0x2243d14>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views//shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:09:11) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000405)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+
+
+ActionController::MissingTemplate (Missing template /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/../config/../app/views/contacts//shared/search_results.rhtml):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:1003:in `assert_existence_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:697:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:742:in `render_without_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:691:in `render_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:643:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    /app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:09:23) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000410)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+
+
+ActionController::MissingTemplate (Missing template /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/../config/../app/views/contacts/shared/search_results.rhtml):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:1003:in `assert_existence_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:697:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:621:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:742:in `render_without_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:691:in `render_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:643:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    /app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:09:54) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000391)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering shared/search_results
+
+
+ActionView::TemplateError (undefined local variable or method `results' for #<#<Class:0x23f4c44>:0x23f4c1c>) on line #4 of app/views/shared/search_results.rhtml:
+1: <h2 class='search_header'>
+2:   <%= @title %>
+3: </h2>
+4: <% results.each do |result| %>
+5: <%= debug(result) %>
+6: <% end %>
+
+    #{RAILS_ROOT}/app/views/shared/search_results.rhtml:4:in `_run_rhtml_shared_search_results'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:314:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:290:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:699:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:637:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:12:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:873:in `with_scope'
+    #{RAILS_ROOT}/app/controllers/contacts_controller.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:10:20) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.001034)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering shared/search_results
+Completed in 0.00472 (211 reqs/sec) | Rendering: 0.00127 (26%) | DB: 0.00103 (21%) | 200 OK [http://localhost/contacts/search?term=chad]
+  [4;36;1mContact Columns (0.000373)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000463)[0m   [0;1mINSERT INTO contacts (`name`, `account_id`) VALUES('Chad', 1)[0m
+  [4;35;1mSQL (0.000843)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000239)[0m   [0mINSERT INTO contacts (`name`, `account_id`) VALUES('Jim', 1)[0m
+  [4;36;1mSQL (0.000483)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000194)[0m   [0;1mINSERT INTO contacts (`name`, `account_id`) VALUES('Rich', 0)[0m
+  [4;35;1mSQL (0.000562)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000181)[0m   [0mINSERT INTO contacts (`name`, `account_id`) VALUES('David', 1)[0m
+  [4;36;1mSQL (0.000556)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mINSERT INTO contacts (`name`, `account_id`) VALUES('Paul', 0)[0m
+  [4;35;1mSQL (0.000500)[0m   [0mCOMMIT[0m
+  [4;36;1mContact Load (0.000474)[0m   [0;1mSELECT * FROM contacts [0m
+  [4;36;1mContact Update (0.001145)[0m   [0;1mUPDATE contacts SET account_id = 2 WHERE (account_id = 0) [0m
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:12:44) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000427)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1234) AND (name like '%chad%') [0m
+Rendering shared/search_results
+Completed in 0.00360 (277 reqs/sec) | Rendering: 0.00070 (19%) | DB: 0.00043 (11%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:12:58) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000434)[0m   [0mSELECT * FROM contacts WHERE (account_id = 2) AND (name like '%chad%') [0m
+Rendering shared/search_results
+Completed in 0.00345 (290 reqs/sec) | Rendering: 0.00070 (20%) | DB: 0.00043 (12%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:03) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000426)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 2) AND (name like '%chad%') [0m
+Rendering shared/search_results
+Completed in 0.00347 (287 reqs/sec) | Rendering: 0.00072 (20%) | DB: 0.00043 (12%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:07) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000485)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000358)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00526 (190 reqs/sec) | Rendering: 0.00230 (43%) | DB: 0.00084 (16%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:08) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000464)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000361)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00533 (187 reqs/sec) | Rendering: 0.00210 (39%) | DB: 0.00083 (15%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:09) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000432)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000354)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00521 (191 reqs/sec) | Rendering: 0.00219 (42%) | DB: 0.00079 (15%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:09) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000453)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000362)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00531 (188 reqs/sec) | Rendering: 0.00228 (42%) | DB: 0.00081 (15%) | 200 OK [http://localhost/contacts/search?term=chad]
+  [4;36;1mContact Load (0.000460)[0m   [0;1mSELECT * FROM contacts [0m
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:26) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000466)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000304)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00553 (180 reqs/sec) | Rendering: 0.00259 (46%) | DB: 0.00077 (13%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:29) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>".", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000550)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%.%') [0m
+Rendering shared/search_results
+Completed in 0.00341 (293 reqs/sec) | Rendering: 0.00071 (20%) | DB: 0.00055 (16%) | 200 OK [http://localhost/contacts/search?term=.]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:31) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"a", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000480)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%a%') [0m
+Rendering shared/search_results
+  [4;35;1mContact Columns (0.000362)[0m   [0mSHOW FIELDS FROM contacts[0m
+Completed in 0.00597 (167 reqs/sec) | Rendering: 0.00296 (49%) | DB: 0.00084 (14%) | 200 OK [http://localhost/contacts/search?term=a]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:35) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"p", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000411)[0m   [0;1mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%p%') [0m
+Rendering shared/search_results
+Completed in 0.00322 (310 reqs/sec) | Rendering: 0.00070 (21%) | DB: 0.00041 (12%) | 200 OK [http://localhost/contacts/search?term=p]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:36) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"a", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000467)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%a%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000305)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00661 (151 reqs/sec) | Rendering: 0.00368 (55%) | DB: 0.00077 (11%) | 200 OK [http://localhost/contacts/search?term=a]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:38) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000476)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%i%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000358)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00596 (167 reqs/sec) | Rendering: 0.00295 (49%) | DB: 0.00083 (13%) | 200 OK [http://localhost/contacts/search?term=i]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:40) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"a", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000476)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%a%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000338)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00663 (150 reqs/sec) | Rendering: 0.00365 (55%) | DB: 0.00081 (12%) | 200 OK [http://localhost/contacts/search?term=a]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:13:43) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000435)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000310)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00574 (174 reqs/sec) | Rendering: 0.00275 (47%) | DB: 0.00075 (12%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:18:06) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000473)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000374)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00567 (176 reqs/sec) | Rendering: 0.00254 (44%) | DB: 0.00085 (14%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:18:14) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000451)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000328)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00611 (163 reqs/sec) | Rendering: 0.00310 (50%) | DB: 0.00078 (12%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#view (for 127.0.0.1 at 2006-04-16 12:18:16) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"action"=>"view", "id"=>"1", "controller"=>"contacts"}
+
+
+ActionController::UnknownAction (No action responded to view):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:21:58) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000377)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000307)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00517 (193 reqs/sec) | Rendering: 0.00224 (43%) | DB: 0.00068 (13%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:22:02) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"a", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000480)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%a%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000359)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00510 (196 reqs/sec) | Rendering: 0.00203 (39%) | DB: 0.00084 (16%) | 200 OK [http://localhost/contacts/search?term=a]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:41:18) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+
+
+TypeError (exception class/object expected):
+    /app/controllers/application.rb:5:in `raise'
+    /app/controllers/application.rb:5:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:41:31) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+
+
+RuntimeError ([Contact, {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}]):
+    /app/controllers/application.rb:5:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:44:19) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000423)[0m   [0;1mSELECT * FROM contacts WHERE (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;35;1mContact Columns (0.000345)[0m   [0mSHOW FIELDS FROM contacts[0m
+Completed in 0.14670 (6 reqs/sec) | Rendering: 0.01679 (11%) | DB: 0.00077 (0%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:45:01) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000377)[0m   [0;1mSELECT * FROM contacts WHERE (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;35;1mContact Columns (0.000277)[0m   [0mSHOW FIELDS FROM contacts[0m
+Completed in 0.00397 (252 reqs/sec) | Rendering: 0.00163 (41%) | DB: 0.00065 (16%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:45:02) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000594)[0m   [0;1mSELECT * FROM contacts WHERE (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;35;1mContact Columns (0.000298)[0m   [0mSHOW FIELDS FROM contacts[0m
+Completed in 0.00461 (217 reqs/sec) | Rendering: 0.00202 (43%) | DB: 0.00089 (19%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:45:14) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000429)[0m   [0;1mSELECT * FROM contacts WHERE (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;35;1mContact Columns (0.000294)[0m   [0mSHOW FIELDS FROM contacts[0m
+Completed in 0.00459 (218 reqs/sec) | Rendering: 0.00220 (47%) | DB: 0.00072 (15%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 12:45:28) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000000)[0m   [0;1mMysql::Error: Unknown column 'alkjsdf' in 'where clause': SELECT * FROM contacts WHERE (alkjsdf like '%chad%') [0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'alkjsdf' in 'where clause': SELECT * FROM contacts WHERE (alkjsdf like '%chad%') ):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/abstract_adapter.rb:120:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:185:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:337:in `select'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/connection_adapters/mysql_adapter.rb:176:in `select_all'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:390:in `find_by_sql'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:924:in `find_every'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:381:in `find'
+    /app/controllers/application.rb:7:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:30:15) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000469)[0m   [0mSELECT * FROM contacts WHERE (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000291)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00442 (226 reqs/sec) | Rendering: 0.00194 (43%) | DB: 0.00076 (17%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:30:56) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"chad", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000442)[0m   [0mSELECT * FROM contacts WHERE (name like '%chad%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000294)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00467 (214 reqs/sec) | Rendering: 0.00216 (46%) | DB: 0.00074 (15%) | 200 OK [http://localhost/contacts/search?term=chad]
+
+
+Processing Base#index (for 127.0.0.1 at 2006-04-16 13:34:21) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i"}
+
+
+SyntaxError (/Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/../config/../app/controllers/application.rb:14: parse error, unexpected kEND
+/Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/../config/../app/controllers/application.rb:20: parse error, unexpected $, expecting kEND):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:140:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:140:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:56:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:30:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:85:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:69:in `prepare_application'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:37:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:34:47) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+
+
+ArgumentError (wrong number of arguments (1 for 0)):
+    /app/controllers/application.rb:13:in `scope'
+    /app/controllers/application.rb:13:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:35:03) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+
+
+NameError (undefined local variable or method `model_class' for #<ContactsController:0x2290880>):
+    /app/controllers/application.rb:17:in `scope'
+    /app/controllers/application.rb:13:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:35:18) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+
+
+ArgumentError (wrong number of arguments (1 for 0)):
+    /app/controllers/application.rb:13:in `scope'
+    /app/controllers/application.rb:13:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:35:19) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+
+
+ArgumentError (wrong number of arguments (1 for 0)):
+    /app/controllers/application.rb:13:in `scope'
+    /app/controllers/application.rb:13:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:35:20) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+
+
+ArgumentError (wrong number of arguments (1 for 0)):
+    /app/controllers/application.rb:13:in `scope'
+    /app/controllers/application.rb:13:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:35:28) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000503)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%i%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000364)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00481 (208 reqs/sec) | Rendering: 0.00205 (42%) | DB: 0.00087 (18%) | 200 OK [http://localhost/contacts/search?term=i]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:35:31) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000458)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%i%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000365)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00477 (209 reqs/sec) | Rendering: 0.00204 (42%) | DB: 0.00082 (17%) | 200 OK [http://localhost/contacts/search?term=i]
+  [4;36;1mContact Load (0.000445)[0m   [0;1mSELECT * FROM contacts [0m
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:36:00) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+
+
+ArgumentError (tried to create Proc object without a block):
+    /app/controllers/application.rb:13:in `lambda'
+    /app/controllers/application.rb:13:in `search'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/fcgi_handler.rb:23:in `process!'
+    /Users/chad/src/FR_RR/Book/code/WriteCodeThatWritesCode/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:36:17) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000463)[0m   [0mSELECT * FROM contacts WHERE (name like '%i%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000339)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00539 (185 reqs/sec) | Rendering: 0.00281 (52%) | DB: 0.00080 (14%) | 200 OK [http://localhost/contacts/search?term=i]
+
+
+Processing ContactsController#search (for 127.0.0.1 at 2006-04-16 13:36:25) [GET]
+  Session ID: 36c58aae0af6ee24deccfa45999dc1aa
+  Parameters: {"term"=>"i", "action"=>"search", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000447)[0m   [0mSELECT * FROM contacts WHERE (account_id = 1) AND (name like '%i%') [0m
+Rendering shared/search_results
+  [4;36;1mContact Columns (0.000363)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00474 (210 reqs/sec) | Rendering: 0.00202 (42%) | DB: 0.00081 (17%) | 200 OK [http://localhost/contacts/search?term=i]

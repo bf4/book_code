@@ -1,0 +1,21 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<%= error_messages_for 'person' %>
+
+<!--[form:person]-->
+<p><label for="person_name">Name</label><br/>
+<%= text_field 'person', 'name'  %></p>
+
+<p><label for="person_age">Age</label><br/>
+<%= text_field 'person', 'age'  %></p>
+
+<p><label for="person_iq">Iq</label><br/>
+<%= text_field 'person', 'iq'  %></p>
+<!--[eoform:person]-->
+

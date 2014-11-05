@@ -1,0 +1,74 @@
+#START:manual_section
+first_post:
+  id: 1
+  title: First post!
+  body: I got the first post!  I rule!
+  created_at: 2006-01-29 20:03:56
+  updated_at: 2006-01-29 21:00:00
+  user_id: 1
+reply_to_first_post:
+  id: 2
+  title: Very insightful
+  body: It's people like you that make participation in
+        this message board worthwhile.  Thank you.
+  parent_id: 1
+  created_at: 2006-01-30 08:03:56
+  updated_at: 2006-01-30 08:03:56
+  user_id: 2
+third_level_nested_child_post:
+  id: 3
+  title: This post is buried deep in the comments
+  body: The content isn't really important.  We just want to test 
+        the application's threading logic.
+  created_at: 2006-01-30 08:03:56
+  updated_at: 2006-01-30 08:03:56
+  parent_id: 2
+  user_id: 1
+#END:manual_section
+#START:generate_a_bunch_of_posts
+<% 1.upto(50) do |number| %>
+child_post_<%= number %>:
+  id: <%= number + 3 %>
+  title: This is auto-generated reply number <%= number %>
+  body: We're on number <%= number %>
+  created_at: 2006-01-30 08:03:56
+  updated_at: 2006-01-30 08:03:56
+  <%# Randomly choose a parent from a post we've already generated -%>
+  parent_id: <%= rand(number - 1) + 1 %> 
+  user_id: <%= rand(5) + 1 %>
+<% end %>
+#END:generate_a_bunch_of_posts
+#START:do_stuff_with_dates
+<% 
+   def today
+     Time.now.to_s(:db)
+   end
+   def next_week
+     1.week.from_now.to_s(:db)
+   end
+   def last_week
+     1.week.ago.to_s(:db)
+   end
+%>
+post_from_last_week:
+  id: 60
+  title: Pizza
+  body: Last night I had pizza.  I really liked that story from AWDWR. :)
+  created_at: <%= last_week %>
+  updated_at: <%= last_week %>
+  user_id: 1
+post_created_in_future_should_not_display:
+  id: 61
+  title: Prognostication
+  body: I predict that this post will show up next week.
+  created_at: <%= next_week %>
+  updated_at: <%= next_week %>
+  user_id: 1
+updated_post_displays_based_on_updated_time:
+  id: 62
+  title: This should show up as posted today.
+  body: blah blah blah
+  created_at: <%= last_week %>
+  updated_at: <%= today %>
+  user_id: 2
+#END:do_stuff_with_dates

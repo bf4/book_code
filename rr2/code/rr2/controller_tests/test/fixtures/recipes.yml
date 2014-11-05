@@ -1,0 +1,14 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+<% 10.times do |n| %>
+recipe_<%= n %>:
+  name: Recipe Number <%= n %>
+  ingredients: Eggs, flour, onion
+  difficulty: 1
+  published_at: <%= 3.days.ago %>
+<% end %>
+
+for_tomorrow:
+  name: The recipe we'll publish tomorrow
+  ingredients: Beef, tofu, greek yogurt, cilantro
+  difficulty: 2
+  published_at: <%= 1.day.from_now %>

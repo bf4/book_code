@@ -1,0 +1,165 @@
+2006-02-13 00:26:51: (log.c.75) server started 
+2006-02-13 00:27:04: (server.c.1050) [note] graceful shutdown started 
+2006-02-13 00:27:04: (log.c.135) server stopped 
+2006-02-13 00:27:10: (log.c.75) server started 
+2006-02-13 00:27:20: (server.c.1050) [note] graceful shutdown started 
+2006-02-13 00:27:20: (log.c.135) server stopped 
+2006-02-13 00:27:30: (log.c.75) server started 
+2006-02-13 00:27:33: (connections.c.1383) Warning: Either the error-handler returned status 404 or the error-handler itself was not found: /dispatch.fcgi 
+2006-02-13 00:27:33: (connections.c.1385) returning the original status 404 
+2006-02-13 00:27:33: (connections.c.1387) If this is a rails app: check your production.log 
+2006-02-13 00:27:35: (connections.c.1383) Warning: Either the error-handler returned status 404 or the error-handler itself was not found: /dispatch.fcgi 
+2006-02-13 00:27:35: (connections.c.1385) returning the original status 404 
+2006-02-13 00:27:35: (connections.c.1387) If this is a rails app: check your production.log 
+2006-02-13 00:27:50: (server.c.1050) [note] graceful shutdown started 
+2006-02-13 00:27:50: (log.c.135) server stopped 
+2006-02-14 09:01:48: (log.c.75) server started 
+2006-02-14 09:02:37: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 09:02:37: (log.c.135) server stopped 
+2006-02-14 09:02:40: (log.c.75) server started 
+2006-02-14 09:16:59: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 09:16:59: (log.c.135) server stopped 
+2006-02-14 09:17:01: (log.c.75) server started 
+2006-02-14 09:44:29: (connections.c.1383) Warning: Either the error-handler returned status 404 or the error-handler itself was not found: /dispatch.fcgi 
+2006-02-14 09:44:29: (connections.c.1385) returning the original status 404 
+2006-02-14 09:44:29: (connections.c.1387) If this is a rails app: check your production.log 
+2006-02-14 09:45:03: (connections.c.1383) Warning: Either the error-handler returned status 404 or the error-handler itself was not found: /dispatch.fcgi 
+2006-02-14 09:45:03: (connections.c.1385) returning the original status 404 
+2006-02-14 09:45:03: (connections.c.1387) If this is a rails app: check your production.log 
+2006-02-14 09:45:05: (connections.c.1383) Warning: Either the error-handler returned status 404 or the error-handler itself was not found: /dispatch.fcgi 
+2006-02-14 09:45:05: (connections.c.1385) returning the original status 404 
+2006-02-14 09:45:05: (connections.c.1387) If this is a rails app: check your production.log 
+2006-02-14 09:59:23: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 09:59:23: (log.c.135) server stopped 
+2006-02-14 09:59:25: (log.c.75) server started 
+2006-02-14 10:00:57: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 10:00:57: (log.c.135) server stopped 
+2006-02-14 10:00:59: (log.c.75) server started 
+2006-02-14 10:27:01: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 10:27:01: (log.c.135) server stopped 
+2006-02-14 10:28:52: (log.c.75) server started 
+2006-02-14 10:31:06: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 10:31:06: (log.c.135) server stopped 
+2006-02-14 10:31:08: (log.c.75) server started 
+2006-02-14 10:32:22: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 10:32:22: (log.c.135) server stopped 
+2006-02-14 10:32:25: (log.c.75) server started 
+2006-02-14 11:06:50: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 11:06:50: (log.c.135) server stopped 
+2006-02-14 11:07:02: (log.c.75) server started 
+2006-02-14 11:11:36: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 11:11:36: (log.c.135) server stopped 
+2006-02-14 11:11:42: (log.c.75) server started 
+2006-02-14 11:18:58: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 11:18:58: (log.c.135) server stopped 
+2006-02-14 11:19:00: (log.c.75) server started 
+2006-02-14 11:21:03: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 11:21:03: (log.c.135) server stopped 
+2006-02-14 11:21:05: (log.c.75) server started 
+2006-02-14 11:34:44: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 11:34:44: (log.c.135) server stopped 
+2006-02-14 11:48:48: (log.c.75) server started 
+2006-02-14 11:49:42: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 11:49:42: (log.c.135) server stopped 
+2006-02-14 12:01:47: (log.c.75) server started 
+2006-02-14 12:04:55: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 12:04:57: (log.c.135) server stopped 
+2006-02-14 12:08:52: (log.c.75) server started 
+2006-02-14 12:37:52: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 12:37:52: (log.c.135) server stopped 
+2006-02-14 12:45:48: (log.c.75) server started 
+2006-02-14 12:47:24: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 12:47:24: (log.c.135) server stopped 
+2006-02-14 12:47:25: (log.c.75) server started 
+2006-02-14 13:06:06: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 13:06:06: (log.c.135) server stopped 
+2006-02-14 13:06:08: (log.c.75) server started 
+2006-02-14 13:07:09: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 13:07:09: (log.c.135) server stopped 
+2006-02-14 13:07:10: (log.c.75) server started 
+2006-02-14 13:08:10: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 13:08:10: (log.c.135) server stopped 
+2006-02-14 13:08:11: (log.c.75) server started 
+2006-02-14 13:22:54: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 13:22:54: (log.c.135) server stopped 
+2006-02-14 13:22:54: (log.c.75) server started 
+2006-02-14 14:11:12: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:11:12: (log.c.135) server stopped 
+2006-02-14 14:28:18: (log.c.75) server started 
+2006-02-14 14:41:01: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:41:01: (log.c.135) server stopped 
+2006-02-14 14:41:20: (log.c.75) server started 
+2006-02-14 14:41:39: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:41:39: (log.c.135) server stopped 
+2006-02-14 14:41:40: (log.c.75) server started 
+2006-02-14 14:41:47: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:41:47: (log.c.135) server stopped 
+2006-02-14 14:41:52: (log.c.75) server started 
+2006-02-14 14:46:07: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:46:07: (log.c.135) server stopped 
+2006-02-14 14:47:30: (log.c.75) server started 
+2006-02-14 14:50:21: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:50:21: (log.c.135) server stopped 
+2006-02-14 14:50:25: (log.c.75) server started 
+2006-02-14 14:56:40: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:56:40: (log.c.135) server stopped 
+2006-02-14 14:56:44: (log.c.75) server started 
+2006-02-14 14:59:43: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 14:59:43: (log.c.135) server stopped 
+2006-02-14 15:00:35: (log.c.75) server started 
+2006-02-14 15:00:53: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:00:53: (log.c.135) server stopped 
+2006-02-14 15:01:15: (log.c.75) server started 
+2006-02-14 15:02:15: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:02:15: (log.c.135) server stopped 
+2006-02-14 15:02:18: (log.c.75) server started 
+2006-02-14 15:10:04: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:10:04: (log.c.135) server stopped 
+2006-02-14 15:10:07: (log.c.75) server started 
+2006-02-14 15:11:29: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:11:29: (log.c.135) server stopped 
+2006-02-14 15:11:33: (log.c.75) server started 
+2006-02-14 15:12:43: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:12:43: (log.c.135) server stopped 
+2006-02-14 15:14:31: (log.c.75) server started 
+2006-02-14 15:22:12: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:22:12: (mod_fastcgi.c.2263) unexpected end-of-file (perhaps the fastcgi process died): pid: 8634 fcgi-fd: 8 remote-fd: 7 
+2006-02-14 15:22:12: (mod_fastcgi.c.3017) child exited, pid: 8634 status: 0 
+2006-02-14 15:22:12: (mod_fastcgi.c.3064) response not sent, request sent: 999 connection-fd: 7 fcgi-fd: 8 
+2006-02-14 15:22:18: (log.c.135) server stopped 
+2006-02-14 15:22:23: (log.c.75) server started 
+2006-02-14 15:29:57: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:29:57: (log.c.135) server stopped 
+2006-02-14 15:30:00: (log.c.75) server started 
+2006-02-14 15:35:18: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:35:18: (log.c.135) server stopped 
+2006-02-14 15:35:23: (log.c.75) server started 
+2006-02-14 15:48:25: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:48:25: (log.c.135) server stopped 
+2006-02-14 15:49:00: (log.c.75) server started 
+2006-02-14 15:50:24: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 15:50:24: (log.c.135) server stopped 
+2006-02-14 16:00:31: (log.c.75) server started 
+2006-02-14 16:06:06: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 16:06:06: (log.c.135) server stopped 
+2006-02-14 16:06:10: (log.c.75) server started 
+2006-02-14 16:06:33: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 16:06:33: (log.c.135) server stopped 
+2006-02-14 16:06:36: (log.c.75) server started 
+2006-02-14 16:13:14: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 16:13:14: (log.c.135) server stopped 
+2006-02-14 16:15:40: (log.c.75) server started 
+2006-02-14 16:21:56: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 16:21:56: (log.c.135) server stopped 
+2006-02-14 16:22:07: (log.c.75) server started 
+2006-02-14 16:37:15: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 16:37:15: (log.c.135) server stopped 
+2006-02-14 23:04:00: (log.c.75) server started 
+2006-02-14 23:09:48: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 23:09:48: (log.c.135) server stopped 
+2006-02-14 23:10:16: (log.c.75) server started 
+2006-02-14 23:11:23: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 23:11:23: (log.c.135) server stopped 
+2006-02-14 23:11:26: (log.c.75) server started 
+2006-02-14 23:23:34: (server.c.1050) [note] graceful shutdown started 
+2006-02-14 23:23:34: (log.c.135) server stopped 

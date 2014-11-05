@@ -1,0 +1,21 @@
+
+
+    xml.instruct!
+    xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+      xml.channel do
+        xml.title 'Freshly Added Questions'
+        xml.link questions_url
+        xml.pubDate CGI.rfc1123_date(@questions.first.updated_at)
+        xml.description h("Freshly Added Questions In Need of Answers.")
+        @questions.each do |question|
+          xml.item do
+            xml.title question.title
+            xml.link question_url(question,:only_path => false)
+            xml.description h(question.body)
+            xml.pubDate CGI.rfc1123_date(question.updated_at)
+            xml.guid question_url(question)
+            xml.author h(question.author.name)
+          end
+        end
+      end
+    end

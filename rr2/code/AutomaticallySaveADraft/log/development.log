@@ -1,0 +1,867 @@
+  [4;36;1mSQL (0.008634)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.007113)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.001891)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddPostsTable (1)
+  [4;36;1mSQL (0.005140)[0m   [0;1mCREATE TABLE posts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `author` varchar(255), `title` varchar(255), `body` text, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001264)[0m   [0mUPDATE schema_info SET version = 1[0m
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 18:59:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.003716)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+
+
+ActionController::MissingTemplate (Missing template script/../config/../app/views/posts/new.rhtml):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:930:in `assert_existance_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:653:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:01:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.003468)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.04903 (20 reqs/sec) | Rendering: 0.03676 (74%) | DB: 0.00347 (7%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:02:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.002800)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `form_for' for #<#<Class:0x24b9d3c>:0x24b9c88>) on line #1 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, :url => { :action => "new" } do |f| %>
+2:   Title: <%= f.text_field :title %>
+3:   Body: <%= f.text_area :body %>
+4:   <%= f.submit_tag "Save" %>
+
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:03:57) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.003358)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `submit_tag' for #<ActionView::Helpers::FormBuilder:0x23e5ec4>) on line #4 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, :url => { :action => "new" } do |f| %>
+2:   Title: <%= f.text_field :title %>
+3:   Body: <%= f.text_area :body %>
+4:   <%= f.submit_tag "Save" %>
+5: <% end %>
+6: 
+
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:4:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:146:in `fields_for'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:126:in `form_for'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:696:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:04:05) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.003025)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `submit' for #<ActionView::Helpers::FormBuilder:0x22fdaac>) on line #4 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, :url => { :action => "new" } do |f| %>
+2:   Title: <%= f.text_field :title %>
+3:   Body: <%= f.text_area :body %>
+4:   <%= f.submit "Save" %>
+5: <% end %>
+6: 
+
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:4:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:146:in `fields_for'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:126:in `form_for'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:696:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:05:47) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.003501)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.06227 (16 reqs/sec) | Rendering: 0.04866 (78%) | DB: 0.00350 (5%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:05:58) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.017173)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.04143 (24 reqs/sec) | Rendering: 0.01585 (38%) | DB: 0.01717 (41%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:06:39) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.007033)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.03111 (32 reqs/sec) | Rendering: 0.01102 (35%) | DB: 0.00703 (22%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:07:26) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.003224)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.02251 (44 reqs/sec) | Rendering: 0.01162 (51%) | DB: 0.00322 (14%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:08:38) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.002853)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.02011 (49 reqs/sec) | Rendering: 0.00810 (40%) | DB: 0.00285 (14%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:25:45) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.002852)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.02780 (35 reqs/sec) | Rendering: 0.01171 (42%) | DB: 0.00285 (10%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:26:03) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.003425)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.02176 (45 reqs/sec) | Rendering: 0.01080 (49%) | DB: 0.00342 (15%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:29:16) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.004334)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.02468 (40 reqs/sec) | Rendering: 0.01264 (51%) | DB: 0.00433 (17%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:29:51) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.003263)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.01948 (51 reqs/sec) | Rendering: 0.00944 (48%) | DB: 0.00326 (16%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:30:52) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.002905)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.03886 (25 reqs/sec) | Rendering: 0.02494 (64%) | DB: 0.00291 (7%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:31:41) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.002978)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.09224 (10 reqs/sec) | Rendering: 0.02041 (22%) | DB: 0.00298 (3%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:31:53) [POST]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"asdf asfda", "title"=>"asdf"}, "action"=>"save_draft", "controller"=>"posts"}
+
+
+RuntimeError ({"commit"=>"Save Post", "post"=>{"body"=>"asdf asfda", "title"=>"asdf"}, "action"=>"save_draft", "controller"=>"posts"}):
+    /app/controllers/posts_controller.rb:3:in `save_draft'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    .//vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    .//vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    .//vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    .//vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    .//vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    .//vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    .//vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:32:40) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.002837)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.04198 (23 reqs/sec) | Rendering: 0.03113 (74%) | DB: 0.00284 (6%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:32:52) [POST]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"Yawmp", "title"=>"Craptard"}, "action"=>"save_draft", "controller"=>"posts"}
+Rendering  within layouts/application
+
+
+ActionController::MissingTemplate (Missing template script/../config/../app/views/posts/save_draft.rhtml):
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:1001:in `assert_existance_of_template_file'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:694:in `render_file'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    .//vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    .//vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    .//vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    .//vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    .//vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    .//vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    .//vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    .//vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:32:55) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `title' for {"body"=>"Yawmp", "title"=>"Craptard"}:HashWithIndifferentAccess) on line #4 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, 
+2:             :url => { :action => "new" }, 
+3:             :html => {:id => 'post_form'} do |f| %>
+4:   Title: <%= f.text_field :title %><br/>
+5:   Body: <%= f.text_area :body %><br/>
+6:   <%= submit_tag "Save Post" %>
+7: <% end %>
+
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `send'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `value_before_type_cast'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:250:in `to_input_field_tag'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:157:in `text_field'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:392:in `text_field'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:4:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:146:in `fields_for'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:126:in `form_for'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:696:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:33:17) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `title' for {"body"=>"Yawmp", "title"=>"Craptard"}:HashWithIndifferentAccess) on line #4 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, 
+2:             :url => { :action => "new" }, 
+3:             :html => {:id => 'post_form'} do |f| %>
+4:   Title: <%= f.text_field :title %><br/>
+5:   Body: <%= f.text_area :body %><br/>
+6:   <%= submit_tag "Save Post" %>
+7: <% end %>
+
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `send'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `value_before_type_cast'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:250:in `to_input_field_tag'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:157:in `text_field'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:392:in `text_field'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:4:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:146:in `fields_for'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:126:in `form_for'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:696:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:33:20) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `title' for {"body"=>"Yawmp", "title"=>"Craptard"}:HashWithIndifferentAccess) on line #4 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, 
+2:             :url => { :action => "new" }, 
+3:             :html => {:id => 'post_form'} do |f| %>
+4:   Title: <%= f.text_field :title %><br/>
+5:   Body: <%= f.text_area :body %><br/>
+6:   <%= submit_tag "Save Post" %>
+7: <% end %>
+
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `send'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `value_before_type_cast'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:250:in `to_input_field_tag'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:157:in `text_field'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:392:in `text_field'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:4:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:146:in `fields_for'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:126:in `form_for'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:696:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:33:43) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `title' for {"body"=>"Yawmp", "title"=>"Craptard"}:HashWithIndifferentAccess) on line #4 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, 
+2:             :url => { :action => "new" }, 
+3:             :html => {:id => 'post_form'} do |f| %>
+4:   Title: <%= f.text_field :title %><br/>
+5:   Body: <%= f.text_area :body %><br/>
+6:   <%= submit_tag "Save Post" %>
+7: <% end %>
+
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `send'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `value_before_type_cast'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:250:in `to_input_field_tag'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:157:in `text_field'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:392:in `text_field'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:4:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:146:in `fields_for'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:126:in `form_for'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:696:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:33:53) [GET]
+  Session ID: 80e14ef33355d2f2079f9c327ec195ec
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering  within layouts/application
+Rendering posts/new
+
+
+ActionView::TemplateError (undefined method `title' for {"body"=>"Yawmp", "title"=>"Craptard"}:HashWithIndifferentAccess) on line #4 of app/views/posts/new.rhtml:
+1: <% form_for :post, @post, 
+2:             :url => { :action => "new" }, 
+3:             :html => {:id => 'post_form'} do |f| %>
+4:   Title: <%= f.text_field :title %><br/>
+5:   Body: <%= f.text_area :body %><br/>
+6:   <%= submit_tag "Save Post" %>
+7: <% end %>
+
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `send'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:338:in `value_before_type_cast'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:250:in `to_input_field_tag'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:157:in `text_field'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:392:in `text_field'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:4:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:146:in `fields_for'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:126:in `form_for'
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:1:in `_run_rhtml_posts_new'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:309:in `compile_and_render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:285:in `render_template'
+    ./script/../config/../vendor/rails/actionpack/lib/action_view/base.rb:244:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:696:in `render_file'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    ./script/../config/../vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    ./script/../config/../vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    ./script/../config/../vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    ./script/../config/../vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    ./script/../config/../vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    ./script/../config/../vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:33:59) [GET]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.003209)[0m   [0;1mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.14268 (7 reqs/sec) | Rendering: 0.02911 (20%) | DB: 0.00321 (2%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:34:11) [POST]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"Blah", "title"=>"Craptard"}, "action"=>"save_draft", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.004700)[0m   [0mSHOW FIELDS FROM posts[0m
+Rendering  within layouts/application
+
+
+ActionController::MissingTemplate (Missing template script/../config/../app/views/posts/save_draft.rhtml):
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:1001:in `assert_existance_of_template_file'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:694:in `render_file'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    .//vendor/rails/actionpack/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:909:in `perform_action_without_filters'
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    .//vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    .//vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+    .//vendor/rails/actionpack/lib/action_controller/base.rb:378:in `process_without_filters'
+    .//vendor/rails/actionpack/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    .//vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+    .//vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:115:in `handle_dispatch'
+    .//vendor/rails/railties/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    .//vendor/rails/railties/lib/webrick_server.rb:67:in `dispatch'
+    .//vendor/rails/railties/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    .//vendor/rails/activesupport/lib/active_support/dependencies.rb:149:in `require'
+    .//vendor/rails/railties/lib/commands/server.rb:34
+    script/server:3
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mPost Columns (0.003447)[0m   [0;1mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:34:14) [GET]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.01314 (76 reqs/sec) | Rendering: 0.00907 (68%) | DB: 0.00345 (26%) | 200 OK [http://localhost/posts/new]
+  [4;35;1mPost Columns (0.003107)[0m   [0mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:35:06) [POST]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"Blah", "title"=>"lkjasdf"}, "action"=>"save_draft", "controller"=>"posts"}
+Completed in 0.00428 (233 reqs/sec) | Rendering: 0.00021 (4%) | DB: 0.00311 (72%) | 200 OK [http://localhost/posts/save_draft]
+  [4;36;1mPost Columns (0.003520)[0m   [0;1mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:35:16) [POST]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"D", "title"=>"I rock"}, "action"=>"save_draft", "controller"=>"posts"}
+Completed in 0.00406 (246 reqs/sec) | Rendering: 0.00020 (4%) | DB: 0.00352 (86%) | 200 OK [http://localhost/posts/save_draft]
+  [4;35;1mPost Columns (0.002811)[0m   [0mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:35:26) [POST]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"Did I mention that I rock?\n\n'k thx\n", "title"=>"I rock"}, "action"=>"save_draft", "controller"=>"posts"}
+Completed in 0.00445 (224 reqs/sec) | Rendering: 0.00020 (4%) | DB: 0.00281 (63%) | 200 OK [http://localhost/posts/save_draft]
+  [4;36;1mPost Columns (0.003486)[0m   [0;1mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:35:46) [POST]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"Did I mention that I rock?\n\n'k thx\n\n\nasdf\n", "title"=>"I rock"}, "action"=>"save_draft", "controller"=>"posts"}
+Completed in 0.00364 (274 reqs/sec) | Rendering: 0.00020 (5%) | DB: 0.00349 (95%) | 200 OK [http://localhost/posts/save_draft]
+  [4;35;1mPost Columns (0.002957)[0m   [0mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-03-25 19:35:54) [GET]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering  within layouts/application
+Rendering posts/new
+Completed in 0.03239 (30 reqs/sec) | Rendering: 0.02904 (89%) | DB: 0.00296 (9%) | 200 OK [http://localhost/posts/new]
+  [4;36;1mPost Columns (0.003587)[0m   [0;1mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:36:06) [POST]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"Did I mention that I rock?\n\n'k thx\n\n", "title"=>"I rock"}, "action"=>"save_draft", "controller"=>"posts"}
+Completed in 0.00429 (233 reqs/sec) | Rendering: 0.00022 (5%) | DB: 0.00359 (83%) | 200 OK [http://localhost/posts/save_draft]
+  [4;35;1mPost Columns (0.002900)[0m   [0mSHOW FIELDS FROM posts[0m
+
+
+Processing PostsController#save_draft (for 127.0.0.1 at 2006-03-25 19:36:16) [POST]
+  Session ID: 7557b66acf00664be5f9c4eb03fb9b0c
+  Parameters: {"commit"=>"Save Post", "post"=>{"body"=>"Did I mention that I rock?\n\n'k thx\n\nfoo bar", "title"=>"I rock"}, "action"=>"save_draft", "controller"=>"posts"}
+Completed in 0.01278 (78 reqs/sec) | Rendering: 0.00020 (1%) | DB: 0.00290 (22%) | 200 OK [http://localhost/posts/save_draft]

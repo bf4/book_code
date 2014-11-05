@@ -1,0 +1,21 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<% form_for :post, @post, 
+            :url => { :action => "new" }, 
+            :html => {:id => 'post_form'} do |f| %>
+  Title: <%= f.text_field :title %><br/>
+  Body: <%= f.text_area :body %><br/>
+  <%= submit_tag "Save Post" %>
+<% end %>
+<div id='draft-message' style='color:red;'>
+</div>
+<%= observe_form 'post_form', 
+                 :url => {:action => 'save_draft'}, 
+                 :update => 'draft-message',
+                 :frequency => 30  %>

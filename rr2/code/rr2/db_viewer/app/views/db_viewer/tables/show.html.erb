@@ -1,0 +1,11 @@
+<h1><%= params[:id] %></h1>
+<ul>
+<% @table.each do |column| %>
+  <li>
+  <strong><%= column.name %></strong>: <%= column.sql_type %>
+  </li>
+<% end %>
+</ul>
+<p>
+  <%= link_to "all tables", tables_path %>
+</p>

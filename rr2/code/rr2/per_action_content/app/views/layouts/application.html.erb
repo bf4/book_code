@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PerActionContent</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<%#START:sidebar%>
+<div id='sidebar'>
+	Things that go in the sidebar!
+	<% if content_for?(:recent) %>
+	<p class='recent'>
+	  <%= yield :recent %>
+	</p>
+	
+	<% end %>
+</div>
+<%#END:sidebar%>
+<%= yield %>
+
+</body>
+</html>

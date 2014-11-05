@@ -1,0 +1,12 @@
+<h2 class='search_header'>
+  <%= @title %>
+</h2>
+<ul>
+  <% @results.each do |result| %>
+  <li>
+    <%= link_to result.send(@display_as), 
+                send(@display_path, result)
+    %>
+  </li>    
+  <% end %>
+</ul>

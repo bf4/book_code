@@ -1,0 +1,44 @@
+#---
+# Excerpted from "Rails Recipes",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+#---
+module ActionView
+  module CompiledTemplates #:nodoc:
+    # holds compiled template code
+  end
+
+  # = Action View Context
+  #
+  # Action View contexts are supplied to Action Controller to render template.
+  # The default Action View context is ActionView::Base.
+  #
+  # In order to work with ActionController, a Context must just include this module.
+  # The initialization of the variables used by the context (@output_buffer, @view_flow,
+  # and @virtual_path) is responsibility of the object that includes this module
+  # (although you can call _prepare_context defined below).
+  module Context
+    include CompiledTemplates
+    attr_accessor :output_buffer, :view_flow
+
+    # Prepares the context by setting the appropriate instance variables.
+    # :api: plugin
+    def _prepare_context
+      @view_flow     = OutputFlow.new
+      @output_buffer = nil
+      @virtual_path  = nil
+    end
+
+    # Encapsulates the interaction with the view flow so it
+    # returns the correct buffer on yield. This is usually
+    # overwriten by helpers to add more behavior.
+    # :api: plugin
+    def _layout_for(name=nil)
+      name ||= :layout
+      view_flow.get(name).html_safe
+    end
+  end
+end

@@ -1,0 +1,16 @@
+<h1>Listing people</h1>
+
+<%# START:link_to %>
+<%= link_to "Showing all (toggle)", 
+      people_path(:admin => true), 
+      :remote => true, 
+      :id => 'toggle' %>
+<%# END:link_to %>
+<%# START:list %>
+<ul id='people'>
+	<%= render @people %>
+</ul>
+<%# END:list %>
+<br />
+
+<%= link_to 'New Person', new_person_path %>

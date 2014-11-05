@@ -1,0 +1,191 @@
+body {
+  background: #fff;
+  font-family: sans-serif;
+  margin: 0px;
+}
+label {
+  font-weight: bold;
+}
+
+#main {
+  padding: 4em;
+}
+
+#welcome {
+  color: white;
+  margin-right: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* MENU */
+
+#menu {
+  float: left;
+  background: #336699;
+  width: 100%;
+  padding-top: 40px;
+  vertical-align: bottom;
+}
+#menu ul { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#menu li {
+  float: left;
+  margin: 0;
+  margin-left: 0.5em;
+  padding: 0.4em;
+  background: #333;
+}
+#menu li a {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+#menu li.current {
+  background: #fff;
+}
+#menu li.current a {
+  color: #000;
+}
+
+/* LOGIN */
+#login {
+  background: #ccc;
+  width: 25%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+/* DIALOG */
+
+#dialog {
+  font-size: 18px;
+  font-weight: bold;
+}
+#dialog > div {
+  background: #e6e6e6;
+  margin: 0.5em;
+  padding: 1em;
+}  
+#dialog .error { 
+  color: red;
+}
+#dialog .notice {
+  color: darkgreen;
+}
+
+/* LOCALE SELECTOR */
+#locale {
+  text-align: right;
+  font-size: 11px;
+}
+
+/* SEARCH */
+
+#search {
+  text-align: right;
+  background: #ffffcc;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+#search input {
+  background: white;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px;
+}
+#search label {
+  color: #333;
+  font-size: 24px;
+}
+
+/* PRODUCTS */
+
+.product {
+  margin: 0.5em;
+}
+.product .name {
+  font-size: 18px;
+  font-weight: bold;
+  background: #ddd;
+  padding: 0.2em;
+}
+.product .description {
+  padding-top: 1em;
+  padding-bottom: 1em;  
+  font-size: 14px;
+}
+.product .package {
+  font-size: 12px;
+  color: #333;
+}
+
+/* ORDER */
+#order th {
+  text-align: left;
+  background: #333;
+  color: white;
+  padding: 0.5em;
+}
+#order .quantity {
+  background: #ddd;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px;
+}
+#order .price {
+  font-weight: bold;
+  font-size: 14px;
+}
+.total td {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+.total .title {
+  background: #ddd;
+  text-align: right;
+}
+.total .price {
+  border: 2px #444 solid;
+}
+#order .control a {
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+#order .checkout {
+  background: #ffffcc;
+}
+#order .remove {
+  text-align: center;
+}
+#order .remove a {
+  color: red;
+}
+#order .checkout a {
+  color: darkgreen;
+  font-size: 18px;
+}
+
+#checkout {
+  background: #e6e6e6;
+  width: 60%;
+  margin: 2em auto;
+  color: black;
+  font-weight: bold;
+  padding: 2em;
+  font-size: 14px;
+  text-align: center;
+}  
+    

@@ -1,0 +1,15 @@
+html {
+  background: red;
+}
+
+#header {
+  width: 100%;
+  border: 4px solid blue;
+  margin: 22px;
+}    
+
+#content {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}

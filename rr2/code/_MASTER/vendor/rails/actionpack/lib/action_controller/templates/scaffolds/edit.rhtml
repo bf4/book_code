@@ -1,0 +1,15 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<h1>Editing <%= @scaffold_singular_name %></h1>
+
+<%= error_messages_for(@scaffold_singular_name) %>
+<%= form(@scaffold_singular_name, :action => "update#{@scaffold_suffix}") %>
+
+<%= link_to "Show", :action => "show#{@scaffold_suffix}", :id => instance_variable_get("@#{@scaffold_singular_name}") %> |
+<%= link_to "Back", :action => "list#{@scaffold_suffix}" %>

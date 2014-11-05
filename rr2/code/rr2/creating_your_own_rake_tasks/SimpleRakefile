@@ -1,0 +1,33 @@
+def convert_to_xml(input, output)
+  puts "Converting #{input} to #{output}"
+  File.open(output, "w") do |file|
+    file.puts '<?xml version="1.0" encoding="utf-8"?>'
+    file.puts '<lines>'
+    IO.readlines(input).each do |line|
+      file.puts "  <line>"
+      file.puts line.chomp.split(/,/).map{|col| "    <column>#{col.strip}</column>"}.join("\n")
+      file.puts "  </line>"
+    end
+    file.puts '</lines>'
+  end
+end
+
+#START:rake_stuff
+desc "Convert musicians.csv to musicians.xml if the CSV file has changed." #<label id="code.conversion_description"/>
+file 'musicians.xml' => 'musicians.csv' do |t| #<label id="code.file_task"/>
+  convert_to_xml(t.prerequisites.first, t.name) #<label id="code.convert_to_xml"/>
+end
+
+require 'rake/contrib/sshpublisher'
+desc "Upload Musicians list XML file to web server for processing."
+task :upload => 'musicians.xml' do |t| #<label id="code.normal_task"/>
+  puts "Transferring #{t.prerequisites.last}..." #<label id="code.prerequisites"/>
+  publisher = Rake::SshFilePublisher.new(
+                          "chadfowler.com", 
+                          "/var/www/html/jazz_people", 
+                          File.dirname(__FILE__), 
+                          t.prerequisites.first) 
+  publisher.upload
+end
+task :default => :upload
+#END:rake_stuff

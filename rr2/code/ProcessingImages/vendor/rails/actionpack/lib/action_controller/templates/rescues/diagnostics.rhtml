@@ -1,0 +1,19 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<h1>
+  <%=h @exception.class.to_s %>
+  <% if @request.parameters['controller'] %>
+    in <%=h @request.parameters['controller'].humanize %>Controller<% if @request.parameters['action'] %>#<%=h @request.parameters['action'] %><% end %>
+  <% end %>
+</h1>
+<pre><%=h @exception.clean_message %></pre>
+
+<%= render_file(@rescues_path + "/_trace.rhtml", false) %>
+
+<%= render_file(@rescues_path + "/_request_and_response.rhtml", false) %>

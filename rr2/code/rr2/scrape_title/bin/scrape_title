@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "scrape_title"
+
+puts ScrapeTitle.new(ARGV.first).scrape

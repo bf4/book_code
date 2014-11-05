@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: SecretURLs_development
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql
+  database: SecretURLs_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql
+  database: SecretURLs_production
+  username: root
+  password: 
+  socket: /tmp/mysql.sock

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  album_id: 1
+  duration_in_seconds: 1
+
+two:
+  title: MyString
+  album_id: 1
+  duration_in_seconds: 1

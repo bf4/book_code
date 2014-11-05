@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'pp'
+require File.dirname(__FILE__) + '/../config/environment'
+Dir['app/models/**/*rb'].each{|f| require f}
+pp Dir['/tmp/ruby_sess*'].collect {|file| 
+  [file, Marshal.load(File.read(file))]
+}

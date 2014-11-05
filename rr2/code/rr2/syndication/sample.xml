@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Freshly Added Recipes</title>
+    <link>http://localhost:3000/recipes</link>
+    <pubDate>Tue, 04 Jan 2011 18:13:19 GMT</pubDate>
+    <description>Cook Book Freshly Added Recipes.</description>
+    <item>
+      <title>Blood Sausage</title>
+      <link>http://localhost:3000/recipes/1</link>
+      <description></description>
+      <pubDate>Tue, 04 Jan 2011 18:13:19 GMT</pubDate>
+      <guid>http://localhost:3000/recipes/1</guid>
+      <author>hank</author>
+    </item>
+    <item>
+      <title>Natto Omlet</title>
+      <link>http://localhost:3000/recipes/2</link>
+      <description></description>
+      <pubDate>Tue, 04 Jan 2011 18:13:20 GMT</pubDate>
+      <guid>http://localhost:3000/recipes/2</guid>
+      <author>forrest</author>
+    </item>
+  </channel>
+</rss>

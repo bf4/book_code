@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @album.title %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%= @album.artist %>
+</p>
+
+<p>
+  <b>Remix of:</b>
+  <%= @album.remix_of_id %>
+</p>
+<%# START:button_to_copy %>
+<%= button_to 'Copy', copy_album_path(@album) %>
+<%# END:button_to_copy %>
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

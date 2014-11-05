@@ -1,0 +1,19 @@
+<h1>Listing contacts</h1>
+<ul>
+<% @contacts.each do |contact| %>
+  <%= content_tag_for(:li,
+                      contact,
+                      :data => {
+                        :city => contact.city,
+                        :name => contact.name,
+                        :country => contact.country}) do %>
+    <%= contact.name %> from <%= contact.city %>
+  <% end %>
+<% end %>
+</ul>
+
+<br />
+
+<%= link_to 'New Contact', new_contact_path %>
+<div id='tip' style='display:none'>
+</div>

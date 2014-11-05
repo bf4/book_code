@@ -1,0 +1,17 @@
+common: &common
+  adapter: mysql
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  <<: *common
+  database: processing_images_prod
+
+development:
+  <<: *common
+  database: processing_images_dev
+
+test:
+  <<: *common
+  database: processing_images_test

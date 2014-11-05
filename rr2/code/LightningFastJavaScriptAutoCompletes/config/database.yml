@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: LightningFastJavaScriptAutoCompletes_development
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql
+  database: LightningFastJavaScriptAutoCompletes_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql
+  database: LightningFastJavaScriptAutoCompletes_production
+  username: root
+  password: 
+  socket: /tmp/mysql.sock

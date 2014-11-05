@@ -1,0 +1,32 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<div id='new-image' class='section'>
+	<h2>Add Image</h2>
+	<% form_for :image, @image, :url=> {:action => 'create'}, :html=>{:multipart=>true} do |f| %>
+		<label for='image_name'>Name:</label>
+		<%= f.text_field :name %><br/>
+		<label for='image_file_data'>Image File:</label>
+		<%= f.file_field :file_data %><br/>
+		<label for='image_description'>Description:</label><br/>
+		<%= f.text_area :description, :cols => 80, :rows => 5 %><br/>
+		<%= submit_tag "Save" %>
+	<% end %>
+</div>
+
+<% if @images.any? %>
+<div id='existing-images' class='section'>
+  <h2><%= pluralize(@images.size, "Image") %></h2>
+	<p>[ <%= link_to("Destroy All",:action=>'clean') %> ]</p>
+	<% @images.each_with_index do |image,index| %>
+	  <%= thumbnail image %>
+	  <% if (index + 1) % 5 == 0 %><br/><% end %>
+	<% end %>
+</div>
+<% end %>
+

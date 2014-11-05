@@ -1,0 +1,398 @@
+  [4;36;1mSQL (0.000313)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000000)[0m   [0mMysql::Error: #42S02Table 'writetestsforhelpers_test.recipes' doesn't exist: SHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000361)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000355)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000838)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000300)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.007324)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000760)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001198)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.006030)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.001038)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000780)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000639)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001005)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000984)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001425)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000396)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000341)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000349)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000397)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.003861)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.003161)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001320)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.006113)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000697)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000677)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000652)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001005)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.001372)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001458)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000329)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000357)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000321)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000336)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000270)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.004549)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.003412)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001531)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.005858)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000723)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000673)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000880)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001008)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000954)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.002050)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000311)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000340)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000320)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000408)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000353)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.003768)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.003995)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001259)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.004259)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.002937)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001058)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000643)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001191)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000899)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.002027)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000815)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000327)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000340)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000373)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000304)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.006360)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000773)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001626)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.003658)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.003030)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000642)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000620)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000953)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.001142)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.009461)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000301)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000904)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000401)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.004233)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.003373)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001206)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.006716)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000702)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000682)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000978)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000998)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000938)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001366)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000322)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000466)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000327)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000489)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.003730)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.002927)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001746)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.005523)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000965)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000796)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000658)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001838)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.001446)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.000953)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.001336)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001746)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.001288)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001689)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000403)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000435)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000335)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000502)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000469)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.008179)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.003541)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.009537)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.006816)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.001279)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001153)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000828)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001291)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.033783)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001893)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000395)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.002468)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000352)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000328)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000271)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.004210)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.003106)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001161)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.003864)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.002825)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000627)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000638)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001105)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000906)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001806)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000300)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000311)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000645)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000609)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.006617)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000703)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.001175)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.003815)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.002832)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000668)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000624)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000957)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000918)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001297)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.024096)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000268)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000998)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000699)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.031036)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000453)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.005684)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000994)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000507)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.033330)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000665)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.016272)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000180)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001376)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000840)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.005426)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000795)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000948)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000517)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000515)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000847)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000722)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000532)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001219)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000163)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000175)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000940)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000651)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000771)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.001859)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000527)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000514)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000493)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.005724)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000620)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001921)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000177)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000530)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000168)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000509)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000455)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000248)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000177)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000251)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000278)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000160)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000527)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000275)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000194)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000242)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000275)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000252)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000196)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000179)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000247)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000172)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000179)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000249)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000171)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000179)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000288)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001003)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000202)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000898)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000662)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000810)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000452)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000619)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000548)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000489)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000762)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.005887)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001333)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000166)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000173)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.027472)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000930)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000782)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000747)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000510)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000786)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000462)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000729)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000534)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.003241)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000158)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000173)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000954)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000748)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000901)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000536)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000461)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000473)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000747)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000572)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001078)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000180)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000179)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000913)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000660)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000827)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000726)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000516)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000510)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000498)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000802)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000535)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001018)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000159)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000172)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000960)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000618)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000758)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000431)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000504)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000470)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000498)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000724)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000525)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001788)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000196)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000256)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000159)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000191)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000174)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000886)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000753)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.009558)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000537)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000895)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000692)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000485)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000994)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000826)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001121)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000160)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000178)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000913)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000729)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000713)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000517)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000484)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000543)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000735)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.001404)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.001087)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000170)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Columns (0.000938)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000593)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mComment Load (0.000944)[0m   [0mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mComment Columns (0.000461)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mSQL (0.000538)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000446)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000469)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.001087)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000605)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.003117)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000171)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000181)[0m   [0mROLLBACK[0m
+  [4;36;1mRecipe Columns (0.000970)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000246)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000626)[0m   [0;1mINSERT INTO recipes (`name`) VALUES('test')[0m
+  [4;35;1mSQL (0.009602)[0m   [0mCOMMIT[0m
+  [4;36;1mComment Load (0.000740)[0m   [0;1mSELECT * FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mComment Columns (0.000466)[0m   [0mSHOW FIELDS FROM comments[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000573)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000736)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000230)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000541)[0m   [0;1mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;35;1mSQL (0.000716)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000476)[0m   [0mINSERT INTO comments (`body`, `recipe_id`) VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000745)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000766)[0m   [0mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;36;1mSQL (0.000542)[0m   [0;1mSELECT count(*) AS count_all FROM comments WHERE (comments.recipe_id = 1) [0m
+  [4;35;1mSQL (0.000528)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000171)[0m   [0mROLLBACK[0m

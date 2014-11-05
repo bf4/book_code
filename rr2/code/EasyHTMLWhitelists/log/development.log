@@ -1,0 +1,298 @@
+
+
+Processing PostsController#index (for 127.0.0.1 at 2006-04-03 08:36:48) [GET]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+
+
+ActionController::UnknownAction (No action responded to index):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-04-03 08:36:52) [GET]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering posts/new
+ERROR: compiling _run_rhtml_posts_new RAISED compile error
+script/../config/../app/views/posts/new.rhtml:5: parse error, unexpected kEND, expecting $
+Function body: def _run_rhtml_posts_new(local_assigns)
+_erbout = ''; _erbout.concat(( start_form_tag :action => "save" ).to_s); _erbout.concat "\n"
+_erbout.concat "  "; _erbout.concat(( text_field_tag "post" ).to_s); _erbout.concat "\n"
+_erbout.concat "  "; _erbout.concat(( submit_tag ).to_s); _erbout.concat "\n"
+ end ; _erbout
+end
+Backtrace: script/../config/../app/views/posts/new.rhtml:5:in `compile_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:300:in `compile_and_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:285:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:244:in `render_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:697:in `render_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:619:in `render_with_no_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:911:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+script/../config/../app/views/posts/new.rhtml:5: parse error, unexpected kEND, expecting $) on line #5 of app/views/posts/new.rhtml:
+2:   <%= text_field_tag "post" %>
+3:   <%= submit_tag %>
+4: <% end %>
+    #{RAILS_ROOT}/app/views/posts/new.rhtml:5:in `compile_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:300:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:285:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:244:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:697:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:619:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:911:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2006-04-03 08:37:10) [GET]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering posts/new
+Completed in 0.07843 (12 reqs/sec) | Rendering: 0.06309 (80%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 08:37:13) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test", "action"=>"save", "controller"=>"posts"}
+
+
+ActionController::UnknownAction (No action responded to save):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 08:38:01) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test", "action"=>"save", "controller"=>"posts"}
+
+
+NoMethodError (undefined method `whitelist' for #<PostsController:0x2389070>):
+    /app/controllers/posts_controller.rb:3:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 08:43:33) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test", "action"=>"save", "controller"=>"posts"}
+
+
+NoMethodError (undefined method `whitelist' for #<PostsController:0x2575ce4>):
+    /app/controllers/posts_controller.rb:3:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 08:45:20) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test", "action"=>"save", "controller"=>"posts"}
+Rendering posts/save
+Completed in 0.04756 (21 reqs/sec) | Rendering: 0.04421 (92%) | 200 OK [http://localhost/posts/save]
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 08:45:28) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test <b>foo</b>", "action"=>"save", "controller"=>"posts"}
+Rendering posts/save
+Completed in 0.00541 (184 reqs/sec) | Rendering: 0.00171 (31%) | 200 OK [http://localhost/posts/save]
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 08:46:03) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test <b>foo</b>", "action"=>"save", "controller"=>"posts"}
+Rendering posts/save
+Completed in 0.00667 (149 reqs/sec) | Rendering: 0.00362 (54%) | 200 OK [http://localhost/posts/save]
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 08:47:26) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test <b>foo</b>", "action"=>"save", "controller"=>"posts"}
+Rendering posts/save
+Completed in 0.00519 (192 reqs/sec) | Rendering: 0.00205 (39%) | 200 OK [http://localhost/posts/save]
+
+
+Processing PostsController#save (for 127.0.0.1 at 2006-04-03 09:43:22) [POST]
+  Session ID: 16cfb0831d8c59448aebc25e2c3ef3b5
+  Parameters: {"commit"=>"Save changes", "post"=>"Test <b>foo</b>", "action"=>"save", "controller"=>"posts"}
+Rendering posts/save
+Completed in 0.02975 (33 reqs/sec) | Rendering: 0.02595 (87%) | 200 OK [http://localhost/posts/save]

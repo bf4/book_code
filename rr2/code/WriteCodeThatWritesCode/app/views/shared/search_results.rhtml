@@ -1,0 +1,21 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<h2 class='search_header'>
+  <%= @title %>
+</h2>
+<ul>
+  <% @results.each do |result| %>
+  <li>
+    <%= link_to result.send(@display_as), 
+                :action => @display_action,
+                :id => result
+    %>
+  </li>    
+  <% end %>
+</ul>

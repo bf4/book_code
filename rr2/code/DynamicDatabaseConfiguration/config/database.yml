@@ -1,0 +1,11 @@
+development:
+  adapter: mysql
+  database: DynamicDatabaseConfiguration_development
+  username: root
+  password:
+  socket: <%=  ["/tmp/mysqld.sock",
+                "/tmp/mysql.sock",
+               "/var/run/mysqld/mysqld.sock",
+               "/var/lib/mysql/mysql.sock"].detect{|socket|
+                 File.exist?(socket)
+               } %>

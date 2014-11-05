@@ -1,0 +1,597 @@
+--- 
+Unit Tests: 
+  :original_result: 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/environment.rb: 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/application.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/boot.rb: 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 1
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/environments/test.rb: 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/backtrace_silencers.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/inflections.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/mime_types.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/secret_token.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/session_store.rb: 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/controllers/application_controller.rb: 
+    - 1
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/helpers/application_helper.rb: 
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/helpers/people_helper.rb: 
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/controllers/people_controller.rb: 
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/models/person.rb: 
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/routes.rb: 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  :created_at: 2011-04-17 07:29:30.253121 -06:00
+Functional Tests: 
+  :original_result: 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/environment.rb: 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/application.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/boot.rb: 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 1
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/environments/test.rb: 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/backtrace_silencers.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/inflections.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/mime_types.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/secret_token.rb: 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/initializers/session_store.rb: 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/controllers/application_controller.rb: 
+    - 1
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/helpers/application_helper.rb: 
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/helpers/people_helper.rb: 
+    - 1
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/controllers/people_controller.rb: 
+    - 1
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 2
+    - 1
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 2
+    - 1
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 2
+    - 1
+    - 
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/app/models/person.rb: 
+    - 1
+    - 1
+    - 0
+    - 
+    - 
+    /Users/chad/src/rr2/Book/code/rr2/test_coverage/config/routes.rb: 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  :created_at: 2011-04-17 07:22:32.286516 -06:00

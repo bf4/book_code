@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @reminder.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @reminder.body %>
+</p>
+
+<p>
+  <b>Starts at:</b>
+  <%= @reminder.starts_at %>
+</p>
+
+<p>
+  <b>Ends at:</b>
+  <%= @reminder.ends_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_reminder_path(@reminder) %> |
+<%= link_to 'Back', reminders_path %>

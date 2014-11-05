@@ -1,0 +1,25 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<div class='product'>
+  <div class='name'><%= product.name %></div>
+  <div class='description'><%= product.description %></div>
+  <div class='package'>$<%= "%.2f" % product.price %> (<%= product.package %>)</div>
+  <div class='control'>
+    <%= form_remote_tag :url=>{:controller=>'order',:action=>'add'} %>
+      <%= hidden_field_tag 'id', product.id %>
+      <% if rtl? %>
+      <%= submit_tag 'Add to Order'.t %>
+      <%= select_tag 'quantity', options_for_select(translated_options((1..10).to_a)) %>
+      <% else %>
+      <%= select_tag 'quantity', options_for_select(translated_options((1..10).to_a)) %>
+      <%= submit_tag 'Add to Order'.t %>
+      <% end %>
+    <%= end_form_tag %>
+  </div>
+</div>

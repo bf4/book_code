@@ -1,0 +1,1219 @@
+  [4;36;1mContact Columns (0.000000)[0m   [0;1mMysql::Error: Table 'adddeadsimplewebservicesupporttoexistingactions_development.contacts' doesn't exist: SHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.004769)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.002413)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000675)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateContacts (1)
+  [4;36;1mSQL (0.005135)[0m   [0;1mCREATE TABLE contacts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000681)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000834)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001086)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000772)[0m   [0mSHOW KEYS FROM contacts[0m
+  [4;36;1mContact Columns (0.000578)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-03 22:50:54) [POST]
+  Session ID: a95e9f3af88e3ade0df6c99662453eee
+  Parameters: {"key1"=>"value1", "key2"=>"value2", "action"=>"create", "controller"=>"contacts"}
+
+
+RuntimeError ({"key1"=>"value1", "key2"=>"value2", "action"=>"create", "controller"=>"contacts"}):
+    /app/controllers/contacts_controller.rb:24:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mSQL (0.005869)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.003626)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000582)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateContacts (1)
+  [4;36;1mSQL (0.029570)[0m   [0;1mCREATE TABLE contacts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `phone` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000672)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000587)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.002507)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000849)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000720)[0m   [0mSHOW KEYS FROM contacts[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-03 22:53:07) [POST]
+  Session ID: 0b2d030f648021c2ed956730f80944f4
+  Parameters: {"action"=>"create", "controller"=>"contacts", "<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact>"=>""}
+
+
+RuntimeError ({"action"=>"create", "controller"=>"contacts", "<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact>"=>""}):
+    /app/controllers/contacts_controller.rb:24:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-03 22:55:50) [POST]
+  Session ID: 28d9ff04f553347ea28811747215899c
+  Parameters: {"action"=>"create", "controller"=>"contacts", "<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact>"=>""}
+  [4;36;1mContact Columns (0.000660)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000236)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000632)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES(NULL, NULL)[0m
+  [4;35;1mSQL (0.000914)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2008/contacts/list
+Completed in 0.04219 (23 reqs/sec) | DB: 0.00244 (5%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-03 22:55:50) [GET]
+  Session ID: f70290ef171c8dbf493d9a64e536e6b5
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.004020)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000665)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000555)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.03428 (29 reqs/sec) | Rendering: 0.02041 (59%) | DB: 0.00524 (15%) | 200 OK [http://localhost/contacts/list]
+  [4;36;1mSQL (0.080793)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.051224)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.006878)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateContacts (1)
+  [4;36;1mSQL (0.338847)[0m   [0;1mCREATE TABLE contacts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `phone` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.014527)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000704)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.006164)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.006282)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.001732)[0m   [0mSHOW KEYS FROM contacts[0m
+  [4;36;1mContact Columns (0.000929)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2006-04-05 05:58:03) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"index", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000974)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.058552)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000679)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/contacts
+Rendering contacts/list
+Completed in 0.24032 (4 reqs/sec) | Rendering: 0.01185 (4%) | DB: 0.06020 (25%) | 200 OK [http://localhost/contacts]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2006-04-05 05:58:06) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000960)[0m   [0mSHOW FIELDS FROM contacts[0m
+Rendering  within layouts/contacts
+Rendering contacts/new
+Rendered contacts/_form (0.00413)
+Completed in 0.01329 (75 reqs/sec) | Rendering: 0.01029 (77%) | DB: 0.00096 (7%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 05:58:08) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"commit"=>"Create", "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000955)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000195)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.005929)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES(NULL, NULL)[0m
+  [4;35;1mSQL (0.000681)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.01199 (83 reqs/sec) | DB: 0.00776 (64%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 05:58:08) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000927)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.002462)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000628)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00926 (107 reqs/sec) | Rendering: 0.00223 (24%) | DB: 0.00402 (43%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2006-04-05 05:58:15) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.018236)[0m   [0mSELECT * FROM contacts WHERE (contacts.id = '1') LIMIT 1[0m
+Rendering  within layouts/contacts
+Rendering contacts/edit
+  [4;36;1mContact Columns (0.001226)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Rendered contacts/_form (0.00021)
+Completed in 0.02919 (34 reqs/sec) | Rendering: 0.00755 (25%) | DB: 0.01946 (66%) | 200 OK [http://localhost/contacts/edit/1]
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2006-04-05 05:58:17) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"commit"=>"Edit", "action"=>"update", "id"=>"1", "controller"=>"contacts"}
+  [4;35;1mContact Load (0.000759)[0m   [0mSELECT * FROM contacts WHERE (contacts.id = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.000187)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Columns (0.000911)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mContact Update (0.001602)[0m   [0;1mUPDATE contacts SET `phone` = NULL, `name` = NULL WHERE id = 1[0m
+  [4;35;1mSQL (0.000207)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/show/1
+Completed in 0.00837 (119 reqs/sec) | DB: 0.00367 (43%) | 302 Found [http://localhost/contacts/update/1]
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2006-04-05 05:58:17) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000765)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '1') LIMIT 1[0m
+Rendering  within layouts/contacts
+Rendering contacts/show
+  [4;35;1mContact Columns (0.000961)[0m   [0mSHOW FIELDS FROM contacts[0m
+Completed in 0.01070 (93 reqs/sec) | Rendering: 0.00679 (63%) | DB: 0.00173 (16%) | 200 OK [http://localhost/contacts/show/1]
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2006-04-05 05:58:19) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000808)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '1') LIMIT 1[0m
+Rendering  within layouts/contacts
+Rendering contacts/edit
+  [4;35;1mContact Columns (0.001144)[0m   [0mSHOW FIELDS FROM contacts[0m
+Rendered contacts/_form (0.00019)
+Completed in 0.00695 (143 reqs/sec) | Rendering: 0.00288 (41%) | DB: 0.00195 (28%) | 200 OK [http://localhost/contacts/edit/1]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 05:58:21) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000923)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000482)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000650)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00661 (151 reqs/sec) | Rendering: 0.00204 (30%) | DB: 0.00206 (31%) | 200 OK [http://localhost/contacts/list]
+  [4;36;1mContact Columns (0.000944)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 05:59:09) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.001467)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000532)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000597)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.03387 (29 reqs/sec) | Rendering: 0.01063 (31%) | DB: 0.00260 (7%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2006-04-05 05:59:12) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000920)[0m   [0mSHOW FIELDS FROM contacts[0m
+Rendering  within layouts/contacts
+Rendering contacts/new
+Rendered contacts/_form (0.00417)
+Completed in 0.01261 (79 reqs/sec) | Rendering: 0.00960 (76%) | DB: 0.00092 (7%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 05:59:19) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"commit"=>"Create", "contact"=>{"name"=>"Chad", "phone"=>"444-555-1212"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000918)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000170)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.016707)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES('Chad', '444-555-1212')[0m
+  [4;35;1mSQL (0.000668)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.02244 (44 reqs/sec) | DB: 0.01846 (82%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 05:59:20) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000859)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000519)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000685)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00746 (134 reqs/sec) | Rendering: 0.00256 (34%) | DB: 0.00206 (27%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:09:05) [POST]
+  Session ID: a4960886315ae1a53ce5334d2cc96b4a
+  Parameters: {"action"=>"create", "controller"=>"contacts", "<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact>"=>""}
+  [4;36;1mContact Columns (0.000979)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000170)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000341)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES(NULL, NULL)[0m
+  [4;35;1mSQL (0.000987)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.02586 (38 reqs/sec) | DB: 0.00248 (9%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:09:05) [GET]
+  Session ID: 1cffeb9147c37e0cc1da72949a7978f1
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000917)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000548)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000716)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.01673 (59 reqs/sec) | Rendering: 0.01146 (68%) | DB: 0.00218 (13%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:09:15) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000909)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000480)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000713)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00812 (123 reqs/sec) | Rendering: 0.00322 (39%) | DB: 0.00210 (25%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:09:16) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000950)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000489)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000716)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00807 (123 reqs/sec) | Rendering: 0.00311 (38%) | DB: 0.00216 (26%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:09:17) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000967)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000583)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000662)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00839 (119 reqs/sec) | Rendering: 0.00330 (39%) | DB: 0.00221 (26%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:09:25) [POST]
+  Session ID: bbec876fea6c8771292ce57b6e6c676c
+  Parameters: {"action"=>"create", "controller"=>"contacts", "<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact>"=>""}
+  [4;36;1mContact Columns (0.000958)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000186)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000327)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES(NULL, NULL)[0m
+  [4;35;1mSQL (0.031610)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.03764 (26 reqs/sec) | DB: 0.03308 (87%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:09:25) [GET]
+  Session ID: 78670f58d6642a29a2f105fcd3fef90c
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000956)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000494)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000745)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00895 (111 reqs/sec) | Rendering: 0.00369 (41%) | DB: 0.00220 (24%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:09:39) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000961)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000595)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000694)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00908 (110 reqs/sec) | Rendering: 0.00388 (42%) | DB: 0.00225 (24%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2006-04-05 06:09:45) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000972)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Rendering  within layouts/contacts
+Rendering contacts/new
+Rendered contacts/_form (0.00410)
+Completed in 0.01264 (79 reqs/sec) | Rendering: 0.00963 (76%) | DB: 0.00097 (7%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:10:08) [POST]
+  Session ID: 6d0ae6a4f3acf0d817731436930e4b36
+  Parameters: {"action"=>"create", "controller"=>"contacts", "<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact>"=>""}
+
+
+RuntimeError ({"action"=>"create", "controller"=>"contacts", "<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact>"=>""}):
+    /app/controllers/contacts_controller.rb:25:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:12:07) [POST]
+  Session ID: b72b16fce4cbb86179c417afad9488e2
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+
+
+RuntimeError ({"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}):
+    /app/controllers/contacts_controller.rb:25:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2006-04-05 06:12:18) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000916)[0m   [0mSHOW FIELDS FROM contacts[0m
+Rendering  within layouts/contacts
+Rendering contacts/new
+Rendered contacts/_form (0.00055)
+Completed in 0.00460 (217 reqs/sec) | Rendering: 0.00193 (42%) | DB: 0.00092 (19%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:12:20) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000958)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000466)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000733)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00904 (110 reqs/sec) | Rendering: 0.00404 (44%) | DB: 0.00216 (23%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:12:21) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000924)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000518)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000690)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00901 (110 reqs/sec) | Rendering: 0.00393 (43%) | DB: 0.00213 (23%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:12:33) [POST]
+  Session ID: 2a8529f3bff35f2429959d7e036e99e5
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000938)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000185)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000362)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES('Kurt Weill', '501-555-2222')[0m
+  [4;35;1mSQL (0.031946)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.03733 (26 reqs/sec) | DB: 0.03343 (89%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:12:33) [GET]
+  Session ID: efec123f754a1c5966e60f04a85de5f7
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000956)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000523)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000788)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.07751 (12 reqs/sec) | Rendering: 0.07217 (93%) | DB: 0.00227 (2%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:12:36) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000940)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000481)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000730)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00940 (106 reqs/sec) | Rendering: 0.00418 (44%) | DB: 0.00215 (22%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#destroy (for 127.0.0.1 at 2006-04-05 06:12:42) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000842)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.000267)[0m   [0mBEGIN[0m
+  [4;36;1mContact Columns (0.000927)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mContact Destroy (0.008095)[0m   [0m DELETE FROM contacts
+ WHERE id = 1
+[0m
+  [4;36;1mSQL (0.000721)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.01482 (67 reqs/sec) | DB: 0.01085 (73%) | 302 Found [http://localhost/contacts/destroy/1]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:12:42) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000928)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000509)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000694)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00877 (114 reqs/sec) | Rendering: 0.00383 (43%) | DB: 0.00213 (24%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#destroy (for 127.0.0.1 at 2006-04-05 06:12:44) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"destroy", "id"=>"3", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000765)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '3') LIMIT 1[0m
+  [4;35;1mSQL (0.000186)[0m   [0mBEGIN[0m
+  [4;36;1mContact Columns (0.000913)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mContact Destroy (0.000336)[0m   [0m DELETE FROM contacts
+ WHERE id = 3
+[0m
+  [4;36;1mSQL (0.000953)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.00677 (147 reqs/sec) | DB: 0.00315 (46%) | 302 Found [http://localhost/contacts/destroy/3]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:12:44) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.001180)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000665)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000697)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00909 (110 reqs/sec) | Rendering: 0.00354 (38%) | DB: 0.00254 (27%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#destroy (for 127.0.0.1 at 2006-04-05 06:12:45) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"destroy", "id"=>"4", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000720)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '4') LIMIT 1[0m
+  [4;35;1mSQL (0.000167)[0m   [0mBEGIN[0m
+  [4;36;1mContact Columns (0.000847)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mContact Destroy (0.001085)[0m   [0m DELETE FROM contacts
+ WHERE id = 4
+[0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.00683 (146 reqs/sec) | DB: 0.00343 (50%) | 302 Found [http://localhost/contacts/destroy/4]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:12:45) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000921)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000489)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000691)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00766 (130 reqs/sec) | Rendering: 0.00263 (34%) | DB: 0.00210 (27%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:13:40) [POST]
+  Session ID: 254f3d42a9be20ea37a9b1abe6c1aef0
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000922)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000177)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000397)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES('Kurt Weill', '501-555-2222')[0m
+  [4;35;1mSQL (0.000857)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.00604 (165 reqs/sec) | DB: 0.00235 (38%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:13:40) [GET]
+  Session ID: 5e45b414fc8642bc1041e3f778a83497
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000917)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000485)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000727)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00852 (117 reqs/sec) | Rendering: 0.00319 (37%) | DB: 0.00213 (24%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:13:42) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000950)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000475)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000716)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00803 (124 reqs/sec) | Rendering: 0.00310 (38%) | DB: 0.00214 (26%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#destroy (for 127.0.0.1 at 2006-04-05 06:13:43) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"destroy", "id"=>"6", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000787)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '6') LIMIT 1[0m
+  [4;35;1mSQL (0.000193)[0m   [0mBEGIN[0m
+  [4;36;1mContact Columns (0.000916)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mContact Destroy (0.000344)[0m   [0m DELETE FROM contacts
+ WHERE id = 6
+[0m
+  [4;36;1mSQL (0.015151)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.02131 (46 reqs/sec) | DB: 0.01739 (81%) | 302 Found [http://localhost/contacts/destroy/6]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:13:43) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000826)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000512)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000671)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00786 (127 reqs/sec) | Rendering: 0.00293 (37%) | DB: 0.00201 (25%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:22:14) [POST]
+  Session ID: a84db22ed7df2ea98db7cea758151271
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+
+
+RuntimeError ({"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}):
+    /app/controllers/contacts_controller.rb:25:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:22:56) [POST]
+  Session ID: a497641b4638564d79e6252887c68168
+  Parameters: {"format"=>#<Mime::Type:0x150ac20 @synonyms=["text/xml", "application/x-xml"], @symbol=:xml, @string="application/xml">, "exception"=>"#<RuntimeError: attempted adding second root element to document>\n/usr/local/lib/ruby/1.8/rexml/document.rb:81:in `<<'\n/usr/local/lib/ruby/1.8/rexml/element.rb:916:in `add'\n/usr/local/lib/ruby/1.8/rexml/child.rb:21:in `initialize'\n/usr/local/lib/ruby/1.8/rexml/parent.rb:13:in `initialize'\n/usr/local/lib/ruby/1.8/rexml/element.rb:59:in `initialize'\n/usr/local/lib/ruby/1.8/rexml/element.rb:914:in `add'\n/usr/local/lib/ruby/1.8/rexml/element.rb:297:in `add_element'\n/usr/local/lib/ruby/1.8/rexml/document.rb:88:in `add_element'\n/usr/local/lib/ruby/1.8/rexml/parsers/treeparser.rb:28:in `parse'\n/usr/local/lib/ruby/1.8/rexml/document.rb:178:in `build'\n/usr/local/lib/ruby/1.8/rexml/document.rb:45:in `initialize'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:950:in `parse'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:163:in `xml_in'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:202:in `xml_in'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_ext/cgi_methods.rb:67:in `parse_formatted_request_parameters'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_process.rb:68:in `request_parameters'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/request.rb:12:in `parameters'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:122:in `set_session_options_without_components'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/components.rb:178:in `set_session_options'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:116:in `process'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'\n/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'\n/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'\n/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'\n/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'\n/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'\n/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'\n/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'\n/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59\n/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'\n/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30\n/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'\nscript/server:3\n...\nattempted adding second root element to document\nLine: \nPosition: \nLast 80 unconsumed characters:\n<name>Blah Foo</name><phone>501-555-2222</phone></contact> (REXML::ParseException)", "action"=>"create", "controller"=>"contacts", "raw_post_data"=>"<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact><contact><name>Blah Foo</name><phone>501-555-2222</phone></contact>", "backtrace"=>["/usr/local/lib/ruby/1.8/rexml/parsers/treeparser.rb:85:in `parse'", "/usr/local/lib/ruby/1.8/rexml/document.rb:178:in `build'", "/usr/local/lib/ruby/1.8/rexml/document.rb:45:in `initialize'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:950:in `parse'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:163:in `xml_in'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:202:in `xml_in'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_ext/cgi_methods.rb:67:in `parse_formatted_request_parameters'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_process.rb:68:in `request_parameters'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/request.rb:12:in `parameters'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:122:in `set_session_options_without_components'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/components.rb:178:in `set_session_options'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:116:in `process'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'", "/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'", "/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'", "/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'", "/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'", "/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'", "/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'", "/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'", "/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59", "/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'", "/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30", "/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'", "script/server:3"]}
+
+
+RuntimeError ({"format"=>#<Mime::Type:0x150ac20 @synonyms=["text/xml", "application/x-xml"], @symbol=:xml, @string="application/xml">, "exception"=>"#<RuntimeError: attempted adding second root element to document>\n/usr/local/lib/ruby/1.8/rexml/document.rb:81:in `<<'\n/usr/local/lib/ruby/1.8/rexml/element.rb:916:in `add'\n/usr/local/lib/ruby/1.8/rexml/child.rb:21:in `initialize'\n/usr/local/lib/ruby/1.8/rexml/parent.rb:13:in `initialize'\n/usr/local/lib/ruby/1.8/rexml/element.rb:59:in `initialize'\n/usr/local/lib/ruby/1.8/rexml/element.rb:914:in `add'\n/usr/local/lib/ruby/1.8/rexml/element.rb:297:in `add_element'\n/usr/local/lib/ruby/1.8/rexml/document.rb:88:in `add_element'\n/usr/local/lib/ruby/1.8/rexml/parsers/treeparser.rb:28:in `parse'\n/usr/local/lib/ruby/1.8/rexml/document.rb:178:in `build'\n/usr/local/lib/ruby/1.8/rexml/document.rb:45:in `initialize'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:950:in `parse'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:163:in `xml_in'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:202:in `xml_in'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_ext/cgi_methods.rb:67:in `parse_formatted_request_parameters'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_process.rb:68:in `request_parameters'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/request.rb:12:in `parameters'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:122:in `set_session_options_without_components'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/components.rb:178:in `set_session_options'\n/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:116:in `process'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'\n/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'\n/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'\n/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'\n/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'\n/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'\n/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'\n/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'\n/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59\n/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'\n/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'\n/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30\n/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'\nscript/server:3\n...\nattempted adding second root element to document\nLine: \nPosition: \nLast 80 unconsumed characters:\n<name>Blah Foo</name><phone>501-555-2222</phone></contact> (REXML::ParseException)", "action"=>"create", "controller"=>"contacts", "raw_post_data"=>"<contact><name>Kurt Weill</name><phone>501-555-2222</phone></contact><contact><name>Blah Foo</name><phone>501-555-2222</phone></contact>", "backtrace"=>["/usr/local/lib/ruby/1.8/rexml/parsers/treeparser.rb:85:in `parse'", "/usr/local/lib/ruby/1.8/rexml/document.rb:178:in `build'", "/usr/local/lib/ruby/1.8/rexml/document.rb:45:in `initialize'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:950:in `parse'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:163:in `xml_in'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/vendor/xml_simple.rb:202:in `xml_in'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_ext/cgi_methods.rb:67:in `parse_formatted_request_parameters'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/cgi_process.rb:68:in `request_parameters'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/request.rb:12:in `parameters'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:122:in `set_session_options_without_components'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/components.rb:178:in `set_session_options'", "/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:116:in `process'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'", "/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'", "/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'", "/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'", "/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'", "/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'", "/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'", "/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'", "/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59", "/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'", "/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'", "/usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30", "/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'", "script/server:3"]}):
+    /app/controllers/contacts_controller.rb:25:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:23:41) [POST]
+  Session ID: 4d872f7e329b3173ec79a048e76c46b1
+  Parameters: {"c"=>{"contact"=>[{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, {"name"=>"Blah Foo", "phone"=>"501-555-2222"}]}, "action"=>"create", "controller"=>"contacts"}
+
+
+RuntimeError ({"c"=>{"contact"=>[{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, {"name"=>"Blah Foo", "phone"=>"501-555-2222"}]}, "action"=>"create", "controller"=>"contacts"}):
+    /app/controllers/contacts_controller.rb:25:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:25:54) [POST]
+  Session ID: 5a05c0ebe85eb7e8f38ce58230c22ed4
+  Parameters: {"c"=>{"contact"=>[{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, {"name"=>"Blah Foo", "phone"=>"501-555-2222"}]}, "action"=>"create", "controller"=>"contacts"}
+
+
+RuntimeError ({"c"=>{"contact"=>[{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, {"name"=>"Blah Foo", "phone"=>"501-555-2222"}]}, "action"=>"create", "controller"=>"contacts"}):
+    /app/controllers/contacts_controller.rb:25:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:26:06) [POST]
+  Session ID: 78c5ee879c10e2e523ef409848329ee6
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+
+
+RuntimeError ({"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}):
+    /app/controllers/contacts_controller.rb:25:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:53:49) [POST]
+  Session ID: e214f7f2129a2f5f653fa7d1fcfb614d
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.001145)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000195)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000348)[0m   [0;1mINSERT INTO contacts (`name`, `phone`) VALUES('Kurt Weill', '501-555-2222')[0m
+  [4;35;1mSQL (0.000667)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.03964 (25 reqs/sec) | DB: 0.00235 (5%) | 302 Found [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:53:49) [GET]
+  Session ID: e52200daf8871094f41d5b417019a645
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000912)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000481)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000723)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00834 (119 reqs/sec) | Rendering: 0.00318 (38%) | DB: 0.00212 (25%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:54:01) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000992)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000559)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000673)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00855 (117 reqs/sec) | Rendering: 0.00327 (38%) | DB: 0.00222 (26%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:57:06) [POST]
+  Session ID: 07bb2d6a58d83786a886065e196d000a
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000850)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Rendering nothing within layouts/contacts
+
+
+NoMethodError (private method `sub' called for :nothing:Symbol):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:371:in `path_and_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:343:in `file_exists?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:986:in `template_exists?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:998:in `assert_existence_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:695:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:619:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /app/controllers/contacts_controller.rb:45:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:149:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:143:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:100:in `respond_to'
+    /app/controllers/contacts_controller.rb:38:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:57:34) [POST]
+  Session ID: 117186235a158904d13b890c2a8bbfff
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000916)[0m   [0mSHOW FIELDS FROM contacts[0m
+
+
+RuntimeError (WANTS XML):
+    /app/controllers/contacts_controller.rb:44:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:149:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:143:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:100:in `respond_to'
+    /app/controllers/contacts_controller.rb:38:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:57:49) [POST]
+  Session ID: 19951ff837dd990462880a8254e743cb
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000921)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+
+
+RuntimeError (WANTS XML):
+    /app/controllers/contacts_controller.rb:44:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:149:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:143:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:100:in `respond_to'
+    /app/controllers/contacts_controller.rb:38:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:57:57) [POST]
+  Session ID: 5c6fe36c3473443646108f693c09d6b5
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000933)[0m   [0mSHOW FIELDS FROM contacts[0m
+Rendering nothing within layouts/contacts
+
+
+NoMethodError (private method `sub' called for :nothing:Symbol):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:371:in `path_and_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_view/base.rb:343:in `file_exists?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:986:in `template_exists?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:998:in `assert_existence_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:695:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:619:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/layout.rb:243:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:53:in `render'
+    /app/controllers/contacts_controller.rb:45:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:149:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:143:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/mime_responds.rb:100:in `respond_to'
+    /app/controllers/contacts_controller.rb:38:in `create'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:908:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:355:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/base.rb:379:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/filters.rb:364:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.0/lib/active_support/dependencies.rb:136:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.0/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.0/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:58:18) [POST]
+  Session ID: ac02b3ea4162a6509ddcc810cdd4ce92
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.001011)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00529 (189 reqs/sec) | Rendering: 0.00006 (1%) | DB: 0.00101 (19%) | 201 Created [http://localhost/contacts/create]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:59:09) [POST]
+  Session ID: c69d921e5bd2fa2346823619f8e876fd
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000915)[0m   [0mSHOW FIELDS FROM contacts[0m
+Completed in 0.03655 (27 reqs/sec) | Rendering: 0.00005 (0%) | DB: 0.00091 (2%) | 201 Created [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:59:16) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000916)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000482)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000726)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00828 (120 reqs/sec) | Rendering: 0.00332 (40%) | DB: 0.00212 (25%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:59:17) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000950)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000494)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000728)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00826 (121 reqs/sec) | Rendering: 0.00321 (38%) | DB: 0.00217 (26%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#destroy (for 127.0.0.1 at 2006-04-05 06:59:20) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"destroy", "id"=>"7", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000747)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '7') LIMIT 1[0m
+  [4;35;1mSQL (0.000186)[0m   [0mBEGIN[0m
+  [4;36;1mContact Columns (0.000913)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mContact Destroy (0.000338)[0m   [0m DELETE FROM contacts
+ WHERE id = 7
+[0m
+  [4;36;1mSQL (0.000994)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.00676 (147 reqs/sec) | DB: 0.00318 (47%) | 302 Found [http://localhost/contacts/destroy/7]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:59:20) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000790)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000455)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000712)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00782 (127 reqs/sec) | Rendering: 0.00306 (39%) | DB: 0.00196 (25%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#destroy (for 127.0.0.1 at 2006-04-05 06:59:22) [POST]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"destroy", "id"=>"5", "controller"=>"contacts"}
+  [4;36;1mContact Load (0.000727)[0m   [0;1mSELECT * FROM contacts WHERE (contacts.id = '5') LIMIT 1[0m
+  [4;35;1mSQL (0.000199)[0m   [0mBEGIN[0m
+  [4;36;1mContact Columns (0.000918)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mContact Destroy (0.000336)[0m   [0m DELETE FROM contacts
+ WHERE id = 5
+[0m
+  [4;36;1mSQL (0.000977)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:2009/contacts/list
+Completed in 0.00636 (157 reqs/sec) | DB: 0.00316 (49%) | 302 Found [http://localhost/contacts/destroy/5]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:59:22) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000940)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000502)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000697)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00717 (139 reqs/sec) | Rendering: 0.00201 (28%) | DB: 0.00214 (29%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:59:24) [POST]
+  Session ID: 015d79c3a31a39c3e68bb6e73f8f40aa
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000943)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+Completed in 0.00418 (238 reqs/sec) | Rendering: 0.00005 (1%) | DB: 0.00094 (22%) | 201 Created [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:59:25) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000911)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000507)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000659)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00665 (150 reqs/sec) | Rendering: 0.00201 (30%) | DB: 0.00208 (31%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:59:26) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;36;1mContact Columns (0.000909)[0m   [0;1mSHOW FIELDS FROM contacts[0m
+  [4;35;1mSQL (0.000484)[0m   [0mSELECT count(*) AS count_all FROM contacts [0m
+  [4;36;1mContact Load (0.000638)[0m   [0;1mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00693 (144 reqs/sec) | Rendering: 0.00208 (29%) | DB: 0.00203 (29%) | 200 OK [http://localhost/contacts/list]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2006-04-05 06:59:44) [POST]
+  Session ID: 4855a18c0b91649588638dae10c8d839
+  Parameters: {"contact"=>{"name"=>"Kurt Weill", "phone"=>"501-555-2222"}, "action"=>"create", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.001028)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000427)[0m   [0mINSERT INTO contacts (`name`, `phone`) VALUES('Kurt Weill', '501-555-2222')[0m
+  [4;36;1mSQL (0.000720)[0m   [0;1mCOMMIT[0m
+Completed in 0.00740 (135 reqs/sec) | Rendering: 0.00006 (0%) | DB: 0.00239 (32%) | 201 Created [http://localhost/contacts/create]
+
+
+Processing ContactsController#list (for 127.0.0.1 at 2006-04-05 06:59:45) [GET]
+  Session ID: 5104b832a3112a646d20e0879d12d07a
+  Parameters: {"action"=>"list", "controller"=>"contacts"}
+  [4;35;1mContact Columns (0.000953)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mSQL (0.000481)[0m   [0;1mSELECT count(*) AS count_all FROM contacts [0m
+  [4;35;1mContact Load (0.000631)[0m   [0mSELECT * FROM contacts LIMIT 0, 10[0m
+Rendering  within layouts/contacts
+Rendering contacts/list
+Completed in 0.00769 (130 reqs/sec) | Rendering: 0.00278 (36%) | DB: 0.00207 (26%) | 200 OK [http://localhost/contacts/list]
+  [4;36;1mContact Load (0.000876)[0m   [0;1mSELECT * FROM contacts [0m
+  [4;35;1mContact Columns (0.000884)[0m   [0mSHOW FIELDS FROM contacts[0m
+  [4;36;1mContact Load (0.000695)[0m   [0;1mSELECT * FROM contacts [0m

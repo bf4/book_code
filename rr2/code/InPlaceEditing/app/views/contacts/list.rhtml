@@ -1,0 +1,35 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<h1>Listing contacts</h1>
+
+<table>
+  <tr>
+  <% for column in Contact.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for contact in @contacts %>
+  <tr>
+  <% for column in Contact.content_columns %>
+    <td><%=h contact.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => contact %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => contact %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => contact }, :confirm => 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @contact_pages.current.previous } if @contact_pages.current.previous %>
+<%= link_to 'Next page', { :page => @contact_pages.current.next } if @contact_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New contact', :action => 'new' %>

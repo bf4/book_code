@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  recipe_id: 1
+  name: MyString
+  unit: MyString
+  amount: 9.99
+
+two:
+  recipe_id: 1
+  name: MyString
+  unit: MyString
+  amount: 9.99

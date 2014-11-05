@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: InPlaceEditing_development
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql
+  database: InPlaceEditing_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql
+  database: InPlaceEditing_production
+  username: root
+  password: 
+  socket: /tmp/mysql.sock

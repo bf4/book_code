@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+author:
+  id: 1
+  email: wbruce@gmail.com
+  password: <%= User.password_hash "password" %>
+  locale: ar-LB

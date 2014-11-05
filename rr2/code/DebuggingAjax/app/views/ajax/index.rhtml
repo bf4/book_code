@@ -1,0 +1,33 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<html>
+  <head>
+    <%= javascript_include_tag :defaults %>
+<%
+   <% if ActionView::Base.debug_rjs %>
+    <script type="text/javascript">
+      Ajax.Responders.register({
+        onComplete: function(request, transport) {
+          new Insertion.Bottom('debug',
+            '<div style="border: 1px solid">' + 
+               transport.responseText.escapeHTML() + 
+            '</div>')
+        }
+     });
+    </script>
+    <% end %>
+<%
+  </head>
+  <body>
+    <div id="debug"></div>
+    <div id="time"></div>
+    <%= link_to_remote "Broken", :url=>{:action => 'broken'} %>
+    <%= link_to_remote "Works", :url=>{:action => 'works'} %>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<html>
+  <head>
+      <%= javascript_include_tag :defaults %>
+  </head>                                    
+  <%= form_tag_with_upload_progress({ :action => 'save' }) %>
+    <label for="message_subject">Subject:</label>
+    <%= text_field :message, :subject %><br />
+    <label for="message_body">Body:</label>    
+    <%= text_area :message, :body %><br />
+    <label for="attachment">Attachment:</label>        
+    <%= file_field_tag :attachment %>
+    <%= submit_tag "Send" %>
+    <%= upload_status_tag %>
+  <%= end_form_tag %>  
+</html>

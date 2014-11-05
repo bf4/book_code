@@ -1,0 +1,39 @@
+/app/controllers/reminders_controller.rb:12
+@reminders = Reminder.all.select do |reminder|
+(rdb:1) p params
+{"action"=>"index", "controller"=>"reminders"}
+(rdb:1) n
+/app/controllers/reminders_controller.rb:13
+reminder.expired?
+(rdb:1) list
+[8, 17] in /app/controllers/reminders_controller.rb
+   8
+   9
+   10    def index
+   11      require 'ruby-debug';debugger
+   12      @reminders = Reminder.all.select do |reminder|
+=> 13        reminder.expired?
+   14      end
+   15    end
+   16
+   17
+(rdb:1) p reminder
+#<Reminder id: 1,
+           title: "Give the dog his medicine",
+           starts_on: "2011-11-28",
+           expires_on: "2011-11-30",
+           created_at: "2011-11-27 15:00:31",
+           updated_at: "2011-11-27 15:00:31">
+(rdb:1) n
+/app/controllers/reminders_controller.rb:13
+reminder.expired?
+(rdb:1) p reminder
+#<Reminder id: 2,
+           title: "Walk the dogs",
+           starts_on: "2011-11-27",
+           expires_on: "2012-04-15",
+           created_at: "2011-11-27 15:00:31",
+           updated_at: "2011-11-27 15:00:31">
+(rdb:1)
+
+

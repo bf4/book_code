@@ -1,0 +1,28 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<li class="contact-item">
+<% form_id = "tag-form-for-#{detail.id}" %>
+<%= form_remote_tag :url => {:action => "tag", :id => detail}, 
+                    :complete => "Element.toggle($('#{form_id}'))",
+                    :success => visual_effect(:shake, "contact-#{detail.id}"),
+                    :update => "contact-#{detail.id}",
+                    :html => {:id => form_id, :style => "display:none"} %>
+
+  <%= text_field_tag "tag_list", 
+                     detail.tags.collect{|t| t.name}.join(" "), 
+                     :size => 40 %>
+
+  <%= hidden_field_tag "form_id", form_id %>
+  <%= submit_tag "save" %>
+<%= end_form_tag %>
+<div id="contact-<%=detail.id%>" class="contact-details">
+<%= render :partial => "content", 
+           :locals => {:contact => detail, :form_id => form_id} %>
+</div>
+</li>

@@ -1,0 +1,17 @@
+common: &common
+  adapter: mysql
+  username: root
+  password:
+
+
+production:
+  <<: *common
+  database: globalize_prod
+
+development:
+  <<: *common
+  database: globalize_dev
+
+test:
+  <<: *common
+  database: globalize_test

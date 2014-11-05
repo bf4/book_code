@@ -1,0 +1,26 @@
+development:
+  adapter: mysql2
+  database: wordpress
+  username: root
+  password:
+  host: localhost
+
+test:
+  adapter: mysql2
+  database: LegacyDatabases_test
+  username: root
+  password:
+  host: localhost
+
+production:
+  adapter: mysql2
+  database: LegacyDatabases_production
+  username: root
+  password: 
+  host: localhost
+products:
+  adapter: mysql2
+  database: products
+  username: root
+  password:
+  host: localhost

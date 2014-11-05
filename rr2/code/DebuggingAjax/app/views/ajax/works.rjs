@@ -1,0 +1,1 @@
+page.replace_html 'time', Time.now.to_s

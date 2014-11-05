@@ -1,0 +1,35 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<h1>Listing people</h1>
+
+<table>
+  <tr>
+  <% for column in Person.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for person in @people %>
+  <tr>
+  <% for column in Person.content_columns %>
+    <td><%=h person.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => person %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => person %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => person }, :confirm => 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @person_pages.current.previous } if @person_pages.current.previous %>
+<%= link_to 'Next page', { :page => @person_pages.current.next } if @person_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New person', :action => 'new' %>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleAuth</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<p style='color:green'><%= flash[:notice]%></p>
+<%= link_to "logout", session_path, :method => :delete%>
+<%= yield %>
+
+</body>
+</html>

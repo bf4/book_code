@@ -1,0 +1,73 @@
+#START:headers
+Return-Path: <MAILER-DAEMON@ns1.chadfowler.com>
+Received: from localhost (localhost)
+	by ns1.chadfowler.com (8.12.10/8.12.10) id k25GHX28007404;
+	Sun, 5 Mar 2006 11:17:33 -0500
+Date: Sun, 5 Mar 2006 11:17:33 -0500
+From: Mail Delivery Subsystem <MAILER-DAEMON@ns1.chadfowler.com>
+Message-Id: <200603051617.k25GHX28007404@ns1.chadfowler.com>
+To: <Chad@chadfowler.com>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="k25GHX28007404.1141575453/ns1.chadfowler.com"
+Subject: Returned mail: see transcript for details
+Auto-Submitted: auto-generated (failure)
+#END:headers
+
+This is a MIME-encapsulated message
+#START:human_readable
+--k25GHX28007404.1141575453/ns1.chadfowler.com
+
+The original message was received at Sun, 5 Mar 2006 11:17:22 -0500
+from c-67-190-70-79.hsd1.co.comcast.net [67.190.70.79]
+
+   ----- The following addresses had permanent fatal errors -----
+<randomaddress@pragprog.com>
+    (reason: 550 <randomaddress@pragprog.com>: Recipient address rejected:
+        User unknown in local recipient table)
+
+   ----- Transcript of session follows -----
+... while talking to mail.pragprog.com.:
+>>> DATA
+<<< 550 <randomaddress@pragprog.com>: Recipient address rejected: 
+        User unknown in local recipient table
+550 5.1.1 <randomaddress@pragprog.com>... User unknown
+<<< 554 Error: no valid recipients
+#END:human_readable
+#START:delivery_status
+--k25GHX28007404.1141575453/ns1.chadfowler.com
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; ns1.chadfowler.com
+Received-From-MTA: DNS; c-67-190-70-79.hsd1.co.comcast.net
+Arrival-Date: Sun, 5 Mar 2006 11:17:22 -0500
+
+Final-Recipient: RFC822; randomaddress@pragprog.com
+Action: failed
+Status: 5.1.1
+Remote-MTA: DNS; mail.pragprog.com
+Diagnostic-Code: SMTP; 550 <randomaddress@pragprog.com>: 
+     Recipient address rejected: User unknown in local recipient table
+Last-Attempt-Date: Sun, 5 Mar 2006 11:17:33 -0500
+#END:delivery_status
+#START:original_message
+--k25GHX28007404.1141575453/ns1.chadfowler.com
+Content-Type: message/rfc822
+
+Return-Path: <Chad@chadfowler.com>
+Received: from [192.168.0.107] (xyz.comcast.net [67.190.70.79])
+	by ns1.chadfowler.com (8.12.10/8.12.10) with ESMTP id k25GH628007376
+	for <randomaddress@pragprog.com>; Sun, 5 Mar 2006 11:17:22 -0500
+Content-Transfer-Encoding: 7bit
+Message-Id: <6624C411-80B4-40AD-AF6D-DFA5878A1A3C@chadfowler.com>
+Content-Type: text/plain; charset=US-ASCII; format=flowed
+To: randomaddress@pragprog.com
+From: Chad Fowler <Chad@chadfowler.com>
+Subject: You will never get this...
+Date: Sun, 5 Mar 2006 09:16:52 -0700
+X-Mailer: Apple Mail (2.746.2)
+
+...because you don't exist.
+
+--k25GHX28007404.1141575453/ns1.chadfowler.com--
+#END:original_message

@@ -1,0 +1,23 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+  <div class="name"><%= contact.name %> 
+    <%= 
+       if contact.tags.blank?
+         ""
+       else
+         "(" + contact.tags.collect{|tag| tag.name}.join(", ") + ")"
+       end
+    %>
+    <%= link_to_function("Edit Tags", "Element.toggle($('#{form_id}'))") %>
+  </div>
+  <div class="address">
+    <%= contact.address_line1 %><br/>
+    <%= contact.address_line2 %><br/>
+    <%= contact.city %>, <%= contact.state %>  <%= contact.postal_code %>
+  </div>

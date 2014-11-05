@@ -1,0 +1,38 @@
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<h4>Method Invocation Result for <em><%= @scaffold_service %>#<%= @scaffold_method.public_name %></em></h4>
+
+<p>
+Invocation took <tt><%= '%f' % @method_elapsed %></tt> seconds
+</p>
+
+<p>
+<strong>Return Value:</strong><br />
+<pre>
+<%= h @method_return_value.inspect %>
+</pre>
+</p>
+
+<p>
+<strong>Request XML:</strong><br />
+<pre>
+<%= h @method_request_xml %>
+</pre>
+</p>
+
+<p>
+<strong>Response XML:</strong><br />
+<pre>
+<%= h @method_response_xml %>
+</pre>
+</p>
+
+<p>
+<%= link_to "Back", :action => @scaffold_action_name + '_method_params', :method => @scaffold_method.public_name, :service => @scaffold_service.name %>
+</p>

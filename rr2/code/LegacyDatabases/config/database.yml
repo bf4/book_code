@@ -1,0 +1,26 @@
+development:
+  adapter: mysql
+  database: wordpress
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql
+  database: LegacyDatabases_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql
+  database: LegacyDatabases_production
+  username: root
+  password: 
+  socket: /tmp/mysql.sock
+products:
+  adapter: mysql
+  database: products
+  username: root
+  password:
+

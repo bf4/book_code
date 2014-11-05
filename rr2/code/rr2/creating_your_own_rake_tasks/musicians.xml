@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Rails Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rr2 for more book information.
+-->
+<lines>
+  <line>
+    <column>Albert</column>
+    <column>Ayler</column>
+    <column>Saxophone</column>
+  </line>
+  <line>
+    <column>Dave</column>
+    <column>Douglas</column>
+    <column>Trumpet</column>
+  </line>
+  <line>
+    <column>Bill</column>
+    <column>Frisell</column>
+    <column>Guitar</column>
+  </line>
+  <line>
+    <column>Matthew</column>
+    <column>Shipp</column>
+    <column>Piano</column>
+  </line>
+  <line>
+    <column>Rashid</column>
+    <column>Ali</column>
+    <column>Drums</column>
+  </line>
+  <line>
+    <column>William</column>
+    <column>Parker</column>
+    <column>Bass</column>
+  </line>
+</lines>

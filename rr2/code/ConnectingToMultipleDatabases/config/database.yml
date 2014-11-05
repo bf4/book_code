@@ -1,0 +1,13 @@
+development:
+  adapter: mysql
+  database: myrailsdatabase_development
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+products:
+  adapter: mysql
+  database: products
+  username: root
+  password:
+  socket: /tmp/mysql.sock

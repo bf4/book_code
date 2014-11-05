@@ -1,0 +1,2 @@
+page.replace_html 'dialog', :partial => '/shared/dialog'
+flash[:notice] = flash[:error] = nil # clear flash

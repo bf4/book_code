@@ -1,0 +1,7 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+jim:
+  id: 1
+bob:
+  id: 2
+stacey:
+  id: 3

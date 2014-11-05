@@ -1,0 +1,20 @@
+defaults: &defaults
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  socket: /tmp/mysql.sock
+  pool: 5
+  username: root
+  password: secret
+  
+development:
+  database: dry_db_development
+  <<: *defaults
+  
+test:
+  database: dry_db_test
+  <<: *defaults
+  
+production:
+  database: dry_db_production
+  <<: *defaults
