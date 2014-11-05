@@ -1,0 +1,44 @@
+<smil>
+<head>
+  <meta name="title" content="John and Mary" />
+  <layout>
+    <root-layout background-color="black" 
+                 height="300" width="320" />
+    <region id="video" background-color="black" 
+            top="0"   left="0" height="240" width="320" />
+    <region id="text" background-color="black" 
+            top="240" left="0" height="60"  width="320" />
+  </layout>
+</head>
+<body>
+  <par>
+    <!-- Video Track -->
+    <video src="JohnAndMaryVideo.m4v" region="video" />
+    <!-- Audio Tracks ->
+    <switch>
+      <audio src="JohnAndMaryAudio_ENUS.mp3" 
+             system-language="en" />
+      <audio src="JohnAndMaryAudio_ES.mp3" 
+             system-language="es" />
+    </switch>
+    <!-- Auditory Descriptions -->
+    <switch>
+      <audio src="JohnAndMaryAD_ENUS.mp3" 
+             system-language="en" />
+      <audio src="JohnAndMaryAD_ES.mp3" 
+             system-language="es" />
+    </switch>
+    <!-- Captions -->
+    <switch>
+      <textstream src="JohnAndMaryENUS.txt" 
+                  region="textregion" 
+                  system-captions="on" 
+                  system-language="en" />
+      <textstream src="JohnAndMaryES.txt" 
+                  region="textregion" 
+                  system-captions="on" 
+                  system-language="es" />
+    </switch>
+  </par>
+</body>
+</smil>

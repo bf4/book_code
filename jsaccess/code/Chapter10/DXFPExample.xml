@@ -1,0 +1,57 @@
+<!--
+ ! Excerpted from "Design Accessible Web Sites",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jsaccess for more book information.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<tt xmlns     = "http://www.w3.org/2006/04/ttaf1"
+    xmlns:tts = "http://www.w3.org/2006/04/ttaf1#styling" 
+    xml:lang  = "en">
+<head>
+  <styling>
+    <style id="defaultCaption" 
+           tts:fontSize        = "12"      
+           tts:fontFamily      = "SansSerif" 
+           tts:fontWeight      = "normal" 
+           tts:fontStyle       = "normal" 
+           tts:textDecoration  = "none" 
+           tts:color           = "white" 
+           tts:backgroundColor = "black" 
+           tts:textAlign       = "left" />
+    </styling>
+  </head>
+<body style="defaultCaption" id="thebody">
+  <div xml:lang="en">
+    <p begin="0:15:36.00" end="0:15:39.00">
+      <span tts:fontStyle="italic">John</span><br/>
+      Don't worry, I'll be there soon.</p>
+    <p begin="0:15:42.00" end="0:15:44.00">
+      <span tts:fontStyle="italic">Mary</span><br/>
+      You worry too much.</p>
+    <p begin="0:15:45.00" end="0:15:46.50">
+      Everything's Fine!</p>
+    <p begin="0:15:47.00" end="0:15:48.50">
+      <span tts:fontStyle="italic">[Glass breaking 
+                                    over the phone]</span></p>
+    <p begin="0:15:49.00" end="0:15:51.00">
+      <span tts:fontStyle="italic">[Gunshot]</span></p>
+    <p begin="0:15:55.00" end="0:15:57.00">
+      <span tts:fontStyle="italic">Mary</span><br/>
+      John?</p>
+    <p begin="0:15:58.00" end="0:16:00.00">
+      <span tts:fontStyle="italic">[Loudly]</span>
+      John?</p>
+    <p begin="0:16:01.00" end="0:16:03.50">
+      <span tts:fontStyle="italic">[Screaming]</span>
+      John!</p>
+    <p begin="0:16:04.00" end="0:16:06.50">♪Suspenseful Music♪</p>
+    <p begin="0:16:07.00" end="0:16:09.00">
+      <span tts:fontStyle="italic" >Voice</span><br/>
+      <span tts:fontStyle="italic" >[Snidely]</span>Hello Mary...</p>
+    <p begin="0:16:12.00" end="0:55:28.16"></p>
+  </div>
+</body>
+</tt>

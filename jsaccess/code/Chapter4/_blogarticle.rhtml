@@ -1,0 +1,24 @@
+<!--
+ ! Excerpted from "Design Accessible Web Sites",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jsaccess for more book information.
+-->
+<div class="article">
+  <h2 class="articleHeading">
+    <%= link_to(article.title, 
+                :controller => 'blogarticles', 
+                :action => 'show', 
+                :id => blogarticle.id)%>
+  </h2>
+  <p class="articleByline">
+    <%= article.author.name %>
+  </p>
+  <p class="articleDateline">
+    <%= article.created_at.strftime("%A, %B %e, %Y at %l:%M %p") %>
+  </p>
+  <p class="articleCategory"><%= article.category.name %></p>
+  <%= article.formatted_content %>
+</div>

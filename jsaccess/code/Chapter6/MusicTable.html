@@ -1,0 +1,239 @@
+<!--
+ ! Excerpted from "Design Accessible Web Sites",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jsaccess for more book information.
+-->
+<html>
+<head>
+  <title>Music Collection</title>
+</head>
+<body>
+  
+  <h1>My Music</h1>
+  <table>
+    <tr>
+      <td>Artist</td>
+      <td>Album</td>
+      <td>Compact Disc</td>
+      <td>MP3</td>
+    </tr>
+    <tr>
+      <td>Magnetic Fields</td>
+      <td>69 Love Songs</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>	
+    <tr>
+      <td>U2</td>
+      <td>Zooropa</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>	
+  </table>
+  
+  <h1>Using Headings</h1>
+  
+  <table>
+	
+    <thead>
+      <tr>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Compact Disc</th>
+        <th>MP3</th>
+      </tr>
+    </thead>
+    
+    
+    <tfoot>
+      <tr>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Compact Disc</th>
+        <th>MP3</th>
+      </tr>
+    </tfoot>
+    
+    
+    <tbody>
+      <tr>
+        <td>Magnetic Fields</td>
+        <td>69 Love Songs</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>	
+      <tr>
+        <td>U2</td>
+        <td>Zooropa</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+	
+  </table>
+  
+  <h1>Using Scopes</h1>
+  
+  
+  <table summary="Albums in John's Music Collection">
+    <caption>My Music</caption>
+  
+    <thead>
+      <tr>
+        <th scope='col'>Artist</th>
+        <th scope='col'>Album</th>
+        <th scope='col'>Compact Disc</th>
+        <th scope='col'>MP3</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Compact Disc</th>
+        <th>MP3</th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>Magnetic Fields</td>
+        <td>69 Love Songs</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>	
+      <tr>
+        <td>U2</td>
+        <td>Zooropa</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h1>Using Headers</h1>
+  
+  <table summary="Albums in John's Music Collection">
+    <caption>My Music</caption>
+    <thead>
+      <tr>
+        <th rowspan='2' id='c1'>Artist</th>
+        <th rowspan='2' id='c2'>Album</th>
+        <th colspan='2' id='c3' abbr='Format'>Media Format</th>
+      </tr>
+      <tr>
+        <th id='c31' abbr='CD'>Compact Disc</th>
+        <th id='c32'>MP3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td headers='c1'>Magnetic Fields</td>
+        <td headers='c2'>69 Love Songs</td>
+        <td headers='c31 c3'>Yes</td>
+        <td headers='c32 c3'>No</td>
+      </tr>
+      <tr>
+        <td headers='c1'>U2</td>
+        <td headers='c2'>Zooropa</td>
+        <td headers='c31 c3'>Yes</td>
+        <td headers='c32 c3'>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h1>Using Axes</h1>
+  
+  <table summary="Albums in John's Music Collection">
+    <caption>My Music</caption>
+    <thead>
+      <tr>
+        <th id='artist' rowspan='2'>Artist</th>
+        <th id='album'  abbr='Title'  rowspan='2'>Album Title</th>
+        <th id='format' abbr='Format' colspan='2'>Media Format</th>
+      </tr>
+      <tr>
+        <th id='formatcd' abbr='CD'>Compact Disc</th>
+        <th id='formatmp3'>MP3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- The first album on the albums axis. This songs on this -->
+      <!-- album will be put on the 'album1' axis.                -->
+      <tr>
+        <td id='a1artist' headers='artist'>Magnetic Fields</td>
+        <td id='a1title'  headers='album' axis='albums' >69 Love Songs</td>
+        <td headers='formatcd format'>Yes</td>
+        <td headers='formatmp3 format'>No</td>
+      </tr>
+      <tr>
+        <th id='tracktitle' abbr='Title' colspan='3'>Song Title</th>
+        <th id='trackrating'>Rating</th>
+      </tr>
+      <!-- The First Song on the album1 axis -->
+      <tr>
+        <td id='a1t1title' axis='album1' 
+            headers='a1artist a1title tracktitle' 
+            colspan='3'>
+          Absolutely Cuckoo
+        </td>
+        <td headers='a1t1title trackrating'>
+          <abbr title='Four Stars'>****</abbr>
+        </td>
+      </tr>
+      <!-- The Second Song on the album1 axis -->
+      <tr>
+        <td id='a1t2title' axis='album1' 
+            headers='a1artist a1title tracktitle' 
+            colspan='3'>
+          I Don't Believe In The Sun
+        </td>
+        <td headers='a1t2title trackrating'>
+          <abbr title='Four Stars'>****</abbr>
+        </td>
+      </tr>
+      <!--                                                         -->
+      <!-- 67 more songs in the first album on the album1 axis.    -->
+      <!--                                                         -->
+
+      <!-- The second album on the albums axis. This songs on this -->
+      <!-- album will be put on the 'album2' axis.                 -->
+      <tr>
+        <td id='a2artist' headers='artist'>U2</td>
+        <td id='a2title'  headers='album' axis='albums'>Zooropa</td>
+        <td headers='formatcd format'>Yes</td>
+        <td headers='formatmp3 format'>Yes</td>
+      </tr>
+      <tr>
+        <th abbr='title' colspan='3'>Song Title</th>
+        <th>Rating</th>
+      </tr>
+      <!-- The first song on the album2 axis -->
+      <tr>
+        <td id='a2t1title' axis='album2' 
+            headers='a2artist a2title tracktitle' 
+            colspan='3'>
+          Zooropa
+        </td>
+        <td headers='a2t1title trackrating'>
+          <abbr title='Five Stars'>*****</abbr>
+        </td>
+      </tr>
+      <!-- The second song on the album2 axis -->
+      <tr>
+        <td id='a2t2title' axis='album2' 
+            headers='a2artist a2title tracktitle' 
+            colspan='3'>
+          Babyface
+        </td>
+        <td headers='a2t1title trackrating'>
+          <abbr title='Two Stars'>**</abbr>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</body>
+</html>

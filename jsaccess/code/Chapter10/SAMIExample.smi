@@ -1,0 +1,62 @@
+<sami>
+<head>
+  <title>Title Goes Here</title>
+  <style type="text/css"><!--
+    P {text-align: center; 
+       font-family: sans-serif; 
+       font-size: 1.5em;}
+    .ENUSCC   {Name: English; lang: en-US;}
+    .ESCC     {Name: Español; lang: es;}
+  --></style>
+</head>
+<body>
+  <sync start=0>
+    <p class='ENUSCC'>&nbsp;</p>
+    <p class='ESCC'>&nbsp;</p>
+  </sync>
+  <sync start='936000'>
+    <p class='ENUSCC'>John: Don't worry, I'll be there soon.</p>
+    <p class='ESCC'>John: No preocuparte, yo estará allí pronto.</p>
+  </sync>
+  <sync start='942000'>
+    <p class='ENUSCC'>Mary: You worry too much.</p>
+    <p class='ESCC'>Mary: Te preocupas demasiado.</p>
+  </sync>
+  <sync start='945000'>
+    <p class='ENUSCC'>Everything's Fine!</p>
+    <p class='ESCC'>&iexcl;Todo muy bien!</p>
+  </sync>
+  <sync start='947000'>
+    <p class='ENUSCC'><i>[glass breaking over the phone]</i></p>
+    <p class='ESCC'><i>[cristal que se rompe sobre el teléfono]</i></p>
+  </sync>
+  <sync start='949000'>
+    <p class='ENUSCC'><i>[gunshot]</p>
+    <p class='ESCC'><i>[tiro]</i></p>
+  </sync>
+  <sync start='955000'>
+    <p class='ENUSCC'>Mary: John?</p>
+    <p class='ESCC'>Mary: &iquest;John?</p>
+  </sync>
+  <sync start='958000'>
+    <p class='ENUSCC'><i>[Loudly]</i>John?</p>
+    <p class='ESCC'><i>[en alta voz]</i>&iquest;John?</p>
+  </sync>
+  <sync start='961000'>
+    <p class='ENUSCC'><i>[Screaming]</i>John!</p>
+    <p class='ESCC'><i>[griterío]</i>&iexcl;John!</p>
+  </sync>
+  <sync start='964000'>
+    <p class='ENUSCC'><i>&#9834;Suspenseful Music&#9834;</i></p>
+    <p class='ESCC'><i>&#9834;Música Suspenseful&#9834;</i></p>
+  </sync>
+  <sync start='967000'>
+    <p class='ENUSCC'>Voice <i>[Snidely]</i>: Hello Mary...</p>
+    <p class='ESCC'>Voz <i>[Snidely]</i>: Hola Mary...</p>
+  </sync>
+  <sync start='972000'>
+    <p class='ENUSCC'>&nbsp;</p>
+    <p class='ESCC'>&nbsp;</p>
+  </sync>
+</body>
+</sami>

@@ -1,0 +1,16 @@
+{QTtext}
+{font: Helvetica}{justify: center}{size: 18}{backcolor:0, 0, 0}
+{timescale: 30}
+{width: 320}{height: 120}
+[00:15:36.00] {italic}John:{plain} Don't worry, I'll be there soon. 
+[00:15:42.00] {italic}Mary:{plain} You worry too much. 
+[00:15:45.00] Everything's Fine!
+[00:15:47.00] {italic}[glass breaking over the phone]{plain} 
+[00:15:49.00] {italic}[gunshot]{plain} 
+[00:15:55.00] {italic}Mary:{plain} John? 
+[00:15:58.00] {italic}[Loudly]{plain} John? 
+[00:16:01.00] {italic}[Screaming]{plain} John!
+[00:16:04.00] {italic}[Suspenseful Music]{plain} 
+[00:16:07.00] {italic}Voice [snidely]:{plain} Hello Mary... 
+[00:16:09.00] 
+[00:30:00.00]

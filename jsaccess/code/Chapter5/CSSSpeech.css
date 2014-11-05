@@ -1,0 +1,34 @@
+/* START:link */
+a {
+  voice-family: female;
+  cue: url(linksound.aiff);
+}
+/* END:link */
+/* START:abbracro */
+abbr {
+  content: attr(title);
+}
+
+acronym {
+  speak: spell-out;
+}
+/* END:abbracro */
+/* START:dialogue */
+.john {
+  voice-family:  male;
+  voice-channel: left;
+}
+
+.mary {
+  voice-family:  female;
+  voice-channel: right;
+}
+
+.roy{
+  voice-family: neutral;
+  voice-volume: soft;
+  voice-stress: moderate;
+  voice-pitch:  high;
+  voice-rate:   slow;
+}
+/* END:dialog */

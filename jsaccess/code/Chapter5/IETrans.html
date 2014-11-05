@@ -1,0 +1,35 @@
+<!--
+ ! Excerpted from "Design Accessible Web Sites",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jsaccess for more book information.
+-->
+<html>
+<head>
+  
+  <style>
+    div.transparent {
+      background: url(transparent.png) no-repeat;
+                  height: 100px; width: 100px;
+    }
+  </style>
+  <!-- Some Evil IE Voodoo -->
+  <!--[if gte IE 5]>
+  <style type='text/css'>
+    div.transparent {
+      background: none;
+      filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='transparent.png', sizingMethod='crop');
+    }
+  </style>
+  <![endif]-->
+  
+</head>
+<body>
+  
+  <div class='transparent'></div>
+  
+</body>
+</html>

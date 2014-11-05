@@ -1,0 +1,32 @@
+00:15:36.000,00:15:39.000
+John: Don't worry, I'll be there soon.
+
+00:15:42.000,00:15:44.000
+Mary: You worry too much.
+
+00:15:45.000,00:15:46.500
+Everything's Fine!
+
+00:15:47.000,00:15:48.500
+[glass breaking over the phone]
+
+00:15:49.000,00:15:51.000
+[gunshot]
+
+00:15:55.000,00:15:57.000
+Mary: John?
+
+00:15:58.000,00:16:00.000
+[Loudly] John?
+
+00:16:01.000,00:16:03.500
+[Screaming] John!
+
+00:16:04.000,00:16:06.500
+♪Suspenseful Music♪
+
+00:16:07.000,00:16:09.000
+Voice [Snidely]: Hello Mary...
+
+00:16:12.000
+
