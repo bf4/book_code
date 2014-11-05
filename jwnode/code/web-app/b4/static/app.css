@@ -1,0 +1,62 @@
+/**
+ * app.css - styles for the b4 web app.
+ */
+
+.container abbr {
+  cursor: inherit;
+  border-bottom: none;
+}
+.container abbr span {
+  display: none;
+}
+
+.alert-anchor {
+  position: relative;
+}
+.alert-danger {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.alert-danger .close {
+  margin-left: 1em;
+}
+
+.view {
+  display: none;
+  position: relative;
+}
+
+.bundle-name {
+  display: inline-block;
+  width: 200px;
+}
+.search {
+  width: 200px;
+}
+.find-book label {
+  width: 6em;
+}
+.bundle-books .add {
+  display: none;
+}
+.books-results .delete {
+  display: none;
+}
+
+.actions {
+  text-align: right;
+}
+
+.tt-hint {
+  display: none;
+}
+
+.logout {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.logout a {
+  font-size: small;
+}

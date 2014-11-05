@@ -1,0 +1,186 @@
+<!--
+ ! Excerpted from "Node.js the Right Way",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/jwnode for more book information.
+-->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>b4 - The Better Book Bundle Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet"
+        href="typeahead.js-bootstrap.css/typeahead.js-bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="container">
+  
+  <script id="list-bundles-template" type="text/x-handlebars-template">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Bundle Name</th>
+          <th class="actions">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each bundles}}  
+        <tr data-id="{{@key}}">
+          <td>{{this}}</td>
+          <td class="actions">
+            <button type="button" class="btn edit">
+              <abbr title="edit bundle" class="glyphicon glyphicon-pencil">
+                <span>edit bundle</span>
+              </abbr>
+            </button>
+            <button type="button" class="btn delete">
+              <abbr title="delete bundle" class="glyphicon glyphicon-trash">
+                <span>delete bundle</span>
+              </abbr>
+            </button>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </script>
+  
+  <script id="list-books-template" type="text/x-handlebars-template">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th class="actions">actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each books}}
+        <tr data-id="{{@key}}">
+          <td>{{@key}}</td>
+          <td><a href="http://www.gutenberg.org/ebooks/{{@key}}">{{this}}</a></td>
+          <td class="actions">
+            <button type="button" class="btn btn-primary add">
+              <abbr title="add book" class="glyphicon glyphicon-plus">
+                <span>add book</span>
+              </abbr>
+            </button>
+            <button type="button" class="btn delete">
+              <abbr title="remove book" class="glyphicon glyphicon-trash">
+                <span>remove book</span>
+              </abbr>
+            </button>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </script>
+  
+  <div class="alert-anchor">
+    <div class="alert alert-danger" style="display:none">
+      <button type="button" class="close" aria-hidden="true">&times;</button>
+      <strong>Error!</strong> <span class="message"></span>
+    </div>
+  </div>
+  
+  <h1>B4 - Book Bundler</h1>
+  
+  <p class="lead">Welcome to book bundler!</p>
+  
+  <div id="welcome-view" class="view">
+    
+    <p>
+      B4 is an application for creating book bundles—collections of free ebooks.
+    </p>
+    
+    <p>
+      <a class="btn btn-primary" href="/auth/google">Log in with Google</a>
+    </p>
+    
+  </div>
+  
+  <div id="list-bundles-view" class="view">
+    
+    <h2>Your Bundles</h2>
+    
+    <p class="logout"><a href="/auth/logout" title="log out">[ log out ]</a></p>
+    
+    <div class="bundles"></div>
+    
+    <h3>Create a New Bundle</h3>
+    
+    <form class="form-inline new-bundle-form" role="form">
+      <div class="form-group">
+        <label for="new-bundle-name">Bundle Name</label>
+        <input type="text" class="form-control bundle-name" id="new-bundle-name" placeholder="Bundle Name">
+        <button type="submit" class="btn btn-primary">
+          <abbr title="create a bundle" class="glyphicon glyphicon-plus">
+            <span>create a bundle</span>
+          </abbr>
+        </button>
+      </div>
+    </form>
+    
+  </div>
+  
+  <div id="edit-bundle-view" class="view">
+    
+    <h2>Edit Bundle - <span></span></h2>
+    
+    <p>
+      <a class="view-nav" href="#list-bundles">&larr; back to bundle list</a>
+    </p>
+    
+    <p>
+      Books in this bundle:
+    </p>
+    
+    <div class="bundle-books"></div>
+    
+    <hr />
+    
+    <h3>Add a Book</h3>
+    
+    <form class="form find-book by-subject" role="form">
+      <input type="hidden" name="field" value="subject">
+      <div class="form-group">
+        <label for="author-search">By Subject </label>
+        <input type="text" class="form-control search" id="subject-search">
+        <button type="submit" class="btn">
+          <abbr title="search by subject" class="glyphicon glyphicon-search">
+            <span>search by subject</span>
+          </abbr>
+        </button>
+      </div>
+    </form>
+    
+    <form class="form find-book by-author" role="form">
+      <input type="hidden" name="field" value="author">
+      <div class="form-group">
+        <label for="author-search">By Author </label>
+        <input type="text" class="form-control search" id="author-search">
+        <button type="submit" class="btn">
+          <abbr title="search by author" class="glyphicon glyphicon-search">
+            <span>search by author</span>
+          </abbr>
+        </button>
+      </div>
+    </form>
+    
+    <div class="books-results"></div>
+  
+  </div>
+  
+  <script src="jquery/jquery.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="typeahead.js/dist/typeahead.min.js"></script>
+  <script src="handlebars/handlebars.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
