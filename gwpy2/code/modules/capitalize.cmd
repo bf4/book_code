@@ -1,0 +1,2 @@
+>>> 'hogwarts'.capitalize()
+'Hogwarts'

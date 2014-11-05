@@ -1,0 +1,3 @@
+inception_file = open('inception.py', 'r')
+inception_contents = inception_file.read()
+print(inception_contents)

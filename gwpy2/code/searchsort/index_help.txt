@@ -1,0 +1,2 @@
+index(...)
+    L.index(value, [start, [stop]]) -> integer -- return first index of value

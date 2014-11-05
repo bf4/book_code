@@ -1,0 +1,2 @@
+>>> 'Albert' + ' Einstein'
+'Albert Einstein'

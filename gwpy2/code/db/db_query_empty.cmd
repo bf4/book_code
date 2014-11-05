@@ -1,0 +1,3 @@
+>>> cur.fetchone()
+>>> cur.fetchall()
+[]

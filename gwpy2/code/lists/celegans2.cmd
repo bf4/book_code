@@ -1,0 +1,5 @@
+>>> celegans_phenotypes = ['Emb', 'Him', 'Unc', 'Lon', 'Dpy', 'Sma']
+>>> celegans_phenotypes[:4]
+['Emb', 'Him', 'Unc', 'Lon']
+>>> celegans_phenotypes[4:]
+['Dpy', 'Sma']

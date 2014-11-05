@@ -1,0 +1,10 @@
+Coloured fox fur production, Hebron, Labrador, 1834-1839
+#Source: C. Elton (1942) "Voles, Mice and Lemmings", Oxford Univ. Press
+#Table 17, p.265--266
+#remark: missing value for 1836
+    55 
+   262 
+   -   
+   102 
+   178 
+   227 
