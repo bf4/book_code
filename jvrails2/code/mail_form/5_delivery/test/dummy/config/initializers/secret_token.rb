@@ -1,0 +1,20 @@
+#---
+# Excerpted from "Crafting Rails 4 Applications",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/jvrails2 for more book information.
+#---
+# Be sure to restart your server when you modify this file.
+
+# Your secret key for verifying the integrity of signed cookies.
+# If you change this key, all old signed cookies will become invalid!
+
+# Make sure the secret is at least 30 characters and all random,
+# no regular words or you'll be exposed to dictionary attacks.
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+Dummy::Application.config.secret_key_base = '5e4caf35a2146e39846a587d263402054a44c1c80aafe7706237548048b6914fba0a57bcad7854aa76d5260d05107e6ebd279e1c958e438bb8ea3cb8318cbbf4'

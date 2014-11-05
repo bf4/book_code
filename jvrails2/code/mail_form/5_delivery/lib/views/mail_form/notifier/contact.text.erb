@@ -1,0 +1,4 @@
+<%= message.subject %>
+<% @mail_form.attribute_names.each do |key| -%>
+  <%= @mail_form.class.human_attribute_name(key) %>: <%= @mail_form.send(key) %>
+<% end -%>

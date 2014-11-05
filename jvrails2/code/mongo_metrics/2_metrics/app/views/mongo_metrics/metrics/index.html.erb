@@ -1,0 +1,25 @@
+<h1>Listing Metrics</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Duration</th>
+    <th>Started at</th>
+    <th>Payload</th>
+    <th></th>
+  </tr>
+  <%= content_tag_for :tr, @metrics do |metric| %>
+    <td><%= metric.name %></td>
+    <td><%= metric.duration / 1000 %>ms</td>
+    <td><%= time_ago_in_words metric.started_at %> ago</td>
+    <td>
+      <ul>
+      <% metric.payload.each do |k, v| %>
+        <li><%= k.humanize %>: <%= v %></li>
+      <% end %>
+      </ul>
+    </td>
+    <td><%= link_to 'Destroy', metric_path(metric),
+      method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</table>

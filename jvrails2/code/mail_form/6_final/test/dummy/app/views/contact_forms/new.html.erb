@@ -1,0 +1,30 @@
+<h1>New Contact Form</h1>
+
+<%= form_for(@contact_form) do |f| %>
+  <% if @contact_form.errors.any? %>
+  <div id="errorExplanation">
+    <h2>Oops, something went wrong:</h2>
+    <ul>
+    <% @contact_form.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Deliver" %>
+  </div>
+<% end %>

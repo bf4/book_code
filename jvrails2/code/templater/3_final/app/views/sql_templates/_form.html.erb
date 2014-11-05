@@ -1,0 +1,41 @@
+<%= form_for(@sql_template) do |f| %>
+  <% if @sql_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sql_template.errors.count, "error") %> prohibited this sql_template from being saved:</h2>
+
+      <ul>
+      <% @sql_template.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :path %><br />
+    <%= f.text_field :path %>
+  </div>
+  <div class="field">
+    <%= f.label :format %><br />
+    <%= f.text_field :format %>
+  </div>
+  <div class="field">
+    <%= f.label :locale %><br />
+    <%= f.text_field :locale %>
+  </div>
+  <div class="field">
+    <%= f.label :handler %><br />
+    <%= f.text_field :handler %>
+  </div>
+  <div class="field">
+    <%= f.label :partial %><br />
+    <%= f.check_box :partial %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

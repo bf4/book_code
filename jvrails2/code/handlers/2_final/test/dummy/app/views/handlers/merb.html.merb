@@ -1,0 +1,1 @@
+MERB template handler is **<%= %w(cool fast).to_sentence %>**!
