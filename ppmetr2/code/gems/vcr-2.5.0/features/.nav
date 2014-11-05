@@ -1,0 +1,63 @@
+- getting_started.md (Getting Started)
+- Upgrade.md (Upgrade)
+- CHANGELOG.md (Changelog)
+- about_these_examples.md (About These Examples)
+- LICENSE.md (License)
+- CONTRIBUTING.md (Contributing)
+- cassettes:
+  - format.feature
+  - naming.feature
+  - no_cassette.feature
+  - dynamic_erb.feature
+  - automatic_re_recording.feature
+  - exclusive.feature
+  - update_content_length_header.feature
+  - decompress.feature
+  - persistence.feature
+  - allow_unused_http_interactions.feature
+- record_modes:
+  - once.feature
+  - new_episodes.feature
+  - none.feature
+  - all.feature
+- configuration:
+  - cassette_library_dir.feature
+  - hook_into.feature
+  - default_cassette_options.feature
+  - ignore_request.feature
+  - filter_sensitive_data.feature
+  - allow_http_connections_when_no_cassette.feature
+  - debug_logging.feature
+  - preserve_exact_body_bytes.feature
+  - uri_parser.feature
+  - query_parser.feature
+- hooks:
+  - before_record.feature
+  - before_playback.feature
+  - before_http_request.feature
+  - after_http_request.feature
+  - around_http_request.feature
+- request_matching:
+  - method.feature
+  - uri.feature
+  - host.feature
+  - path.feature
+  - query.feature
+  - body.feature
+  - headers.feature
+  - identical_request_sequence.feature
+  - custom_matcher.feature
+  - uri_without_param.feature
+  - playback_repeats.feature
+- test_frameworks:
+  - test_unit.feature
+  - shoulda.feature
+  - rspec_metadata.feature
+  - rspec_macro.feature
+  - cucumber.feature
+- middleware:
+  - rack.feature
+  - faraday.feature
+- http_libraries:
+  - net_http.feature
+  - em_http_request.feature

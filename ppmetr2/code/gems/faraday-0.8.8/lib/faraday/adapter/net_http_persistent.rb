@@ -1,0 +1,55 @@
+#---
+# Excerpted from "Metaprogramming Ruby 2",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/ppmetr2 for more book information.
+#---
+# Rely on autoloading instead of explicit require; helps avoid the "already
+# initialized constant" warning on Ruby 1.8.7 when NetHttp is refereced below.
+# require 'faraday/adapter/net_http'
+
+module Faraday
+  class Adapter
+    # Experimental adapter for net-http-persistent
+    class NetHttpPersistent < NetHttp
+      dependency 'net/http/persistent'
+
+      def net_http_connection(env)
+        if proxy = env[:request][:proxy]
+          proxy_uri = ::URI::HTTP === proxy[:uri] ? proxy[:uri].dup : ::URI.parse(proxy[:uri].to_s)
+          proxy_uri.user = proxy_uri.password = nil
+          # awful patch for net-http-persistent 2.8 not unescaping user/password
+          (class << proxy_uri; self; end).class_eval do
+            define_method(:user) { proxy[:user] }
+            define_method(:password) { proxy[:password] }
+          end if proxy[:user]
+        end
+        Net::HTTP::Persistent.new 'Faraday', proxy_uri
+      end
+
+      def perform_request(http, env)
+        http.request env[:url], create_request(env)
+      rescue Net::HTTP::Persistent::Error => error
+        if error.message.include? 'Timeout'
+          raise Faraday::Error::TimeoutError, error
+        elsif error.message.include? 'connection refused'
+          raise Faraday::Error::ConnectionFailed, error
+        else
+          raise
+        end
+      end
+
+      def configure_ssl(http, ssl)
+        http.verify_mode  = ssl_verify_mode(ssl)
+        http.cert_store   = ssl_cert_store(ssl)
+
+        http.certificate  = ssl[:client_cert]  if ssl[:client_cert]
+        http.private_key  = ssl[:client_key]   if ssl[:client_key]
+        http.ca_file      = ssl[:ca_file]      if ssl[:ca_file]
+        http.ssl_version  = ssl[:version]      if ssl[:version]
+      end
+    end
+  end
+end

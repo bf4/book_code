@@ -1,0 +1,56 @@
+#---
+# Excerpted from "Metaprogramming Ruby 2",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/ppmetr2 for more book information.
+#---
+require 'yaml'
+
+YAML.add_builtin_type("omap") do |type, val|
+  ActiveSupport::OrderedHash[val.map{ |v| v.to_a.first }]
+end
+
+module ActiveSupport
+  # <tt>ActiveSupport::OrderedHash</tt> implements a hash that preserves
+  # insertion order.
+  #
+  #   oh = ActiveSupport::OrderedHash.new
+  #   oh[:a] = 1
+  #   oh[:b] = 2
+  #   oh.keys # => [:a, :b], this order is guaranteed
+  #
+  # Also, maps the +omap+ feature for YAML files
+  # (See http://yaml.org/type/omap.html) to support ordered items
+  # when loading from yaml.
+  #
+  # <tt>ActiveSupport::OrderedHash</tt> is namespaced to prevent conflicts
+  # with other implementations.
+  class OrderedHash < ::Hash
+    def to_yaml_type
+      "!tag:yaml.org,2002:omap"
+    end
+
+    def encode_with(coder)
+      coder.represent_seq '!omap', map { |k,v| { k => v } }
+    end
+
+    def select(*args, &block)
+      dup.tap { |hash| hash.select!(*args, &block) }
+    end
+
+    def reject(*args, &block)
+      dup.tap { |hash| hash.reject!(*args, &block) }
+    end
+
+    def nested_under_indifferent_access
+      self
+    end
+
+    # Returns true to make sure that this hash is extractable via <tt>Array#extract_options!</tt>
+    def extractable_options?
+      true
+    end
+  end
+end

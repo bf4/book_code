@@ -1,0 +1,59 @@
+#---
+# Excerpted from "Metaprogramming Ruby 2",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/ppmetr2 for more book information.
+#---
+require 'vcr/library_hooks'
+
+module VCR
+  describe LibraryHooks do
+    describe '#disabled?' do
+      it 'returns false by default for any argument given' do
+        expect(subject.disabled?(:foo)).to be_false
+        expect(subject.disabled?(:bar)).to be_false
+      end
+
+      context 'when a library hook is exclusively enabled' do
+        it 'returns false for the exclusively enabled hook' do
+          faraday_disabled = nil
+
+          subject.exclusively_enabled :faraday do
+            faraday_disabled = subject.disabled?(:faraday)
+          end
+
+          expect(faraday_disabled).to eq(false)
+        end
+
+        it 'returns true for every other argument given' do
+          foo_disabled = bar_disabled = nil
+
+          subject.exclusively_enabled :faraday do
+            foo_disabled = subject.disabled?(:foo)
+            bar_disabled = subject.disabled?(:bar)
+          end
+
+          expect(foo_disabled).to be_true
+          expect(bar_disabled).to be_true
+        end
+      end
+    end
+
+    describe '#exclusively_enabled' do
+      it 'restores all hook to being enabled when the block completes' do
+        subject.exclusively_enabled(:faraday) { }
+        expect(subject.disabled?(:foo)).to be_false
+        expect(subject.disabled?(:faraday)).to be_false
+      end
+
+      it 'restores all hooks to being enabled when the block completes, even if there is an error' do
+        subject.exclusively_enabled(:faraday) { raise "boom" } rescue
+        expect(subject.disabled?(:foo)).to be_false
+        expect(subject.disabled?(:faraday)).to be_false
+      end
+    end
+  end
+end
+

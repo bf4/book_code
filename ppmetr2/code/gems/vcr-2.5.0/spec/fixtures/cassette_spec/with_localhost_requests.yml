@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost/
+    body: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Etag:
+      - ! '"24ec5-1b6-4059a80bfd280"'
+      Last-Modified:
+      - Tue, 15 Nov 2005 13:24:10 GMT
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Thu, 25 Feb 2010 07:53:51 GMT
+      Server:
+      - Apache/2.2.3 (CentOS)
+      Content-Length:
+      - '438'
+      Age:
+      - '9260'
+      Accept-Ranges:
+      - bytes
+    body: Localhost response
+    http_version: '1.1'
+  recorded_at: Tue, 01 Nov 2011 04:49:54 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1/
+    body: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Connection:
+      - close
+      Server:
+      - Apache/2.2.3 (CentOS)
+      Date:
+      - Thu, 25 Feb 2010 07:53:52 GMT
+      Content-Length:
+      - '277'
+    body: 127.0.0.1 response
+    http_version: '1.1'
+  recorded_at: Tue, 01 Nov 2011 04:49:54 GMT
+- request:
+    method: get
+    uri: http://0.0.0.0/
+    body: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Connection:
+      - close
+      Server:
+      - Apache/2.2.3 (CentOS)
+      Date:
+      - Thu, 25 Feb 2010 07:53:52 GMT
+      Content-Length:
+      - '277'
+    body: 127.0.0.1 response
+    http_version: '1.1'
+  recorded_at: Tue, 01 Nov 2011 04:49:54 GMT
+- request:
+    method: get
+    uri: http://example.com/
+    body: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Etag:
+      - ! '"24ec5-1b6-4059a80bfd280"'
+      Last-Modified:
+      - Tue, 15 Nov 2005 13:24:10 GMT
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Thu, 25 Feb 2010 07:53:51 GMT
+      Server:
+      - Apache/2.2.3 (CentOS)
+      Content-Length:
+      - '438'
+      Age:
+      - '9260'
+      Accept-Ranges:
+      - bytes
+    body: example.com response
+    http_version: '1.1'
+  recorded_at: Tue, 01 Nov 2011 04:49:54 GMT
+recorded_with: VCR 1.11.3
