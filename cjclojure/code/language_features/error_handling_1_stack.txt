@@ -1,0 +1,22 @@
+UnsupportedOperationException count not supported on this type: Keyword
+                               clojure.lang.RT.countFrom  (RT.java:556)
+java.lang.UnsupportedOperationException: count not supported on this type: Keyword
+                 RT.java:556 clojure.lang.RT.countFrom
+                 RT.java:530 clojure.lang.RT.count
+                match.clj:13 snore.match/create-test-expression
+                match.clj:33 snore.match/match-clause
+                AFn.java:156 clojure.lang.AFn.applyToHelper
+                AFn.java:144 clojure.lang.AFn.applyTo
+                core.clj:626 clojure.core/apply
+               core.clj:2468 clojure.core/partial [fn]
+             RestFn.java:408 clojure.lang.RestFn.invoke
+               core.clj:2559 clojure.core/map [fn]
+             LazySeq.java:40 clojure.lang.LazySeq.sval
+                       :               :
+                       :               :
+          Compiler.java:6666 clojure.lang.Compiler.eval
+               core.clj:2927 clojure.core/eval
+                main.clj:239 clojure.main/repl [fn]
+                main.clj:239 clojure.main/repl [fn]
+                main.clj:257 clojure.main/repl [fn]
+                main.clj:257 clojure.main/repl
