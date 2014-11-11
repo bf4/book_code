@@ -77,6 +77,7 @@ books = {
 # these aren't pragprog
 # {
 #   'dpir' => { name: "Design Patterns in Ruby", source_code: "http://designpatternsinruby.com/extras/dpir_code.zip" },
+#   '9781590599112' => { name: "Practical Ruby Projects. Ideas for the Eclectic Programmer", source_code: "http://www.apress.com/downloadable/download/sample/sample_id/564/" },
 # }
 # these have no source code
 # {

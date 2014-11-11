@@ -1,0 +1,51 @@
+require 'tbs'
+require 'osx/cocoa'
+
+class CocoaPlayer < BasePlayer
+  DEFAULT_WIDTH = 500
+  DEFAULT_HEIGHT = 500
+  
+  def initialize(name)
+    super(name)
+
+    app = OSX::NSApplication.sharedApplication
+    app.setMainMenu(OSX::NSMenu.alloc.init)
+
+    @window = OSX::NSWindow.alloc.initWithContentRect_styleMask_backing_defer(
+      [0, 0, DEFAULT_WIDTH, DEFAULT_HEIGHT],
+      OSX::NSTitledWindowMask + OSX::NSClosableWindowMask,
+      OSX::NSBackingStoreBuffered,
+      true)
+    @window.setTitleWithRepresentedFilename('Turn Based Strategy')
+    @window.makeKeyAndOrderFront(nil)
+
+    return self
+  end
+
+  def next_event(app)
+    return app.nextEventMatchingMask_untilDate_inMode_dequeue(
+      OSX::NSAnyEventMask,
+      nil,
+      OSX::NSDefaultRunLoopMode,
+      true)
+  end
+
+  def handle_events
+    app = OSX::NSApplication.sharedApplication
+    while event = next_event(app)
+      app.sendEvent(event)
+    end
+  end
+
+  def message(text)
+    puts text
+  end
+
+  def draw(map)
+    puts map.inspect
+  end
+
+  def do_choose(choices)
+    handle_events while true
+  end
+end

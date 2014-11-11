@@ -1,0 +1,248 @@
+require 'delegate'
+require 'change'
+
+module Enumerable
+  def random
+    self[rand(size)]
+  end
+
+  def bits_to_int
+    (0...size).inject(0){|total, i| total + (self[i] * 2**i) }
+  end
+
+  def shuffle
+    sort_by { rand }
+  end
+
+  def weighted_ranges
+    total = 0.0
+    ranges = map do |item|
+      value = yield(item)
+      start = total
+      total += value
+      [start, value, item]
+    end
+    return total, ranges
+  end
+
+  def roulette(n, &block)
+    total, ranges = weighted_ranges(&block)
+
+    pointer = rand * total
+    interval = total / n
+
+    selected = []
+    while true
+      ranges.each do |start, length, item|
+        if start <= pointer && pointer < start + length
+          selected.push(item)
+          pointer = (pointer + interval) % total
+        end
+        return selected unless selected.size < n
+      end
+    end
+  end
+end
+
+class Integer
+  def bit_size
+    raise "bit_size only valid for positive integers" if self < 0
+    to_s(2).size
+  end
+
+  def uniform_crossover(other)
+    max_bit_size = [self.bit_size, other.bit_size].max
+    decision = rand(2**max_bit_size)
+    crossover_when(other) {|i| decision[i] == 0 }
+  end
+
+  def crossover_when(other)
+    max_bit_size = [self.bit_size, other.bit_size].max
+    one, two = self, other
+    result = (0...max_bit_size).inject(0) do |total, i|
+      one, two = two, one if yield(i)
+      total + (2**i * one.to_i[i])
+    end
+    return result
+  end
+
+  def point_crossover(other, n)
+    possible_points = (0...bit_size).to_a
+    points = []
+    n.times { points.push(possible_points.delete_at(rand(possible_points.size))) }
+    crossover_when(other){|i| points.include?(i) }
+  end
+
+  def one_point_crossover(other)
+    point_crossover(other, 1)
+  end
+
+  def two_point_crossover(other)
+    point_crossover(other, 2)
+  end
+
+  def mutate(prob)
+    decision = rand(2**bit_size)
+    mutated = (0...bit_size).map{|i| decision[i] == 0 ? self[i] : self[i] ^ 1}
+    mutated.bits_to_int
+  end
+end
+
+class BitIntAbuseError; end
+
+class BitInt < DelegateClass(Integer)
+  def self.sized(bits)
+    subclass = Class.new(self)
+    subclass.const_set(:BIT_SIZE, bits)
+    return subclass
+  end
+
+  def initialize(value)
+    raise BitIntAbuseError.new("Please subclass BitInt!") if self.class == BitInt
+    raise BitIntAbuseError.new("BitInt values must be positive") if value < 0
+    super(value)
+  end
+
+  def bit_size
+    self.class::BIT_SIZE
+  end
+
+  def uniform_crossover(other); self.class.new(super(other)); end
+  def one_point_crossover(other); self.class.new(super(other)); end
+  def two_point_crossover(other); self.class.new(super(other)); end
+  def point_crossover(other, n); self.class.new(super(other, n)); end
+  def mutate(prob); self.class.new(super(prob)); end
+end
+
+class GrayBitInt < BitInt
+  def from_gray
+    bits = [0]
+    indices = (0...bit_size).to_a.reverse
+    indices.each{|i| bits.unshift((self[i] + bits.first) % 2) }
+    bits.bits_to_int
+  end
+end
+
+class GeneticAlgorithm
+  attr_reader :population
+
+  def initialize(population_size, selection_size)
+    @population = (0...population_size).map{|i| yield i }
+    @selection_size = selection_size
+    remember_best
+  end
+
+  def fittest(n=@selection_size)
+    @population.sort_by{|member| member.fitness }[-n..-1]
+  end
+
+  def step
+    survivors = fittest
+    num_old = @population.size / 2
+    num_new = @population.size - num_old
+    population_old = (0...num_old).map{ survivors.random }
+    population_new = (0...num_new).map do |i|
+      parent = survivors.random
+      parent.reproduce(survivors)
+    end
+    @population = population_old + population_new
+    remember_best
+    return @best
+  end
+
+  def run(steps)
+    steps.times { step }
+    return @best
+  end
+
+  def remember_best
+    current = fittest(1).first
+    @best = current if @best.nil? || current.fitness > @best.fitness
+  end
+end
+
+class DummyGenome
+  def initialize(fitness)
+    @fitness = fitness
+  end
+
+  def fitness
+    @fitness
+  end
+
+  def reproduce(mates)
+    return self
+  end
+end
+
+class ChangeGenome < GrayBitInt
+  def self.given(prices, purchases, number_of_coins, bits_per_coin)
+    bits = (number_of_coins - 1) * bits_per_coin
+    subclass = self.sized(bits)
+    subclass.const_set(:PRICES, prices)
+    subclass.const_set(:PURCHASES, purchases)
+    subclass.const_set(:NUMBER_OF_COINS, number_of_coins - 1)
+    subclass.const_set(:BITS_PER_COIN, bits_per_coin)
+    subclass.const_set(:CACHE, {})
+    return subclass
+  end
+
+  def self.new_random
+    bits = self::NUMBER_OF_COINS * self::BITS_PER_COIN
+    return new(rand(2**bits))
+  end
+
+  def cache
+    self.class::CACHE
+  end
+
+  def reproduce(mates)
+    mate = mates.random
+    return uniform_crossover(mate).mutate(0.25)
+  end
+
+  def fitness
+    coins = denoms
+    if ! cache.key?(coins)
+      sim = ChangeSimulator.new(self.class::PRICES, *coins)
+      cache[coins] = 1/sim.run(self.class::PURCHASES)
+    end
+    return cache[coins]
+  end
+
+  def num
+    self.class::NUMBER_OF_COINS
+  end
+
+  def bpc
+    self.class::BITS_PER_COIN
+  end
+
+  def denoms
+    coins = [1] + (0...num).map do |i|
+      starting = i * bpc
+      ending   = (i + 1) * bpc
+      value = unpack(starting, ending) + 2
+    end
+    coins.sort
+  end
+
+  def unpack(starting, ending)
+    value = from_gray
+    num = ending - starting
+    (0...num).inject(0) do |total, i|
+      total + (value[starting + i] * (2**i))
+    end
+  end
+end
+
+number = 3
+purchases = 400
+bpc = 6
+
+price_list = IO.readlines("prices.txt").map{|price| price.to_i }
+prices = Prices.new(*price_list)
+
+ChangeGenomeNumber = ChangeGenome.given(prices, purchases, number, bpc)
+ga = GeneticAlgorithm.new(10, 7) { ChangeGenomeNumber.new_random }
+puts ga.run(20).denoms.inspect
