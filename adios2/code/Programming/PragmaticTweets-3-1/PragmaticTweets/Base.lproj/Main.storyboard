@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzU-pa-xNW">
+                                <rect key="frame" x="242" y="20" width="116" height="30"/>
+                                <state key="normal" title="Show My Tweets">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleShowMyTweetsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6j-t3-Gyu"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MI-dS-B1V">
+                                <rect key="frame" x="0.0" y="96" width="600" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93C-gT-zsq">
+                                <rect key="frame" x="260" y="58" width="80" height="30"/>
+                                <state key="normal" title="Send Tweet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleTweetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xjp-Wy-lds"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9MI-dS-B1V" secondAttribute="trailing" id="5Z8-XX-2fZ"/>
+                            <constraint firstAttribute="centerX" secondItem="mzU-pa-xNW" secondAttribute="centerX" id="67Q-hW-WBg"/>
+                            <constraint firstItem="9MI-dS-B1V" firstAttribute="top" secondItem="93C-gT-zsq" secondAttribute="bottom" constant="8" id="An3-xX-YXL"/>
+                            <constraint firstItem="93C-gT-zsq" firstAttribute="top" secondItem="mzU-pa-xNW" secondAttribute="bottom" constant="8" id="ELH-cl-jyg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9MI-dS-B1V" secondAttribute="bottom" id="MvS-Bn-ihd"/>
+                            <constraint firstItem="9MI-dS-B1V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xyp-yR-G9J"/>
+                            <constraint firstAttribute="centerX" secondItem="93C-gT-zsq" secondAttribute="centerX" id="gK7-Wx-tPY"/>
+                            <constraint firstItem="mzU-pa-xNW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xug-oE-NHU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="twitterWebView" destination="9MI-dS-B1V" id="HlI-xF-ZDj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VVY-4N-BXQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="Kwg-hM-gB2">
+            <objects>
+                <tableViewController id="VVY-4N-BXQ" customClass="RootViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="22" sectionFooterHeight="22" id="7QI-WI-qD3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserAndTweetCell" textLabel="OXM-sb-oW9" detailTextLabel="yrr-8I-mpO" style="IBUITableViewCellStyleSubtitle" id="Qen-E6-e2L">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qen-E6-e2L" id="xfd-zY-icv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OXM-sb-oW9">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yrr-8I-mpO">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTweetCell" rowHeight="125" id="lFt-cR-V93" customClass="ParsedTweetCell" customModule="PragmaticTweets" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lFt-cR-V93" id="xDk-pW-43b">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KIn-iZ-6bZ">
+                                            <rect key="frame" x="16" y="8" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="J6N-Mf-4Ub"/>
+                                                <constraint firstAttribute="width" constant="75" id="tBt-ox-XKR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuR-ER-Ylp">
+                                            <rect key="frame" x="99" y="8" width="493" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taB-IY-ikS">
+                                            <rect key="frame" x="99" y="37" width="493" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImX-bd-8nA">
+                                            <rect key="frame" x="286" y="102" width="29" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KIn-iZ-6bZ" firstAttribute="top" secondItem="xDk-pW-43b" secondAttribute="topMargin" id="8Hh-RJ-tFG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="taB-IY-ikS" secondAttribute="trailing" id="9an-b1-vdD"/>
+                                        <constraint firstItem="fuR-ER-Ylp" firstAttribute="top" secondItem="xDk-pW-43b" secondAttribute="topMargin" id="Kh8-tS-gux"/>
+                                        <constraint firstItem="ImX-bd-8nA" firstAttribute="bottom" secondItem="xDk-pW-43b" secondAttribute="bottomMargin" id="MDc-VX-hkd"/>
+                                        <constraint firstAttribute="centerX" secondItem="ImX-bd-8nA" secondAttribute="centerX" id="P1X-FI-fZP"/>
+                                        <constraint firstItem="taB-IY-ikS" firstAttribute="top" secondItem="fuR-ER-Ylp" secondAttribute="bottom" constant="8" id="PCq-j4-bkh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fuR-ER-Ylp" secondAttribute="trailing" id="Qui-nr-sNW"/>
+                                        <constraint firstItem="KIn-iZ-6bZ" firstAttribute="leading" secondItem="xDk-pW-43b" secondAttribute="leadingMargin" constant="8" id="RZg-oi-7Sf"/>
+                                        <constraint firstItem="fuR-ER-Ylp" firstAttribute="leading" secondItem="KIn-iZ-6bZ" secondAttribute="trailing" constant="8" id="sul-ed-ZFq"/>
+                                        <constraint firstItem="taB-IY-ikS" firstAttribute="leading" secondItem="KIn-iZ-6bZ" secondAttribute="trailing" constant="8" id="uMR-2L-lJg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="KIn-iZ-6bZ" id="C71-4V-k3f"/>
+                                    <outlet property="createdAtLabel" destination="ImX-bd-8nA" id="zZe-cr-jQb"/>
+                                    <outlet property="tweetTextLabel" destination="taB-IY-ikS" id="2V9-8d-8ax"/>
+                                    <outlet property="userNameLabel" destination="fuR-ER-Ylp" id="f4u-7C-ROY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VVY-4N-BXQ" id="nWe-WX-Vfm"/>
+                            <outlet property="delegate" destination="VVY-4N-BXQ" id="jOl-PZ-qrV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cC-PB-HQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="-417"/>
+        </scene>
+    </scenes>
+</document>

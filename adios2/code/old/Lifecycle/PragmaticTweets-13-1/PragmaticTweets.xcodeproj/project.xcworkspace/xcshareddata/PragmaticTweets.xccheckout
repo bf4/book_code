@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4AEE6459-FF62-4901-866F-92A01FFFE926</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PragmaticTweets</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>82263e25-b5eb-0310-b4ec-9460fbaf34b7++2179</key>
+		<string>https://svn.pragprog.com/Bookshelf/titles/adios2</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Book/code/Lifecycle/PragmaticTweets-13-1/PragmaticTweets.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>82263e25-b5eb-0310-b4ec-9460fbaf34b7++2179</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>82263e25-b5eb-0310-b4ec-9460fbaf34b7++2179</key>
+		<string>https://svn.pragprog.com/Bookshelf</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://svn.pragprog.com/Bookshelf/titles/adios2/Book/code/Lifecycle/PragmaticTweets-13-1/PragmaticTweets.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>82263e25-b5eb-0310-b4ec-9460fbaf34b7++2179</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>82263e25-b5eb-0310-b4ec-9460fbaf34b7++2179</string>
+			<key>IDESourceControlWCCName</key>
+			<string>adios2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
