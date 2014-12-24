@@ -80,10 +80,6 @@ books = {
 #   'cmelixir' => { name: "Metaprogramming Elixir" },
 # }
 # these aren't pragprog
-# {
-#   'dpir' => { name: "Design Patterns in Ruby", source_code: "http://designpatternsinruby.com/extras/dpir_code.zip" },
-#   '9781590599112' => { name: "Practical Ruby Projects. Ideas for the Eclectic Programmer", source_code: "http://www.apress.com/downloadable/download/sample/sample_id/564/" },
-# }
 # these have no source code
 # {
 #   'ktmack2' => { name: "Mac Kung Fu (2nd edition): Over 400 Tips, Tricks, Hints, and Hacks for Apple OS X" },
@@ -176,3 +172,22 @@ books.each do |prag_ref, details|
   end
 end
 puts
+{
+  'SecretsOfTheJavascriptNinja' => 'http://www.manning.com/resig/ninja-code.zip',
+  'Rails4InAction' => 'https://github.com/steveklabnik/ticketee/archive/master.zip',
+  # 'Rails3InAction' => 'http://www.manning.com/katz/ticketee-book.zip',
+  # 'dpir' => { name: "Design Patterns in Ruby", source_code: "http://designpatternsinruby.com/extras/dpir_code.zip" },
+  # 'practical_ruby_projects' => { name: "Practical Ruby Projects. Ideas for the Eclectic Programmer", source_code: "http://www.apress.com/downloadable/download/sample/sample_id/564/", filename: '9781590599112.zip'},
+}.each do |ref, zip_link|
+  in_dir(ref) do
+    print '.'
+    file = File.basename(zip_link)
+    if download_code?(file)
+      next unless download_code(zip_link)
+    end
+    next unless extract_file(file)
+    `git add . && git commit -m "Adding code #{ref}: #{file}"`.strip
+    # handle artifacts
+    # handle different releases
+  end
+end
