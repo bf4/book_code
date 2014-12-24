@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    <% if content_for(:title) %>
+      <%= yield(:title) %>
+    <% else %>
+      Ticketee
+    <% end %>
+  </title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |key, value| %>
+  <div class='flash' id='<%= key %>'>
+    <%= value %>
+  </div> 
+<% end %>
+
+<nav>
+  <ul>
+    <li><%= link_to "Sign up", new_user_path %></li>
+    <li><%= link_to "Sign in", signin_path %></li>
+  </ul>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
