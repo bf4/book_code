@@ -107,12 +107,12 @@ def tar_file(prag_ref)
     @tar_file[prag_ref] = "#{prag_ref}-code.tgz"
   end
 end
-def download_code?(prag_ref)
-  not File.file?(tar_file(prag_ref))
+def download_code?(tarball)
+  not File.file?(tarball)
 end
-def download_code(prag_ref)
-  source_code = "http://media.pragprog.com/titles/#{prag_ref}/code/#{tar_file(prag_ref)}"
-  puts `curl -q -O #{source_code}`
+def download_code(source_code)
+  filename = File.basename(source_code)
+  puts `curl -q -L #{source_code} -o #{filename}`
   # need error handling and messaging
   if $?.success?
     true
@@ -121,17 +121,22 @@ def download_code(prag_ref)
     false
   end
 end
-def extract_code(prag_ref)
-  puts `tar xzf #{tar_file(prag_ref)}`
+def extract_file(filename)
+  puts case ext = File.extname(filename)
+  when '.tgz' then `tar xzf #{filename}`
+  when '.zip' then `unzip #{filename}`
+  else
+    STDERR.puts "Cannot extract #{filename}. Unknown extension: #{ext}"
+    return false
+  end
   # need error handling and messaging
   if $?.success?
     true
   else
-    STDERR.puts "Failed extracting #{prag_ref} code #{$?.class} #{$?.inspect}"
+    STDERR.puts "Failed extracting #{filename} code #{$?.class} #{$?.inspect}"
     false
   end
 end
-# def tar_exists?
 # check for already downloaded books
 ROOT = Dir.pwd
 TAR_FILES = Dir[File.join(ROOT, "**", "*.tgz")]
@@ -152,10 +157,12 @@ books.each do |prag_ref, details|
   in_dir(prag_ref) do
     print '.'
     if extract_code?
-      if download_code?(prag_ref)
-        next unless download_code(prag_ref)
+      file = tar_file(prag_ref)
+      if download_code?(file)
+        download_link = "http://media.pragprog.com/titles/#{prag_ref}/code/#{file}"
+        next unless download_code(download_link)
       end
-      next unless extract_code(prag_ref)
+      next unless extract_file(file)
       `git add code && git commit -m "Adding code #{prag_ref}: #{details[:name]}"`.strip
       # handle artifacts
       # handle different releases
