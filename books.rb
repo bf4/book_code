@@ -175,7 +175,7 @@ puts
 {
   'SecretsOfTheJavascriptNinja' => 'http://www.manning.com/resig/ninja-code.zip',
   'Rails4InAction' => 'https://github.com/steveklabnik/ticketee/archive/master.zip',
-  # 'Rails3InAction' => 'http://www.manning.com/katz/ticketee-book.zip',
+  'Rails3InAction' => 'http://www.manning.com/katz/ticketee-book.zip',
   # 'dpir' => { name: "Design Patterns in Ruby", source_code: "http://designpatternsinruby.com/extras/dpir_code.zip" },
   # 'practical_ruby_projects' => { name: "Practical Ruby Projects. Ideas for the Eclectic Programmer", source_code: "http://www.apress.com/downloadable/download/sample/sample_id/564/", filename: '9781590599112.zip'},
 }.each do |ref, zip_link|

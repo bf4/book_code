@@ -1,0 +1,10 @@
+<%= link_to "New State", new_admin_state_path %>
+
+<ul id='states'>
+  <% for state in @states %>
+    <li id='state_<%= state.id %>'>
+      <%= state.name %>
+      <%= link_to "Make default", make_default_admin_state_path(state) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "projects" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <style>
+    <% for state in @states %>
+      .state_<%= state.name.parameterize %> {
+        background: <%= state.background %>;
+        color: <%= state.color %>;
+      }
+    <% end %>
+  </style>
+</head>
+<body>
+  <% flash.each do |key, value| %>
+    <div class='flash' id='<%= key %>'>
+      <%= value %>
+    </div>
+  <% end %>
+<h1><%= link_to "Ticketee", main_app.root_path %></h1>
+<nav>
+  <%= admins_only do %>
+    <%= link_to "Admin", main_app.admin_root_path %><br>
+  <% end %>
+  <% if user_signed_in? %>
+    Signed in as <%= current_user %>
+    <%= link_to "Sign out", main_app.destroy_user_session_path %>
+  <% else %>
+    <%= link_to "Sign up", main_app.new_user_registration_path %>
+    <%= link_to "Sign in", main_app.new_user_session_path %>
+    
+    <br>
+    Or use <%= auth_providers(:twitter, :github) %>
+  <% end %>
+</nav>
+<%= yield %>
+
+</body>
+</html>
