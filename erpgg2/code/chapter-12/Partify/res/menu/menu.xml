@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Programming Google Glass, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/erpgg2 for more book information.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/take_picture"
+        android:title="@string/take_picture"
+        android:icon="@drawable/ic_camera" />
+    <item
+        android:id="@+id/balloon_count"
+        android:title="@string/balloon_count"
+        android:icon="@drawable/ic_balloon" />
+    <item
+        android:id="@+id/stop"
+        android:title="@string/stop"
+        android:icon="@drawable/ic_stop" />
+</menu>

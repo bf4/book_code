@@ -1,0 +1,32 @@
+<!--
+ ! Excerpted from "Programming Google Glass, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/erpgg2 for more book information.
+-->
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="glass.simple"
+    android:versionCode="1"
+    android:versionName="1.0"> 
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"> 
+        <activity
+            android:name="glass.simple.MainActivity"> 
+            <intent-filter> 
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

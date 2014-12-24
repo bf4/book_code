@@ -1,0 +1,22 @@
+<!--
+ ! Excerpted from "Programming Google Glass, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/erpgg2 for more book information.
+-->
+<resources>
+  <string name="app_name">Stats</string>
+  <string name="connected">USB Connected</string>
+  <string name="disconnected">USB Disconnected</string>
+  <string name="stop">Stop</string>
+  <string name="battery_voltage">30V</string>
+  <string name="battery_degrees">40˚C</string>
+  <string name="img_battery">Battery Level</string>
+  <string name="language">English</string>
+  <string name="country">USA</string>
+  <string name="time">00:00</string>
+  <string name="wifi_strength">Wifi Strength</string>
+  <string name="stats_icon_view">S</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Programming Google Glass, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/erpgg2 for more book information.
+-->
+<resources>
+  <!-- The recommended margin for the top, left, and right edges of a card. -->
+  <dimen name="glass_card_margin">40px</dimen>
+
+  <!-- The recommended margin between the bottom of the card and the footer. This is
+       an adjusted value so that the baseline of the text in the footer sits 40px
+       from the bottom of the card, matching the other margins. -->
+  <dimen name="glass_card_footer_margin">33px</dimen>
+
+  <!-- The maximum height of the body content inside a card. -->
+  <dimen name="glass_card_body_height">240px</dimen>
+
+  <!-- The width of the columns in this two-column layout. -->
+  <dimen name="glass_card_column_width">280px</dimen>
+</resources>

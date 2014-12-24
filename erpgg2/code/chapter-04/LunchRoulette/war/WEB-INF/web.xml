@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "Programming Google Glass, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/erpgg2 for more book information.
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+  ﻿" version="2.5">
+
+	<servlet>
+		<servlet-name>lunchroulette</servlet-name>
+		<servlet-class>test.book.glass.LunchRouletteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>lunchroulette</servlet-name>
+		<url-pattern>/lunchroulette</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>lunchcron</servlet-name>
+		<servlet-class>test.book.glass.LunchCronServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>lunchcron</servlet-name>
+		<url-pattern>/lunchcron</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>authFilter</filter-name>
+		<filter-class>test.book.glass.auth.AuthFilter</filter-class>
+		<init-param>
+			<param-name>excludes</param-name>
+			<param-value>.*?(callback|cron)</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>authFilter</filter-name>
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+
+	<!-- auth servlets -->
+	<servlet>
+		<servlet-name>oauth2callback</servlet-name>
+		<servlet-class>test.book.glass.auth.OAuth2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>oauth2callback</servlet-name>
+		<url-pattern>/oauth2callback</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>test.book.glass.auth.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<!-- force https only -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Protected Area</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>lunchcron</web-resource-name>
+			<url-pattern>/lunchcron</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

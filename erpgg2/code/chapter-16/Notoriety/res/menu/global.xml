@@ -1,0 +1,20 @@
+<!--
+ ! Excerpted from "Programming Google Glass, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/erpgg2 for more book information.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_new_note"
+        android:orderInCategory="10"
+        android:showAsAction="never"
+        android:title="@string/action_new_note" />
+    <item
+        android:id="@+id/action_map"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_map"/>
+</menu>

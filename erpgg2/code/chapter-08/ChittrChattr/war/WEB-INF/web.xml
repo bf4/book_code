@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Programming Google Glass, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/erpgg2 for more book information.
+-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<static-files>
+		<include path="/**.jpg" />
+		<include path="/**.png" />
+	</static-files>
+    
+	<servlet>
+	    <servlet-name>home</servlet-name>
+	    <servlet-class>test.book.glass.blog.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>home</servlet-name>
+	    <url-pattern>/home</url-pattern>
+	</servlet-mapping>
+    	<servlet>
+		<servlet-name>posts</servlet-name>
+		<servlet-class>test.book.glass.blog.PostServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>posts</servlet-name>
+		<url-pattern>/posts/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>blog</servlet-name>
+		<servlet-class>test.book.glass.blog.BlogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>blog</servlet-name>
+		<url-pattern>/blog</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>followed</servlet-name>
+		<servlet-class>test.book.glass.blog.FollowedServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>followed</servlet-name>
+		<url-pattern>/followed/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>oauth2callback</servlet-name>
+		<servlet-class>test.book.glass.auth.OAuth2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>oauth2callback</servlet-name>
+		<url-pattern>/oauth2callback</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>test.book.glass.auth.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>postcallback</servlet-name>
+		<servlet-class>test.book.glass.blog.mirror.PostCallbackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>postcallback</servlet-name>
+		<url-pattern>/postcallback</url-pattern>
+	</servlet-mapping>
+	
+	<!-- force https only -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Protected Area</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<welcome-file-list>
+		<welcome-file>home</welcome-file>
+	</welcome-file-list>
+</web-app>
