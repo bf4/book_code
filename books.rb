@@ -86,6 +86,12 @@ books = {
 #   'd-dbback' => { name: "Building Backbone Plugins" },
 #   'agcr' => { name: "Confident Ruby" },
 #   'ltp2' => { name: "Learn to Program (2nd edition)" },
+# https://pragprog.com/book/ebdojo/the-coding-dojo-handbook
+# https://pragprog.com/book/pkretro/the-retrospective-handbook
+# https://pragprog.com/book/ec101di/101-design-ingredients-to-solve-big-tech-problems
+# https://pragprog.com/book/nbapp/the-app-design-handbook
+# https://pragprog.com/book/smacss/scalable-and-modular-architecture-for-css
+# https://pragprog.com/book/csspdy/the-spdy-book
 # }
 require 'fileutils'
 def in_dir(dirname, &block)
