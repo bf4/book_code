@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Arduino: A Quick-Start Guide, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/msard2 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+    <title>Dashboard Demo</title>
+  </head>
+  <body>
+    <div id="dashboard">
+      <div id="distance-display">
+        <p>
+          <span id="d1">&#x25cf;</span> 
+          <span id="d2">&#x25cf;</span>
+          <span id="d3">&#x25cf;</span>
+          <span id="d4">&#x25cf;</span>
+          <span id="d5">&#x25cf;</span>
+          <span id="d6">&#x25cf;</span>
+          <span id="d7">&#x25cf;</span>
+          <span id="d8">&#x25cf;</span> 
+        </p>
+      </div>
+      <div id="temperature-display">
+        <p><span id="temperature"></span> &#x2103;</p>
+      </div>
+    </div>
+    <script src="js/serial_device.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
+

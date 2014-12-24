@@ -1,0 +1,12 @@
+# Syntax-coloring for the Nunchuk library
+
+Nunchuk	KEYWORD1
+initialize	KEYWORD2
+update	KEYWORD2
+joystick_x	KEYWORD2
+joystick_y	KEYWORD2
+x_acceleration	KEYWORD2
+y_acceleration	KEYWORD2
+z_acceleration	KEYWORD2
+z_button	KEYWORD2
+c_button	KEYWORD2

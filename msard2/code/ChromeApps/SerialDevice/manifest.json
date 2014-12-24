@@ -1,0 +1,13 @@
+{ 
+  "manifest_version": 2, 
+  "name": "Serial Device Demo",
+  "version": "1", 
+  "permissions": [ "serial" ],
+  "app": { 
+    "background": { 
+      "scripts": ["background.js"] 
+    } 
+  },
+  "minimum_chrome_version": "33"
+}
+

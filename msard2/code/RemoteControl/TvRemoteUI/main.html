@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Arduino: A Quick-Start Guide, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/msard2 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <title>TV Remote Emulator</title>
+  </head>
+  <body>
+    <div id="main">
+      <div>
+        <button id="power" type="button">Power</button>
+        <button id="hdmi" type="button">HDMI</button>
+        <button id="source" type="button">Source</button>
+      </div>
+      <div>
+        <button id="one" type="button">1</button>
+        <button id="two" type="button">2</button>
+        <button id="three" type="button">3</button>
+      </div>
+      <div>
+        <button id="four" type="button">4</button>
+        <button id="five" type="button">5</button>
+        <button id="six" type="button">6</button>
+      </div>
+      <div>
+        <button id="seven" type="button">7</button>
+        <button id="eight" type="button">8</button>
+        <button id="nine" type="button">9</button>
+      </div>
+      <div>
+        <button id="txt" type="button">TXT</button>
+        <button id="zero" type="button">0</button>
+        <button id="pre_ch" type="button">PRE-CH</button>
+      </div>
+      <div>
+        <button id="vol_up" type="button">V Up</button>
+        <button id="mute" type="button">Mute</button>
+        <button id="prog_up" type="button">Ch Up</button>
+      </div>
+      <div>
+        <button id="vol_down" type="button">V Down</button>
+        <button id="ch_list" type="button">CH LIST</button>
+        <button id="prog_down" type="button">Ch Down</button>
+      </div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/serial_device.js"></script>
+    <script src="js/remote.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,77 @@
+body {
+  /* http://spacetelescope.org/static/archives/images/screen/heic1415a.jpg */
+  background: url('../img/galaxy.jpg');
+  color: white;
+}
+
+#playfield {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 800px;
+  height: 600px;
+  border: 2px solid #777;
+  border-radius: 5px;
+}
+
+#stats {
+  font-size: 20px;
+  position: absolute;
+  top: 855px;
+  left: 237px;
+}
+
+#paddle {
+  /* http://opengameart.org/content/puzzle-game-art */
+  background: url('../img/paddleRed.png');
+  position: absolute;
+  top: 560px;
+  left: 50px;
+  width: 104px;
+  height: 24px;
+}
+
+#ball {
+  /* http://opengameart.org/content/puzzle-game-art */
+  background: url('../img/ballBlue.png');
+  position: absolute;
+  top: 500px;
+  left: 400px;
+  width: 22px;
+  height: 22px;
+  border-radius: 15px;
+}
+
+.row {
+  clear: left;
+  height: 40px;
+  width: 100%;
+}
+
+.block {
+  width: 70px;
+  height: 30px;
+  float: left;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.message {
+  font-size: 70px;
+  position: absolute;
+  top: 200px;
+}
+
+#winner {
+  display: none;
+  left: 250px;
+}
+
+#game_over {
+  display: none;
+  left: 230px;
+}
+

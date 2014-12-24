@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Arduino: A Quick-Start Guide, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/msard2 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/arduinoid.css"/>
+    <title>Arduinoid</title>
+  </head>
+  <body>
+    <div id="game">
+      <div id="playfield">
+        <div id="paddle"></div>
+        <div id="ball"></div>
+        <div id="winner" class="message">
+          <p>You win!</p>      
+        </div>
+        <div id="game_over" class="message">
+          <p>Game Over</p>      
+        </div>
+      </div>
+      <div id="stats">
+        <div>Lives: <span id="lives"/></div>
+        <div>Score: <span id="score"/></div>
+      </div>
+    </div>
+    <audio src="sound/awake10_megaWall.mp3" autoplay loop/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/serial_device.js"></script>
+    <script src="js/game_controller.js"></script>
+    <script src="js/arduinoid.js"></script>
+  </body>
+</html>
+
