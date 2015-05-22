@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="labeling.xsl"?>
+<labels>
+  <structure id="label_1" name="bottle">
+    <label>
+      <substance>
+        <name ref_id="01"/>
+        <form ref_id="02"/>
+        <dose ref_id="03"/>
+      </substance>
+      <packaging>
+        <date ref_id="06"/>
+        <type ref_id="07"/>
+      </packaging>
+    </label>
+  </structure>
+  
+  <language lang="en">
+    <instance id="en-01">Rosuvastatin</instance>
+    <instance id="en-02">film-coated tablets</instance>
+    <instance id="en-03">10mg</instance>
+    <instance id="en-06">11 December 2014</instance>
+    <instance id="en-07">OUTER CARTON BOTTLE AND LABEL</instance>
+    <instance id="en-16">Film-coated tablet.</instance>
+  </language>
+  
+  <language lang="fr">
+    <instance id="fr-01">Rosuvastatin</instance>
+    <instance id="fr-02">comprimés pelliculés</instance>
+    <instance id="fr-03">10mg</instance>
+    <instance id="fr-06">11 Décembre 2014</instance>
+    <instance id="fr-07">EMBALLAGE EXTERIEUR (ETUI FLACON) 
+      ET ETIQUETTE FLACON</instance>
+    <instance id="fr-16">Comprimé pelliculé.</instance>
+  </language>
+  
+  <language lang="de">
+    <instance id="de-01">Rosuvastatin</instance>
+    <instance id="de-02">Filmtabletten</instance>
+    <instance id="de-03">10mg</instance>
+    <instance id="de-06">11. Dezember 2014</instance>
+    <instance id="de-07">FALTSCHACHTEL FLASCHE UND 
+      FLASCHENETIKETT</instance>
+    <template id="de16">Filmtablette.</template>
+  </language>
+</labels>

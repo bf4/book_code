@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="listfix.xsl"?>
+<document>
+ <p font-size="14pt" font-weight="bold">Grizzlies and People</p>
+ <p font-size="10pt" font-weight="regular">Since the Ice Age, 
+    man has feared the great denizens of the north. But why is that?</p>
+  <p font-size="12pt" font-weight="bold">Horribleness</p>
+  <p font-size="10pt" font-weight="regular">Grizzlies are so horrible, 
+    they are named <emph>Ursus horribilis</emph>. 'Nuff said?</p>
+  <p font-size="12pt" font-weight="bold">Largeness</p>
+  <p font-size="10pt" font-weight="regular">Male grizzlies can average 
+    900 pounds and 9 feet tall. That's a lot of bear to feed, and they 
+    don't mind a little human in the diet!</p>
+  <p font-size="12pt" font-weight="bold">Aggressiveness</p>
+  <p font-size="10pt" font-weight="regular">Grizzlies are too large to 
+    escape danger by climbing trees; instead, they stand their ground.</p>
+  <p font-size="10pt" font-weight="regular">All that being said, 
+    humans are still more dangerous than grizzly bears!</p>
+</document>

@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+
+<bibliography>
+
+  <book tag="Abelson:Wizard">
+    <authors>
+      <author>
+        <given>Harold</given>
+        <family>Abelson</family>
+      </author>
+      <author>
+        <given>Gerald Jay</given>
+        <family>Sussman</family>
+      </author>
+    </authors>
+    <title>Structure and Interpretation of Computer Programs</title>
+    <year>1996</year>
+    <publisher ref="pub.mit"/>
+    <edition>Second</edition>
+    <isbn>0262510871</isbn>
+  </book>
+
+  <book tag="armstrong:jaerlang2">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Armstrong</family>
+      </author>
+    </authors>
+    <title>Programming Erlang: Software for a Concurrent World</title>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+    <edition>Second</edition>
+    <isbn>978-1-93778-553-6</isbn>
+    <url>http://www.pragprog.com/titles/jaerlang2/programming-erlang</url>
+  </book>
+
+  <book tag="burnette:android">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Hello, Android: Introducing Google's Mobile Development Platform</title>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+    <edition>Third</edition>
+    <isbn>978-1-93435-656-2</isbn>
+    <url>http://www.pragprog.com/titles/eband3/hello-android</url>
+  </book>
+
+  <book tag="burnham:asyncjavascript">
+    <authors>
+      <author>
+        <given>Trevor</given>
+        <family>Burnham</family>
+      </author>
+    </authors>
+    <title>Async JavaScript </title>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+    <isbn>978-1-93778-527-7</isbn>
+  </book>
+
+  <book tag="campbell:practicalprogramming">
+    <authors>
+      <author>
+        <given>Jennifer</given>
+        <family>Campbell</family>
+      </author>
+      <author>
+        <given>Paul</given>
+        <family>Gries</family>
+      </author>
+      <author>
+        <given>Jason</given>
+        <family>Montojo</family>
+      </author>
+      <author>
+        <given>Greg</given>
+        <family>Wilson</family>
+      </author>
+    </authors>
+    <title>Practical Programming: An Introduction to Computer Science Using Python</title>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+    <isbn>978-1-93435-627-2</isbn>
+    <url>http://www.pragprog.com/titles/gwpy/practical-programming</url>
+  </book>
+
+  <book tag="carnegie:winfriends">
+    <authors>
+      <author>
+        <given>Dale</given>
+        <family>Carnegie</family>
+      </author>
+    </authors>
+    <title>How to Win Friends and Influence People</title>
+    <year>1990</year>
+    <isbn>0671723650</isbn>
+    <publisher ref="pub.pocket"/>
+  </book>
+
+  <book tag="hogan:tmux">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>tmux: Productive Mouse-Free Development</title>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+    <isbn>978-1-93435-696-8</isbn>
+    <url>http://pragprog.com/book/bhtmux/tmux</url>
+  </book>
+
+  <book tag="hunt:pragthink">
+    <authors>
+      <author>
+        <given>Andrew</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Pragmatic Thinking and Learning: Refactor Your Wetware</title>
+    <year>2008</year>
+    <isbn>978-1-93435-605-0</isbn>
+    <publisher ref="pub.pp"/>
+  </book>
+
+  <book tag="nagel:godel">
+    <authors>
+      <author>
+        <given>Ernest</given>
+        <family>Nagel</family>
+      </author>
+      <author>
+        <given>James</given>
+        <family>Newman</family>
+      </author>
+    </authors>
+    <title>Gödel's Proof</title>
+    <year>2008</year>
+    <publisher ref="pub.nyu"/>
+    <isbn>978-0814758373</isbn>
+  </book>
+
+  <article tag="nancyv:ieeeembeddedtiger">
+    <authors>
+      <author>
+        <given>Nancy Van</given>
+        <family>Schooenderwoert</family>
+      </author>
+      <author>
+        <given>Ron</given>
+        <family>Morsicato</family>
+      </author>
+    </authors>
+    <title>Taming the Embedded Tiger; Agile Test Techniques for Embedded Software</title>
+    <in-journal>Proceedings of the 2004 Agile Development Conference</in-journal>
+    <year>2004</year>
+    <month>June</month>
+    <volume>ADC 2004</volume>
+  </article>
+
+  <article tag="parr:llstar">
+    <authors>
+      <author>
+        <given>Terence</given>
+        <family>Parr</family>
+      </author>
+      <author>
+        <given>Kathleen</given>
+        <family>Fisher</family>
+      </author>
+    </authors>
+    <title>LL(*): The foundation of the ANTLR parser generator</title>
+    <in-journal>Proceedings of the 32nd ACM SIGPLAN conference on Programming language design and
+      implementation</in-journal>
+    <volume>PLDI '11</volume>
+    <publisher ref="pub.acm"/>
+    <page-range>425--436</page-range>
+    <year>2011</year>
+    <issn>978-1-4503-0663-8</issn>
+  </article>
+
+  <book tag="sawyer:genius">
+    <authors>
+      <author>
+        <given>Keith</given>
+        <family>Sawyer</family>
+      </author>
+    </authors>
+    <title>Group Genius: The Creative Power of Collaboration</title>
+    <year>2007</year>
+    <publisher ref="pub.basic"/>
+    <isbn>0465071929</isbn>
+  </book>
+
+  <book tag="subramaniam:vslg2">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Programming Groovy 2: Dynamic Productivity for the Java Developer</title>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+    <isbn>978-1937785307</isbn>
+    <url>http://pragprog.com/book/vslg2/programming-groovy-2</url>
+  </book>
+
+  <book tag="swift:gulliver">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Swift</family>
+      </author>
+    </authors>
+    <title>Gulliver's Travels</title>
+    <year>1726</year>
+    <publisher ref="pub.dover"/>
+    <isbn>978-0486292731</isbn>
+  </book>
+
+  <book tag="tate:sevenlanguages">
+    <authors>
+      <author>
+        <given>Bruce A.</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages</title>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+    <isbn>978-1-93435-659-3</isbn>
+    <url>http://www.pragprog.com/titles/btlang/seven-languages-in-seven-weeks</url>
+  </book>
+
+  <book tag="thomas:elixir">
+    <authors>
+      <author>
+        <given>David</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Programming Elixir: Functional |> Concurrent |> Pragmatic |> Fun</title>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+    <isbn>978-1-937785-58-1</isbn>
+    <url>http://pragprog.com/book/elixir/programming-elixir</url>
+  </book>
+
+  <book tag="thomas:ruby4">
+    <authors>
+      <author>
+        <given>David</given>
+        <family>Thomas</family>
+      </author>
+      <author>
+        <given>Chad</given>
+        <family>Fowler</family>
+      </author>
+      <author>
+        <given>Andrew</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Programming Ruby: The Pragmatic Programmer's Guide</title>
+    <year>2013</year>
+    <isbn>9781937785499</isbn>
+    <publisher ref="pub.pp"/>
+    <edition>Fourth Edition</edition>
+    <url>http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0</url>
+  </book>
+
+  <article tag="wing:comp">
+    <authors>
+      <author>
+        <given>Jeannette M.</given>
+        <family>Wing</family>
+      </author>
+    </authors>
+    <title>Computational Thinking</title>
+    <in-journal>Communications of the ACM</in-journal>
+    <year>2006</year>
+    <volume>49</volume>
+    <number>3</number>
+    <page-range>33--35</page-range>
+  </article>
+
+  <book tag="zarra:cd2">
+    <authors>
+      <author>
+        <given>Marcus S.</given>
+        <family>Zarra</family>
+      </author>
+    </authors>
+    <title>Core Data: Data Storage and Management for iOS, OS X, and iCloud</title>
+    <year>2012</year>
+    <edition>Second</edition>
+    <isbn>978-1-93778-508-6</isbn>
+    <publisher ref="pub.pp"/>
+    <url>http://pragprog.com/book/mzcd2/core-data</url>
+  </book>
+
+</bibliography>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="pharmEffects.xsl"?>
+<substanceEffects>
+  <sideEffects>
+    <negative>
+      <effect reference="A">dizziness</effect>
+      <effect reference="B">drowsiness</effect>
+      <effect reference="D">dyspepsia</effect>
+    </negative>
+    <positive>
+      <effect reference="E">awesome strength</effect>
+      <effect reference="H">reduced risk of heart attack</effect>
+    </positive>
+    <curious>
+      <effect reference="I">desire to wear colorful spandex</effect>
+    </curious>
+  </sideEffects>
+  <substances>
+    <substance status="experimental">
+      <invented_name>Spydybyty</invented_name>
+      <sideEffects>
+        <effect ref="A"/>
+        <effect ref="E"/>
+        <effect ref="I"/>
+      </sideEffects>
+      <description>This refined, radioactive spider venom
+      is similar to a form accidentally discovered in 1962.
+      </description>
+    </substance>
+     <substance status="common">
+      <invented_name>Acetylsalicylic acid</invented_name>
+      <sideEffects>
+        <effect ref="B"/>
+        <effect ref="D"/>
+        <effect ref="H"/>
+      </sideEffects>
+      <description>Acetylsalicylic acid, while used
+      in natural forms since antiquity, was first 
+      manufactured in 1899. It is better known as 
+      aspirin.
+      </description>
+    </substance>
+  </substances>
+</substanceEffects>

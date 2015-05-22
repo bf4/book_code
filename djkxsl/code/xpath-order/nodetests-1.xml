@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="nodetests-1.xsl"?>
+<doc id="doc-1">
+  <chapter id="chapter-1">
+    <p id="para-1">one</p>
+    <p id="para-2">two</p>
+    <p id="para-3">three
+      <!-- This is an extraordinary comment! -->
+      <footnote id="fn-1">four</footnote>
+      <footnote id="fn-2">five
+        <xref id="xref-1">six</xref>
+        <xref id="xref-2">seven</xref>
+        <bold id="bold-1">WOWSERS!</bold>
+      </footnote>
+    </p>
+  </chapter>
+  <chapter id="chapter-2">
+    <?php echo $fox; ?>
+    <p id="para-4">eight</p>
+    <p id="para-5">nine
+      <footnote id="fn-3">ten</footnote>
+      <bold id="bold-2">OH, GOOD GRIEF!</bold>
+     </p>
+    <note id="note-1">eleven
+      <p id="para-6">twelve
+         <footnote id="fn-4">thirteen</footnote>
+      </p>
+    </note>
+    <p id="para-7">fourteen</p>
+  </chapter>
+</doc>

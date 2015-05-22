@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="wearable-devices-1.xsl"?>
+<product-line name="Wearable Devices">
+  <product>Zosialz Noze-Ring Phone</product>
+  <product>MacSmart Shoe Computer</product>
+  <product>Gogglemate X-Ray Glasses</product>
+  <product>BuffStuff Heart Monitor Jersey</product>
+  <product>GeriGadget Gyroscopic Hat</product>
+  <product>Toon Time Musical Bow Tie</product>
+  <product>Acme Rocket Pants</product>
+  <product>...</product>
+</product-line>

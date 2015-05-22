@@ -1,0 +1,54 @@
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<document>
+  <chapter>
+    <p font-size="14pt" font-weight="bold">Grizzlies and People</p>
+    <p>extra textra read all about it. <p>And also cool is the fact that we don't need no damn DTD.</p> </p>
+    <p font-size="10pt" font-weight="regular">Since the Ice Age, man has feared the great denizens of the
+      north. But why is that?</p>
+    <p font-size="12pt" font-weight="bold">Horribleness</p>
+    <note>Is that even a word?</note>
+    <p font-size="10pt" font-weight="regular">Grizzlies are so horrible, they are named <emph>Ursus
+      horribilis</emph>. 'Nuff said?<p>And also cool is the fact that we don't need no damn DTD.</p></p>
+    <p font-size="12pt" font-weight="bold">Largeness</p>
+    <tree>forty feet tall.</tree>
+    <p font-size="10pt" font-weight="regular">Male grizzlies can average 900 pounds and 9 feet tall. That's a
+      lot of bear to feed, and they don't mind a little human in the diet!<p>And also cool is the fact that we
+      don't need no damn DTD.</p></p>
+    <note>Or anything else, for that matter.</note>
+    <p font-size="12pt" font-weight="bold">Aggressiveness</p>
+    <p font-size="10pt" font-weight="regular">Grizzlies are too large to escape danger by climbing trees;
+      instead, they stand their ground.</p>
+    <p font-size="10pt" font-weight="regular">All that being said, humans are still more dangerous than
+      grizzly bears!</p>
+  </chapter>
+  <chapter>
+    <p font-size="14pt" font-weight="bold">hGrizzlies and People</p>
+    <p>hextra textra read all about it. <p>hAnd also cool is the fact that we don't need no damn DTD.</p> </p>
+    <p font-size="10pt" font-weight="regular">hSince the Ice Age, man has feared the great denizens of the
+      north. But why is that?</p>
+    <p font-size="12pt" font-weight="bold">hHorribleness</p>
+    <note>hIs that even a word?</note>
+    <p font-size="10pt" font-weight="regular">hGrizzlies are so horrible, they are named <emph>Ursus
+      horribilis</emph>. 'Nuff said?<p>hAnd also cool is the fact that we don't need no damn DTD.</p></p>
+    <p font-size="12pt" font-weight="bold">hLargeness</p>
+    <tree>hforty feet tall.</tree>
+    <p font-size="10pt" font-weight="regular">hMale grizzlies can average 900 pounds and 9 feet tall. That's a
+      lot of bear to feed, and they don't mind a little human in the diet!<p>hAnd also cool is the fact that
+      we don't need no damn DTD.</p></p>
+    <note>hOr anything else, for that matter.</note>
+    <p font-size="12pt" font-weight="bold">hAggressiveness</p>
+    <p font-size="10pt" font-weight="regular">hGrizzlies are too large to escape danger by climbing trees;
+      instead, they stand their ground.</p>
+    <p font-size="10pt" font-weight="regular">hAll that being said, humans are still more dangerous than
+      grizzly bears!</p>
+  </chapter>
+
+
+</document>

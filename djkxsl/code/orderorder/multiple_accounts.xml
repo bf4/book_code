@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="streamline.xsl"?>
+<accounts>
+  <account id="100007">
+    <name>
+      <first>Jorge</first>
+      <middle>Luis</middle>
+      <last>Borges</last>
+    </name>
+    <transactions>
+      <transaction id="TR-765432198">
+        <date>
+          <year>1984</year>
+          <month>June</month>
+          <day>6</day>
+          <time>12:00:00</time>
+        </date>
+        <amount>$14.99</amount>
+        <product>B-5643A</product>
+      </transaction>
+      <transaction id="TR-654321987">
+        <date>
+          <year>1966</year>
+          <month>July</month>
+          <day>23</day>
+          <time>23:47:12</time>
+        </date>
+        <amount>$12.95</amount>
+        <product>A-2345B</product>
+      </transaction>
+    </transactions>
+  </account>
+  <account id="100008">
+    <name>
+      <first>Émile</first>
+      <middle>Antoine</middle>
+      <last>Bourdelle</last>
+    </name>
+    <transactions>
+      <transaction id="TR-5432109876">
+        <date>
+          <year>1921</year>
+          <month>April</month>
+          <day>14</day>
+          <time>13:34:53</time>
+        </date>
+        <amount>$12.00</amount>
+        <product>R-9876Y</product>
+      </transaction>
+      <transaction id="TR-4321098765">
+        <date>
+          <year>1898</year>
+          <month>August</month>
+          <day>17</day>
+          <time>08:55:12</time>
+        </date>
+        <amount>$9.50</amount>
+        <product>A-2345B</product>
+      </transaction>
+    </transactions>
+  </account>
+  <account id="100009">
+    <name>
+      <first>William</first>
+      <middle>Carlos</middle>
+      <last>Williams</last>
+    </name>
+    <transactions>
+      <transaction id="TR-3210987654">
+        <date>
+          <year>1945</year>
+          <month>November</month>
+          <day>30</day>
+          <time>11:47:18</time>
+        </date>
+        <amount>$2.00</amount>
+        <product>D-2345T</product>
+      </transaction>
+      <transaction id="TR-21098767543">
+        <date>
+          <year>1962</year>
+          <month>February</month>
+          <day>1</day>
+          <time>10:37:31</time>
+        </date>
+        <amount>$18.50</amount>
+        <product>Z-3215P</product>
+      </transaction>
+    </transactions>
+  </account>
+</accounts>

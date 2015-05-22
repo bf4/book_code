@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="numbered-nodes-1.xsl"?>
+<doc>1
+  <chapter>2
+    <p>3</p>
+    <p>4</p>
+    <p>5
+      <footnote>6</footnote>
+      <footnote>7</footnote>
+    </p>
+  </chapter>
+  <chapter>8
+    <p>9</p>
+    <p>10
+      <footnote>11</footnote>
+      <footnote>12</footnote>
+    </p>
+    <p>13</p>
+  </chapter>
+</doc>

@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="bike-grouping-muenchian-sorted2.xsl"?>
+<bikes>
+  <bike>
+    <brand>Raleigh</brand>
+    <model>Revenio 3.0</model>
+    <price>1199</price>
+    <group>105</group>
+    <shop>REI</shop>
+  </bike>
+  <bike>
+    <brand>Fuji</brand>
+    <model>Roubaix SL</model>
+    <price>1299</price>
+    <group>ultegra</group>
+    <shop>Performance</shop>
+  </bike>
+  <bike>
+    <brand>Felt</brand>
+    <model>F75</model>
+    <price>1399</price>
+    <group>105/ultegra</group>
+    <shop>Flythe</shop>
+  </bike>
+  <bike>
+    <brand>Trek</brand>
+    <model>madone 2.1</model>
+    <price>1429</price>
+    <group>105</group>
+    <shop>Flythe</shop>
+  </bike>
+  <bike>
+    <brand>Diamondback</brand>
+    <model>Podium 4</model>
+    <price>1499</price>
+    <group>ultegra</group>
+    <shop>REI</shop>
+  </bike>
+  <bike>
+    <brand>Cannondale</brand>
+    <model>CAAD10-3</model>
+    <price>1549</price>
+    <group>ultegra</group>
+    <shop>REI/Bicyle Chain</shop>
+  </bike>
+  <bike>
+    <brand>Raleigh</brand>
+    <model>Revenio 4.0</model>
+    <price>1650</price>
+    <group>105/ultegra</group>
+    <shop>REI</shop>
+  </bike>
+  <bike>
+    <brand>Specialized</brand>
+    <model>Allez Race 105</model>
+    <price>1700</price>
+    <group>105</group>
+    <shop>Bicycle Chain</shop>
+  </bike>
+
+  <bike>
+    <brand>Specialized</brand>
+    <model>Allez Comp105</model>
+    <price>1749</price>
+    <group>105</group>
+    <shop>Bicycle Chain</shop>
+  </bike>
+  <bike>
+    <brand>Specialized</brand>
+    <model>Secteur Double</model>
+    <price>850</price>
+    <group>Shimano</group>
+    <shop>Specialized</shop>
+  </bike>
+   <bike>
+    <brand>Specialized</brand>
+    <model>Rockhopper 29</model>
+    <price>700</price>
+    <group>Shimano</group>
+    <shop>Specialized</shop>
+  </bike>
+  <bike>
+    <brand>Specialized</brand>
+    <model>Rockhopper 29</model>
+    <price>880</price>
+    <group>Shimano</group>
+    <shop>controlbike.com</shop>
+  </bike>
+  <bike>
+    <brand>Specialized</brand>
+    <model>Rockhopper 29</model>
+    <price>879.99</price>
+    <group>Shimano</group>
+    <shop>Art's</shop>
+  </bike>
+  <bike>
+    <brand>Specialized</brand>
+    <model>Rockhopper 29</model>
+    <price>1090</price>
+    <group>Shimano</group>
+    <shop>Likes Bikes</shop>
+  </bike>
+  <bike>
+    <brand>KHS</brand>
+    <model>Flite 750</model>
+    <price>1999</price>
+    <group>sram rival</group>
+    <shop>TLC Bikes</shop>
+  </bike>
+</bikes>

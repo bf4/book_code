@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+
+  
+
+
+
+I am number 6 and my preceding nodes are:
+34
+I am number 7 and my preceding nodes are:
+346
+  
+
+
+I am number 11 and my preceding nodes are:
+2
+    3
+    4
+    5
+      6
+      7
+    
+  9
+I am number 12 and my preceding nodes are:
+2
+    3
+    4
+    5
+      6
+      7
+    
+  911

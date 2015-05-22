@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<labels>
+  <label language="en">
+    <substance>
+      <name>Rosuvastatin</name>
+      <form>film-coated tablets</form>
+      <dose>10mg</dose>
+    </substance>
+    <packaging>
+      <date>11 December 2014</date>
+      <type>OUTER CARTON BOTTLE AND LABEL</type>
+    </packaging>
+  </label>
+  <label language="fr">
+    <substance>
+      <name>Rosuvastatin</name>
+      <form>comprimés pelliculés</form>
+      <dose>10mg</dose>
+    </substance>
+    <packaging>
+      <date>11 Décembre 2014</date>
+      <type>EMBALLAGE EXTERIEUR (ETUI FLACON) ET ETIQUETTE FLACON</type>
+    </packaging>
+  </label>
+  <label language="de">
+    <substance>
+      <name>Rosuvastatin</name>
+      <form>Filmtabletten</form>
+      <dose>10mg</dose>
+    </substance>
+    <packaging>
+      <date>11. Dezember 2014</date>
+      <type>FALTSCHACHTEL FLASCHE UND FLASCHENETIKETT</type>
+    </packaging>
+  </label>
+ 
+ ...
+</labels>

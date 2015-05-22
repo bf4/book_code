@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><accounts>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+  <account id="100007" name="Jorge Luis Borges">
+      <transaction>
+        <date>June 6, 1984 12:00:00</date>
+        <amount>$14.99</amount>
+        <product>B-5643A</product>
+      </transaction>
+      <transaction>
+        <date>July 23, 1966 23:47:12</date>
+        <amount>$12.95</amount>
+        <product>A-2345B</product>
+      </transaction>
+    </account>
+ </accounts>

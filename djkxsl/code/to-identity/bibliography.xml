@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="bib1.xsl"?>
+<bibliography id="i54321"> 
+  <book>
+    <author>
+      <given>David</given>
+      <family>Kelly</family>
+    </author>
+    <title>XSLT Jumpstarter: Level the Learning Curve 
+      and Put Your XML to Work</title>
+  </book>
+</bibliography>

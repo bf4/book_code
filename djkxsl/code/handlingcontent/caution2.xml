@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="caution2.xsl"?>
+<caution type="Intergalactic">
+  <paragraph>The potential for intergalactic broadcast while using
+    the <product>AZGuard Protaxis</product> unit 
+    has not yet been determined.</paragraph>
+  
+  <paragraph>Please avoid transmitting information that could place 
+    the human race at risk for alien invasion.</paragraph>
+</caution>

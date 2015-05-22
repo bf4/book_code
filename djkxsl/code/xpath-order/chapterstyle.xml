@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="chapterstyle.xsl"?>
+ <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "../../peloria.dtd">
+<book toc="no" cover="graphics/marble-cover.jpg">
+  <bookmeta>
+    <pagesize>
+      <pageheight>8in</pageheight>
+      <pagewidth>6in</pagewidth>
+    </pagesize>
+    <bookid>P-002</bookid>
+    <fonts>
+      <bodyfont>PT_Serif</bodyfont> <!-- Choice of: dustismo, crimson, baramond, PT_Serif, DroidSerif -->
+      <bodyfontsize>10pt</bodyfontsize>
+      <bodyfontlineheight>15pt</bodyfontlineheight>
+      <poemtitlefont>PT_Serif</poemtitlefont><!-- Choice of: body fonts plus florid -->
+      <poemtitlefontsize>12pt</poemtitlefontsize>
+      <chaptertitlefont>PT_Serif</chaptertitlefont>
+      <chaptertitlefontsize>18pt</chaptertitlefontsize>
+      <othertitlefont>PT_Serif</othertitlefont>
+      <othertitlefontsize>18pt</othertitlefontsize>
+    </fonts>
+  </bookmeta>
+  <chapter>
+    <title>Resituating Conscience</title>
+    <p>Sometime between age fifteen and twenty-one, but only for an instant, the young man strode this way across the grassy esthetic appeal of his college’s campus. At this freshman time of year, he inhaled the electric air with its ozone scents of sacred earth, ancient classrooms, fine-bound books, and genius past. He listened to birdsong, distant carefree laughter, the blatt of a passing jeep, the ho-hoing of dogs at play, the assertive thwomp thwomp-thwomp of a walking basketball, the hypnotic drone of professors wafting from Palladian windows.</p>
+    <p> His feet glided him gently along the stately quadrangled walkways strewn with Autumn's harvest of orange, yellow, red, willing-punk, and holy-dead-brown leaves. Wiley felt happy in this place. Lo, it was a land where woman walked and dinosaurs sang. Dazzling colors vibrated and resonated inside him. Wiley was filled with the delicious substance called Authenticity. He was a genuine college student. He was now part of a great Ivy League tradition. He belonged to these old buildings, this hallowed ground, this holy firmament. Go for it, dude!</p>
+</chapter>
+</book>

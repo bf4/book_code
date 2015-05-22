@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<?xml-stylesheet type="text/xsl" href="number-instruction-1.xsl"?>
+
+<section>                                
+  <title>Examples of XSLT Templates</title>
+  <p>What are some of the more common forms of XSLT templates?</p>
+  <section>                              
+    <title>Simple templates to change tags</title>
+    <example>                         
+      <codeline><xsl:template match="/labels"></codeline>
+      <codeline>  <category></codeline>
+      <codeline>    <xsl:apply-templates select="language"/></codeline>
+      <codeline>  </category></codeline>
+      <codeline></xsl:template></codeline>
+    </example>
+    <example>                         
+      <codeline><xsl:template match="/labels"></codeline>
+      <codeline>  <element name="category"></codeline>
+      <codeline>    <xsl:apply-templates select="language"/></codeline>
+      <codeline>  </element></codeline>
+      <codeline></xsl:template></codeline>
+    </example>
+  </section>
+  <section>                              
+    <title>Base template for identity transform</title>
+    <example>                         
+      <codeline><xsl:template match="/ | * | @*"></codeline>
+      <codeline>  <xsl:copy></codeline>
+      <codeline>    <xsl:apply-templates select=" * | @*"/></codeline>
+      <codeline>  </xsl:copy></codeline>
+      <codeline></xsl:template></codeline>
+      <codeline></codeline>
+    </example>
+  </section> 
+</section>

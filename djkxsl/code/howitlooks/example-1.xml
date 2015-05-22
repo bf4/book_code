@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<sw-library>
+  <package name="ZombieMaker">
+    <invoice>9876543-21</invoice>
+    <licensing>
+      <type>seat</type>
+      <quantity>4</quantity>
+    </licensing>
+    <support>
+      <support_license>
+        <invoice>9876543-21</invoice>
+        <from-date>12/09/2011</from-date>
+        <to-date>12/08/2013</to-date>
+        <maintainer>
+          <name>David Kelly</name>
+          <email>david.kelly@pragprog.com</email>
+        </maintainer>
+      </support_license>
+    </support>
+    <history>
+      <purchased-version date="12/09/2011">2.0</purchased-version>
+      <update-version date="5/12/2012">2.2</update-version>
+      <update-version date="12/3/2012">2.3</update-version>
+    </history>
+    <description>Software application for converting eager, productive programmers into zombies</description>
+    <install-base>
+      <instance serial-number="1234567">
+        <user>Tyrone Slothrop</user>
+        <install-date>12/09/2011</install-date>
+        <deinstall-date></deinstall-date>
+        <status>active</status>
+      </instance>
+      <instance serial-number="2345678">
+        <user>Rodion Raskolnikov</user>
+        <install-date>12/09/2011</install-date>
+        <deinstall-date></deinstall-date>
+        <status>active</status>
+      </instance>
+      <instance serial-number="3456789">
+        <user>Boo Radley</user>
+        <install-date>12/09/2011</install-date>
+        <deinstall-date></deinstall-date>
+        <status>active</status>
+      </instance>
+      <instance serial-number="4567890">
+        <user>Leopold Bloom</user>
+        <install-date>12/09/2011</install-date>
+        <deinstall-date>06/30/2012</deinstall-date>
+        <status>unused</status>
+      </instance>
+    </install-base>
+  </package>
+  
+</sw-library>

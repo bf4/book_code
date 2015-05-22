@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<bibliography>
+  <book tag="Abelson:Wizard">
+    <authors>
+      <author>
+        <given>Harold</given>
+        <family>Abelson</family>
+      </author>
+      <author>
+        <given>Gerald Jay</given>
+        <family>Sussman</family>
+      </author>
+    </authors>
+    <title>Structure and Interpretation of Computer Programs</title>
+    <year>1996</year>
+    <publisher ref="MIT Press"/>
+    <edition>Second</edition>
+    <isbn>0262510871</isbn>
+  </book>
+  <book tag="armstrong:jaerlang2">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Armstrong</family>
+      </author>
+    </authors>
+    <title>Programming Erlang: Software for a Concurrent World</title>
+    <year>2013</year>
+    <publisher ref="Pragmatic Publishers"/>
+    <edition>Second</edition>
+    <isbn>978-1-93778-553-6</isbn>
+    <url>http://www.pragprog.com/titles/jaerlang2/programming-erlang</url>
+  </book>
+  <book tag="burnette:android">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Hello, Android: Introducing Google's Mobile Development Platform</title>
+    <year>2010</year>
+    <publisher ref="Pragmatic Publishers"/>
+    <edition>Third</edition>
+    <isbn>978-1-93435-656-2</isbn>
+    <url>http://www.pragprog.com/titles/eband3/hello-android</url>
+  </book>
+</bibliography>

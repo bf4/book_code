@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "XSL Jumpstarter",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/djkxsl for more book information.
+-->
+<chapter>
+  <title>Grizzlies and People</title>
+  <p>Since the Ice Age, man has feared the great denizens of the north. 
+    But why is that?</p>
+  <section1>
+    <title>Horribleness</title>
+    <p>Grizzlies are so horrible, they are named <emph>Ursus horribilis</emph>.  
+      'Nuff said?</p>
+  </section1>
+  <section1>
+    <title>Largeness</title>
+    <p>Male grizzlies can average 900 pounds and 9 feet tall. That's a lot of bear 
+      to feed, and they don't mind a little human in the diet!</p>
+  </section1>
+  <section1>
+    <title>Aggressiveness</title>
+    <p>Grizzlies are too large to escape danger by climbing trees; instead, they  
+      stand their ground.</p>
+  </section1> 
+  <p>All that being said, humans are still more dangerous than grizzly bears!</p>
+</chapter>
+
