@@ -1,0 +1,4 @@
+%{"httpotion": {:hex, :httpotion, "1.0.0"},
+  "ibrowse": {:git, "git://github.com/cmullaparthi/ibrowse.git", "7871e2ebe8811efb64e1917e2de455fa87e8dfe3", [tag: "v4.1.0"]},
+  "poisen": {:git, "git://github.com/devinus/poison.git", "b0c00b81ae7a0cb890d5de66000b73fa8ab0bae1", []},
+  "poison": {:hex, :poison, "1.3.0"}}
