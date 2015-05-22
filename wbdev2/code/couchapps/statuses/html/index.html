@@ -1,0 +1,49 @@
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev2 for more book information.
+-->
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Sample Application</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src='js/loader.js'></script>
+</head>
+<body>
+    <div class="container">
+      <h1>Awesome Co.</h1>
+      <div id="statuses">
+        <p>Waiting....</p>
+      </div>
+    </div> 
+</body>
+
+<script type="text/template" id="statuses_template">
+{{#status}}
+  <div class="status">
+    <h2>{{value.title}}</h2> 
+    <p>{{value.description}}</p>
+  </div>
+{{/status}}
+</script>
+
+<script>
+$db = $.couch.db("statuses");
+var loadStatusMessages = function(){       
+  $db.view("app/messages",{
+    success: function( statuses ) {              
+        var data = {status: statuses.rows};
+        var template = Handlebars.compile($("#statuses_template").html());
+        var html = template(data);
+        $("#statuses").append(html);
+    }
+  });
+}
+loadStatusMessages();
+</script>
+</html>

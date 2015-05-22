@@ -1,0 +1,20 @@
+.definition .tooltip[aria-hidden='true'] {
+  display: none;
+}
+
+.definition .tooltip[aria-hidden='false'] {
+  display:block ;
+}
+
+
+.definition {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.definition .tooltip {
+  background-color: #ffe;
+  box-shadow: 5px 5px 5px #ddd;
+  padding: 1em;
+  position: absolute;
+}

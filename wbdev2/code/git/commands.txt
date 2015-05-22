@@ -1,0 +1,49 @@
+git config --global user.name "Firstname Lastname" 
+git config --global user.email "your_email@youremail.com"
+
+  git init
+  Initialized empty Git repository in /Users/cjohnson/Sites/git_site/.git/
+
+  git add .
+  git status
+
+  # On branch master
+  #
+  # Initial commit
+  #
+  # Changes to be committed:
+  #   (use "git rm --cached <file>..." to unstage)
+  #
+  #       new file:   index.html
+  #       new file:   javascripts/application.js
+  #       new file:   styles/site.css
+  #
+
+  git commit -a -m"initial commit of files"
+
+  [master (root-commit) 94c75a2] Initial Commit
+  1 files changed, 17 insertions(+), 0 deletions(-)
+  create mode 100644 index.html
+  create mode 100644 javascripts/application.js
+  create mode 100644 styles/site.css
+
+  # On branch master
+  nothing to commit (working directory clean)
+
+  ruby-1.8.7-p302 Bubbles:git_site cjohnson$ git checkout -b layout_a
+  Switched to a new branch 'layout_a'
+
+  # On branch layout_a
+  # Changed but not updated:
+  #   (use "git add <file>..." to update what will be committed)
+  #   (use "git checkout -- <file>..." to discard changes in working directory)
+  #
+  #       modified:   index.html
+  #
+  no changes added to commit (use "git add" and/or "git commit -a")
+
+  git commit -a -m"changed heading to be Layout A"
+  [layout_a 4945221] changed heading to be Layout A
+  1 files changed, 1 insertions(+), 1 deletions(-)
+
+  git checkout master

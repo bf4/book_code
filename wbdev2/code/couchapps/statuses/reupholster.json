@@ -1,0 +1,23 @@
+{
+  couch : {
+    host : "johnsonch.cloudant.com",
+    port : 5984,
+    db : "statuses",
+    username : "johnsonch",
+    password : "kLY8Exy)7eBkTVj"
+  },
+  test-couch : {
+    host : "ecko-it.iriscouch.com",
+    port : "5984",
+    db : "testsample",
+    username : "test"
+  },
+  stages : {
+    qa : {
+      host : "ecko-it.iriscouch.com",
+      port : "5984",
+      db : "sampleqa",
+      username : "test"
+    }
+  }
+}

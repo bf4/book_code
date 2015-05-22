@@ -1,0 +1,26 @@
+{
+  "src_folders": ["test/"],
+  "selenium" : {
+    "start_process" : false,
+    "host" : "hub.browserstack.com",
+    "port" : 80
+  },
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port" : 80,
+      "selenium_host" : "hub.browserstack.com",
+      "silent": true,
+      "desiredCapabilities": {
+        "project": "QEDServer",
+        "browserName": "internet explorer",
+        "version": 10.0,
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "bstinson",
+        "browserstack.key": "abcdefg",
+        "browserstack.local": true
+      }
+    }
+  }
+}

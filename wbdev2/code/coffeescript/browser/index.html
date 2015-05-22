@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev2 for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Products</title>
+  </head>
+  <body>
+    <script src="coffee-script.js"></script>
+    <script type="text/coffeescript">
+      element = document.createElement "p"
+      element.innerHTML = "Click me to see an Alert box"
+
+      element.addEventListener "click", ->
+        alert "This came from clicking the paragraph!"
+
+      document.body.appendChild element
+    </script>
+  </body>
+</html>

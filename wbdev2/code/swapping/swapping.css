@@ -1,0 +1,43 @@
+li.tab {
+  background-color: #DDD;
+  color: #333;
+  cursor: pointer;
+  float: left;
+  font-size: 120%;
+  list-style: none outside none;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80px;
+}
+
+li.tab.selected { background-color: #AAA; }
+
+ul.tabs {
+  font-size: 12px;
+  line-height: 1;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 20;
+  top: 0;
+}
+
+div.language {
+  font-family: "Helvetica", "san-serif";
+  font-size: 16px;
+}
+
+div.languages {
+  background-color: #000;
+  border: 5px solid #DDD;
+  color: #DDD;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-top: 30px;
+  position: relative;
+}

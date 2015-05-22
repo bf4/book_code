@@ -1,0 +1,17 @@
+#widget {
+  display:block;
+  font-size: 12px;
+  height: 370px;
+  overflow-y: scroll;
+  width:230px;
+}
+
+.commit {
+  background-color: #95B4D9;
+  width:200px;
+}
+
+.commit h3 {
+  background-color: #7DA7D9;
+  display:block;
+}

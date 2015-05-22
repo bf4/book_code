@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev2 for more book information.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.eckoit.couchapp</groupId>
+    <artifactId>eckoit-couchapp</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>Ecko-It Couchapp</name>
+    <url>http://eckoit.com</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.googlecode.reupholster</groupId>
+            <artifactId>reupholster</artifactId>
+            <version>0.4.2</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins> 
+            <plugin>
+                <groupId>com.googlecode.reupholster</groupId>
+                <artifactId>maven-reupholster-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                  <execution>
+                    <id>deploy</id>
+                    <phase>compile</phase>
+                    <goals>
+                      <goal>reupholster</goal>
+                    </goals>
+                  </execution>
+                  <execution>
+                    <id>test</id>
+                    <phase>test</phase>
+                    <goals>
+                      <goal>reupholster-test</goal>
+                    </goals>
+                  </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+          <id>reupholster</id>
+          <name>reupholster Repository</name>
+          <url>http://reupholster.googlecode.com/svn/maven</url>
+          <releases>
+           <enabled>true</enabled>
+           <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+           <enabled>true</enabled>
+          </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+      <pluginRepository>
+        <id>reupholster-plugin-snapshots</id>
+        <url>http://reupholster.googlecode.com/svn/maven</url>
+      </pluginRepository>
+    </pluginRepositories>
+</project>

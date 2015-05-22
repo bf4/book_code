@@ -1,0 +1,18 @@
+@media only screen and (min-width: 750px) {
+   body {
+     background-color: #ddd;
+     margin-top: 20px;
+   }
+
+  .container {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #bbb;
+    box-sizing: content-box;
+    padding: 1%;
+  }
+}
+
+.photos{
+  text-align: center;
+}
+

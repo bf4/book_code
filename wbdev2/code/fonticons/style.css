@@ -1,0 +1,40 @@
+body {
+  height: 100%;
+  width: 580px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#header {
+  background-color: #ccc;
+  height: 100px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+#header #logo { font-size: 3em; }
+
+#header #header_navigation {
+  text-align: right;
+  width: 100%;
+}
+#navigation {
+  background-color: black;
+  color: white;
+  float: left;
+  font-size: 1.3em;
+  min-height: 600px;
+  width: 150px;
+}
+
+#navigation li i { margin-right: 5px; }
+
+#content {
+  float: left;
+  margin: 5px;
+  width: 600px;
+}

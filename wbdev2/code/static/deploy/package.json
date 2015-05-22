@@ -1,0 +1,18 @@
+{
+  "name": "awesomeco_deals",
+  "version": "1.0.0",
+  "description": "Our Deals site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian P. Hogan <brianhogan@napcs.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-scp": "^0.1.8"
+  }
+}

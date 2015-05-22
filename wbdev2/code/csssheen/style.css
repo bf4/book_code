@@ -1,0 +1,35 @@
+body {
+  background: #CCC;
+  margin: 0;
+}
+#banner {
+  background: #436999;
+  margin: 0 auto;
+  width: 800px;
+  height: 150px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+#banner img.logo {
+  float: left;
+  padding: 10px;
+  height: 130px;
+}
+
+#banner .sheen {
+  height: 200px;
+  width: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  float: left;
+  position: absolute;
+  left: -100px;
+  top: -25px;
+  box-shadow: 0 0 20px #FFF;
+  -webkit-transform: rotate(20deg);
+  transform:         rotate(20deg);
+
+  transition: all 2s ease-in-out;
+}
+
+#banner.loaded .sheen { left: 900px; }

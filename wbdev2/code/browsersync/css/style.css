@@ -1,0 +1,44 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+
+
+  body {
+    background-color: #ddd;
+  }
+
+  .container {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 1em;
+    width: 80%;
+  }
+
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  nav li {
+    float: left;
+    width: 33%;
+  };
+}

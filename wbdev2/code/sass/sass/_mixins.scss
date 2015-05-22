@@ -1,0 +1,13 @@
+@mixin rounded($radius){
+  background-clip: padding-box;
+  border-radius: $radius;
+}
+
+@mixin gradient($color1, $color2, $alpha1: 100%, $alpha2: 100%){
+  background-image: -webkit-linear-gradient(top, $color1 $alpha1, $color2 $alpha2);
+  background-image: linear-gradient(to bottom, $color1 $alpha1, $color2 $alpha2);
+}
+
+@mixin shadow($x, $y, $offset, $color){
+  box-shadow: $x $y $offset $color;
+}

@@ -1,0 +1,32 @@
+.button {
+  border: 1px solid #282727;
+  background-color: #DBC73C;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Verdana";
+  text-transform: uppercase;
+  font-size: 1.2em;
+  line-height: 1.22em;
+  padding: 6px 20px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  border-radius: 12px;
+  -webkit-box-shadow: 1px 3px 5px #999;
+          box-shadow: 1px 3px 5px #999;
+  background: -webkit-linear-gradient(top, #FFF089, #DBC73C);
+  background:         linear-gradient(to bottom, #FFF089, #DBC73C);
+}
+
+.button:active, .button:focus {
+  color: #000;
+  background: -webkit-linear-gradient(top, #DBC73C, #FFF089);
+  background:         linear-gradient(to bottom, #DBC73C, #FFF089);
+}
+
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input.button { outline: none; }

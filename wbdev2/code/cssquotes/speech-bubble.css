@@ -1,0 +1,38 @@
+blockquote {
+  background-color: #FAF205;
+  background-image: -webkit-linear-gradient(top, #FAF205 20%, #FFFC9C 100%);
+  background-image: linear-gradient(#FAF205 20%, #FFFC9C 100%);
+  border-radius: 20px;
+  padding: 15px 30px;
+  position: relative;
+  margin: 0;
+  width: 225px;
+}
+
+blockquote p {
+  font-size: 1.8em;
+  margin: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+blockquote > cite {
+  bottom: -70px;
+  left: 50px;
+  display: block;
+  font-size: 1.1em;
+  position: absolute;
+}
+
+blockquote:after {
+  border-color: transparent #FFFC9C;
+  border-style: solid;
+  border-width: 0 15px 50px 0px;
+  content: "";
+  display: block;
+  bottom: -50px;
+  left: 40px;
+  position: absolute;
+  width: 0;
+  z-index: 1;
+}

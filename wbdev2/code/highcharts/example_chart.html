@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev2 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example Pie Chart</title>
+  </head>
+  <body>
+    <div id="pie_chart"></div>
+
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+  <script
+    src="http://cdnjs.cloudflare.com/ajax/libs/highcharts/4.0.4/highcharts.js">
+  </script>
+
+  <script>
+    (function($, Highcharts){
+      var chartOptions = {};
+
+      chartOptions.chart = { renderTo: "pie_chart" };
+      chartOptions.title = { text: "A sample pie chart" };
+
+      chartOptions.series = [{
+        type: "pie",
+        name: "Sample chart",
+        data: [
+          ["Section 1", 30],
+          ["Section 2", 50],
+          ["Section 3", 20]
+        ]
+      }];
+
+      var pieChartOptions = {
+        dataLabels: {
+          style: { fontSize: 20 },
+          connectorWidth: 3,
+          formatter: function() {
+            var label = this.point.name + " : " + this.percentage + "%";
+            return label;
+          }
+        }
+      };
+
+      chartOptions.plotOptions = { pie: pieChartOptions };
+
+      var chart = new Highcharts.Chart(chartOptions);
+
+    })(jQuery, Highcharts);
+  </script>
+  </body>
+</html>

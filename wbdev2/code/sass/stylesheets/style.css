@@ -1,0 +1,57 @@
+.button {
+  background-color: #DBC73C;
+  border: 1px solid #282727;
+  color: #000;
+  cursor: pointer;
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.25em;
+  padding: 6px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-clip: padding-box;
+  border-radius: 12px;
+  background-image: -webkit-linear-gradient(top, #FFF089 100%, #DBC73C 100%);
+  background-image: linear-gradient(to bottom, #FFF089 100%, #DBC73C 100%);
+  box-shadow: 1px 3px 5px #555;
+   }
+  .button:active, .button:focus {
+    background-image: -webkit-linear-gradient(top, #DBC73C 100%, #FFF089 100%);
+    background-image: linear-gradient(to bottom, #DBC73C 100%, #FFF089 100%);
+    color: #000; }
+
+input.button {
+  line-height: 1.22em; }
+
+blockquote {
+  background: #FAF205;
+  margin: 0;
+  padding: 15px 30px;
+  position: relative;
+  width: 225px;
+  background-image: -webkit-linear-gradient(top, #FAF205 20%, #FFFC9C 100%);
+  background-image: linear-gradient(to bottom, #FAF205 20%, #FFFC9C 100%);
+  background-clip: padding-box;
+  border-radius: 20px;
+   }
+  blockquote p {
+    font-size: 1.8em;
+    margin: 5px;
+    position: relative;
+    z-index: 10; }
+  blockquote + cite {
+    display: block;
+    font-size: 1.1em;
+    margin: 3em 0 0 3em; }
+  blockquote:after {
+    content: "";
+    border-color: transparent #FFFC9C;
+    border-style: solid;
+    border-width: 0 15px 50px 0px;
+    display: block;
+    bottom: -50px;
+    left: 40px;
+    position: absolute;
+    width: 0;
+    z-index: 1; }

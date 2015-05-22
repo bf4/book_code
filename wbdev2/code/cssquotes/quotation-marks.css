@@ -1,0 +1,46 @@
+blockquote {
+  margin-left: 50px;
+  padding: 5px;
+  position: relative;
+  width: 225px;
+}
+
+blockquote p {
+  font-size: 2.4em;
+  margin: 5px;
+  z-index: 10;
+  position: relative;
+}
+
+blockquote > cite {
+  color: #AAA;
+  display: block;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+blockquote:after, blockquote:before {
+  position: absolute;
+  z-index: 1;
+  font-size: 12em;
+  color: #2ABBD5;
+  text-shadow: 2px 2px 0 #DDD;
+  font-family: serif;
+  height: 0;
+}
+
+blockquote:before {
+  content: "\201C";
+  top: -30px;
+  left: -55px;
+}
+
+blockquote:after {
+  content: "\201D";
+  bottom: 30px;
+  right: 0;
+}
+
+blockquote > cite:before {
+  content: "-- ";
+}

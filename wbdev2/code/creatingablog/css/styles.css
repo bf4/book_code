@@ -1,0 +1,21 @@
+body {
+  background: #DDD;
+  color: #111;
+  font-family: "Verdana", "Arial", sans-serif;
+}
+
+.wrapper {
+  background-color: #FFF;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper > header, .wrapper > section { padding: 1%; }
+
+.wrapper > footer {
+  background-color: #111;
+  color: #DDD;
+  text-align: center;
+}
+
+.wrapper > footer a { color: #DDD; }

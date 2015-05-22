@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ ! Excerpted from "Web Development Recipes",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/wbdev2 for more book information.
+-->
+<testsuites name="qedserver"
+             errors="6"
+             failures="1"
+             tests="7">
+  
+  <testsuite errors="6" failures="1" hostname="" id=""
+    name="Test adding a product" package="qedserver" skipped="5"
+    tests="7" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;body&gt; was visible after 706 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;#notice&gt; contains text: &quot;Created Widget&quot;. Element could not be located.">
+        
+          <failure message="Expected &quot;Created Widget&quot; but got: &quot;null&quot;"></failure>
+        
+        
+      </testcase>
+    
+    
+      <system-err>
+        Unable to locate element: &quot;#main ul li a:first-child&quot; using: css selector
+Unable to locate element: &quot;#product_name&quot; using: css selector
+Unable to locate element: &quot;#product_price&quot; using: css selector
+Unable to locate element: &quot;#product_description&quot; using: css selector
+Unable to locate element: &quot;input[type=submit]&quot; using: css selector
+Unable to locate element: &quot;#notice&quot; using: css selector
+      </system-err>
+    
+    </testsuite>
+  
+</testsuites>

@@ -1,0 +1,30 @@
+.button {
+  background-color: $button_background_color;
+  border: 1px solid $button_border_color;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Verdana";
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.22em;
+  padding: 6px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  @include rounded(12px);
+  @include gradient(#FFF089, #DBC73C);
+  &:active, &:focus {
+    @include gradient(#DBC73C, #FFF089);
+    color: #000;
+  }
+  @include shadow(1px, 3px, 5px, #999);
+}
+
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input.button {
+  outline: none;
+}

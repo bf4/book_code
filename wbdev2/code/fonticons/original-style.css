@@ -1,0 +1,39 @@
+body {
+  height: 100%;
+  width: 580px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#header {
+  background-color: #ccc;
+  height: 100px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+#header #logo { font-size: 3em; }
+
+#header #header_navigation {
+  text-align: right;
+  width: 100%;
+}
+
+#navigation {
+  background-color: #888;
+  float: left;
+  min-height: 600px;
+  width: 150px;
+}
+
+#navigation li i { margin-right: 5px; }
+
+#content{
+  float: left;
+  margin: 5px;
+  width: 600px;
+}

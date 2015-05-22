@@ -1,0 +1,43 @@
+$highlightColor: #900;
+$shadowColor: #ddd;
+
+#container{
+  box-shadow: 5px 5px 5px $shadowColor;
+  border: 1px solid $shadowColor;
+  margin: 0px auto;
+  text-align: center;
+  width: 960px;
+
+  h1 {
+    font-size: 72px;
+
+    &>span.name{
+      color: $highlightColor;
+      display: block;
+    }
+
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  input, label {
+    height: 50px;
+    font-size: 36px;
+  }
+
+  input {
+    border: 1px solid $shadowColor;
+  }
+
+  input[type=submit] {
+    background-color: $highlightColor;
+    color: #fff;
+  }
+
+}
