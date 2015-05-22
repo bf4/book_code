@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<resources>
+
+    <string name="app_name">Suggest</string>
+    <string name="action_settings">Settings</string>
+    <string name="original_hint">Enter partial text</string>
+    <string name="original_label">Original text:</string>
+    <string name="result_label">Suggestions:</string>
+    <string name="working">Working...</string>
+    <string name="error">(Web service error)</string>
+    <string name="interrupted">(Web service interrupted)</string>
+    <string name="no_results">(No suggestions)</string>
+    <string name="eband">Example from
+       <a href="http://pragprog.com/book/eband4">Hello, Android</a>
+       by Ed Burnette</string>
+
+</resources>

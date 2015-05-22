@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<resources>
+    <string name="app_name">UT3</string>
+    <string name="long_app_name">Ultimate Tic Tac Toe</string>
+    <string name="action_settings">Settings</string>
+    <string name="restart_label">Restart</string>
+    <string name="main_menu_label">Main Menu</string>
+    <string name="declare_winner">%1$s is the winner</string>
+    <string name="continue_label">Continue</string>
+    <string name="new_game_label">New Game</string>
+    <string name="about_title">About Ultimate Tic Tac Toe</string>
+    <string name="about_label">About</string>
+    <string name="ok_label">OK</string>
+    <string name="about_text">\
+This game is played just like
+regular Tic Tac Toe with one difference: to win a tile
+you have to win a smaller game of Tic Tac Toe inside that tile.\n\
+\n\
+A tie happens when there are no further moves.
+In the case of a tie in a small board, that will count as a win for
+both sides in the larger game.
+</string>
+</resources>

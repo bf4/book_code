@@ -1,0 +1,30 @@
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<html>
+<head>
+<script language="JavaScript">
+   function callJS(arg) { 
+      document.getElementById('replaceme').innerHTML = arg;
+   }
+</script>
+</head>
+<body>
+<h2>WebView</h2>
+<p>
+<a href="#" onclick="window.alert('Alert from JavaScript')"> 
+   Display JavaScript alert</a>
+</p>
+<p>
+<a href="#" onclick="window.android.callAndroid('Hello from Browser')"> 
+   Call Android from JavaScript</a>
+</p>
+<p id="replaceme"> 
+</p>
+</body>
+</html>

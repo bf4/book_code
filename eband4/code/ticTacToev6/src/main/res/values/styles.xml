@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<resources>
+   <!-- Base application theme. -->
+   <style name="AppTheme"
+          parent="android:Theme.Holo.Light.NoActionBar.Fullscreen">
+      <!-- Customize your theme here. -->
+   </style>
+
+   <style name="TileButton">
+      <item name="android:layout_width">@dimen/tile_size</item>
+      <item name="android:layout_height">@dimen/tile_size</item>
+      <item name="android:layout_margin">@dimen/tile_margin</item>
+      <item name="android:background">#00000000</item>
+      <item name="android:padding">@dimen/tile_padding</item>
+      <item name="android:scaleType">centerCrop</item>
+      <item name="android:src">@drawable/tile</item>
+   </style>
+</resources>

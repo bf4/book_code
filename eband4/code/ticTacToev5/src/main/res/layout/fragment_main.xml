@@ -1,0 +1,53 @@
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:background="@drawable/menu_background"
+   android:elevation="@dimen/elevation_high"
+   android:orientation="vertical"
+   android:padding="@dimen/menu_padding"
+   tools:context=".TicTacToeActivity">
+
+   <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/menu_space"
+      android:text="@string/long_app_name"
+      android:textAppearance="?android:textAppearanceLarge"
+      android:textSize="@dimen/menu_text_size"/>
+
+   <Button
+      android:id="@+id/continue_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/menu_button_margin"
+      android:padding="@dimen/menu_button_padding"
+      android:text="@string/continue_label"/>
+
+   <Button
+      android:id="@+id/new_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_margin="@dimen/menu_button_margin"
+      android:padding="@dimen/menu_button_padding"
+      android:text="@string/new_game_label"/>
+
+   <Button
+      android:id="@+id/about_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_margin="@dimen/menu_button_margin"
+      android:padding="@dimen/menu_button_padding"
+      android:text="@string/about_label"/>
+</LinearLayout>

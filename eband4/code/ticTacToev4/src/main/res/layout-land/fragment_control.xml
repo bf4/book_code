@@ -1,0 +1,33 @@
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:orientation="vertical"
+   android:padding="@dimen/control_padding"
+   tools:context=".GameActivity">
+
+   <Button
+      android:id="@+id/button_restart"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableTop="@drawable/restart"
+      android:elevation="@dimen/elevation_low"
+      android:text="@string/restart_label"/>
+
+   <Button
+      android:id="@+id/button_main"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableTop="@drawable/home"
+      android:elevation="@dimen/elevation_low"
+      android:text="@string/main_menu_label"/>
+</LinearLayout>

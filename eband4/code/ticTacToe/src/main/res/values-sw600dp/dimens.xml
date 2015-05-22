@@ -1,0 +1,18 @@
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<resources>
+   <!-- Default screen margins, per the Android Design guidelines. -->
+   <dimen name="activity_horizontal_margin">16dp</dimen>
+   <dimen name="activity_vertical_margin">16dp</dimen>
+
+   <dimen name="tile_size">50dp</dimen>
+   <dimen name="tile_padding">5dp</dimen>
+   <dimen name="small_board_padding">4dp</dimen>
+   <dimen name="small_board_margin">4dp</dimen>
+</resources>

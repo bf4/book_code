@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<FrameLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:id="@+id/thinking"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:clickable="true"
+   android:visibility="gone"
+   tools:showIn="@layout/game_activity">
+
+   <ProgressBar
+      android:background="@drawable/thinking_background"
+      android:elevation="@dimen/elevation_high"
+      android:layout_marginTop="@dimen/activity_vertical_margin"
+      android:layout_marginLeft="@dimen/activity_vertical_margin"
+      android:layout_width="@dimen/thinking_progress_size"
+      android:layout_height="@dimen/thinking_progress_size"
+      android:indeterminate="true"/>
+</FrameLayout>

@@ -1,0 +1,1 @@
+select * from mytable where(_id=3);

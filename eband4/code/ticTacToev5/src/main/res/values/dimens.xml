@@ -1,0 +1,29 @@
+<!--
+ ! Excerpted from "Hello, Android",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+-->
+<resources>
+   <dimen name="activity_horizontal_margin">8dp</dimen>
+   <dimen name="activity_vertical_margin">8dp</dimen>
+   <dimen name="tile_size">30dp</dimen>
+   <dimen name="tile_margin">0dp</dimen>
+   <dimen name="tile_padding">3dp</dimen>
+   <dimen name="control_padding">20dp</dimen>
+   <dimen name="small_board_padding">2dp</dimen>
+   <dimen name="small_board_margin">2dp</dimen>
+   <dimen name="elevation_low">4dp</dimen>
+   <dimen name="elevation_high">8dp</dimen>
+   <dimen name="thinking_progress_size">50dp</dimen>
+   <dimen name="stroke_width">1dp</dimen>
+   <dimen name="corner_radius">4dp</dimen>
+
+   <dimen name="menu_padding">10dp</dimen>
+   <dimen name="menu_space">10dp</dimen>
+   <dimen name="menu_text_size">32sp</dimen>
+   <dimen name="menu_button_margin">4dp</dimen>
+   <dimen name="menu_button_padding">10dp</dimen>
+</resources>

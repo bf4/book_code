@@ -1,0 +1,1 @@
+select name, phone from mytable where(name like "%smith%");
