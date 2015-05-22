@@ -1,0 +1,13 @@
+fixed,150,2300
+fixed,320,2250
+fixed,150,2100
+fixed,470,2150
+fixed,320,2040
+fixed,600,1750
+fixed,700,2050
+fixed,580,2050
+fixed,750,1740
+fixed,700,2300
+vertical,580,2200,70
+vertical,190,1930,50
+horizontal,450,1830,70
