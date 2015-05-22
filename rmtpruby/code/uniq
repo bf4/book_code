@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+last_line = nil
+
+$stdin.each_line do |line|
+  if $stdin.lineno == 1
+    puts line
+  else
+    puts line unless line == last_line
+  end
+
+  last_line = line
+end

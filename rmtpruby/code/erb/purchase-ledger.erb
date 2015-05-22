@@ -1,0 +1,17 @@
+                                          The Bistro Illegal
+                                                Sector RT 74
+                                                 Lazgar Beta
+
+<%
+Purchase ledger, <%= Time.now.strftime("%B %Y") %>
+
+Generated: <%= Time.now.strftime("%-d %B %Y, %l:%M%P") %>
+<%
+
+Product                                 Units          Price
+
+<% @line_items.each do |item| %>
+<%= "%-40s%5d%15.2f\n" % [item.name, item.units, item.price / 100] %>
+<% end %>
+
+<%= "Total%55.2f" % @total / 100 %>
