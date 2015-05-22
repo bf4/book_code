@@ -1,0 +1,5 @@
+
+scala> number = 7
+<console>:8: error: reassignment to val
+       number = 7
+              ^

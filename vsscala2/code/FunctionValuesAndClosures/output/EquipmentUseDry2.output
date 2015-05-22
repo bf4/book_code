@@ -1,0 +1,21 @@
+/Users/venkats/books/vsscala2/Book/code/FunctionValuesAndClosures/Equipment
+UseDry2.scala:3: error: not found: type Equipment
+val equipment1 = new Equipment(calculator)
+                     ^
+/Users/venkats/books/vsscala2/Book/code/FunctionValuesAndClosures/Equipment
+UseDry2.scala:3: error: missing arguments for method calculator;
+follow this method with `_' if you want to treat it as a partially applied 
+function
+val equipment1 = new Equipment(calculator)
+                               ^
+/Users/venkats/books/vsscala2/Book/code/FunctionValuesAndClosures/Equipment
+UseDry2.scala:4: error: not found: type Equipment
+val equipment2 = new Equipment(calculator)
+                     ^
+/Users/venkats/books/vsscala2/Book/code/FunctionValuesAndClosures/Equipment
+UseDry2.scala:4: error: missing arguments for method calculator;
+follow this method with `_' if you want to treat it as a partially applied 
+function
+val equipment2 = new Equipment(calculator)
+                               ^
+four errors found
