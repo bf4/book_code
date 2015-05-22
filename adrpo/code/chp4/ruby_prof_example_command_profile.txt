@@ -1,0 +1,19 @@
+Thread ID: 69883126035220
+Fiber ID: 69883132260680
+Total: 0.002094
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+ 17.37      0.001     0.000     0.000     0.001        3  *Kernel#gem_original_requi
+ 16.97      0.000     0.000     0.000     0.000        2   Regexp#match 
+ 10.85      0.001     0.000     0.000     0.000        1   <Class::Date>#parse 
+  2.36      0.000     0.000     0.000     0.000      113   Module#method_added 
+  1.83      0.000     0.000     0.000     0.000        6   IO#set_encoding 
+  1.57      0.000     0.000     0.000     0.000        1   String#gsub! 
+  1.23      0.000     0.000     0.000     0.000        6   MonitorMixin#mon_enter 
+  1.16      0.002     0.000     0.000     0.002        2   Global#[No method] 
+  1.12      0.000     0.000     0.000     0.000        3   Array#each 
+  1.07      0.000     0.000     0.000     0.000       49   BasicObject#singleton_met
+  1.03      0.000     0.000     0.000     0.000        6   MonitorMixin#mon_exit 
+
+* indicates recursively called methods

@@ -1,0 +1,10 @@
+<% GC.start %>
+<% GC.disable %>
+
+<% result = Benchmark.realtime do %>
+  <%= render :partial => 'object', :collection => @objects %>
+<% end %>
+
+Rendering time: <%= result %>
+
+<% GC.enable %>

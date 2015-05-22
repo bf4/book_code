@@ -1,0 +1,22 @@
+events: memory
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=String#upcase
+0 10240
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=String#*
+0 11265
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/memprof_app.rb
+fn=Global#[No method]
+12 3
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=String#*
+calls=3 12
+12 11265
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=String#upcase
+calls=1 13
+13 10240
+

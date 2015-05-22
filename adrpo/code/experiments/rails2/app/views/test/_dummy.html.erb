@@ -1,0 +1,12 @@
+<% GC.start %>
+<% GC.disable %>
+
+<% result = Benchmark.realtime do %>
+  <% @objects.each do |object| %>
+    <%= render :partial => 'object', :locals => { :object => object } %>
+  <% end %>
+<% end %>
+
+Rendering time: <%= result %>
+
+<% GC.enable %>

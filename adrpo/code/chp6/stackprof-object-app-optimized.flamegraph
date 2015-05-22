@@ -1,0 +1,8 @@
+flamegraph([
+{"x":0,"y":3,"width":5599241,"frame_id":70301074193840,"frame":"Object#generate_test_data","file":"/home/gremlin/projects/home/adrpo/Book/code/chp6/app_optimized_stackprof.rb"}
+,{"x":5599241,"y":3,"width":550003,"frame_id":70301074193420,"frame":"Object#parse_data","file":"/home/gremlin/projects/home/adrpo/Book/code/chp6/app_optimized_stackprof.rb"}
+,{"x":6149244,"y":3,"width":2,"frame_id":70301074193060,"frame":"Object#find_youngest","file":"/home/gremlin/projects/home/adrpo/Book/code/chp6/app_optimized_stackprof.rb"}
+,{"x":4,"y":4,"width":5599235,"frame_id":70301074193720,"frame":"block in Object#generate_test_data","file":"/home/gremlin/projects/home/adrpo/Book/code/chp6/app_optimized_stackprof.rb"}
+,{"x":5649244,"y":4,"width":500000,"frame_id":70301074193300,"frame":"block in Object#parse_data","file":"/home/gremlin/projects/home/adrpo/Book/code/chp6/app_optimized_stackprof.rb"}
+,{"x":5649244,"y":5,"width":500000,"frame_id":70301074193160,"frame":"Object#parse_row","file":"/home/gremlin/projects/home/adrpo/Book/code/chp6/app_optimized_stackprof.rb"}
+])

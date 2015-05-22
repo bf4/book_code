@@ -1,0 +1,2007 @@
+desc: (none)
+cmd: /home/gremlin/.rbenv/versions/2.2.0/bin/ruby app_optimized4.rb
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=106294113
+mem_heap_B=4647961
+mem_heap_extra_B=1039631
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=180655059
+mem_heap_B=4745627
+mem_heap_extra_B=1056893
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=293779870
+mem_heap_B=4929725
+mem_heap_extra_B=1086619
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=429986582
+mem_heap_B=5060814
+mem_heap_extra_B=1101250
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=573613921
+mem_heap_B=5279114
+mem_heap_extra_B=1138094
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=675958230
+mem_heap_B=5427006
+mem_heap_extra_B=1164026
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=754126735
+mem_heap_B=5569436
+mem_heap_extra_B=1183764
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=851371492
+mem_heap_B=5706346
+mem_heap_extra_B=1207766
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=923080757
+mem_heap_B=5807399
+mem_heap_extra_B=1225465
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1043318484
+mem_heap_B=5972635
+mem_heap_extra_B=1254413
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1121251802
+mem_heap_B=6123204
+mem_heap_extra_B=1272948
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1259549191
+mem_heap_B=6307106
+mem_heap_extra_B=1305158
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1345107188
+mem_heap_B=7458132
+mem_heap_extra_B=1577484
+mem_stacks_B=0
+heap_tree=detailed
+n7: 7458132 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 3411673 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n2: 1789101 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 1781877 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 1781877 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 1781877 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 1781748 0x275468: vm_exec_core (insns.def:1054)
+       n1: 1781748 0x278CD2: vm_exec (vm.c:1407)
+        n1: 1781748 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 1781748 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 1781748 0x2EDF7C: collect_i (enum.c:394)
+           n1: 1781748 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 1781748 0x284B2C: rb_yield (vm.c:832)
+             n1: 1781748 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 1781748 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 1781748 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 1781748 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 1781748 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 1781748 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 1781748 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 1781748 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 1781748 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 1781748 0x2EF203: enum_collect (enum.c:433)
+                       n1: 1781748 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 1781748 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 1781748 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 1781748 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 1781748 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 1781748 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 1781748 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 1781748 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n0: 7224 in 5 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n1: 232920 0x252213: iseq_setup (compile.c:1480)
+   n2: 232920 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n2: 232087 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n1: 116612 0x2563D7: iseq_compile_each (compile.c:995)
+      n2: 116612 0x25381D: iseq_compile_each (compile.c:3305)
+       n1: 114948 0x26332B: rb_iseq_compile_node (compile.c:505)
+        n2: 114948 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+         n1: 104443 0x254E49: iseq_compile_each (compile.c:995)
+          n0: 104443 in 3 places, all below massif's threshold (01.00%)
+         n0: 10505 in 2 places, all below massif's threshold (01.00%)
+       n0: 1664 in 1 place, below massif's threshold (01.00%)
+     n0: 115475 in 11 places, all below massif's threshold (01.00%)
+    n0: 833 in 3 places, all below massif's threshold (01.00%)
+  n1: 218912 0x2521DE: iseq_setup (compile.c:1477)
+   n2: 218912 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n2: 218224 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 109568 in 11 places, all below massif's threshold (01.00%)
+     n1: 108656 0x2563D7: iseq_compile_each (compile.c:995)
+      n2: 108656 0x25381D: iseq_compile_each (compile.c:3305)
+       n1: 107736 0x26332B: rb_iseq_compile_node (compile.c:505)
+        n2: 107736 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+         n1: 98440 0x254E49: iseq_compile_each (compile.c:995)
+          n0: 98440 in 3 places, all below massif's threshold (01.00%)
+         n0: 9296 in 2 places, all below massif's threshold (01.00%)
+       n0: 920 in 1 place, below massif's threshold (01.00%)
+    n0: 688 in 3 places, all below massif's threshold (01.00%)
+  n0: 122164 in 73 places, all below massif's threshold (01.00%)
+ n3: 2124720 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 1667088 0x12BFBA: heap_prepare (gc.c:1537)
+   n6: 1667088 0x153E5B: newobj_of (gc.c:1573)
+    n0: 424944 in 13 places, all below massif's threshold (01.00%)
+    n2: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 294192 in 16 places, all below massif's threshold (01.00%)
+     n1: 98064 0x3018E3: gettable_gen (parse.y:8513)
+      n0: 98064 in 2 places, all below massif's threshold (01.00%)
+    n2: 277848 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n0: 179784 in 4 places, all below massif's threshold (01.00%)
+     n1: 98064 0x2BDFF7: bigdivrem (bignum.c:5933)
+      n0: 98064 in 2 places, all below massif's threshold (01.00%)
+    n2: 245160 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 147096 in 3 places, all below massif's threshold (01.00%)
+     n1: 98064 0x2BE031: bigdivrem (bignum.c:5937)
+      n0: 98064 in 2 places, all below massif's threshold (01.00%)
+    n1: 196128 0x204C82: str_new0 (string.c:549)
+     n0: 196128 in 4 places, all below massif's threshold (01.00%)
+    n1: 130752 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 130752 in 5 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 65376 in 2 places, all below massif's threshold (01.00%)
+ n5: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 352905 in 61 places, all below massif's threshold (01.00%)
+  n2: 214896 0x20388E: st_update (st.c:445)
+   n2: 174048 0x20A383: rb_fstring (string.c:252)
+    n1: 119520 0x221776: intern_str (symbol.c:452)
+     n0: 119520 in 5 places, all below massif's threshold (01.00%)
+    n0: 54528 in 21 places, all below massif's threshold (01.00%)
+   n0: 40848 in 4 places, all below massif's threshold (01.00%)
+  n2: 152736 0x2025F6: st_insert (st.c:445)
+   n2: 92592 0x280C54: rb_method_entry_make (vm_method.c:392)
+    n1: 91296 0x2802E2: rb_add_method (vm_method.c:457)
+     n0: 91296 in 24 places, all below massif's threshold (01.00%)
+    n0: 1296 in 3 places, all below massif's threshold (01.00%)
+   n0: 60144 in 10 places, all below massif's threshold (01.00%)
+  n2: 142320 0x202B59: st_add_direct (st.c:445)
+   n1: 119568 0x22178B: intern_str (symbol.c:425)
+    n0: 119568 in 5 places, all below massif's threshold (01.00%)
+   n0: 22752 in 63 places, all below massif's threshold (01.00%)
+  n1: 109400 0x2802EF: rb_add_method (vm_method.c:458)
+   n0: 109400 in 58 places, all below massif's threshold (01.00%)
+ n3: 451258 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n1: 189360 0x201CEC: st_init_numtable (st.c:227)
+   n0: 189360 in 29 places, all below massif's threshold (01.00%)
+  n1: 160776 0x268B42: rb_iseq_new_with_opt (iseq.c:196)
+   n0: 160776 in 12 places, all below massif's threshold (01.00%)
+  n0: 101122 in 28 places, all below massif's threshold (01.00%)
+ n0: 202005 in 89 places, all below massif's threshold (01.00%)
+ n2: 200027 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 139824 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 138640 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n2: 138640 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 134512 0x2EDF87: collect_i (enum.c:394)
+      n1: 134512 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 134512 0x284B2C: rb_yield (vm.c:832)
+        n1: 134512 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 134512 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 134512 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 134512 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 134512 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 134512 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 134512 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 134512 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 134512 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 134512 0x2EF203: enum_collect (enum.c:433)
+                  n1: 134512 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 134512 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 134512 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 134512 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 134512 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 134512 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 134512 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 134512 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60203 in 12 places, all below massif's threshold (01.00%)
+ n1: 96192 0x14E7AD: gc_mark (gc.c:3434)
+  n1: 96192 0x14EA26: gc_mark_children (gc.c:4155)
+   n1: 96192 0x12C0DD: heap_prepare (gc.c:4271)
+    n2: 96192 0x153E5B: newobj_of (gc.c:1573)
+     n1: 96192 0x20DF5B: rb_str_buf_new (string.c:549)
+      n1: 96192 0x2B11F0: rb_ary_join (array.c:2032)
+       n1: 96192 0x2B15D7: rb_ary_join_m (array.c:2072)
+        n1: 96192 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+         n1: 96192 0x275468: vm_exec_core (insns.def:1054)
+          n1: 96192 0x278CD2: vm_exec (vm.c:1407)
+           n1: 96192 0x27C144: invoke_block_from_c (vm.c:821)
+            n1: 96192 0x27CB96: rb_yield_values2 (vm.c:861)
+             n1: 96192 0x2EDF7C: collect_i (enum.c:394)
+              n1: 96192 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+               n1: 96192 0x284B2C: rb_yield (vm.c:832)
+                n1: 96192 0x18B4BC: int_dotimes (numeric.c:3858)
+                 n1: 96192 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                  n1: 96192 0x27B128: rb_call0 (vm_eval.c:59)
+                   n1: 96192 0x271D92: rb_iterate (vm_eval.c:1098)
+                    n1: 96192 0x271F09: rb_block_call (vm_eval.c:1169)
+                     n1: 96192 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                      n1: 96192 0x27B128: rb_call0 (vm_eval.c:59)
+                       n1: 96192 0x271D92: rb_iterate (vm_eval.c:1098)
+                        n1: 96192 0x271F09: rb_block_call (vm_eval.c:1169)
+                         n1: 96192 0x2EF203: enum_collect (enum.c:433)
+                          n1: 96192 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                           n1: 96192 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                            n1: 96192 0x2754E5: vm_exec_core (insns.def:1024)
+                             n1: 96192 0x278CD2: vm_exec (vm.c:1407)
+                              n0: 96192 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=14
+#-----------
+time=1416296688
+mem_heap_B=7583070
+mem_heap_extra_B=1598746
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1519019692
+mem_heap_B=7714896
+mem_heap_extra_B=1625048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1612496657
+mem_heap_B=7832033
+mem_heap_extra_B=1648639
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1677806220
+mem_heap_B=7979537
+mem_heap_extra_B=1665023
+mem_stacks_B=0
+heap_tree=detailed
+n6: 7979537 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 3891166 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n2: 2268594 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 2261370 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 2261370 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 2261370 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 2261241 0x275468: vm_exec_core (insns.def:1054)
+       n1: 2261241 0x278CD2: vm_exec (vm.c:1407)
+        n1: 2261241 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 2261241 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 2261241 0x2EDF7C: collect_i (enum.c:394)
+           n1: 2261241 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 2261241 0x284B2C: rb_yield (vm.c:832)
+             n1: 2261241 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 2261241 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 2261241 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 2261241 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 2261241 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 2261241 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 2261241 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 2261241 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 2261241 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 2261241 0x2EF203: enum_collect (enum.c:433)
+                       n1: 2261241 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 2261241 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 2261241 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 2261241 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 2261241 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 2261241 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 2261241 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 2261241 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n0: 7224 in 5 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n1: 232920 0x252213: iseq_setup (compile.c:1480)
+   n2: 232920 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n2: 232087 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n1: 116612 0x2563D7: iseq_compile_each (compile.c:995)
+      n2: 116612 0x25381D: iseq_compile_each (compile.c:3305)
+       n1: 114948 0x26332B: rb_iseq_compile_node (compile.c:505)
+        n2: 114948 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+         n1: 104443 0x254E49: iseq_compile_each (compile.c:995)
+          n0: 104443 in 3 places, all below massif's threshold (01.00%)
+         n0: 10505 in 2 places, all below massif's threshold (01.00%)
+       n0: 1664 in 1 place, below massif's threshold (01.00%)
+     n0: 115475 in 11 places, all below massif's threshold (01.00%)
+    n0: 833 in 3 places, all below massif's threshold (01.00%)
+  n1: 218912 0x2521DE: iseq_setup (compile.c:1477)
+   n2: 218912 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n2: 218224 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 109568 in 11 places, all below massif's threshold (01.00%)
+     n1: 108656 0x2563D7: iseq_compile_each (compile.c:995)
+      n2: 108656 0x25381D: iseq_compile_each (compile.c:3305)
+       n1: 107736 0x26332B: rb_iseq_compile_node (compile.c:505)
+        n2: 107736 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+         n1: 98440 0x254E49: iseq_compile_each (compile.c:995)
+          n0: 98440 in 3 places, all below massif's threshold (01.00%)
+         n0: 9296 in 2 places, all below massif's threshold (01.00%)
+       n0: 920 in 1 place, below massif's threshold (01.00%)
+    n0: 688 in 3 places, all below massif's threshold (01.00%)
+  n0: 122164 in 73 places, all below massif's threshold (01.00%)
+ n3: 2157408 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 1699776 0x12BFBA: heap_prepare (gc.c:1537)
+   n6: 1699776 0x153E5B: newobj_of (gc.c:1573)
+    n0: 424944 in 13 places, all below massif's threshold (01.00%)
+    n2: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 294192 in 16 places, all below massif's threshold (01.00%)
+     n1: 98064 0x3018E3: gettable_gen (parse.y:8513)
+      n0: 98064 in 2 places, all below massif's threshold (01.00%)
+    n2: 294192 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n0: 196128 in 5 places, all below massif's threshold (01.00%)
+     n1: 98064 0x2BDFF7: bigdivrem (bignum.c:5933)
+      n0: 98064 in 2 places, all below massif's threshold (01.00%)
+    n2: 245160 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 147096 in 3 places, all below massif's threshold (01.00%)
+     n1: 98064 0x2BE031: bigdivrem (bignum.c:5937)
+      n0: 98064 in 2 places, all below massif's threshold (01.00%)
+    n1: 196128 0x204C82: str_new0 (string.c:549)
+     n0: 196128 in 4 places, all below massif's threshold (01.00%)
+    n1: 147096 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 147096 in 5 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 65376 in 2 places, all below massif's threshold (01.00%)
+ n5: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 352905 in 61 places, all below massif's threshold (01.00%)
+  n2: 214896 0x20388E: st_update (st.c:445)
+   n2: 174048 0x20A383: rb_fstring (string.c:252)
+    n1: 119520 0x221776: intern_str (symbol.c:452)
+     n0: 119520 in 5 places, all below massif's threshold (01.00%)
+    n0: 54528 in 21 places, all below massif's threshold (01.00%)
+   n0: 40848 in 4 places, all below massif's threshold (01.00%)
+  n1: 152736 0x2025F6: st_insert (st.c:445)
+   n0: 152736 in 11 places, all below massif's threshold (01.00%)
+  n2: 142320 0x202B59: st_add_direct (st.c:445)
+   n1: 119568 0x22178B: intern_str (symbol.c:425)
+    n0: 119568 in 5 places, all below massif's threshold (01.00%)
+   n0: 22752 in 63 places, all below massif's threshold (01.00%)
+  n1: 109400 0x2802EF: rb_add_method (vm_method.c:458)
+   n0: 109400 in 58 places, all below massif's threshold (01.00%)
+ n3: 448738 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n1: 189360 0x201CEC: st_init_numtable (st.c:227)
+   n0: 189360 in 29 places, all below massif's threshold (01.00%)
+  n1: 160776 0x268B42: rb_iseq_new_with_opt (iseq.c:196)
+   n0: 160776 in 12 places, all below massif's threshold (01.00%)
+  n0: 98602 in 28 places, all below massif's threshold (01.00%)
+ n2: 267291 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 207088 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 205904 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n2: 205904 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 201776 0x2EDF87: collect_i (enum.c:394)
+      n1: 201776 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 201776 0x284B2C: rb_yield (vm.c:832)
+        n1: 201776 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 201776 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 201776 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 201776 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 201776 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 201776 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 201776 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 201776 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 201776 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 201776 0x2EF203: enum_collect (enum.c:433)
+                  n1: 201776 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 201776 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 201776 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 201776 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 201776 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 201776 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 201776 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 201776 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60203 in 12 places, all below massif's threshold (01.00%)
+ n0: 242677 in 90 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=18
+#-----------
+time=1777081819
+mem_heap_B=8104487
+mem_heap_extra_B=1689953
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1852291994
+mem_heap_B=8192180
+mem_heap_extra_B=1708204
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1956692359
+mem_heap_B=8337361
+mem_heap_extra_B=1733751
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=2039777213
+mem_heap_B=8452275
+mem_heap_extra_B=1753925
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2187127699
+mem_heap_B=8655316
+mem_heap_extra_B=1789516
+mem_stacks_B=0
+heap_tree=detailed
+n6: 8655316 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 4604665 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n2: 2982093 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 2974869 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 2974869 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 2974869 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 2974740 0x275468: vm_exec_core (insns.def:1054)
+       n1: 2974740 0x278CD2: vm_exec (vm.c:1407)
+        n1: 2974740 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 2974740 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 2974740 0x2EDF7C: collect_i (enum.c:394)
+           n1: 2974740 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 2974740 0x284B2C: rb_yield (vm.c:832)
+             n1: 2974740 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 2974740 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 2974740 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 2974740 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 2974740 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 2974740 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 2974740 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 2974740 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 2974740 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 2974740 0x2EF203: enum_collect (enum.c:433)
+                       n1: 2974740 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 2974740 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 2974740 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 2974740 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 2974740 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 2974740 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 2974740 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 2974740 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n0: 7224 in 5 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n1: 232920 0x252213: iseq_setup (compile.c:1480)
+   n2: 232920 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n2: 232087 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n1: 116612 0x2563D7: iseq_compile_each (compile.c:995)
+      n2: 116612 0x25381D: iseq_compile_each (compile.c:3305)
+       n1: 114948 0x26332B: rb_iseq_compile_node (compile.c:505)
+        n1: 114948 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+         n0: 114948 in 3 places, all below massif's threshold (01.00%)
+       n0: 1664 in 1 place, below massif's threshold (01.00%)
+     n0: 115475 in 11 places, all below massif's threshold (01.00%)
+    n0: 833 in 3 places, all below massif's threshold (01.00%)
+  n1: 218912 0x2521DE: iseq_setup (compile.c:1477)
+   n2: 218912 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n2: 218224 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 109568 in 11 places, all below massif's threshold (01.00%)
+     n1: 108656 0x2563D7: iseq_compile_each (compile.c:995)
+      n2: 108656 0x25381D: iseq_compile_each (compile.c:3305)
+       n1: 107736 0x26332B: rb_iseq_compile_node (compile.c:505)
+        n1: 107736 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+         n0: 107736 in 3 places, all below massif's threshold (01.00%)
+       n0: 920 in 1 place, below massif's threshold (01.00%)
+    n0: 688 in 3 places, all below massif's threshold (01.00%)
+  n0: 122164 in 73 places, all below massif's threshold (01.00%)
+ n3: 2157408 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 1699776 0x12BFBA: heap_prepare (gc.c:1537)
+   n6: 1699776 0x153E5B: newobj_of (gc.c:1573)
+    n0: 424944 in 13 places, all below massif's threshold (01.00%)
+    n1: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 392256 in 17 places, all below massif's threshold (01.00%)
+    n1: 294192 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n0: 294192 in 6 places, all below massif's threshold (01.00%)
+    n1: 245160 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 245160 in 4 places, all below massif's threshold (01.00%)
+    n1: 196128 0x204C82: str_new0 (string.c:549)
+     n0: 196128 in 4 places, all below massif's threshold (01.00%)
+    n1: 147096 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 147096 in 5 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 65376 in 2 places, all below massif's threshold (01.00%)
+ n5: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 352905 in 61 places, all below massif's threshold (01.00%)
+  n2: 214896 0x20388E: st_update (st.c:445)
+   n2: 174048 0x20A383: rb_fstring (string.c:252)
+    n1: 119520 0x221776: intern_str (symbol.c:452)
+     n0: 119520 in 5 places, all below massif's threshold (01.00%)
+    n0: 54528 in 21 places, all below massif's threshold (01.00%)
+   n0: 40848 in 4 places, all below massif's threshold (01.00%)
+  n1: 152736 0x2025F6: st_insert (st.c:445)
+   n0: 152736 in 11 places, all below massif's threshold (01.00%)
+  n2: 142320 0x202B59: st_add_direct (st.c:445)
+   n1: 119568 0x22178B: intern_str (symbol.c:425)
+    n0: 119568 in 5 places, all below massif's threshold (01.00%)
+   n0: 22752 in 63 places, all below massif's threshold (01.00%)
+  n1: 109400 0x2802EF: rb_add_method (vm_method.c:458)
+   n0: 109400 in 58 places, all below massif's threshold (01.00%)
+ n3: 443082 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n1: 189360 0x201CEC: st_init_numtable (st.c:227)
+   n0: 189360 in 29 places, all below massif's threshold (01.00%)
+  n1: 160776 0x268B42: rb_iseq_new_with_opt (iseq.c:196)
+   n0: 160776 in 12 places, all below massif's threshold (01.00%)
+  n0: 92946 in 28 places, all below massif's threshold (01.00%)
+ n2: 267291 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 207088 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 205904 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n2: 205904 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 201776 0x2EDF87: collect_i (enum.c:394)
+      n1: 201776 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 201776 0x284B2C: rb_yield (vm.c:832)
+        n1: 201776 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 201776 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 201776 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 201776 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 201776 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 201776 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 201776 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 201776 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 201776 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 201776 0x2EF203: enum_collect (enum.c:433)
+                  n1: 201776 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 201776 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 201776 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 201776 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 201776 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 201776 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 201776 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 201776 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60203 in 12 places, all below massif's threshold (01.00%)
+ n0: 210613 in 90 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=23
+#-----------
+time=2295517329
+mem_heap_B=8801000
+mem_heap_extra_B=1815000
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=2362011003
+mem_heap_B=8892288
+mem_heap_extra_B=1831072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=2462337905
+mem_heap_B=9125336
+mem_heap_extra_B=1854184
+mem_stacks_B=0
+heap_tree=detailed
+n6: 9125336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 4976701 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n2: 3354129 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 3346905 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 3346905 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 3346905 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 3346776 0x275468: vm_exec_core (insns.def:1054)
+       n1: 3346776 0x278CD2: vm_exec (vm.c:1407)
+        n1: 3346776 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 3346776 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 3346776 0x2EDF7C: collect_i (enum.c:394)
+           n1: 3346776 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 3346776 0x284B2C: rb_yield (vm.c:832)
+             n1: 3346776 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 3346776 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 3346776 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 3346776 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 3346776 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 3346776 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 3346776 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 3346776 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 3346776 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 3346776 0x2EF203: enum_collect (enum.c:433)
+                       n1: 3346776 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 3346776 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 3346776 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 3346776 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 3346776 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 3346776 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 3346776 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 3346776 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n0: 7224 in 5 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n1: 232920 0x252213: iseq_setup (compile.c:1480)
+   n2: 232920 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n2: 232087 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n1: 116612 0x2563D7: iseq_compile_each (compile.c:995)
+      n2: 116612 0x25381D: iseq_compile_each (compile.c:3305)
+       n1: 114948 0x26332B: rb_iseq_compile_node (compile.c:505)
+        n1: 114948 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+         n0: 114948 in 3 places, all below massif's threshold (01.00%)
+       n0: 1664 in 1 place, below massif's threshold (01.00%)
+     n0: 115475 in 11 places, all below massif's threshold (01.00%)
+    n0: 833 in 3 places, all below massif's threshold (01.00%)
+  n1: 218912 0x2521DE: iseq_setup (compile.c:1477)
+   n2: 218912 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n1: 218224 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 218224 in 12 places, all below massif's threshold (01.00%)
+    n0: 688 in 3 places, all below massif's threshold (01.00%)
+  n0: 122164 in 73 places, all below massif's threshold (01.00%)
+ n3: 2157408 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 1699776 0x12BFBA: heap_prepare (gc.c:1537)
+   n6: 1699776 0x153E5B: newobj_of (gc.c:1573)
+    n0: 424944 in 13 places, all below massif's threshold (01.00%)
+    n1: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 392256 in 17 places, all below massif's threshold (01.00%)
+    n1: 294192 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n0: 294192 in 6 places, all below massif's threshold (01.00%)
+    n1: 245160 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 245160 in 4 places, all below massif's threshold (01.00%)
+    n1: 196128 0x204C82: str_new0 (string.c:549)
+     n0: 196128 in 4 places, all below massif's threshold (01.00%)
+    n1: 147096 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 147096 in 5 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 65376 in 2 places, all below massif's threshold (01.00%)
+ n4: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 462305 in 62 places, all below massif's threshold (01.00%)
+  n2: 214896 0x20388E: st_update (st.c:445)
+   n2: 174048 0x20A383: rb_fstring (string.c:252)
+    n1: 119520 0x221776: intern_str (symbol.c:452)
+     n0: 119520 in 5 places, all below massif's threshold (01.00%)
+    n0: 54528 in 21 places, all below massif's threshold (01.00%)
+   n0: 40848 in 4 places, all below massif's threshold (01.00%)
+  n1: 152736 0x2025F6: st_insert (st.c:445)
+   n0: 152736 in 11 places, all below massif's threshold (01.00%)
+  n2: 142320 0x202B59: st_add_direct (st.c:445)
+   n1: 119568 0x22178B: intern_str (symbol.c:425)
+    n0: 119568 in 5 places, all below massif's threshold (01.00%)
+   n0: 22752 in 63 places, all below massif's threshold (01.00%)
+ n3: 440170 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n1: 189360 0x201CEC: st_init_numtable (st.c:227)
+   n0: 189360 in 29 places, all below massif's threshold (01.00%)
+  n1: 160776 0x268B42: rb_iseq_new_with_opt (iseq.c:196)
+   n0: 160776 in 12 places, all below massif's threshold (01.00%)
+  n0: 90034 in 28 places, all below massif's threshold (01.00%)
+ n2: 368187 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 307984 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 306800 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n2: 306800 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 302672 0x2EDF87: collect_i (enum.c:394)
+      n1: 302672 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 302672 0x284B2C: rb_yield (vm.c:832)
+        n1: 302672 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 302672 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 302672 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 302672 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 302672 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 302672 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 302672 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 302672 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 302672 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 302672 0x2EF203: enum_collect (enum.c:433)
+                  n1: 302672 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 302672 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 302672 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 302672 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 302672 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 302672 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 302672 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 302672 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60203 in 12 places, all below massif's threshold (01.00%)
+ n0: 210613 in 90 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=26
+#-----------
+time=2576328326
+mem_heap_B=9273671
+mem_heap_extra_B=1880217
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=2647369477
+mem_heap_B=9366969
+mem_heap_extra_B=1896511
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=2781781379
+mem_heap_B=9540807
+mem_heap_extra_B=1927009
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=2886477490
+mem_heap_B=9762113
+mem_heap_extra_B=1945271
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=3012214166
+mem_heap_B=11827648
+mem_heap_extra_B=3206240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=3109925092
+mem_heap_B=11959358
+mem_heap_extra_B=3232458
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=3203842127
+mem_heap_B=12085623
+mem_heap_extra_B=3257577
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=3325447754
+mem_heap_B=12245210
+mem_heap_extra_B=3289174
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=3422159833
+mem_heap_B=12374966
+mem_heap_extra_B=3313858
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=3545546678
+mem_heap_B=12536064
+mem_heap_extra_B=3344600
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=3620484273
+mem_heap_B=12783597
+mem_heap_extra_B=3363107
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=3726898064
+mem_heap_B=12917820
+mem_heap_extra_B=3388996
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=3828839539
+mem_heap_B=13054215
+mem_heap_extra_B=3414465
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=3937786838
+mem_heap_B=13191887
+mem_heap_extra_B=3441089
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=4087206777
+mem_heap_B=13380801
+mem_heap_extra_B=3477439
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=4159488167
+mem_heap_B=13471458
+mem_heap_extra_B=3494934
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=4272100969
+mem_heap_B=13613131
+mem_heap_extra_B=3522157
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=4386013931
+mem_heap_B=13756352
+mem_heap_extra_B=3549656
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=4462055992
+mem_heap_B=13851896
+mem_heap_extra_B=3567984
+mem_stacks_B=0
+heap_tree=detailed
+n6: 13851896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 7731109 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n2: 6108537 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 6101313 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 6101313 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 6101313 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 6101184 0x275468: vm_exec_core (insns.def:1054)
+       n1: 6101184 0x278CD2: vm_exec (vm.c:1407)
+        n1: 6101184 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 6101184 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 6101184 0x2EDF7C: collect_i (enum.c:394)
+           n1: 6101184 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 6101184 0x284B2C: rb_yield (vm.c:832)
+             n1: 6101184 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 6101184 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 6101184 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 6101184 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 6101184 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 6101184 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 6101184 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 6101184 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 6101184 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 6101184 0x2EF203: enum_collect (enum.c:433)
+                       n1: 6101184 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 6101184 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 6101184 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 6101184 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 6101184 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 6101184 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 6101184 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 6101184 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n0: 7224 in 5 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n1: 232920 0x252213: iseq_setup (compile.c:1480)
+   n2: 232920 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n1: 232087 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 232087 in 12 places, all below massif's threshold (01.00%)
+    n0: 833 in 3 places, all below massif's threshold (01.00%)
+  n1: 218912 0x2521DE: iseq_setup (compile.c:1477)
+   n2: 218912 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n1: 218224 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 218224 in 12 places, all below massif's threshold (01.00%)
+    n0: 688 in 3 places, all below massif's threshold (01.00%)
+  n0: 122164 in 73 places, all below massif's threshold (01.00%)
+ n3: 3857184 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 3383208 0x12BFBA: heap_prepare (gc.c:1537)
+   n7: 3383208 0x153E5B: newobj_of (gc.c:1573)
+    n3: 751824 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 277848 in 2 places, all below massif's threshold (01.00%)
+     n1: 245160 0x2BD9EF: rb_big_mul (bignum.c:3176)
+      n0: 245160 in 2 places, all below massif's threshold (01.00%)
+     n1: 228816 0x2BE031: bigdivrem (bignum.c:5937)
+      n0: 228816 in 2 places, all below massif's threshold (01.00%)
+    n0: 702792 in 17 places, all below massif's threshold (01.00%)
+    n3: 702792 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n1: 261504 0x2B8F4A: bigmul0 (bignum.c:5868)
+      n1: 261504 0x2BD9FA: rb_big_mul (bignum.c:5903)
+       n0: 261504 in 4 places, all below massif's threshold (01.00%)
+     n0: 228816 in 4 places, all below massif's threshold (01.00%)
+     n1: 212472 0x2BDFF7: bigdivrem (bignum.c:5933)
+      n0: 212472 in 2 places, all below massif's threshold (01.00%)
+    n1: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 392256 in 17 places, all below massif's threshold (01.00%)
+    n1: 343224 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 343224 in 6 places, all below massif's threshold (01.00%)
+    n2: 245160 0x20E58B: rb_str_resurrect (string.c:549)
+     n1: 228816 0x273A84: vm_exec_core (insns.def:356)
+      n1: 228816 0x278CD2: vm_exec (vm.c:1407)
+       n1: 228816 0x27C144: invoke_block_from_c (vm.c:821)
+        n1: 228816 0x27CB96: rb_yield_values2 (vm.c:861)
+         n1: 228816 0x2EDF7C: collect_i (enum.c:394)
+          n1: 228816 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+           n1: 228816 0x284B2C: rb_yield (vm.c:832)
+            n1: 228816 0x18B4BC: int_dotimes (numeric.c:3858)
+             n1: 228816 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 228816 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 228816 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 228816 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 228816 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                  n1: 228816 0x27B128: rb_call0 (vm_eval.c:59)
+                   n1: 228816 0x271D92: rb_iterate (vm_eval.c:1098)
+                    n1: 228816 0x271F09: rb_block_call (vm_eval.c:1169)
+                     n1: 228816 0x2EF203: enum_collect (enum.c:433)
+                      n1: 228816 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                       n1: 228816 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                        n1: 228816 0x2754E5: vm_exec_core (insns.def:1024)
+                         n1: 228816 0x278CD2: vm_exec (vm.c:1407)
+                          n1: 228816 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                           n1: 228816 0x12EF52: ruby_exec_internal (eval.c:252)
+                            n1: 228816 0x132AEB: ruby_run_node (eval.c:317)
+                             n0: 228816 0x12EAE9: main (main.c:36)
+     n0: 16344 in 1 place, below massif's threshold (01.00%)
+    n1: 245160 0x204C82: str_new0 (string.c:549)
+     n0: 245160 in 5 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 81720 in 2 places, all below massif's threshold (01.00%)
+ n2: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 757361 in 64 places, all below massif's threshold (01.00%)
+  n1: 214896 0x20388E: st_update (st.c:445)
+   n0: 214896 in 5 places, all below massif's threshold (01.00%)
+ n2: 519531 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 459328 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 458144 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n2: 458144 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 454016 0x2EDF87: collect_i (enum.c:394)
+      n1: 454016 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 454016 0x284B2C: rb_yield (vm.c:832)
+        n1: 454016 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 454016 0x2EF203: enum_collect (enum.c:433)
+                  n1: 454016 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 454016 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 454016 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 454016 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 454016 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 454016 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 454016 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 454016 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60203 in 12 places, all below massif's threshold (01.00%)
+ n2: 461450 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n0: 272090 in 29 places, all below massif's threshold (01.00%)
+  n1: 189360 0x201CEC: st_init_numtable (st.c:227)
+   n0: 189360 in 29 places, all below massif's threshold (01.00%)
+ n0: 310365 in 90 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=45
+#-----------
+time=4540279506
+mem_heap_B=13950312
+mem_heap_extra_B=3586816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=4623890435
+mem_heap_B=14046623
+mem_heap_extra_B=3605961
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=4702463442
+mem_heap_B=14145295
+mem_heap_extra_B=3624969
+mem_stacks_B=0
+heap_tree=detailed
+n6: 14145295 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 8055028 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n2: 6432456 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 6425232 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 6425232 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 6425232 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 6425103 0x275468: vm_exec_core (insns.def:1054)
+       n1: 6425103 0x278CD2: vm_exec (vm.c:1407)
+        n1: 6425103 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 6425103 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 6425103 0x2EDF7C: collect_i (enum.c:394)
+           n1: 6425103 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 6425103 0x284B2C: rb_yield (vm.c:832)
+             n1: 6425103 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 6425103 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 6425103 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 6425103 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 6425103 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 6425103 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 6425103 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 6425103 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 6425103 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 6425103 0x2EF203: enum_collect (enum.c:433)
+                       n1: 6425103 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 6425103 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 6425103 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 6425103 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 6425103 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 6425103 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 6425103 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 6425103 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n0: 7224 in 5 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n1: 232920 0x252213: iseq_setup (compile.c:1480)
+   n2: 232920 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n1: 232087 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 232087 in 12 places, all below massif's threshold (01.00%)
+    n0: 833 in 3 places, all below massif's threshold (01.00%)
+  n1: 218912 0x2521DE: iseq_setup (compile.c:1477)
+   n2: 218912 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n1: 218224 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 218224 in 12 places, all below massif's threshold (01.00%)
+    n0: 688 in 3 places, all below massif's threshold (01.00%)
+  n0: 122164 in 73 places, all below massif's threshold (01.00%)
+ n3: 3857184 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 3383208 0x12BFBA: heap_prepare (gc.c:1537)
+   n7: 3383208 0x153E5B: newobj_of (gc.c:1573)
+    n3: 751824 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 277848 in 2 places, all below massif's threshold (01.00%)
+     n1: 245160 0x2BD9EF: rb_big_mul (bignum.c:3176)
+      n0: 245160 in 2 places, all below massif's threshold (01.00%)
+     n1: 228816 0x2BE031: bigdivrem (bignum.c:5937)
+      n0: 228816 in 2 places, all below massif's threshold (01.00%)
+    n0: 702792 in 17 places, all below massif's threshold (01.00%)
+    n3: 702792 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n1: 261504 0x2B8F4A: bigmul0 (bignum.c:5868)
+      n1: 261504 0x2BD9FA: rb_big_mul (bignum.c:5903)
+       n0: 261504 in 4 places, all below massif's threshold (01.00%)
+     n0: 228816 in 4 places, all below massif's threshold (01.00%)
+     n1: 212472 0x2BDFF7: bigdivrem (bignum.c:5933)
+      n0: 212472 in 2 places, all below massif's threshold (01.00%)
+    n1: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 392256 in 17 places, all below massif's threshold (01.00%)
+    n1: 343224 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 343224 in 6 places, all below massif's threshold (01.00%)
+    n2: 245160 0x20E58B: rb_str_resurrect (string.c:549)
+     n1: 228816 0x273A84: vm_exec_core (insns.def:356)
+      n1: 228816 0x278CD2: vm_exec (vm.c:1407)
+       n1: 228816 0x27C144: invoke_block_from_c (vm.c:821)
+        n1: 228816 0x27CB96: rb_yield_values2 (vm.c:861)
+         n1: 228816 0x2EDF7C: collect_i (enum.c:394)
+          n1: 228816 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+           n1: 228816 0x284B2C: rb_yield (vm.c:832)
+            n1: 228816 0x18B4BC: int_dotimes (numeric.c:3858)
+             n1: 228816 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 228816 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 228816 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 228816 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 228816 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                  n1: 228816 0x27B128: rb_call0 (vm_eval.c:59)
+                   n1: 228816 0x271D92: rb_iterate (vm_eval.c:1098)
+                    n1: 228816 0x271F09: rb_block_call (vm_eval.c:1169)
+                     n1: 228816 0x2EF203: enum_collect (enum.c:433)
+                      n1: 228816 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                       n1: 228816 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                        n1: 228816 0x2754E5: vm_exec_core (insns.def:1024)
+                         n1: 228816 0x278CD2: vm_exec (vm.c:1407)
+                          n1: 228816 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                           n1: 228816 0x12EF52: ruby_exec_internal (eval.c:252)
+                            n1: 228816 0x132AEB: ruby_run_node (eval.c:317)
+                             n0: 228816 0x12EAE9: main (main.c:36)
+     n0: 16344 in 1 place, below massif's threshold (01.00%)
+    n1: 245160 0x204C82: str_new0 (string.c:549)
+     n0: 245160 in 5 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 81720 in 2 places, all below massif's threshold (01.00%)
+ n2: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 757361 in 64 places, all below massif's threshold (01.00%)
+  n1: 214896 0x20388E: st_update (st.c:445)
+   n0: 214896 in 5 places, all below massif's threshold (01.00%)
+ n2: 519531 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 459328 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 458144 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n2: 458144 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 454016 0x2EDF87: collect_i (enum.c:394)
+      n1: 454016 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 454016 0x284B2C: rb_yield (vm.c:832)
+        n1: 454016 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 454016 0x2EF203: enum_collect (enum.c:433)
+                  n1: 454016 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 454016 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 454016 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 454016 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 454016 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 454016 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 454016 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 454016 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60203 in 12 places, all below massif's threshold (01.00%)
+ n2: 458986 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n0: 269626 in 29 places, all below massif's threshold (01.00%)
+  n1: 189360 0x201CEC: st_init_numtable (st.c:227)
+   n0: 189360 in 29 places, all below massif's threshold (01.00%)
+ n0: 282309 in 90 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=48
+#-----------
+time=4828305038
+mem_heap_B=17676315
+mem_heap_extra_B=4060773
+mem_stacks_B=0
+heap_tree=detailed
+n7: 17676315 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 10814544 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n3: 8012922 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 6450000 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 6450000 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 6450000 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 6449871 0x275468: vm_exec_core (insns.def:1054)
+       n1: 6449871 0x278CD2: vm_exec (vm.c:1407)
+        n1: 6449871 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 6449871 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 6449871 0x2EDF7C: collect_i (enum.c:394)
+           n1: 6449871 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 6449871 0x284B2C: rb_yield (vm.c:832)
+             n1: 6449871 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 6449871 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 6449871 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 6449871 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 6449871 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 6449871 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 6449871 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 6449871 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 6449871 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 6449871 0x2EF203: enum_collect (enum.c:433)
+                       n1: 6449871 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 6449871 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 6449871 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 6449871 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 6449871 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 6449871 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 6449871 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 6449871 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n1: 1555827 0x2B1186: rb_ary_join (array.c:2044)
+    n1: 1555827 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 1555827 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 1555827 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+       n1: 1555827 0x275468: vm_exec_core (insns.def:1054)
+        n2: 1555827 0x278CD2: vm_exec (vm.c:1407)
+         n1: 1555698 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+          n1: 1555698 0x12EF52: ruby_exec_internal (eval.c:252)
+           n1: 1555698 0x132AEB: ruby_run_node (eval.c:317)
+            n0: 1555698 0x12EAE9: main (main.c:36)
+         n0: 129 in 2 places, all below massif's threshold (01.00%)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+   n0: 7095 in 4 places, all below massif's threshold (01.00%)
+  n2: 1191467 0x204D5D: str_new0 (string.c:578)
+   n2: 1179050 0x214019: rb_str_subseq (string.c:595)
+    n1: 1179050 0x2148EE: rb_str_split_m (string.c:6483)
+     n1: 1179050 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 1179050 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+       n1: 1179050 0x275468: vm_exec_core (insns.def:1054)
+        n1: 1179050 0x278CD2: vm_exec (vm.c:1407)
+         n1: 1179050 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+          n1: 1179050 0x12EF52: ruby_exec_internal (eval.c:252)
+           n1: 1179050 0x132AEB: ruby_run_node (eval.c:317)
+            n0: 1179050 0x12EAE9: main (main.c:36)
+    n0: 0 in 5 places, all below massif's threshold (01.00%)
+   n0: 12417 in 15 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n1: 232920 0x252213: iseq_setup (compile.c:1480)
+   n2: 232920 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n1: 232087 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 232087 in 12 places, all below massif's threshold (01.00%)
+    n0: 833 in 3 places, all below massif's threshold (01.00%)
+  n1: 218912 0x2521DE: iseq_setup (compile.c:1477)
+   n2: 218912 0x26288D: rb_iseq_compile_node (compile.c:567)
+    n1: 218224 0x268BA4: rb_iseq_new_with_opt (iseq.c:454)
+     n0: 218224 in 12 places, all below massif's threshold (01.00%)
+    n0: 688 in 3 places, all below massif's threshold (01.00%)
+  n0: 109747 in 72 places, all below massif's threshold (01.00%)
+ n3: 3857184 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 3383208 0x12BFBA: heap_prepare (gc.c:1537)
+   n7: 3383208 0x153E5B: newobj_of (gc.c:1573)
+    n3: 751824 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 277848 in 2 places, all below massif's threshold (01.00%)
+     n1: 245160 0x2BD9EF: rb_big_mul (bignum.c:3176)
+      n0: 245160 in 2 places, all below massif's threshold (01.00%)
+     n1: 228816 0x2BE031: bigdivrem (bignum.c:5937)
+      n0: 228816 in 2 places, all below massif's threshold (01.00%)
+    n0: 702792 in 17 places, all below massif's threshold (01.00%)
+    n2: 702792 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n0: 441288 in 5 places, all below massif's threshold (01.00%)
+     n1: 261504 0x2B8F4A: bigmul0 (bignum.c:5868)
+      n1: 261504 0x2BD9FA: rb_big_mul (bignum.c:5903)
+       n0: 261504 in 4 places, all below massif's threshold (01.00%)
+    n1: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 392256 in 17 places, all below massif's threshold (01.00%)
+    n1: 343224 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 343224 in 6 places, all below massif's threshold (01.00%)
+    n2: 245160 0x20E58B: rb_str_resurrect (string.c:549)
+     n1: 228816 0x273A84: vm_exec_core (insns.def:356)
+      n1: 228816 0x278CD2: vm_exec (vm.c:1407)
+       n1: 228816 0x27C144: invoke_block_from_c (vm.c:821)
+        n1: 228816 0x27CB96: rb_yield_values2 (vm.c:861)
+         n1: 228816 0x2EDF7C: collect_i (enum.c:394)
+          n1: 228816 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+           n1: 228816 0x284B2C: rb_yield (vm.c:832)
+            n1: 228816 0x18B4BC: int_dotimes (numeric.c:3858)
+             n1: 228816 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 228816 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 228816 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 228816 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 228816 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                  n1: 228816 0x27B128: rb_call0 (vm_eval.c:59)
+                   n1: 228816 0x271D92: rb_iterate (vm_eval.c:1098)
+                    n1: 228816 0x271F09: rb_block_call (vm_eval.c:1169)
+                     n1: 228816 0x2EF203: enum_collect (enum.c:433)
+                      n1: 228816 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                       n1: 228816 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                        n1: 228816 0x2754E5: vm_exec_core (insns.def:1024)
+                         n1: 228816 0x278CD2: vm_exec (vm.c:1407)
+                          n1: 228816 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                           n1: 228816 0x12EF52: ruby_exec_internal (eval.c:252)
+                            n1: 228816 0x132AEB: ruby_run_node (eval.c:317)
+                             n0: 228816 0x12EAE9: main (main.c:36)
+     n0: 16344 in 1 place, below massif's threshold (01.00%)
+    n1: 245160 0x204C82: str_new0 (string.c:549)
+     n0: 245160 in 5 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 81720 in 2 places, all below massif's threshold (01.00%)
+ n2: 973547 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 913344 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 912160 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n3: 912160 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 454016 0x2EDF87: collect_i (enum.c:394)
+      n1: 454016 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 454016 0x284B2C: rb_yield (vm.c:832)
+        n1: 454016 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 454016 0x2EF203: enum_collect (enum.c:433)
+                  n1: 454016 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 454016 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 454016 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 454016 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 454016 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 454016 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 454016 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 454016 0x12EAE9: main (main.c:36)
+     n1: 454016 0x2148FB: rb_str_split_m (string.c:6483)
+      n1: 454016 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 454016 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+        n1: 454016 0x275468: vm_exec_core (insns.def:1054)
+         n1: 454016 0x278CD2: vm_exec (vm.c:1407)
+          n1: 454016 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+           n1: 454016 0x12EF52: ruby_exec_internal (eval.c:252)
+            n1: 454016 0x132AEB: ruby_run_node (eval.c:317)
+             n0: 454016 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60203 in 12 places, all below massif's threshold (01.00%)
+ n1: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 972257 in 65 places, all below massif's threshold (01.00%)
+ n1: 419762 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n0: 419762 in 30 places, all below massif's threshold (01.00%)
+ n1: 404808 0x14E7AD: gc_mark (gc.c:3434)
+  n1: 404808 0x14EA26: gc_mark_children (gc.c:4155)
+   n0: 404808 in 2 places, all below massif's threshold (01.00%)
+ n0: 234213 in 89 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=49
+#-----------
+time=4867405160
+mem_heap_B=20129814
+mem_heap_extra_B=5062114
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=4932718841
+mem_heap_B=21445182
+mem_heap_extra_B=5240434
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=4932758297
+mem_heap_B=21445214
+mem_heap_extra_B=5240442
+mem_stacks_B=0
+heap_tree=detailed
+n7: 21445214 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 11191115 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n3: 8012922 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 6450000 0x2B11F0: rb_ary_join (array.c:2032)
+    n1: 6450000 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 6450000 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 6449871 0x275468: vm_exec_core (insns.def:1054)
+       n1: 6449871 0x278CD2: vm_exec (vm.c:1407)
+        n1: 6449871 0x27C144: invoke_block_from_c (vm.c:821)
+         n1: 6449871 0x27CB96: rb_yield_values2 (vm.c:861)
+          n1: 6449871 0x2EDF7C: collect_i (enum.c:394)
+           n1: 6449871 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+            n1: 6449871 0x284B2C: rb_yield (vm.c:832)
+             n1: 6449871 0x18B4BC: int_dotimes (numeric.c:3858)
+              n1: 6449871 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+               n1: 6449871 0x27B128: rb_call0 (vm_eval.c:59)
+                n1: 6449871 0x271D92: rb_iterate (vm_eval.c:1098)
+                 n1: 6449871 0x271F09: rb_block_call (vm_eval.c:1169)
+                  n1: 6449871 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+                   n1: 6449871 0x27B128: rb_call0 (vm_eval.c:59)
+                    n1: 6449871 0x271D92: rb_iterate (vm_eval.c:1098)
+                     n1: 6449871 0x271F09: rb_block_call (vm_eval.c:1169)
+                      n1: 6449871 0x2EF203: enum_collect (enum.c:433)
+                       n1: 6449871 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                        n1: 6449871 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                         n1: 6449871 0x2754E5: vm_exec_core (insns.def:1024)
+                          n1: 6449871 0x278CD2: vm_exec (vm.c:1407)
+                           n1: 6449871 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                            n1: 6449871 0x12EF52: ruby_exec_internal (eval.c:252)
+                             n1: 6449871 0x132AEB: ruby_run_node (eval.c:317)
+                              n0: 6449871 0x12EAE9: main (main.c:36)
+      n0: 129 in 1 place, below massif's threshold (01.00%)
+   n1: 1555827 0x2B1186: rb_ary_join (array.c:2044)
+    n1: 1555827 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 1555827 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 1555827 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+       n1: 1555827 0x275468: vm_exec_core (insns.def:1054)
+        n2: 1555827 0x278CD2: vm_exec (vm.c:1407)
+         n1: 1555698 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+          n1: 1555698 0x12EF52: ruby_exec_internal (eval.c:252)
+           n1: 1555698 0x132AEB: ruby_run_node (eval.c:317)
+            n0: 1555698 0x12EAE9: main (main.c:36)
+         n0: 129 in 2 places, all below massif's threshold (01.00%)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+   n0: 7095 in 4 places, all below massif's threshold (01.00%)
+  n2: 1568085 0x204D5D: str_new0 (string.c:578)
+   n2: 1555668 0x214019: rb_str_subseq (string.c:595)
+    n1: 1555668 0x2148EE: rb_str_split_m (string.c:6483)
+     n1: 1555668 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 1555668 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+       n1: 1555668 0x275468: vm_exec_core (insns.def:1054)
+        n1: 1555668 0x278CD2: vm_exec (vm.c:1407)
+         n1: 1555668 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+          n1: 1555668 0x12EF52: ruby_exec_internal (eval.c:252)
+           n1: 1555668 0x132AEB: ruby_run_node (eval.c:317)
+            n0: 1555668 0x12EAE9: main (main.c:36)
+    n0: 0 in 5 places, all below massif's threshold (01.00%)
+   n0: 12417 in 15 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n0: 561532 in 74 places, all below massif's threshold (01.00%)
+ n4: 6913512 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 3432240 0x12BFBA: heap_prepare (gc.c:1537)
+   n6: 3432240 0x153E5B: newobj_of (gc.c:1573)
+    n0: 947952 in 18 places, all below massif's threshold (01.00%)
+    n1: 751824 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 751824 in 4 places, all below massif's threshold (01.00%)
+    n1: 702792 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n0: 702792 in 6 places, all below massif's threshold (01.00%)
+    n1: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 392256 in 17 places, all below massif's threshold (01.00%)
+    n1: 343224 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 343224 in 6 places, all below massif's threshold (01.00%)
+    n1: 294192 0x204C82: str_new0 (string.c:549)
+     n0: 294192 in 5 places, all below massif's threshold (01.00%)
+  n4: 3007296 0x153E5B: newobj_of (gc.c:1573)
+   n2: 1961280 0x204C82: str_new0 (string.c:549)
+    n2: 1340208 0x214019: rb_str_subseq (string.c:595)
+     n1: 931608 0x2148EE: rb_str_split_m (string.c:6483)
+      n2: 931608 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 523008 0x275468: vm_exec_core (insns.def:1054)
+        n1: 523008 0x278CD2: vm_exec (vm.c:1407)
+         n1: 523008 0x284B03: rb_yield (vm.c:821)
+          n1: 523008 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+           n1: 523008 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+            n1: 523008 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+             n1: 523008 0x2754E5: vm_exec_core (insns.def:1024)
+              n1: 523008 0x278CD2: vm_exec (vm.c:1407)
+               n1: 523008 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                n1: 523008 0x12EF52: ruby_exec_internal (eval.c:252)
+                 n1: 523008 0x132AEB: ruby_run_node (eval.c:317)
+                  n0: 523008 0x12EAE9: main (main.c:36)
+       n1: 408600 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+        n1: 408600 0x275468: vm_exec_core (insns.def:1054)
+         n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+          n1: 408600 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+           n1: 408600 0x12EF52: ruby_exec_internal (eval.c:252)
+            n1: 408600 0x132AEB: ruby_run_node (eval.c:317)
+             n0: 408600 0x12EAE9: main (main.c:36)
+     n1: 408600 0x21439E: rb_str_split_m (string.c:6541)
+      n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 408600 0x275468: vm_exec_core (insns.def:1054)
+        n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+         n1: 408600 0x284B03: rb_yield (vm.c:821)
+          n1: 408600 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+           n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+            n1: 408600 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+             n1: 408600 0x2754E5: vm_exec_core (insns.def:1024)
+              n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+               n1: 408600 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                n1: 408600 0x12EF52: ruby_exec_internal (eval.c:252)
+                 n1: 408600 0x132AEB: ruby_run_node (eval.c:317)
+                  n0: 408600 0x12EAE9: main (main.c:36)
+    n1: 621072 0x216B3C: rb_str_substr (string.c:595)
+     n1: 621072 0x216D5E: rb_str_aref_m (string.c:3601)
+      n1: 621072 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 621072 0x275468: vm_exec_core (insns.def:1054)
+        n1: 621072 0x278CD2: vm_exec (vm.c:1407)
+         n1: 621072 0x284B03: rb_yield (vm.c:821)
+          n1: 621072 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+           n1: 621072 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+            n1: 621072 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+             n1: 621072 0x2754E5: vm_exec_core (insns.def:1024)
+              n1: 621072 0x278CD2: vm_exec (vm.c:1407)
+               n1: 621072 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                n1: 621072 0x12EF52: ruby_exec_internal (eval.c:252)
+                 n1: 621072 0x132AEB: ruby_run_node (eval.c:317)
+                  n0: 621072 0x12EAE9: main (main.c:36)
+   n1: 424944 0x20E58B: rb_str_resurrect (string.c:549)
+    n1: 424944 0x273A84: vm_exec_core (insns.def:356)
+     n1: 424944 0x278CD2: vm_exec (vm.c:1407)
+      n1: 424944 0x284B03: rb_yield (vm.c:821)
+       n1: 424944 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+        n1: 424944 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+         n1: 424944 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+          n1: 424944 0x2754E5: vm_exec_core (insns.def:1024)
+           n1: 424944 0x278CD2: vm_exec (vm.c:1407)
+            n1: 424944 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+             n1: 424944 0x12EF52: ruby_exec_internal (eval.c:252)
+              n1: 424944 0x132AEB: ruby_run_node (eval.c:317)
+               n0: 424944 0x12EAE9: main (main.c:36)
+   n1: 408600 0x69583DA: d_simple_new_internal (date_core.c:2964)
+    n1: 408600 0x6965EC8: date_s_civil (date_core.c:3415)
+     n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 408600 0x275468: vm_exec_core (insns.def:1054)
+       n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+        n1: 408600 0x284B03: rb_yield (vm.c:821)
+         n1: 408600 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+          n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+           n1: 408600 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+            n1: 408600 0x2754E5: vm_exec_core (insns.def:1024)
+             n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+              n1: 408600 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+               n1: 408600 0x12EF52: ruby_exec_internal (eval.c:252)
+                n1: 408600 0x132AEB: ruby_run_node (eval.c:317)
+                 n0: 408600 0x12EAE9: main (main.c:36)
+   n0: 212472 in 3 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 81720 in 1 place, below massif's threshold (01.00%)
+ n2: 973371 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 913344 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 912160 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n3: 912160 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 454016 0x2EDF87: collect_i (enum.c:394)
+      n1: 454016 0x272567: vm_yield_with_cfunc (vm_insnhelper.c:2008)
+       n1: 454016 0x284B2C: rb_yield (vm.c:832)
+        n1: 454016 0x18B4BC: int_dotimes (numeric.c:3858)
+         n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+          n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+           n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+            n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+             n1: 454016 0x27A52D: vm_call0_body.constprop.73 (vm_eval.c:127)
+              n1: 454016 0x27B128: rb_call0 (vm_eval.c:59)
+               n1: 454016 0x271D92: rb_iterate (vm_eval.c:1098)
+                n1: 454016 0x271F09: rb_block_call (vm_eval.c:1169)
+                 n1: 454016 0x2EF203: enum_collect (enum.c:433)
+                  n1: 454016 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+                   n1: 454016 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+                    n1: 454016 0x2754E5: vm_exec_core (insns.def:1024)
+                     n1: 454016 0x278CD2: vm_exec (vm.c:1407)
+                      n1: 454016 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                       n1: 454016 0x12EF52: ruby_exec_internal (eval.c:252)
+                        n1: 454016 0x132AEB: ruby_run_node (eval.c:317)
+                         n0: 454016 0x12EAE9: main (main.c:36)
+     n1: 454016 0x2148FB: rb_str_split_m (string.c:6483)
+      n1: 454016 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 454016 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+        n1: 454016 0x275468: vm_exec_core (insns.def:1054)
+         n1: 454016 0x278CD2: vm_exec (vm.c:1407)
+          n1: 454016 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+           n1: 454016 0x12EF52: ruby_exec_internal (eval.c:252)
+            n1: 454016 0x132AEB: ruby_run_node (eval.c:317)
+             n0: 454016 0x12EAE9: main (main.c:36)
+     n0: 4128 in 10 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60027 in 12 places, all below massif's threshold (01.00%)
+ n1: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 972257 in 65 places, all below massif's threshold (01.00%)
+ n2: 699090 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n0: 419762 in 30 places, all below massif's threshold (01.00%)
+  n1: 279328 0x69583C5: d_simple_new_internal (date_core.c:2964)
+   n1: 279328 0x6965EC8: date_s_civil (date_core.c:3415)
+    n2: 279328 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+     n1: 279296 0x275468: vm_exec_core (insns.def:1054)
+      n1: 279296 0x278CD2: vm_exec (vm.c:1407)
+       n1: 279296 0x284B03: rb_yield (vm.c:821)
+        n1: 279296 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+         n1: 279296 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+          n1: 279296 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+           n1: 279296 0x2754E5: vm_exec_core (insns.def:1024)
+            n1: 279296 0x278CD2: vm_exec (vm.c:1407)
+             n1: 279296 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+              n1: 279296 0x12EF52: ruby_exec_internal (eval.c:252)
+               n1: 279296 0x132AEB: ruby_run_node (eval.c:317)
+                n0: 279296 0x12EAE9: main (main.c:36)
+     n0: 32 in 1 place, below massif's threshold (01.00%)
+ n1: 404808 0x14E7AD: gc_mark (gc.c:3434)
+  n1: 404808 0x14EA26: gc_mark_children (gc.c:4155)
+   n0: 404808 in 2 places, all below massif's threshold (01.00%)
+ n0: 291061 in 89 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=52
+#-----------
+time=4998078251
+mem_heap_B=21328811
+mem_heap_extra_B=5210501
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=5063395440
+mem_heap_B=15728520
+mem_heap_extra_B=4293040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=5128712149
+mem_heap_B=14728992
+mem_heap_extra_B=4129448
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=5194025152
+mem_heap_B=16427424
+mem_heap_extra_B=5148888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=5259338579
+mem_heap_B=19113632
+mem_heap_extra_B=6479544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=5330949549
+mem_heap_B=20969440
+mem_heap_extra_B=6735272
+mem_stacks_B=0
+heap_tree=peak
+n7: 20969440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 12421440 0x14D8E8: heap_assign_page (gc.c:7163)
+  n1: 8923824 0x12BFBA: heap_prepare (gc.c:1537)
+   n10: 8923824 0x153E5B: newobj_of (gc.c:1573)
+    n3: 3628368 0x204C82: str_new0 (string.c:549)
+     n1: 1748808 0x216B3C: rb_str_substr (string.c:595)
+      n1: 1748808 0x216D5E: rb_str_aref_m (string.c:3601)
+       n1: 1748808 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+        n1: 1748808 0x275468: vm_exec_core (insns.def:1054)
+         n1: 1748808 0x278CD2: vm_exec (vm.c:1407)
+          n1: 1748808 0x284B03: rb_yield (vm.c:821)
+           n1: 1748808 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+            n1: 1748808 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+             n1: 1748808 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+              n1: 1748808 0x2754E5: vm_exec_core (insns.def:1024)
+               n1: 1748808 0x278CD2: vm_exec (vm.c:1407)
+                n1: 1748808 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                 n1: 1748808 0x12EF52: ruby_exec_internal (eval.c:252)
+                  n1: 1748808 0x132AEB: ruby_run_node (eval.c:317)
+                   n0: 1748808 0x12EAE9: main (main.c:36)
+     n3: 1650744 0x214019: rb_str_subseq (string.c:595)
+      n1: 1078704 0x2148EE: rb_str_split_m (string.c:6483)
+       n2: 1078704 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+        n1: 1029672 0x275468: vm_exec_core (insns.def:1054)
+         n1: 1029672 0x278CD2: vm_exec (vm.c:1407)
+          n1: 1029672 0x284B03: rb_yield (vm.c:821)
+           n1: 1029672 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+            n1: 1029672 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+             n1: 1029672 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+              n1: 1029672 0x2754E5: vm_exec_core (insns.def:1024)
+               n1: 1029672 0x278CD2: vm_exec (vm.c:1407)
+                n1: 1029672 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                 n1: 1029672 0x12EF52: ruby_exec_internal (eval.c:252)
+                  n1: 1029672 0x132AEB: ruby_run_node (eval.c:317)
+                   n0: 1029672 0x12EAE9: main (main.c:36)
+        n0: 49032 in 1 place, below massif's threshold (01.00%)
+      n1: 555696 0x21439E: rb_str_split_m (string.c:6541)
+       n1: 555696 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+        n1: 555696 0x275468: vm_exec_core (insns.def:1054)
+         n1: 555696 0x278CD2: vm_exec (vm.c:1407)
+          n1: 555696 0x284B03: rb_yield (vm.c:821)
+           n1: 555696 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+            n1: 555696 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+             n1: 555696 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+              n1: 555696 0x2754E5: vm_exec_core (insns.def:1024)
+               n1: 555696 0x278CD2: vm_exec (vm.c:1407)
+                n1: 555696 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                 n1: 555696 0x12EF52: ruby_exec_internal (eval.c:252)
+                  n1: 555696 0x132AEB: ruby_run_node (eval.c:317)
+                   n0: 555696 0x12EAE9: main (main.c:36)
+      n0: 16344 in 1 place, below massif's threshold (01.00%)
+     n0: 228816 in 4 places, all below massif's threshold (01.00%)
+    n2: 882576 0x20E58B: rb_str_resurrect (string.c:549)
+     n1: 866232 0x273A84: vm_exec_core (insns.def:356)
+      n2: 866232 0x278CD2: vm_exec (vm.c:1407)
+       n1: 637416 0x284B03: rb_yield (vm.c:821)
+        n1: 637416 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+         n1: 637416 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+          n1: 637416 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+           n1: 637416 0x2754E5: vm_exec_core (insns.def:1024)
+            n1: 637416 0x278CD2: vm_exec (vm.c:1407)
+             n1: 637416 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+              n1: 637416 0x12EF52: ruby_exec_internal (eval.c:252)
+               n1: 637416 0x132AEB: ruby_run_node (eval.c:317)
+                n0: 637416 0x12EAE9: main (main.c:36)
+       n0: 228816 in 1 place, below massif's threshold (01.00%)
+     n0: 16344 in 1 place, below massif's threshold (01.00%)
+    n1: 751824 0x2BD81A: rb_uint2big (bignum.c:2981)
+     n0: 751824 in 4 places, all below massif's threshold (01.00%)
+    n1: 702792 0x2B2CF2: bignew_1 (bignum.c:2981)
+     n0: 702792 in 6 places, all below massif's threshold (01.00%)
+    n0: 670104 in 16 places, all below massif's threshold (01.00%)
+    n2: 572040 0x2A8B98: rb_ary_new_from_values (array.c:441)
+     n1: 555696 0x273C76: vm_exec_core (insns.def:428)
+      n2: 555696 0x278CD2: vm_exec (vm.c:1407)
+       n1: 539352 0x284B03: rb_yield (vm.c:821)
+        n1: 539352 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+         n1: 539352 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+          n1: 539352 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+           n1: 539352 0x2754E5: vm_exec_core (insns.def:1024)
+            n1: 539352 0x278CD2: vm_exec (vm.c:1407)
+             n1: 539352 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+              n1: 539352 0x12EF52: ruby_exec_internal (eval.c:252)
+               n1: 539352 0x132AEB: ruby_run_node (eval.c:317)
+                n0: 539352 0x12EAE9: main (main.c:36)
+       n0: 16344 in 1 place, below massif's threshold (01.00%)
+     n0: 16344 in 1 place, below massif's threshold (01.00%)
+    n1: 490320 0x214134: rb_str_split_m (string.c:6403)
+     n1: 490320 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 490320 0x275468: vm_exec_core (insns.def:1054)
+       n1: 490320 0x278CD2: vm_exec (vm.c:1407)
+        n1: 490320 0x284B03: rb_yield (vm.c:821)
+         n1: 490320 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+          n1: 490320 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+           n1: 490320 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+            n1: 490320 0x2754E5: vm_exec_core (insns.def:1024)
+             n1: 490320 0x278CD2: vm_exec (vm.c:1407)
+              n1: 490320 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+               n1: 490320 0x12EF52: ruby_exec_internal (eval.c:252)
+                n1: 490320 0x132AEB: ruby_run_node (eval.c:317)
+                 n0: 490320 0x12EAE9: main (main.c:36)
+    n1: 490320 0x69583DA: d_simple_new_internal (date_core.c:2964)
+     n1: 490320 0x6965EC8: date_s_civil (date_core.c:3415)
+      n1: 490320 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 490320 0x275468: vm_exec_core (insns.def:1054)
+        n1: 490320 0x278CD2: vm_exec (vm.c:1407)
+         n1: 490320 0x284B03: rb_yield (vm.c:821)
+          n1: 490320 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+           n1: 490320 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+            n1: 490320 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+             n1: 490320 0x2754E5: vm_exec_core (insns.def:1024)
+              n1: 490320 0x278CD2: vm_exec (vm.c:1407)
+               n1: 490320 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                n1: 490320 0x12EF52: ruby_exec_internal (eval.c:252)
+                 n1: 490320 0x132AEB: ruby_run_node (eval.c:317)
+                  n0: 490320 0x12EAE9: main (main.c:36)
+    n1: 392256 0x153EB5: rb_node_newnode (gc.c:1718)
+     n0: 392256 in 17 places, all below massif's threshold (01.00%)
+    n1: 343224 0x2BEDB6: rb_int2big (bignum.c:2981)
+     n0: 343224 in 6 places, all below massif's threshold (01.00%)
+  n4: 3007296 0x153E5B: newobj_of (gc.c:1573)
+   n2: 1961280 0x204C82: str_new0 (string.c:549)
+    n2: 1340208 0x214019: rb_str_subseq (string.c:595)
+     n1: 931608 0x2148EE: rb_str_split_m (string.c:6483)
+      n2: 931608 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 523008 0x275468: vm_exec_core (insns.def:1054)
+        n1: 523008 0x278CD2: vm_exec (vm.c:1407)
+         n1: 523008 0x284B03: rb_yield (vm.c:821)
+          n1: 523008 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+           n1: 523008 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+            n1: 523008 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+             n1: 523008 0x2754E5: vm_exec_core (insns.def:1024)
+              n1: 523008 0x278CD2: vm_exec (vm.c:1407)
+               n1: 523008 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                n1: 523008 0x12EF52: ruby_exec_internal (eval.c:252)
+                 n1: 523008 0x132AEB: ruby_run_node (eval.c:317)
+                  n0: 523008 0x12EAE9: main (main.c:36)
+       n1: 408600 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+        n1: 408600 0x275468: vm_exec_core (insns.def:1054)
+         n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+          n1: 408600 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+           n1: 408600 0x12EF52: ruby_exec_internal (eval.c:252)
+            n1: 408600 0x132AEB: ruby_run_node (eval.c:317)
+             n0: 408600 0x12EAE9: main (main.c:36)
+     n1: 408600 0x21439E: rb_str_split_m (string.c:6541)
+      n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 408600 0x275468: vm_exec_core (insns.def:1054)
+        n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+         n1: 408600 0x284B03: rb_yield (vm.c:821)
+          n1: 408600 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+           n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+            n1: 408600 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+             n1: 408600 0x2754E5: vm_exec_core (insns.def:1024)
+              n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+               n1: 408600 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                n1: 408600 0x12EF52: ruby_exec_internal (eval.c:252)
+                 n1: 408600 0x132AEB: ruby_run_node (eval.c:317)
+                  n0: 408600 0x12EAE9: main (main.c:36)
+    n1: 621072 0x216B3C: rb_str_substr (string.c:595)
+     n1: 621072 0x216D5E: rb_str_aref_m (string.c:3601)
+      n1: 621072 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 621072 0x275468: vm_exec_core (insns.def:1054)
+        n1: 621072 0x278CD2: vm_exec (vm.c:1407)
+         n1: 621072 0x284B03: rb_yield (vm.c:821)
+          n1: 621072 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+           n1: 621072 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+            n1: 621072 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+             n1: 621072 0x2754E5: vm_exec_core (insns.def:1024)
+              n1: 621072 0x278CD2: vm_exec (vm.c:1407)
+               n1: 621072 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+                n1: 621072 0x12EF52: ruby_exec_internal (eval.c:252)
+                 n1: 621072 0x132AEB: ruby_run_node (eval.c:317)
+                  n0: 621072 0x12EAE9: main (main.c:36)
+   n1: 424944 0x20E58B: rb_str_resurrect (string.c:549)
+    n1: 424944 0x273A84: vm_exec_core (insns.def:356)
+     n1: 424944 0x278CD2: vm_exec (vm.c:1407)
+      n1: 424944 0x284B03: rb_yield (vm.c:821)
+       n1: 424944 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+        n1: 424944 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+         n1: 424944 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+          n1: 424944 0x2754E5: vm_exec_core (insns.def:1024)
+           n1: 424944 0x278CD2: vm_exec (vm.c:1407)
+            n1: 424944 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+             n1: 424944 0x12EF52: ruby_exec_internal (eval.c:252)
+              n1: 424944 0x132AEB: ruby_run_node (eval.c:317)
+               n0: 424944 0x12EAE9: main (main.c:36)
+   n1: 408600 0x69583DA: d_simple_new_internal (date_core.c:2964)
+    n1: 408600 0x6965EC8: date_s_civil (date_core.c:3415)
+     n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 408600 0x275468: vm_exec_core (insns.def:1054)
+       n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+        n1: 408600 0x284B03: rb_yield (vm.c:821)
+         n1: 408600 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+          n1: 408600 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+           n1: 408600 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+            n1: 408600 0x2754E5: vm_exec_core (insns.def:1024)
+             n1: 408600 0x278CD2: vm_exec (vm.c:1407)
+              n1: 408600 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+               n1: 408600 0x12EF52: ruby_exec_internal (eval.c:252)
+                n1: 408600 0x132AEB: ruby_run_node (eval.c:317)
+                 n0: 408600 0x12EAE9: main (main.c:36)
+   n0: 212472 in 3 places, all below massif's threshold (01.00%)
+  n1: 392256 0x14DCBD: Init_heap (gc.c:1497)
+   n1: 392256 0x13213B: ruby_setup (eval.c:52)
+    n1: 392256 0x132217: ruby_init (eval.c:74)
+     n0: 392256 0x12EAD4: main (main.c:35)
+  n0: 98064 in 1 place, below massif's threshold (01.00%)
+ n4: 4467397 0x155272: ruby_xmalloc2 (gc.c:7351)
+  n2: 1562922 0x20DFA1: rb_str_buf_new (string.c:1004)
+   n1: 1555827 0x2B1186: rb_ary_join (array.c:2044)
+    n1: 1555827 0x2B15D7: rb_ary_join_m (array.c:2072)
+     n2: 1555827 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 1555827 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+       n1: 1555827 0x275468: vm_exec_core (insns.def:1054)
+        n2: 1555827 0x278CD2: vm_exec (vm.c:1407)
+         n1: 1555698 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+          n1: 1555698 0x12EF52: ruby_exec_internal (eval.c:252)
+           n1: 1555698 0x132AEB: ruby_run_node (eval.c:317)
+            n0: 1555698 0x12EAE9: main (main.c:36)
+         n0: 129 in 2 places, all below massif's threshold (01.00%)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+   n0: 7095 in 5 places, all below massif's threshold (01.00%)
+  n2: 1294367 0x204D5D: str_new0 (string.c:578)
+   n2: 1281950 0x214019: rb_str_subseq (string.c:595)
+    n1: 1281950 0x2148EE: rb_str_split_m (string.c:6483)
+     n1: 1281950 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+      n1: 1281950 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+       n1: 1281950 0x275468: vm_exec_core (insns.def:1054)
+        n1: 1281950 0x278CD2: vm_exec (vm.c:1407)
+         n1: 1281950 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+          n1: 1281950 0x12EF52: ruby_exec_internal (eval.c:252)
+           n1: 1281950 0x132AEB: ruby_run_node (eval.c:317)
+            n0: 1281950 0x12EAE9: main (main.c:36)
+    n0: 0 in 5 places, all below massif's threshold (01.00%)
+   n0: 12417 in 15 places, all below massif's threshold (01.00%)
+  n1: 1048576 0x26F928: th_init (vm.c:1989)
+   n1: 1048576 0x28717A: Init_BareVM (vm.c:2801)
+    n1: 1048576 0x132136: ruby_setup (eval.c:51)
+     n1: 1048576 0x132217: ruby_init (eval.c:74)
+      n0: 1048576 0x12EAD4: main (main.c:35)
+  n0: 561532 in 74 places, all below massif's threshold (01.00%)
+ n2: 1854802 0x1553E7: ruby_xcalloc (gc.c:7443)
+  n1: 1435040 0x69583C5: d_simple_new_internal (date_core.c:2964)
+   n1: 1435040 0x6965EC8: date_s_civil (date_core.c:3415)
+    n2: 1435040 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+     n1: 1435008 0x275468: vm_exec_core (insns.def:1054)
+      n1: 1435008 0x278CD2: vm_exec (vm.c:1407)
+       n1: 1435008 0x284B03: rb_yield (vm.c:821)
+        n1: 1435008 0x2ADB77: rb_ary_collect_bang (array.c:2730)
+         n1: 1435008 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+          n1: 1435008 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+           n1: 1435008 0x2754E5: vm_exec_core (insns.def:1024)
+            n1: 1435008 0x278CD2: vm_exec (vm.c:1407)
+             n1: 1435008 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+              n1: 1435008 0x12EF52: ruby_exec_internal (eval.c:252)
+               n1: 1435008 0x132AEB: ruby_run_node (eval.c:317)
+                n0: 1435008 0x12EAE9: main (main.c:36)
+     n0: 32 in 1 place, below massif's threshold (01.00%)
+  n0: 419762 in 30 places, all below massif's threshold (01.00%)
+ n1: 972257 0x1550F8: ruby_xmalloc (gc.c:7351)
+  n0: 972257 in 65 places, all below massif's threshold (01.00%)
+ n2: 519355 0x1531EA: objspace_xrealloc.isra.71 (gc.c:7385)
+  n2: 459328 0x2A2E8F: ary_resize_capa (array.c:216)
+   n1: 458144 0x2A9B19: ary_ensure_room_for_push (array.c:382)
+    n2: 458144 0x2A9BCD: rb_ary_push (array.c:909)
+     n1: 454016 0x2148FB: rb_str_split_m (string.c:6483)
+      n1: 454016 0x26FFAC: vm_call_cfunc (vm_insnhelper.c:1360)
+       n1: 454016 0x27E26C: vm_call_method (vm_insnhelper.c:1656)
+        n1: 454016 0x275468: vm_exec_core (insns.def:1054)
+         n1: 454016 0x278CD2: vm_exec (vm.c:1407)
+          n1: 454016 0x2858C1: rb_iseq_eval_main (vm.c:1677)
+           n1: 454016 0x12EF52: ruby_exec_internal (eval.c:252)
+            n1: 454016 0x132AEB: ruby_run_node (eval.c:317)
+             n0: 454016 0x12EAE9: main (main.c:36)
+     n0: 4128 in 11 places, all below massif's threshold (01.00%)
+   n0: 1184 in 1 place, below massif's threshold (01.00%)
+  n0: 60027 in 12 places, all below massif's threshold (01.00%)
+ n0: 393509 in 89 places, all below massif's threshold (01.00%)
+ n1: 340680 0x14E7AD: gc_mark (gc.c:3434)
+  n1: 340680 0x14EA26: gc_mark_children (gc.c:4155)
+   n0: 340680 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=58
+#-----------
+time=5461008446
+mem_heap_B=21130360
+mem_heap_extra_B=6776584
+mem_stacks_B=0
+heap_tree=empty

@@ -1,0 +1,26 @@
+Call tree for application app.rb
+Generated on 2014-10-02 08:53:27 -0500 with options {}
+Threshold: [1.0] [Apply] [Expand All] [Collapse All] [Show Help]
+Thread: 70137029546800, Fiber: 70137039955760 (100.00% ~ 1.8829480049999994)
+    * [-] 100.00% (100.00%) Global#[No_method] [1 calls, 1 total]
+          o [-] 94.39% (94.39%) Object#parse_data [1 calls, 1 total]
+                # [-] 93.83% (99.41%) Array#map! [1 calls, 50002 total]
+                      # [-] 90.67% (96.63%) Object#parse_row [50000 calls,
+                        50000 total]
+                            # [-] 81.45% (89.84%) Array#map! [50000 calls,
+                              50002 total]
+                                  # [-] 71.88% (88.25%) Object#parse_col
+                                    [150000 calls, 150000 total]
+                                        # [-] 42.79% (59.52%) <Class::
+                                          Date>#parse [50000 calls, 50000 total]
+                                        # [ ] 1.76% (2.45%) String#to_i
+                                          [50000 calls, 50000 total]
+                            # [ ] 4.10% (4.52%) String#split [50000 calls,
+                              50001 total]
+                # [ ] 0.56% (0.59%) String#split [1 calls, 50001 total]
+          o [+] 5.61% (5.61%) Object#find_youngest [1 calls, 1 total]
+                # [+] 3.98% (70.93%) Enumerable#max [1 calls, 1 total]
+                      # [+] 3.98% (99.98%) Array#each [1 calls, 1 total]
+                            # [ ] 2.11% (52.96%) Date#<=> [49999 calls,
+                              49999 total]
+                # [ ] 1.63% (29.06%) Array#map! [1 calls, 50002 total]

@@ -1,0 +1,1814 @@
+events: process_time
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#concat
+0 16261
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+fn=ActiveSupport::SafeBuffer#concat
+172 50045
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#html_safe?
+calls=20000 173
+173 51411
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#concat
+calls=10000 174
+174 16261
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/buffers.rb
+fn=ActionView::OutputBuffer#<<
+10 51787
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#nil?
+calls=10000 11
+11 11010
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#to_s
+calls=10000 12
+12 16646
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#concat
+calls=10000 12
+12 117718
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Mutex#unlock
+0 10224
+
+fl=/usr/lib64/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_check_owner
+244 24003
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Thread>#current
+calls=10000 245
+245 8601
+
+fl=/usr/lib64/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_exit
+194 65722
+cfl=/usr/lib64/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=10000 195
+195 32603
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Mutex#unlock
+calls=10000 199
+199 10224
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=IO#write
+0 133124
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Mutex#lock
+0 11922
+
+fl=/usr/lib64/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_enter
+183 48115
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Thread>#current
+calls=20000 186
+186 12361
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Mutex#lock
+calls=10000 185
+185 11922
+
+fl=/usr/lib64/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_synchronize
+208 75885
+cfl=/usr/lib64/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_enter
+calls=10000 209
+209 72398
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=IO#write
+calls=10000 568
+568 135543
+cfl=/usr/lib64/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_exit
+calls=10000 213
+213 108550
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger::LogDevice#write
+557 25668
+cfl=/usr/lib64/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_synchronize
+calls=10000 559
+559 392377
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger::Formatter#msg2str
+520 25327
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Module#===
+calls=10000 521
+521 8665
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#%
+0 90828
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=NilClass#to_s
+calls=10000 507
+507 9933
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Time#usec
+0 26863
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#divmod
+calls=20000 514
+514 14478
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#*
+calls=10000 514
+514 6290
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Fixnum#divmod
+0 32484
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Bignum#<=>
+0 15345
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Fixnum#<=>
+0 17013
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Fixnum#*
+0 49900
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Time#strftime
+0 198198
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#*
+calls=40000 514
+514 43611
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#<=>
+calls=20000 514
+514 17013
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Bignum#<=>
+calls=20000 514
+514 15345
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#divmod
+calls=20000 514
+514 18006
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger::Formatter#format_datetime
+512 56566
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=NilClass#nil?
+calls=10000 513
+513 6714
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Time#strftime
+calls=10000 514
+514 292172
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Time#usec
+calls=10000 514
+514 47631
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#%
+calls=10000 514
+514 40930
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger::Formatter#call
+505 45785
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#[]
+calls=10000 507
+507 16224
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger::Formatter#format_datetime
+calls=10000 507
+507 444014
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger::Formatter#msg2str
+calls=10000 507
+507 33993
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#%
+calls=10000 507
+507 59831
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=NilClass#to_s
+0 18134
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/tagged_logging.rb
+fn=ActiveSupport::TaggedLogging::Formatter#current_tags
+45 25275
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Thread>#current
+calls=10000 46
+46 7205
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Thread#[]
+calls=10000 46
+46 9276
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/tagged_logging.rb
+fn=ActiveSupport::TaggedLogging::Formatter#tags_text
+50 31484
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/tagged_logging.rb
+cfn=ActiveSupport::TaggedLogging::Formatter#current_tags
+calls=10000 51
+51 41756
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Enumerable#any?
+calls=10000 52
+52 25494
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/tagged_logging.rb
+fn=ActiveSupport::TaggedLogging::Formatter#call
+20 41335
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/tagged_logging.rb
+cfn=ActiveSupport::TaggedLogging::Formatter#tags_text
+calls=10000 21
+21 98734
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=NilClass#to_s
+calls=10000 21
+21 8201
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger::Formatter#call
+calls=10000 21
+21 599847
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger#format_message
+490 24977
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/tagged_logging.rb
+cfn=ActiveSupport::TaggedLogging::Formatter#call
+calls=10000 491
+491 748116
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger#format_severity
+486 12439
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=NilClass#nil?
+0 13525
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger#add
+363 104824
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#nil?
+calls=10000 365
+365 8773
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=NilClass#nil?
+calls=10000 369
+369 6811
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#block_given?
+calls=10000 370
+370 7652
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger#format_severity
+calls=10000 377
+377 12439
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#now
+calls=10000 377
+377 57546
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger#format_message
+calls=10000 377
+377 773094
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger::LogDevice#write
+calls=10000 377
+377 418045
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger#info
+433 20397
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger#add
+calls=10000 434
+434 1389183
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/log_subscriber.rb
+fn=ActiveSupport::LogSubscriber#info
+92 37737
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=20000 93
+93 59219
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger#info
+calls=10000 93
+93 1409580
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Float#to_default_s
+0 30048
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Float#round
+0 16768
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Fixnum#fdiv
+0 8479
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Rational#to_f
+0 13408
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#fdiv
+calls=10000 218
+218 8479
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Rational#/
+0 14102
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Numeric#quo
+0 15819
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Rational#/
+calls=10000 218
+218 14102
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Fixnum#-
+0 7051
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Time#minus_without_duration
+0 41434
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#-
+calls=10000 218
+218 7051
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Numeric#quo
+calls=10000 218
+218 29921
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Rational#to_f
+calls=10000 218
+218 21887
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/duration.rb
+fn=<Class::ActiveSupport::Duration>#===
+56 16783
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#is_a?
+calls=10000 57
+57 7091
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/time/calculations.rb
+fn=Time#minus_with_duration
+214 30263
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/duration.rb
+cfn=<Class::ActiveSupport::Duration>#===
+calls=10000 215
+215 23874
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Time#minus_without_duration
+calls=10000 218
+218 100293
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#is_a?
+0 30359
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#respond_to_missing?
+0 6708
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#respond_to?
+0 17785
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=10000 228
+228 6708
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/time/calculations.rb
+fn=Time#minus_with_coercion
+227 41332
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#respond_to?
+calls=10000 228
+228 24492
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#is_a?
+calls=10000 229
+229 13633
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/time/calculations.rb
+cfn=Time#minus_with_duration
+calls=10000 229
+229 154430
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Event#duration
+60 33004
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/time/calculations.rb
+cfn=Time#minus_with_coercion
+calls=10000 61
+61 233888
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#sub!
+0 22247
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#sub
+0 64953
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+fn=ActionView::LogSubscriber#rails_root
+38 13194
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+fn=ActionView::LogSubscriber#from_rails_root
+32 44385
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#rails_root
+calls=10000 33
+33 13194
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#sub
+calls=10000 33
+33 64953
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#sub!
+calls=10000 34
+34 22247
+
+fl=/usr/lib64/ruby/1.9.1/logger.rb
+fn=Logger#info?
+272 13182
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+fn=ActionView::LogSubscriber#render_template
+15 112447
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=10000 16
+16 31929
+cfl=/usr/lib64/ruby/1.9.1/logger.rb
+cfn=Logger#info?
+calls=10000 16
+16 13182
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#from_rails_root
+calls=10000 17
+17 144779
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Event#duration
+calls=10000 19
+19 266892
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Float#round
+calls=10000 19
+19 16768
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#render_template
+calls=10000 19
+19 78895
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/log_subscriber.rb
+cfn=ActiveSupport::LogSubscriber#info
+calls=10000 20
+20 1506536
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#is_a?
+calls=10000 125
+125 9635
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Float#to_default_s
+calls=10000 131
+131 30048
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Hash#merge!
+0 13502
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+fn=ActiveSupport::Subscriber#finish
+93 96403
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#now
+calls=10000 94
+94 56972
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+cfn=ActiveSupport::Subscriber#event_stack
+calls=10000 95
+95 83833
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#pop
+calls=10000 95
+95 10493
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#merge!
+calls=10000 97
+97 13502
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#split
+calls=10000 99
+99 24549
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#first
+calls=10000 99
+99 8733
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#render_template
+calls=10000 100
+100 2171427
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/log_subscriber.rb
+fn=ActiveSupport::LogSubscriber#finish
+82 33369
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=10000 83
+83 31036
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+cfn=ActiveSupport::Subscriber#finish
+calls=10000 83
+83 2465911
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout::Subscribers::Evented#finish
+95 22768
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/log_subscriber.rb
+cfn=ActiveSupport::LogSubscriber#finish
+calls=10000 96
+96 2530317
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#finish
+39 25886
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listeners_for
+calls=10000 40
+40 57877
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 40
+40 2581320
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Instrumenter#finish
+35 21255
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#finish
+calls=10000 36
+36 2665083
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+fn=ActiveSupport::SafeBuffer#to_s
+200 27862
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#encode!
+0 20903
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#initialize
+0 7901
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+fn=ActiveSupport::SafeBuffer#initialize
+158 36696
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#initialize
+calls=10000 160
+160 7901
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/buffers.rb
+fn=ActionView::OutputBuffer#initialize
+5 33319
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#initialize
+calls=10000 6
+6 44596
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#encode!
+calls=10000 7
+7 20903
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::String>#allocate
+0 8299
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/app/views/test/_object.html.erb
+fn=ActionView::CompiledTemplates#_app_views_test__object_html_erb___784021683092918869_15499800
+0 77501
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Class#new
+calls=10000 1
+1 133216
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#freeze
+calls=10000 1
+1 8355
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/buffers.rb
+cfn=ActionView::OutputBuffer#safe_concat
+calls=10000 1
+1 115560
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#to_s
+calls=10000 3
+3 11216
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+fn=ActionView::Template#method_name
+329 13329
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+fn=ActionView::Template#compile!
+226 11625
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+fn=ActionView::Template#instrument
+337 43200
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications.rb
+cfn=<Module::ActiveSupport::Notifications>#instrument
+calls=10000 339
+339 564949
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+fn=ActionView::Template#render
+142 34577
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+cfn=ActionView::Template#instrument
+calls=10000 143
+143 608149
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Hash#[]=
+0 8957
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#render_partial
+295 104118
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#[]=
+calls=10000 304
+304 8957
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+cfn=ActionView::Template#render
+calls=10000 306
+306 642726
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#push
+0 7666
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Event#<<
+64 15155
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#last
+0 7078
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+fn=ActiveSupport::SubscriberQueueRegistry#get_queue
+121 43733
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+fn=ActiveSupport::Subscriber#event_stack
+105 70905
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/per_thread_registry.rb
+cfn=ActiveSupport::PerThreadRegistry#instance
+calls=20000 106
+106 82058
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+cfn=ActiveSupport::SubscriberQueueRegistry#get_queue
+calls=20000 106
+106 29461
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/per_thread_registry.rb
+cfn=ActiveSupport::PerThreadRegistry#instance
+calls=10000 106
+106 45926
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+cfn=ActiveSupport::SubscriberQueueRegistry#get_queue
+calls=10000 106
+106 14272
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Hash#initialize_copy
+0 18127
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#initialize_dup
+0 13267
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#initialize_copy
+calls=10000 52
+52 18127
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::Hash>#allocate
+0 7212
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#dup
+0 22715
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=10000 52
+52 7212
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=10000 52
+52 31394
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Event#initialize
+50 61274
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#dup
+calls=10000 52
+52 61321
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Fixnum#+
+0 24320
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Time#initialize
+0 54748
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#+
+calls=10000 86
+86 8537
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#+
+calls=10000 94
+94 7422
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#+
+calls=10000 378
+378 8361
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::Time>#allocate
+0 31068
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::Time>#now
+0 65183
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=10000 86
+86 10960
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Time#initialize
+calls=10000 86
+86 27465
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=10000 94
+94 9998
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Time#initialize
+calls=10000 94
+94 25700
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=10000 378
+378 10110
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Time#initialize
+calls=10000 378
+378 25904
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+fn=ActiveSupport::Subscriber#start
+85 69933
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#now
+calls=10000 86
+86 60802
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Class#new
+calls=10000 86
+86 154305
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+cfn=ActiveSupport::Subscriber#event_stack
+calls=20000 90
+90 158789
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#last
+calls=10000 87
+87 7078
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Event#<<
+calls=10000 88
+88 15155
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#push
+calls=10000 90
+90 7666
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+fn=ActionView::LogSubscriber#logger
+25 88384
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=10000 26
+26 13988
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=10000 26
+26 13545
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=10000 26
+26 13678
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=20000 26
+26 25295
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/log_subscriber.rb
+fn=ActiveSupport::LogSubscriber#start
+78 32428
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/log_subscriber.rb
+cfn=ActionView::LogSubscriber#logger
+calls=10000 79
+79 32707
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/subscriber.rb
+cfn=ActiveSupport::Subscriber#start
+calls=10000 79
+79 473728
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout::Subscribers::Evented#start
+91 20210
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/log_subscriber.rb
+cfn=ActiveSupport::LogSubscriber#start
+calls=10000 92
+92 538863
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#start
+35 23387
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listeners_for
+calls=10000 36
+36 54607
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 36
+36 582839
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Instrumenter#start
+30 21676
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#start
+calls=10000 31
+31 660833
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Instrumenter#instrument
+17 83627
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Instrumenter#start
+calls=10000 18
+18 682509
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#block_given?
+calls=10000 159
+159 7587
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#render_partial
+calls=10000 279
+279 755801
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Instrumenter#finish
+calls=10000 25
+25 2686339
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#hash
+0 7903
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications.rb
+fn=ActiveSupport::Notifications::InstrumentationRegistry#instrumenter_for
+200 21970
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#hash
+calls=10000 201
+201 7903
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Thread#[]
+0 63646
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::Thread>#current
+0 56701
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/per_thread_registry.rb
+fn=ActiveSupport::PerThreadRegistry#instance
+39 96749
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Thread>#current
+calls=10000 40
+40 7818
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Thread#[]
+calls=10000 40
+40 17226
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Thread>#current
+calls=20000 40
+40 13230
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Thread#[]
+calls=20000 40
+40 22702
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Thread>#current
+calls=10000 40
+40 7486
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Thread#[]
+calls=10000 40
+40 14441
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications.rb
+fn=<Module::ActiveSupport::Notifications>#instrumenter
+180 25728
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/per_thread_registry.rb
+cfn=ActiveSupport::PerThreadRegistry#instance
+calls=10000 181
+181 51669
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications.rb
+cfn=ActiveSupport::Notifications::InstrumentationRegistry#instrumenter_for
+calls=10000 181
+181 29873
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Enumerable#any?
+0 50270
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 56
+56 12614
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 56
+56 7204
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 52
+52 9088
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#listeners_for
+47 74026
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/cache.rb
+cfn=ThreadSafe::Cache#[]
+calls=10000 52
+52 40621
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/cache.rb
+cfn=ThreadSafe::Cache#[]
+calls=10000 52
+52 37189
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/cache.rb
+cfn=ThreadSafe::Cache#[]
+calls=10000 52
+52 39679
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/cache.rb
+cfn=ThreadSafe::Cache#[]
+calls=10000 52
+52 39339
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#listening?
+55 50034
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listeners_for
+calls=10000 56
+56 59896
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Enumerable#any?
+calls=10000 56
+56 30007
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listeners_for
+calls=10000 56
+56 58474
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Enumerable#any?
+calls=10000 56
+56 23675
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications.rb
+fn=<Module::ActiveSupport::Notifications>#instrument
+157 44605
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listening?
+calls=10000 158
+158 115667
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications.rb
+cfn=<Module::ActiveSupport::Notifications>#instrumenter
+calls=10000 159
+159 107270
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Instrumenter#instrument
+calls=10000 159
+159 4215862
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listening?
+calls=10000 158
+158 106419
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#block_given?
+calls=10000 161
+161 6819
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+cfn=ActionView::Template#compile!
+calls=10000 144
+144 11625
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template.rb
+cfn=ActionView::Template#method_name
+calls=10000 145
+145 13329
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/app/views/test/_object.html.erb
+cfn=ActionView::CompiledTemplates#_app_views_test__object_html_erb___784021683092918869_15499800
+calls=10000 145
+145 345847
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+fn=ActionView::AbstractRenderer#instrument
+37 43176
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Symbol#to_s
+calls=10000 38
+38 10580
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications.rb
+cfn=<Module::ActiveSupport::Notifications>#instrument
+calls=10000 38
+38 4483404
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#eql?
+0 8721
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#eql?
+0 22416
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#eql?
+calls=10000 10
+10 8721
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#hash
+0 10171
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#hash
+0 36064
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#hash
+calls=10000 10
+10 10171
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/non_concurrent_cache_backend.rb
+fn=ThreadSafe::NonConcurrentCacheBackend#[]
+9 149941
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#hash
+calls=10000 10
+10 46234
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#eql?
+calls=10000 10
+10 31136
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/cache.rb
+fn=ThreadSafe::Cache#[]
+37 209186
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/non_concurrent_cache_backend.rb
+cfn=ThreadSafe::NonConcurrentCacheBackend#[]
+calls=50000 38
+38 165345
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/non_concurrent_cache_backend.rb
+cfn=ThreadSafe::NonConcurrentCacheBackend#[]
+calls=10000 38
+38 17154
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/non_concurrent_cache_backend.rb
+cfn=ThreadSafe::NonConcurrentCacheBackend#[]
+calls=10000 38
+38 13922
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/non_concurrent_cache_backend.rb
+cfn=ThreadSafe::NonConcurrentCacheBackend#[]
+calls=10000 38
+38 15004
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/non_concurrent_cache_backend.rb
+cfn=ThreadSafe::NonConcurrentCacheBackend#[]
+calls=10000 38
+38 15888
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/module/attribute_accessors.rb
+fn=<Class::ActionView::Resolver>#caching
+60 17414
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template/resolver.rb
+fn=ActionView::Resolver::Cache#cache
+58 54964
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/module/attribute_accessors.rb
+cfn=<Class::ActionView::Resolver>#caching
+calls=10000 59
+59 17414
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/thread_safe-0.3.4/lib/thread_safe/cache.rb
+cfn=ThreadSafe::Cache#[]
+calls=50000 60
+60 279670
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#sort!
+0 7279
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Symbol#to_s
+0 24441
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#map
+0 23779
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Symbol#to_s
+calls=10000 141
+141 13862
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template/resolver.rb
+fn=ActionView::Resolver#cached
+139 48533
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#map
+calls=10000 141
+141 37641
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#sort!
+calls=10000 141
+141 7279
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template/resolver.rb
+cfn=ActionView::Resolver::Cache#cache
+calls=10000 144
+144 352048
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template/resolver.rb
+fn=ActionView::Resolver#find_all
+113 21174
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template/resolver.rb
+cfn=ActionView::Resolver#cached
+calls=10000 114
+114 445501
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/path_set.rb
+fn=ActionView::PathSet#find_all
+49 30641
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Module#===
+calls=10000 50
+50 12252
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 51
+51 541299
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/path_set.rb
+fn=ActionView::PathSet#find
+45 28193
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/path_set.rb
+cfn=ActionView::PathSet#find_all
+calls=10000 46
+46 584192
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#first
+calls=10000 46
+46 7776
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+fn=ActionView::LookupContext::DetailsCache#details_key
+92 20377
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Hash#empty?
+0 7831
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+fn=ActionView::LookupContext::ViewPaths#detail_args_for
+159 26941
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#empty?
+calls=10000 160
+160 7831
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+cfn=ActionView::LookupContext::DetailsCache#details_key
+calls=10000 160
+160 20377
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#pop
+0 20185
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#empty?
+0 7187
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#split
+0 41116
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#blank?
+0 7782
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/object/blank.rb
+fn=Object#present?
+23 20707
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#blank?
+calls=10000 24
+24 7782
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/object/blank.rb
+fn=Object#presence
+43 24364
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/object/blank.rb
+cfn=Object#present?
+calls=10000 44
+44 28489
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+fn=ActionView::LookupContext::ViewPaths#normalize_name
+175 78391
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/object/blank.rb
+cfn=Object#presence
+calls=10000 176
+176 52853
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#to_s
+calls=10000 177
+177 7713
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#split
+calls=10000 177
+177 16567
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#first
+calls=10000 178
+178 8348
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#empty?
+calls=10000 178
+178 7187
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#pop
+calls=10000 179
+179 9692
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#empty?
+calls=10000 181
+181 6604
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+fn=ActionView::LookupContext::ViewPaths#args_for_lookup
+152 42242
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+cfn=ActionView::LookupContext::ViewPaths#normalize_name
+calls=10000 153
+153 187356
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+cfn=ActionView::LookupContext::ViewPaths#detail_args_for
+calls=10000 154
+154 55149
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+fn=ActionView::LookupContext::ViewPaths#find
+123 31528
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+cfn=ActionView::LookupContext::ViewPaths#args_for_lookup
+calls=10000 124
+124 284746
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/path_set.rb
+cfn=ActionView::PathSet#find
+calls=10000 124
+124 620160
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#include?
+0 13335
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#find_template
+381 38787
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#include?
+calls=10000 382
+382 13335
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/lookup_context.rb
+cfn=ActionView::LookupContext::ViewPaths#find
+calls=10000 383
+383 936434
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#find_partial
+375 25511
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#find_template
+calls=10000 377
+377 988556
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Hash#keys
+0 15833
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#retrieve_template_keys
+467 36675
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#keys
+calls=10000 468
+468 15833
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#to_sym
+0 20610
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::File>#basename
+0 35493
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#[]
+0 30818
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#retrieve_variable
+474 119253
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#[]
+calls=10000 476
+476 14594
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::File>#basename
+calls=10000 476
+476 35493
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#to_sym
+calls=10000 478
+478 20610
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#collection
+364 19528
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#key?
+calls=10000 365
+365 8076
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#empty?
+0 21715
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=NilClass#to_a
+0 11063
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#Array
+0 25013
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=NilClass#to_a
+calls=10000 42
+42 11063
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+fn=ActionView::AbstractRenderer#prepend_formats
+41 30261
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#Array
+calls=10000 42
+42 36077
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#empty?
+calls=10000 43
+43 8114
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Enumerable#each_with_object
+0 22077
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 31
+31 49281
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/module/attribute_accessors.rb
+fn=ActionView::LookupContext#registered_details
+67 24705
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+fn=ActionView::AbstractRenderer#extract_details
+30 31435
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/module/attribute_accessors.rb
+cfn=ActionView::LookupContext#registered_details
+calls=10000 31
+31 24705
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Enumerable#each_with_object
+calls=10000 31
+31 71358
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#setup
+323 168367
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+cfn=ActionView::AbstractRenderer#extract_details
+calls=10000 330
+330 127497
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+cfn=ActionView::AbstractRenderer#prepend_formats
+calls=10000 332
+332 74452
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Module#===
+calls=10000 334
+334 7879
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#collection
+calls=10000 337
+337 27604
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#retrieve_variable
+calls=10000 355
+355 189950
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#retrieve_template_keys
+calls=10000 356
+356 52508
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#render
+261 86348
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#setup
+calls=10000 262
+262 648257
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#find_partial
+calls=10000 263
+263 1014068
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+cfn=ActionView::AbstractRenderer#instrument
+calls=10000 278
+278 4537159
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#first
+0 36060
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+fn=ActionView::AbstractRenderer#initialize
+20 16741
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+fn=ActionView::PartialRenderer#initialize
+256 40889
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/abstract_renderer.rb
+cfn=ActionView::AbstractRenderer#initialize
+calls=10000 257
+257 16741
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#first
+calls=10000 258
+258 11203
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::BasicObject>#allocate
+0 19194
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Class#new
+0 83310
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=10000 47
+47 10590
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#initialize
+calls=10000 47
+47 68833
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=10000 86
+86 8604
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Event#initialize
+calls=10000 86
+86 122594
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::String>#allocate
+calls=10000 1
+1 8299
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/buffers.rb
+cfn=ActionView::OutputBuffer#initialize
+calls=10000 1
+1 98818
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/renderer.rb
+fn=ActionView::Renderer#render_partial
+46 28895
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Class#new
+calls=10000 47
+47 113527
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/partial_renderer.rb
+cfn=ActionView::PartialRenderer#render
+calls=10000 47
+47 6285832
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Hash#key?
+0 16336
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/renderer.rb
+fn=ActionView::Renderer#render
+19 34723
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#key?
+calls=10000 20
+20 8260
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/renderer.rb
+cfn=ActionView::Renderer#render_partial
+calls=10000 21
+21 6428254
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#block_given?
+0 31597
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Module#===
+0 38853
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/helpers/rendering_helper.rb
+fn=ActionView::Helpers::RenderingHelper#render
+26 61668
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Module#===
+calls=10000 27
+27 10057
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#block_given?
+calls=10000 29
+29 9539
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/renderer/renderer.rb
+cfn=ActionView::Renderer#render
+calls=10000 32
+32 6471238
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=ActiveSupport::SafeBuffer#original_concat
+0 32616
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+fn=ActiveSupport::SafeBuffer#html_safe?
+196 111856
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+fn=ActiveSupport::SafeBuffer#safe_concat
+153 103579
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#html_safe?
+calls=20000 154
+154 39846
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=ActiveSupport::SafeBuffer#original_concat
+calls=20000 155
+155 22179
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#html_safe?
+calls=10000 154
+154 20599
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=ActiveSupport::SafeBuffer#original_concat
+calls=10000 155
+155 10438
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=String#to_s
+0 33583
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#nil?
+0 43803
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/buffers.rb
+fn=ActionView::OutputBuffer#safe_concat
+16 123498
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#nil?
+calls=20000 17
+17 15849
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#to_s
+calls=20000 18
+18 17926
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#safe_concat
+calls=20000 18
+18 133768
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#nil?
+calls=10000 17
+17 8171
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=String#to_s
+calls=10000 18
+18 7944
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/core_ext/string/output_safety.rb
+cfn=ActiveSupport::SafeBuffer#safe_concat
+calls=10000 18
+18 62872
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#freeze
+0 27425
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Array#each
+0 123338
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#freeze
+calls=20000 8
+8 19071
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/buffers.rb
+cfn=ActionView::OutputBuffer#safe_concat
+calls=20000 8
+8 254468
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/helpers/rendering_helper.rb
+cfn=ActionView::Helpers::RenderingHelper#render
+calls=10000 8
+8 6552502
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/buffers.rb
+cfn=ActionView::OutputBuffer#<<
+calls=10000 8
+8 197161
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=10000 52
+52 513948
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/actionview-4.1.4/lib/action_view/template/resolver.rb
+cfn=ActionView::Resolver#find_all
+calls=10000 53
+53 466675
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#empty?
+calls=10000 54
+54 6996
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout::Subscribers::Evented#start
+calls=10000 36
+36 559073
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/.bundle/gems/ruby/1.9.1/gems/activesupport-4.1.4/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout::Subscribers::Evented#finish
+calls=10000 40
+40 2553085
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/app/views/test/_dummy.html.erb
+fn=ActionView::CompiledTemplates#_app_views_test__dummy_html_erb__2976252971559156473_33084980
+7 29
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Array#each
+calls=1 7
+7 7146539
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Kernel#sleep
+0 283
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Hash#each
+0 38
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Fixnum#+
+0 26
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Time#initialize
+0 110
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Fixnum#+
+calls=15 177
+177 26
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::Time>#allocate
+0 96
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::Time>#now
+0 140
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=15 177
+177 96
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Time#initialize
+calls=15 177
+177 136
+
+fl=/usr/lib64/ruby/1.9.1/webrick/utils.rb
+fn=WEBrick::Utils::TimeoutHandler#initialize
+177 390
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::Time>#now
+calls=15 177
+177 372
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Hash#each
+calls=15 178
+178 38
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Kernel#sleep
+calls=15 184
+184 7048952
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::IO>#select
+0 181
+
+fl=/usr/lib64/ruby/1.9.1/webrick/server.rb
+fn=WEBrick::GenericServer#start
+97 118
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::IO>#select
+calls=4 98
+98 6746233
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Symbol#==
+calls=3 98
+98 19
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Symbol#==
+0 24
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=<Class::IO>#select
+0 450
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Float#>
+0 27
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=Symbol#==
+0 36
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+fn=BasicObject#!=
+0 87
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Symbol#==
+calls=14 76
+76 36
+
+fl=/usr/lib64/ruby/1.9.1/webrick/httpserver.rb
+fn=WEBrick::HTTPServer#run
+76 367
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=BasicObject#!=
+calls=14 76
+76 123
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=Float#>
+calls=14 77
+77 27
+cfl=/home/gremlin/projects/home/adrpo/Book/code/experiments/rails4/ruby_runtime
+cfn=<Class::IO>#select
+calls=14 75
+75 6741537
+

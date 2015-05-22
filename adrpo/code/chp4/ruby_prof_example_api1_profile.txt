@@ -1,0 +1,16 @@
+Thread ID: 70237499659060
+Fiber ID: 70237507374720
+Total: 0.001111
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+ 59.98      0.001     0.001     0.000     0.000        2   Regexp#match 
+ 28.96      0.001     0.000     0.000     0.001        1   <Class::Date>#parse 
+  4.72      0.001     0.000     0.000     0.001        1   Global#[No method] 
+  3.81      0.000     0.000     0.000     0.000        1   String#gsub! 
+  1.22      0.000     0.000     0.000     0.000        1   MatchData#begin 
+  0.67      0.000     0.000     0.000     0.000        1   String#[]= 
+  0.38      0.000     0.000     0.000     0.000        1   Fixnum#div 
+  0.25      0.000     0.000     0.000     0.000        1   MatchData#end 
+
+* indicates recursively called methods

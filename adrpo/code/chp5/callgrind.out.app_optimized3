@@ -1,0 +1,162 @@
+events: process_time
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Fixnum#/
+0 52477
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Kernel#rand
+0 54623
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+fn=Object#dummy
+43 125252
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+fn=Object#fake_parse_col
+46 414567
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+cfn=Object#dummy
+calls=400230 47
+47 125252
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Kernel#rand
+calls=150000 48
+48 54623
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Fixnum#/
+calls=150000 48
+48 52477
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Integer#times
+0 113969
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+cfn=Object#fake_parse_col
+calls=150000 88
+88 646919
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Date#<=>
+0 28356
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Array#each
+0 22169
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Date#<=>
+calls=49999 39
+39 28356
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Enumerable#max
+0 15
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Array#each
+calls=1 39
+39 50526
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+fn=Object#find_youngest
+38 13
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Array#map!
+calls=1 39
+39 23855
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Enumerable#max
+calls=1 39
+39 50541
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=<Class::Date>#new
+0 37591
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=MatchData#[]
+0 78470
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Regexp#match
+0 121907
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=String#to_i
+0 91969
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+fn=Object#parse_col
+27 476142
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=String#to_i
+calls=200000 31
+31 91969
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Regexp#match
+calls=100000 30
+30 121907
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=MatchData#[]
+calls=150000 31
+31 78470
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=<Class::Date>#new
+calls=50000 31
+31 37591
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+fn=Object#parse_row
+22 76890
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=String#split
+calls=50000 23
+23 57213
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Array#map!
+calls=50000 23
+23 954836
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=Array#map!
+0 68555
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+cfn=Object#parse_row
+calls=50000 19
+19 1088938
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+cfn=Object#parse_col
+calls=150000 23
+23 806080
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+fn=String#split
+0 65572
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+fn=Object#parse_data
+18 30
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=String#split
+calls=1 19
+19 8360
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Array#map!
+calls=1 19
+19 1133639
+
+fl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+fn=Global#[No method]
+86 163
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+cfn=Object#parse_data
+calls=1 86
+86 1142028
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/app_optimized3.rb
+cfn=Object#find_youngest
+calls=1 87
+87 74408
+cfl=/home/gremlin/projects/home/adrpo/Book/code/chp4/ruby_runtime
+cfn=Integer#times
+calls=1 88
+88 760888
+

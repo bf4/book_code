@@ -1,0 +1,10 @@
+Thread ID: 9671460
+Fiber ID: 10992080
+Total: 3.000000
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+ 66.67      2.000     2.000     0.000     0.000        1   String#upcase 
+ 33.33      1.000     1.000     0.000     0.000        3   String#* 
+
+* indicates recursively called methods
