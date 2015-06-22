@@ -60,6 +60,7 @@ books = {
   'kcdc' => { name: "The Developer's Code: What Real Programmers Do" },
   'mbfpp' => { name: "Functional Programming Patterns in Scala and Clojure: Write Lean Programs for the JVM" },
   'msard2' => { name: "Arduino: A Quick-Start Guide, Second Edition" },
+  'mwjsember' => { name: "Deliver Audacious Web Apps with Ember 2" },
   'msgpkids' => { name: "Learn Game Programming with Ruby: Bring Your Ideas to Life with Gosu" },
   'nrtest' => {},
   'nrtest2' => { name: "Rails 4 Test Prescriptions: Build a Healthy Codebase" },

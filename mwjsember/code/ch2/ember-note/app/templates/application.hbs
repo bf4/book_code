@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      Welcome to EmberNote
+    </div>
+    <div class="col-md-10">
+      {{#if user}}
+        Hello, {{user.name}}
+      {{/if}}
+      {{#unless user}}
+        {{#link-to 'register'}}register{{/link-to}}&nbsp;
+        {{#link-to 'login'}}login{{/link-to}}
+      {{/unless}}  
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      {{outlet}}
+    </div>
+  </div>
+</div>
