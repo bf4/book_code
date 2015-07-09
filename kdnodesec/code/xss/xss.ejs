@@ -1,0 +1,37 @@
+
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>My XSS</title>
+        <!--Comment-->
+        <style>
+            body {
+                color: #000077;
+                font-size: <%- 2 %>;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="/second">Second page</a>
+            <a href="/third?x=<%- 5 %>">Third page</a>
+        </nav>
+        <div>
+            <div><%- 6 %></div>
+            <input value="<%- 8 %>" />
+
+            <button onclick="<%- 9 %>">Touch me</button>
+        </div>
+        <script>
+            var x = '<%- 10 %>';
+        </script>
+    </body>
+    </html>
+
+
+
+<%- 7 %>

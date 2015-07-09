@@ -1,0 +1,39 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>My XSS</title>
+        <!--This is going to be great-->
+        <% var E = ESAPI.encoder() %>
+        <style>
+            body {
+                color: #000077;
+                font-size: <%- E.encodeForCSS(unsafe); %>;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="/second?x=<%- E.encodeForURL(unsafe); %>">Second page</a>
+        </nav>
+        <div>
+            <h1><%- E.encodeForHTML(unsafe); %></h1>
+            <input value="<%- E.encodeForHTMLAttributes(unsafe); %>" />
+
+            <button onclick="<%- E.encodeForJS(unsafe); %>">Touch me</button>
+        </div>
+
+        <script id="json" type="application/json"><%- JSON.stringify(unsafeJSON) %></script>
+
+        <script>
+            var x = '<%- E.encodeForJS(unsafe); %>';
+            var json = JSON.parse(document.getElementById('json').innerHTML);
+        </script>
+    </body>
+    </html>
+
+
+
+<%- 7 %>

@@ -1,0 +1,26 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>My DOM XSS</title>
+    </head>
+    <body>
+        <div id="dynamic"></div>
+        <script>
+            <% var E = ESAPI.encoder(); %>
+            // Step 1 - Get data
+            // Apply reverse order encoding
+            var text = '<%- E.encodeForJS(E.encodeForHTML(unsafe)) %>';
+
+            // Step 2 - Use data
+            var $element = document.getElementById('dynamic');
+            $element.innerHTML = text;
+        </script>
+    </body>
+    </html>
+
+
+
+<%- 7 %>

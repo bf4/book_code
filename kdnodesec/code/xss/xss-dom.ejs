@@ -1,0 +1,32 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>My DOM XSS</title>
+    </head>
+    <body>
+        <input id="dynamic" />
+        <a id="dynamic-link">Navigate me</a>
+        <script>
+            //Inserting data
+            element.innerHTML = '<HTML> Tags and markup';
+
+            //Inserting attributes
+            var input = document.getElementById('dynamic');
+            input.setAttribute('value', '<%- unsafe %>');
+
+            //Manipulating style
+            document.body.style.width = "<%- unsafe %>";
+
+            //Inserting links
+            var link = document.getElementById('dynamic-link');
+            link.setAttribute('href', '<%- unsafe %>');
+        </script>
+    </body>
+    </html>
+
+
+
+<%- 7 %>

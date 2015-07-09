@@ -58,6 +58,7 @@ books = {
   'jvrails2' => { name: "Crafting Rails 4 Applications: Expert Practices for Everyday Rails Development" },
   'jwnode' => { name: "Node.js the Right Way: Practical, Server-Side JavaScript That Scales" },
   'kcdc' => { name: "The Developer's Code: What Real Programmers Do" },
+  'kdnodesec' => { name: "Secure Your Node.js Web Application" },
   'mbfpp' => { name: "Functional Programming Patterns in Scala and Clojure: Write Lean Programs for the JVM" },
   'msard2' => { name: "Arduino: A Quick-Start Guide, Second Edition" },
   'mwjsember' => { name: "Deliver Audacious Web Apps with Ember 2" },

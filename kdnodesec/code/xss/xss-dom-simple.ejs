@@ -1,0 +1,24 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>My DOM XSS</title>
+    </head>
+    <body>
+        <div id="dynamic"></div>
+        <script>
+            // Step 1 - Get data
+            var text = '<%- ESAPI.encoder().encodeForJS(unsafe) %>';
+
+            // Step 2 - Use data
+            var $element = document.getElementById('dynamic');
+            $element.innerHTML = text; // <- VULNERABLE! We need HTML encoding
+        </script>
+    </body>
+    </html>
+
+
+
+<%- 7 %>

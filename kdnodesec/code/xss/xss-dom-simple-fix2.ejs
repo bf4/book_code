@@ -1,0 +1,30 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>My DOM XSS</title>
+        <script src="/esapi/esapi.js"></script>
+        <script src="/esapi/resources/i18n/ESAPI_Standard_en_US.properties.js"></script>
+        <script src="/esapi/resources/Base.esapi.properties.js"></script>
+    </head>
+    <body>
+        <div id="dynamic"></div>
+        <script>
+            org.owasp.esapi.ESAPI.initialize();
+
+            // Step 1 - Get data
+            var text = '<%- ESAPI.encoder().encodeForJS(unsafe) %>';
+
+            // Step 2 - Use data
+            var $element = document.getElementById('dynamic');
+            // Encode using client side script
+            $element.innerHTML = $ESAPI.encoder().encodeForHTML(text);
+        </script>
+    </body>
+    </html>
+
+
+
+<%- 7 %>
