@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+File.open('Gemfile.edgerails','w') do |edge|
+  File.readlines('Gemfile').each do |line|
+    if line =~ /gem ["']rails["']/
+      edge.puts "gem 'rails', github: 'rails/rails'"
+      edge.puts "gem 'arel',  github: 'rails/arel'"
+    else
+      edge.puts line
+    end
+  end
+end

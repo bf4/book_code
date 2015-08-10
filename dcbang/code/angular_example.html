@@ -1,0 +1,27 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang for more book information.
+-->
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-rc.1/angular.js">
+    </script>
+  </head>
+  <body>
+    <section ng-app="account" ng-model="showDetails" ng-init="showDetails = false">
+      <p>You currently owe: $123.45</p>
+      <button ng-click="showDetails = !showDetails">Show/Hide Details</button>
+      <ul ng-if="showDetails">
+        <li>Base fee: $120.00</li>
+        <li>Taxes: $3.45</li>
+      </ul> 
+    </section>
+    <script>
+      var app = angular.module("account",[]);
+    </script>
+  </body>
+</html>

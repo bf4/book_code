@@ -1,0 +1,4 @@
+asset 'bootstrap-sass-official'
+asset 'angular', '~> 1.4'
+asset 'angular-mocks'
+asset 'angular-route'

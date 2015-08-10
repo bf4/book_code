@@ -1,0 +1,202 @@
+<div id="static-ui">
+<div class="row">
+  <div class="col-md-6">
+    <article class="panel panel-primary">
+      <header class="panel-heading">
+        <h1 class="h3">
+          Customer
+        </h1>
+      </header>
+      <section class="panel-body">
+        <form>
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label class="sr-only" for="first-name">First Name</label>
+              <input type="text" class="form-control" 
+                     name="first-name" value="Bob"> 
+            </div>
+            <div class="form-group col-md-4">
+              <label class="sr-only" for="last-name">Last Name</label>
+              <input type="text" class="form-control" 
+                     name="last-name" value="Jones"> 
+            </div>
+            <div class="form-group col-md-4">
+              <label class="sr-only" for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-addon">@</div>
+                <input type="text" class="form-control" 
+                       name="username" value="bobert123"> 
+              </div>
+            </div>
+          </div>
+          <label class="sr-only" for="email">Email</label>
+          <input type="text" class="form-control" 
+                 name="email" value="bobbyj@somewhere.net"> 
+        </form>
+      </section>
+      <footer class="panel-footer">
+        <label for="joined">Joined</label> 12/13/2014
+      </footer>
+    </article>
+    <article class="panel panel-default">
+      <header class="panel-heading">
+        <h2 class="h4">
+          Shipping Address
+        </h2>
+      </header>
+      <section class="panel-body">
+        <form>
+          <div class="form-group">
+            <label class="sr-only" for="street-address">
+              Street Address
+            </label>
+            <input type="text" class="form-control" 
+                   name="street-address" value="123 Any St"> 
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="street-address-extra">
+              Street Address Extra
+            </label>
+            <input type="text" class="form-control" 
+                   name="street-address-extra" value="Unit 101"> 
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label class="sr-only" for="city">City</label>
+              <input type="text" class="form-control" 
+                     name="city" value="Washington"> 
+            </div>
+            <div class="col-md-2">
+              <label class="sr-only" for="state">State</label>
+              <input type="text" class="form-control" 
+                     name="state" value="DC"> 
+            </div>
+            <div class="col-md-4">
+              <label class="sr-only" for="zip">Zip</label>
+              <input type="text" class="form-control" 
+                     name="zip" value="20001"> 
+            </div>
+          </div>
+        </form>
+      </section>
+    </article>
+  </div>
+  <div class="col-md-6">
+    <article class="panel panel-default">
+      <header class="panel-heading">
+        <h2 class="h4">
+          Billing Info
+        </h2>
+      </header>
+      <section class="panel-body">
+        <article>
+          <div class="row">
+            <div class="col-md-7">
+              <p class="h4">
+                ****-****-****-1234
+                <span class="label label-success">VISA</span>
+              </p>
+              <p class="h5">
+                <label>Expires:</label> 04/19
+              </p>
+            </div>
+            <div class="col-md-5 text-right">
+              <button class="btn btn-lg btn-default">
+                View Details…
+              </button>
+            </div>
+          </div>
+        </article>
+        <hr>
+        <article class="well well-sm">
+          <header>
+            <h1 class="h5">
+              Billing Address
+              <small>
+                <input type="checkbox"> Same as shipping?
+              </small>
+            </h1>
+          </header>
+          <form>
+            <div class="form-group">
+              <label class="sr-only" for="street-address">
+                Street Address
+              </label>
+              <input type="text" class="form-control" 
+                     name="street-address" value="123 Any St"> 
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="street-address-extra">
+                Street Address Extra
+              </label>
+              <input type="text" class="form-control" 
+                     name="street-address-extra" value="Unit 101"> 
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6">
+                <label class="sr-only" for="city">City</label>
+                <input type="text" class="form-control" 
+                       name="city" value="Washington"> 
+              </div>
+              <div class="col-md-2">
+                <label class="sr-only" for="state">State</label>
+                <input type="text" class="form-control" 
+                       name="state" value="DC"> 
+              </div>
+              <div class="col-md-4">
+                <label class="sr-only" for="zip">Zip</label>
+                <input type="text" class="form-control" 
+                       name="zip" value="20001"> 
+              </div>
+            </div>
+          </form>
+        </article>
+      </section>
+    </article>
+  </div>
+</div>
+</div>
+<article ng-app="customers" ng-controller="CustomerSearchController">
+<header>
+  <h1 class="h2">Customer Search</h1>
+</header>
+<section class="search-form">
+  <form>
+    <label for="search.keywords" class="sr-only">Keywords</label>
+    <input type="text" 
+           name="keywords" 
+           class="form-control input-lg"
+           placeholder="First Name, Last Name, or Email Address"
+           ng-change="search(keywords)"
+           ng-model="keywords">
+  </form>
+</section>
+<aside class="sr-only loading-progress">
+  <span ng-if="loading" class="loading">Loading</span>
+  <span ng-if="!loading" class="not-loading">Done Loading</span>
+</aside>
+<section class="search-results" ng-if="customers.length > 0">
+  <header>
+    <h1 class="h3">Results</h1>
+  </header>
+  <%= render partial: "pager", 
+             locals: { keywords: @keywords, page: @page } %>
+
+  <ol class="list-group">
+    <li class="list-group-item clearfix" 
+        ng-repeat="customer in customers">
+      <h3 class="pull-right">
+        <small class="text-uppercase">Joined</small>
+        {{ customer.created_at | date }}
+      </h3>
+      <h2 class="h3">
+        {{ customer.first_name }} {{ customer.last_name }}
+        <small>{{ customer.username }}</small>
+      </h2>
+      <h4>{{ customer.email }}</h4>
+    </li>
+  </ol>
+  <%= render partial: "pager", 
+             locals: { keywords: @keywords, page: @page } %>
+</section>
+</article>

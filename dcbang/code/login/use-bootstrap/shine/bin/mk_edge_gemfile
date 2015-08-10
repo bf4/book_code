@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+File.open('edgerails/Gemfile','w') do |edge|
+  File.readlines('Gemfile').each do |line|
+    if line =~ /gem ["']rails["']/
+      edge.puts "gem 'rails', github: 'rails/rails'"
+      edge.puts "gem 'arel',  github: 'rails/arel'"
+    elsif line =~ /gem ["']devise["']/
+      edge.puts "gem 'devise', git: 'git@github.com:davetron5000/devise.git', branch: 'remove-hide-action'"
+    else
+      edge.puts line
+    end
+  end
+end
