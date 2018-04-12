@@ -1,0 +1,59 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.products {
+  margin: 0;
+  padding: 0.5em;
+  a {
+    padding: 0.354em 0.5em;
+    border-radius: 0.354em;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    padding: 0.5em;
+    margin: 0;
+  }
+
+  tr.list_line_odd {
+    background-color: #effeef;
+  }
+
+  td.image {
+    // Hide this on mobile devices
+    display: none;
+
+    // Assume anything bigger than 30em
+    // is a non-mobile device and can 
+    // fit the image.
+    @media (min-width: 30em) {
+      display: block;
+      img {
+        height: 11.3em;
+      }
+    }
+  }
+
+  td.description {
+    h1 {
+      font-size: 1.4em;
+    }
+  }
+
+  td.actions {
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        padding: 0.5em 0.5em;
+      }
+    }
+  }
+
+  tfoot {
+    td {
+      padding: 0.5em 0;
+    }
+  }
+}

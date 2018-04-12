@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pragprog Books Online Store</title>
+    <%= csrf_meta_tags %>
+
+    
+
+    <%= stylesheet_pack_tag "application" %>
+    
+    
+    <%= javascript_include_tag 'application',
+                               'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale        = "<%= I18n.locale %>";
+    </script>
+
+
+  </head>
+
+  <body>
+    <header class="main">
+      <aside>
+        <%= form_tag store_index_path, class: 'locale' do %>
+          <%= select_tag 'set_locale', 
+            options_for_select(LANGUAGES, I18n.locale.to_s),
+            onchange: 'this.form.submit()' %>
+          <%= submit_tag 'submit', id: "submit_locale_change" %>
+        <% end %>
+      </aside>
+      <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
+      <h1><%= @page_title %></h1>
+    </header>
+    <section class="content">
+      <nav class="side_nav">
+
+        <div id="cart" class="carts">
+
+          <%= render_if @cart && @cart.line_items.any?, @cart %>
+        </div>
+
+        <ul>
+          <li><a href="/"><%= t('.home') %></a></li>
+          <li><a href="/questions"><%= t('.questions') %></a></li>
+          <li><a href="/news"><%= t('.news') %></a></li>
+          <li><a href="/contact"><%= t('.contact') %></a></li>
+        </ul>
+
+        <% if session[:user_id] %>
+          <nav class="logged_in_nav">
+            <ul>
+              <li><%= link_to 'Orders',   orders_path   %></li>
+              <li><%= link_to 'Products', products_path %></li>
+              <li><%= link_to 'Users',    users_path    %></li>
+              <li><%= button_to 'Logout', logout_path, method: :delete   %></li>
+            </ul>
+          </nav>
+        <% end %>
+      </nav>
+      <main class='<%= controller.controller_name %>'>
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>

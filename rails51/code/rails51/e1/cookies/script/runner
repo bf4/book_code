@@ -1,0 +1,4 @@
+#!/Users/dave/ruby1.8/bin/ruby
+
+require File.dirname(__FILE__) + '/../config/environment'
+eval(ARGV.first)

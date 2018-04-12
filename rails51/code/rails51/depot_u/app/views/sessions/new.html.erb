@@ -1,0 +1,22 @@
+<section class="depot_form">
+  <% if flash[:alert] %>
+    <aside class="notice"><%= flash[:alert] %></aside>
+  <% end %>
+
+  <%= form_tag do %>
+    <h2>Please Log In</h2>
+    <div class="field">
+      <%= label_tag :name, 'Name:' %>
+      <%= text_field_tag :name, params[:name] %>
+    </div>
+
+    <div class="field">
+      <%= label_tag :password, 'Password:' %>
+      <%= password_field_tag :password, params[:password] %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag "Login" %>
+    </div>
+  <% end %>
+</section>

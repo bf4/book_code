@@ -1,0 +1,17 @@
+# == Schema Information
+# Schema version: 20100301000016
+#
+# Table name: discounts
+#
+#  id         :integer         not null, primary key
+#  created_at :datetime        
+#  updated_at :datetime        
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
