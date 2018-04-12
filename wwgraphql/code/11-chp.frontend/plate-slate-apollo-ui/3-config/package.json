@@ -1,0 +1,21 @@
+{
+  "name": "plate-slate-apollo-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@absinthe/socket-apollo-link": "^0.1.10",
+    "apollo-cache-inmemory": "^1.1.4",
+    "apollo-client": "^2.0.4",
+    "graphql-tag": "^2.6.1",
+    "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

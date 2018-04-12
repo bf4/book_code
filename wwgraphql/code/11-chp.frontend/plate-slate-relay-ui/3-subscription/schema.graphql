@@ -1,0 +1,156 @@
+schema {
+  query: RootQueryType
+  mutation: RootMutationType
+  subscription: RootSubscriptionType
+}
+
+directive @action(mode: ActionMode!) on SUBSCRIPTION | MUTATION | QUERY
+
+directive @put on INLINE_FRAGMENT | FRAGMENT_SPREAD | FIELD
+
+enum ActionMode {
+  EXTERNAL
+  INTERNAL
+}
+
+type AllergyInfo {
+  allergen: String
+  severity: String
+}
+
+type Category implements SearchResult {
+  description: String
+  items(filter: MenuItemFilter, order: SortOrder = ASC): [MenuItem]
+  name: String
+}
+
+scalar Date
+
+scalar Decimal
+
+type Employee {
+  email: String
+  name: String
+}
+
+type EmployeeSession {
+  employee: Employee
+  token: String
+}
+
+# An error encountered trying to persist input
+type InputError {
+  key: String!
+  message: String!
+}
+
+type MenuItem implements SearchResult {
+  addedOn: Date
+  allergyInfo: [AllergyInfo]
+  category: Category
+  description: String
+  id: ID
+  name: String
+  orderHistory(since: Date): OrderHistory
+  price: Decimal
+}
+
+# Filtering options for the menu item list
+input MenuItemFilter {
+  # Added to the menu after this date
+  addedAfter: Date
+
+  # Added to the menu before this date
+  addedBefore: Date
+
+  # Matching a category name
+  category: String
+
+  # Matching a name
+  name: String
+
+  # Priced above a value
+  pricedAbove: Float
+
+  # Priced below a value
+  pricedBelow: Float
+
+  # Matching a tag
+  tag: String
+}
+
+input MenuItemInput {
+  categoryId: ID!
+  description: String
+  name: String!
+  price: Decimal!
+}
+
+type MenuItemResult {
+  errors: [InputError]
+  menuItem: MenuItem
+}
+
+type Order {
+  customerNumber: Int
+  id: ID
+  items: [OrderItem]
+  state: String
+}
+
+type OrderHistory {
+  # Gross Revenue
+  gross: Float!
+  orders: [Order]
+  quantity: Int!
+}
+
+type OrderItem {
+  name: String
+  quantity: Int
+}
+
+input OrderItemInput {
+  menuItemId: ID!
+  quantity: Int!
+}
+
+type OrderResult {
+  errors: [InputError]
+  order: Order
+}
+
+input PlaceOrderInput {
+  customerNumber: Int!
+  items: [OrderItemInput!]!
+}
+
+type RootMutationType {
+  completeOrder(id: ID!): OrderResult
+  createMenuItem(input: MenuItemInput!): MenuItemResult
+  loginEmployee(email: String!, password: String!): EmployeeSession
+  placeOrder(input: PlaceOrderInput!): OrderResult
+  readyOrder(id: ID!): OrderResult
+}
+
+type RootQueryType {
+  menuItem(id: ID!): MenuItem
+  menuItems(filter: MenuItemFilter, order: SortOrder = ASC): [MenuItem]
+  search(matching: String!): [SearchResult]
+}
+
+type RootSubscriptionType {
+  newMenuItem: MenuItem
+  newOrder: Order
+  updateOrder(id: ID!): Order
+}
+
+interface SearchResult {
+  name: String
+}
+
+enum SortOrder {
+  ASC
+  DESC
+}
+
