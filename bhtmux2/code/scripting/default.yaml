@@ -1,0 +1,15 @@
+# ~/.tmuxinator/development.yml
+
+name: development
+root: ~/
+
+# a bunch of comments....
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log
