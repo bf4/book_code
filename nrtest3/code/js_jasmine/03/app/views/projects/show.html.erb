@@ -1,0 +1,16 @@
+<h2>Project <%= @project.name %></h2>
+
+<h3>Existing Tasks:</h3>
+
+<div class="task-table" data-project="<%= @project.id %>"></div>
+
+<h3>New Task</h3>
+
+<%= form_for Task.new(project_id: @project.id) do |f| %>
+  <%= f.hidden_field :project_id %>
+  <%= f.label :title, "Task" %>
+  <%= f.text_field :title %>
+  <%= f.label :size %>
+  <%= f.select :size, [1, 2, 3, 4, 5] %>
+  <%= f.submit "Add Task" %>
+<% end %>

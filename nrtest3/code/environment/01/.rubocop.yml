@@ -1,0 +1,138 @@
+AllCops:
+  Exclude:
+    - "db/schema.rb" # You can't touch this
+    - ".bundle/**/*" # Auto-generated
+    - "bin/**/*"     # Auto-generated
+    - "vendor/**/*"  # We cannot solve the world's problems
+    - "node_modules/**/*"  # We cannot solve the world's problems
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.2
+
+Rails:
+  Enabled: true
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 80
+  Exclude:
+    - "features/support/env.rb"
+    - "script/cucumber"
+    - "lib/tasks/cucumber.rake"
+    - "config/initializers/*.rb"
+    - "Guardfile"
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+  IndentationWidth: 2
+
+Style/CaseEquality:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "app/controllers/**/*"
+    - "app/helpers/**/*"
+
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - "spec/**/*"
+    - "lib/tasks/*.rake"
+
+Layout/FirstParameterIndentation:
+  IndentationWidth: 2
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/IndentArray:
+  IndentationWidth: 2
+
+Layout/IndentAssignment:
+  IndentationWidth: 2
+
+Layout/IndentHash:
+  IndentationWidth: 2
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 2
+
+Layout/MultilineHashBraceLayout:
+  EnforcedStyle: same_line
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 2
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrivialAccessors:
+  ExactNameMatch: true
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: no_comma
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SpaceBeforeBlockParameters: true
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBraces: no_space
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*" # because let statements use braces for multiline blocks
+
+Layout/BlockEndNewline:
+  Exclude:
+    - "spec/**/*" # because let statements use braces for multiline blocks
+
+Layout/MultilineBlockLayout:
+  Exclude:
+    - "spec/**/*" # because let statements use braces for multiline blocks
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+  Exclude:
+    - "spec/**/*" # because sometimes we use this in expect or then blocks
+
+Style/RaiseArgs:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false

@@ -1,0 +1,46 @@
+<h2>Project <%= @project.name %></h2>
+
+<h3>Existing Tasks:</h3>
+
+<div>
+  <table>
+    <thead>
+      <tr>Name</tr>
+      <tr>Size</tr>
+    </thead>
+    <tbody>
+      <% @project.tasks.each do |task| %>
+        <tr id="task_<%= task.project_order %>">
+          <td class="name"><%= task.title %></td>
+          <td class="size"><%= task.size %></td>
+          <td class="completed">
+            <% if task.complete? %>
+              <%= task.user.email %>
+              <%= task.completed_at.to_s %>
+              <img src="<%= task.user.avatar_url %>" />
+            <% end %>
+          </td>
+          <td>
+            <% unless task.first_in_project? %>
+              <%= link_to "Up", up_task_path(task.id), method: :patch %>
+            <% end %>
+            <% unless task.last_in_project? %>
+              <%= link_to "Down", down_task_path(task.id), method: :patch %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<h3>New Task</h3>
+
+<%= form_for Task.new(project_id: @project.id) do |f| %>
+  <%= f.hidden_field :project_id %>
+  <%= f.label :title, "Task" %>
+  <%= f.text_field :title %>
+  <%= f.label :size %>
+  <%= f.select :size, [1, 2, 3, 4, 5] %>
+  <%= f.submit "Add Task" %>
+<% end %>
