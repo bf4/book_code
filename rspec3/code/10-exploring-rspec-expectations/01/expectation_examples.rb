@@ -1,0 +1,20 @@
+#---
+# Excerpted from "Effective Testing with RSpec 3",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/rspec3 for more book information.
+#---
+# validate me
+require 'rspec/expectations'
+include RSpec::Matchers
+
+ratio = 22 / 7.0
+expect(ratio).to be_within(0.1).of(Math::PI)
+
+numbers = [13, 3, 99]
+expect(numbers).to all be_odd
+
+alphabet = ('a'..'z').to_a
+expect(alphabet).to start_with('a').and end_with('z')

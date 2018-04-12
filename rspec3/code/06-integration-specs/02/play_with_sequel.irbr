@@ -1,0 +1,12 @@
+>> require 'sequel'
+=> true
+>> DB = Sequel.sqlite
+=> #<Sequel::SQLite::Database: {:adapter=>:sqlite}>
+>> DB.create_table(:gems) { String :name }
+=> nil
+>> DB[:gems].insert(name: 'rspec')
+=> 1
+>> DB[:gems].insert(name: 'sinatra')
+=> 2
+>> DB[:gems].all
+=> [{:name=>"rspec"}, {:name=>"sinatra"}]
