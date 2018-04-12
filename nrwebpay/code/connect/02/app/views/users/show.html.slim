@@ -1,0 +1,26 @@
+h1 User dashboard for #{current_user.email}
+
+h2 Subscriptions
+
+- current_user.subscriptions.each do |subscription|
+  .subscription
+    #{subscription.plan.plan_name} ending #{subscription.end_date}
+    .btn
+      = link_to("Cancel Subscription", subscription,
+        method: :delete,
+        confirm: "Are you sure you want to delete this subscription?")
+
+
+h3 Affiliate
+
+- if current_user.affiliates.empty?
+  = link_to "Make me an affiliate", new_affiliate_path
+- else
+  h4 Affiliate Tags
+
+  ul
+    - current_user.affiliates.each do |affiliate|
+      li= link_to(affiliate.tag, root_path(tag: affiliate.tag))
+      - if affiliate.verification_needed
+        h4= link_to("Affiliate Verification Needed",
+            edit_affiliate_path(affiliate))

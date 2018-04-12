@@ -1,0 +1,39 @@
+.bank_account_form
+  input(type="hidden" data-stripe="country" value="US")
+  input(type="hidden" data-stripe="currency" value="USD")
+  .row
+    .form-group
+      .col-sm-3
+        = label_tag(:bank_routing_number, "Bank Routing Number",
+          class: "control-label")
+      .col-sm-5
+        input.form-control.valid-field(data-stripe="routing_number"
+          id="bank_routing_number")
+
+  .row
+    .form-group
+      .col-sm-3
+        = label_tag(:bank_account_number, "Account Number",
+          class: "control-label")
+      .col-sm-5
+        input.form-control.valid-field(data-stripe="account_number"
+          id="bank_account_number")
+
+  .row
+    .form-group
+      .col-sm-3
+        = label_tag(:account_holder_name, "Account Holder Name",
+          class: "control-label")
+      .col-sm-5
+        input.form-control.valid-field(data-stripe="account_holder_name"
+          id="account_holder_name")
+
+  .row
+    .form-group
+      .col-sm-3
+        = label_tag(:account_holder_type,
+          "Account Holder Type (individual or company)",
+          class: "control-label")
+      .col-sm-5
+        input.form-control.valid-field(data-stripe="account_holder_type"
+          id="account_holder_type")

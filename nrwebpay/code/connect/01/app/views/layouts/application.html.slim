@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= content_for?(:title) ? yield(:title) : "Snow Globe Theater"
+    meta(name="description"
+      content="#{content_for?(:description) ? yield(:description) : "Globe"}")
+    / START: code.add_stripe
+    = stylesheet_link_tag("application",
+      media: "all", "data-turbolinks-track" => true)
+    = javascript_include_tag("#{STRIPE_JS_HOST}/v2/#{STRIPE_JS_FILE}")
+    = javascript_include_tag("application", "data-turbolinks-track" => true)
+
+    javascript:
+      Stripe.setPublishableKey(
+        "#{Rails.application.secrets.stripe_publishable_key}");
+    / END: code.add_stripe
+    = stylesheet_link_tag("application",
+      media: "all", "data-turbolinks-track" => true)
+    = javascript_include_tag("application", "data-turbolinks-track" => true)
+    = csrf_meta_tags
+
+  body
+    header
+      = render "layouts/navigation"
+    main(role="main")
+      .container
+        = render "layouts/messages"
+        = yield

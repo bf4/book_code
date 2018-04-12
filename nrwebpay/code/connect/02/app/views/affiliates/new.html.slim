@@ -1,0 +1,34 @@
+h1 Make Me An Affiliate
+
+= form_for(Affiliate.new) do |f|
+  .row
+    .form-group
+      .col-sm-1
+        = check_box_tag(:tos, "1", class: "form_control")
+      .col-sm-5
+        = label_tag(:tos, class: "control-label") do
+          | By registering your account, you agree to our Services Agreement
+            and the
+          = link_to " Stripe Connected Account Agreement ",
+            "https://stripe.com/us/connect-account/legal"
+  .row
+    .form-group
+      = f.submit("Make Me an Affiliate", class: "btn btn-default")
+
+h2 Terms
+
+| Payment processing services for affiliates on
+  the Snow Globe Theater site are provided by Stripe and are subject to the
+= link_to " Stripe Connected Account Agreement ",
+  "https://stripe.com/us/connect-account/legal"
+| which includes the
+= link_to " Stripe Terms of Service ", "https://stripe.com/us/legal"
+| (collectively, the “Stripe Services Agreement”). By agreeing to
+  this agreement or continuing to operate as a affiliate for
+  the Snow Globe Theater, you agree to be bound by the Stripe Services
+  Agreement, as the same may be modified by Stripe from time to time.
+  As a condition of the Snow Globe Theater enabling payment processing
+  services through Stripe, you agree to provide The Snow Globe Theater
+  accurate and complete information about you and your business, and you
+  authorize The Snow Globe Theater to share it and transaction information
+  related to your use of the payment processing services provided by Stripe.

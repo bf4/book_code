@@ -1,0 +1,18 @@
+h1= @event.name
+
+h2 Available Performances
+- @event.performances.each do |performance|
+  div(id=dom_id(performance))
+    .row
+      = form_tag(shopping_cart_path, method: :patch) do
+        = hidden_field_tag("performance_id", performance.id)
+        .col-md-2
+          h4= performance.start_time.to_date.to_s(:long)
+        .col-md-1
+          .form-group
+            = select_tag("ticket_count",
+                options_for_select((1..10).to_a), class: "form-control")
+        .col-md-3
+          .form-group
+            = submit_tag("Add to Cart",
+                class: "btn btn-primary", id: "add-to-cart")

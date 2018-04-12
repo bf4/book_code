@@ -1,0 +1,56 @@
+h3 Payment Options
+
+= form_tag(payments_path,
+  class: "credit-card-form form-horizontal", id: "payment-form") do
+
+  = hidden_field_tag(:purchase_amount_cents, @cart.total_cost.cents)
+  = hidden_field_tag(:ticket_ids, @cart.tickets.map(&:id))
+
+  .paypal
+    img(src="https://www.paypal.com/en_US/i/logo/PayPal_mark_37x23.gif"
+        align="left" style="margin-right:7px;")
+    span(style="font-size:11px; font-family: Arial, Verdana")
+      | The safer, easier way to pay.
+    = radio_button_tag(:payment_type,
+        :paypal, false,
+        class: "payment-type-radio", id: "paypal_radio")
+  .credit_card
+    | Credit Card
+    = radio_button_tag(:payment_type,
+        :credit, true,
+        class: "payment-type-radio", id: "credit_radio")
+
+  .bg-danger#error-text
+
+  #credit-card-info
+    h3 Credit Card Info
+    .row
+      .form-group
+        .col-sm-2
+          = label_tag(:credit_card_number, "Credit Card Number",
+            class: "control-label")
+        .col-sm-3
+          input.form-control.valid-field(data-stripe="number"
+            id="credit_card_number")
+        .col-sm-1
+          = image_tag("creditcards/credit.png", id: "card-image")
+
+    .row
+      .form-group
+        .col-sm-2
+          = label_tag(:expiration_month, "Month", class: "control-label")
+        .col-sm-2
+          input.form-control.valid-field(placeholder="MM / YY"
+            data-stripe="exp" id="expiration_date")
+
+    .row
+      .form-group
+        .col-sm-2
+          = label_tag(:cvc, "CVC", class: "control-label")
+        .col-sm-1
+          input.form-control.valid-field(data-stripe="cvc" id="cvc")
+
+  .row
+    .form-group
+      .col-sm-3
+        = submit_tag("Purchase Cart", class: "btn btn-default", id: "purchase")

@@ -1,0 +1,19 @@
+development:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: snow_globe_development
+  pool:     5
+  username: noel
+  password:
+  template: template0
+
+test:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: snow_globe_test
+  pool:     5
+  username: noel
+  password:
+  template: template0

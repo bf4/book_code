@@ -1,0 +1,18 @@
+h1 Subscription Cart
+
+table.table
+  thead
+    tr
+      th Plan
+      th Total Price
+  tbody
+    - @cart.subscriptions.each do |subscription|
+      tr(id= dom_id(subscription))
+        td= subscription.plan.name
+        td.subtotal= humanized_money_with_symbol(subscription.plan.price)
+
+h3 Total #{humanized_money_with_symbol(@cart.total_cost)}
+
+h2 Checkout
+
+= render "shopping_carts/credit_card_info"

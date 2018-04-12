@@ -1,0 +1,3 @@
+buyer:
+  email: buyer@cubs.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

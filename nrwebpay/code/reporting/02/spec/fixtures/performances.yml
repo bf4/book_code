@@ -1,0 +1,9 @@
+midsummer:
+  event: bums
+  start_time: "2016-06-21 19:00"
+  end_time: "2016-06-21 21:00"
+
+next_day:
+  event: bums
+  start_time: "2016-06-22 19:00"
+  end_time: "2016-06-22 21:00"

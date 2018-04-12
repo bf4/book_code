@@ -1,0 +1,6 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    .alert(class="alert-#{name.to_s == "notice" ? "success" : "danger"}")
+      button.close(
+        type="button" data-dismiss="alert" aria-hidden="true") &times;
+      div(id="flash_#{name}")= msg

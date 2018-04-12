@@ -1,0 +1,19 @@
+h1 Affiliate Validation
+
+h2 Due by: #{@affiliate.stripe_validation_due_by}
+
+= form_for(@affiliate, html: {id: "affiliate-form"}) do |f|
+
+  - @affiliate.verification_form_names.each do |field_name|
+    - if field_name == "account[external_account]"
+      = render "affiliate/edit/bank_account_form"
+    - else
+      .row
+        .form-group
+          .col-sm-3
+            = label_tag(field_name.humanize, field_name, class: "control-label")
+          .col-sm-5
+            = text_field_tag(field_name, "", class: "form-control")
+  .row
+    .form-group
+      = f.submit("Make Me an Affiliate", class: "btn btn-default")

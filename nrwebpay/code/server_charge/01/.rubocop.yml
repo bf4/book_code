@@ -1,0 +1,127 @@
+AllCops:
+  Exclude:
+    - "db/schema.rb" # You can't touch this
+    - ".bundle/**/*" # Auto-generated
+    - "bin/**/*"     # Auto-generated
+    - "vendor/**/*"  # We cannot solve the world's problems
+  TargetRubyVersion: 2.3
+
+Rails:
+  Enabled: true
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 80
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+  IndentationWidth: 4
+
+Style/CaseEquality:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "app/controllers/**/*"
+    - "app/helpers/**/*"
+
+Style/EmptyLinesAroundBlockBody:
+  Exclude:
+    - "spec/**/*"
+    - "lib/tasks/*.rake"
+
+Style/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+Style/EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines
+
+Style/FirstParameterIndentation:
+  IndentationWidth: 4
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/IndentArray:
+  IndentationWidth: 4
+
+Style/IndentAssignment:
+  IndentationWidth: 4
+
+Style/IndentHash:
+  IndentationWidth: 4
+
+Style/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 4
+
+Style/MultilineHashBraceLayout:
+  EnforcedStyle: same_line
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 4
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrivialAccessors:
+  ExactNameMatch: true
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: no_comma
+
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SpaceBeforeBlockParameters: true
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBraces: no_space
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*" # because let statements use braces for multiline blocks
+
+Style/BlockEndNewline:
+  Exclude:
+    - "spec/**/*" # because let statements use braces for multiline blocks
+
+Style/MultilineBlockLayout:
+  Exclude:
+    - "spec/**/*" # because let statements use braces for multiline blocks
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+  Exclude:
+    - "spec/**/*" # because sometimes we use this in expect or then blocks
+
+Style/RaiseArgs:
+  Enabled: false

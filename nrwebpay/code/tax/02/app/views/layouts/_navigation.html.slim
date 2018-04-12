@@ -1,0 +1,13 @@
+nav.navbar.navbar-default.navbar-static-top
+  .container
+    .navbar-header
+      button.navbar-toggle(
+        data-target=".navbar-collapse" data-toggle="collapse")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    = link_to("Snow Globe Theater", root_path, class: "navbar-brand")
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        = render "layouts/navigation_links"

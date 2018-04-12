@@ -1,0 +1,7 @@
+code:
+  code: "CODE"
+  percentage: 25
+  description: "MyText"
+  minimum_amount_cents: nil
+  maximum_discount_cents: nil
+  max_uses: nil

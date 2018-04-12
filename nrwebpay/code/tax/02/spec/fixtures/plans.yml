@@ -1,0 +1,29 @@
+orchestra_monthly:
+  remote_id: "orchestra_monthly"
+  name: "Orchestra Monthly"
+  price_cents: 10_000
+  interval: "month"
+  interval_count: 1
+  tickets_allowed: 1
+  ticket_category: "Orchestra"
+  status: 1
+
+balcony_monthly:
+  remote_id: "balcony_monthly"
+  name: "Balcony Monthly"
+  price_cents: 60_000
+  interval: "month"
+  interval_count: 1
+  tickets_allowed: 1
+  ticket_category: "Balcony"
+  status: 1
+
+vip_monthly:
+  remote_id: "vip_monthly"
+  name: "VIP Monthly"
+  price_cents: 30_000
+  interval: "month"
+  interval_count: 1
+  tickets_allowed: 1
+  ticket_category: "VIP"
+  status: 1

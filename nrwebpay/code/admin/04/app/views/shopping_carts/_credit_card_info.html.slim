@@ -1,0 +1,102 @@
+h3 Payment Options
+
+= form_tag(payments_path,
+  class: "credit-card-form form-horizontal", id: "payment-form") do
+
+  .form-group
+    .col-sm-2
+      = label_tag(:discount_code, "Discount Code", class: "control-label")
+    .col-sm-2
+      input.form-control.valid-field(name="discount_code" id="discount_code")
+    .col-sm-3
+      = submit_tag("Apply Code", class: "btn btn-primary", id: "apply_code")
+    = hidden_field_tag(:active_discount_code, "")
+
+    / 
+    - if current_user.admin?
+      .form-group
+        .col-sm-2
+          = label_tag(:purchase_amount,
+            "Purchase Amount Override ($X.XX)", class: "control-label")
+        .col-sm-2
+          input.form-control(name=:purchase_amount_cents
+            id="purchase_amount"
+            value=humanized_money(@cart.total_cost))
+    - else
+      = hidden_field_tag(:purchase_amount_cents, @cart.total_cost.cents)
+    /
+
+  = hidden_field_tag(:purchase_amount_cents, @cart.total_cost.cents)
+  = hidden_field_tag(@cart.item_attribute, @cart.item_ids)
+  = hidden_field_tag(:purchase_type, @cart.class.name)
+  = hidden_field_tag(:stripe_token, "", id: "spec_stripe_token")
+
+  .paypal
+    img(src="https://www.paypal.com/en_US/i/logo/PayPal_mark_37x23.gif"
+        align="left" style="margin-right:7px;")
+    span(style="font-size:11px; font-family: Arial, Verdana")
+      | The safer, easier way to pay.
+    = radio_button_tag(:payment_type,
+        :paypal, false,
+        class: "payment-type-radio", id: "paypal_radio")
+  .credit_card
+    | Credit Card
+    = radio_button_tag(:payment_type,
+        :credit, true,
+        class: "payment-type-radio", id: "credit_radio")
+    - if current_user.admin?
+      | Cash
+      = radio_button_tag(:payment_type, :cash, true,
+        class: "payment-type-radio", id: "cash_radio")
+      | Invoice or Purchase Order
+      = radio_button_tag(:payment_type, :invoice, true,
+        class: "payment-type-radio", id: "invoice_radio")
+
+  /
+
+
+  .bg-danger#error-text
+
+  /
+  - if current_user.admin?
+    #admin_credit_card_info
+      h3 Administrator info
+      .form-group
+        .col-sm-2
+          = label_tag(:user_email, "User Email", class: "control-label")
+        .col-sm-2
+          input.form-control(name="user_email" id="user_email")
+  /
+
+  #credit-card-info
+    h3 Credit Card Info
+    .row
+      .form-group
+        .col-sm-2
+          = label_tag(:credit_card_number, "Credit Card Number",
+            class: "control-label")
+        .col-sm-3
+          input.form-control.valid-field(data-stripe="number"
+            id="credit_card_number")
+        .col-sm-1
+          = image_tag("creditcards/credit.png", id: "card-image")
+
+    .row
+      .form-group
+        .col-sm-2
+          = label_tag(:expiration_month, "Month", class: "control-label")
+        .col-sm-2
+          input.form-control.valid-field(placeholder="MM / YY"
+            data-stripe="exp" id="expiration_date")
+
+    .row
+      .form-group
+        .col-sm-2
+          = label_tag(:cvc, "CVC", class: "control-label")
+        .col-sm-1
+          input.form-control.valid-field(data-stripe="cvc" id="cvc")
+
+  .row
+    .form-group
+      .col-sm-3
+        = submit_tag("Purchase Cart", class: "btn btn-default", id: "purchase")

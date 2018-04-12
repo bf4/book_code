@@ -1,0 +1,14 @@
+h2 Subscription Plans
+
+- @plans.each do |plan|
+  .plan(id=dom_id(plan))
+
+    h3.plan-name= plan.name
+
+    .plan-description= plan.description
+    .plan-cost= humanized_money_with_symbol(plan.price)
+
+    = form_tag(subscription_cart_path, method: :patch) do
+      = hidden_field_tag("plan_id", plan.id)
+      .form-group
+        = submit_tag("Add to Cart", class: "btn btn-default", id: "add-to-cart")

@@ -1,0 +1,63 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "62358db943ac145594fb10d15b6b9e871815ba83929562886ae28af281723117",
+      "message": "Possible SQL injection",
+      "file": "app/models/day_revenue.rb",
+      "line": 18,
+      "link": "http://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "ActiveRecord::Base.connection.select_all(\"SELECT date(created_at) as day,\\n        sum(price_cents) as price_cents,\\n        sum(discount_cents) as discounts_cents\\n        FROM \\\"payments\\\"\\n        WHERE \\\"payments\\\".\\\"status\\\" = 1\\n        GROUP BY date(created_at)\\n        HAVING date(created_at) = '#{date}'\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "DayRevenue",
+        "method": "DayRevenue.build_for"
+      },
+      "user_input": "date",
+      "confidence": "Medium",
+      "note": "This will be fine..."
+    },
+    {
+      "warning_type": "Remote Code Execution",
+      "warning_code": 24,
+      "fingerprint": "cec23d9f79b9fe25ac035278047c78a554ac0b59ce3992aa3af1d306ff61d52e",
+      "message": "Unsafe reflection method constantize called with parameter value",
+      "file": "app/controllers/refunds_controller.rb",
+      "line": 20,
+      "link": "http://brakemanscanner.org/docs/warning_types/remote_code_execution/",
+      "code": "params[:type].constantize",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "RefundsController",
+        "method": "load_refundable"
+      },
+      "user_input": "params[:type]",
+      "confidence": "High",
+      "note": "paramter value is limited on previous line"
+    },
+    {
+      "warning_type": "Mass Assignment",
+      "warning_code": 70,
+      "fingerprint": "dbc50c2485b4167fc6b79b254f3b285839a092e86d39a22da822ef2479844c93",
+      "message": "Parameters should be whitelisted for mass assignment",
+      "file": "app/controllers/addresses_controller.rb",
+      "line": 9,
+      "link": "http://brakemanscanner.org/docs/warning_types/mass_assignment/",
+      "code": "params[:address].permit!",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "AddressesController",
+        "method": "create"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": "These parameters are used individually in the workflow"
+    }
+  ],
+  "updated": "2016-10-05 22:13:01 -0500",
+  "brakeman_version": "3.4.0"
+}

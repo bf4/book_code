@@ -1,0 +1,21 @@
+linters:
+  SpaceInsideHashAttributes:
+    style: no_space
+
+  RuboCop:
+    ignored_cops:
+      - Lint/BlockAlignment
+      - Lint/EndAlignment
+      - Lint/Void
+      - Metrics/LineLength
+      - Style/AlignParameters
+      - Style/BlockNesting
+      - Style/FileName
+      - Style/FinalNewline
+      - Style/IfUnlessModifier
+      - Style/IndentationWidth
+      - Style/Next
+      - Style/TrailingBlankLines
+      - Style/TrailingWhitespace
+      - Style/WhileUntilModifier
+      - Style/UnneededInterpolation

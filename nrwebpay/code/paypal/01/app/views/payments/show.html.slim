@@ -1,0 +1,19 @@
+h1 Payment Number: #{@payment.reference}
+
+table.table
+  thead
+    tr
+      th Ticket #
+      th Event
+      th Date
+      th Price
+    tbody
+      - @payment.payment_line_items.each do |payment_line_item|
+        - ticket = payment_line_item.buyable
+        tr.purchased_ticket(id=dom_id(ticket, :purchased))
+          td= ticket.reference
+          td= ticket.event.name
+          td= ticket.performance.start_time.to_date.to_s(:long)
+          td.subtotal= humanized_money_with_symbol(payment_line_item.price)
+
+h3 Total #{humanized_money_with_symbol(@payment.total_cost)}

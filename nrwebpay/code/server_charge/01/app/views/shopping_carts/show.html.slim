@@ -1,0 +1,43 @@
+h1 Shopping Cart
+
+- @cart.events.each do |event|
+  h2= event.name
+  div(id=dom_id(event))
+    table.table
+      thead
+        th Date
+        th Tickets
+        th Total Price
+      tbody
+        - @cart.performances_for(event).each do |performance|
+          tr(id=dom_id(performance))
+            td= performance.start_time.to_date.to_s(:long)
+            td.ticket_count= @cart.performance_count[performance.id]
+            td.subtotal
+              = humanized_money_with_symbol(@cart.subtotal_for(performance))
+
+h3 Total #{humanized_money_with_symbol(@cart.total_cost)}
+
+//#
+h2 Checkout
+
+h3 Credit Card Info
+
+= form_tag(payments_path, class: "form-inline") do
+  = hidden_field_tag(:purchase_amount_cents, @cart.total_cost.cents)
+  .form_group
+    = label_tag(:credit_card_number, "Credit Card Number", class: "sr-only")
+    = text_field_tag(:credit_card_number,
+        "", class: "form-control", placeholder: "Credit Card #")
+  .form_group
+    = label_tag(:expiration_month, "Month", class: "sr-only")
+    = text_field_tag(:expiration_month,
+        "", class: "form-control", placeholder: "Month")
+    = label_tag(:expiration_year, "Year", class: "sr-only")
+    = text_field_tag(:expiration_year,
+        "", class: "form-control", placeholder: "Year")
+    = label_tag(:cvc, "Year", class: "sr-only")
+    = text_field_tag(:cvc, "", class: "form-control", placeholder: "CVC #")
+  .form_group
+    = submit_tag("Purchase Cart", class: "btn btn-default", id: "purchase")
+//#

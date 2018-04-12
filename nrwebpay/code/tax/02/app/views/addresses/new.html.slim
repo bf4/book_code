@@ -1,0 +1,39 @@
+h3 Shipping Address
+= form_for(@address) do |f|
+  .row
+    .form-group
+      .col-sm-2
+        = label_tag(:shipping_method)
+      .col-sm-2
+        = select_tag("shipping_method",
+            options_for_select(mailer_options), class: "form-control")
+  .row
+    .form-group
+      .col-sm-2
+        = f.label(:address_1, "Address Line 1", class: "control-label")
+      .col-sm-3
+        = f.text_field("address_1", class: "form-control")
+  .row
+    .form-group
+      .col-sm-2
+        = f.label(:address_2, "Address Line 2", class: "control-label")
+      .col-sm-3
+        = f.text_field("address_2", class: "form-control")
+
+  .row
+    .form-group
+      .col-sm-2
+        = f.label(:city, "City/State/Zip", class: "control-label")
+      .col-sm-3
+        = f.text_field("city", class: "form-control")
+      .col-sm-2
+        = f.select("state",
+            options_for_select(CS.states(:us).invert), {},
+            class: "form-control")
+      .col-sm-2
+        = f.text_field("zip", class: "form-control", placeholder: "Zip")
+
+  .row
+    .form-group
+      .col-sm-3
+        = submit_tag("Add Address", class: "btn btn-default", id: "add_address")

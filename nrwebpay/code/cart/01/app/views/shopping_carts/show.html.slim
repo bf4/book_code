@@ -1,0 +1,19 @@
+h1 Shopping Cart
+
+- @cart.events.each do |event|
+  h2= event.name
+  div(id=dom_id(event))
+    table.table
+      thead
+        th Date
+        th Tickets
+        th Total Price
+      tbody
+        - @cart.performances_for(event).each do |performance|
+          tr(id=dom_id(performance))
+            td= performance.start_time.to_date.to_s(:long)
+            td.ticket_count= @cart.performance_count[performance.id]
+            td.subtotal
+              = humanized_money_with_symbol(@cart.subtotal_for(performance))
+
+h3 Total #{humanized_money_with_symbol(@cart.total_cost)}
