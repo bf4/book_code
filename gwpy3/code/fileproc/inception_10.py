@@ -1,0 +1,5 @@
+inception_file = open('inception_10.py', 'r')
+first_ten_chars = inception_file.read(10)
+the_rest = inception_file.read()
+print("The first 10 characters:", first_ten_chars)
+print("The rest of the file:", the_rest)

@@ -1,0 +1,1 @@
+>>> import MySQLdb as dbapi

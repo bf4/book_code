@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: Test function for to_celsius
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/python25/lib/site-packages/nose/case.py", line 202, in runTest
+    self.test(*self.arg)
+  File "assert2.py", line 6, in test_to_celsius
+    assert to_celsius(100) == 37.8
+AssertionError
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

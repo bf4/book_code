@@ -1,0 +1,2 @@
+>>> str.capitalize('browning')
+'Browning'

@@ -1,0 +1,7 @@
+keys: dict_keys(['Turing', 'Newton', 'Darwin'])
+values: dict_values([1912, 1642, 1809])
+items: dict_items([('Turing', 1912), ('Newton', 1642), ('Darwin', 1809)])
+get: 1867
+after update: {'Curie': 1867, 'Darwin': 1809, 'Franklin': 1920,
+'Turing': 1912, 'Newton': 1642, 'Hopper': 1906}
+after clear: {}
