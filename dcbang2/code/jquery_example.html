@@ -1,0 +1,28 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+-->
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <p>You currently owe: $123.45</p>
+      <button class="reveal-button">Show Details</button>
+      <ul style="display: none" class="details">
+        <li>Base fee: $120.00</li>
+        <li>Taxes: $3.45</li>
+      </ul>
+    </section>
+    <script>
+      $(".reveal-button").click(function($event) {
+        $(".details").toggle();
+      });
+    </script>
+  </body>
+</html>

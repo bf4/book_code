@@ -1,0 +1,18 @@
+#---
+# Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+#---
+class SwitchCustomerSettingsToJsonb < ActiveRecord::Migration[5.0]
+  def up
+    change_column :customers, :insights,
+      'jsonb USING CAST(insights AS jsonb)'
+  end
+  def down
+    change_column :customers, :insights,
+      'json USING CAST(insights AS json)'
+  end
+end

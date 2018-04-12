@@ -1,0 +1,59 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+-->
+<article class="panel panel-primary customer-info" *ngIf="customer">
+  <header class="panel-heading">
+    <h1 class="h3">
+      <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+      Customer
+    </h1>
+  </header>
+
+  <!-- rest of the markup... -->
+
+  <section class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <shine-text-field
+          bind-object="customer" 
+          field_name="first_name"
+          on-valueChanged="save($event)"
+          label="First Name">
+        </shine-text-field>
+      </div>
+      <div class="col-md-4">
+        <shine-text-field
+          bind-object="customer" 
+          field_name="last_name"
+          on-valueChanged="save($event)"
+          label="Last Name">
+        </shine-text-field>
+      </div>
+      <div class="col-md-4">
+        <shine-text-field
+          addon="@"
+          bind-object="customer" 
+          field_name="username"
+          on-valueChanged="save($event)"
+          label="Username">
+        </shine-text-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <shine-text-field
+        bind-object="customer" 
+        field_name="email"
+        on-valueChanged="save($event)"
+        label="Email">
+      </shine-text-field>
+    </div>
+  </section>
+  <footer class="panel-footer">
+    <label for="joined">Joined</label> {{customer.joined_at | date}}
+  </footer>
+</article>

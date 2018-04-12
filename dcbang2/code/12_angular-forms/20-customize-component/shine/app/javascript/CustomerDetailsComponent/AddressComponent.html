@@ -1,0 +1,50 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+-->
+<article class="panel panel-default {{addressType}}">
+  <header class="panel-heading">
+    <h2 class="h4">
+      {{addressType}} Address
+    </h2>
+  </header>
+  <section class="panel-body">
+
+  <!-- rest of the markup -->
+
+    <shine-text-field
+      bind-object="address" 
+      field_name="street"
+      label="Street">
+    </shine-text-field>
+    <div class="row">
+      <div class="col-md-6">
+        <shine-text-field
+          bind-object="address" 
+          field_name="city"
+          label="City">
+        </shine-text-field>
+      </div>
+      <div class="col-md-2">
+        <shine-text-field
+          bind-object="address" 
+          field_name="state"
+          compact="true"
+          label="State">
+        </shine-text-field>
+      </div>
+      <div class="col-md-4">
+        <shine-text-field
+          bind-object="address" 
+          field_name="zipcode"
+          pattern="\d\d\d\d\d(-\d\d\d\d)?"
+          label="Zip Code">
+        </shine-text-field>
+      </div>
+    </div>
+  </section>
+</article>

@@ -1,0 +1,32 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+-->
+<section class="customer-details" *ngIf="customer">
+<form>
+  <div class="row">
+    <div class="col-md-6">
+      <shine-customer-info></shine-customer-info>
+      <shine-address></shine-address>
+    </div>
+    <div class="col-md-6">
+      <article class="panel panel-default">
+        <header class="panel-heading">
+          <h2 class="h4">
+            Billing Info
+          </h2>
+        </header>
+        <section class="panel-body">
+          <shine-credit-card></shine-credit-card>
+          <hr>
+          <shine-address></shine-address>
+        </section>
+      </article>
+    </div>
+  </div>
+</form>
+</section>

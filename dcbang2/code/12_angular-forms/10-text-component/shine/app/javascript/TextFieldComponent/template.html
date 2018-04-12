@@ -1,0 +1,27 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+-->
+<div bind-class="( model.invalid && model.dirty ) ? 
+                  'form-group has-warning' : 
+                  'form-group'">
+  <label class="sr-only" attr.for="{{field_name}}">
+    {{label}}
+  </label>
+  <div bind-class="addon ? 'input-group' : ''">
+    <div *ngIf="addon" class="input-group-addon">{{addon}}</div>
+    <input type="text" class="form-control" attr.name="{{field_name}}"
+           required
+           bindon-ngModel="object[field_name]" 
+           ref-model="ngModel"
+           >
+  </div>
+  <aside *ngIf="model.invalid && model.dirty" 
+    class="alert alert-danger">
+    <small>This is required</small>
+  </aside>
+</div>

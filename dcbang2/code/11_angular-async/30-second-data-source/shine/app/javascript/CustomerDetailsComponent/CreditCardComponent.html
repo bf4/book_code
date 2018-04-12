@@ -1,0 +1,33 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+-->
+<article class="credit-card-info" *ngIf="credit_card_info">
+  <div class="row">
+    <div class="col-md-7">
+      <p class="h4">
+        ****-****-****-{{credit_card_info.last_four}}
+        <span class="label label-success">{{credit_card_info.type}}</span>
+      </p>
+      <p class="h5">
+        <label>Expires:</label>
+        {{credit_card_info.expiration_month}}/{{credit_card_info.expiration_year}}
+      </p>
+    </div>
+    <div class="col-md-5 text-right">
+      <a href="{{credit_card_info.link}}" class="btn btn-lg btn-default">
+        View Details...
+      </a>
+    </div>
+  </div>
+</article>
+<aside class="progress" *ngIf="!credit_card_info">
+  <div class="progress-bar progress-bar-info progress-bar-striped active"
+    role="progressbar" style="width: 100%">
+    Loading...
+  </div>
+</aside>
