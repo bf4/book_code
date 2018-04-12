@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "elm-app start"
+  },
+  "dependencies": {
+    "create-elm-app": "^1.10.2"
+  }
+}

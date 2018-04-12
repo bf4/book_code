@@ -1,0 +1,56 @@
+> import Json.Decode exposing (decodeString, bool, int, string)
+
+> decodeString int "42"
+Ok 42 : Result.Result String Int
+
+> decodeString int "\"Elm\""
+Err "Expecting an Int but instead got: \"Elm\"" : Result.Result String Int
+
+> import Json.Decode exposing (decodeString, bool, field, int, list, string)
+
+> decodeString bool "true"
+Ok True : Result.Result String Bool
+
+> decodeString string "\"Elm is Awesome\""
+Ok "Elm is Awesome" : Result.Result String String
+
+> decodeString (list int) "[1, 2, 3]"
+Ok [1,2,3] : Result.Result String (List Int)
+
+> decodeString (field "name" string) """{"name": "Tucker"}"""
+Ok "Tucker" : Result.Result String String
+
+> import Json.Decode exposing (decodeString, int, string)
+> import Json.Decode.Pipeline exposing (decode, required)
+
+> dog name age = { name = name, age = age }
+<function> : a -> b -> { age : b, name : a }
+
+> dogDecoder = decode dog \
+|     |> required "name" string \
+|     |> required "age" int
+<decoder> : Json.Decode.Decoder { age : Int, name : String }
+
+> decodeString dogDecoder """{"name": "Tucker", "age": 11}"""
+Ok { name = "Tucker", age = 11 }
+    : Result.Result String { age : Int, name : String }
+
+> import Picshare exposing (photoDecoder)
+> import Json.Decode exposing (decodeString)
+
+> decodeString photoDecoder """ \
+|     { "id": 1 \
+|     , "url": "https://programming-elm.surge.sh/1.jpg" \
+|     , "caption": "Surfing" \
+|     , "liked": false \
+|     , "comments": ["Cowabunga, dude!"] \
+|     } \
+|     """
+Ok { id = 1
+   , url = "https://programming-elm.surge.sh/1.jpg"
+   , caption = "Surfing"
+   , liked = False
+   , comments = ["Cowabunga, dude!"]
+   , newComment = ""
+   }
+    : Result.Result String Picshare01.Photo

@@ -1,0 +1,123 @@
+:root {
+  --font-stack: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  font-size: 12px;
+}
+
+html, body {
+  font-family: var(--font-stack);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin: 0 0 20px 0;
+}
+
+input[type="date"],
+input[type="number"] {
+  font-family: var(--font-stack);
+  font-size: 1.167rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pick-date table {
+  font-size: 1.67rem;
+  margin: 20px auto 0;
+}
+
+.pick-date td {
+  width: 100px;
+}
+
+hr {
+  background-color: #D3D3D3;
+  border: 0 none;
+  height: 1px;
+  margin: 25px 0;
+}
+
+.future-date .date-part-inputs {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.future-date .date-part-input {
+  align-items: center;
+  display: flex;
+  font-size: 1.33rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.future-date input[type="number"] {
+  margin-left: 5px;
+  width: 50px;
+}
+
+.future-date .result {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.future-date .result > span:first-child {
+  font-weight: bold;
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+
+  input[type="date"],
+  input[type="number"] {
+    padding: 4px;
+  }
+
+  .content {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+  }
+
+  hr {
+    height: 350px;
+    margin: -50px 0 0;
+    width: 1px;
+  }
+
+  .future-date {
+    border-top: 0 none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .future-date .date-part-inputs {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .future-date .date-part-input + .date-part-input {
+    margin-left: 30px;
+  }
+
+  .future-date input[type="number"] {
+    margin-left: 15px;
+    width: 70px;
+  }
+}

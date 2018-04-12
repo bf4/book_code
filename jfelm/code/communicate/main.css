@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i');
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  width: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+/* ------ */
+
+.header {
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Loading Feed */
+/* ------------ */
+
+.loading-feed {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Feed Error */
+/* ---------- */
+
+.feed-error {
+  color: #c00;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+}
+
+/* Detailed Image */
+/* -------------- */
+
+.detailed-photo img {
+  display: block;
+  width: 100%;
+}
+
+.detailed-photo .photo-info {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.detailed-photo .like-button {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.detailed-photo .like-button i.fa-heart {
+  color: #d00;
+}
+
+.detailed-photo .caption {
+  font-size: 30px;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0 0 20px 0;
+}
+
+.detailed-photo .comments h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.detailed-photo .comments ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.detailed-photo .comments li + li {
+  margin-top: 10px;
+}
+
+.detailed-photo .new-comment {
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+.detailed-photo .new-comment input[type="text"] {
+  background: #f9f9f9;
+  border: 0 none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.detailed-photo .new-comment input[type="text"]::-webkit-input-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.detailed-photo .new-comment button {
+  background: none;
+  border: 0 none;
+  color: #3897f0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
+  padding: 4px 8px;
+}
+
+.detailed-photo .new-comment button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.detailed-photo .detailed-photo + .detailed-photo {
+  margin-top: 50px;
+}
+
+/* Simple Image */
+/* ------------ */
+
+.simple-photo {
+  cursor: pointer;
+}
+
+/* Gallery */
+/* ------- */
+
+.content-gallery .simple-photo {
+  height: 293px;
+  margin-left: 28px;
+  width: 293px;
+}
+
+/* Modal */
+/* ----- */
+
+/* .modal-backdrop { */
+/*   background: rgba(0, 0, 0, 0.75); */
+/*   height: 100%; */
+/*   left: 0; */
+/*   position: absolute; */
+/*   top: 0; */
+/*   width: 100%; */
+/* } */
+
+/* .modal { */
+/*   left: 50%; */
+/*   position: fixed; */
+/*   top: 50%; */
+/* } */
+
+@media (min-width: 650px) {
+  /* Header */
+  /* ------ */
+
+  .header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 60px;
+  }
+
+  /* Shared */
+  /* ------ */
+
+  .content-flow,
+  .content-gallery {
+    margin: 0 auto 60px;
+  }
+
+  .stream-notification,
+  .content-flow {
+    width: 600px;
+  }
+
+  /* Detailed Image */
+  /* -------------- */
+
+  .detailed-photo {
+    box-shadow: 0 0 2px #ccc;
+    background: #fff;
+  }
+
+  .detailed-photo .photo-info {
+    padding-bottom: 10px;
+  }
+
+  .detailed-photo .new-comment input[type="text"] {
+    background: #fff;
+  }
+
+  /* Stream Notification */
+  /* ------------------- */
+
+  .stream-notification {
+    background: #eeeeee;
+    border: 1px solid #d0d0d0;
+    border-top: 0 none;
+    color: #707070;
+    cursor: pointer;
+    /* display: none; */
+    height: 20px;
+    font-size: 16px;
+    margin: -60px auto 19px;
+    /* padding: 30px 0; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .stream-notification:hover {
+    background: #e8e8e8;
+  }
+
+  /* Flow */
+  /* ---- */
+
+  .content-flow .detailed-photo + .detailed-photo {
+    margin-top: 60px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 990px) {
+  /* Simple Image */
+  /* ------------ */
+
+  .simple-photo img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .content-gallery {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 935px;
+  }
+
+  .content-gallery .simple-photo {
+    height: 293px;
+    margin-left: 28px;
+    width: 293px;
+  }
+
+  .content-gallery .simple-photo:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+
+  .content-gallery .simple-photo:nth-child(n + 4) {
+    margin-top: 28px;
+  }
+}

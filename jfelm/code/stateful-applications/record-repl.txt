@@ -1,0 +1,50 @@
+> dog = { name = "Tucker", age = 11 }
+{ name = "Tucker", age = 11 } : { age : number, name : String }
+
+> dog.name
+"Tucker" : String
+
+> dog.age
+11 : number
+
+> dog["name"]
+-- TYPE MISMATCH --------------------------------------------- repl-temp-000.elm
+
+`dog` is not a function, but you are giving it an argument!
+
+3|   dog["name"]
+        ^^^^^^^^
+
+> .name
+<function> : { b | name : a } -> a
+
+> .name dog
+"Tucker" : String
+
+> .age dog
+11 : number
+
+> dog.breed = "Sheltie"
+-- SYNTAX PROBLEM -------------------------------------------- repl-temp-000.elm
+
+The = operator is reserved for defining variables. Maybe you want == instead? Or
+maybe you are defining a variable, but there is whitespace before it?
+
+3|   dog.breed = "Sheltie"
+
+> dog.name = "Rover"
+> dog.age = 12
+
+> haveBirthday dog = { name = dog.name , age = dog.age + 1 }
+<function> : { b | age : number, name : a } -> { age : number, name : a }
+
+> haveBirthday dog = { dog | age = dog.age + 1 }
+<function> : { a | age : number } -> { a | age : number }
+
+> olderDog = haveBirthday dog
+{ name = "Tucker", age = 12 } : { age : number, name : String }
+
+> dog
+{ name = "Tucker", age = 11 } : { age : number, name : String }
+
+> { dog | breed = "Sheltie" }
