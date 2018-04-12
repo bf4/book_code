@@ -1,0 +1,437 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name="okio/AsyncTimeout$Watchdog" super="java/lang/Thread">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="run" type="()V"/>
+</class>
+<class name="okio/AsyncTimeout" super="okio/Timeout">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="enter" type="()V"/>
+<method name="exit" type="()Z"/>
+<method name="timedOut" type="()V"/>
+<method name="sink" type="(Lokio/Sink;)Lokio/Sink;"/>
+<method name="source" type="(Lokio/Source;)Lokio/Source;"/>
+<method name="exit" type="(Z)V"/>
+<method name="exit" type="(Ljava/io/IOException;)Ljava/io/IOException;"/>
+<method name="access$000" type="()Lokio/AsyncTimeout;" class_method="true"/>
+</class>
+<class name="okio/Buffer$1" super="java/io/OutputStream">
+<method name="&lt;init&gt;" type="(Lokio/Buffer;)V"/>
+<method name="write" type="(I)V"/>
+<method name="write" type="([BII)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/Buffer$2" super="java/io/InputStream">
+<method name="&lt;init&gt;" type="(Lokio/Buffer;)V"/>
+<method name="read" type="()I"/>
+<method name="read" type="([BII)I"/>
+<method name="available" type="()I"/>
+<method name="close" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/ForwardingTimeout" super="okio/Timeout">
+<method name="&lt;init&gt;" type="(Lokio/Timeout;)V"/>
+<method name="delegate" type="()Lokio/Timeout;"/>
+<method name="setDelegate" type="(Lokio/Timeout;)Lokio/ForwardingTimeout;"/>
+<method name="timeout" type="(JLjava/util/concurrent/TimeUnit;)Lokio/Timeout;"/>
+<method name="timeoutNanos" type="()J"/>
+<method name="hasDeadline" type="()Z"/>
+<method name="deadlineNanoTime" type="()J"/>
+<method name="deadlineNanoTime" type="(J)Lokio/Timeout;"/>
+<method name="clearTimeout" type="()Lokio/Timeout;"/>
+<method name="clearDeadline" type="()Lokio/Timeout;"/>
+<method name="throwIfReached" type="()V"/>
+</class>
+<class name="okio/Okio$3" super="okio/AsyncTimeout">
+<method name="&lt;init&gt;" type="(Ljava/net/Socket;)V"/>
+<method name="timedOut" type="()V"/>
+</class>
+<class name="okio/RealBufferedSink$1" super="java/io/OutputStream">
+<method name="&lt;init&gt;" type="(Lokio/RealBufferedSink;)V"/>
+<method name="write" type="(I)V"/>
+<method name="write" type="([BII)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/RealBufferedSource$1" super="java/io/InputStream">
+<method name="&lt;init&gt;" type="(Lokio/RealBufferedSource;)V"/>
+<method name="read" type="()I"/>
+<method name="read" type="([BII)I"/>
+<method name="available" type="()I"/>
+<method name="close" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/SegmentedByteString" super="okio/ByteString">
+<method name="&lt;init&gt;" type="(Lokio/Buffer;I)V"/>
+<method name="utf8" type="()Ljava/lang/String;"/>
+<method name="base64" type="()Ljava/lang/String;"/>
+<method name="hex" type="()Ljava/lang/String;"/>
+<method name="toAsciiLowercase" type="()Lokio/ByteString;"/>
+<method name="toAsciiUppercase" type="()Lokio/ByteString;"/>
+<method name="md5" type="()Lokio/ByteString;"/>
+<method name="sha256" type="()Lokio/ByteString;"/>
+<method name="base64Url" type="()Ljava/lang/String;"/>
+<method name="substring" type="(I)Lokio/ByteString;"/>
+<method name="substring" type="(II)Lokio/ByteString;"/>
+<method name="getByte" type="(I)B"/>
+<method name="size" type="()I"/>
+<method name="toByteArray" type="()[B"/>
+<method name="write" type="(Ljava/io/OutputStream;)V"/>
+<method name="write" type="(Lokio/Buffer;)V"/>
+<method name="rangeEquals" type="(ILokio/ByteString;II)Z"/>
+<method name="rangeEquals" type="(I[BII)Z"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/Timeout$1" super="okio/Timeout">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="timeout" type="(JLjava/util/concurrent/TimeUnit;)Lokio/Timeout;"/>
+<method name="deadlineNanoTime" type="(J)Lokio/Timeout;"/>
+<method name="throwIfReached" type="()V"/>
+</class>
+<class name="okio/Base64">
+<method name="decode" type="(Ljava/lang/String;)[B" class_method="true"/>
+<method name="encode" type="([B)Ljava/lang/String;" class_method="true"/>
+<method name="encodeUrl" type="([B)Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="okio/Okio">
+<method name="buffer" type="(Lokio/Source;)Lokio/BufferedSource;" class_method="true"/>
+<method name="buffer" type="(Lokio/Sink;)Lokio/BufferedSink;" class_method="true"/>
+<method name="sink" type="(Ljava/io/OutputStream;)Lokio/Sink;" class_method="true"/>
+<method name="sink" type="(Ljava/net/Socket;)Lokio/Sink;" class_method="true"/>
+<method name="source" type="(Ljava/io/InputStream;)Lokio/Source;" class_method="true"/>
+<method name="source" type="(Ljava/io/File;)Lokio/Source;" class_method="true"/>
+<method name="source" type="(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Lokio/Source;" class_method="true"/>
+<method name="sink" type="(Ljava/io/File;)Lokio/Sink;" class_method="true"/>
+<method name="appendingSink" type="(Ljava/io/File;)Lokio/Sink;" class_method="true"/>
+<method name="sink" type="(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Lokio/Sink;" class_method="true"/>
+<method name="source" type="(Ljava/net/Socket;)Lokio/Source;" class_method="true"/>
+<method name="access$000" type="()Ljava/util/logging/Logger;" class_method="true"/>
+</class>
+<class name="okio/Segment">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="&lt;init&gt;" type="(Lokio/Segment;)V"/>
+<method name="&lt;init&gt;" type="([BII)V"/>
+<method name="pop" type="()Lokio/Segment;"/>
+<method name="push" type="(Lokio/Segment;)Lokio/Segment;"/>
+<method name="split" type="(I)Lokio/Segment;"/>
+<method name="compact" type="()V"/>
+<method name="writeTo" type="(Lokio/Segment;I)V"/>
+</class>
+<class name="okio/SegmentPool">
+<method name="take" type="()Lokio/Segment;" class_method="true"/>
+<method name="recycle" type="(Lokio/Segment;)V" class_method="true"/>
+</class>
+<class name="okio/Timeout">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="timeout" type="(JLjava/util/concurrent/TimeUnit;)Lokio/Timeout;"/>
+<method name="timeoutNanos" type="()J"/>
+<method name="hasDeadline" type="()Z"/>
+<method name="deadlineNanoTime" type="()J"/>
+<method name="deadlineNanoTime" type="(J)Lokio/Timeout;"/>
+<method name="deadline" type="(JLjava/util/concurrent/TimeUnit;)Lokio/Timeout;"/>
+<method name="clearTimeout" type="()Lokio/Timeout;"/>
+<method name="clearDeadline" type="()Lokio/Timeout;"/>
+<method name="throwIfReached" type="()V"/>
+</class>
+<class name="okio/Util">
+<method name="checkOffsetAndCount" type="(JJJ)V" class_method="true"/>
+<method name="reverseBytesShort" type="(S)S" class_method="true"/>
+<method name="reverseBytesInt" type="(I)I" class_method="true"/>
+<method name="reverseBytesLong" type="(J)J" class_method="true"/>
+<method name="sneakyRethrow" type="(Ljava/lang/Throwable;)V" class_method="true"/>
+<method name="arrayRangeEquals" type="([BI[BII)Z" class_method="true"/>
+</class>
+<class name="okio/AsyncTimeout$1">
+<method name="&lt;init&gt;" type="(Lokio/AsyncTimeout;Lokio/Sink;)V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/AsyncTimeout$2">
+<method name="&lt;init&gt;" type="(Lokio/AsyncTimeout;Lokio/Source;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/Buffer">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="size" type="()J"/>
+<method name="buffer" type="()Lokio/Buffer;"/>
+<method name="outputStream" type="()Ljava/io/OutputStream;"/>
+<method name="emitCompleteSegments" type="()Lokio/Buffer;"/>
+<method name="emit" type="()Lokio/BufferedSink;"/>
+<method name="exhausted" type="()Z"/>
+<method name="require" type="(J)V"/>
+<method name="request" type="(J)Z"/>
+<method name="inputStream" type="()Ljava/io/InputStream;"/>
+<method name="copyTo" type="(Ljava/io/OutputStream;)Lokio/Buffer;"/>
+<method name="copyTo" type="(Ljava/io/OutputStream;JJ)Lokio/Buffer;"/>
+<method name="copyTo" type="(Lokio/Buffer;JJ)Lokio/Buffer;"/>
+<method name="writeTo" type="(Ljava/io/OutputStream;)Lokio/Buffer;"/>
+<method name="writeTo" type="(Ljava/io/OutputStream;J)Lokio/Buffer;"/>
+<method name="readFrom" type="(Ljava/io/InputStream;)Lokio/Buffer;"/>
+<method name="readFrom" type="(Ljava/io/InputStream;J)Lokio/Buffer;"/>
+<method name="completeSegmentByteCount" type="()J"/>
+<method name="readByte" type="()B"/>
+<method name="getByte" type="(J)B"/>
+<method name="readShort" type="()S"/>
+<method name="readInt" type="()I"/>
+<method name="readLong" type="()J"/>
+<method name="readShortLe" type="()S"/>
+<method name="readIntLe" type="()I"/>
+<method name="readLongLe" type="()J"/>
+<method name="readDecimalLong" type="()J"/>
+<method name="readHexadecimalUnsignedLong" type="()J"/>
+<method name="readByteString" type="()Lokio/ByteString;"/>
+<method name="readByteString" type="(J)Lokio/ByteString;"/>
+<method name="readFully" type="(Lokio/Buffer;J)V"/>
+<method name="readAll" type="(Lokio/Sink;)J"/>
+<method name="readUtf8" type="()Ljava/lang/String;"/>
+<method name="readUtf8" type="(J)Ljava/lang/String;"/>
+<method name="readString" type="(Ljava/nio/charset/Charset;)Ljava/lang/String;"/>
+<method name="readString" type="(JLjava/nio/charset/Charset;)Ljava/lang/String;"/>
+<method name="readUtf8Line" type="()Ljava/lang/String;"/>
+<method name="readUtf8LineStrict" type="()Ljava/lang/String;"/>
+<method name="readUtf8Line" type="(J)Ljava/lang/String;"/>
+<method name="readUtf8CodePoint" type="()I"/>
+<method name="readByteArray" type="()[B"/>
+<method name="readByteArray" type="(J)[B"/>
+<method name="read" type="([B)I"/>
+<method name="readFully" type="([B)V"/>
+<method name="read" type="([BII)I"/>
+<method name="clear" type="()V"/>
+<method name="skip" type="(J)V"/>
+<method name="write" type="(Lokio/ByteString;)Lokio/Buffer;"/>
+<method name="writeUtf8" type="(Ljava/lang/String;)Lokio/Buffer;"/>
+<method name="writeUtf8" type="(Ljava/lang/String;II)Lokio/Buffer;"/>
+<method name="writeUtf8CodePoint" type="(I)Lokio/Buffer;"/>
+<method name="writeString" type="(Ljava/lang/String;Ljava/nio/charset/Charset;)Lokio/Buffer;"/>
+<method name="writeString" type="(Ljava/lang/String;IILjava/nio/charset/Charset;)Lokio/Buffer;"/>
+<method name="write" type="([B)Lokio/Buffer;"/>
+<method name="write" type="([BII)Lokio/Buffer;"/>
+<method name="writeAll" type="(Lokio/Source;)J"/>
+<method name="write" type="(Lokio/Source;J)Lokio/BufferedSink;"/>
+<method name="writeByte" type="(I)Lokio/Buffer;"/>
+<method name="writeShort" type="(I)Lokio/Buffer;"/>
+<method name="writeShortLe" type="(I)Lokio/Buffer;"/>
+<method name="writeInt" type="(I)Lokio/Buffer;"/>
+<method name="writeIntLe" type="(I)Lokio/Buffer;"/>
+<method name="writeLong" type="(J)Lokio/Buffer;"/>
+<method name="writeLongLe" type="(J)Lokio/Buffer;"/>
+<method name="writeDecimalLong" type="(J)Lokio/Buffer;"/>
+<method name="writeHexadecimalUnsignedLong" type="(J)Lokio/Buffer;"/>
+<method name="writableSegment" type="(I)Lokio/Segment;"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="indexOf" type="(B)J"/>
+<method name="indexOf" type="(BJ)J"/>
+<method name="indexOfElement" type="(Lokio/ByteString;)J"/>
+<method name="indexOfElement" type="(Lokio/ByteString;J)J"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="segmentSizes" type="()Ljava/util/List;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="clone" type="()Lokio/Buffer;"/>
+<method name="snapshot" type="()Lokio/ByteString;"/>
+<method name="snapshot" type="(I)Lokio/ByteString;"/>
+<method name="clone" type="()Ljava/lang/Object;"/>
+<method name="emitCompleteSegments" type="()Lokio/BufferedSink;"/>
+<method name="writeHexadecimalUnsignedLong" type="(J)Lokio/BufferedSink;"/>
+<method name="writeDecimalLong" type="(J)Lokio/BufferedSink;"/>
+<method name="writeLongLe" type="(J)Lokio/BufferedSink;"/>
+<method name="writeLong" type="(J)Lokio/BufferedSink;"/>
+<method name="writeIntLe" type="(I)Lokio/BufferedSink;"/>
+<method name="writeInt" type="(I)Lokio/BufferedSink;"/>
+<method name="writeShortLe" type="(I)Lokio/BufferedSink;"/>
+<method name="writeShort" type="(I)Lokio/BufferedSink;"/>
+<method name="writeByte" type="(I)Lokio/BufferedSink;"/>
+<method name="writeString" type="(Ljava/lang/String;IILjava/nio/charset/Charset;)Lokio/BufferedSink;"/>
+<method name="writeString" type="(Ljava/lang/String;Ljava/nio/charset/Charset;)Lokio/BufferedSink;"/>
+<method name="writeUtf8CodePoint" type="(I)Lokio/BufferedSink;"/>
+<method name="writeUtf8" type="(Ljava/lang/String;II)Lokio/BufferedSink;"/>
+<method name="writeUtf8" type="(Ljava/lang/String;)Lokio/BufferedSink;"/>
+<method name="write" type="([BII)Lokio/BufferedSink;"/>
+<method name="write" type="([B)Lokio/BufferedSink;"/>
+<method name="write" type="(Lokio/ByteString;)Lokio/BufferedSink;"/>
+</class>
+<class name="okio/ByteString">
+<method name="&lt;init&gt;" type="([B)V"/>
+<method name="of" type="([B)Lokio/ByteString;" class_method="true"/>
+<method name="of" type="([BII)Lokio/ByteString;" class_method="true"/>
+<method name="encodeUtf8" type="(Ljava/lang/String;)Lokio/ByteString;" class_method="true"/>
+<method name="utf8" type="()Ljava/lang/String;"/>
+<method name="base64" type="()Ljava/lang/String;"/>
+<method name="md5" type="()Lokio/ByteString;"/>
+<method name="sha256" type="()Lokio/ByteString;"/>
+<method name="base64Url" type="()Ljava/lang/String;"/>
+<method name="decodeBase64" type="(Ljava/lang/String;)Lokio/ByteString;" class_method="true"/>
+<method name="hex" type="()Ljava/lang/String;"/>
+<method name="decodeHex" type="(Ljava/lang/String;)Lokio/ByteString;" class_method="true"/>
+<method name="read" type="(Ljava/io/InputStream;I)Lokio/ByteString;" class_method="true"/>
+<method name="toAsciiLowercase" type="()Lokio/ByteString;"/>
+<method name="toAsciiUppercase" type="()Lokio/ByteString;"/>
+<method name="substring" type="(I)Lokio/ByteString;"/>
+<method name="substring" type="(II)Lokio/ByteString;"/>
+<method name="getByte" type="(I)B"/>
+<method name="size" type="()I"/>
+<method name="toByteArray" type="()[B"/>
+<method name="write" type="(Ljava/io/OutputStream;)V"/>
+<method name="write" type="(Lokio/Buffer;)V"/>
+<method name="rangeEquals" type="(ILokio/ByteString;II)Z"/>
+<method name="rangeEquals" type="(I[BII)Z"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/DeflaterSink">
+<method name="&lt;init&gt;" type="(Lokio/Sink;Ljava/util/zip/Deflater;)V"/>
+<method name="&lt;init&gt;" type="(Lokio/BufferedSink;Ljava/util/zip/Deflater;)V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="finishDeflate" type="()V"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/ForwardingSink">
+<method name="&lt;init&gt;" type="(Lokio/Sink;)V"/>
+<method name="delegate" type="()Lokio/Sink;"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/ForwardingSource">
+<method name="&lt;init&gt;" type="(Lokio/Source;)V"/>
+<method name="delegate" type="()Lokio/Source;"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/GzipSink">
+<method name="&lt;init&gt;" type="(Lokio/Sink;)V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+</class>
+<class name="okio/GzipSource">
+<method name="&lt;init&gt;" type="(Lokio/Source;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+</class>
+<class name="okio/InflaterSource">
+<method name="&lt;init&gt;" type="(Lokio/Source;Ljava/util/zip/Inflater;)V"/>
+<method name="&lt;init&gt;" type="(Lokio/BufferedSource;Ljava/util/zip/Inflater;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="refill" type="()Z"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+</class>
+<class name="okio/Okio$1">
+<method name="&lt;init&gt;" type="(Lokio/Timeout;Ljava/io/OutputStream;)V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/Okio$2">
+<method name="&lt;init&gt;" type="(Lokio/Timeout;Ljava/io/InputStream;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="okio/RealBufferedSink">
+<method name="&lt;init&gt;" type="(Lokio/Sink;Lokio/Buffer;)V"/>
+<method name="&lt;init&gt;" type="(Lokio/Sink;)V"/>
+<method name="buffer" type="()Lokio/Buffer;"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="write" type="(Lokio/ByteString;)Lokio/BufferedSink;"/>
+<method name="writeUtf8" type="(Ljava/lang/String;)Lokio/BufferedSink;"/>
+<method name="writeUtf8" type="(Ljava/lang/String;II)Lokio/BufferedSink;"/>
+<method name="writeUtf8CodePoint" type="(I)Lokio/BufferedSink;"/>
+<method name="writeString" type="(Ljava/lang/String;Ljava/nio/charset/Charset;)Lokio/BufferedSink;"/>
+<method name="writeString" type="(Ljava/lang/String;IILjava/nio/charset/Charset;)Lokio/BufferedSink;"/>
+<method name="write" type="([B)Lokio/BufferedSink;"/>
+<method name="write" type="([BII)Lokio/BufferedSink;"/>
+<method name="writeAll" type="(Lokio/Source;)J"/>
+<method name="write" type="(Lokio/Source;J)Lokio/BufferedSink;"/>
+<method name="writeByte" type="(I)Lokio/BufferedSink;"/>
+<method name="writeShort" type="(I)Lokio/BufferedSink;"/>
+<method name="writeShortLe" type="(I)Lokio/BufferedSink;"/>
+<method name="writeInt" type="(I)Lokio/BufferedSink;"/>
+<method name="writeIntLe" type="(I)Lokio/BufferedSink;"/>
+<method name="writeLong" type="(J)Lokio/BufferedSink;"/>
+<method name="writeLongLe" type="(J)Lokio/BufferedSink;"/>
+<method name="writeDecimalLong" type="(J)Lokio/BufferedSink;"/>
+<method name="writeHexadecimalUnsignedLong" type="(J)Lokio/BufferedSink;"/>
+<method name="emitCompleteSegments" type="()Lokio/BufferedSink;"/>
+<method name="emit" type="()Lokio/BufferedSink;"/>
+<method name="outputStream" type="()Ljava/io/OutputStream;"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="access$000" type="(Lokio/RealBufferedSink;)Z" class_method="true"/>
+</class>
+<class name="okio/RealBufferedSource">
+<method name="&lt;init&gt;" type="(Lokio/Source;Lokio/Buffer;)V"/>
+<method name="&lt;init&gt;" type="(Lokio/Source;)V"/>
+<method name="buffer" type="()Lokio/Buffer;"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="exhausted" type="()Z"/>
+<method name="require" type="(J)V"/>
+<method name="request" type="(J)Z"/>
+<method name="readByte" type="()B"/>
+<method name="readByteString" type="()Lokio/ByteString;"/>
+<method name="readByteString" type="(J)Lokio/ByteString;"/>
+<method name="readByteArray" type="()[B"/>
+<method name="readByteArray" type="(J)[B"/>
+<method name="read" type="([B)I"/>
+<method name="readFully" type="([B)V"/>
+<method name="read" type="([BII)I"/>
+<method name="readFully" type="(Lokio/Buffer;J)V"/>
+<method name="readAll" type="(Lokio/Sink;)J"/>
+<method name="readUtf8" type="()Ljava/lang/String;"/>
+<method name="readUtf8" type="(J)Ljava/lang/String;"/>
+<method name="readString" type="(Ljava/nio/charset/Charset;)Ljava/lang/String;"/>
+<method name="readString" type="(JLjava/nio/charset/Charset;)Ljava/lang/String;"/>
+<method name="readUtf8Line" type="()Ljava/lang/String;"/>
+<method name="readUtf8LineStrict" type="()Ljava/lang/String;"/>
+<method name="readUtf8CodePoint" type="()I"/>
+<method name="readShort" type="()S"/>
+<method name="readShortLe" type="()S"/>
+<method name="readInt" type="()I"/>
+<method name="readIntLe" type="()I"/>
+<method name="readLong" type="()J"/>
+<method name="readLongLe" type="()J"/>
+<method name="readDecimalLong" type="()J"/>
+<method name="readHexadecimalUnsignedLong" type="()J"/>
+<method name="skip" type="(J)V"/>
+<method name="indexOf" type="(B)J"/>
+<method name="indexOf" type="(BJ)J"/>
+<method name="indexOfElement" type="(Lokio/ByteString;)J"/>
+<method name="indexOfElement" type="(Lokio/ByteString;J)J"/>
+<method name="inputStream" type="()Ljava/io/InputStream;"/>
+<method name="close" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="access$000" type="(Lokio/RealBufferedSource;)Z" class_method="true"/>
+</class>
+</signatures>

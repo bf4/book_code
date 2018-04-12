@@ -1,0 +1,4 @@
+<p><%= @conversion.name %>: <%= @conversion.rate %>.</p>
+<% if @amount %>
+  <p><%= @amount %><%= @from_currency %> = <%= @conversion_amount %> <%= @to_currency %></p>
+<% end %>

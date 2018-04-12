@@ -1,0 +1,78 @@
+/* Mobile first classes */
+
+/* Clock */
+
+.clock {
+  margin-top:     -0.5em;
+  margin-bottom:  -0.5em;
+}
+
+.clock-time {
+  font-size:      2.2em;
+  font-weight:    bold;
+  margin-bottom:  -0.2em;
+}
+
+.clock-timezone {
+  color:          #888888;
+}
+
+/* Timezones */
+
+.timezone {
+  padding-left:     2em;
+}
+
+.timezone-name {
+  font-weight:    bold;
+  margin-top:     0em;
+  margin-bottom:  0em;
+}
+
+.timezone-offset {
+  color:          #888888;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .clock-time {
+    font-size: 2.2em;
+  }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .clock-time {
+    font-size: 2.8em;
+  }
+
+  .clock-timezone {
+    font-size: 1.2em;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .clock-time {
+    font-size: 3.5em;
+  }
+
+  .clock-timezone {
+    font-size: 1.2em;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .clock-time {
+    font-size: 4em;
+  }
+
+  .clock-timezone {
+    font-size: 1.5em;
+  }
+
+  .timezone-name {
+    font-size: 1.5em;
+  }
+}

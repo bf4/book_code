@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="Stocks.Pages.StockQuoteDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stocks.Pages"
+    xmlns:converters="using:Stocks.ValueConverters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+        <!-- ... -->
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBlock Text="{x:Bind Quote.Name}" />
+            <TextBlock Text="{x:Bind Quote.Symbol, Mode=OneWay}" />
+        </StackPanel>
+        <TextBlock Text="Change"
+                   Grid.Row="1" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.Change, Mode=OneWay}"
+                   Grid.Row="1" Grid.Column="1" />
+        <!-- ... -->
+        <TextBlock Text="Percent Change"
+                   Grid.Row="2" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.PercentChange, Mode=OneWay}"
+                   Grid.Row="2" Grid.Column="1" />
+        <TextBlock Text="Ask"
+                   Grid.Row="3" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.Ask, Mode=OneWay}"
+                   Grid.Row="3" Grid.Column="1" />
+        <TextBlock Text="Bid"
+                   Grid.Row="4" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.Bid, Mode=OneWay}"
+                   Grid.Row="4" Grid.Column="1" />
+        <TextBlock Text="Open"
+                   Grid.Row="5" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.Open, Mode=OneWay}"
+                   Grid.Row="5" Grid.Column="1" />
+        <TextBlock Text="Market Cap"
+                   Grid.Row="6" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.MarketCapitalization, Mode=OneWay}"
+                   Grid.Row="6" Grid.Column="1" />
+        <TextBlock Text="EBITDA"
+                   Grid.Row="7" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.EBITDA, Mode=OneWay}"
+                   Grid.Row="7" Grid.Column="1" />
+        <TextBlock Text="Exchange"
+                   Grid.Row="8" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.StockExchange, Mode=OneWay}"
+                   Grid.Row="8" Grid.Column="1" />
+        <TextBlock Text="Last Trade Price"
+                   Grid.Row="9" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.LastTradePriceOnly, Mode=OneWay}"
+                   Grid.Row="9" Grid.Column="1" />
+        <TextBlock Text="Last Trade Date"
+                   Grid.Row="10" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.LastTradeDate, Mode=OneWay}"
+                   Grid.Row="10" Grid.Column="1" />
+        <TextBlock Text="Last Trade Time"
+                   Grid.Row="11" Grid.Column="0" />
+        <TextBlock Text="{x:Bind Quote.LastTradeTime, Mode=OneWay}"
+                   Grid.Row="11" Grid.Column="1" />
+    </Grid>
+</Page>

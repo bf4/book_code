@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project/template/android'
+
+begin
+  require 'bundler'
+  Bundler.require
+rescue LoadError
+end
+
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings.
+  app.api_version = "17"
+  app.package = "com.sevenapps"
+  app.name = "Todo"
+  app.archs << "x86"
+  app.permissions << "internet"
+
+  app.vendor_project :jar => 'vendor/appcompat/libs/android-support-v4.jar'
+  app.vendor_project :jar => 'vendor/appcompat/libs/android-support-v7-appcompat.jar',
+    :resources => 'vendor/appcompat/res',
+    :manifest => 'vendor/appcompat/AndroidManifest.xml'
+  app.vendor_project :jar => 'vendor/okhttp-2.4.0.jar'
+  app.vendor_project :jar => 'vendor/okio-1.4.0.jar'
+  app.vendor_project :jar => 'vendor/gson-2.3.1.jar'
+
+  app.theme = "@style/AppTheme"
+end

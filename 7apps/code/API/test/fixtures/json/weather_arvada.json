@@ -1,0 +1,110 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2015-02-08T02:59:45Z",
+  "lang": "en-US",
+  "results": {
+   "channel": {
+    "title": "Yahoo! Weather - Arvada, CO",
+    "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Arvada__CO/*http://weather.yahoo.com/forecast/USCO0015_f.html",
+    "description": "Yahoo! Weather for Arvada, CO",
+    "language": "en-us",
+    "lastBuildDate": "Sat, 07 Feb 2015 6:55 pm MST",
+    "ttl": "60",
+    "location": {
+     "city": "Arvada",
+     "country": "United States",
+     "region": "CO"
+    },
+    "units": {
+     "distance": "mi",
+     "pressure": "in",
+     "speed": "mph",
+     "temperature": "F"
+    },
+    "wind": {
+     "chill": "59",
+     "direction": "270",
+     "speed": "29"
+    },
+    "atmosphere": {
+     "humidity": "20",
+     "pressure": "29.96",
+     "rising": "2",
+     "visibility": ""
+    },
+    "astronomy": {
+     "sunrise": "7:01 am",
+     "sunset": "5:26 pm"
+    },
+    "image": {
+     "title": "Yahoo! Weather",
+     "width": "142",
+     "height": "18",
+     "link": "http://weather.yahoo.com",
+     "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+    },
+    "item": {
+     "title": "Conditions for Arvada, CO at 6:55 pm MST",
+     "lat": "39.83",
+     "long": "-105.15",
+     "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Arvada__CO/*http://weather.yahoo.com/forecast/USCO0015_f.html",
+     "pubDate": "Sat, 07 Feb 2015 6:55 pm MST",
+     "condition": {
+      "code": "29",
+      "date": "Sat, 07 Feb 2015 6:55 pm MST",
+      "temp": "59",
+      "text": "Partly Cloudy/Windy"
+     },
+     "description": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/29.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy/Windy, 59 F<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Clear. High: 68 Low: 41<br />\nSun - Sunny. High: 64 Low: 35<br />\nMon - Sunny. High: 65 Low: 36<br />\nTue - Mostly Sunny. High: 60 Low: 33<br />\nWed - AM Snow. High: 45 Low: 22<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Arvada__CO/*http://weather.yahoo.com/forecast/USCO0015_f.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+     "forecast": [
+      {
+       "code": "31",
+       "date": "7 Feb 2015",
+       "day": "Sat",
+       "high": "68",
+       "low": "41",
+       "text": "Clear"
+      },
+      {
+       "code": "32",
+       "date": "8 Feb 2015",
+       "day": "Sun",
+       "high": "64",
+       "low": "35",
+       "text": "Sunny"
+      },
+      {
+       "code": "32",
+       "date": "9 Feb 2015",
+       "day": "Mon",
+       "high": "65",
+       "low": "36",
+       "text": "Sunny"
+      },
+      {
+       "code": "34",
+       "date": "10 Feb 2015",
+       "day": "Tue",
+       "high": "60",
+       "low": "33",
+       "text": "Mostly Sunny"
+      },
+      {
+       "code": "16",
+       "date": "11 Feb 2015",
+       "day": "Wed",
+       "high": "45",
+       "low": "22",
+       "text": "AM Snow"
+      }
+     ],
+     "guid": {
+      "isPermaLink": "false",
+      "content": "USCO0015_2015_02_11_7_00_MST"
+     }
+    }
+   }
+  }
+ }
+}

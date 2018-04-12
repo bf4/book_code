@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @note.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @note.body %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @note.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @note.longitude %>
+</p>
+
+<p>
+  <strong>Created where:</strong>
+  <%= @note.created_where %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

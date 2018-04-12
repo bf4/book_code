@@ -1,0 +1,16 @@
+CACHE MANIFEST
+
+NETWORK:
+*
+
+CACHE:
+/node_modules/underscore/underscore-min.js
+/node_modules/underscore/underscore-min.map
+/node_modules/jquery/dist/jquery.min.js
+/node_modules/jquery/dist/jquery.min.map
+/node_modules/mustache/mustache.min.js
+/scripts/main.js
+/scripts/time_zone_manager.js
+/scripts/clock.js
+/scripts/view_controller.js
+/images/favicon.png

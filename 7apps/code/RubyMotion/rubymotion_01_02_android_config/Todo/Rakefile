@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project/template/android'
+
+begin
+  require 'bundler'
+  Bundler.require
+rescue LoadError
+end
+
+# START: setup.part.2
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings.
+  app.api_version = "17"
+  app.package = "com.sevenapps"
+  app.name = 'Todo'
+  app.archs << "x86"
+end
+# END: setup.part.2

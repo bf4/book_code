@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CalcForms.CalculatorPage" xmlns:calc="clr-namespace:Calc;assembly=Calc" Title="Calc">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand">
+      <StackLayout.BindingContext>
+        <calc:CalculatorModel x:Name="model" />
+      </StackLayout.BindingContext>
+      <Label XAlign="End" BackgroundColor="Gray" FontSize="48" Text="{Binding Display}" />
+      <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Text="C" Clicked="ButtonClicked" Grid.Row="0" Grid.Column="0" />
+        <Button Text="+/-" Clicked="ButtonClicked" Grid.Row="0" Grid.Column="1" />
+        <Button Text="%" Clicked="ButtonClicked" Grid.Row="0" Grid.Column="2" />
+        <Button Text="÷" Clicked="ButtonClicked" Grid.Row="0" Grid.Column="3" />
+        <Button Text="7" Clicked="ButtonClicked" Grid.Row="1" Grid.Column="0" />
+        <Button Text="8" Clicked="ButtonClicked" Grid.Row="1" Grid.Column="1" />
+        <Button Text="9" Clicked="ButtonClicked" Grid.Row="1" Grid.Column="2" />
+        <Button Text="×" Clicked="ButtonClicked" Grid.Row="1" Grid.Column="3" />
+        <Button Text="4" Clicked="ButtonClicked" Grid.Row="2" Grid.Column="0" />
+        <Button Text="5" Clicked="ButtonClicked" Grid.Row="2" Grid.Column="1" />
+        <Button Text="6" Clicked="ButtonClicked" Grid.Row="2" Grid.Column="2" />
+        <Button Text="-" Clicked="ButtonClicked" Grid.Row="2" Grid.Column="3" />
+        <Button Text="1" Clicked="ButtonClicked" Grid.Row="3" Grid.Column="0" />
+        <Button Text="2" Clicked="ButtonClicked" Grid.Row="3" Grid.Column="1" />
+        <Button Text="3" Clicked="ButtonClicked" Grid.Row="3" Grid.Column="2" />
+        <Button Text="+" Clicked="ButtonClicked" Grid.Row="3" Grid.Column="3" />
+        <Button Text="0" Clicked="ButtonClicked" Grid.Row="4" Grid.Column="0" />
+        <Button Text="." Clicked="ButtonClicked" Grid.Row="4" Grid.Column="1" />
+        <!-- ... -->
+        <Button Text="=" Clicked="ButtonClicked"
+                Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" />
+      </Grid>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

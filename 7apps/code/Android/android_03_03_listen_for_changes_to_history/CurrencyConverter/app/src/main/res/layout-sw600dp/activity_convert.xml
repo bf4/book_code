@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Seven Mobile Apps in Seven Weeks",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/7apps for more book information.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:gravity="center"
+              tools:context=".ConvertActivity">
+
+    <fragment
+        android:id="@+id/convert_form"
+        android:layout_width="@dimen/convert_form_width"
+        android:layout_height="match_parent"
+        android:name="com.sevenapps.currencyconverter.fragment.ConvertFragment" />
+    <fragment
+        android:id="@+id/convert_history_fragment"
+        android:layout_width="@dimen/history_width"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:name="com.sevenapps.currencyconverter.fragment.ConversionHistoryFragment" />
+
+</LinearLayout>

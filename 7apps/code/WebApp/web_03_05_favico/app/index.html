@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!--
+ ! Excerpted from "Seven Mobile Apps in Seven Weeks",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/7apps for more book information.
+-->
+<html manifest="/manifest.appcache">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <title>World Clock</title>
+</head>
+<body>
+  <a id="addClockLink">Add Clock</a>
+  <a id="editLink">Edit</a>
+  <div id="zoneList"></div>
+  <div id="clockList"></div>
+
+  <script src="node_modules/underscore/underscore-min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/mustache/mustache.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/time_zone_manager.js"></script>
+  <script src="scripts/clock.js"></script>
+  <script src="scripts/view_controller.js"></script>
+  <script id="clockTemplate" type="text/template">
+    <div class="clock">
+      <p class="clock-time">{{time}}</p>
+      <p class="clock-timezone">{{name}} ({{formatted_offset}}) <a class="delete-clock-link">[delete]</a></p>
+    </div>
+  </script>
+  <script id="timeZoneTemplate" type="text/template">
+    <div class="timezone">
+      <p class="timezone-name">{{name}}</p>
+      <p class="timezone-offset"> (UTC {{formatted_offset}} hours) </p>
+    </div>
+  </script>
+</body>
+</html>

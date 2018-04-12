@@ -1,0 +1,7 @@
+<p>
+<strong><%= @report.title %></strong>, temp: <%= @report.temp %>, conditions: <%= @report.current_conditions %>
+</p>
+<p>Forecast:</p>
+<ul>
+  <%= render partial: "forecast", collection: @report.forecasts %>
+</ul>

@@ -1,0 +1,9 @@
+<h1>Get The Weather</h1>
+
+<%= form_tag(weather_url) do %>
+  <div class="actions">
+    <%= label_tag(:zip, "Enter Zip Code:") %>
+    <%= text_field_tag(:zip) %>
+    <%= submit_tag("Get Forecast") %>
+  </div>
+<% end %>

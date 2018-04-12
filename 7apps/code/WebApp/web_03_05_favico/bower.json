@@ -1,0 +1,21 @@
+{
+  "name": "WebApp",
+  "version": "0.0.0",
+  "description": "A Web App",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1",
+    "underscore": "~1.8.3",
+    "mustache": "~2.0.0",
+    "skeleton-css": "~2.0.4"
+  }
+}

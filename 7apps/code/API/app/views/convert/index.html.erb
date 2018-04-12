@@ -1,0 +1,16 @@
+<h1>Convert Currency</h1>
+
+<%= form_tag(convert_url) do %>
+  <div class="actions">
+    <%= label_tag(:from_currency, "From Currency:") %>
+    <%= text_field_tag(:from_currency) %>
+    <br/>
+    <%= label_tag(:to_currency, "To Currency:") %>
+    <%= text_field_tag(:to_currency) %>
+    <br/>
+    <%= label_tag(:amount, "Amount: [Optional]") %>
+    <%= text_field_tag(:amount) %>
+    <br/>
+    <%= submit_tag("Convert") %>
+  </div>
+<% end %>

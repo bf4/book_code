@@ -1,0 +1,56 @@
+﻿<UserControl
+    x:Class="Stocks.Pages.IndicesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stocks.Pages"
+    xmlns:converters="using:Stocks.ValueConverters"
+    xmlns:data="using:Stocks.Data"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <converters:IsDownToColorConverter x:Key="ColorConverter"
+                                           DownColor="Red" UpColor="Green" />
+    </UserControl.Resources>
+    <ListView ItemsSource="{Binding QuoteList}"
+                      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView.DataContext>
+            <data:StockIndexDataModel x:Name="model" />
+        </ListView.DataContext>
+        <ListView.ItemContainerStyle>
+            <Style TargetType="ListViewItem">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            </Style>
+        </ListView.ItemContainerStyle>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <Grid Margin="0,8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Name}" Style="{StaticResource StockName}"
+                                       Grid.Row="0" Grid.Column="0" />
+                    <TextBlock Text="{Binding LastTradePriceOnly}"
+                                       Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                                       HorizontalAlignment="Right" />
+                    <TextBlock Text="{Binding Symbol}" Style="{StaticResource StockSymbol}"
+                                       Grid.Row="1" Grid.Column="0"
+                                       VerticalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal"
+                                       Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">
+                        <TextBlock Text="{Binding Change}"
+                                           Foreground="{Binding IsDown, Converter={StaticResource ColorConverter}}"/>
+                        <TextBlock Text="{Binding PercentChange}" Margin="8,0,0,0"
+                                           Foreground="{Binding IsDown, Converter={StaticResource ColorConverter}}"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</UserControl>

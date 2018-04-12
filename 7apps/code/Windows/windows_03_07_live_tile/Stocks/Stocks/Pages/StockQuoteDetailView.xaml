@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Stocks.Pages.StockQuoteDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stocks.Pages"
+    xmlns:templates="using:Stocks.Pages.Templates"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <templates:StockQuoteDetailTemplate />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ContentPresenter x:Name="StockQuoteDetailPresenter"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+        Content="{x:Bind Quote}"
+        ContentTemplate="{StaticResource StockDetailDataTemplate}" />
+</Page>

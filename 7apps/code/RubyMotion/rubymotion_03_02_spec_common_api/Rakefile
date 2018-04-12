@@ -1,0 +1,43 @@
+# Thanks to https://github.com/lrz/rubymotion-hybrid-sample for
+# the idea of a combined rakefile
+require 'rake/testtask'
+
+platform_dirs = {
+  :android  => "TodoAndroid",
+  :ios      => "TodoiOS"
+}
+
+def top_level
+  File.dirname __FILE__
+end
+
+def path_to(directory)
+  "#{top_level}/#{directory}"
+end
+
+
+platform_dirs.each do |platform, directory|
+  namespace platform do
+    rake_command = "/usr/bin/env rake -f Rakefile"
+    Dir.chdir path_to(directory)
+    platform_tasks = `#{rake_command} -T`.scan(/rake\s([^\s]+)\s+#\s([^\n]+)/)
+    platform_tasks.each do |platform_task, task_description|
+      desc task_description
+      task platform_task do
+        Dir.chdir path_to(directory)
+        sh "#{rake_command} #{platform_task}"
+      end
+      Dir.chdir top_level
+    end
+  end
+end
+
+desc "Clean platform projects"
+task :clean => ["android:clean", "ios:clean"]
+
+# START: common.test.task
+Rake::TestTask.new :spec do |t|
+  t.libs << "common/app"
+  t.test_files = FileList['common/spec/*_spec.rb']
+end
+# END: common.test.task

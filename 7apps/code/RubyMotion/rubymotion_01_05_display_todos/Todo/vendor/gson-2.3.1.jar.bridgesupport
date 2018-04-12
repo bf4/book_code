@@ -1,0 +1,1020 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name="com/google/gson/FieldNamingPolicy$1" super="com/google/gson/FieldNamingPolicy">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;I)V"/>
+<method name="translateName" type="(Ljava/lang/reflect/Field;)Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/FieldNamingPolicy$2" super="com/google/gson/FieldNamingPolicy">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;I)V"/>
+<method name="translateName" type="(Ljava/lang/reflect/Field;)Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/FieldNamingPolicy$3" super="com/google/gson/FieldNamingPolicy">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;I)V"/>
+<method name="translateName" type="(Ljava/lang/reflect/Field;)Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/FieldNamingPolicy$4" super="com/google/gson/FieldNamingPolicy">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;I)V"/>
+<method name="translateName" type="(Ljava/lang/reflect/Field;)Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/FieldNamingPolicy$5" super="com/google/gson/FieldNamingPolicy">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;I)V"/>
+<method name="translateName" type="(Ljava/lang/reflect/Field;)Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/Gson$3" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/Gson;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Double;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/Gson$4" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/Gson;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Float;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/Gson$5" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/Gson;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/Gson$FutureTypeAdapter" super="com/google/gson/TypeAdapter">
+<method name="com.google.gson.Gson$FutureTypeAdapter" type="()V"/>
+<method name="setDelegate" type="(Lcom/google/gson/TypeAdapter;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/ArrayTypeAdapter" super="com/google/gson/TypeAdapter">
+<method name="com.google.gson.internal.bind.ArrayTypeAdapter" type="(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/Class;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter" super="com/google/gson/TypeAdapter&lt;java/util/Collection&lt;E&gt;&gt;">
+<method name="com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter" type="(Lcom/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter;Lcom/google/gson/internal/ObjectConstructor;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/util/Collection;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/util/Collection;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/DateTypeAdapter" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/util/Date;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/util/Date;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/JsonTreeReader$1" super="java/io/Reader">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="([CII)I"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/google/gson/internal/bind/JsonTreeReader" super="com/google/gson/stream/JsonReader">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/JsonElement;)V"/>
+<method name="beginArray" type="()V"/>
+<method name="endArray" type="()V"/>
+<method name="beginObject" type="()V"/>
+<method name="endObject" type="()V"/>
+<method name="hasNext" type="()Z"/>
+<method name="peek" type="()Lcom/google/gson/stream/JsonToken;"/>
+<method name="nextName" type="()Ljava/lang/String;"/>
+<method name="nextString" type="()Ljava/lang/String;"/>
+<method name="nextBoolean" type="()Z"/>
+<method name="nextNull" type="()V"/>
+<method name="nextDouble" type="()D"/>
+<method name="nextLong" type="()J"/>
+<method name="nextInt" type="()I"/>
+<method name="close" type="()V"/>
+<method name="skipValue" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="promoteNameToValue" type="()V"/>
+</class>
+<class name="com/google/gson/internal/bind/JsonTreeWriter$1" super="java/io/Writer">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="write" type="([CII)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/google/gson/internal/bind/JsonTreeWriter" super="com/google/gson/stream/JsonWriter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="get" type="()Lcom/google/gson/JsonElement;"/>
+<method name="beginArray" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="endArray" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="beginObject" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="endObject" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="name" type="(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="nullValue" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(Z)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(D)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(J)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(Ljava/lang/Number;)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/google/gson/internal/bind/ObjectTypeAdapter" super="com/google/gson/TypeAdapter">
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+<method name="&lt;init&gt;" type="(Lcom/google/gson/Gson;Lcom/google/gson/internal/bind/ObjectTypeAdapter$1;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1" super="com/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;Ljava/lang/String;ZZLcom/google/gson/Gson;Ljava/lang/reflect/Field;Lcom/google/gson/reflect/TypeToken;Z)V"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;Ljava/lang/Object;)V"/>
+<method name="writeField" type="(Ljava/lang/Object;)Z"/>
+</class>
+<class name="com/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter" super="com/google/gson/TypeAdapter">
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+<method name="com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter" type="(Lcom/google/gson/internal/ObjectConstructor;Ljava/util/Map;Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/SqlDateTypeAdapter" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/sql/Date;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/sql/Date;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TimeTypeAdapter" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/sql/Time;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/sql/Time;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper" super="com/google/gson/TypeAdapter">
+<method name="com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper" type="(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$1" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Class;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Class;"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$10" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$11" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$12" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Character;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Character;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$13" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/String;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/String;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$14" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/math/BigDecimal;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/math/BigDecimal;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$15" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/math/BigInteger;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/math/BigInteger;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$16" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/StringBuilder;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/StringBuilder;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$17" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/StringBuffer;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/StringBuffer;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$18" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/net/URL;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/net/URL;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$19" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/net/URI;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/net/URI;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$2" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/util/BitSet;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/util/BitSet;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$20" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/net/InetAddress;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/net/InetAddress;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$21" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/util/UUID;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/util/UUID;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$22$1" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/bind/TypeAdapters$22;Lcom/google/gson/TypeAdapter;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/sql/Timestamp;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/sql/Timestamp;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$23" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/util/Calendar;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/util/Calendar;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$24" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/util/Locale;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/util/Locale;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$25" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Lcom/google/gson/JsonElement;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Lcom/google/gson/JsonElement;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$3" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Boolean;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Boolean;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$4" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Boolean;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Boolean;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$5" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$6" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$7" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$8" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$9" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/Excluder$1" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/LazilyParsedNumber" super="java/lang/Number">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="intValue" type="()I"/>
+<method name="longValue" type="()J"/>
+<method name="floatValue" type="()F"/>
+<method name="doubleValue" type="()D"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/LinkedHashTreeMap$KeySet" super="java/util/AbstractSet">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/LinkedHashTreeMap;)V"/>
+<method name="size" type="()I"/>
+<method name="iterator" type="()Ljava/util/Iterator;"/>
+<method name="contains" type="(Ljava/lang/Object;)Z"/>
+<method name="remove" type="(Ljava/lang/Object;)Z"/>
+<method name="clear" type="()V"/>
+</class>
+<class name="com/google/gson/internal/LinkedTreeMap$KeySet" super="java/util/AbstractSet">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/LinkedTreeMap;)V"/>
+<method name="size" type="()I"/>
+<method name="iterator" type="()Ljava/util/Iterator;"/>
+<method name="contains" type="(Ljava/lang/Object;)Z"/>
+<method name="remove" type="(Ljava/lang/Object;)Z"/>
+<method name="clear" type="()V"/>
+</class>
+<class name="com/google/gson/internal/Streams$AppendableWriter" super="java/io/Writer">
+<method name="write" type="([CII)V"/>
+<method name="write" type="(I)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Appendable;Lcom/google/gson/internal/Streams$1;)V"/>
+</class>
+<class name="com/google/gson/internal/UnsafeAllocator$1" super="com/google/gson/internal/UnsafeAllocator">
+<method name="&lt;init&gt;" type="(Ljava/lang/reflect/Method;Ljava/lang/Object;)V"/>
+<method name="newInstance" type="(Ljava/lang/Class;)Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/UnsafeAllocator$2" super="com/google/gson/internal/UnsafeAllocator">
+<method name="&lt;init&gt;" type="(Ljava/lang/reflect/Method;I)V"/>
+<method name="newInstance" type="(Ljava/lang/Class;)Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/UnsafeAllocator$3" super="com/google/gson/internal/UnsafeAllocator">
+<method name="&lt;init&gt;" type="(Ljava/lang/reflect/Method;)V"/>
+<method name="newInstance" type="(Ljava/lang/Class;)Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/UnsafeAllocator$4" super="com/google/gson/internal/UnsafeAllocator">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="newInstance" type="(Ljava/lang/Class;)Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/JsonIOException" super="com/google/gson/JsonParseException">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Throwable;)V"/>
+</class>
+<class name="com/google/gson/JsonNull" super="com/google/gson/JsonElement">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonNull;"/>
+<method name="hashCode" type="()I"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/JsonObject" super="com/google/gson/JsonElement">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonObject;"/>
+<method name="add" type="(Ljava/lang/String;Lcom/google/gson/JsonElement;)V"/>
+<method name="remove" type="(Ljava/lang/String;)Lcom/google/gson/JsonElement;"/>
+<method name="addProperty" type="(Ljava/lang/String;Ljava/lang/String;)V"/>
+<method name="addProperty" type="(Ljava/lang/String;Ljava/lang/Number;)V"/>
+<method name="addProperty" type="(Ljava/lang/String;Ljava/lang/Boolean;)V"/>
+<method name="addProperty" type="(Ljava/lang/String;Ljava/lang/Character;)V"/>
+<method name="entrySet" type="()Ljava/util/Set;"/>
+<method name="has" type="(Ljava/lang/String;)Z"/>
+<method name="get" type="(Ljava/lang/String;)Lcom/google/gson/JsonElement;"/>
+<method name="getAsJsonPrimitive" type="(Ljava/lang/String;)Lcom/google/gson/JsonPrimitive;"/>
+<method name="getAsJsonArray" type="(Ljava/lang/String;)Lcom/google/gson/JsonArray;"/>
+<method name="getAsJsonObject" type="(Ljava/lang/String;)Lcom/google/gson/JsonObject;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/JsonParseException" super="java/lang/RuntimeException">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Throwable;)V"/>
+</class>
+<class name="com/google/gson/JsonPrimitive" super="com/google/gson/JsonElement">
+<method name="&lt;init&gt;" type="(Ljava/lang/Boolean;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Number;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Character;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Object;)V"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonPrimitive;"/>
+<method name="setValue" type="(Ljava/lang/Object;)V"/>
+<method name="isBoolean" type="()Z"/>
+<method name="getAsBooleanWrapper" type="()Ljava/lang/Boolean;"/>
+<method name="getAsBoolean" type="()Z"/>
+<method name="isNumber" type="()Z"/>
+<method name="getAsNumber" type="()Ljava/lang/Number;"/>
+<method name="isString" type="()Z"/>
+<method name="getAsString" type="()Ljava/lang/String;"/>
+<method name="getAsDouble" type="()D"/>
+<method name="getAsBigDecimal" type="()Ljava/math/BigDecimal;"/>
+<method name="getAsBigInteger" type="()Ljava/math/BigInteger;"/>
+<method name="getAsFloat" type="()F"/>
+<method name="getAsLong" type="()J"/>
+<method name="getAsShort" type="()S"/>
+<method name="getAsInt" type="()I"/>
+<method name="getAsByte" type="()B"/>
+<method name="getAsCharacter" type="()C"/>
+<method name="hashCode" type="()I"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/JsonSyntaxException" super="com/google/gson/JsonParseException">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Throwable;)V"/>
+</class>
+<class name="com/google/gson/LongSerializationPolicy$1" super="com/google/gson/LongSerializationPolicy">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;I)V"/>
+<method name="serialize" type="(Ljava/lang/Long;)Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/LongSerializationPolicy$2" super="com/google/gson/LongSerializationPolicy">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;I)V"/>
+<method name="serialize" type="(Ljava/lang/Long;)Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/LongSerializationPolicy" super="java/lang/Enum">
+<method name="values" type="()[Lcom/google/gson/LongSerializationPolicy;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/google/gson/LongSerializationPolicy;" class_method="true"/>
+<method name="serialize" type="(Ljava/lang/Long;)Lcom/google/gson/JsonElement;"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;ILcom/google/gson/LongSerializationPolicy$1;)V"/>
+</class>
+<class name="com/google/gson/stream/JsonReader$1" super="com/google/gson/internal/JsonReaderInternalAccess">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="promoteNameToValue" type="(Lcom/google/gson/stream/JsonReader;)V"/>
+</class>
+<class name="com/google/gson/stream/JsonToken" super="java/lang/Enum">
+<method name="values" type="()[Lcom/google/gson/stream/JsonToken;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/google/gson/stream/JsonToken;" class_method="true"/>
+</class>
+<class name="com/google/gson/stream/MalformedJsonException" super="java/io/IOException">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Throwable;)V"/>
+</class>
+<class name="com/google/gson/TreeTypeAdapter" super="com/google/gson/TypeAdapter">
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+<method name="newFactory" type="(Lcom/google/gson/reflect/TypeToken;Ljava/lang/Object;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+<method name="newFactoryWithMatchRawType" type="(Lcom/google/gson/reflect/TypeToken;Ljava/lang/Object;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+<method name="newTypeHierarchyFactory" type="(Ljava/lang/Class;Ljava/lang/Object;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+<method name="com.google.gson.TreeTypeAdapter" type="(Lcom/google/gson/JsonSerializer;Lcom/google/gson/JsonDeserializer;Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/TypeAdapterFactory;Lcom/google/gson/TreeTypeAdapter$1;)V"/>
+</class>
+<class name="com/google/gson/TypeAdapter$1" super="com/google/gson/TypeAdapter">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/TypeAdapter;)V"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/FieldNamingPolicy" super="java/lang/Enum">
+<method name="values" type="()[Lcom/google/gson/FieldNamingPolicy;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/google/gson/FieldNamingPolicy;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;ILcom/google/gson/FieldNamingPolicy$1;)V"/>
+<method name="access$100" type="(Ljava/lang/String;)Ljava/lang/String;" class_method="true"/>
+<method name="access$200" type="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="com/google/gson/JsonArray" super="com/google/gson/JsonElement">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonArray;"/>
+<method name="add" type="(Lcom/google/gson/JsonElement;)V"/>
+<method name="addAll" type="(Lcom/google/gson/JsonArray;)V"/>
+<method name="set" type="(ILcom/google/gson/JsonElement;)Lcom/google/gson/JsonElement;"/>
+<method name="remove" type="(Lcom/google/gson/JsonElement;)Z"/>
+<method name="remove" type="(I)Lcom/google/gson/JsonElement;"/>
+<method name="contains" type="(Lcom/google/gson/JsonElement;)Z"/>
+<method name="size" type="()I"/>
+<method name="iterator" type="()Ljava/util/Iterator;"/>
+<method name="get" type="(I)Lcom/google/gson/JsonElement;"/>
+<method name="getAsNumber" type="()Ljava/lang/Number;"/>
+<method name="getAsString" type="()Ljava/lang/String;"/>
+<method name="getAsDouble" type="()D"/>
+<method name="getAsBigDecimal" type="()Ljava/math/BigDecimal;"/>
+<method name="getAsBigInteger" type="()Ljava/math/BigInteger;"/>
+<method name="getAsFloat" type="()F"/>
+<method name="getAsLong" type="()J"/>
+<method name="getAsInt" type="()I"/>
+<method name="getAsByte" type="()B"/>
+<method name="getAsCharacter" type="()C"/>
+<method name="getAsShort" type="()S"/>
+<method name="getAsBoolean" type="()Z"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/FieldAttributes">
+<method name="&lt;init&gt;" type="(Ljava/lang/reflect/Field;)V"/>
+<method name="getDeclaringClass" type="()Ljava/lang/Class;"/>
+<method name="getName" type="()Ljava/lang/String;"/>
+<method name="getDeclaredType" type="()Ljava/lang/reflect/Type;"/>
+<method name="getDeclaredClass" type="()Ljava/lang/Class;"/>
+<method name="getAnnotation" type="(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;"/>
+<method name="getAnnotations" type="()Ljava/util/Collection;"/>
+<method name="hasModifier" type="(I)Z"/>
+<method name="get" type="(Ljava/lang/Object;)Ljava/lang/Object;"/>
+<method name="isSynthetic" type="()Z"/>
+</class>
+<class name="com/google/gson/Gson">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/Excluder;Lcom/google/gson/FieldNamingStrategy;Ljava/util/Map;ZZZZZZLcom/google/gson/LongSerializationPolicy;Ljava/util/List;)V"/>
+<method name="getAdapter" type="(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="getDelegateAdapter" type="(Lcom/google/gson/TypeAdapterFactory;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="getAdapter" type="(Ljava/lang/Class;)Lcom/google/gson/TypeAdapter;"/>
+<method name="toJsonTree" type="(Ljava/lang/Object;)Lcom/google/gson/JsonElement;"/>
+<method name="toJsonTree" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;)Lcom/google/gson/JsonElement;"/>
+<method name="toJson" type="(Ljava/lang/Object;)Ljava/lang/String;"/>
+<method name="toJson" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+<method name="toJson" type="(Ljava/lang/Object;Ljava/lang/Appendable;)V"/>
+<method name="toJson" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;Ljava/lang/Appendable;)V"/>
+<method name="toJson" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/stream/JsonWriter;)V"/>
+<method name="toJson" type="(Lcom/google/gson/JsonElement;)Ljava/lang/String;"/>
+<method name="toJson" type="(Lcom/google/gson/JsonElement;Ljava/lang/Appendable;)V"/>
+<method name="toJson" type="(Lcom/google/gson/JsonElement;Lcom/google/gson/stream/JsonWriter;)V"/>
+<method name="fromJson" type="(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Ljava/io/Reader;Ljava/lang/Class;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Ljava/io/Reader;Ljava/lang/reflect/Type;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Lcom/google/gson/stream/JsonReader;Ljava/lang/reflect/Type;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Lcom/google/gson/JsonElement;Ljava/lang/Class;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="access$000" type="(Lcom/google/gson/Gson;D)V" class_method="true"/>
+</class>
+<class name="com/google/gson/GsonBuilder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="setVersion" type="(D)Lcom/google/gson/GsonBuilder;"/>
+<method name="excludeFieldsWithModifiers" type="([I)Lcom/google/gson/GsonBuilder;"/>
+<method name="generateNonExecutableJson" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="excludeFieldsWithoutExposeAnnotation" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="serializeNulls" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="enableComplexMapKeySerialization" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="disableInnerClassSerialization" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="setLongSerializationPolicy" type="(Lcom/google/gson/LongSerializationPolicy;)Lcom/google/gson/GsonBuilder;"/>
+<method name="setFieldNamingPolicy" type="(Lcom/google/gson/FieldNamingPolicy;)Lcom/google/gson/GsonBuilder;"/>
+<method name="setFieldNamingStrategy" type="(Lcom/google/gson/FieldNamingStrategy;)Lcom/google/gson/GsonBuilder;"/>
+<method name="setExclusionStrategies" type="([Lcom/google/gson/ExclusionStrategy;)Lcom/google/gson/GsonBuilder;"/>
+<method name="addSerializationExclusionStrategy" type="(Lcom/google/gson/ExclusionStrategy;)Lcom/google/gson/GsonBuilder;"/>
+<method name="addDeserializationExclusionStrategy" type="(Lcom/google/gson/ExclusionStrategy;)Lcom/google/gson/GsonBuilder;"/>
+<method name="setPrettyPrinting" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="disableHtmlEscaping" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="setDateFormat" type="(Ljava/lang/String;)Lcom/google/gson/GsonBuilder;"/>
+<method name="setDateFormat" type="(I)Lcom/google/gson/GsonBuilder;"/>
+<method name="setDateFormat" type="(II)Lcom/google/gson/GsonBuilder;"/>
+<method name="registerTypeAdapter" type="(Ljava/lang/reflect/Type;Ljava/lang/Object;)Lcom/google/gson/GsonBuilder;"/>
+<method name="registerTypeAdapterFactory" type="(Lcom/google/gson/TypeAdapterFactory;)Lcom/google/gson/GsonBuilder;"/>
+<method name="registerTypeHierarchyAdapter" type="(Ljava/lang/Class;Ljava/lang/Object;)Lcom/google/gson/GsonBuilder;"/>
+<method name="serializeSpecialFloatingPointValues" type="()Lcom/google/gson/GsonBuilder;"/>
+<method name="create" type="()Lcom/google/gson/Gson;"/>
+</class>
+<class name="com/google/gson/internal/$Gson$Preconditions">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="checkNotNull" type="(Ljava/lang/Object;)Ljava/lang/Object;" class_method="true"/>
+<method name="checkArgument" type="(Z)V" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/$Gson$Types">
+<method name="newParameterizedTypeWithOwner" type="(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;[Ljava/lang/reflect/Type;)Ljava/lang/reflect/ParameterizedType;" class_method="true"/>
+<method name="arrayOf" type="(Ljava/lang/reflect/Type;)Ljava/lang/reflect/GenericArrayType;" class_method="true"/>
+<method name="subtypeOf" type="(Ljava/lang/reflect/Type;)Ljava/lang/reflect/WildcardType;" class_method="true"/>
+<method name="supertypeOf" type="(Ljava/lang/reflect/Type;)Ljava/lang/reflect/WildcardType;" class_method="true"/>
+<method name="canonicalize" type="(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="getRawType" type="(Ljava/lang/reflect/Type;)Ljava/lang/Class;" class_method="true"/>
+<method name="equal" type="(Ljava/lang/Object;Ljava/lang/Object;)Z" class_method="true"/>
+<method name="equals" type="(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z" class_method="true"/>
+<method name="typeToString" type="(Ljava/lang/reflect/Type;)Ljava/lang/String;" class_method="true"/>
+<method name="getGenericSupertype" type="(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="getSupertype" type="(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="getArrayComponentType" type="(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="getCollectionElementType" type="(Ljava/lang/reflect/Type;Ljava/lang/Class;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="getMapKeyAndValueTypes" type="(Ljava/lang/reflect/Type;Ljava/lang/Class;)[Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="resolve" type="(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="resolveTypeVariable" type="(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/TypeVariable;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="access$000" type="(Ljava/lang/reflect/Type;)V" class_method="true"/>
+<method name="access$100" type="(Ljava/lang/Object;)I" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/bind/ObjectTypeAdapter$2">
+</class>
+<class name="com/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;ZZ)V"/>
+<method name="writeField" type="(Ljava/lang/Object;)Z"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$32">
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters">
+<method name="newFactory" type="(Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+<method name="newFactory" type="(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+<method name="newFactory" type="(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+<method name="newFactoryForMultipleTypes" type="(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+<method name="newTypeHierarchyFactory" type="(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor">
+<method name="&lt;init&gt;" type="(Ljava/util/Map;)V"/>
+<method name="get" type="(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/internal/ObjectConstructor;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/JsonReaderInternalAccess">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="promoteNameToValue" type="(Lcom/google/gson/stream/JsonReader;)V"/>
+</class>
+<class name="com/google/gson/internal/Primitives">
+<method name="isPrimitive" type="(Ljava/lang/reflect/Type;)Z" class_method="true"/>
+<method name="isWrapperType" type="(Ljava/lang/reflect/Type;)Z" class_method="true"/>
+<method name="wrap" type="(Ljava/lang/Class;)Ljava/lang/Class;" class_method="true"/>
+<method name="unwrap" type="(Ljava/lang/Class;)Ljava/lang/Class;" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/Streams$1">
+</class>
+<class name="com/google/gson/internal/Streams">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="parse" type="(Lcom/google/gson/stream/JsonReader;)Lcom/google/gson/JsonElement;" class_method="true"/>
+<method name="write" type="(Lcom/google/gson/JsonElement;Lcom/google/gson/stream/JsonWriter;)V" class_method="true"/>
+<method name="writerForAppendable" type="(Ljava/lang/Appendable;)Ljava/io/Writer;" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/UnsafeAllocator">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="newInstance" type="(Ljava/lang/Class;)Ljava/lang/Object;"/>
+<method name="create" type="()Lcom/google/gson/internal/UnsafeAllocator;" class_method="true"/>
+</class>
+<class name="com/google/gson/JsonElement">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="deepCopy" type="()Lcom/google/gson/JsonElement;"/>
+<method name="isJsonArray" type="()Z"/>
+<method name="isJsonObject" type="()Z"/>
+<method name="isJsonPrimitive" type="()Z"/>
+<method name="isJsonNull" type="()Z"/>
+<method name="getAsJsonObject" type="()Lcom/google/gson/JsonObject;"/>
+<method name="getAsJsonArray" type="()Lcom/google/gson/JsonArray;"/>
+<method name="getAsJsonPrimitive" type="()Lcom/google/gson/JsonPrimitive;"/>
+<method name="getAsJsonNull" type="()Lcom/google/gson/JsonNull;"/>
+<method name="getAsBoolean" type="()Z"/>
+<method name="getAsBooleanWrapper" type="()Ljava/lang/Boolean;"/>
+<method name="getAsNumber" type="()Ljava/lang/Number;"/>
+<method name="getAsString" type="()Ljava/lang/String;"/>
+<method name="getAsDouble" type="()D"/>
+<method name="getAsFloat" type="()F"/>
+<method name="getAsLong" type="()J"/>
+<method name="getAsInt" type="()I"/>
+<method name="getAsByte" type="()B"/>
+<method name="getAsCharacter" type="()C"/>
+<method name="getAsBigDecimal" type="()Ljava/math/BigDecimal;"/>
+<method name="getAsBigInteger" type="()Ljava/math/BigInteger;"/>
+<method name="getAsShort" type="()S"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/JsonParser">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="parse" type="(Ljava/lang/String;)Lcom/google/gson/JsonElement;"/>
+<method name="parse" type="(Ljava/io/Reader;)Lcom/google/gson/JsonElement;"/>
+<method name="parse" type="(Lcom/google/gson/stream/JsonReader;)Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/reflect/TypeToken">
+<method name="com.google.gson.reflect.TypeToken" type="()V"/>
+<method name="com.google.gson.reflect.TypeToken" type="(Ljava/lang/reflect/Type;)V"/>
+<method name="getSuperclassTypeParameter" type="(Ljava/lang/Class;)Ljava/lang/reflect/Type;" class_method="true"/>
+<method name="getRawType" type="()Ljava/lang/Class;"/>
+<method name="getType" type="()Ljava/lang/reflect/Type;"/>
+<method name="isAssignableFrom" type="(Ljava/lang/Class;)Z"/>
+<method name="isAssignableFrom" type="(Ljava/lang/reflect/Type;)Z"/>
+<method name="isAssignableFrom" type="(Lcom/google/gson/reflect/TypeToken;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="get" type="(Ljava/lang/reflect/Type;)Lcom/google/gson/reflect/TypeToken;" class_method="true"/>
+<method name="get" type="(Ljava/lang/Class;)Lcom/google/gson/reflect/TypeToken;" class_method="true"/>
+</class>
+<class name="com/google/gson/stream/JsonScope">
+<method name="&lt;init&gt;" type="()V"/>
+</class>
+<class name="com/google/gson/TreeTypeAdapter$1">
+</class>
+<class name="com/google/gson/TypeAdapter">
+<method name="com.google.gson.TypeAdapter" type="()V"/>
+<method name="write" type="(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V"/>
+<method name="toJson" type="(Ljava/io/Writer;Ljava/lang/Object;)V"/>
+<method name="nullSafe" type="()Lcom/google/gson/TypeAdapter;"/>
+<method name="toJson" type="(Ljava/lang/Object;)Ljava/lang/String;"/>
+<method name="toJsonTree" type="(Ljava/lang/Object;)Lcom/google/gson/JsonElement;"/>
+<method name="read" type="(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Ljava/io/Reader;)Ljava/lang/Object;"/>
+<method name="fromJson" type="(Ljava/lang/String;)Ljava/lang/Object;"/>
+<method name="fromJsonTree" type="(Lcom/google/gson/JsonElement;)Ljava/lang/Object;"/>
+</class>
+<interface name="com/google/gson/ExclusionStrategy">
+<method name="shouldSkipField" type="(Lcom/google/gson/FieldAttributes;)Z"/>
+<method name="shouldSkipClass" type="(Ljava/lang/Class;)Z"/>
+</interface>
+<interface name="com/google/gson/FieldNamingStrategy">
+<method name="translateName" type="(Ljava/lang/reflect/Field;)Ljava/lang/String;"/>
+</interface>
+<interface name="com/google/gson/InstanceCreator">
+<method name="createInstance" type="(Ljava/lang/reflect/Type;)Ljava/lang/Object;"/>
+</interface>
+<interface name="com/google/gson/internal/ObjectConstructor">
+<method name="construct" type="()Ljava/lang/Object;"/>
+</interface>
+<interface name="com/google/gson/JsonDeserializationContext">
+<method name="deserialize" type="(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;"/>
+</interface>
+<interface name="com/google/gson/JsonDeserializer">
+<method name="deserialize" type="(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;"/>
+</interface>
+<interface name="com/google/gson/JsonSerializationContext">
+<method name="serialize" type="(Ljava/lang/Object;)Lcom/google/gson/JsonElement;"/>
+<method name="serialize" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;)Lcom/google/gson/JsonElement;"/>
+</interface>
+<interface name="com/google/gson/JsonSerializer">
+<method name="serialize" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"/>
+</interface>
+<interface name="com/google/gson/TypeAdapterFactory">
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</interface>
+<class name="com/google/gson/DefaultDateTypeAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(I)V"/>
+<method name="&lt;init&gt;" type="(II)V"/>
+<method name="&lt;init&gt;" type="(Ljava/text/DateFormat;Ljava/text/DateFormat;)V"/>
+<method name="serialize" type="(Ljava/util/Date;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"/>
+<method name="deserialize" type="(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/util/Date;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="serialize" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"/>
+<method name="deserialize" type="(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/Gson$1">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/Gson;)V"/>
+<method name="deserialize" type="(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/Gson$2">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/Gson;)V"/>
+<method name="serialize" type="(Ljava/lang/Object;)Lcom/google/gson/JsonElement;"/>
+<method name="serialize" type="(Ljava/lang/Object;Ljava/lang/reflect/Type;)Lcom/google/gson/JsonElement;"/>
+</class>
+<class name="com/google/gson/internal/$Gson$Types$GenericArrayTypeImpl">
+<method name="&lt;init&gt;" type="(Ljava/lang/reflect/Type;)V"/>
+<method name="getGenericComponentType" type="()Ljava/lang/reflect/Type;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/$Gson$Types$ParameterizedTypeImpl">
+<method name="&lt;init&gt;" type="(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;[Ljava/lang/reflect/Type;)V"/>
+<method name="getActualTypeArguments" type="()[Ljava/lang/reflect/Type;"/>
+<method name="getRawType" type="()Ljava/lang/reflect/Type;"/>
+<method name="getOwnerType" type="()Ljava/lang/reflect/Type;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/$Gson$Types$WildcardTypeImpl">
+<method name="&lt;init&gt;" type="([Ljava/lang/reflect/Type;[Ljava/lang/reflect/Type;)V"/>
+<method name="getUpperBounds" type="()[Ljava/lang/reflect/Type;"/>
+<method name="getLowerBounds" type="()[Ljava/lang/reflect/Type;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/bind/ArrayTypeAdapter$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/CollectionTypeAdapterFactory">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/DateTypeAdapter$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="getTypeAdapter" type="(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/annotations/JsonAdapter;)Lcom/google/gson/TypeAdapter;" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/bind/MapTypeAdapterFactory">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;Z)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="access$000" type="(Lcom/google/gson/internal/bind/MapTypeAdapterFactory;)Z" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/bind/ObjectTypeAdapter$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/ReflectiveTypeAdapterFactory">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/FieldNamingStrategy;Lcom/google/gson/internal/Excluder;)V"/>
+<method name="excludeField" type="(Ljava/lang/reflect/Field;Z)Z"/>
+<method name="excludeField" type="(Ljava/lang/reflect/Field;ZLcom/google/gson/internal/Excluder;)Z" class_method="true"/>
+<method name="getFieldName" type="(Lcom/google/gson/FieldNamingStrategy;Ljava/lang/reflect/Field;)Ljava/lang/String;" class_method="true"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="access$100" type="(Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;Lcom/google/gson/Gson;Ljava/lang/reflect/Field;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;" class_method="true"/>
+</class>
+<class name="com/google/gson/internal/bind/SqlDateTypeAdapter$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/TimeTypeAdapter$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$22">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$26">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$27">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/TypeAdapter;)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$28">
+<method name="&lt;init&gt;" type="(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$29">
+<method name="&lt;init&gt;" type="(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$30">
+<method name="&lt;init&gt;" type="(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/bind/TypeAdapters$31">
+<method name="&lt;init&gt;" type="(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$1">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/InstanceCreator;Ljava/lang/reflect/Type;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$10">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$11">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$12">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;Ljava/lang/Class;Ljava/lang/reflect/Type;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$2">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/InstanceCreator;Ljava/lang/reflect/Type;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$3">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;Ljava/lang/reflect/Constructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$4">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$5">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;Ljava/lang/reflect/Type;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$6">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$7">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$8">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/ConstructorConstructor$9">
+<method name="&lt;init&gt;" type="(Lcom/google/gson/internal/ConstructorConstructor;)V"/>
+<method name="construct" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/Excluder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="clone" type="()Lcom/google/gson/internal/Excluder;"/>
+<method name="withVersion" type="(D)Lcom/google/gson/internal/Excluder;"/>
+<method name="withModifiers" type="([I)Lcom/google/gson/internal/Excluder;"/>
+<method name="disableInnerClassSerialization" type="()Lcom/google/gson/internal/Excluder;"/>
+<method name="excludeFieldsWithoutExposeAnnotation" type="()Lcom/google/gson/internal/Excluder;"/>
+<method name="withExclusionStrategy" type="(Lcom/google/gson/ExclusionStrategy;ZZ)Lcom/google/gson/internal/Excluder;"/>
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="excludeField" type="(Ljava/lang/reflect/Field;Z)Z"/>
+<method name="excludeClass" type="(Ljava/lang/Class;Z)Z"/>
+<method name="clone" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/internal/LinkedHashTreeMap$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="compare" type="(Ljava/lang/Comparable;Ljava/lang/Comparable;)I"/>
+<method name="compare" type="(Ljava/lang/Object;Ljava/lang/Object;)I"/>
+</class>
+<class name="com/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator">
+<method name="hasNext" type="()Z"/>
+<method name="nextNode" type="()Lcom/google/gson/internal/LinkedHashTreeMap$Node;"/>
+<method name="remove" type="()V"/>
+<method name="com.google.gson.internal.LinkedHashTreeMap$LinkedTreeMapIterator" type="(Lcom/google/gson/internal/LinkedHashTreeMap;Lcom/google/gson/internal/LinkedHashTreeMap$1;)V"/>
+</class>
+<class name="com/google/gson/internal/LinkedTreeMap$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="compare" type="(Ljava/lang/Comparable;Ljava/lang/Comparable;)I"/>
+<method name="compare" type="(Ljava/lang/Object;Ljava/lang/Object;)I"/>
+</class>
+<class name="com/google/gson/internal/LinkedTreeMap$LinkedTreeMapIterator">
+<method name="hasNext" type="()Z"/>
+<method name="nextNode" type="()Lcom/google/gson/internal/LinkedTreeMap$Node;"/>
+<method name="remove" type="()V"/>
+<method name="com.google.gson.internal.LinkedTreeMap$LinkedTreeMapIterator" type="(Lcom/google/gson/internal/LinkedTreeMap;Lcom/google/gson/internal/LinkedTreeMap$1;)V"/>
+</class>
+<class name="com/google/gson/internal/Streams$AppendableWriter$CurrentWrite">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="length" type="()I"/>
+<method name="charAt" type="(I)C"/>
+<method name="subSequence" type="(II)Ljava/lang/CharSequence;"/>
+</class>
+<class name="com/google/gson/JsonStreamParser">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/io/Reader;)V"/>
+<method name="next" type="()Lcom/google/gson/JsonElement;"/>
+<method name="hasNext" type="()Z"/>
+<method name="remove" type="()V"/>
+<method name="next" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/google/gson/stream/JsonReader">
+<method name="&lt;init&gt;" type="(Ljava/io/Reader;)V"/>
+<method name="setLenient" type="(Z)V"/>
+<method name="isLenient" type="()Z"/>
+<method name="beginArray" type="()V"/>
+<method name="endArray" type="()V"/>
+<method name="beginObject" type="()V"/>
+<method name="endObject" type="()V"/>
+<method name="hasNext" type="()Z"/>
+<method name="peek" type="()Lcom/google/gson/stream/JsonToken;"/>
+<method name="nextName" type="()Ljava/lang/String;"/>
+<method name="nextString" type="()Ljava/lang/String;"/>
+<method name="nextBoolean" type="()Z"/>
+<method name="nextNull" type="()V"/>
+<method name="nextDouble" type="()D"/>
+<method name="nextLong" type="()J"/>
+<method name="nextInt" type="()I"/>
+<method name="close" type="()V"/>
+<method name="skipValue" type="()V"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="getPath" type="()Ljava/lang/String;"/>
+<method name="access$000" type="(Lcom/google/gson/stream/JsonReader;)I" class_method="true"/>
+<method name="access$100" type="(Lcom/google/gson/stream/JsonReader;)I" class_method="true"/>
+<method name="access$002" type="(Lcom/google/gson/stream/JsonReader;I)I" class_method="true"/>
+<method name="access$200" type="(Lcom/google/gson/stream/JsonReader;)I" class_method="true"/>
+<method name="access$300" type="(Lcom/google/gson/stream/JsonReader;)I" class_method="true"/>
+</class>
+<class name="com/google/gson/stream/JsonWriter">
+<method name="&lt;init&gt;" type="(Ljava/io/Writer;)V"/>
+<method name="setIndent" type="(Ljava/lang/String;)V"/>
+<method name="setLenient" type="(Z)V"/>
+<method name="isLenient" type="()Z"/>
+<method name="setHtmlSafe" type="(Z)V"/>
+<method name="isHtmlSafe" type="()Z"/>
+<method name="setSerializeNulls" type="(Z)V"/>
+<method name="getSerializeNulls" type="()Z"/>
+<method name="beginArray" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="endArray" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="beginObject" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="endObject" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="name" type="(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="nullValue" type="()Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(Z)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(D)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(J)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="value" type="(Ljava/lang/Number;)Lcom/google/gson/stream/JsonWriter;"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/google/gson/TreeTypeAdapter$SingleTypeFactory">
+<method name="create" type="(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/Object;Lcom/google/gson/reflect/TypeToken;ZLjava/lang/Class;Lcom/google/gson/TreeTypeAdapter$1;)V"/>
+</class>
+</signatures>

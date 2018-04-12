@@ -1,0 +1,1626 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name="com/squareup/okhttp/Cache$CacheRequestImpl$1" super="okio/ForwardingSink">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Cache$CacheRequestImpl;Lokio/Sink;Lcom/squareup/okhttp/Cache;Lcom/squareup/okhttp/internal/DiskLruCache$Editor;)V"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/Cache$CacheResponseBody$1" super="okio/ForwardingSource">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Cache$CacheResponseBody;Lokio/Source;Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;)V"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/Cache$CacheResponseBody" super="com/squareup/okhttp/ResponseBody">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;Ljava/lang/String;Ljava/lang/String;)V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="source" type="()Lokio/BufferedSource;"/>
+<method name="access$500" type="(Lcom/squareup/okhttp/Cache$CacheResponseBody;)Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/Call$AsyncCall" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="host" type="()Ljava/lang/String;"/>
+<method name="request" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="tag" type="()Ljava/lang/Object;"/>
+<method name="cancel" type="()V"/>
+<method name="get" type="()Lcom/squareup/okhttp/Call;"/>
+<method name="execute" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Call;Lcom/squareup/okhttp/Callback;ZLcom/squareup/okhttp/Call$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/CipherSuite" super="java/lang/Enum">
+<method name="values" type="()[Lcom/squareup/okhttp/CipherSuite;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/squareup/okhttp/CipherSuite;" class_method="true"/>
+<method name="forJavaName" type="(Ljava/lang/String;)Lcom/squareup/okhttp/CipherSuite;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$2" super="com/squareup/okhttp/internal/FaultHidingSink">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Lokio/Sink;)V"/>
+<method name="onException" type="(Ljava/io/IOException;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$Editor$1" super="com/squareup/okhttp/internal/FaultHidingSink">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Editor;Lokio/Sink;)V"/>
+<method name="onException" type="(Ljava/io/IOException;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/FaultHidingSink" super="okio/ForwardingSink">
+<method name="&lt;init&gt;" type="(Lokio/Sink;)V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="onException" type="(Ljava/io/IOException;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection$ChunkedSource" super="com/squareup/okhttp/internal/http/HttpConnection$AbstractSource">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;Lcom/squareup/okhttp/internal/http/HttpEngine;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection$FixedLengthSource" super="com/squareup/okhttp/internal/http/HttpConnection$AbstractSource">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;J)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection$UnknownLengthSource" super="com/squareup/okhttp/internal/http/HttpConnection$AbstractSource">
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="close" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;Lcom/squareup/okhttp/internal/http/HttpConnection$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpDate$1" super="java/lang/ThreadLocal">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="initialValue" type="()Ljava/text/DateFormat;"/>
+<method name="initialValue" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpEngine$1" super="com/squareup/okhttp/ResponseBody">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="source" type="()Lokio/BufferedSource;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/RealResponseBody" super="com/squareup/okhttp/ResponseBody">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Headers;Lokio/BufferedSource;)V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="source" type="()Lokio/BufferedSource;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/RequestException" super="java/lang/Exception">
+<method name="&lt;init&gt;" type="(Ljava/io/IOException;)V"/>
+<method name="getCause" type="()Ljava/io/IOException;"/>
+<method name="getCause" type="()Ljava/lang/Throwable;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/RouteException" super="java/lang/Exception">
+<method name="&lt;init&gt;" type="(Ljava/io/IOException;)V"/>
+<method name="getLastConnectException" type="()Ljava/io/IOException;"/>
+<method name="addConnectException" type="(Ljava/io/IOException;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/Platform$Android" super="com/squareup/okhttp/internal/Platform">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/OptionalMethod;Lcom/squareup/okhttp/internal/OptionalMethod;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Lcom/squareup/okhttp/internal/OptionalMethod;Lcom/squareup/okhttp/internal/OptionalMethod;)V"/>
+<method name="connectSocket" type="(Ljava/net/Socket;Ljava/net/InetSocketAddress;I)V"/>
+<method name="configureTlsExtensions" type="(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V"/>
+<method name="getSelectedProtocol" type="(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;"/>
+<method name="tagSocket" type="(Ljava/net/Socket;)V"/>
+<method name="untagSocket" type="(Ljava/net/Socket;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/Platform$JdkWithJettyBootPlatform" super="com/squareup/okhttp/internal/Platform">
+<method name="&lt;init&gt;" type="(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/Class;Ljava/lang/Class;)V"/>
+<method name="configureTlsExtensions" type="(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V"/>
+<method name="afterHandshake" type="(Ljavax/net/ssl/SSLSocket;)V"/>
+<method name="getSelectedProtocol" type="(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/ErrorCode" super="java/lang/Enum">
+<method name="values" type="()[Lcom/squareup/okhttp/internal/spdy/ErrorCode;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/squareup/okhttp/internal/spdy/ErrorCode;" class_method="true"/>
+<method name="fromSpdy3Rst" type="(I)Lcom/squareup/okhttp/internal/spdy/ErrorCode;" class_method="true"/>
+<method name="fromHttp2" type="(I)Lcom/squareup/okhttp/internal/spdy/ErrorCode;" class_method="true"/>
+<method name="fromSpdyGoAway" type="(I)Lcom/squareup/okhttp/internal/spdy/ErrorCode;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/HeadersMode" super="java/lang/Enum">
+<method name="values" type="()[Lcom/squareup/okhttp/internal/spdy/HeadersMode;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/squareup/okhttp/internal/spdy/HeadersMode;" class_method="true"/>
+<method name="failIfStreamAbsent" type="()Z"/>
+<method name="failIfStreamPresent" type="()Z"/>
+<method name="failIfHeadersAbsent" type="()Z"/>
+<method name="failIfHeadersPresent" type="()Z"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/NameValueBlockReader$1" super="okio/ForwardingSource">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/NameValueBlockReader;Lokio/Source;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/NameValueBlockReader$2" super="java/util/zip/Inflater">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/NameValueBlockReader;)V"/>
+<method name="inflate" type="([BII)I"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$1" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Ljava/lang/String;[Ljava/lang/Object;ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$2" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Ljava/lang/String;[Ljava/lang/Object;IJ)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$3" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Ljava/lang/String;[Ljava/lang/Object;ZIILcom/squareup/okhttp/internal/spdy/Ping;)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$4" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Ljava/lang/String;[Ljava/lang/Object;ILjava/util/List;)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$5" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Ljava/lang/String;[Ljava/lang/Object;ILjava/util/List;Z)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$6" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Ljava/lang/String;[Ljava/lang/Object;ILokio/Buffer;IZ)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$7" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Ljava/lang/String;[Ljava/lang/Object;ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$Reader$1" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Reader;Ljava/lang/String;[Ljava/lang/Object;Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$Reader$2" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Reader;Ljava/lang/String;[Ljava/lang/Object;Lcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyStream$SpdyTimeout" super="okio/AsyncTimeout">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V"/>
+<method name="timedOut" type="()V"/>
+<method name="exitAndThrowIfTimedOut" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/MultipartBuilder$MultipartRequestBody" super="com/squareup/okhttp/RequestBody">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/MediaType;Lokio/ByteString;Ljava/util/List;Ljava/util/List;)V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="writeTo" type="(Lokio/BufferedSink;)V"/>
+</class>
+<class name="com/squareup/okhttp/OkHttpClient$1" super="com/squareup/okhttp/internal/Internal">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="newTransport" type="(Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/internal/http/HttpEngine;)Lcom/squareup/okhttp/internal/http/Transport;"/>
+<method name="clearOwner" type="(Lcom/squareup/okhttp/Connection;)Z"/>
+<method name="closeIfOwnedBy" type="(Lcom/squareup/okhttp/Connection;Ljava/lang/Object;)V"/>
+<method name="recycleCount" type="(Lcom/squareup/okhttp/Connection;)I"/>
+<method name="setProtocol" type="(Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/Protocol;)V"/>
+<method name="setOwner" type="(Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/internal/http/HttpEngine;)V"/>
+<method name="isReadable" type="(Lcom/squareup/okhttp/Connection;)Z"/>
+<method name="addLenient" type="(Lcom/squareup/okhttp/Headers$Builder;Ljava/lang/String;)V"/>
+<method name="addLenient" type="(Lcom/squareup/okhttp/Headers$Builder;Ljava/lang/String;Ljava/lang/String;)V"/>
+<method name="setCache" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/internal/InternalCache;)V"/>
+<method name="internalCache" type="(Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/InternalCache;"/>
+<method name="recycle" type="(Lcom/squareup/okhttp/ConnectionPool;Lcom/squareup/okhttp/Connection;)V"/>
+<method name="routeDatabase" type="(Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/RouteDatabase;"/>
+<method name="network" type="(Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/Network;"/>
+<method name="setNetwork" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/internal/Network;)V"/>
+<method name="connectAndSetOwner" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/internal/http/HttpEngine;Lcom/squareup/okhttp/Request;)V"/>
+<method name="callEnqueue" type="(Lcom/squareup/okhttp/Call;Lcom/squareup/okhttp/Callback;Z)V"/>
+<method name="callEngineReleaseConnection" type="(Lcom/squareup/okhttp/Call;)V"/>
+<method name="callEngineGetConnection" type="(Lcom/squareup/okhttp/Call;)Lcom/squareup/okhttp/Connection;"/>
+<method name="connectionRawSource" type="(Lcom/squareup/okhttp/Connection;)Lokio/BufferedSource;"/>
+<method name="connectionRawSink" type="(Lcom/squareup/okhttp/Connection;)Lokio/BufferedSink;"/>
+<method name="connectionSetOwner" type="(Lcom/squareup/okhttp/Connection;Ljava/lang/Object;)V"/>
+<method name="apply" type="(Lcom/squareup/okhttp/ConnectionSpec;Ljavax/net/ssl/SSLSocket;Z)V"/>
+</class>
+<class name="com/squareup/okhttp/Protocol" super="java/lang/Enum">
+<method name="values" type="()[Lcom/squareup/okhttp/Protocol;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Protocol;" class_method="true"/>
+<method name="get" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Protocol;" class_method="true"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/RequestBody$1" super="com/squareup/okhttp/RequestBody">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/MediaType;Lokio/ByteString;)V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="writeTo" type="(Lokio/BufferedSink;)V"/>
+</class>
+<class name="com/squareup/okhttp/RequestBody$2" super="com/squareup/okhttp/RequestBody">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/MediaType;I[BI)V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="writeTo" type="(Lokio/BufferedSink;)V"/>
+</class>
+<class name="com/squareup/okhttp/RequestBody$3" super="com/squareup/okhttp/RequestBody">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/MediaType;Ljava/io/File;)V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="writeTo" type="(Lokio/BufferedSink;)V"/>
+</class>
+<class name="com/squareup/okhttp/ResponseBody$1" super="com/squareup/okhttp/ResponseBody">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/MediaType;JLokio/BufferedSource;)V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="source" type="()Lokio/BufferedSource;"/>
+</class>
+<class name="com/squareup/okhttp/TlsVersion" super="java/lang/Enum">
+<method name="values" type="()[Lcom/squareup/okhttp/TlsVersion;" class_method="true"/>
+<method name="valueOf" type="(Ljava/lang/String;)Lcom/squareup/okhttp/TlsVersion;" class_method="true"/>
+<method name="forJavaName" type="(Ljava/lang/String;)Lcom/squareup/okhttp/TlsVersion;" class_method="true"/>
+<method name="javaName" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$Reader" super="com/squareup/okhttp/internal/NamedRunnable">
+<method name="execute" type="()V"/>
+<method name="data" type="(ZILokio/BufferedSource;I)V"/>
+<method name="headers" type="(ZZIILjava/util/List;Lcom/squareup/okhttp/internal/spdy/HeadersMode;)V"/>
+<method name="rstStream" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="settings" type="(ZLcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+<method name="ackSettings" type="()V"/>
+<method name="ping" type="(ZII)V"/>
+<method name="goAway" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;Lokio/ByteString;)V"/>
+<method name="windowUpdate" type="(IJ)V"/>
+<method name="priority" type="(IIIZ)V"/>
+<method name="pushPromise" type="(IILjava/util/List;)V"/>
+<method name="alternateService" type="(ILjava/lang/String;Lokio/ByteString;Ljava/lang/String;IJ)V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Lcom/squareup/okhttp/internal/spdy/SpdyConnection$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/Address">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;ILjavax/net/SocketFactory;Ljavax/net/ssl/SSLSocketFactory;Ljavax/net/ssl/HostnameVerifier;Lcom/squareup/okhttp/CertificatePinner;Lcom/squareup/okhttp/Authenticator;Ljava/net/Proxy;Ljava/util/List;Ljava/util/List;Ljava/net/ProxySelector;)V"/>
+<method name="getUriHost" type="()Ljava/lang/String;"/>
+<method name="getUriPort" type="()I"/>
+<method name="getSocketFactory" type="()Ljavax/net/SocketFactory;"/>
+<method name="getSslSocketFactory" type="()Ljavax/net/ssl/SSLSocketFactory;"/>
+<method name="getHostnameVerifier" type="()Ljavax/net/ssl/HostnameVerifier;"/>
+<method name="getAuthenticator" type="()Lcom/squareup/okhttp/Authenticator;"/>
+<method name="getProtocols" type="()Ljava/util/List;"/>
+<method name="getConnectionSpecs" type="()Ljava/util/List;"/>
+<method name="getProxy" type="()Ljava/net/Proxy;"/>
+<method name="getProxySelector" type="()Ljava/net/ProxySelector;"/>
+<method name="getCertificatePinner" type="()Lcom/squareup/okhttp/CertificatePinner;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+</class>
+<class name="com/squareup/okhttp/Cache$Entry">
+<method name="&lt;init&gt;" type="(Lokio/Source;)V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Response;)V"/>
+<method name="writeTo" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Editor;)V"/>
+<method name="matches" type="(Lcom/squareup/okhttp/Request;Lcom/squareup/okhttp/Response;)Z"/>
+<method name="response" type="(Lcom/squareup/okhttp/Request;Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;)Lcom/squareup/okhttp/Response;"/>
+</class>
+<class name="com/squareup/okhttp/Cache">
+<method name="&lt;init&gt;" type="(Ljava/io/File;J)V"/>
+<method name="get" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Response;"/>
+<method name="delete" type="()V"/>
+<method name="evictAll" type="()V"/>
+<method name="urls" type="()Ljava/util/Iterator;"/>
+<method name="getWriteAbortCount" type="()I"/>
+<method name="getWriteSuccessCount" type="()I"/>
+<method name="getSize" type="()J"/>
+<method name="getMaxSize" type="()J"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="getDirectory" type="()Ljava/io/File;"/>
+<method name="isClosed" type="()Z"/>
+<method name="getNetworkCount" type="()I"/>
+<method name="getHitCount" type="()I"/>
+<method name="getRequestCount" type="()I"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/Cache;Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/internal/http/CacheRequest;" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/Cache;Lcom/squareup/okhttp/Request;)V" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/Cache;Lcom/squareup/okhttp/Response;Lcom/squareup/okhttp/Response;)V" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/Cache;)V" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/Cache;Lcom/squareup/okhttp/internal/http/CacheStrategy;)V" class_method="true"/>
+<method name="access$600" type="(Lcom/squareup/okhttp/Cache;)Lcom/squareup/okhttp/internal/DiskLruCache;" class_method="true"/>
+<method name="access$808" type="(Lcom/squareup/okhttp/Cache;)I" class_method="true"/>
+<method name="access$908" type="(Lcom/squareup/okhttp/Cache;)I" class_method="true"/>
+<method name="access$1000" type="(Lokio/BufferedSource;)I" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/CacheControl$1">
+</class>
+<class name="com/squareup/okhttp/CacheControl$Builder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="noCache" type="()Lcom/squareup/okhttp/CacheControl$Builder;"/>
+<method name="noStore" type="()Lcom/squareup/okhttp/CacheControl$Builder;"/>
+<method name="maxAge" type="(ILjava/util/concurrent/TimeUnit;)Lcom/squareup/okhttp/CacheControl$Builder;"/>
+<method name="maxStale" type="(ILjava/util/concurrent/TimeUnit;)Lcom/squareup/okhttp/CacheControl$Builder;"/>
+<method name="minFresh" type="(ILjava/util/concurrent/TimeUnit;)Lcom/squareup/okhttp/CacheControl$Builder;"/>
+<method name="onlyIfCached" type="()Lcom/squareup/okhttp/CacheControl$Builder;"/>
+<method name="noTransform" type="()Lcom/squareup/okhttp/CacheControl$Builder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/CacheControl;"/>
+</class>
+<class name="com/squareup/okhttp/CacheControl">
+<method name="noCache" type="()Z"/>
+<method name="noStore" type="()Z"/>
+<method name="maxAgeSeconds" type="()I"/>
+<method name="sMaxAgeSeconds" type="()I"/>
+<method name="isPrivate" type="()Z"/>
+<method name="isPublic" type="()Z"/>
+<method name="mustRevalidate" type="()Z"/>
+<method name="maxStaleSeconds" type="()I"/>
+<method name="minFreshSeconds" type="()I"/>
+<method name="onlyIfCached" type="()Z"/>
+<method name="noTransform" type="()Z"/>
+<method name="parse" type="(Lcom/squareup/okhttp/Headers;)Lcom/squareup/okhttp/CacheControl;" class_method="true"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/CacheControl$Builder;Lcom/squareup/okhttp/CacheControl$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/Call$1">
+</class>
+<class name="com/squareup/okhttp/Call">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/Request;)V"/>
+<method name="execute" type="()Lcom/squareup/okhttp/Response;"/>
+<method name="tag" type="()Ljava/lang/Object;"/>
+<method name="enqueue" type="(Lcom/squareup/okhttp/Callback;)V"/>
+<method name="enqueue" type="(Lcom/squareup/okhttp/Callback;Z)V"/>
+<method name="cancel" type="()V"/>
+<method name="isCanceled" type="()Z"/>
+<method name="getResponse" type="(Lcom/squareup/okhttp/Request;Z)Lcom/squareup/okhttp/Response;"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/Call;Z)Lcom/squareup/okhttp/Response;" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/Call;)Ljava/lang/String;" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/Call;)Lcom/squareup/okhttp/OkHttpClient;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/CertificatePinner$1">
+</class>
+<class name="com/squareup/okhttp/CertificatePinner$Builder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="add" type="(Ljava/lang/String;[Ljava/lang/String;)Lcom/squareup/okhttp/CertificatePinner$Builder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/CertificatePinner;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/CertificatePinner$Builder;)Ljava/util/Map;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/CertificatePinner">
+<method name="check" type="(Ljava/lang/String;Ljava/util/List;)V"/>
+<method name="check" type="(Ljava/lang/String;[Ljava/security/cert/Certificate;)V"/>
+<method name="findMatchingPins" type="(Ljava/lang/String;)Ljava/util/Set;"/>
+<method name="pin" type="(Ljava/security/cert/Certificate;)Ljava/lang/String;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/CertificatePinner$Builder;Lcom/squareup/okhttp/CertificatePinner$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/Challenge">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;Ljava/lang/String;)V"/>
+<method name="getScheme" type="()Ljava/lang/String;"/>
+<method name="getRealm" type="()Ljava/lang/String;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/Connection">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/ConnectionPool;Lcom/squareup/okhttp/Route;)V"/>
+<method name="getOwner" type="()Ljava/lang/Object;"/>
+<method name="setOwner" type="(Ljava/lang/Object;)V"/>
+<method name="clearOwner" type="()Z"/>
+<method name="closeIfOwnedBy" type="(Ljava/lang/Object;)V"/>
+<method name="connect" type="(IIILcom/squareup/okhttp/Request;Ljava/util/List;Z)V"/>
+<method name="connectAndSetOwner" type="(Lcom/squareup/okhttp/OkHttpClient;Ljava/lang/Object;Lcom/squareup/okhttp/Request;)V"/>
+<method name="isConnected" type="()Z"/>
+<method name="getRoute" type="()Lcom/squareup/okhttp/Route;"/>
+<method name="getSocket" type="()Ljava/net/Socket;"/>
+<method name="rawSource" type="()Lokio/BufferedSource;"/>
+<method name="rawSink" type="()Lokio/BufferedSink;"/>
+<method name="isAlive" type="()Z"/>
+<method name="isReadable" type="()Z"/>
+<method name="resetIdleStartTime" type="()V"/>
+<method name="isIdle" type="()Z"/>
+<method name="getIdleStartTimeNs" type="()J"/>
+<method name="getHandshake" type="()Lcom/squareup/okhttp/Handshake;"/>
+<method name="newTransport" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)Lcom/squareup/okhttp/internal/http/Transport;"/>
+<method name="isSpdy" type="()Z"/>
+<method name="getProtocol" type="()Lcom/squareup/okhttp/Protocol;"/>
+<method name="setProtocol" type="(Lcom/squareup/okhttp/Protocol;)V"/>
+<method name="setTimeouts" type="(II)V"/>
+<method name="incrementRecycleCount" type="()V"/>
+<method name="recycleCount" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/ConnectionPool">
+<method name="&lt;init&gt;" type="(IJ)V"/>
+<method name="getDefault" type="()Lcom/squareup/okhttp/ConnectionPool;" class_method="true"/>
+<method name="getConnectionCount" type="()I"/>
+<method name="getSpdyConnectionCount" type="()I"/>
+<method name="getMultiplexedConnectionCount" type="()I"/>
+<method name="getHttpConnectionCount" type="()I"/>
+<method name="get" type="(Lcom/squareup/okhttp/Address;)Lcom/squareup/okhttp/Connection;"/>
+<method name="recycle" type="(Lcom/squareup/okhttp/Connection;)V"/>
+<method name="share" type="(Lcom/squareup/okhttp/Connection;)V"/>
+<method name="evictAll" type="()V"/>
+<method name="performCleanup" type="()Z"/>
+<method name="replaceCleanupExecutorForTests" type="(Ljava/util/concurrent/Executor;)V"/>
+<method name="getConnections" type="()Ljava/util/List;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/ConnectionPool;)V" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/ConnectionSpec$1">
+</class>
+<class name="com/squareup/okhttp/ConnectionSpec$Builder">
+<method name="&lt;init&gt;" type="(Z)V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/ConnectionSpec;)V"/>
+<method name="cipherSuites" type="([Lcom/squareup/okhttp/CipherSuite;)Lcom/squareup/okhttp/ConnectionSpec$Builder;"/>
+<method name="cipherSuites" type="([Ljava/lang/String;)Lcom/squareup/okhttp/ConnectionSpec$Builder;"/>
+<method name="tlsVersions" type="([Lcom/squareup/okhttp/TlsVersion;)Lcom/squareup/okhttp/ConnectionSpec$Builder;"/>
+<method name="tlsVersions" type="([Ljava/lang/String;)Lcom/squareup/okhttp/ConnectionSpec$Builder;"/>
+<method name="supportsTlsExtensions" type="(Z)Lcom/squareup/okhttp/ConnectionSpec$Builder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/ConnectionSpec;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/ConnectionSpec$Builder;)Z" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/ConnectionSpec$Builder;)[Ljava/lang/String;" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/ConnectionSpec$Builder;)[Ljava/lang/String;" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/ConnectionSpec$Builder;)Z" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/ConnectionSpec">
+<method name="isTls" type="()Z"/>
+<method name="cipherSuites" type="()Ljava/util/List;"/>
+<method name="tlsVersions" type="()Ljava/util/List;"/>
+<method name="supportsTlsExtensions" type="()Z"/>
+<method name="apply" type="(Ljavax/net/ssl/SSLSocket;Z)V"/>
+<method name="isCompatible" type="(Ljavax/net/ssl/SSLSocket;)Z"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/ConnectionSpec;)[Ljava/lang/String;" class_method="true"/>
+<method name="access$500" type="(Lcom/squareup/okhttp/ConnectionSpec;)[Ljava/lang/String;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/ConnectionSpec$Builder;Lcom/squareup/okhttp/ConnectionSpec$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/Credentials">
+<method name="basic" type="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/Dispatcher">
+<method name="&lt;init&gt;" type="(Ljava/util/concurrent/ExecutorService;)V"/>
+<method name="&lt;init&gt;" type="()V"/>
+<method name="getExecutorService" type="()Ljava/util/concurrent/ExecutorService;"/>
+<method name="setMaxRequests" type="(I)V"/>
+<method name="getMaxRequests" type="()I"/>
+<method name="setMaxRequestsPerHost" type="(I)V"/>
+<method name="getMaxRequestsPerHost" type="()I"/>
+<method name="enqueue" type="(Lcom/squareup/okhttp/Call$AsyncCall;)V"/>
+<method name="cancel" type="(Ljava/lang/Object;)V"/>
+<method name="finished" type="(Lcom/squareup/okhttp/Call$AsyncCall;)V"/>
+<method name="executed" type="(Lcom/squareup/okhttp/Call;)V"/>
+<method name="finished" type="(Lcom/squareup/okhttp/Call;)V"/>
+<method name="getRunningCallCount" type="()I"/>
+<method name="getQueuedCallCount" type="()I"/>
+</class>
+<class name="com/squareup/okhttp/FormEncodingBuilder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="add" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/FormEncodingBuilder;"/>
+<method name="addEncoded" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/FormEncodingBuilder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/RequestBody;"/>
+</class>
+<class name="com/squareup/okhttp/Handshake">
+<method name="get" type="(Ljavax/net/ssl/SSLSession;)Lcom/squareup/okhttp/Handshake;" class_method="true"/>
+<method name="get" type="(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Lcom/squareup/okhttp/Handshake;" class_method="true"/>
+<method name="cipherSuite" type="()Ljava/lang/String;"/>
+<method name="peerCertificates" type="()Ljava/util/List;"/>
+<method name="peerPrincipal" type="()Ljava/security/Principal;"/>
+<method name="localCertificates" type="()Ljava/util/List;"/>
+<method name="localPrincipal" type="()Ljava/security/Principal;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+</class>
+<class name="com/squareup/okhttp/Headers$1">
+</class>
+<class name="com/squareup/okhttp/Headers$Builder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="addLenient" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Headers$Builder;"/>
+<method name="add" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Headers$Builder;"/>
+<method name="add" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Headers$Builder;"/>
+<method name="addLenient" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Headers$Builder;"/>
+<method name="removeAll" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Headers$Builder;"/>
+<method name="set" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Headers$Builder;"/>
+<method name="get" type="(Ljava/lang/String;)Ljava/lang/String;"/>
+<method name="build" type="()Lcom/squareup/okhttp/Headers;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/Headers$Builder;)Ljava/util/List;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/Headers">
+<method name="get" type="(Ljava/lang/String;)Ljava/lang/String;"/>
+<method name="getDate" type="(Ljava/lang/String;)Ljava/util/Date;"/>
+<method name="size" type="()I"/>
+<method name="name" type="(I)Ljava/lang/String;"/>
+<method name="value" type="(I)Ljava/lang/String;"/>
+<method name="names" type="()Ljava/util/Set;"/>
+<method name="values" type="(Ljava/lang/String;)Ljava/util/List;"/>
+<method name="newBuilder" type="()Lcom/squareup/okhttp/Headers$Builder;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="toMultimap" type="()Ljava/util/Map;"/>
+<method name="of" type="([Ljava/lang/String;)Lcom/squareup/okhttp/Headers;" class_method="true"/>
+<method name="of" type="(Ljava/util/Map;)Lcom/squareup/okhttp/Headers;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Headers$Builder;Lcom/squareup/okhttp/Headers$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/HttpUrl$1">
+</class>
+<class name="com/squareup/okhttp/HttpUrl$Builder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="scheme" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="username" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="encodedUsername" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="password" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="encodedPassword" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="host" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="port" type="(I)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="effectivePort" type="()I"/>
+<method name="addPathSegment" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="addEncodedPathSegment" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="setPathSegment" type="(ILjava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="setEncodedPathSegment" type="(ILjava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="removePathSegment" type="(I)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="encodedPath" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="query" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="encodedQuery" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="addQueryParameter" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="addEncodedQueryParameter" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="setQueryParameter" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="setEncodedQueryParameter" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="removeAllQueryParameters" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="removeAllEncodedQueryParameters" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="fragment" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="encodedFragment" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/HttpUrl;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="parse" type="(Lcom/squareup/okhttp/HttpUrl;Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl;"/>
+</class>
+<class name="com/squareup/okhttp/HttpUrl">
+<method name="url" type="()Ljava/net/URL;"/>
+<method name="uri" type="()Ljava/net/URI;"/>
+<method name="scheme" type="()Ljava/lang/String;"/>
+<method name="isHttps" type="()Z"/>
+<method name="encodedUsername" type="()Ljava/lang/String;"/>
+<method name="username" type="()Ljava/lang/String;"/>
+<method name="encodedPassword" type="()Ljava/lang/String;"/>
+<method name="password" type="()Ljava/lang/String;"/>
+<method name="host" type="()Ljava/lang/String;"/>
+<method name="port" type="()I"/>
+<method name="defaultPort" type="(Ljava/lang/String;)I" class_method="true"/>
+<method name="pathSize" type="()I"/>
+<method name="encodedPath" type="()Ljava/lang/String;"/>
+<method name="pathSegmentsToString" type="(Ljava/lang/StringBuilder;Ljava/util/List;)V" class_method="true"/>
+<method name="encodedPathSegments" type="()Ljava/util/List;"/>
+<method name="pathSegments" type="()Ljava/util/List;"/>
+<method name="encodedQuery" type="()Ljava/lang/String;"/>
+<method name="namesAndValuesToQueryString" type="(Ljava/lang/StringBuilder;Ljava/util/List;)V" class_method="true"/>
+<method name="queryStringToNamesAndValues" type="(Ljava/lang/String;)Ljava/util/List;" class_method="true"/>
+<method name="query" type="()Ljava/lang/String;"/>
+<method name="querySize" type="()I"/>
+<method name="queryParameter" type="(Ljava/lang/String;)Ljava/lang/String;"/>
+<method name="queryParameterNames" type="()Ljava/util/Set;"/>
+<method name="queryParameterValues" type="(Ljava/lang/String;)Ljava/util/List;"/>
+<method name="queryParameterName" type="(I)Ljava/lang/String;"/>
+<method name="queryParameterValue" type="(I)Ljava/lang/String;"/>
+<method name="encodedFragment" type="()Ljava/lang/String;"/>
+<method name="fragment" type="()Ljava/lang/String;"/>
+<method name="resolve" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl;"/>
+<method name="newBuilder" type="()Lcom/squareup/okhttp/HttpUrl$Builder;"/>
+<method name="parse" type="(Ljava/lang/String;)Lcom/squareup/okhttp/HttpUrl;" class_method="true"/>
+<method name="get" type="(Ljava/net/URL;)Lcom/squareup/okhttp/HttpUrl;" class_method="true"/>
+<method name="get" type="(Ljava/net/URI;)Lcom/squareup/okhttp/HttpUrl;" class_method="true"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="percentDecode" type="(Ljava/lang/String;)Ljava/lang/String;" class_method="true"/>
+<method name="percentDecode" type="(Ljava/lang/String;II)Ljava/lang/String;" class_method="true"/>
+<method name="percentDecode" type="(Lokio/Buffer;Ljava/lang/String;II)V" class_method="true"/>
+<method name="decodeHexDigit" type="(C)I" class_method="true"/>
+<method name="canonicalize" type="(Ljava/lang/String;IILjava/lang/String;ZZ)Ljava/lang/String;" class_method="true"/>
+<method name="canonicalize" type="(Lokio/Buffer;Ljava/lang/String;IILjava/lang/String;ZZ)V" class_method="true"/>
+<method name="canonicalize" type="(Ljava/lang/String;Ljava/lang/String;ZZ)Ljava/lang/String;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/HttpUrl$Builder;Lcom/squareup/okhttp/HttpUrl$1;)V"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/HttpUrl;)Ljava/lang/String;" class_method="true"/>
+<method name="access$200" type="(Ljava/lang/String;IILjava/lang/String;)I" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/HttpUrl;)Ljava/lang/String;" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/HttpUrl;)I" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/ConnectionSpecSelector">
+<method name="&lt;init&gt;" type="(Ljava/util/List;)V"/>
+<method name="configureSecureSocket" type="(Ljavax/net/ssl/SSLSocket;)Lcom/squareup/okhttp/ConnectionSpec;"/>
+<method name="connectionFailed" type="(Ljava/io/IOException;)Z"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$Editor">
+<method name="newSource" type="(I)Lokio/Source;"/>
+<method name="newSink" type="(I)Lokio/Sink;"/>
+<method name="commit" type="()V"/>
+<method name="abort" type="()V"/>
+<method name="abortUnlessCommitted" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Lcom/squareup/okhttp/internal/DiskLruCache$Entry;Lcom/squareup/okhttp/internal/DiskLruCache$1;)V"/>
+<method name="access$1700" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Editor;)Lcom/squareup/okhttp/internal/DiskLruCache$Entry;" class_method="true"/>
+<method name="access$1800" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Editor;)[Z" class_method="true"/>
+<method name="access$1902" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Editor;Z)Z" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$Entry">
+<method name="writeLengths" type="(Lokio/BufferedSink;)V"/>
+<method name="snapshot" type="()Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Ljava/lang/String;Lcom/squareup/okhttp/internal/DiskLruCache$1;)V"/>
+<method name="access$802" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;Z)Z" class_method="true"/>
+<method name="access$902" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;Lcom/squareup/okhttp/internal/DiskLruCache$Editor;)Lcom/squareup/okhttp/internal/DiskLruCache$Editor;" class_method="true"/>
+<method name="access$1000" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;[Ljava/lang/String;)V" class_method="true"/>
+<method name="access$900" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)Lcom/squareup/okhttp/internal/DiskLruCache$Editor;" class_method="true"/>
+<method name="access$1200" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)[J" class_method="true"/>
+<method name="access$1300" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)[Ljava/io/File;" class_method="true"/>
+<method name="access$1400" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)[Ljava/io/File;" class_method="true"/>
+<method name="access$1500" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)Ljava/lang/String;" class_method="true"/>
+<method name="access$800" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)Z" class_method="true"/>
+<method name="access$1600" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)J" class_method="true"/>
+<method name="access$1602" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Entry;J)J" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/CacheStrategy$1">
+</class>
+<class name="com/squareup/okhttp/internal/http/CacheStrategy$Factory">
+<method name="&lt;init&gt;" type="(JLcom/squareup/okhttp/Request;Lcom/squareup/okhttp/Response;)V"/>
+<method name="get" type="()Lcom/squareup/okhttp/internal/http/CacheStrategy;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/CacheStrategy">
+<method name="isCacheable" type="(Lcom/squareup/okhttp/Response;Lcom/squareup/okhttp/Request;)Z" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Request;Lcom/squareup/okhttp/Response;Lcom/squareup/okhttp/internal/http/CacheStrategy$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HeaderParser">
+<method name="skipUntil" type="(Ljava/lang/String;ILjava/lang/String;)I" class_method="true"/>
+<method name="skipWhitespace" type="(Ljava/lang/String;I)I" class_method="true"/>
+<method name="parseSeconds" type="(Ljava/lang/String;I)I" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection$1">
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/ConnectionPool;Lcom/squareup/okhttp/Connection;Ljava/net/Socket;)V"/>
+<method name="setTimeouts" type="(II)V"/>
+<method name="poolOnIdle" type="()V"/>
+<method name="closeOnIdle" type="()V"/>
+<method name="isClosed" type="()Z"/>
+<method name="closeIfOwnedBy" type="(Ljava/lang/Object;)V"/>
+<method name="flush" type="()V"/>
+<method name="bufferSize" type="()J"/>
+<method name="isReadable" type="()Z"/>
+<method name="writeRequest" type="(Lcom/squareup/okhttp/Headers;Ljava/lang/String;)V"/>
+<method name="readResponse" type="()Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="readHeaders" type="(Lcom/squareup/okhttp/Headers$Builder;)V"/>
+<method name="newChunkedSink" type="()Lokio/Sink;"/>
+<method name="newFixedLengthSink" type="(J)Lokio/Sink;"/>
+<method name="writeRequestBody" type="(Lcom/squareup/okhttp/internal/http/RetryableSink;)V"/>
+<method name="newFixedLengthSource" type="(J)Lokio/Source;"/>
+<method name="newChunkedSource" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)Lokio/Source;"/>
+<method name="newUnknownLengthSource" type="()Lokio/Source;"/>
+<method name="rawSink" type="()Lokio/BufferedSink;"/>
+<method name="rawSource" type="()Lokio/BufferedSource;"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;)Lokio/BufferedSink;" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;Lokio/ForwardingTimeout;)V" class_method="true"/>
+<method name="access$502" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;I)I" class_method="true"/>
+<method name="access$600" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;)Lokio/BufferedSource;" class_method="true"/>
+<method name="access$500" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;)I" class_method="true"/>
+<method name="access$700" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;)I" class_method="true"/>
+<method name="access$702" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;I)I" class_method="true"/>
+<method name="access$800" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;)Lcom/squareup/okhttp/ConnectionPool;" class_method="true"/>
+<method name="access$900" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;)Lcom/squareup/okhttp/Connection;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpDate">
+<method name="parse" type="(Ljava/lang/String;)Ljava/util/Date;" class_method="true"/>
+<method name="format" type="(Ljava/util/Date;)Ljava/lang/String;" class_method="true"/>
+<method name="access$000" type="()Ljava/util/TimeZone;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpEngine">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/Request;ZZZLcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/internal/http/RouteSelector;Lcom/squareup/okhttp/internal/http/RetryableSink;Lcom/squareup/okhttp/Response;)V"/>
+<method name="sendRequest" type="()V"/>
+<method name="writingRequestHeaders" type="()V"/>
+<method name="permitsRequestBody" type="()Z"/>
+<method name="getRequestBody" type="()Lokio/Sink;"/>
+<method name="getBufferedRequestBody" type="()Lokio/BufferedSink;"/>
+<method name="hasResponse" type="()Z"/>
+<method name="getRequest" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="getResponse" type="()Lcom/squareup/okhttp/Response;"/>
+<method name="getConnection" type="()Lcom/squareup/okhttp/Connection;"/>
+<method name="recover" type="(Lcom/squareup/okhttp/internal/http/RouteException;)Lcom/squareup/okhttp/internal/http/HttpEngine;"/>
+<method name="recover" type="(Ljava/io/IOException;Lokio/Sink;)Lcom/squareup/okhttp/internal/http/HttpEngine;"/>
+<method name="recover" type="(Ljava/io/IOException;)Lcom/squareup/okhttp/internal/http/HttpEngine;"/>
+<method name="getRoute" type="()Lcom/squareup/okhttp/Route;"/>
+<method name="releaseConnection" type="()V"/>
+<method name="disconnect" type="()V"/>
+<method name="close" type="()Lcom/squareup/okhttp/Connection;"/>
+<method name="hasBody" type="(Lcom/squareup/okhttp/Response;)Z" class_method="true"/>
+<method name="hostHeader" type="(Ljava/net/URL;)Ljava/lang/String;" class_method="true"/>
+<method name="readResponse" type="()V"/>
+<method name="receiveHeaders" type="(Lcom/squareup/okhttp/Headers;)V"/>
+<method name="followUpRequest" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="sameConnection" type="(Ljava/net/URL;)Z"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)Lcom/squareup/okhttp/Connection;" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)Lcom/squareup/okhttp/internal/http/Transport;" class_method="true"/>
+<method name="access$202" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Request;" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)Lcom/squareup/okhttp/Response;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpMethod">
+<method name="invalidatesCache" type="(Ljava/lang/String;)Z" class_method="true"/>
+<method name="requiresRequestBody" type="(Ljava/lang/String;)Z" class_method="true"/>
+<method name="permitsRequestBody" type="(Ljava/lang/String;)Z" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/OkHeaders">
+<method name="contentLength" type="(Lcom/squareup/okhttp/Request;)J" class_method="true"/>
+<method name="contentLength" type="(Lcom/squareup/okhttp/Response;)J" class_method="true"/>
+<method name="contentLength" type="(Lcom/squareup/okhttp/Headers;)J" class_method="true"/>
+<method name="toMultimap" type="(Lcom/squareup/okhttp/Headers;Ljava/lang/String;)Ljava/util/Map;" class_method="true"/>
+<method name="addCookies" type="(Lcom/squareup/okhttp/Request$Builder;Ljava/util/Map;)V" class_method="true"/>
+<method name="varyMatches" type="(Lcom/squareup/okhttp/Response;Lcom/squareup/okhttp/Headers;Lcom/squareup/okhttp/Request;)Z" class_method="true"/>
+<method name="hasVaryAll" type="(Lcom/squareup/okhttp/Response;)Z" class_method="true"/>
+<method name="hasVaryAll" type="(Lcom/squareup/okhttp/Headers;)Z" class_method="true"/>
+<method name="varyFields" type="(Lcom/squareup/okhttp/Headers;)Ljava/util/Set;" class_method="true"/>
+<method name="varyHeaders" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Headers;" class_method="true"/>
+<method name="varyHeaders" type="(Lcom/squareup/okhttp/Headers;Lcom/squareup/okhttp/Headers;)Lcom/squareup/okhttp/Headers;" class_method="true"/>
+<method name="isEndToEnd" type="(Ljava/lang/String;)Z" class_method="true"/>
+<method name="parseChallenges" type="(Lcom/squareup/okhttp/Headers;Ljava/lang/String;)Ljava/util/List;" class_method="true"/>
+<method name="processAuthHeader" type="(Lcom/squareup/okhttp/Authenticator;Lcom/squareup/okhttp/Response;Ljava/net/Proxy;)Lcom/squareup/okhttp/Request;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/RequestLine">
+<method name="get" type="(Lcom/squareup/okhttp/Request;Ljava/net/Proxy$Type;Lcom/squareup/okhttp/Protocol;)Ljava/lang/String;" class_method="true"/>
+<method name="requestPath" type="(Ljava/net/URL;)Ljava/lang/String;" class_method="true"/>
+<method name="version" type="(Lcom/squareup/okhttp/Protocol;)Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/RouteSelector">
+<method name="get" type="(Lcom/squareup/okhttp/Address;Lcom/squareup/okhttp/Request;Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/http/RouteSelector;" class_method="true"/>
+<method name="hasNext" type="()Z"/>
+<method name="next" type="()Lcom/squareup/okhttp/Route;"/>
+<method name="connectFailed" type="(Lcom/squareup/okhttp/Route;Ljava/io/IOException;)V"/>
+<method name="getHostString" type="(Ljava/net/InetSocketAddress;)Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/SocketConnector$ConnectedSocket">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Route;Ljava/net/Socket;)V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Route;Ljavax/net/ssl/SSLSocket;Lcom/squareup/okhttp/Protocol;Lcom/squareup/okhttp/Handshake;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/SocketConnector">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/ConnectionPool;)V"/>
+<method name="connectCleartext" type="(IILcom/squareup/okhttp/Route;)Lcom/squareup/okhttp/internal/http/SocketConnector$ConnectedSocket;"/>
+<method name="connectTls" type="(IIILcom/squareup/okhttp/Request;Lcom/squareup/okhttp/Route;Ljava/util/List;Z)Lcom/squareup/okhttp/internal/http/SocketConnector$ConnectedSocket;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/StatusLine">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Protocol;ILjava/lang/String;)V"/>
+<method name="get" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/internal/http/StatusLine;" class_method="true"/>
+<method name="parse" type="(Ljava/lang/String;)Lcom/squareup/okhttp/internal/http/StatusLine;" class_method="true"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/internal/Internal">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="initializeInstanceForTests" type="()V" class_method="true"/>
+<method name="newTransport" type="(Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/internal/http/HttpEngine;)Lcom/squareup/okhttp/internal/http/Transport;"/>
+<method name="clearOwner" type="(Lcom/squareup/okhttp/Connection;)Z"/>
+<method name="closeIfOwnedBy" type="(Lcom/squareup/okhttp/Connection;Ljava/lang/Object;)V"/>
+<method name="recycleCount" type="(Lcom/squareup/okhttp/Connection;)I"/>
+<method name="setProtocol" type="(Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/Protocol;)V"/>
+<method name="setOwner" type="(Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/internal/http/HttpEngine;)V"/>
+<method name="isReadable" type="(Lcom/squareup/okhttp/Connection;)Z"/>
+<method name="addLenient" type="(Lcom/squareup/okhttp/Headers$Builder;Ljava/lang/String;)V"/>
+<method name="addLenient" type="(Lcom/squareup/okhttp/Headers$Builder;Ljava/lang/String;Ljava/lang/String;)V"/>
+<method name="setCache" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/internal/InternalCache;)V"/>
+<method name="internalCache" type="(Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/InternalCache;"/>
+<method name="recycle" type="(Lcom/squareup/okhttp/ConnectionPool;Lcom/squareup/okhttp/Connection;)V"/>
+<method name="routeDatabase" type="(Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/RouteDatabase;"/>
+<method name="network" type="(Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/Network;"/>
+<method name="setNetwork" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/internal/Network;)V"/>
+<method name="connectAndSetOwner" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/Connection;Lcom/squareup/okhttp/internal/http/HttpEngine;Lcom/squareup/okhttp/Request;)V"/>
+<method name="apply" type="(Lcom/squareup/okhttp/ConnectionSpec;Ljavax/net/ssl/SSLSocket;Z)V"/>
+<method name="callEnqueue" type="(Lcom/squareup/okhttp/Call;Lcom/squareup/okhttp/Callback;Z)V"/>
+<method name="callEngineReleaseConnection" type="(Lcom/squareup/okhttp/Call;)V"/>
+<method name="callEngineGetConnection" type="(Lcom/squareup/okhttp/Call;)Lcom/squareup/okhttp/Connection;"/>
+<method name="connectionRawSource" type="(Lcom/squareup/okhttp/Connection;)Lokio/BufferedSource;"/>
+<method name="connectionRawSink" type="(Lcom/squareup/okhttp/Connection;)Lokio/BufferedSink;"/>
+<method name="connectionSetOwner" type="(Lcom/squareup/okhttp/Connection;Ljava/lang/Object;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/OptionalMethod">
+<method name="com.squareup.okhttp.internal.OptionalMethod" type="(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)V"/>
+<method name="isSupported" type="(Ljava/lang/Object;)Z"/>
+<method name="invokeOptional" type="(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+<method name="invokeOptionalWithoutCheckedException" type="(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+<method name="invoke" type="(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+<method name="invokeWithoutCheckedException" type="(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+</class>
+<class name="com/squareup/okhttp/internal/Platform">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="get" type="()Lcom/squareup/okhttp/internal/Platform;" class_method="true"/>
+<method name="getPrefix" type="()Ljava/lang/String;"/>
+<method name="logW" type="(Ljava/lang/String;)V"/>
+<method name="tagSocket" type="(Ljava/net/Socket;)V"/>
+<method name="untagSocket" type="(Ljava/net/Socket;)V"/>
+<method name="configureTlsExtensions" type="(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V"/>
+<method name="afterHandshake" type="(Ljavax/net/ssl/SSLSocket;)V"/>
+<method name="getSelectedProtocol" type="(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;"/>
+<method name="connectSocket" type="(Ljava/net/Socket;Ljava/net/InetSocketAddress;I)V"/>
+<method name="concatLengthPrefixed" type="(Ljava/util/List;)[B" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/RouteDatabase">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="failed" type="(Lcom/squareup/okhttp/Route;)V"/>
+<method name="connected" type="(Lcom/squareup/okhttp/Route;)V"/>
+<method name="shouldPostpone" type="(Lcom/squareup/okhttp/Route;)Z"/>
+<method name="failedRoutesCount" type="()I"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Header">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Lokio/ByteString;Ljava/lang/String;)V"/>
+<method name="&lt;init&gt;" type="(Lokio/ByteString;Lokio/ByteString;)V"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Hpack$Reader">
+<method name="&lt;init&gt;" type="(ILokio/Source;)V"/>
+<method name="maxDynamicTableByteCount" type="()I"/>
+<method name="headerTableSizeSetting" type="(I)V"/>
+<method name="readHeaders" type="()V"/>
+<method name="getAndResetHeaderList" type="()Ljava/util/List;"/>
+<method name="readInt" type="(II)I"/>
+<method name="readByteString" type="()Lokio/ByteString;"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Hpack$Writer">
+<method name="&lt;init&gt;" type="(Lokio/Buffer;)V"/>
+<method name="writeHeaders" type="(Ljava/util/List;)V"/>
+<method name="writeInt" type="(III)V"/>
+<method name="writeByteString" type="(Lokio/ByteString;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Hpack">
+<method name="access$000" type="()[Lcom/squareup/okhttp/internal/spdy/Header;" class_method="true"/>
+<method name="access$100" type="(Lokio/ByteString;)Lokio/ByteString;" class_method="true"/>
+<method name="access$200" type="()Ljava/util/Map;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Http2$FrameLogger">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="formatHeader" type="(ZIIBB)Ljava/lang/String;" class_method="true"/>
+<method name="formatFlags" type="(BB)Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Huffman$Node">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="&lt;init&gt;" type="(II)V"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/internal/spdy/Huffman$Node;)[Lcom/squareup/okhttp/internal/spdy/Huffman$Node;" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/internal/spdy/Huffman$Node;)I" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/internal/spdy/Huffman$Node;)I" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Huffman">
+<method name="get" type="()Lcom/squareup/okhttp/internal/spdy/Huffman;" class_method="true"/>
+<method name="encode" type="([BLjava/io/OutputStream;)V"/>
+<method name="encodedLength" type="([B)I"/>
+<method name="decode" type="([B)[B"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/NameValueBlockReader">
+<method name="&lt;init&gt;" type="(Lokio/BufferedSource;)V"/>
+<method name="readNameValueBlock" type="(I)Ljava/util/List;"/>
+<method name="close" type="()V"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/internal/spdy/NameValueBlockReader;)I" class_method="true"/>
+<method name="access$002" type="(Lcom/squareup/okhttp/internal/spdy/NameValueBlockReader;I)I" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Ping">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="send" type="()V"/>
+<method name="receive" type="()V"/>
+<method name="cancel" type="()V"/>
+<method name="roundTripTime" type="()J"/>
+<method name="roundTripTime" type="(JLjava/util/concurrent/TimeUnit;)J"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Settings">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="clear" type="()V"/>
+<method name="set" type="(III)Lcom/squareup/okhttp/internal/spdy/Settings;"/>
+<method name="isSet" type="(I)Z"/>
+<method name="get" type="(I)I"/>
+<method name="flags" type="(I)I"/>
+<method name="size" type="()I"/>
+<method name="getUploadBandwidth" type="(I)I"/>
+<method name="getHeaderTableSize" type="()I"/>
+<method name="getDownloadBandwidth" type="(I)I"/>
+<method name="getEnablePush" type="(Z)Z"/>
+<method name="getRoundTripTime" type="(I)I"/>
+<method name="getMaxConcurrentStreams" type="(I)I"/>
+<method name="getCurrentCwnd" type="(I)I"/>
+<method name="getMaxFrameSize" type="(I)I"/>
+<method name="getDownloadRetransRate" type="(I)I"/>
+<method name="getMaxHeaderListSize" type="(I)I"/>
+<method name="getInitialWindowSize" type="(I)I"/>
+<method name="getClientCertificateVectorSize" type="(I)I"/>
+<method name="isFlowControlDisabled" type="()Z"/>
+<method name="persistValue" type="(I)Z"/>
+<method name="isPersisted" type="(I)Z"/>
+<method name="merge" type="(Lcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection$Builder">
+<method name="&lt;init&gt;" type="(ZLjava/net/Socket;)V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;ZLjava/net/Socket;)V"/>
+<method name="handler" type="(Lcom/squareup/okhttp/internal/spdy/IncomingStreamHandler;)Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;"/>
+<method name="protocol" type="(Lcom/squareup/okhttp/Protocol;)Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;"/>
+<method name="pushObserver" type="(Lcom/squareup/okhttp/internal/spdy/PushObserver;)Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/internal/spdy/SpdyConnection;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;)Lcom/squareup/okhttp/Protocol;" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;)Lcom/squareup/okhttp/internal/spdy/PushObserver;" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;)Z" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;)Lcom/squareup/okhttp/internal/spdy/IncomingStreamHandler;" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;)Ljava/lang/String;" class_method="true"/>
+<method name="access$500" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;)Ljava/net/Socket;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyStream$1">
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyStream">
+<method name="&lt;init&gt;" type="(ILcom/squareup/okhttp/internal/spdy/SpdyConnection;ZZLjava/util/List;)V"/>
+<method name="getId" type="()I"/>
+<method name="isOpen" type="()Z"/>
+<method name="isLocallyInitiated" type="()Z"/>
+<method name="getConnection" type="()Lcom/squareup/okhttp/internal/spdy/SpdyConnection;"/>
+<method name="getRequestHeaders" type="()Ljava/util/List;"/>
+<method name="getResponseHeaders" type="()Ljava/util/List;"/>
+<method name="getErrorCode" type="()Lcom/squareup/okhttp/internal/spdy/ErrorCode;"/>
+<method name="reply" type="(Ljava/util/List;Z)V"/>
+<method name="readTimeout" type="()Lokio/Timeout;"/>
+<method name="writeTimeout" type="()Lokio/Timeout;"/>
+<method name="getSource" type="()Lokio/Source;"/>
+<method name="getSink" type="()Lokio/Sink;"/>
+<method name="close" type="(Lcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="closeLater" type="(Lcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="receiveHeaders" type="(Ljava/util/List;Lcom/squareup/okhttp/internal/spdy/HeadersMode;)V"/>
+<method name="receiveData" type="(Lokio/BufferedSource;I)V"/>
+<method name="receiveFin" type="()V"/>
+<method name="receiveRstStream" type="(Lcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="addBytesToWriteWindow" type="(J)V"/>
+<method name="access$500" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)Lcom/squareup/okhttp/internal/spdy/SpdyConnection;" class_method="true"/>
+<method name="access$600" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)I" class_method="true"/>
+<method name="access$700" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyTimeout;" class_method="true"/>
+<method name="access$800" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)Lcom/squareup/okhttp/internal/spdy/ErrorCode;" class_method="true"/>
+<method name="access$900" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V" class_method="true"/>
+<method name="access$1000" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V" class_method="true"/>
+<method name="access$1100" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyTimeout;" class_method="true"/>
+<method name="access$1200" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/tls/DistinguishedNameParser">
+<method name="&lt;init&gt;" type="(Ljavax/security/auth/x500/X500Principal;)V"/>
+<method name="findMostSpecific" type="(Ljava/lang/String;)Ljava/lang/String;"/>
+</class>
+<class name="com/squareup/okhttp/internal/Util">
+<method name="getEffectivePort" type="(Ljava/net/URI;)I" class_method="true"/>
+<method name="getEffectivePort" type="(Ljava/net/URL;)I" class_method="true"/>
+<method name="getDefaultPort" type="(Ljava/lang/String;)I" class_method="true"/>
+<method name="checkOffsetAndCount" type="(JJJ)V" class_method="true"/>
+<method name="equal" type="(Ljava/lang/Object;Ljava/lang/Object;)Z" class_method="true"/>
+<method name="closeQuietly" type="(Ljava/io/Closeable;)V" class_method="true"/>
+<method name="closeQuietly" type="(Ljava/net/Socket;)V" class_method="true"/>
+<method name="closeQuietly" type="(Ljava/net/ServerSocket;)V" class_method="true"/>
+<method name="closeAll" type="(Ljava/io/Closeable;Ljava/io/Closeable;)V" class_method="true"/>
+<method name="discard" type="(Lokio/Source;ILjava/util/concurrent/TimeUnit;)Z" class_method="true"/>
+<method name="skipAll" type="(Lokio/Source;ILjava/util/concurrent/TimeUnit;)Z" class_method="true"/>
+<method name="md5Hex" type="(Ljava/lang/String;)Ljava/lang/String;" class_method="true"/>
+<method name="shaBase64" type="(Ljava/lang/String;)Ljava/lang/String;" class_method="true"/>
+<method name="sha1" type="(Lokio/ByteString;)Lokio/ByteString;" class_method="true"/>
+<method name="immutableList" type="(Ljava/util/List;)Ljava/util/List;" class_method="true"/>
+<method name="immutableList" type="([Ljava/lang/Object;)Ljava/util/List;" class_method="true"/>
+<method name="immutableMap" type="(Ljava/util/Map;)Ljava/util/Map;" class_method="true"/>
+<method name="threadFactory" type="(Ljava/lang/String;Z)Ljava/util/concurrent/ThreadFactory;" class_method="true"/>
+<method name="intersect" type="(Ljava/lang/Class;[Ljava/lang/Object;[Ljava/lang/Object;)[Ljava/lang/Object;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/Version">
+<method name="userAgent" type="()Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/MediaType">
+<method name="parse" type="(Ljava/lang/String;)Lcom/squareup/okhttp/MediaType;" class_method="true"/>
+<method name="type" type="()Ljava/lang/String;"/>
+<method name="subtype" type="()Ljava/lang/String;"/>
+<method name="charset" type="()Ljava/nio/charset/Charset;"/>
+<method name="charset" type="(Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+</class>
+<class name="com/squareup/okhttp/MultipartBuilder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="&lt;init&gt;" type="(Ljava/lang/String;)V"/>
+<method name="type" type="(Lcom/squareup/okhttp/MediaType;)Lcom/squareup/okhttp/MultipartBuilder;"/>
+<method name="addPart" type="(Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/MultipartBuilder;"/>
+<method name="addPart" type="(Lcom/squareup/okhttp/Headers;Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/MultipartBuilder;"/>
+<method name="addFormDataPart" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/MultipartBuilder;"/>
+<method name="addFormDataPart" type="(Ljava/lang/String;Ljava/lang/String;Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/MultipartBuilder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/RequestBody;"/>
+<method name="access$000" type="()[B" class_method="true"/>
+<method name="access$100" type="()[B" class_method="true"/>
+<method name="access$200" type="()[B" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/Request$1">
+</class>
+<class name="com/squareup/okhttp/Request$Builder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="url" type="(Lcom/squareup/okhttp/HttpUrl;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="url" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="url" type="(Ljava/net/URL;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="header" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="addHeader" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="removeHeader" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="headers" type="(Lcom/squareup/okhttp/Headers;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="cacheControl" type="(Lcom/squareup/okhttp/CacheControl;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="get" type="()Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="head" type="()Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="post" type="(Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="delete" type="(Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="delete" type="()Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="put" type="(Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="patch" type="(Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="method" type="(Ljava/lang/String;Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="tag" type="(Ljava/lang/Object;)Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/Request$Builder;)Lcom/squareup/okhttp/HttpUrl;" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/Request$Builder;)Ljava/lang/String;" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/Request$Builder;)Lcom/squareup/okhttp/Headers$Builder;" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/Request$Builder;)Lcom/squareup/okhttp/RequestBody;" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/Request$Builder;)Ljava/lang/Object;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Request;Lcom/squareup/okhttp/Request$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/Request">
+<method name="httpUrl" type="()Lcom/squareup/okhttp/HttpUrl;"/>
+<method name="url" type="()Ljava/net/URL;"/>
+<method name="uri" type="()Ljava/net/URI;"/>
+<method name="urlString" type="()Ljava/lang/String;"/>
+<method name="method" type="()Ljava/lang/String;"/>
+<method name="headers" type="()Lcom/squareup/okhttp/Headers;"/>
+<method name="header" type="(Ljava/lang/String;)Ljava/lang/String;"/>
+<method name="headers" type="(Ljava/lang/String;)Ljava/util/List;"/>
+<method name="body" type="()Lcom/squareup/okhttp/RequestBody;"/>
+<method name="tag" type="()Ljava/lang/Object;"/>
+<method name="newBuilder" type="()Lcom/squareup/okhttp/Request$Builder;"/>
+<method name="cacheControl" type="()Lcom/squareup/okhttp/CacheControl;"/>
+<method name="isHttps" type="()Z"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="access$600" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/HttpUrl;" class_method="true"/>
+<method name="access$700" type="(Lcom/squareup/okhttp/Request;)Ljava/lang/String;" class_method="true"/>
+<method name="access$800" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/RequestBody;" class_method="true"/>
+<method name="access$900" type="(Lcom/squareup/okhttp/Request;)Ljava/lang/Object;" class_method="true"/>
+<method name="access$1000" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Headers;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Request$Builder;Lcom/squareup/okhttp/Request$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/RequestBody">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="writeTo" type="(Lokio/BufferedSink;)V"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;Ljava/lang/String;)Lcom/squareup/okhttp/RequestBody;" class_method="true"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;Lokio/ByteString;)Lcom/squareup/okhttp/RequestBody;" class_method="true"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;[B)Lcom/squareup/okhttp/RequestBody;" class_method="true"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;[BII)Lcom/squareup/okhttp/RequestBody;" class_method="true"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;Ljava/io/File;)Lcom/squareup/okhttp/RequestBody;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/Response$1">
+</class>
+<class name="com/squareup/okhttp/Response$Builder">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="request" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="protocol" type="(Lcom/squareup/okhttp/Protocol;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="code" type="(I)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="message" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="handshake" type="(Lcom/squareup/okhttp/Handshake;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="header" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="addHeader" type="(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="removeHeader" type="(Ljava/lang/String;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="headers" type="(Lcom/squareup/okhttp/Headers;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="body" type="(Lcom/squareup/okhttp/ResponseBody;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="networkResponse" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="cacheResponse" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="priorResponse" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="build" type="()Lcom/squareup/okhttp/Response;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/Request;" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/Protocol;" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/Response$Builder;)I" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/Response$Builder;)Ljava/lang/String;" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/Handshake;" class_method="true"/>
+<method name="access$500" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/Headers$Builder;" class_method="true"/>
+<method name="access$600" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/ResponseBody;" class_method="true"/>
+<method name="access$700" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/Response;" class_method="true"/>
+<method name="access$800" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/Response;" class_method="true"/>
+<method name="access$900" type="(Lcom/squareup/okhttp/Response$Builder;)Lcom/squareup/okhttp/Response;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Response;Lcom/squareup/okhttp/Response$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/Response">
+<method name="request" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="protocol" type="()Lcom/squareup/okhttp/Protocol;"/>
+<method name="code" type="()I"/>
+<method name="isSuccessful" type="()Z"/>
+<method name="message" type="()Ljava/lang/String;"/>
+<method name="handshake" type="()Lcom/squareup/okhttp/Handshake;"/>
+<method name="headers" type="(Ljava/lang/String;)Ljava/util/List;"/>
+<method name="header" type="(Ljava/lang/String;)Ljava/lang/String;"/>
+<method name="header" type="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+<method name="headers" type="()Lcom/squareup/okhttp/Headers;"/>
+<method name="body" type="()Lcom/squareup/okhttp/ResponseBody;"/>
+<method name="newBuilder" type="()Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="isRedirect" type="()Z"/>
+<method name="networkResponse" type="()Lcom/squareup/okhttp/Response;"/>
+<method name="cacheResponse" type="()Lcom/squareup/okhttp/Response;"/>
+<method name="priorResponse" type="()Lcom/squareup/okhttp/Response;"/>
+<method name="challenges" type="()Ljava/util/List;"/>
+<method name="cacheControl" type="()Lcom/squareup/okhttp/CacheControl;"/>
+<method name="toString" type="()Ljava/lang/String;"/>
+<method name="access$1100" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Request;" class_method="true"/>
+<method name="access$1200" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Protocol;" class_method="true"/>
+<method name="access$1300" type="(Lcom/squareup/okhttp/Response;)I" class_method="true"/>
+<method name="access$1400" type="(Lcom/squareup/okhttp/Response;)Ljava/lang/String;" class_method="true"/>
+<method name="access$1500" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Handshake;" class_method="true"/>
+<method name="access$1600" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Headers;" class_method="true"/>
+<method name="access$1700" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/ResponseBody;" class_method="true"/>
+<method name="access$1800" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Response;" class_method="true"/>
+<method name="access$1900" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Response;" class_method="true"/>
+<method name="access$2000" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Response;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Response$Builder;Lcom/squareup/okhttp/Response$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/Route">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Address;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V"/>
+<method name="getAddress" type="()Lcom/squareup/okhttp/Address;"/>
+<method name="getProxy" type="()Ljava/net/Proxy;"/>
+<method name="getSocketAddress" type="()Ljava/net/InetSocketAddress;"/>
+<method name="requiresTunnel" type="()Z"/>
+<method name="equals" type="(Ljava/lang/Object;)Z"/>
+<method name="hashCode" type="()I"/>
+</class>
+<interface name="com/squareup/okhttp/Authenticator">
+<method name="authenticate" type="(Ljava/net/Proxy;Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Request;"/>
+<method name="authenticateProxy" type="(Ljava/net/Proxy;Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Request;"/>
+</interface>
+<interface name="com/squareup/okhttp/Callback">
+<method name="onFailure" type="(Lcom/squareup/okhttp/Request;Ljava/io/IOException;)V"/>
+<method name="onResponse" type="(Lcom/squareup/okhttp/Response;)V"/>
+</interface>
+<interface name="com/squareup/okhttp/Interceptor$Chain">
+<method name="request" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="proceed" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Response;"/>
+<method name="connection" type="()Lcom/squareup/okhttp/Connection;"/>
+</interface>
+<interface name="com/squareup/okhttp/Interceptor">
+<method name="intercept" type="(Lcom/squareup/okhttp/Interceptor$Chain;)Lcom/squareup/okhttp/Response;"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/http/CacheRequest">
+<method name="body" type="()Lokio/Sink;"/>
+<method name="abort" type="()V"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/http/Transport">
+<method name="createRequestBody" type="(Lcom/squareup/okhttp/Request;J)Lokio/Sink;"/>
+<method name="writeRequestHeaders" type="(Lcom/squareup/okhttp/Request;)V"/>
+<method name="writeRequestBody" type="(Lcom/squareup/okhttp/internal/http/RetryableSink;)V"/>
+<method name="finishRequest" type="()V"/>
+<method name="readResponseHeaders" type="()Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="openResponseBody" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/ResponseBody;"/>
+<method name="releaseConnectionOnIdle" type="()V"/>
+<method name="disconnect" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)V"/>
+<method name="canReuseConnection" type="()Z"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/InternalCache">
+<method name="get" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Response;"/>
+<method name="put" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/internal/http/CacheRequest;"/>
+<method name="remove" type="(Lcom/squareup/okhttp/Request;)V"/>
+<method name="update" type="(Lcom/squareup/okhttp/Response;Lcom/squareup/okhttp/Response;)V"/>
+<method name="trackConditionalCacheHit" type="()V"/>
+<method name="trackResponse" type="(Lcom/squareup/okhttp/internal/http/CacheStrategy;)V"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/io/FileSystem">
+<method name="source" type="(Ljava/io/File;)Lokio/Source;"/>
+<method name="sink" type="(Ljava/io/File;)Lokio/Sink;"/>
+<method name="appendingSink" type="(Ljava/io/File;)Lokio/Sink;"/>
+<method name="delete" type="(Ljava/io/File;)V"/>
+<method name="exists" type="(Ljava/io/File;)Z"/>
+<method name="size" type="(Ljava/io/File;)J"/>
+<method name="rename" type="(Ljava/io/File;Ljava/io/File;)V"/>
+<method name="deleteContents" type="(Ljava/io/File;)V"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/Network">
+<method name="resolveInetAddresses" type="(Ljava/lang/String;)[Ljava/net/InetAddress;"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/spdy/FrameReader$Handler">
+<method name="data" type="(ZILokio/BufferedSource;I)V"/>
+<method name="headers" type="(ZZIILjava/util/List;Lcom/squareup/okhttp/internal/spdy/HeadersMode;)V"/>
+<method name="rstStream" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="settings" type="(ZLcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+<method name="ackSettings" type="()V"/>
+<method name="ping" type="(ZII)V"/>
+<method name="goAway" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;Lokio/ByteString;)V"/>
+<method name="windowUpdate" type="(IJ)V"/>
+<method name="priority" type="(IIIZ)V"/>
+<method name="pushPromise" type="(IILjava/util/List;)V"/>
+<method name="alternateService" type="(ILjava/lang/String;Lokio/ByteString;Ljava/lang/String;IJ)V"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/spdy/IncomingStreamHandler">
+<method name="receive" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/spdy/PushObserver">
+<method name="onRequest" type="(ILjava/util/List;)Z"/>
+<method name="onHeaders" type="(ILjava/util/List;Z)Z"/>
+<method name="onData" type="(ILokio/BufferedSource;IZ)Z"/>
+<method name="onReset" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+</interface>
+<interface name="com/squareup/okhttp/internal/spdy/Variant">
+<method name="getProtocol" type="()Lcom/squareup/okhttp/Protocol;"/>
+<method name="newReader" type="(Lokio/BufferedSource;Z)Lcom/squareup/okhttp/internal/spdy/FrameReader;"/>
+<method name="newWriter" type="(Lokio/BufferedSink;Z)Lcom/squareup/okhttp/internal/spdy/FrameWriter;"/>
+</interface>
+<class name="com/squareup/okhttp/Cache$1">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Cache;)V"/>
+<method name="get" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Response;"/>
+<method name="put" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/internal/http/CacheRequest;"/>
+<method name="remove" type="(Lcom/squareup/okhttp/Request;)V"/>
+<method name="update" type="(Lcom/squareup/okhttp/Response;Lcom/squareup/okhttp/Response;)V"/>
+<method name="trackConditionalCacheHit" type="()V"/>
+<method name="trackResponse" type="(Lcom/squareup/okhttp/internal/http/CacheStrategy;)V"/>
+</class>
+<class name="com/squareup/okhttp/Cache$2">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Cache;)V"/>
+<method name="hasNext" type="()Z"/>
+<method name="next" type="()Ljava/lang/String;"/>
+<method name="remove" type="()V"/>
+<method name="next" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/squareup/okhttp/Cache$CacheRequestImpl">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Cache;Lcom/squareup/okhttp/internal/DiskLruCache$Editor;)V"/>
+<method name="abort" type="()V"/>
+<method name="body" type="()Lokio/Sink;"/>
+<method name="access$700" type="(Lcom/squareup/okhttp/Cache$CacheRequestImpl;)Z" class_method="true"/>
+<method name="access$702" type="(Lcom/squareup/okhttp/Cache$CacheRequestImpl;Z)Z" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/Call$ApplicationInterceptorChain">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/Call;ILcom/squareup/okhttp/Request;Z)V"/>
+<method name="connection" type="()Lcom/squareup/okhttp/Connection;"/>
+<method name="request" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="proceed" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Response;"/>
+</class>
+<class name="com/squareup/okhttp/ConnectionPool$1">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/ConnectionPool;)V"/>
+<method name="run" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$1">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)V"/>
+<method name="run" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$3">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)V"/>
+<method name="hasNext" type="()Z"/>
+<method name="next" type="()Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;"/>
+<method name="remove" type="()V"/>
+<method name="next" type="()Ljava/lang/Object;"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$4">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache$Snapshot">
+<method name="key" type="()Ljava/lang/String;"/>
+<method name="edit" type="()Lcom/squareup/okhttp/internal/DiskLruCache$Editor;"/>
+<method name="getSource" type="(I)Lokio/Source;"/>
+<method name="getLength" type="(I)J"/>
+<method name="close" type="()V"/>
+<method name="access$2100" type="(Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;)Ljava/lang/String;" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Ljava/lang/String;J[Lokio/Source;[JLcom/squareup/okhttp/internal/DiskLruCache$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/DiskLruCache">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/io/FileSystem;Ljava/io/File;IIJLjava/util/concurrent/Executor;)V"/>
+<method name="initialize" type="()V"/>
+<method name="create" type="(Lcom/squareup/okhttp/internal/io/FileSystem;Ljava/io/File;IIJ)Lcom/squareup/okhttp/internal/DiskLruCache;" class_method="true"/>
+<method name="get" type="(Ljava/lang/String;)Lcom/squareup/okhttp/internal/DiskLruCache$Snapshot;"/>
+<method name="edit" type="(Ljava/lang/String;)Lcom/squareup/okhttp/internal/DiskLruCache$Editor;"/>
+<method name="getDirectory" type="()Ljava/io/File;"/>
+<method name="getMaxSize" type="()J"/>
+<method name="setMaxSize" type="(J)V"/>
+<method name="size" type="()J"/>
+<method name="remove" type="(Ljava/lang/String;)Z"/>
+<method name="isClosed" type="()Z"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="delete" type="()V"/>
+<method name="evictAll" type="()V"/>
+<method name="snapshots" type="()Ljava/util/Iterator;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)Z" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)Z" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)V" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)Z" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)V" class_method="true"/>
+<method name="access$502" type="(Lcom/squareup/okhttp/internal/DiskLruCache;I)I" class_method="true"/>
+<method name="access$602" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Z)Z" class_method="true"/>
+<method name="access$2000" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)Ljava/util/LinkedHashMap;" class_method="true"/>
+<method name="access$2200" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Ljava/lang/String;J)Lcom/squareup/okhttp/internal/DiskLruCache$Editor;" class_method="true"/>
+<method name="access$2300" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)I" class_method="true"/>
+<method name="access$2400" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)Lcom/squareup/okhttp/internal/io/FileSystem;" class_method="true"/>
+<method name="access$2500" type="()Lokio/Sink;" class_method="true"/>
+<method name="access$2600" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Lcom/squareup/okhttp/internal/DiskLruCache$Editor;Z)V" class_method="true"/>
+<method name="access$2700" type="(Lcom/squareup/okhttp/internal/DiskLruCache;Lcom/squareup/okhttp/internal/DiskLruCache$Entry;)Z" class_method="true"/>
+<method name="access$2800" type="(Lcom/squareup/okhttp/internal/DiskLruCache;)Ljava/io/File;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/AuthenticatorAdapter">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="authenticate" type="(Ljava/net/Proxy;Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Request;"/>
+<method name="authenticateProxy" type="(Ljava/net/Proxy;Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/Request;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection$AbstractSource">
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="endOfInput" type="(Z)V"/>
+<method name="unexpectedEndOfInput" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;Lcom/squareup/okhttp/internal/http/HttpConnection$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection$ChunkedSink">
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;Lcom/squareup/okhttp/internal/http/HttpConnection$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpConnection$FixedLengthSink">
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="close" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpConnection;JLcom/squareup/okhttp/internal/http/HttpConnection$1;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpEngine$2">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;Lokio/BufferedSource;Lcom/squareup/okhttp/internal/http/CacheRequest;Lokio/BufferedSink;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpEngine$NetworkInterceptorChain">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;ILcom/squareup/okhttp/Request;)V"/>
+<method name="connection" type="()Lcom/squareup/okhttp/Connection;"/>
+<method name="request" type="()Lcom/squareup/okhttp/Request;"/>
+<method name="proceed" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Response;"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/HttpTransport">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;Lcom/squareup/okhttp/internal/http/HttpConnection;)V"/>
+<method name="createRequestBody" type="(Lcom/squareup/okhttp/Request;J)Lokio/Sink;"/>
+<method name="finishRequest" type="()V"/>
+<method name="writeRequestBody" type="(Lcom/squareup/okhttp/internal/http/RetryableSink;)V"/>
+<method name="writeRequestHeaders" type="(Lcom/squareup/okhttp/Request;)V"/>
+<method name="readResponseHeaders" type="()Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="releaseConnectionOnIdle" type="()V"/>
+<method name="canReuseConnection" type="()Z"/>
+<method name="openResponseBody" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/ResponseBody;"/>
+<method name="disconnect" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/OkHeaders$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="compare" type="(Ljava/lang/String;Ljava/lang/String;)I"/>
+<method name="compare" type="(Ljava/lang/Object;Ljava/lang/Object;)I"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/RetryableSink">
+<method name="&lt;init&gt;" type="(I)V"/>
+<method name="&lt;init&gt;" type="()V"/>
+<method name="close" type="()V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="contentLength" type="()J"/>
+<method name="writeToSocket" type="(Lokio/Sink;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/http/SpdyTransport">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)V"/>
+<method name="createRequestBody" type="(Lcom/squareup/okhttp/Request;J)Lokio/Sink;"/>
+<method name="writeRequestHeaders" type="(Lcom/squareup/okhttp/Request;)V"/>
+<method name="writeRequestBody" type="(Lcom/squareup/okhttp/internal/http/RetryableSink;)V"/>
+<method name="finishRequest" type="()V"/>
+<method name="readResponseHeaders" type="()Lcom/squareup/okhttp/Response$Builder;"/>
+<method name="writeNameValueBlock" type="(Lcom/squareup/okhttp/Request;Lcom/squareup/okhttp/Protocol;Ljava/lang/String;)Ljava/util/List;" class_method="true"/>
+<method name="readNameValueBlock" type="(Ljava/util/List;Lcom/squareup/okhttp/Protocol;)Lcom/squareup/okhttp/Response$Builder;" class_method="true"/>
+<method name="openResponseBody" type="(Lcom/squareup/okhttp/Response;)Lcom/squareup/okhttp/ResponseBody;"/>
+<method name="releaseConnectionOnIdle" type="()V"/>
+<method name="disconnect" type="(Lcom/squareup/okhttp/internal/http/HttpEngine;)V"/>
+<method name="canReuseConnection" type="()Z"/>
+</class>
+<class name="com/squareup/okhttp/internal/io/FileSystem$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="source" type="(Ljava/io/File;)Lokio/Source;"/>
+<method name="sink" type="(Ljava/io/File;)Lokio/Sink;"/>
+<method name="appendingSink" type="(Ljava/io/File;)Lokio/Sink;"/>
+<method name="delete" type="(Ljava/io/File;)V"/>
+<method name="exists" type="(Ljava/io/File;)Z"/>
+<method name="size" type="(Ljava/io/File;)J"/>
+<method name="rename" type="(Ljava/io/File;Ljava/io/File;)V"/>
+<method name="deleteContents" type="(Ljava/io/File;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/NamedRunnable">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;[Ljava/lang/Object;)V"/>
+<method name="run" type="()V"/>
+<method name="execute" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/Network$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="resolveInetAddresses" type="(Ljava/lang/String;)[Ljava/net/InetAddress;"/>
+</class>
+<class name="com/squareup/okhttp/internal/Platform$JettyNegoProvider">
+<method name="&lt;init&gt;" type="(Ljava/util/List;)V"/>
+<method name="invoke" type="(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/internal/Platform$JettyNegoProvider;)Z" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/internal/Platform$JettyNegoProvider;)Ljava/lang/String;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Http2$ContinuationSource">
+<method name="&lt;init&gt;" type="(Lokio/BufferedSource;)V"/>
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Http2$Reader">
+<method name="&lt;init&gt;" type="(Lokio/BufferedSource;IZ)V"/>
+<method name="readConnectionPreface" type="()V"/>
+<method name="nextFrame" type="(Lcom/squareup/okhttp/internal/spdy/FrameReader$Handler;)Z"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Http2$Writer">
+<method name="&lt;init&gt;" type="(Lokio/BufferedSink;Z)V"/>
+<method name="flush" type="()V"/>
+<method name="ackSettings" type="(Lcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+<method name="connectionPreface" type="()V"/>
+<method name="synStream" type="(ZZIILjava/util/List;)V"/>
+<method name="synReply" type="(ZILjava/util/List;)V"/>
+<method name="headers" type="(ILjava/util/List;)V"/>
+<method name="pushPromise" type="(IILjava/util/List;)V"/>
+<method name="headers" type="(ZILjava/util/List;)V"/>
+<method name="rstStream" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="maxDataLength" type="()I"/>
+<method name="data" type="(ZILokio/Buffer;I)V"/>
+<method name="dataFrame" type="(IBLokio/Buffer;I)V"/>
+<method name="settings" type="(Lcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+<method name="ping" type="(ZII)V"/>
+<method name="goAway" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;[B)V"/>
+<method name="windowUpdate" type="(IJ)V"/>
+<method name="close" type="()V"/>
+<method name="frameHeader" type="(IIBB)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Http2">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="getProtocol" type="()Lcom/squareup/okhttp/Protocol;"/>
+<method name="newReader" type="(Lokio/BufferedSource;Z)Lcom/squareup/okhttp/internal/spdy/FrameReader;"/>
+<method name="newWriter" type="(Lokio/BufferedSink;Z)Lcom/squareup/okhttp/internal/spdy/FrameWriter;"/>
+<method name="access$000" type="()Lokio/ByteString;" class_method="true"/>
+<method name="access$100" type="()Ljava/util/logging/Logger;" class_method="true"/>
+<method name="access$200" type="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/IOException;" class_method="true"/>
+<method name="access$300" type="(Lokio/BufferedSource;)I" class_method="true"/>
+<method name="access$400" type="(IBS)I" class_method="true"/>
+<method name="access$500" type="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/IllegalArgumentException;" class_method="true"/>
+<method name="access$600" type="(Lokio/BufferedSink;I)V" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/IncomingStreamHandler$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="receive" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/PushObserver$1">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="onRequest" type="(ILjava/util/List;)Z"/>
+<method name="onHeaders" type="(ILjava/util/List;Z)Z"/>
+<method name="onData" type="(ILokio/BufferedSource;IZ)Z"/>
+<method name="onReset" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Spdy3$Reader">
+<method name="&lt;init&gt;" type="(Lokio/BufferedSource;Z)V"/>
+<method name="readConnectionPreface" type="()V"/>
+<method name="nextFrame" type="(Lcom/squareup/okhttp/internal/spdy/FrameReader$Handler;)Z"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Spdy3$Writer">
+<method name="&lt;init&gt;" type="(Lokio/BufferedSink;Z)V"/>
+<method name="ackSettings" type="(Lcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+<method name="pushPromise" type="(IILjava/util/List;)V"/>
+<method name="connectionPreface" type="()V"/>
+<method name="flush" type="()V"/>
+<method name="synStream" type="(ZZIILjava/util/List;)V"/>
+<method name="synReply" type="(ZILjava/util/List;)V"/>
+<method name="headers" type="(ILjava/util/List;)V"/>
+<method name="rstStream" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="maxDataLength" type="()I"/>
+<method name="data" type="(ZILokio/Buffer;I)V"/>
+<method name="sendDataFrame" type="(IILokio/Buffer;I)V"/>
+<method name="settings" type="(Lcom/squareup/okhttp/internal/spdy/Settings;)V"/>
+<method name="ping" type="(ZII)V"/>
+<method name="goAway" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;[B)V"/>
+<method name="windowUpdate" type="(IJ)V"/>
+<method name="close" type="()V"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/Spdy3">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="getProtocol" type="()Lcom/squareup/okhttp/Protocol;"/>
+<method name="newReader" type="(Lokio/BufferedSource;Z)Lcom/squareup/okhttp/internal/spdy/FrameReader;"/>
+<method name="newWriter" type="(Lokio/BufferedSink;Z)Lcom/squareup/okhttp/internal/spdy/FrameWriter;"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyConnection">
+<method name="getProtocol" type="()Lcom/squareup/okhttp/Protocol;"/>
+<method name="openStreamCount" type="()I"/>
+<method name="getStream" type="(I)Lcom/squareup/okhttp/internal/spdy/SpdyStream;"/>
+<method name="removeStream" type="(I)Lcom/squareup/okhttp/internal/spdy/SpdyStream;"/>
+<method name="isIdle" type="()Z"/>
+<method name="getIdleStartTimeNs" type="()J"/>
+<method name="pushStream" type="(ILjava/util/List;Z)Lcom/squareup/okhttp/internal/spdy/SpdyStream;"/>
+<method name="newStream" type="(Ljava/util/List;ZZ)Lcom/squareup/okhttp/internal/spdy/SpdyStream;"/>
+<method name="writeSynReply" type="(IZLjava/util/List;)V"/>
+<method name="writeData" type="(IZLokio/Buffer;J)V"/>
+<method name="addBytesToWriteWindow" type="(J)V"/>
+<method name="writeSynResetLater" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="writeSynReset" type="(ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="writeWindowUpdateLater" type="(IJ)V"/>
+<method name="ping" type="()Lcom/squareup/okhttp/internal/spdy/Ping;"/>
+<method name="flush" type="()V"/>
+<method name="shutdown" type="(Lcom/squareup/okhttp/internal/spdy/ErrorCode;)V"/>
+<method name="close" type="()V"/>
+<method name="sendConnectionPreface" type="()V"/>
+<method name="access$700" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;ZIILcom/squareup/okhttp/internal/spdy/Ping;)V" class_method="true"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection$Builder;Lcom/squareup/okhttp/internal/spdy/SpdyConnection$1;)V"/>
+<method name="access$900" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)Ljava/lang/String;" class_method="true"/>
+<method name="access$1000" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Lcom/squareup/okhttp/internal/spdy/ErrorCode;Lcom/squareup/okhttp/internal/spdy/ErrorCode;)V" class_method="true"/>
+<method name="access$1100" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;I)Z" class_method="true"/>
+<method name="access$1200" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;ILokio/BufferedSource;IZ)V" class_method="true"/>
+<method name="access$1300" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;ILjava/util/List;Z)V" class_method="true"/>
+<method name="access$1400" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)Z" class_method="true"/>
+<method name="access$1500" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)I" class_method="true"/>
+<method name="access$1600" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)I" class_method="true"/>
+<method name="access$1502" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;I)I" class_method="true"/>
+<method name="access$1700" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)Ljava/util/Map;" class_method="true"/>
+<method name="access$1800" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)Lcom/squareup/okhttp/internal/spdy/IncomingStreamHandler;" class_method="true"/>
+<method name="access$1900" type="()Ljava/util/concurrent/ExecutorService;" class_method="true"/>
+<method name="access$2000" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;ILcom/squareup/okhttp/internal/spdy/ErrorCode;)V" class_method="true"/>
+<method name="access$2100" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)Z" class_method="true"/>
+<method name="access$2102" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Z)Z" class_method="true"/>
+<method name="access$2200" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;I)Lcom/squareup/okhttp/internal/spdy/Ping;" class_method="true"/>
+<method name="access$2300" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;ZIILcom/squareup/okhttp/internal/spdy/Ping;)V" class_method="true"/>
+<method name="access$1402" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;Z)Z" class_method="true"/>
+<method name="access$2400" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;ILjava/util/List;)V" class_method="true"/>
+<method name="access$2500" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)Lcom/squareup/okhttp/internal/spdy/PushObserver;" class_method="true"/>
+<method name="access$2600" type="(Lcom/squareup/okhttp/internal/spdy/SpdyConnection;)Ljava/util/Set;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSink">
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;)V"/>
+<method name="write" type="(Lokio/Buffer;J)V"/>
+<method name="flush" type="()V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+<method name="access$202" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSink;Z)Z" class_method="true"/>
+<method name="access$200" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSink;)Z" class_method="true"/>
+<method name="access$400" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSink;)Z" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSource">
+<method name="read" type="(Lokio/Buffer;J)J"/>
+<method name="receive" type="(Lokio/BufferedSource;J)V"/>
+<method name="timeout" type="()Lokio/Timeout;"/>
+<method name="close" type="()V"/>
+<method name="&lt;init&gt;" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream;JLcom/squareup/okhttp/internal/spdy/SpdyStream$1;)V"/>
+<method name="access$102" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSource;Z)Z" class_method="true"/>
+<method name="access$100" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSource;)Z" class_method="true"/>
+<method name="access$300" type="(Lcom/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataSource;)Z" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/tls/OkHostnameVerifier">
+<method name="verify" type="(Ljava/lang/String;Ljavax/net/ssl/SSLSession;)Z"/>
+<method name="verify" type="(Ljava/lang/String;Ljava/security/cert/X509Certificate;)Z"/>
+<method name="verifyAsIpAddress" type="(Ljava/lang/String;)Z" class_method="true"/>
+<method name="allSubjectAltNames" type="(Ljava/security/cert/X509Certificate;)Ljava/util/List;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/internal/Util$1">
+<method name="&lt;init&gt;" type="(Ljava/lang/String;Z)V"/>
+<method name="newThread" type="(Ljava/lang/Runnable;)Ljava/lang/Thread;"/>
+</class>
+<class name="com/squareup/okhttp/OkHttpClient">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="setConnectTimeout" type="(JLjava/util/concurrent/TimeUnit;)V"/>
+<method name="getConnectTimeout" type="()I"/>
+<method name="setReadTimeout" type="(JLjava/util/concurrent/TimeUnit;)V"/>
+<method name="getReadTimeout" type="()I"/>
+<method name="setWriteTimeout" type="(JLjava/util/concurrent/TimeUnit;)V"/>
+<method name="getWriteTimeout" type="()I"/>
+<method name="setProxy" type="(Ljava/net/Proxy;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getProxy" type="()Ljava/net/Proxy;"/>
+<method name="setProxySelector" type="(Ljava/net/ProxySelector;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getProxySelector" type="()Ljava/net/ProxySelector;"/>
+<method name="setCookieHandler" type="(Ljava/net/CookieHandler;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getCookieHandler" type="()Ljava/net/CookieHandler;"/>
+<method name="setInternalCache" type="(Lcom/squareup/okhttp/internal/InternalCache;)V"/>
+<method name="internalCache" type="()Lcom/squareup/okhttp/internal/InternalCache;"/>
+<method name="setCache" type="(Lcom/squareup/okhttp/Cache;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getCache" type="()Lcom/squareup/okhttp/Cache;"/>
+<method name="setSocketFactory" type="(Ljavax/net/SocketFactory;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getSocketFactory" type="()Ljavax/net/SocketFactory;"/>
+<method name="setSslSocketFactory" type="(Ljavax/net/ssl/SSLSocketFactory;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getSslSocketFactory" type="()Ljavax/net/ssl/SSLSocketFactory;"/>
+<method name="setHostnameVerifier" type="(Ljavax/net/ssl/HostnameVerifier;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getHostnameVerifier" type="()Ljavax/net/ssl/HostnameVerifier;"/>
+<method name="setCertificatePinner" type="(Lcom/squareup/okhttp/CertificatePinner;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getCertificatePinner" type="()Lcom/squareup/okhttp/CertificatePinner;"/>
+<method name="setAuthenticator" type="(Lcom/squareup/okhttp/Authenticator;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getAuthenticator" type="()Lcom/squareup/okhttp/Authenticator;"/>
+<method name="setConnectionPool" type="(Lcom/squareup/okhttp/ConnectionPool;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getConnectionPool" type="()Lcom/squareup/okhttp/ConnectionPool;"/>
+<method name="setFollowSslRedirects" type="(Z)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getFollowSslRedirects" type="()Z"/>
+<method name="setFollowRedirects" type="(Z)V"/>
+<method name="getFollowRedirects" type="()Z"/>
+<method name="setRetryOnConnectionFailure" type="(Z)V"/>
+<method name="getRetryOnConnectionFailure" type="()Z"/>
+<method name="routeDatabase" type="()Lcom/squareup/okhttp/internal/RouteDatabase;"/>
+<method name="setDispatcher" type="(Lcom/squareup/okhttp/Dispatcher;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getDispatcher" type="()Lcom/squareup/okhttp/Dispatcher;"/>
+<method name="setProtocols" type="(Ljava/util/List;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getProtocols" type="()Ljava/util/List;"/>
+<method name="setConnectionSpecs" type="(Ljava/util/List;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="getConnectionSpecs" type="()Ljava/util/List;"/>
+<method name="interceptors" type="()Ljava/util/List;"/>
+<method name="networkInterceptors" type="()Ljava/util/List;"/>
+<method name="newCall" type="(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Call;"/>
+<method name="cancel" type="(Ljava/lang/Object;)Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="copyWithDefaults" type="()Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="clone" type="()Lcom/squareup/okhttp/OkHttpClient;"/>
+<method name="clone" type="()Ljava/lang/Object;"/>
+<method name="access$000" type="(Lcom/squareup/okhttp/OkHttpClient;)Lcom/squareup/okhttp/internal/Network;" class_method="true"/>
+<method name="access$002" type="(Lcom/squareup/okhttp/OkHttpClient;Lcom/squareup/okhttp/internal/Network;)Lcom/squareup/okhttp/internal/Network;" class_method="true"/>
+</class>
+<class name="com/squareup/okhttp/ResponseBody">
+<method name="&lt;init&gt;" type="()V"/>
+<method name="contentType" type="()Lcom/squareup/okhttp/MediaType;"/>
+<method name="contentLength" type="()J"/>
+<method name="byteStream" type="()Ljava/io/InputStream;"/>
+<method name="source" type="()Lokio/BufferedSource;"/>
+<method name="bytes" type="()[B"/>
+<method name="charStream" type="()Ljava/io/Reader;"/>
+<method name="string" type="()Ljava/lang/String;"/>
+<method name="close" type="()V"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;Ljava/lang/String;)Lcom/squareup/okhttp/ResponseBody;" class_method="true"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;[B)Lcom/squareup/okhttp/ResponseBody;" class_method="true"/>
+<method name="create" type="(Lcom/squareup/okhttp/MediaType;JLokio/BufferedSource;)Lcom/squareup/okhttp/ResponseBody;" class_method="true"/>
+</class>
+</signatures>
