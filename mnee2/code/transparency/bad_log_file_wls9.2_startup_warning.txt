@@ -1,0 +1,27 @@
+<Aug 13, 2006 7:24:07 PM CDT> <Info> <WebLogicServer> <BEA-000377> <Starting WebLogic Server with BEA JRockit(R) Version R26.0.0-189_CR269406-59389-1.5.0_04-20060322-1126-linux-ia32 from BEA Systems, Inc.>
+<Aug 13, 2006 7:24:10 PM CDT> <Info> <Management> <BEA-141107> <Version: WebLogic Server 9.2  Fri Jun 23 20:47:26 EDT 2006 783464 >
+<Aug 13, 2006 7:24:17 PM CDT> <Info> <WebLogicServer> <BEA-000215> <Loaded License : /opt/bea/license.bea>
+<Aug 13, 2006 7:24:17 PM CDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STARTING>
+<Aug 13, 2006 7:24:17 PM CDT> <Info> <WorkManager> <BEA-002900> <Initializing self-tuning thread pool>
+<Aug 13, 2006 7:24:18 PM CDT> <Notice> <Log Management> <BEA-170019> <The server log file /opt/bea/weblogic92/samples/domains/wl_server/servers/examplesServer/logs/examplesServer.log is opened. All server side log events will be written to this file.>
+<Aug 13, 2006 7:24:24 PM CDT> <Notice> <Security> <BEA-090082> <Security initializing using security realm myrealm.>
+<Aug 13, 2006 7:24:32 PM CDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STANDBY>
+<Aug 13, 2006 7:24:32 PM CDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STARTING>
+<Aug 13, 2006 7:24:41 PM CDT> <Notice> <Store> <BEA-280067> <JDBC store "exampleJDBCStore" did not find a database table at "examplesWLStore", so it created one using the commands in file "/weblogic/store/io/jdbc/ddl/pointbase.ddl".>
+<Aug 13, 2006 7:24:53 PM CDT> <Notice> <Log Management> <BEA-170027> <The server initialized the domain log broadcaster successfully. Log messages will now be broadcasted to the domain log.>
+<Aug 13, 2006 7:24:54 PM CDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to ADMIN>
+<Aug 13, 2006 7:24:54 PM CDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RESUMING>
+<Aug 13, 2006 7:24:57 PM CDT> <Notice> <Security> <BEA-090171> <Loading the identity certificate and private key stored under the alias DemoIdentity from the jks keystore file /opt/bea/weblogic92/server/lib/DemoIdentity.jks.>
+<Aug 13, 2006 7:24:59 PM CDT> <Notice> <Security> <BEA-090169> <Loading trusted certificates from the jks keystore file /opt/bea/weblogic92/server/lib/DemoTrust.jks.>
+<Aug 13, 2006 7:24:59 PM CDT> <Notice> <Security> <BEA-090169> <Loading trusted certificates from the jks keystore file /opt/bea/jrockit90_150_04/jre/lib/security/cacerts.>
+<Aug 13, 2006 7:24:59 PM CDT> <Notice> <Server> <BEA-002613> <Channel "DefaultSecure" is now listening on 192.168.1.98:7002 for protocols iiops, t3s, ldaps, https.>
+<Aug 13, 2006 7:24:59 PM CDT> <Notice> <Server> <BEA-002613> <Channel "Default[1]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, http.>
+<Aug 13, 2006 7:24:59 PM CDT> <Notice> <Server> <BEA-002613> <Channel "Default" is now listening on 192.168.1.98:7001 for protocols iiop, t3, ldap, http.>
+<Aug 13, 2006 7:24:59 PM CDT> <Notice> <Server> <BEA-002613> <Channel "DefaultSecure[1]" is now listening on 127.0.0.1:7002 for protocols iiops, t3s, ldaps, https.>
+<Aug 13, 2006 7:24:59 PM CDT> <Notice> <WebLogicServer> <BEA-000331> <Started WebLogic Admin Server "examplesServer" for domain "wl_server" running in Development Mode>
+<Aug 13, 2006 7:25:00 PM CDT> <Warning> <WorkManager> <BEA-002919> <Unable to find a WorkManager with name weblogic.wsee.mdb.DispatchPolicy. Dispatch policy weblogic.wsee.mdb.DispatchPolicy will map to the default WorkManager for the application bea_wls9_async_response>
+<Aug 13, 2006 7:25:00 PM CDT> <Warning> <EJB> <BEA-014014> <The message driven bean (MDB) named "uuid-b4325c3ce72548e4--10384ec0-10d0a112ae5--7fff" has a dispatch policy "weblogic.wsee.mdb.DispatchPolicy" that refers to an unknown work manager. The default work manager will be used instead.>
+Could not invoke browser, command=netscape -remote openURL(http://192.168.1.98:7001/index.jsp)'.  Windows: Please make sure that default browser can open.  Unix: Please make sure that 'netscape' can open from the cmd-line.
+java.io.IOException: java.io.IOException: netscape: not found
+<Aug 13, 2006 7:25:00 PM CDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RUNNING>
+<Aug 13, 2006 7:25:00 PM CDT> <Notice> <WebLogicServer> <BEA-000360> <Server started in RUNNING mode>

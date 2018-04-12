@@ -1,0 +1,27 @@
+TP = 40 * [1 / (20 ms / req)] = 40 * [1 req / 20 ms] = 2 req / ms
+
+TP = nthreads / processing time
+
+
+MeanResponseTime = MeanNumberInSystem / MeanThroughput
+
+max wait > mrt = (Q - nthreads) / (nthreads / processing time)
+
+max wait > mrt = (Q - nthreads) * processing time / nthreads
+
+max wait * nthreads / processing time > Q - nthreads
+
+Q < nthreads + (max wait * nthreads) / processing time
+
+Q < nthreads * [1 + (max wait / processing time)]
+
+
+100ms > MRT = N / TP
+
+0.1 s > N / (thread / processing time)
+
+(processing time / threads) * (max wait) > Q
+
+Q < (processing time * max wait) / nthreads
+
+Q < 200 r

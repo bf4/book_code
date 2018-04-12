@@ -1,0 +1,8 @@
+[8/14/06 8:22:14:653 CDT] 0000000a SSLComponentI I   CWPKI0001I: SSL service is initializing the configuration
+[8/14/06 8:22:14:813 CDT] 0000000a WSKeyStore    W   CWPKI0041W: One or more key stores are using the default password.
+[8/14/06 8:22:14:848 CDT] 0000000a SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[8/14/06 8:22:24:639 CDT] 0000000a WorkSpaceMana A   WKSP0500I: Workspace configuration consistency check is false.
+[8/14/06 8:22:25:508 CDT] 0000000a FileRepositor A   ADMR0010I: Document cells/trozNode01Cell/security.xml is modified.
+[8/14/06 8:22:25:961 CDT] 0000000a SSLDiagnostic I   CWPKI0014I: The SSL component's FFDC Diagnostic Module com.ibm.ws.ssl.core.SSLDiagnosticModule registered successfully: true.
+[8/14/06 8:22:26:325 CDT] 0000000a FileRepositor A   ADMR0010I: Document cells/trozNode01Cell/security.xml is modified.
+[8/14/06 8:22:26:670 CDT] 0000000a SSLComponentI I   CWPKI0002I: SSL service initialization completed successfully
