@@ -1,0 +1,3 @@
+%{
+  "dir_walker": {:hex, :dir_walker, "0.0.7", "c994ef96ce5a303348871548aeeb5581e9dc82d6ac0f5e4351d8cbd4bcead0f6", [], [], "hexpm"},
+}
