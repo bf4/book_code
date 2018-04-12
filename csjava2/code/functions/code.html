@@ -1,0 +1,100 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/controls/FlyControls.js"></script>
+<script>
+  // The "scene" is where stuff in our game will happen:
+  var scene = new THREE.Scene();
+  var flat = {shading: THREE.FlatShading};
+  var light = new THREE.AmbientLight('white', 0.8);
+  scene.add(light);
+
+  // The "camera" is what sees the stuff:
+  var aspect_ratio = window.innerWidth / window.innerHeight;
+  var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+  camera.position.z = 500;
+  scene.add(camera);
+
+  // The "renderer" draws what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+  var shape = new THREE.SphereGeometry(50);
+  var cover = new THREE.MeshBasicMaterial({color: 'blue'});
+  var planet = new THREE.Mesh(shape, cover);
+  planet.position.set(-300, 0, 0);
+  scene.add(planet);
+
+  var shape = new THREE.SphereGeometry(50);
+  var cover = new THREE.MeshBasicMaterial({color: 'yellow'});
+  var planet = new THREE.Mesh(shape, cover);
+  planet.position.set(200, 0, 250);
+  scene.add(planet);
+
+  function makePlanet() {
+    var size = r(50);
+    var x = r(1000) - 500;
+    var y = r(1000) - 500;
+    var z = r(1000) - 1000;
+    var surface = rColor();
+
+    var shape = new THREE.SphereGeometry(size);
+    var cover = new THREE.MeshBasicMaterial({color: surface});
+    var planet = new THREE.Mesh(shape, cover);
+    planet.position.set(x, y, z);
+    scene.add(planet);
+  }
+
+  makePlanet();
+  makePlanet();
+
+  for (var i=0; i<100; i++) {
+    makePlanet();
+  }
+
+  console.log(Math.random());
+
+  function r(max) {
+    if (max) return max * Math.random();
+    return Math.random();
+  }
+
+  var randomNum = r();
+  console.log(randomNum);
+
+  randomNum = r(100);
+  console.log(randomNum);
+
+  console.log(r(100));
+  console.log(r(100));
+
+  function rColor() {
+    return new THREE.Color(r(), r(), r());
+  }
+
+  var controls = new THREE.FlyControls(camera);
+  controls.movementSpeed = 100;
+  controls.rollSpeed = 0.5;
+  controls.dragToLook = true;
+  controls.autoForward = false;
+
+  var clock = new THREE.Clock();
+  function animate() {
+    var delta = clock.getDelta();
+    controls.update(delta);
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
+</script>

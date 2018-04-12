@@ -1,0 +1,130 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/physi.js"></script>
+<script src="/scoreboard.js"></script>
+
+<script>
+  // Physics settings
+  Physijs.scripts.ammo = '/ammo.js';
+  Physijs.scripts.worker = '/physijs_worker.js';
+
+  // This is where stuff in our game will happen:
+  var scene = new Physijs.Scene({ fixedTimeStep: 2 / 60 });
+  scene.setGravity(new THREE.Vector3( 0, -20, 0 ));
+
+  // This is what sees the stuff:
+  var width = window.innerWidth,
+      height = window.innerHeight,
+      aspect_ratio = width / height;
+  var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 1e6);
+  // var camera = new THREE.OrthographicCamera(
+  //   -width/2, width/2, height/2, -height/2, 1, 10000
+  // );
+
+  camera.position.set(250, 250, 250);
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
+  scene.add(camera);
+
+  // This will draw what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer();
+  renderer.shadowMapEnabled = true;
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+  document.body.style.backgroundColor = '#ffffff';
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+  addScoreboard();
+  addSunlight(scene);
+  addRiver(scene);
+
+  function addScoreboard() {
+    var scoreboard = window.scoreboard = new Scoreboard();
+    scoreboard.score(0);
+    scoreboard.timer();
+    scoreboard.help(
+      'left / right arrow keys to turn. ' +
+      'space bar to move forward.'
+    );
+  }
+
+  function addSunlight(scene) {
+    var sunlight = new THREE.DirectionalLight();
+    sunlight.intensity = 0.5;
+    sunlight.castShadow = true;
+    sunlight.position.set(250, 250, 250);
+    sunlight.shadowCameraNear = 250;
+    sunlight.shadowCameraFar = 600;
+    sunlight.shadowCameraLeft = -200;
+    sunlight.shadowCameraRight = 200;
+    sunlight.shadowCameraTop = 200;
+    sunlight.shadowCameraBottom = -200;
+    sunlight.shadowMapWidth = 4096;
+    sunlight.shadowMapHeight = 4096;
+
+    scene.add(sunlight);
+  }
+
+  function addRiver(scene) {
+    var ground = makeGround(500);
+    addWater(ground, 500);
+    addLid(ground, 500);
+
+    scene.add(ground);
+  }
+
+  function makeGround(size) {
+    var faces = 100;
+    var shape = new THREE.PlaneGeometry(size, size, faces, faces);
+    var cover = Physijs.createMaterial(
+      new THREE.MeshPhongMaterial({
+        emissive: new THREE.Color(0x339933), // a little green
+        specular: new THREE.Color(0x333333)  // dark gray / not shiny
+      }),
+      1,  // high friction (hard to move across)
+      0.1 // not very bouncy
+    );
+    var ground = new Physijs.HeightfieldMesh(
+      shape, cover, 0
+    );
+    ground.rotation.set(-Math.PI/2, 0.2, Math.PI/2);
+    ground.receiveShadow = true;
+    ground.castShadow = true;
+    return ground;
+  }
+
+  function digRiver(shape, size) {
+  }
+
+  function addWater(ground, size) {
+  }
+
+  function addLid(ground, size) {
+  }
+
+  // Animate motion in the game
+  var paused = false;
+  function animate() {
+    requestAnimationFrame(animate);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // Run physics
+  function gameStep() {
+    scene.simulate();
+
+    // Update physics 60 times a second so that motion is smooth
+    setTimeout(gameStep, 1000/60);
+  }
+  gameStep();
+</script>

@@ -1,0 +1,211 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/physi.js"></script>
+<script src="/scoreboard.js"></script>
+<script>
+  // Physics settings
+  Physijs.scripts.ammo = '/ammo.js';
+  Physijs.scripts.worker = '/physijs_worker.js';
+
+  // The "scene" is where stuff in our game will happen:
+  var scene = new Physijs.Scene();
+  scene.setGravity(new THREE.Vector3( 0, -250, 0 ));
+  var flat = {shading: THREE.FlatShading};
+  var light = new THREE.AmbientLight('white', 0.8);
+  scene.add(light);
+
+  // The "camera" is what sees the stuff:
+  var w = window.innerWidth / 2;
+  var h = window.innerHeight / 2;
+  var camera = new THREE.OrthographicCamera(-w, w, h, -h, 1, 10000);
+  camera.position.z = 500;
+  scene.add(camera);
+
+  // The "renderer" draws what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor('skyblue');
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+  var gameOver = false;
+
+  var ground = addGround();
+  var avatar = addAvatar();
+  var scoreboard = addScoreboard();
+
+  reset();
+
+  function addGround() {
+    var shape = new THREE.BoxGeometry(2*w, h, 10);
+    var cover = new THREE.MeshBasicMaterial({color: 'lawngreen'});
+    var ground = new Physijs.BoxMesh(shape, cover, 0);
+    ground.position.y = -h/2;
+    scene.add(ground);
+    return ground;
+  }
+
+  function addAvatar() {
+    var shape = new THREE.CubeGeometry(100, 100, 1);
+    var cover = new THREE.MeshBasicMaterial({visible: false});
+    var avatar = new Physijs.BoxMesh(shape, cover, 1);
+    scene.add(avatar);
+
+    var image = new THREE.TextureLoader().load("/images/monster.png");
+    var material = new THREE.SpriteMaterial({map: image});
+    var sprite = new THREE.Sprite(material);
+    sprite.scale.set(100, 100, 1);
+    avatar.add(sprite);
+
+    avatar.setLinearFactor(new THREE.Vector3(1, 1, 0));
+    avatar.setAngularFactor(new THREE.Vector3(0, 0, 0));
+
+    return avatar;
+  }
+
+  function addScoreboard() {
+    var scoreboard = new Scoreboard();
+    scoreboard.score();
+    scoreboard.help(
+      "Use arrow keys to move and the space bar to jump. " +
+      "Don't let the fruit get past you!!!"
+    );
+    return scoreboard;
+  }
+
+  function reset() {
+    avatar.__dirtyPosition = true;
+    avatar.position.set(-0.6*w, 200, 0);
+    avatar.setLinearVelocity(new THREE.Vector3(0, 250, 0));
+
+    scoreboard.score(0);
+    scoreboard.message('');
+
+    var last = scene.children.length - 1;
+    for (var i=last; i>=0; i--) {
+      var obj = scene.children[i];
+      if (obj.isFruit) scene.remove(obj);
+    }
+
+    if (gameOver) {
+      gameOver = false;
+      animate();
+    }
+  }
+
+  function launchFruit() {
+    if (gameOver) return;
+
+    var speed = 500 + (10 * Math.random() * scoreboard.getScore());
+    var fruit = makeFruit();
+    fruit.setLinearVelocity(new THREE.Vector3(-speed, 0, 0));
+    fruit.setAngularVelocity(new THREE.Vector3(0, 0, 10));
+  }
+  launchFruit();
+  setInterval(launchFruit, 3*1000);
+
+  function makeFruit() {
+    var shape = new THREE.SphereGeometry(40, 16, 24);
+    var cover = new THREE.MeshBasicMaterial({visible: false});
+    var fruit = new Physijs.SphereMesh(shape, cover);
+    fruit.position.set(w, 40, 0);
+    scene.add(fruit);
+
+    var image = new THREE.TextureLoader().load("/images/fruit.png");
+    cover = new THREE.MeshBasicMaterial({map: image, transparent: true});
+    shape = new THREE.PlaneGeometry(80, 80);
+    var picturePlane = new THREE.Mesh(shape, cover);
+    fruit.add(picturePlane);
+
+    fruit.setAngularFactor(new THREE.Vector3(0, 0, 1));
+    fruit.setLinearFactor(new THREE.Vector3(1, 1, 0));
+    fruit.isFruit = true;
+
+    return fruit;
+  }
+
+  function checkMissedFruit() {
+    var count=0;
+    for (var i=0; i<scene.children.length; i++) {
+      var obj = scene.children[i];
+      if (obj.isFruit && obj.position.x < -w) count++;
+    }
+    if (count > 10) {
+      gameOver = true;
+      scoreboard.message(
+        'Purple Fruit Monster missed too much fruit! ' +
+        'Press R to try again.'
+      );
+    }
+  }
+
+  function gameStep() {
+    scene.simulate();
+    setTimeout(gameStep, 1000/30);
+  }
+  gameStep();
+
+  var clock = new THREE.Clock();
+  function animate() {
+    if (gameOver) return;
+
+    requestAnimationFrame(animate);
+    var t = clock.getElapsedTime();
+
+    // Animation code goes here...
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  document.addEventListener("keydown", handleKeys);
+  function handleKeys(event) {
+    var code = event.code;
+
+    if (code == 'ArrowLeft') left();
+    if (code == 'ArrowRight') right();
+    if (code == 'ArrowUp') up();
+    if (code == 'ArrowDown') down();
+    if (code == 'Space') up();
+    if (code == 'KeyR') reset();
+  }
+
+  function left()  { move(-100, 0); }
+  function right() { move(100,  0); }
+  function up()    { move(0, 250); }
+  function down()  { move(0, -50); }
+
+  function move(x, y) {
+    if (x > 0) avatar.scale.x = 1;
+    if (x < 0) avatar.scale.x = -1;
+
+    var dir = new THREE.Vector3(x, y, 0);
+    avatar.applyCentralImpulse(dir);
+  }
+
+  avatar.addEventListener('collision', handleCollisions);
+  function handleCollisions(object) {
+    if (gameOver) return;
+
+    if (object.isFruit) {
+      scoreboard.addPoints(10);
+      avatar.setLinearVelocity(new THREE.Vector3(0, 250, 0));
+      scene.remove(object);
+    }
+    if (object == ground) {
+      gameOver = true;
+      scoreboard.message(
+        "Purple Fruit Monster crashed! " +
+        "Press R to try again."
+      );
+    }
+  }
+</script>

@@ -1,0 +1,126 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script>
+  // Your code goes here...
+
+  var bestMovie = {
+    title: 'Star Wars',
+    year: 1977,
+  };
+
+  var bestMovie = {
+    title: 'Star Wars',
+    year: 1977,
+    stars: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher'],
+  };
+
+  var bestMovie = {
+    title: 'Star Wars',
+    year: 1977,
+    stars: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher'],
+    logMe: function() {
+      console.log(this.title + ', starring: ' + this.stars);
+    },
+  };
+
+  bestMovie.logMe();
+
+  var bestMovie = {
+    title: 'Star Wars',
+    year: 1977,
+    stars: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher'],
+    logMe: function() {
+      var me = this.about();
+      console.log(me);
+    },
+    about: function() {
+      return this.title + ', starring: ' + this.stars;
+    },
+  };
+  bestMovie.logMe();
+
+  var greatMovie = Object.create(bestMovie);
+  greatMovie.logMe();
+  // => Star Wars, starring: Mark Hamill,Harrison Ford,Carrie Fisher
+
+  greatMovie.title = 'Toy Story';
+  greatMovie.year = 1995;
+  greatMovie.stars = ['Tom Hanks', 'Tim Allen'];
+
+  greatMovie.logMe();
+  // => Toy Story, starring: Tom Hanks,Tim Allen
+
+  bestMovie.logMe();
+  // => Star Wars, starring: Mark Hamill,Harrison Ford,Carrie Fisher
+
+  function Movie(title, stars) {
+    this.title = title;
+    this.stars = stars;
+    this.year = (new Date()).getFullYear();
+  }
+  var kungFuMovie = new Movie('Kung Fu Panda', ['Jack Black', 'Angelina Jolie']);
+  console.log(kungFuMovie.title);
+  // => Kung Fu Panda
+  console.log(kungFuMovie.stars);
+  // => ['Jack Black', 'Angelina Jolie']
+  console.log(kungFuMovie.year);
+  // => 2018
+
+  Movie.prototype.logMe = function() {
+    console.log(this.title + ', starring: ' + this.stars);
+  };
+  kungFuMovie.logMe();
+  // => Kung Fu Panda, starring: Jack Black,Angelina Jolie
+
+  setTimeout(kungFuMovie.logMe.bind(kungFuMovie), 500);
+  setTimeout(bestMovie.logMe.bind(bestMovie), 500);
+
+  // The Challenges :)
+
+  var bestMovie = {
+    title: 'Star Wars',
+    year: 1977,
+    stars: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher'],
+    logMe: function() {
+      var me = this.about();
+      console.log(me);
+    },
+    about: function() {
+      return this.title + ', starring: ' + this.stars;
+    },
+    logFullTitle: function() {
+      var title = this.fullTitle();
+      console.log(title);
+    },
+    fullTitle: function() {
+      return this.title + ' (' + this.year + ')';
+    }
+  };
+  bestMovie.logMe();
+  bestMovie.logFullTitle();
+
+  function Movie(title, stars, date) {
+    this.title = title;
+    this.stars = stars;
+    if (date) this.year = date;
+    else this.year = (new Date()).getFullYear();
+  }
+  Movie.prototype.about = function() {
+    return this.title + ', starring: ' + this.stars;
+  };
+  Movie.prototype.logMe = function() {
+    var me = this.about();
+    console.log(me);
+  };
+  var kungFuMovie = new Movie('Kung Fu Panda', ['Jack Black', 'Angelina Jolie'], 2008);
+  console.log(kungFuMovie.year);
+  kungFuMovie.logMe();
+</script>

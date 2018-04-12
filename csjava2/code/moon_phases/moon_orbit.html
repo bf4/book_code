@@ -1,0 +1,115 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script>
+  // The "scene" is where stuff in our game will happen:
+  var scene = new THREE.Scene();
+  var flat = {shading: THREE.FlatShading};
+  var light = new THREE.AmbientLight('white', 0.1);
+  scene.add(light);
+
+  // The "camera" is what sees the stuff:
+  var aspectRatio = window.innerWidth / window.innerHeight;
+  var w = window.innerWidth / 2;
+  var h = window.innerHeight / 2;
+  var camera = new THREE.OrthographicCamera(-w, w, h, -h, 1, 10000);
+  camera.position.y = 500;
+  camera.rotation.x = -Math.PI/2;
+  scene.add(camera);
+  var aboveCam = camera;
+
+  // The "renderer" draws what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+  var cover = new THREE.MeshPhongMaterial({emissive: 'yellow'});
+  var shape = new THREE.SphereGeometry(50, 32, 16);
+  var sun = new THREE.Mesh(shape, cover);
+  scene.add(sun);
+
+  var sunlight = new THREE.PointLight('white', 1.7);
+  sun.add(sunlight);
+
+  var earthLocal = new THREE.Object3D();
+  earthLocal.position.x = 300;
+  scene.add(earthLocal);
+
+  var texture = new THREE.TextureLoader().load("/textures/earth.png");
+  var cover = new THREE.MeshPhongMaterial({map: texture});
+  var shape = new THREE.SphereGeometry(20, 32, 16);
+  var earth = new THREE.Mesh(shape, cover);
+  earthLocal.add(earth);
+
+  var moonOrbit = new THREE.Object3D();
+  earthLocal.add(moonOrbit);
+
+  var texture = new THREE.TextureLoader().load("/textures/moon.png");
+  var cover = new THREE.MeshPhongMaterial({map: texture, specular: 'black'});
+  var shape = new THREE.SphereGeometry(15, 32, 16);
+  var moon = new THREE.Mesh(shape, cover);
+  moon.position.set(0, 0, 100);
+  moon.rotation.set(0, Math.PI/2, 0);
+  moonOrbit.add(moon);
+
+
+  // Start Animation
+
+  var clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    var t = clock.getElapsedTime();
+
+    // Animation code goes here...
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  var speed = 10;
+  var pause = false;
+  var days = 0;
+  var clock2 = new THREE.Clock();
+
+  function gameStep() {
+    setTimeout(gameStep, 1000/30);
+
+    if (pause) return;
+
+    days = days + speed * clock2.getDelta();
+
+    earth.rotation.y = days;
+
+    var years = days / 365.25;
+    earthLocal.position.x = 300 * Math.cos(years);
+    earthLocal.position.z = -300 * Math.sin(years);
+    moonOrbit.rotation.y = days / 29.5;
+  }
+  gameStep();
+
+  document.addEventListener("keydown", handleKeys);
+  function handleKeys(event) {
+    var code = event.code;
+
+    if (code == 'Digit1') speed = 1;
+    if (code == 'Digit2') speed = 10;
+    if (code == 'Digit3') speed = 100;
+    if (code == 'Digit4') speed = 1000;
+    if (code == 'KeyP') pauseUnpause();
+  }
+
+  function pauseUnpause() {
+    pause = !pause;
+    clock2.running = false;
+  }
+</script>

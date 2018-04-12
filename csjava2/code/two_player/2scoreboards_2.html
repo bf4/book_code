@@ -1,0 +1,288 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/physi.js"></script>
+<script src="/scoreboard.js"></script>
+
+<script>
+ // Physics settings
+ Physijs.scripts.ammo = '/ammo.js';
+ Physijs.scripts.worker = '/physijs_worker.js';
+
+ // The "scene" is where stuff in our game will happen:
+ var scene = new Physijs.Scene({ fixedTimeStep: 2 / 60 });
+ scene.setGravity(new THREE.Vector3( 0, -100, 0 ));
+ var flat = {shading: THREE.FlatShading};
+ var light = new THREE.HemisphereLight('white', 'grey', 0.7);
+ scene.add(light);
+
+ // The "camera" is what sees the stuff:
+ var width = window.innerWidth,
+     height = window.innerHeight,
+     aspect_ratio = width / height;
+ var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+ // var camera = new THREE.OrthographicCamera(
+ //   -width/2, width/2, height/2, -height/2, 1, 10000
+ // );
+ camera.position.z = 500;
+ camera.position.y = 200;
+ camera.lookAt(new THREE.Vector3(0,0,0));
+ scene.add(camera);
+
+ // The "renderer" draws what the camera sees onto the screen:
+ var renderer = new THREE.WebGLRenderer({antialias: true});
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ document.body.appendChild(renderer.domElement);
+ document.body.style.backgroundColor = '#ffffff';
+
+ // ******** START CODING ON THE NEXT LINE ********
+
+ function Launcher(location) {
+   this.location = location;
+   this.color = 'yellow';
+   if (location == 'right') this.color = 'lightblue';
+   this.angle = 0;
+   this.power = 0;
+   this.draw();
+   this.keepScore();
+ }
+ Launcher.prototype.draw = function() {
+   var direction = new THREE.Vector3(0, 1, 0);
+   var x = 0;
+   if (this.location == 'left') x = -100;
+   if (this.location == 'right') x = 100;
+   var position = new THREE.Vector3( x, -100, 250 );
+   var length = 100;
+   this.arrow = new THREE.ArrowHelper(
+     direction,
+     position,
+     length,
+     this.color
+   );
+   scene.add(this.arrow);
+ };
+ Launcher.prototype.vector = function() {
+   return new THREE.Vector3(
+     Math.sin(this.angle),
+     Math.cos(this.angle),
+     0
+   );
+ };
+ Launcher.prototype.moveLeft = function(){
+   this.angle = this.angle - Math.PI / 100;
+   this.arrow.setDirection(this.vector());
+ };
+ Launcher.prototype.moveRight = function(){
+   this.angle = this.angle + Math.PI / 100;
+   this.arrow.setDirection(this.vector());
+ };
+ Launcher.prototype.powerUp = function(){
+   if (this.power >= 100) return;
+   this.power = this.power + 5;
+   this.arrow.setLength(this.power);
+ };
+ Launcher.prototype.launch = function(){
+   var shape = new THREE.SphereGeometry(10);
+   var material = new THREE.MeshPhongMaterial({color: this.color});
+   var ball = new Physijs.SphereMesh(shape, material, 1);
+   ball.name = 'Game Ball';
+   var p = this.arrow.position;
+   ball.position.set(p.x, p.y, p.z);
+   scene.add(ball);
+
+   var speedVector = new THREE.Vector3(
+     2.5 * this.power * this.vector().x,
+     2.5 * this.power * this.vector().y,
+    -80
+   );
+   ball.setLinearVelocity(speedVector);
+
+   this.power = 0;
+   this.arrow.setLength(100);
+ };
+ Launcher.prototype.keepScore = function(){
+   var scoreboard = new Scoreboard('top' + this.location);
+   scoreboard.countdown(60);
+   scoreboard.score(0);
+   scoreboard.help(
+     'Use right and left arrow keys to point the launcher. ' +
+     'Press and hold the down arrow key to power up the launcher. ' +
+     'Let go of the down arrow key to launch. ' +
+     'Watch out for the wind!!!'
+   );
+   scoreboard.onTimeExpired(timeExpired);
+   function timeExpired() {
+     scoreboard.message("Game Over!");
+   }
+   this.scoreboard = scoreboard;
+ };
+
+ function Basket(size, points) {
+   this.size = size;
+   this.points = points;
+   this.height = 100/Math.log10(size);
+
+   var r = Math.random;
+   this.color = new THREE.Color(r(), r(), r());
+
+   this.draw();
+ }
+ Basket.prototype.draw = function() {
+   var cover = new THREE.MeshPhongMaterial({
+     color: this.color,
+     shininess: 50,
+     specular: 'white'
+   });
+
+   var shape = new THREE.CubeGeometry(this.size, 1, this.size);
+   var goal = new Physijs.BoxMesh(shape, cover, 0);
+   goal.position.y = this.height / 100;
+   scene.add(goal);
+
+   var halfSize = this.size/2;
+   var halfHeight = this.height/2;
+
+   shape = new THREE.CubeGeometry(this.size, this.height, 1);
+   var side1 = new Physijs.BoxMesh(shape, cover, 0);
+   side1.position.set(0, halfHeight, halfSize);
+   scene.add(side1);
+
+   var side2 = new Physijs.BoxMesh(shape, cover, 0);
+   side2.position.set(0, halfHeight, -halfSize);
+   scene.add(side2);
+
+   shape = new THREE.CubeGeometry(1, this.height, this.size);
+   var side3 = new Physijs.BoxMesh(shape, cover, 0);
+   side3.position.set(halfSize, halfHeight, 0);
+   scene.add(side3);
+
+   var side4 = new Physijs.BoxMesh(shape, cover, 0);
+   side4.position.set(-halfSize, halfHeight, 0);
+   scene.add(side4);
+
+   this.waitForScore(goal);
+ };
+ Basket.prototype.waitForScore = function(goal){
+   goal.addEventListener('collision', this.score.bind(this));
+ };
+ Basket.prototype.score = function(ball){
+   if (scoreboard.getTimeRemaining() == 0) return;
+   scoreboard.addPoints(this.points);
+   scene.remove(ball);
+ };
+
+ function Wind() {
+   this.draw();
+   this.change();
+ }
+ Wind.prototype.draw = function(){
+   var dir = new THREE.Vector3(1, 0, 0);
+   var start = new THREE.Vector3(0, 200, 250);
+   this.arrow = new THREE.ArrowHelper(dir, start, 1, 'lightblue');
+   scene.add(this.arrow);
+ };
+ Wind.prototype.change = function(){
+   if (Math.random() < 0.5) this.direction = -1;
+   else this.direction = 1;
+   this.strength = 20*Math.random();
+
+   this.arrow.setLength(5 * this.strength);
+   this.arrow.setDirection(this.vector());
+
+   setTimeout(this.change.bind(this), 10000);
+ };
+ Wind.prototype.vector = function(){
+   var x = this.direction * this.strength;
+   return new THREE.Vector3(x, 0, 0);
+ };
+
+ var launcher1 = new Launcher('left');
+ var launcher2 = new Launcher('right');
+ var scoreboard = launcher1.scoreboard;
+
+ var goal1 = new Basket(200, 10);
+ var goal2 = new Basket(40, 100);
+
+ var wind = new Wind();
+
+ var light = new THREE.PointLight( 0xffffff, 1, 0 );
+ light.position.set(120, 150, -150);
+ scene.add(light);
+
+ function allBalls() {
+   var balls = [];
+   for (var i=0; i<scene.children.length; i++) {
+     if (scene.children[i].name.startsWith('Game Ball')) {
+       balls.push(scene.children[i]);
+     }
+   }
+   return balls;
+ }
+
+ // Animate motion in the game
+ function animate() {
+   if (scoreboard.getTimeRemaining() == 0) return;
+   requestAnimationFrame(animate);
+   renderer.render(scene, camera);
+ }
+ animate();
+
+ // Run physics
+ function gameStep() {
+   if (scoreboard.getTimeRemaining() == 0) return;
+
+   scene.simulate();
+
+   var balls = allBalls();
+   for (var i=0; i<balls.length; i++) {
+     balls[i].applyCentralForce(wind.vector());
+     if (balls[i].position.y < -100) scene.remove(balls[i]);
+   }
+
+   // Update physics 60 times a second so that motion is smooth
+   setTimeout(gameStep, 1000/60);
+ }
+ gameStep();
+
+ function reset() {
+   if (scoreboard.getTimeRemaining() > 0) return;
+   scoreboard.score(0);
+   scoreboard.countdown(60);
+
+   var balls = allBalls();
+   for (var i=0; i<balls.length; i++) {
+     scene.remove(balls[i]);
+   }
+
+   animate();
+   gameStep();
+ }
+
+ document.addEventListener('keydown', listenForKeydown);
+ function listenForKeydown(event) {
+   var code = event.code;
+   if (code == 'KeyA') launcher1.moveLeft();
+   if (code == 'KeyD') launcher1.moveRight();
+   if (code == 'KeyS') launcher1.powerUp();
+
+   if (code == 'KeyJ') launcher2.moveLeft();
+   if (code == 'KeyL') launcher2.moveRight();
+   if (code == 'KeyK') launcher2.powerUp();
+
+   if (code == 'KeyR') reset();
+ }
+
+ document.addEventListener('keyup', listenForKeyup);
+ function listenForKeyup(event){
+   var code = event.code;
+   if (code == 'KeyS') launcher1.launch();
+   if (code == 'KeyK') launcher2.launch();
+ }
+</script>

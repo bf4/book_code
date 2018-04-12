@@ -1,0 +1,211 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/tween.js"></script>
+<script>
+ // The "scene" is where stuff in our game will happen:
+ var scene = new THREE.Scene();
+ var flat = {shading: THREE.FlatShading};
+ var light = new THREE.AmbientLight('white', 0.8);
+ scene.add(light);
+
+ // The "camera" is what sees the stuff:
+ var aspect_ratio = window.innerWidth / window.innerHeight;
+ var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+ camera.position.z = 500;
+ scene.add(camera);
+
+ // The "renderer" draws what the camera sees onto the screen:
+ var renderer = new THREE.WebGLRenderer({antialias: true});
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ document.body.appendChild(renderer.domElement);
+
+ // ******** START CODING ON THE NEXT LINE ********
+
+ var marker = new THREE.Object3D();
+ scene.add(marker);
+
+ //var cover = new THREE.MeshNormalMaterial(flat);
+ var body = new THREE.SphereGeometry(100);
+ var cover = new THREE.MeshNormalMaterial();
+ var avatar = new THREE.Mesh(body, cover);
+ marker.add(avatar);
+
+ var hand = new THREE.SphereGeometry(50);
+
+ var rightHand = new THREE.Mesh(hand, cover);
+ rightHand.position.set(-150, 0, 0);
+ avatar.add(rightHand);
+
+ var leftHand = new THREE.Mesh(hand, cover);
+ leftHand.position.set(150, 0, 0);
+ avatar.add(leftHand);
+
+ var foot = new THREE.SphereGeometry(50);
+
+ var rightFoot = new THREE.Mesh(foot, cover);
+ rightFoot.position.set(-75, -125, 0);
+ avatar.add(rightFoot);
+
+ var leftFoot = new THREE.Mesh(foot, cover);
+ leftFoot.position.set(75, -125, 0);
+ avatar.add(leftFoot);
+
+ marker.add(camera);
+
+ var notAllowed = [];
+
+ function makeTreeAt(x, z) {
+   var trunk = new THREE.Mesh(
+     new THREE.CylinderGeometry(50, 50, 200),
+     new THREE.MeshBasicMaterial({color: 'sienna'})
+   );
+
+   var top = new THREE.Mesh(
+     new THREE.SphereGeometry(150),
+     new THREE.MeshBasicMaterial({color: 'forestgreen'})
+   );
+   top.position.y = 175;
+   trunk.add(top);
+
+   var boundary = new THREE.Mesh(
+     new THREE.CircleGeometry(300),
+     new THREE.MeshNormalMaterial()
+   );
+   boundary.position.y = -100;
+   boundary.rotation.x = -Math.PI/2;
+   trunk.add(boundary);
+
+   notAllowed.push(boundary);
+
+   trunk.position.set(x, -75, z);
+   scene.add(trunk);
+ }
+
+ makeTreeAt( 500,  0);
+ makeTreeAt(-500,  0);
+ makeTreeAt( 750, -1000);
+ makeTreeAt(-750, -1000);
+
+ // Now, animate what the camera sees on the screen:
+
+ var clock = new THREE.Clock();
+ var isCartwheeling = false;
+ var isFlipping = false;
+ var isMovingRight = false;
+ var isMovingLeft = false;
+ var isMovingForward = false;
+ var isMovingBack = false;
+ var direction;
+ var lastDirection;
+
+ function animate() {
+   requestAnimationFrame(animate);
+   TWEEN.update();
+   turn();
+   walk();
+   acrobatics();
+   renderer.render(scene, camera);
+ }
+ animate();
+
+ function turn() {
+   if (isMovingRight) direction = Math.PI/2;
+   if (isMovingLeft) direction = -Math.PI/2;
+   if (isMovingForward) direction = Math.PI;
+   if (isMovingBack) direction = 0;
+   if (!isWalking()) direction = 0
+   if (direction == lastDirection) return;
+   lastDirection = direction;
+
+   var tween = new TWEEN.Tween(avatar.rotation);
+   tween.to({y: direction}, 500);
+   tween.start();
+ }
+
+ function walk() {
+   if (!isWalking()) return;
+
+   var speed = 10;
+   var size = 100;
+   var time = clock.getElapsedTime();
+   var position = Math.sin(speed * time) * size;
+   rightHand.position.z =  position;
+   leftHand.position.z  = -position;
+   rightFoot.position.z = -position;
+   leftFoot.position.z  =  position;
+ }
+
+ function isWalking() {
+   if (isMovingRight) return true;
+   if (isMovingLeft) return true;
+   if (isMovingForward) return true;
+   if (isMovingBack) return true;
+   return false;
+ }
+
+ function acrobatics() {
+   if (isCartwheeling) {
+     avatar.rotation.z = avatar.rotation.z + 0.05;
+   }
+   if (isFlipping) {
+     avatar.rotation.x = avatar.rotation.x + 0.05;
+   }
+ }
+
+ function isColliding() {
+   var vector = new THREE.Vector3(0, -1, 0);
+   var raycaster = new THREE.Raycaster(marker.position, vector);
+
+   var intersects = raycaster.intersectObjects(notAllowed);
+   if (intersects.length > 0) return true;
+
+   return false;
+ }
+
+ document.addEventListener('keydown', function(event) {
+   var code = event.code;
+   if (code == 'ArrowLeft') {
+     marker.position.x = marker.position.x - 5;
+     isMovingLeft = true;
+   }
+   /
+   if (code == 'ArrowRight') {
+     marker.position.x = marker.position.x + 5;
+     isMovingRight = true;
+   }
+   if (code == 'ArrowUp') {
+     marker.position.z = marker.position.z - 5;
+     isMovingForward = true;
+   }
+   if (code == 'ArrowDown') {
+     marker.position.z = marker.position.z + 5;
+     isMovingBack = true;
+   }
+
+   if (code == 'KeyC') isCartwheeling = !isCartwheeling;
+   if (code == 'KeyF') isFlipping = !isFlipping;
+
+   if (isColliding()) {
+     if (isMovingLeft)    marker.position.x = marker.position.x + 5;
+     if (isMovingRight)   marker.position.x = marker.position.x - 5;
+     if (isMovingForward) marker.position.z = marker.position.z + 5;
+     if (isMovingBack)    marker.position.z = marker.position.z - 5;
+   }
+ });
+
+ document.addEventListener('keyup', function(event) {
+   var code = event.code;
+   if (code == 'ArrowLeft') isMovingLeft = false;
+   if (code == 'ArrowRight') isMovingRight = false;
+   if (code == 'ArrowUp') isMovingForward = false;
+   if (code == 'ArrowDown') isMovingBack = false;
+ });
+</script>

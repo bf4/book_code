@@ -1,0 +1,207 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/physi.js"></script>
+<script>
+  // Physics settings
+  Physijs.scripts.ammo = '/ammo.js';
+  Physijs.scripts.worker = '/physijs_worker.js';
+
+  // The "scene" is where stuff in our game will happen:
+  var scene = new Physijs.Scene();
+  scene.setGravity(new THREE.Vector3( 0, -100, 0 ));
+  var flat = {shading: THREE.FlatShading};
+  var light = new THREE.AmbientLight('white', 0.2);
+  scene.add(light);
+
+  // The "camera" is what sees the stuff:
+  var aspectRatio = window.innerWidth / window.innerHeight;
+  var camera = new THREE.PerspectiveCamera(75, aspectRatio, 1, 10000);
+  camera.position.z = 500;
+  scene.add(camera);
+
+  // The "renderer" draws what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  camera.position.set(0, 100, 200);
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
+  renderer.shadowMap.enabled = true;
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+  var lights = addLights();
+  var ball = addBall();
+  var board = addBoard();
+  var goal = addGoal();
+
+  reset();
+  addGoalLight();
+
+  function addLights() {
+    var lights = new THREE.Object3D();
+
+    var light1 = new THREE.PointLight('white', 0.4);
+    light1.position.set(50, 50, -100);
+    light1.castShadow = true;
+    lights.add(light1);
+
+    var light2 = new THREE.PointLight('white', 0.5);
+    light2.position.set(-50, 50, 175);
+    light2.castShadow = true;
+    lights.add(light2);
+
+    scene.add(lights);
+    return lights;
+  }
+
+  function addBall() {
+    var shape = new THREE.SphereGeometry(10, 25, 21);
+    var cover = new THREE.MeshPhongMaterial({color: 'red'});
+    cover.specular.setRGB(0.6, 0.6, 0.6);
+
+    var ball = new Physijs.SphereMesh(shape, cover);
+    ball.castShadow = true;
+
+    scene.add(ball);
+    return ball;
+  }
+
+  function addBoard() {
+    var cover = new THREE.MeshPhongMaterial({color: 'gold'});
+    cover.specular.setRGB(0.9, 0.9, 0.9);
+
+    var shape = new THREE.CubeGeometry(50, 2, 200);
+    var beam1 = new Physijs.BoxMesh(shape, cover, 0);
+    beam1.position.set(-37, 0, 0);
+    beam1.receiveShadow = true;
+
+    var beam2 = new Physijs.BoxMesh(shape, cover, 0);
+    beam2.position.set(75, 0, 0);
+    beam2.receiveShadow = true;
+    beam1.add(beam2);
+
+    shape = new THREE.CubeGeometry(200, 2, 50);
+    var beam3 = new Physijs.BoxMesh(shape, cover, 0);
+    beam3.position.set(40, 0, -40);
+    beam3.receiveShadow = true;
+    beam1.add(beam3);
+
+    var beam4 = new Physijs.BoxMesh(shape, cover, 0);
+    beam4.position.set(40, 0, 40);
+    beam4.receiveShadow = true;
+    beam1.add(beam4);
+
+    beam1.rotation.set(0.1, 0, 0);
+    scene.add(beam1);
+    return beam1;
+  }
+
+  function addGoal() {
+    shape = new THREE.CubeGeometry(100, 2, 100);
+    cover = new THREE.MeshNormalMaterial({wireframe: true});
+    var goal = new Physijs.BoxMesh(shape, cover,  0);
+    goal.position.y = -50;
+    scene.add(goal);
+
+    return goal;
+  }
+
+  function reset() {
+    ball.__dirtyPosition = true;
+    ball.__dirtyRotation = true;
+    ball.position.set(-33, 200, -65);
+    ball.setLinearVelocity(new THREE.Vector3(0, 0, 0));
+    ball.setAngularVelocity(new THREE.Vector3(0, 0, 0));
+
+    board.__dirtyRotation = true;
+    board.rotation.set(0.1, 0, 0);
+  }
+
+  var goalLight1, goalLight2;
+  function addGoalLight(){
+    var shape = new THREE.CylinderGeometry(20, 20, 1000);
+
+    var cover =  new THREE.MeshPhongMaterial({
+      emissive: 'white',
+      opacity: 0.15,
+      transparent: true,
+      color: 'black'
+    });
+    goalLight1 = new THREE.Mesh(shape, cover);
+    scene.add(goalLight1);
+
+    var cover2 =  new THREE.MeshPhongMaterial({
+      visible: false,
+      emissive: 'red',
+      opacity: 0.4,
+      transparent: true,
+      color: 'black'
+    });
+    goalLight2 = new THREE.Mesh(shape, cover2);
+
+    scene.add(goalLight2);
+  }
+
+  function win(flashCount) {
+    if (!flashCount) flashCount = 0;
+
+    goalLight1.material.visible = !goalLight1.material.visible;
+    goalLight2.material.visible = !goalLight1.material.visible;
+
+    flashCount++;
+    if (flashCount > 10) {
+      reset();
+      return;
+    }
+
+    setTimeout(win, 500, flashCount);
+  }
+  goal.addEventListener('collision', win);
+
+  // Animate motion in the game
+  var clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // Run physics
+  function gameStep() {
+    if (ball.position.y < -500) reset(ball);
+    scene.simulate();
+
+    // Update physics 60 times a second so that motion is smooth
+    setTimeout(gameStep, 1000/60);
+  }
+  gameStep();
+
+  document.addEventListener("keydown", handleKeys);
+
+  function handleKeys(event){
+    var code = event.code;
+    if (code == 'ArrowLeft') left();
+    if (code == 'ArrowRight') right();
+    if (code == 'ArrowUp') up();
+    if (code == 'ArrowDown') down();
+  }
+
+  function left()  { tilt('z',  0.02); }
+  function right() { tilt('z', -0.02); }
+  function up()    { tilt('x', -0.02); }
+  function down()  { tilt('x',  0.02); }
+
+  function tilt(dir, amount) {
+    board.__dirtyRotation = true;
+    board.rotation[dir] = board.rotation[dir] + amount;
+  }
+</script>

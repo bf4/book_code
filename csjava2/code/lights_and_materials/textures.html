@@ -1,0 +1,101 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/controls/OrbitControls.js"></script>
+<script>
+  // The "scene" is where stuff in our game will happen:
+  var scene = new THREE.Scene();
+  var flat = {shading: THREE.FlatShading};
+  var light = new THREE.AmbientLight('white', 0.1);
+  scene.add(light);
+
+  // The "camera" is what sees the stuff:
+  var aspect_ratio = window.innerWidth / window.innerHeight;
+  var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+  camera.position.z = 500;
+  camera.position.y = 500;
+  camera.lookAt(new THREE.Vector3(0,0,0));
+  scene.add(camera);
+
+  // The "renderer" draws what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.shadowMap.enabled = true;
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+  var shape = new THREE.TorusGeometry(50, 20, 8, 20);
+  var cover = new THREE.MeshPhongMaterial({color: 'red'});
+  cover.specular.setRGB(0.9, 0.9, 0.9);
+  var donut = new THREE.Mesh(shape, cover);
+  donut.position.set(0, 150, 0);
+  donut.castShadow = true;
+  scene.add(donut);
+
+  var texture = new THREE.TextureLoader().load("/textures/hardwood.png");
+  var shape = new THREE.PlaneGeometry(1000, 1000, 10, 10);
+  var cover = new THREE.MeshPhongMaterial();
+  cover.map = texture;
+  var ground = new THREE.Mesh(shape, cover);
+  ground.rotation.x = -Math.PI/2;
+  ground.receiveShadow = true;
+  scene.add(ground);
+
+  var point = new THREE.PointLight('white', 0.4);
+  point.position.set(0, 300, -100);
+  point.castShadow = true;
+  scene.add(point);
+
+  var shape = new THREE.SphereGeometry(10);
+  var cover = new THREE.MeshPhongMaterial({emissive: 'white'});
+  var phonyLight = new THREE.Mesh(shape, cover);
+  point.add(phonyLight);
+
+  var spot = new THREE.SpotLight('white', 0.4);
+  spot.position.set(200, 300, 0);
+  spot.castShadow = true;
+  spot.shadow.camera.far = 750;
+  // scene.add(spot);
+
+  var shape = new THREE.CylinderGeometry(4, 10, 20);
+  var cover = new THREE.MeshPhongMaterial({emissive: 'white'});
+  var phonyLight = new THREE.Mesh(shape, cover);
+  phonyLight.position.y = 10;
+  phonyLight.rotation.z = -Math.PI/8;
+  spot.add(phonyLight);
+
+  var sunlight = new THREE.DirectionalLight('white', 0.4);
+  sunlight.position.set(200, 300, 0);
+  sunlight.castShadow = true;
+  scene.add(sunlight);
+  var d = 500;
+  sunlight.shadow.camera.left = -d;
+  sunlight.shadow.camera.right = d;
+  sunlight.shadow.camera.top = d;
+  sunlight.shadow.camera.bottom = -d;
+
+  controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+  // Start Animation
+
+  var clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    var t = clock.getElapsedTime();
+
+    // Animation code goes here...
+    donut.rotation.set(t, 2*t, 0);
+    donut.position.z = 200 * Math.sin(t);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+</script>

@@ -1,0 +1,77 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script>
+  // The "scene" is where stuff in our game will happen:
+  var scene = new THREE.Scene();
+
+  // The "camera" is what sees the stuff:
+  var aspect_ratio = window.innerWidth / window.innerHeight;
+  var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+  camera.position.z = 500;
+  scene.add(camera);
+  var light = new THREE.AmbientLight('white', 0.8);
+  scene.add( light );
+
+  // The "renderer" draws what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+  var body = new THREE.SphereGeometry(100);
+  var cover = new THREE.MeshNormalMaterial();
+  var avatar = new THREE.Mesh(body, cover);
+  scene.add(avatar);
+
+  var hand = new THREE.SphereGeometry(50);
+
+  var rightHand = new THREE.Mesh(hand, cover);
+  rightHand.position.set(-150, 0, 0);
+  avatar.add(rightHand);
+
+  var leftHand = new THREE.Mesh(hand, cover);
+  leftHand.position.set(150, 0, 0);
+  avatar.add(leftHand);
+
+  var foot = new THREE.SphereGeometry(50);
+
+  var rightFoot = new THREE.Mesh(foot, cover);
+  rightFoot.position.set(-75, -125, 0);
+  avatar.add(rightFoot);
+
+  var leftFoot = new THREE.Mesh(foot, cover);
+  leftFoot.position.set(75, -125, 0);
+  scene.add(leftFoot);
+
+  // Now, animate what the camera sees on the screen:
+  var isCartwheeling = false;
+  var isFlipping = false;
+  function animate() {
+    requestAnimationFrame(animate);
+    if (isCartwheeling) {
+      avatar.rotation.z = avatar.rotation.z + 0.05;
+    }
+    if (isFlipping) {
+      avatar.rotation.x = avatar.rotation.x + 0.05;
+    }
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  document.addEventListener('keydown', function(event) {
+    var code = event.code;
+    if (code == 'ArrowLeft') avatar.position.x = avatar.position.x - 5;
+    if (code == 'ArrowRight') avatar.position.x = avatar.position.x + 5;
+    if (code == 'ArrowUp') avatar.position.z = avatar.position.z - 5;
+    if (code == 'ArrowDown') avatar.position.z = avatar.position.z + 5;
+  });
+</script>

@@ -1,0 +1,137 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/physi.js"></script>
+<script src="/controls/OrbitControls.js"></script>
+<script src="/scoreboard.js"></script>
+<script src="/noise.js"></script>
+<script>
+ // Physics settings
+ Physijs.scripts.ammo = '/ammo.js';
+ Physijs.scripts.worker = '/physijs_worker.js';
+
+ // The "scene" is where stuff in our game will happen:
+ var scene = new Physijs.Scene();
+ scene.setGravity(new THREE.Vector3( 0, -10, 0 ));
+ var flat = {flatShading: true};
+ var light = new THREE.AmbientLight('white', 0.2);
+ scene.add(light);
+
+ var sunlight = new THREE.DirectionalLight('white', 0.8);
+ sunlight.position.set(4, 6, 0);
+ sunlight.castShadow = true;
+ scene.add(sunlight);
+ var d = 10;
+ sunlight.shadow.camera.left = -d;
+ sunlight.shadow.camera.right = d;
+ sunlight.shadow.camera.top = d;
+ sunlight.shadow.camera.bottom = -d;
+
+ // The "camera" is what sees the stuff:
+ var aspectRatio = window.innerWidth / window.innerHeight;
+ var camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 100);
+ camera.position.set(-8, 8, 8);
+ scene.add(camera);
+
+ // The "renderer" draws what the camera sees onto the screen:
+ var renderer = new THREE.WebGLRenderer({antialias: true});
+ renderer.setClearColor('skyblue');
+ renderer.shadowMap.enabled = true;
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ document.body.appendChild(renderer.domElement);
+
+ new THREE.OrbitControls(camera, renderer.domElement);
+
+ // ******** START CODING ON THE NEXT LINE ********
+
+ var ground = addGround();
+ var water = addWater();
+ var scoreboard = addScoreboard();
+
+ function addGround() {
+   var faces = 99;
+   var shape = new THREE.PlaneGeometry(10, 20, faces, faces);
+
+   var riverPoints = [];
+   var numVertices = shape.vertices.length;
+   var noiseMaker = new SimplexNoise();
+   for (var i=0; i<numVertices; i++) {
+     var vertex = shape.vertices[i];
+     var noise = 0.25 * noiseMaker.noise(vertex.x, vertex.y);
+     vertex.z = noise;
+   }
+
+   for (var j=50; j<numVertices; j+=100) {
+     var curve = 20 * Math.sin(7*Math.PI * j/numVertices);
+     var riverCenter = j + Math.floor(curve);
+     riverPoints.push(shape.vertices[riverCenter]);
+
+     for (var k=-20; k<20; k++) {
+       shape.vertices[riverCenter + k].z = -1;
+     }
+   }
+
+   shape.computeFaceNormals();
+   shape.computeVertexNormals();
+
+   var _cover = new THREE.MeshPhongMaterial({color: 'green', shininess: 0});
+   var cover = Physijs.createMaterial(_cover, 0.8, 0.1);
+
+   var mesh = new Physijs.HeightfieldMesh(shape, cover, 0);
+   mesh.rotation.set(-0.475 * Math.PI, 0, 0);
+   mesh.receiveShadow = true;
+   mesh.castShadow = true;
+   mesh.riverPoints = riverPoints;
+
+   scene.add(mesh);
+   return mesh;
+ }
+
+ function addWater() {
+   var shape = new THREE.CubeGeometry(10, 20, 1);
+   var _cover = new THREE.MeshPhongMaterial({color: 'blue'});
+   var cover = Physijs.createMaterial(_cover, 0, 0.6);
+
+   var mesh = new Physijs.ConvexMesh(shape, cover, 0);
+   mesh.rotation.set(-0.475 * Math.PI, 0, 0);
+   mesh.position.y = -0.8;
+   mesh.receiveShadow = true;
+   scene.add(mesh);
+
+   return mesh;
+ }
+
+ function addScoreboard() {
+   var scoreboard = new Scoreboard();
+   scoreboard.score(0);
+   scoreboard.timer();
+   scoreboard.help(
+     'left / right arrow keys to turn. ' +
+     'space bar to move forward. ' +
+     'R to restart.'
+   );
+   return scoreboard;
+ }
+
+ // Animate motion in the game
+ function animate() {
+   requestAnimationFrame(animate);
+   renderer.render(scene, camera);
+ }
+ animate();
+
+ // Run physics
+ function gameStep() {
+   scene.simulate();
+   // Update physics 60 times a second so that motion is smooth
+   setTimeout(gameStep, 1000/60);
+ }
+ gameStep();
+</script>

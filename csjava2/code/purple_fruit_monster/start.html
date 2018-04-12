@@ -1,0 +1,58 @@
+<!--
+ ! Excerpted from "3D Game Programming for Kids, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/csjava2 for more book information.
+-->
+<body></body>
+<script src="/three.js"></script>
+<script src="/physi.js"></script><!--(1)-->
+<script src="/scoreboard.js"></script><!--(2)-->
+<script>
+  // Physics settings
+  Physijs.scripts.ammo = '/ammo.js'; // (3)
+  Physijs.scripts.worker = '/physijs_worker.js'; // (4)
+
+  // The "scene" is where stuff in our game will happen:
+  var scene = new Physijs.Scene(); // (5)
+  scene.setGravity(new THREE.Vector3( 0, -250, 0 )); // (6)
+  var flat = {shading: THREE.FlatShading};
+  var light = new THREE.AmbientLight('white', 0.8);
+  scene.add(light);
+
+  // The "camera" is what sees the stuff:
+  // var aspectRatio = window.innerWidth / window.innerHeight;
+  // var camera = new THREE.PerspectiveCamera(75, aspectRatio, 1, 10000);
+  var w = window.innerWidth / 2;
+  var h = window.innerHeight / 2;
+  var camera = new THREE.OrthographicCamera(-w, w, h, -h, 1, 10000);
+  camera.position.z = 500;
+  scene.add(camera);
+
+  // The "renderer" draws what the camera sees onto the screen:
+  var renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor('skyblue');
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+
+
+
+  // Start Animation
+
+  var clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    var t = clock.getElapsedTime();
+
+    // Animation code goes here...
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+</script>
