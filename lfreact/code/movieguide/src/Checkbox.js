@@ -1,0 +1,28 @@
+/***
+ * Excerpted from "React for Real",
+ * published by The Pragmatic Bookshelf.
+ * Copyrights apply to this code. It may not be used to create training material,
+ * courses, books, articles, and the like. Contact us if you are in doubt.
+ * We make no guarantees that this code is fit for any purpose.
+ * Visit http://www.pragmaticprogrammer.com/titles/lfreact for more book information.
+***/
+import React from 'react';
+
+export default function Checkbox({ checked, onChange, name, label, id }) {
+  function onCheck(event) {
+    onChange(event.target.checked);
+  }
+
+  return (
+    <div className="flex mw4">
+      <label className="pr2" htmlFor={id}>{label}</label>
+      <input
+        type="checkbox"
+        name={name}
+        id={id}
+        onChange={onCheck}
+        checked={checked}
+      />
+    </div>
+  );
+}

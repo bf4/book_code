@@ -1,0 +1,33 @@
+{
+  "name": "redux-example",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "library:build": "webpack --config webpack.config.library.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server -d",
+    "build": "cross-env NODE_ENV=production  webpack -p --devtool source-map"
+  },
+  "author": "Ludovico Fischer",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-react-app": "^3.0.2",
+    "cross-env": "^5.0.5",
+    "enzyme": "^2.9.1",
+    "jest": "^20.0.0",
+    "react-test-renderer": "^15.6.1",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.0"
+  }
+}
