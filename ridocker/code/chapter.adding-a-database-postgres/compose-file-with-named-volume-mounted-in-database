@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app                          # <label id="code.ch6.compose-file.web.volume-mapping"/>
+    env_file:
+      - .env.dev.database
+      - .env.dev.web
+
+  redis:
+    image: redis
+
+  database:
+    image: postgres
+    env_file:
+      - .env.dev.database
+    volumes:                                  # <label id="code.ch6.compose-file.database.volumes"/>
+      - db-data:/var/lib/postgresql/data      # <label id="code.ch6.compose-file.database.volume-mapping"/>
+
+volumes:                                      # <label id="code.ch6.docker-compose.volumes-top-level"/>
+  db-data:                                    # <label id="code.ch6.docker-compose.volumes-top-level.db-data"/>

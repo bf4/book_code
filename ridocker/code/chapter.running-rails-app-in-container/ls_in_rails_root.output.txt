@@ -1,0 +1,3 @@
+$ ls
+Gemfile    README.md  app    config    db    log    test    vendor
+Gemfile.lock  Rakefile  bin    config.ru  lib    public    tmp

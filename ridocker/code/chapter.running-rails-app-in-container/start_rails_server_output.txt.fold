@@ -1,0 +1,9 @@
+=> Booting Puma
+=> Rails 5.0.0.1 application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.6.0 (ruby 2.3.1-p112), codename: Sleepy Sunday Serenity
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop

@@ -1,0 +1,3 @@
+$ docker inspect --format \
+    '{{ .NetworkSettings.IPAddress }}' d7230c4b0595
+172.17.0.2

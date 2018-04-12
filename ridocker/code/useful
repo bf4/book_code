@@ -1,0 +1,8 @@
+# shorten column-based output
+$ cat input-file | sed -e 's/   */;/g' | column -t -s";" > output-file.sed-column
+
+# The sed command replace 2 or more spaces with a ;. This demarkates the columns, which then allows
+# us to use the `column` formatting command, telling it that `;` is the delimiter.
+# See
+# https://stackoverflow.com/questions/15822711/in-mac-osx-lion-how-does-one-replace-multiple-spaces-with-a-single-space-using
+

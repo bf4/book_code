@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    command: rails s -b 0.0.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+    - .:/usr/src/app
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+
+  redis:
+    image: redis
+
+  database:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
+    ports:
+      - "5900:5900"
+
+volumes:
+  db-data:
+

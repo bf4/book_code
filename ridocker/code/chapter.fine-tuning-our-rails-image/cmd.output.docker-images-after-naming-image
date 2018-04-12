@@ -1,0 +1,3 @@
+$ docker images
+REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+robisenberg/railsapp         latest              b14e4e9471b6        6 days ago          853.8 MB

@@ -1,0 +1,15 @@
+=> Booting Puma => Rails 5.0.0.1 application starting in development on
+http://0.0.0.0:3000 => Run `rails server -h` for more startup options Puma
+starting in single mode...  * Version 3.6.0 (ruby 2.3.1-p112), codename: Sleepy
+Sunday Serenity * Min threads: 5, max threads: 5 * Environment: development *
+Listening on tcp://0.0.0.0:3000 Use Ctrl-C to stop Started GET "/" for
+172.17.0.1 at 2016-09-14 12:51:18 +0000 Cannot render console from 172.17.0.1!
+Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255 Processing by
+Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true} Rendering
+  /usr/local/bundle/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered
+  /usr/local/bundle/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  (6.7ms)
+Completed 200 OK in 27ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+

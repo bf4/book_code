@@ -1,0 +1,1 @@
+$ docker tag railsapp railsapp:1.0

@@ -1,0 +1,22 @@
+Creating network "myapp_default" with the default driver
+Creating myapp_redis_1 ...
+Creating myapp_web_1 ...
+Creating myapp_redis_1
+Creating myapp_web_1 ... done
+Attaching to myapp_redis_1, myapp_web_1
+redis_1  | 1:C 30 Jul 08:57:16.417 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0
+Oo
+redis_1  | 1:C 30 Jul 08:57:16.417 # Redis version=4.0.1, bits=64, commit=000000
+00, modified=0, pid=1, just started
+...
+redis_1  | 1:M 30 Jul 08:57:16.421 * Ready to accept connections
+web_1    | ng Puma
+web_1    | => Rails 5.0.4 application starting in development on http://0.0.0.0:
+3000
+web_1    | => Run `rails server -h` for more startup options
+web_1    | Puma starting in single mode...
+web_1    | * Version 3.9.1 (ruby 2.4.1-p111), codename: Private Caller
+web_1    | * Min threads: 5, max threads: 5
+web_1    | * Environment: development
+web_1    | * Listening on tcp://0.0.0.0:3000
+web_1    | Use Ctrl-C to stop

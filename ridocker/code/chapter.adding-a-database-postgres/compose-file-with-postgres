@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+
+  redis:
+    image: redis
+
+  # START_HIGHLIGHT
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: some-long-secure-password
+  # END_HIGHLIGHT

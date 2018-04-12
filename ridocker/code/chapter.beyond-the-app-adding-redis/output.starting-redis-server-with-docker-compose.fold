@@ -1,0 +1,17 @@
+Creating myapp_redis_1 ...
+Creating myapp_redis_1 ... done
+Attaching to myapp_redis_1
+redis_1  | 1:C 30 Jul 09:11:39.091 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0
+Oo
+redis_1  | 1:C 30 Jul 09:11:39.092 # Redis version=4.0.1, bits=64, commit=000000
+00, modified=0, pid=1, just started
+redis_1  | 1:C 30 Jul 09:11:39.092 # Warning: no config file specified, using th
+e default config. In order to specify a config file use redis-server /path/to/re
+dis.conf
+redis_1  | 1:M 30 Jul 09:11:39.093 * Running mode=standalone, port=6379.
+redis_1  | 1:M 30 Jul 09:11:39.093 # WARNING: The TCP backlog setting of 511 can
+not be enforced because /proc/sys/net/core/somaxconn is set to the lower value o
+f 128.
+redis_1  | 1:M 30 Jul 09:11:39.093 # Server initialized
+...more output...
+redis_1  | 1:M 30 Jul 09:11:39.093 * Ready to accept connections

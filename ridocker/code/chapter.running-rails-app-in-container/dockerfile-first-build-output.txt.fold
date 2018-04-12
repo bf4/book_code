@@ -1,0 +1,17 @@
+$ docker build .
+Sending build context to Docker daemon    130kB
+Step 1/6 : FROM ruby:2.4
+ ---> 4b7621478e79
+Step 2/6 : RUN apt-get update -yqq
+ ---> Running in 1224136e5711
+Removing intermediate container 1224136e5711
+ ---> be15950342c3
+...
+Step 6/6 : RUN bundle install
+ ---> Running in c4a867aa72fc
+...
+Bundle complete! 14 Gemfile dependencies, 63 gems now installed.
+Bundled gems are installed into `/usr/local/bundle`
+Removing intermediate container c4a867aa72fc
+ ---> e28cf982ae39
+Successfully built e28cf982ae39

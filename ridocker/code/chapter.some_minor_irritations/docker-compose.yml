@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    entrypoint: ./docker-entrypoint.sh
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - gem_cache:/gems
+    env_file:
+      - .env.dev.database
+      - .env.dev.web
+
+  redis:
+    image: redis
+
+  database:
+    image: postgres
+    env_file:
+      - .env.dev.database
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
+    ports:
+      - "5900:5900"
+
+volumes:
+  db-data:
+  gem_cache:

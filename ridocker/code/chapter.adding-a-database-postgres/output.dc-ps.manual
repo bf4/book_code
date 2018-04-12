@@ -1,0 +1,5 @@
+       Name                     Command                State            Ports
+--------------------------------------------------------------------------------
+myapp_database_1    /docker-entrypoint.sh post...  Exit 137
+myapp_some-redis_1  docker-entrypoint.sh redis...  Up        6379/tcp
+myapp_web_1         rails s -b 0.0.0.0             Up        0.0.0.0:80->3000/tcp

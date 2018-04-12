@@ -1,0 +1,2 @@
+$ docker run -p 3000:3000 railsapp:1.0 \
+    rails s -b 0.0.0.0

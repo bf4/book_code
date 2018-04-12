@@ -1,0 +1,4 @@
+$ docker images
+REPOSITORY   TAG   IMAGE ID      CREATED       SIZE
+                   b14e4e9471b6  34 hours ago  800 MB
+ruby         2.4   d2cee8adb148  11 days ago   678 MB

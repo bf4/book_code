@@ -1,0 +1,6 @@
+NAME                     DESCRIPTION                  STARS  OFFICIAL  AUTOMATED
+postgres                 The PostgreSQL object-r...   3828   [OK]
+kiasaki/alpine-postgres  PostgreSQL docker image...   33               [OK]
+nornagon/postgres                                     10               [OK]
+macadmins/postgres       Postgres that accepts r...   8                [OK]
+...

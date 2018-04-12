@@ -1,0 +1,13 @@
+# Git
+.git            # <label id="chapter.fine-tuning-our-rails-image.dockerignore.git-history" /> 
+.gitignore      # <label id="chapter.fine-tuning-our-rails-image.dockerignore.gitignore" />
+
+# Logs
+log/*           # <label id="chapter.fine-tuning-our-rails-image.dockerignore.log_dir" />
+
+# Temp files
+tmp/*           # <label id="chapter.fine-tuning-our-rails-image.dockerignore.tmp_dir" />
+
+# Editor temp files
+*.swp           # <label id="chapter.fine-tuning-our-rails-image.dockerignore.vim_swp_files" />
+*.swo           # <label id="chapter.fine-tuning-our-rails-image.dockerignore.vim_swo_files" />

@@ -1,0 +1,25 @@
+FROM ruby:2.4
+
+LABEL maintainer="rob@DockerForRailsDevelopers.com"
+
+RUN apt-get update -yqq
+RUN apt-get install -yqq --no-install-recommends nodejs
+
+# START_HIGHLIGHT
+# START: copy-gemfile
+COPY Gemfile* /usr/src/app-gemfiles/
+# END: copy-gemfile
+# END_HIGHLIGHT
+
+# START_HIGHLIGHT
+# START: env-bundle-gemfile
+ENV BUNDLE_GEMFILE /usr/src/app-gemfiles/Gemfile
+# END: env-bundle-gemfile
+# END_HIGHLIGHT
+
+WORKDIR /usr/src/app
+RUN bundle install
+
+COPY . /usr/src/app/
+
+CMD ["rails", "s", "-b", "0.0.0.0"]

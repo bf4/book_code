@@ -1,0 +1,30 @@
+Creating network "myapp_default" with the default driver
+Building web
+Step 1/8 : FROM ruby:2.4
+ ---> c7715c1eb8fe
+Step 2/8 : RUN apt-get update -yqq
+ ---> Using cache
+ ---> 16e5a56fc24e
+...
+Step 7/8 : COPY . /usr/src/app/
+ ---> Using cache
+ ---> f8d9ff9b7d74
+Step 8/8 : CMD ["rails", "s", "-b", "0.0.0.0"]
+ ---> Using cache
+ ---> 13e166626741
+Successfully built 13e166626741
+Successfully tagged myapp_web:latest
+WARNING: Image for service web was built because it did not already exist. To
+rebuild this image you must use `docker-compose build` or `docker-compose up
+--build`.
+Creating myapp_web_1 ... done
+Attaching to myapp_web_1
+web_1  | => Booting Puma
+web_1  | => Rails 5.1.4 application starting in development
+web_1  | => Run `rails server -h` for more startup options
+web_1  | Puma starting in single mode...
+web_1  | * Version 3.11.2 (ruby 2.4.2-p198), codename: Love Song
+web_1  | * Min threads: 5, max threads: 5
+web_1  | * Environment: development
+web_1  | * Listening on tcp://0.0.0.0:3000
+web_1  | Use Ctrl-C to stop

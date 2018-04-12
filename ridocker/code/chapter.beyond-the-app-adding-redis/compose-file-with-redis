@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+
+# START_HIGHLIGHT
+  redis:
+    image: redis
+# END_HIGHLIGHT

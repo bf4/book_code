@@ -1,0 +1,20 @@
+FROM ruby:2.4
+
+LABEL maintainer="rob@DockerForRailsDevelopers.com"
+
+RUN apt-get update -yqq
+RUN apt-get install -yqq --no-install-recommends nodejs
+
+COPY Gemfile* /usr/src/app/
+WORKDIR /usr/src/app
+
+ENV BUNDLE_PATH /gems
+
+RUN bundle install
+
+COPY . /usr/src/app/
+
+# START_HIGHLIGHT
+ENTRYPOINT ["./docker-entrypoint.sh"]
+# END_HIGHLIGHT
+CMD ["rails", "s", "-b", "0.0.0.0"]

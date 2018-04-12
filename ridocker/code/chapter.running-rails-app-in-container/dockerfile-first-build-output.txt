@@ -1,0 +1,169 @@
+$ docker build .
+Sending build context to Docker daemon    130kB
+Step 1/6 : FROM ruby:2.4
+ ---> 4b7621478e79
+Step 2/6 : RUN apt-get update -yqq
+ ---> Running in 1224136e5711
+Removing intermediate container 1224136e5711
+ ---> be15950342c3
+Step 3/6 : RUN apt-get install -yqq --no-install-recommends nodejs
+ ---> Running in d1b977adc1b1
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libc-ares2:amd64.
+(Reading database ... 21202 files and directories currently installed.)
+Preparing to unpack .../libc-ares2_1.10.0-2+deb8u2_amd64.deb ...
+Unpacking libc-ares2:amd64 (1.10.0-2+deb8u2) ...
+Selecting previously unselected package libv8-3.14.5.
+Preparing to unpack .../libv8-3.14.5_3.14.5.8-8.1_amd64.deb ...
+Unpacking libv8-3.14.5 (3.14.5.8-8.1) ...
+Selecting previously unselected package nodejs.
+Preparing to unpack .../nodejs_0.10.29~dfsg-2_amd64.deb ...
+Unpacking nodejs (0.10.29~dfsg-2) ...
+Setting up libc-ares2:amd64 (1.10.0-2+deb8u2) ...
+Setting up libv8-3.14.5 (3.14.5.8-8.1) ...
+Setting up nodejs (0.10.29~dfsg-2) ...
+update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js (js) in auto mode
+Processing triggers for libc-bin (2.19-18+deb8u10) ...
+Removing intermediate container d1b977adc1b1
+ ---> fe0f73d96bc6
+Step 4/6 : COPY . /usr/src/app/
+ ---> 8dfef94fe932
+Step 5/6 : WORKDIR /usr/src/app
+Removing intermediate container f8fe39eeb351
+ ---> 1ff9d3eef9c9
+Step 6/6 : RUN bundle install
+ ---> Running in c4a867aa72fc
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/..........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Fetching rake 12.3.0
+Installing rake 12.3.0
+Fetching concurrent-ruby 1.0.5
+Installing concurrent-ruby 1.0.5
+Fetching i18n 0.9.5
+Installing i18n 0.9.5
+Fetching minitest 5.11.3
+Installing minitest 5.11.3
+Fetching thread_safe 0.3.6
+Installing thread_safe 0.3.6
+Fetching tzinfo 1.2.5
+Installing tzinfo 1.2.5
+Fetching activesupport 5.1.5
+Installing activesupport 5.1.5
+Fetching builder 3.2.3
+Installing builder 3.2.3
+Fetching erubi 1.7.0
+Installing erubi 1.7.0
+Fetching mini_portile2 2.3.0
+Installing mini_portile2 2.3.0
+Fetching nokogiri 1.8.2
+Installing nokogiri 1.8.2 with native extensions
+Fetching rails-dom-testing 2.0.3
+Installing rails-dom-testing 2.0.3
+Fetching crass 1.0.3
+Installing crass 1.0.3
+Fetching loofah 2.2.0
+Installing loofah 2.2.0
+Fetching rails-html-sanitizer 1.0.3
+Installing rails-html-sanitizer 1.0.3
+Fetching actionview 5.1.5
+Installing actionview 5.1.5
+Fetching rack 2.0.4
+Installing rack 2.0.4
+Fetching rack-test 0.8.2
+Installing rack-test 0.8.2
+Fetching actionpack 5.1.5
+Installing actionpack 5.1.5
+Fetching nio4r 2.2.0
+Installing nio4r 2.2.0 with native extensions
+Fetching websocket-extensions 0.1.3
+Installing websocket-extensions 0.1.3
+Fetching websocket-driver 0.6.5
+Installing websocket-driver 0.6.5 with native extensions
+Fetching actioncable 5.1.5
+Installing actioncable 5.1.5
+Fetching globalid 0.4.1
+Installing globalid 0.4.1
+Fetching activejob 5.1.5
+Installing activejob 5.1.5
+Fetching mini_mime 1.0.0
+Installing mini_mime 1.0.0
+Fetching mail 2.7.0
+Installing mail 2.7.0
+Fetching actionmailer 5.1.5
+Installing actionmailer 5.1.5
+Fetching activemodel 5.1.5
+Installing activemodel 5.1.5
+Fetching arel 8.0.0
+Installing arel 8.0.0
+Fetching activerecord 5.1.5
+Installing activerecord 5.1.5
+Fetching bindex 0.5.0
+Installing bindex 0.5.0 with native extensions
+Using bundler 1.16.1
+Fetching byebug 10.0.0
+Installing byebug 10.0.0 with native extensions
+Fetching coffee-script-source 1.12.2
+Installing coffee-script-source 1.12.2
+Fetching execjs 2.7.0
+Installing execjs 2.7.0
+Fetching coffee-script 2.4.1
+Installing coffee-script 2.4.1
+Fetching method_source 0.9.0
+Installing method_source 0.9.0
+Fetching thor 0.20.0
+Installing thor 0.20.0
+Fetching railties 5.1.5
+Installing railties 5.1.5
+Fetching coffee-rails 4.2.2
+Installing coffee-rails 4.2.2
+Fetching ffi 1.9.23
+Installing ffi 1.9.23 with native extensions
+Fetching multi_json 1.13.1
+Installing multi_json 1.13.1
+Fetching jbuilder 2.7.0
+Installing jbuilder 2.7.0
+Fetching rb-fsevent 0.10.2
+Installing rb-fsevent 0.10.2
+Fetching rb-inotify 0.9.10
+Installing rb-inotify 0.9.10
+Fetching ruby_dep 1.5.0
+Installing ruby_dep 1.5.0
+Fetching listen 3.1.5
+Installing listen 3.1.5
+Fetching puma 3.11.2
+Installing puma 3.11.2 with native extensions
+Fetching sprockets 3.7.1
+Installing sprockets 3.7.1
+Fetching sprockets-rails 3.2.1
+Installing sprockets-rails 3.2.1
+Fetching rails 5.1.5
+Installing rails 5.1.5
+Fetching sass-listen 4.0.0
+Installing sass-listen 4.0.0
+Fetching sass 3.5.5
+Installing sass 3.5.5
+Fetching tilt 2.0.8
+Installing tilt 2.0.8
+Fetching sass-rails 5.0.7
+Installing sass-rails 5.0.7
+Fetching spring 2.0.2
+Installing spring 2.0.2
+Fetching spring-watcher-listen 2.0.1
+Installing spring-watcher-listen 2.0.1
+Fetching sqlite3 1.3.13
+Installing sqlite3 1.3.13 with native extensions
+Fetching turbolinks-source 5.1.0
+Installing turbolinks-source 5.1.0
+Fetching turbolinks 5.1.0
+Installing turbolinks 5.1.0
+Fetching uglifier 4.1.6
+Installing uglifier 4.1.6
+Fetching web-console 3.5.1
+Installing web-console 3.5.1
+Bundle complete! 14 Gemfile dependencies, 63 gems now installed.
+Bundled gems are installed into `/usr/local/bundle`
+Removing intermediate container c4a867aa72fc
+ ---> e28cf982ae39
+Successfully built e28cf982ae39

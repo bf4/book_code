@@ -1,0 +1,13 @@
+$ docker run ruby:2.4 ruby -e "puts 'hello'"
+Unable to find image 'ruby:2.4' locally
+2.4: Pulling from library/ruby
+4176fe04cefe: Pull complete
+851356ecf618: Pull complete
+6115379c7b49: Pull complete
+aaf7d781d601: Pull complete
+acd6992c338a: Pull complete
+91d9490effb0: Pull complete
+1deabe842a08: Pull complete
+Digest: sha256:eeb289458b9025d9c6c598739ca88e0e0e92e3fa28b8140b0e611f7363961eab
+Status: Downloaded newer image for ruby:2.4
+hello

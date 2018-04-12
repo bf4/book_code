@@ -1,0 +1,42 @@
+Creating network "myapp_default" with the default driver
+Building web
+Step 1/8 : FROM ruby:2.4.1
+ ---> 0999ea72a408
+Step 2/8 : LABEL maintainer "rob@DockerForRailsDevelopers.com"
+ ---> Using cache
+ ---> e3e6480c436d
+Step 3/8 : RUN apt-get update -yqq &&     apt-get install -yqq --no-install-recommends nodejs
+ ---> Using cache
+ ---> 5cee5d540f8e
+Step 4/8 : COPY Gemfile* /usr/src/app/
+ ---> 2b760e78475e
+Removing intermediate container 371ce75a5c7d
+Step 5/8 : WORKDIR /usr/src/app
+ ---> 0acd7b599ebe
+Removing intermediate container 6b62821e767f
+Step 6/8 : COPY ./vendor/bundle /usr/src/app/vendor/bundle
+ ---> a7e437dd2ee6
+Removing intermediate container 802e203f48f8
+Step 7/8 : RUN bundle install           --jobs=4           --path=vendor/bundle
+ ---> Running in cdfe09fe0d60
+...bundle install output...
+Bundle complete! 16 Gemfile dependencies, 63 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+ ---> 31e20776cb43
+Removing intermediate container cdfe09fe0d60
+Step 8/8 : COPY . /usr/src/app
+ ---> d900ac71d33e
+Removing intermediate container ec4215dbb6d4
+Successfully built d900ac71d33e
+WARNING: Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating myapp_web_1
+Attaching to myapp_web_1
+web_1  | ng Puma
+web_1  | => Rails 5.0.4 application starting in development on http://0.0.0.0:3000
+web_1  | => Run `rails server -h` for more startup options
+web_1  | Puma starting in single mode...
+web_1  | * Version 3.9.1 (ruby 2.4.1-p111), codename: Private Caller
+web_1  | * Min threads: 5, max threads: 5
+web_1  | * Environment: development
+web_1  | * Listening on tcp://0.0.0.0:3000
+web_1  | Use Ctrl-C to stop

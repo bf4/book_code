@@ -1,0 +1,6 @@
+NAME                            DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+postgres                        The PostgreSQL object-relational database ...   3828      [OK]
+kiasaki/alpine-postgres         PostgreSQL docker image based on Alpine Linux   33                   [OK]
+nornagon/postgres                                                               10                   [OK]
+macadmins/postgres              Postgres that accepts remote connections b...   8                    [OK]
+...

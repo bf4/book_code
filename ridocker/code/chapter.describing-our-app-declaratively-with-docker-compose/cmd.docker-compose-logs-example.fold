@@ -1,0 +1,12 @@
+Attaching to exampleapp_web_1
+web_1  | 2016-10-10T20:11:37.301869047Z => Booting Puma
+web_1  | 2016-10-10T20:11:37.301968637Z => Rails 5.0.0.1 application starting in
+ development on http://0.0.0.0:3000
+web_1  | 2016-10-10T20:11:37.301977327Z => Run `rails server -h` for more startu
+p options
+web_1  | 2016-10-10T20:11:38.805350952Z Puma starting in single mode...
+web_1  | 2016-10-10T20:11:38.805464326Z * Version 3.6.0 (ruby 2.3.1-p112), coden
+ame: Sleepy Sunday Serenity
+web_1  | 2016-10-10T20:11:38.805502084Z * Min threads: 5, max threads: 5
+web_1  | 2016-10-10T20:11:38.805637433Z * Environment: development
+web_1  | 2016-10-10T20:11:38.806071850Z * Listening on tcp://0.0.0.0:3000

@@ -1,0 +1,16 @@
+FROM ruby:2.4.1
+
+RUN apt-get update -yqq && \
+    apt-get install -yqq --no-install-recommends nodejs
+
+COPY Gemfile* /usr/src/app/
+
+WORKDIR /usr/src/app
+
+COPY ./vendor/bundle /usr/src/app/vendor/bundle
+
+RUN bundle install \
+          --jobs=4 \
+          --path=vendor/bundle
+
+COPY . /usr/src/app

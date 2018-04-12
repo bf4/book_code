@@ -1,0 +1,1 @@
+root@f18f622518d7:/usr/src/app# rails new myapp --skip-test --skip-bundle

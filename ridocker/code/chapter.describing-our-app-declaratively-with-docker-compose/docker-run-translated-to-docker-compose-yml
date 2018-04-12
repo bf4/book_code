@@ -1,0 +1,12 @@
+version: '3'                                      # <label id="code.ch4.docker-compose.version"/>
+
+services:                                         # <label id="code.ch4.docker-compose.services"/>
+
+  web:                                            # <label id="code.ch4.docker-compose.web"/>
+# START:build
+    build: .                                      # <label id="code.ch4.docker-compose.web.build" />
+# END:build
+# START:ports
+    ports:                                        # <label id="code.ch4.docker-compose.ports" />
+      - "3000:3000"                               # <label id="code.ch4.docker-compose.port-mapping" />
+# END:ports

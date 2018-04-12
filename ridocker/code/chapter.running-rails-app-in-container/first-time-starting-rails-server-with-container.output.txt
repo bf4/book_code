@@ -1,0 +1,9 @@
+Started GET "/" for 172.17.0.1 at 2018-02-27 14:12:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+Started GET "/" for 172.17.0.1 at 2018-02-27 14:12:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 347ms (Views: 8.2ms)

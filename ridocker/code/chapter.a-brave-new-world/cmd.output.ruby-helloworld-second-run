@@ -1,0 +1,2 @@
+$ docker run ruby:2.4 ruby -e "puts 'hello'"
+hello

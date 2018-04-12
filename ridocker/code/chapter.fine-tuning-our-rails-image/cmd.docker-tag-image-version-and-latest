@@ -1,0 +1,1 @@
+$ docker tag b14e4e9471b6 robisenberg/railsapp robisenberg/railsapp:1.0
